@@ -8,12 +8,22 @@ import time
 from typing import Any, Dict, Optional
 
 from fastapi import FastAPI, HTTPException
+from fastapi.middleware.cors import CORSMiddleware
 from pydantic import BaseModel
 
 from fame_unified import get_fame
 
 
 app = FastAPI(title="FAME API", version="0.1.0", docs_url="/docs", redoc_url="/redoc")
+
+# Enable CORS - Allow all origins for now (restrict in production)
+app.add_middleware(
+    CORSMiddleware,
+    allow_origins=["*"],  # Allows all origins - change to specific domains in production
+    allow_credentials=True,
+    allow_methods=["*"],  # Allows all methods (GET, POST, etc.)
+    allow_headers=["*"],  # Allows all headers
+)
 
 
 class QueryRequest(BaseModel):
