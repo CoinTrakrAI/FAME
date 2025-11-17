@@ -25,6 +25,23 @@ if ! command -v docker &> /dev/null; then
     sudo usermod -aG docker ec2-user
 fi
 
+# Install Docker Compose if not available
+if ! command -v docker-compose &> /dev/null && ! docker compose version &> /dev/null; then
+    echo "Installing Docker Compose..." | tee -a $LOG_FILE
+    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+    sudo chmod +x /usr/local/bin/docker-compose
+fi
+
+# Determine which compose command to use
+if command -v docker-compose &> /dev/null; then
+    COMPOSE_CMD="docker-compose"
+elif docker compose version &> /dev/null; then
+    COMPOSE_CMD="docker compose"
+else
+    echo "ERROR: Docker Compose not available" | tee -a $LOG_FILE
+    exit 1
+fi
+
 # Step 1: Ensure repo is present
 cd /home/ec2-user || exit 1
 if [ ! -d "FAME_Desktop" ]; then
@@ -45,26 +62,26 @@ else
 fi
 
 # Step 3: Stop old containers (if any)
-if docker compose -f docker-compose.prod.yml ps -q | grep -q .; then
+if $COMPOSE_CMD -f docker-compose.prod.yml ps -q 2>/dev/null | grep -q .; then
     echo "Stopping old containers..." | tee -a $LOG_FILE
-    sudo docker compose -f docker-compose.prod.yml down | tee -a $LOG_FILE
+    sudo $COMPOSE_CMD -f docker-compose.prod.yml down | tee -a $LOG_FILE
 fi
 
 # Step 4: Build new Docker images
 echo "Building Docker images..." | tee -a $LOG_FILE
-sudo docker compose -f docker-compose.prod.yml build --no-cache | tee -a $LOG_FILE
+sudo $COMPOSE_CMD -f docker-compose.prod.yml build --no-cache | tee -a $LOG_FILE
 
 # Step 5: Start containers
 echo "Starting containers..." | tee -a $LOG_FILE
-sudo docker compose -f docker-compose.prod.yml up -d | tee -a $LOG_FILE
+sudo $COMPOSE_CMD -f docker-compose.prod.yml up -d | tee -a $LOG_FILE
 
 # Step 6: Show container status
 echo "Container status:" | tee -a $LOG_FILE
-sudo docker compose -f docker-compose.prod.yml ps | tee -a $LOG_FILE
+sudo $COMPOSE_CMD -f docker-compose.prod.yml ps | tee -a $LOG_FILE
 
 # Step 7: Health checks
 echo "Performing health checks..." | tee -a $LOG_FILE
-for service in $(sudo docker compose -f docker-compose.prod.yml ps --services); do
+for service in $(sudo $COMPOSE_CMD -f docker-compose.prod.yml ps --services 2>/dev/null); do
     echo "Checking $service..." | tee -a $LOG_FILE
     status=$(sudo docker inspect -f '{{.State.Health.Status}}' "$service" 2>/dev/null || echo "unknown")
     echo "$service: $status" | tee -a $LOG_FILE
