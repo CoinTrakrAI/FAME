@@ -23,6 +23,48 @@ class ResponseOrchestrator:
         self._low_confidence_threshold = low_confidence_threshold
 
     def generate(self, user_text: str, context: SessionContext) -> ResponsePayload:
+        # FINANCE-FIRST: Check if this is a financial query BEFORE routing
+        try:
+            from core.finance_first_router import finance_first_router
+            from core.finance_first_responder import finance_first_responder
+            import asyncio
+            
+            is_financial, financial_confidence = finance_first_router.is_financial_query(user_text)
+            
+            if is_financial and financial_confidence > 0.5:
+                # This is a financial query - handle it with finance-first responder
+                financial_intent = finance_first_router.extract_financial_intent(user_text)
+                
+                # Generate financial response
+                loop = asyncio.new_event_loop()
+                asyncio.set_event_loop(loop)
+                try:
+                    financial_response = loop.run_until_complete(
+                        finance_first_responder.generate_response(financial_intent, user_text)
+                    )
+                    
+                    if financial_response.get('ok'):
+                        context.turn_count += 1
+                        context.last_intent = financial_intent.get('type', 'financial')
+                        context.last_confidence = financial_confidence
+                        
+                        persist_session_context(context)
+                        
+                        return ResponsePayload(
+                            reply=financial_response.get('text', ''),
+                            intent=financial_intent.get('type', 'financial'),
+                            confidence=financial_confidence,
+                            metadata=financial_response.get('data', {}),
+                            trace={"handler": "finance_first", "intent": financial_intent}
+                        )
+                finally:
+                    loop.close()
+        except Exception as e:
+            # If finance-first fails, fall through to normal routing
+            import logging
+            logging.debug(f"Finance-first routing error: {e}")
+        
+        # Normal routing for non-financial or if finance-first failed
         intent_result = self._router.route(user_text, context)
 
         # Update context bookkeeping immediately.

@@ -37,7 +37,7 @@ class PremiumPriceService:
     """Wrapper around SERPAPI, CoinGecko, Alpha Vantage, and Finnhub."""
 
     def __init__(self) -> None:
-        # TODO: remove hard-coded defaults once environment is configured securely.
+        # API keys - hardcoded for demo, can be overridden via environment
         self.serpapi_key = os.getenv(
             "SERPAPI_KEY",
             "90f8748cb8ab624df5d503e1765e929491c57ef0b4d681fbe046f1febe045dbc",
@@ -46,6 +46,7 @@ class PremiumPriceService:
             "SERPAPI_BACKUP_KEY",
             "912dc3fe069c587aa89dc662a492998ded20a25dfc49f9961ff5e5c99168eeb1",
         )
+        # Updated API keys from user
         self.coingecko_key = os.getenv("COINGECKO_API_KEY", "CG-PwNH6eV5PhUhFMhHspq3nqoz")
         self.alpha_vantage_key = os.getenv("ALPHA_VANTAGE_API_KEY", "3GEY3XZMBLJGQ099")
         self.finnhub_key = os.getenv("FINNHUB_API_KEY", "d3vpeq1r01qhm1tedo10d3vpeq1r01qhm1tedo1g")
