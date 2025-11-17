@@ -50,7 +50,7 @@ if (Test-Path $psScript) {
 Write-Host ""
 Write-Host "4. Testing SSH connection..." -ForegroundColor Yellow
 Write-Host "   This will attempt to connect (may take a few seconds)..." -ForegroundColor Gray
-$testResult = & $sshPath -i $sshKey -o ConnectTimeout=5 -o StrictHostKeyChecking=no ec2-user@52.15.178.92 "echo 'test'" 2>&1
+$testResult = & $sshPath -i $sshKey -o ConnectTimeout=5 -o StrictHostKeyChecking=no ec2-user@18.220.108.23 "echo 'test'" 2>&1
 if ($LASTEXITCODE -eq 0) {
     Write-Host "   SSH connection successful!" -ForegroundColor Green
 } else {
@@ -82,6 +82,6 @@ Write-Host ""
 Write-Host "If SSH connection failed, check:" -ForegroundColor Yellow
 Write-Host "1. EC2 instance is running (AWS Console)" -ForegroundColor Gray
 Write-Host "2. Security group allows SSH from your IP" -ForegroundColor Gray
-Write-Host "3. IP address is correct (52.15.178.92)" -ForegroundColor Gray
-Write-Host "4. Try manual SSH: ssh -i `"$sshKey`" ec2-user@52.15.178.92" -ForegroundColor Gray
+Write-Host "3. IP address is correct (18.220.108.23)" -ForegroundColor Gray
+Write-Host "4. Try manual SSH: ssh -i `"$sshKey`" ec2-user@18.220.108.23" -ForegroundColor Gray
 

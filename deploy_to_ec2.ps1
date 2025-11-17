@@ -2,7 +2,7 @@
 # Usage: .\deploy_to_ec2.ps1 <EC2_IP_ADDRESS>
 
 param(
-    [string]$EC2IP = "52.15.178.92"  # Update with Elastic IP after setup
+    [string]$EC2IP = "18.220.108.23"  # Update with Elastic IP after setup
 )
 
 $SSH_KEY = "C:\Users\cavek\Downloads\FAME.pem"

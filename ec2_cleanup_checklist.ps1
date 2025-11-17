@@ -47,13 +47,13 @@ if ($awsCliAvailable) {
     Write-Host ""
     
     # Check if target IP exists
-    $targetInstance = aws ec2 describe-instances --filters "Name=ip-address,Values=52.15.178.92" --query 'Reservations[*].Instances[*].[InstanceId,State.Name]' --output text
+    $targetInstance = aws ec2 describe-instances --filters "Name=ip-address,Values=18.220.108.23" --query 'Reservations[*].Instances[*].[InstanceId,State.Name]' --output text
     
     if ($targetInstance) {
-        Write-Host "Instance with IP 52.15.178.92:" -ForegroundColor Green
+        Write-Host "Instance with IP 18.220.108.23:" -ForegroundColor Green
         Write-Host "  $targetInstance" -ForegroundColor Gray
     } else {
-        Write-Host "WARNING: No instance found with IP 52.15.178.92" -ForegroundColor Yellow
+        Write-Host "WARNING: No instance found with IP 18.220.108.23" -ForegroundColor Yellow
         Write-Host "  The IP may have changed. Check AWS Console for current IP." -ForegroundColor Gray
     }
     
@@ -74,7 +74,7 @@ Write-Host "========================================" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "Before deploying, verify:" -ForegroundColor Yellow
 Write-Host "  [ ] Only ONE EC2 instance is running" -ForegroundColor Gray
-Write-Host "  [ ] Instance IP matches: 52.15.178.92" -ForegroundColor Gray
+Write-Host "  [ ] Instance IP matches: 18.220.108.23" -ForegroundColor Gray
 Write-Host "  [ ] Security group allows SSH (port 22) from your IP" -ForegroundColor Gray
 Write-Host "  [ ] Instance is in 'running' state (not stopping/starting)" -ForegroundColor Gray
 Write-Host "  [ ] No other deployments are active on this instance" -ForegroundColor Gray
@@ -86,7 +86,7 @@ Write-Host "  3. Wait 1-2 minutes for instance to fully stop" -ForegroundColor G
 Write-Host "  4. Verify only target instance is running" -ForegroundColor Gray
 Write-Host ""
 Write-Host "After cleanup, test SSH:" -ForegroundColor Yellow
-Write-Host "  ssh -i `"C:\Users\cavek\Downloads\FAME.pem`" ec2-user@52.15.178.92" -ForegroundColor Cyan
+Write-Host "  ssh -i `"C:\Users\cavek\Downloads\FAME.pem`" ec2-user@18.220.108.23" -ForegroundColor Cyan
 Write-Host ""
 Write-Host "If SSH works, deploy with:" -ForegroundColor Yellow
 Write-Host "  .\deploy_ec2.ps1" -ForegroundColor Cyan
