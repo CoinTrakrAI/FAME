@@ -30,14 +30,19 @@ cd /home/ec2-user || exit 1
 if [ ! -d "FAME_Desktop" ]; then
     echo "Cloning FAME repository..." | tee -a $LOG_FILE
     git clone https://github.com/CoinTrakrAI/FAME.git FAME_Desktop | tee -a $LOG_FILE
+    cd FAME_Desktop
+elif [ ! -d "FAME_Desktop/.git" ]; then
+    echo "FAME_Desktop exists but is not a git repo. Removing and cloning..." | tee -a $LOG_FILE
+    rm -rf FAME_Desktop
+    git clone https://github.com/CoinTrakrAI/FAME.git FAME_Desktop | tee -a $LOG_FILE
+    cd FAME_Desktop
+else
+    cd FAME_Desktop
+    # Step 2: Pull latest changes
+    echo "Pulling latest changes..." | tee -a $LOG_FILE
+    git fetch origin main | tee -a $LOG_FILE
+    git reset --hard origin/main | tee -a $LOG_FILE
 fi
-
-cd FAME_Desktop
-
-# Step 2: Pull latest changes
-echo "Pulling latest changes..." | tee -a $LOG_FILE
-git fetch origin main | tee -a $LOG_FILE
-git reset --hard origin/main | tee -a $LOG_FILE
 
 # Step 3: Stop old containers (if any)
 if docker compose -f docker-compose.prod.yml ps -q | grep -q .; then
