@@ -158,8 +158,17 @@ def regex_nlu(text: str) -> Dict[str, Any]:
         if ticker:
             return {"intent": "get_stock_price", "slots": {"ticker": ticker}, "confidence": 0.85}
     
-    # "what is/what's the price of [asset]" pattern - check this BEFORE single-word extraction
-    price_of_pattern = re.search(r"\b(?:what(?:'s|s| is)?|what's)\s+(?:the\s+)?price\s+of\s+([A-Za-z]+)\b", text, re.IGNORECASE)
+    # Pattern 1: "XRP. what is the current price?" - ticker at start
+    ticker_at_start = re.search(r"^([A-Z]{2,5})[\.\s,]+.*?(?:price|current|trading)", text, re.IGNORECASE)
+    if ticker_at_start:
+        potential_ticker = ticker_at_start.group(1).upper()
+        if potential_ticker in CRYPTO_TICKERS:
+            return {"intent": "get_crypto_price", "slots": {"ticker": potential_ticker}, "confidence": 0.9}
+        if potential_ticker not in common_words:
+            return {"intent": "get_stock_price", "slots": {"ticker": potential_ticker}, "confidence": 0.85}
+    
+    # Pattern 2: "what is/what's the price of [asset]" - check this BEFORE single-word extraction
+    price_of_pattern = re.search(r"\b(?:what(?:'s|s| is)?|what's)\s+(?:the\s+)?(?:current\s+)?price\s+of\s+([A-Za-z0-9]+)\b", text, re.IGNORECASE)
     if price_of_pattern:
         asset_name = price_of_pattern.group(1).lower().strip()
         # Check if it's a crypto name
@@ -174,14 +183,27 @@ def regex_nlu(text: str) -> Dict[str, Any]:
         if asset_upper not in common_words and len(asset_upper) >= 2:
             return {"intent": "get_stock_price", "slots": {"ticker": asset_upper}, "confidence": 0.8}
     
+    # Pattern 3: "whats the price of [asset]?" - more flexible
+    price_of_simple = re.search(r"\b(?:whats|what's|what is)\s+(?:the\s+)?price\s+of\s+([A-Za-z0-9]+)\b", text, re.IGNORECASE)
+    if price_of_simple:
+        asset_name = price_of_simple.group(1).lower().strip()
+        asset_upper = asset_name.upper()
+        if asset_upper in CRYPTO_TICKERS:
+            return {"intent": "get_crypto_price", "slots": {"ticker": asset_upper}, "confidence": 0.9}
+        if asset_name in CRYPTO_NAME_MAP:
+            ticker = CRYPTO_NAME_MAP[asset_name]
+            return {"intent": "get_crypto_price", "slots": {"ticker": ticker}, "confidence": 0.9}
+        if asset_upper not in common_words and len(asset_upper) >= 2:
+            return {"intent": "get_stock_price", "slots": {"ticker": asset_upper}, "confidence": 0.8}
+    
     # "what is/what's" price lookups for stocks or crypto (single word after "whats")
-    what_match = re.search(r"\bwhat(?:'s|s| is)?\s+\$?([A-Za-z]{2,5})\b", text, re.IGNORECASE)
+    what_match = re.search(r"\bwhat(?:'s|s| is)?\s+(?:the\s+)?(?:current\s+)?(?:price\s+of\s+)?\$?([A-Za-z0-9]{2,5})\b", text, re.IGNORECASE)
     if what_match:
         potential = what_match.group(1).upper()
         if potential not in common_words:
             if potential in CRYPTO_TICKERS:
-                return {"intent": "get_crypto_price", "slots": {"ticker": potential}, "confidence": 0.8}
-            return {"intent": "get_stock_price", "slots": {"ticker": potential}, "confidence": 0.7}
+                return {"intent": "get_crypto_price", "slots": {"ticker": potential}, "confidence": 0.85}
+            return {"intent": "get_stock_price", "slots": {"ticker": potential}, "confidence": 0.75}
 
     # Check for crypto names in price queries (before company names)
     if "price" in t:
