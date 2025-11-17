@@ -1,0 +1,1480 @@
+{
+  "current_level": 27,
+  "total_xp": 187120.0,
+  "skills_unlocked": [
+    {
+      "ability": "microservices_mastery",
+      "domain": "development",
+      "unlocked_at": "2025-11-03T20:17:09.186918",
+      "level_required": 5
+    },
+    {
+      "ability": "serverless_architecture",
+      "domain": "development",
+      "unlocked_at": "2025-11-03T20:17:09.186935",
+      "level_required": 5
+    },
+    {
+      "ability": "ai_integration",
+      "domain": "development",
+      "unlocked_at": "2025-11-03T20:47:57.171250",
+      "level_required": 10
+    },
+    {
+      "ability": "blockchain_development",
+      "domain": "development",
+      "unlocked_at": "2025-11-03T20:47:57.171266",
+      "level_required": 10
+    },
+    {
+      "ability": "universal_code_synthesis",
+      "domain": "development",
+      "unlocked_at": "2025-11-04T09:11:16.301932",
+      "level_required": 20
+    }
+  ],
+  "evolution_history": [
+    {
+      "level": 2,
+      "timestamp": "2025-11-03T20:15:10.514340",
+      "total_experience": 5480.0,
+      "new_capabilities": []
+    },
+    {
+      "level": 3,
+      "timestamp": "2025-11-03T20:17:09.188560",
+      "total_experience": 10980.0,
+      "new_capabilities": []
+    },
+    {
+      "level": 4,
+      "timestamp": "2025-11-03T20:32:29.187837",
+      "total_experience": 15000.0,
+      "new_capabilities": []
+    },
+    {
+      "level": 5,
+      "timestamp": "2025-11-03T20:49:29.754489",
+      "total_experience": 21050.0,
+      "new_capabilities": [
+        "Advanced problem solving"
+      ]
+    },
+    {
+      "level": 6,
+      "timestamp": "2025-11-03T20:57:49.577335",
+      "total_experience": 56300.0,
+      "new_capabilities": [
+        "Advanced problem solving"
+      ]
+    },
+    {
+      "level": 7,
+      "timestamp": "2025-11-03T20:57:49.583835",
+      "total_experience": 59500.0,
+      "new_capabilities": [
+        "Advanced problem solving"
+      ]
+    },
+    {
+      "level": 8,
+      "timestamp": "2025-11-03T21:00:46.967452",
+      "total_experience": 59600.0,
+      "new_capabilities": [
+        "Advanced problem solving"
+      ]
+    },
+    {
+      "level": 9,
+      "timestamp": "2025-11-03T21:00:46.977490",
+      "total_experience": 94210.0,
+      "new_capabilities": [
+        "Advanced problem solving"
+      ]
+    },
+    {
+      "level": 10,
+      "timestamp": "2025-11-03T21:00:46.988344",
+      "total_experience": 97110.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise"
+      ]
+    },
+    {
+      "level": 11,
+      "timestamp": "2025-11-03T21:04:16.924327",
+      "total_experience": 97210.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise"
+      ]
+    },
+    {
+      "level": 12,
+      "timestamp": "2025-11-03T21:04:16.942486",
+      "total_experience": 131570.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise"
+      ]
+    },
+    {
+      "level": 13,
+      "timestamp": "2025-11-03T21:04:16.961069",
+      "total_experience": 132470.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise"
+      ]
+    },
+    {
+      "level": 14,
+      "timestamp": "2025-11-04T09:11:16.274305",
+      "total_experience": 132570.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise"
+      ]
+    },
+    {
+      "level": 15,
+      "timestamp": "2025-11-04T09:11:16.287055",
+      "total_experience": 141500.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise"
+      ]
+    },
+    {
+      "level": 16,
+      "timestamp": "2025-11-04T09:11:16.301958",
+      "total_experience": 141600.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise"
+      ]
+    },
+    {
+      "level": 17,
+      "timestamp": "2025-11-04T09:17:35.355194",
+      "total_experience": 141700.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise"
+      ]
+    },
+    {
+      "level": 18,
+      "timestamp": "2025-11-04T09:17:35.369860",
+      "total_experience": 150640.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise"
+      ]
+    },
+    {
+      "level": 19,
+      "timestamp": "2025-11-04T09:20:48.477808",
+      "total_experience": 150740.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise"
+      ]
+    },
+    {
+      "level": 20,
+      "timestamp": "2025-11-04T09:20:48.498400",
+      "total_experience": 159680.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise",
+        "Universal capability synthesis"
+      ]
+    },
+    {
+      "level": 21,
+      "timestamp": "2025-11-04T13:40:16.851271",
+      "total_experience": 159780.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise",
+        "Universal capability synthesis"
+      ]
+    },
+    {
+      "level": 22,
+      "timestamp": "2025-11-04T13:40:16.870309",
+      "total_experience": 168730.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise",
+        "Universal capability synthesis"
+      ]
+    },
+    {
+      "level": 23,
+      "timestamp": "2025-11-04T13:40:16.888214",
+      "total_experience": 168930.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise",
+        "Universal capability synthesis"
+      ]
+    },
+    {
+      "level": 24,
+      "timestamp": "2025-11-04T16:25:35.991654",
+      "total_experience": 169030.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise",
+        "Universal capability synthesis"
+      ]
+    },
+    {
+      "level": 25,
+      "timestamp": "2025-11-04T16:25:36.007556",
+      "total_experience": 178020.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise",
+        "Universal capability synthesis"
+      ]
+    },
+    {
+      "level": 26,
+      "timestamp": "2025-11-05T15:17:01.030374",
+      "total_experience": 178120.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise",
+        "Universal capability synthesis"
+      ]
+    },
+    {
+      "level": 27,
+      "timestamp": "2025-11-05T15:17:01.051985",
+      "total_experience": 187120.0,
+      "new_capabilities": [
+        "Advanced problem solving",
+        "Multi-domain expertise",
+        "Universal capability synthesis"
+      ]
+    }
+  ],
+  "knowledge_base": {
+    "evolution_2": {
+      "evolution_level": 2,
+      "timestamp": "2025-11-03T20:15:10.514395",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 3,
+          "xp": 2080.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 2080.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 1,
+          "xp": 200.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 200.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_3": {
+      "evolution_level": 3,
+      "timestamp": "2025-11-03T20:17:09.188575",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 5,
+          "xp": 4180.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 4180.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 1,
+          "xp": 400.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 400.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_4": {
+      "evolution_level": 4,
+      "timestamp": "2025-11-03T20:32:29.187853",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 7,
+          "xp": 6400.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 6400.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 1,
+          "xp": 600.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 600.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_5": {
+      "evolution_level": 5,
+      "timestamp": "2025-11-03T20:49:29.754508",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 12,
+          "xp": 11950.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 11950.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1100.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1100.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_6": {
+      "evolution_level": 6,
+      "timestamp": "2025-11-03T20:57:49.577356",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 14,
+          "xp": 47100.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 47100.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1200.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1200.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_7": {
+      "evolution_level": 7,
+      "timestamp": "2025-11-03T20:57:49.583853",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 14,
+          "xp": 47100.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 47100.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1200.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1200.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_8": {
+      "evolution_level": 8,
+      "timestamp": "2025-11-03T21:00:46.967471",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 16,
+          "xp": 81710.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 81710.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1300.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1300.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_9": {
+      "evolution_level": 9,
+      "timestamp": "2025-11-03T21:00:46.977512",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 16,
+          "xp": 81710.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 81710.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1300.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1300.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_10": {
+      "evolution_level": 10,
+      "timestamp": "2025-11-03T21:00:46.988363",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 16,
+          "xp": 81710.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 81710.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1300.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1300.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_11": {
+      "evolution_level": 11,
+      "timestamp": "2025-11-03T21:04:16.924352",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 18,
+          "xp": 116070.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 116070.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1400.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1400.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_12": {
+      "evolution_level": 12,
+      "timestamp": "2025-11-03T21:04:16.942506",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 18,
+          "xp": 116070.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 116070.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1400.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1400.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_13": {
+      "evolution_level": 13,
+      "timestamp": "2025-11-03T21:04:16.961088",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 18,
+          "xp": 116070.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 116070.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1400.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1400.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_14": {
+      "evolution_level": 14,
+      "timestamp": "2025-11-04T09:11:16.274326",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 20,
+          "xp": 125000.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 125000.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1500.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1500.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_15": {
+      "evolution_level": 15,
+      "timestamp": "2025-11-04T09:11:16.287078",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 20,
+          "xp": 125000.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 125000.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1500.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1500.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_16": {
+      "evolution_level": 16,
+      "timestamp": "2025-11-04T09:11:16.301967",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 20,
+          "xp": 125000.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 125000.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1500.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1500.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_17": {
+      "evolution_level": 17,
+      "timestamp": "2025-11-04T09:17:35.355227",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 21,
+          "xp": 133940.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 133940.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1600.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1600.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_18": {
+      "evolution_level": 18,
+      "timestamp": "2025-11-04T09:17:35.369882",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 21,
+          "xp": 133940.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 133940.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1600.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1600.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_19": {
+      "evolution_level": 19,
+      "timestamp": "2025-11-04T09:20:48.477836",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 22,
+          "xp": 142880.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 142880.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1700.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1700.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_20": {
+      "evolution_level": 20,
+      "timestamp": "2025-11-04T09:20:48.498416",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 22,
+          "xp": 142880.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 142880.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1700.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1700.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_21": {
+      "evolution_level": 21,
+      "timestamp": "2025-11-04T13:40:16.851295",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 24,
+          "xp": 151830.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 151830.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1800.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1800.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_22": {
+      "evolution_level": 22,
+      "timestamp": "2025-11-04T13:40:16.870330",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 24,
+          "xp": 151830.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 151830.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1800.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1800.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_23": {
+      "evolution_level": 23,
+      "timestamp": "2025-11-04T13:40:16.888230",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 24,
+          "xp": 151830.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 151830.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1800.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1800.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_24": {
+      "evolution_level": 24,
+      "timestamp": "2025-11-04T16:25:35.991673",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 25,
+          "xp": 160820.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 160820.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1900.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1900.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_25": {
+      "evolution_level": 25,
+      "timestamp": "2025-11-04T16:25:36.007569",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 25,
+          "xp": 160820.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 160820.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 2,
+          "xp": 1900.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 1900.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_26": {
+      "evolution_level": 26,
+      "timestamp": "2025-11-05T15:17:01.030399",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 26,
+          "xp": 169820.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 169820.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 3,
+          "xp": 2000.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 2000.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    },
+    "evolution_27": {
+      "evolution_level": 27,
+      "timestamp": "2025-11-05T15:17:01.052010",
+      "skill_tree_state": {
+        "hacking": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "network_penetration": 0,
+            "web_exploitation": 0,
+            "social_engineering": 0,
+            "zero_day_research": 0
+          }
+        },
+        "development": {
+          "level": 26,
+          "xp": 169820.0,
+          "skills": {
+            "frontend": 0,
+            "backend": 0,
+            "devops": 0,
+            "architecture": 169820.0
+          }
+        },
+        "cloud": {
+          "level": 0,
+          "xp": 0,
+          "skills": {
+            "aws": 0,
+            "azure": 0,
+            "gcp": 0,
+            "hybrid_cloud": 0
+          }
+        },
+        "research": {
+          "level": 3,
+          "xp": 2000.0,
+          "skills": {
+            "problem_solving": 0,
+            "knowledge_synthesis": 2000.0,
+            "pattern_recognition": 0
+          }
+        }
+      }
+    }
+  },
+  "permanent_memories": [],
+  "skill_tree": {
+    "hacking": {
+      "level": 0,
+      "xp": 0,
+      "skills": {
+        "network_penetration": 0,
+        "web_exploitation": 0,
+        "social_engineering": 0,
+        "zero_day_research": 0
+      }
+    },
+    "development": {
+      "level": 26,
+      "xp": 169820.0,
+      "skills": {
+        "frontend": 0,
+        "backend": 0,
+        "devops": 0,
+        "architecture": 169820.0
+      }
+    },
+    "cloud": {
+      "level": 0,
+      "xp": 0,
+      "skills": {
+        "aws": 0,
+        "azure": 0,
+        "gcp": 0,
+        "hybrid_cloud": 0
+      }
+    },
+    "research": {
+      "level": 3,
+      "xp": 2000.0,
+      "skills": {
+        "problem_solving": 0,
+        "knowledge_synthesis": 2000.0,
+        "pattern_recognition": 0
+      }
+    }
+  }
+}

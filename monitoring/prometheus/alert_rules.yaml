@@ -1,0 +1,156 @@
+groups:
+  - name: trading_ai_alerts
+    rules:
+      - alert: TrainingPipelineStalled
+        expr: rate(training_cycles_total[15m]) == 0
+        for: 5m
+        labels:
+          severity: critical
+          component: training
+        annotations:
+          summary: "Training pipeline has stalled"
+          description: "No training cycles completed in the last 15 minutes"
+      - alert: HighTrainingLoss
+        expr: training_loss > 10
+        for: 2m
+        labels:
+          severity: warning
+          component: training
+        annotations:
+          summary: "High training loss detected"
+          description: "Training loss {{ $value }} exceeds threshold"
+      - alert: DrawdownBreach
+        expr: risk_drawdown_latest < -0.20
+        for: 1m
+        labels:
+          severity: critical
+          component: risk
+        annotations:
+          summary: "Portfolio drawdown breach"
+          description: "Current drawdown {{ $value }} exceeds 20% limit"
+      - alert: LeverageBreach
+        expr: risk_leverage > 3.0
+        for: 1m
+        labels:
+          severity: warning
+          component: risk
+        annotations:
+          summary: "Leverage limit breach"
+          description: "Portfolio leverage {{ $value }} exceeds 3.0x limit"
+      - alert: VaRBreach
+        expr: risk_var_95 < -0.10
+        for: 1m
+        labels:
+          severity: critical
+          component: risk
+        annotations:
+          summary: "VaR limit breach"
+          description: "95% VaR {{ $value }} exceeds 10% loss limit"
+      - alert: CVaR99Breach
+        expr: risk_cvar_99 < -0.15
+        for: 2m
+        labels:
+          severity: critical
+          component: risk
+        annotations:
+          summary: "CVaR 99 breach"
+          description: "99% Conditional VaR {{ $value }} exceeds 15% loss limit"
+      - alert: LowSharpe
+        expr: risk_sharpe_ratio < 0.2
+        for: 10m
+        labels:
+          severity: warning
+          component: risk
+        annotations:
+          summary: "Sharpe ratio deterioration"
+          description: "Sharpe ratio {{ $value }} below 0.2 for 10 minutes"
+      - alert: StressScenarioBreach
+        expr: risk_stress_market_crash < -0.18
+        for: 1m
+        labels:
+          severity: critical
+          component: risk
+        annotations:
+          summary: "Stress scenario market crash breach"
+          description: "Projected crash scenario loss {{ $value }} breached -18% threshold"
+      - alert: LiquidityPressureSpike
+        expr: risk_liquidity_pressure > 0.25
+        for: 5m
+        labels:
+          severity: warning
+          component: risk
+        annotations:
+          summary: "Liquidity pressure increasing"
+          description: "Liquidity pressure ratio {{ $value }} exceeds 0.25 threshold"
+      - alert: ConcentrationSpike
+        expr: risk_herfindahl_index > 0.35
+        for: 5m
+        labels:
+          severity: warning
+          component: risk
+        annotations:
+          summary: "Portfolio concentration spike"
+          description: "Herfindahl index {{ $value }} exceeds 0.35 threshold"
+      - alert: HighInferenceLatency
+        expr: histogram_quantile(0.95, rate(inference_latency_seconds_bucket[5m])) > 1.0
+        for: 2m
+        labels:
+          severity: warning
+          component: performance
+        annotations:
+          summary: "High inference latency detected"
+          description: "95th percentile inference latency {{ $value }}s exceeds 1s threshold"
+      - alert: QueueBacklog
+        expr: queue_depth > 1000
+        for: 2m
+        labels:
+          severity: warning
+          component: performance
+        annotations:
+          summary: "Queue backlog detected"
+          description: "Queue depth {{ $value }} exceeds 1000 message threshold"
+      - alert: ModelDriftDetected
+        expr: model_drift{metric="performance"} > 0.15
+        for: 5m
+        labels:
+          severity: warning
+          component: drift
+        annotations:
+          summary: "Model performance drift detected"
+          description: "Model {{ $labels.model_name }} performance drift {{ $value }} exceeds 15% threshold"
+      - alert: FeatureDriftDetected
+        expr: feature_drift > 0.20
+        for: 5m
+        labels:
+          severity: warning
+          component: drift
+        annotations:
+          summary: "Feature distribution drift detected"
+          description: "Feature {{ $labels.feature_name }} drift {{ $value }} exceeds 20% threshold"
+      - alert: ExecutionLatencySpike
+        expr: rate(trading_execution_latency_ms_avg[5m]) > 300
+        for: 3m
+        labels:
+          severity: warning
+          component: execution
+        annotations:
+          summary: "Execution latency increasing"
+          description: "Average execution latency {{ $value }}ms exceeded 300ms over last 5 minutes"
+      - alert: ExecutionRejectionDetected
+        expr: increase(trading_execution_orders_rejected[5m]) > 0
+        for: 0m
+        labels:
+          severity: critical
+          component: execution
+        annotations:
+          summary: "Execution order rejected"
+          description: "At least one order was rejected in the last 5 minutes. Check broker connectivity and trade validation."
+      - alert: ExecutionSlippageBreach
+        expr: trading_execution_slippage_bps_avg > 15
+        for: 5m
+        labels:
+          severity: high
+          component: execution
+        annotations:
+          summary: "Execution slippage breach"
+          description: "Average execution slippage {{ $value }} bps exceeds 15 bps threshold."

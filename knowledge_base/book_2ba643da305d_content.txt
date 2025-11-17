@@ -1,0 +1,5442 @@
+Project+
+®
+ Practice Tests
+Brett Feddersen
+
+
+Senior Acquisitions Editor: Kenyon Brown
+Development Editor: Gary Schwartz
+Technical Editor: Vanina Mangano
+Production Editor: Dassi Zeidel
+Copy Editor: Liz Welch
+Editorial Manager: Mary Beth Wakefield
+Production Manager: Kathleen Wisor
+Executive Editor: Jim Minatel
+Book Designers: Judy Fung and Bill Gibson
+Proofreader: Rebecca Rider
+Indexer: John Sleeva
+Project Coordinator, Cover: Brent Savage
+Cover Designer: Wiley
+Cover Image: ©Jeremy Woodhouse/Getty Images, Inc.
+Copyright © 2017 by John Wiley & Sons, Inc., Indianapolis, Indiana
+Published simultaneously in Canada
+ISBN: 978-1-119-36335-4
+ISBN: 978-1-119-36338-5 (ebk.)
+ISBN: 978-1-119-36337-8 (ebk.)
+Manufactured in the United States of America
+No part of this publication may be reproduced, stored in a retrieval system or
+transmitted in any form or by any means, electronic, mechanical, photocopying,
+recording, scanning or otherwise, except as permitted under Sections 107 or 108 of
+the 1976 United States Copyright Act, without either the prior written permission of
+the Publisher, or authorization through payment of the appropriate per-copy fee to
+the Copyright Clearance Center, 222 Rosewood Drive, Danvers, MA 01923, (978)
+750-8400, fax (978) 646-8600. Requests to the Publisher for permission should be
+addressed to the Permissions Department, John Wiley & Sons, Inc., 111 River Street,
+Hoboken, NJ 07030, (201) 748-6011, fax (201) 748-6008, or online at
+http://www.wiley.com/go/permissions
+.
+Limit of Liability/Disclaimer of Warranty: The publisher and the author make no
+representations or warranties with respect to the accuracy or completeness of the
+contents of this work and specifically disclaim all warranties, including without
+limitation warranties of fitness for a particular purpose. No warranty may be created
+or extended by sales or promotional materials. The advice and strategies contained
+herein may not be suitable for every situation. This work is sold with the
+understanding that the publisher is not engaged in rendering legal, accounting, or
+other professional services. If professional assistance is required, the services of a
+competent professional person should be sought. Neither the publisher nor the author
+shall be liable for damages arising herefrom. The fact that an organization or Web site
+is referred to in this work as a citation and/or a potential source of further
+
+information does not mean that the author or the publisher endorses the information
+the organization or Web site may provide or recommendations it may make. Further,
+readers should be aware that Internet Web sites listed in this work may have
+changed or disappeared between when this work was written and when it is read.
+For general information on our other products and services or to obtain technical
+support, please contact our Customer Care Department within the U.S. at (877) 762-
+2974, outside the U.S. at (317) 572-3993 or fax (317) 572-4002.
+Wiley publishes in a variety of print and electronic formats and by print-on-demand.
+Some material included with standard print versions of this book may not be included
+in e-books or in print-on-demand. If this book refers to media such as a CD or DVD
+that is not included in the version you purchased, you may download this material at
+http://booksupport.wiley.com
+. For more information about Wiley 
+products, visit
+www.wiley.com
+.
+Library of Congress Control Number:
+ 2017931100
+TRADEMARKS: Wiley, the Wiley logo, and the Sybex logo are trademarks or
+registered trademarks of John Wiley & Sons, Inc. and/or its affiliates, in the United
+States and other countries, and may not be used without written permission.
+CompTIA and Project+ are registered trademark of CompTIA 
+Properties, LLC. All
+other trademarks are the property of their respective owners. John Wiley & Sons,
+Inc. is not associated with any product or vendor mentioned in this book.
+
+I dedicate this book to my parents, who have given me laughs,
+wisdom, experience, insight, and love...
+
+Acknowledgments
+Holy cow! Do you know what’s involved in writing a book? The
+team of dedicated professionals who helped to create this resource
+for you in order to advance your career in project management has
+to be the best in the business.
+The spark for this effort began with Kenyon Brown, the senior
+acquisition editor who assembled this great team. Gary Schwartz
+was the development editor who served as a mentor throughout
+the process and at times strangely resembled my college
+composition professor. His efforts made this tool the very best
+product it could be to assist you in passing the CompTIA Project+
+exam. Vanina Mangano helped to ensure the technical viability of
+this book. Her talents and dedication in the project management
+field are globally known, and she is a terrific collaboration partner.
+The rest of the production team, led by Dassi Zeidel, ensured that
+this text made it into print in a readable form. Thank you all for
+your collaborative efforts!
+I would also like to acknowledge Kim Heldman, who has been a
+professional mentor to me for over a decade. One of the most
+courageous leaders I have ever met, Kim got me started down the
+path of project management certification, authorship, and
+speaking. Kim is one of the great leaders in public sector
+information technology. She brings order and structure to a scary
+and complex area.
+Most importantly, I would like to thank my wife April and my
+children Kayla, Marcus, and Adric. They endured the opportunity
+costs of building Legos, helping with homework, or watching a
+movie throughout this process. The sacrifice in writing this book
+was mostly felt by them, and I couldn’t do it without their smiles,
+love, and support. If I didn’t have April in my life, my days would
+be dull and I wouldn’t have such a cheery audience for life’s little
+animations that we share together. She is my best friend forever,
+the world’s greatest cheerleader, a creative and talented teacher,
+and the model for the person I want to be. I love you all.
+
+About the Author
+Brett Feddersen holds the Project Management Professional
+(PMP)
+®
+ certification, as well as a Master of Professional Services
+in Leadership and Organizations with an emphasis in Strategic
+Innovation from the University of Denver. He is a career public
+servant, having served in the United States Marine Corps, and he
+has worked for the state of Colorado, the city of Boulder
+(Colorado), and with the Regional Transportation District (RTD) in
+the Denver/Metro area.
+Brett brings a variety of experiences to this book, including project
+management work on several enterprise resource planning
+projects, web and e-commerce application implementation, and
+computer/network infrastructure management. Brett holds the
+following credentials: PMP
+®
+, Gamification, Lean IT Foundation,
+and ITIL Foundation v3. Brett earned a bachelor’s degree in
+Business Administration with an emphasis in Computer
+Information Systems from Colorado Mesa University, and he holds
+a project management certificate from Colorado State University.
+It is rare, but not unheard of, to have an extravert in the IT field.
+Brett would love for you to reach out to him, and you can reach
+him on LinkedIn: 
+https://www.linkedin.com/in/brettfeddersen
+.
+
+Contents
+Introduction
+How This Book Is Organized
+Project+ Exam Map
+1.0 Project Basics
+2.0 Project Constraints
+3.0 Communication & Change Management
+4.0 Project Tools & Documentation
+Chapter 1 Project Basics (Domain 1.0)
+Chapter 2 Project Constraints (Domain 2.0)
+Chapter 3 Communication and Change Management (Domain
+3.0)
+Chapter 4 Project Tools and Documentation (Domain 4.0)
+Chapter 5 Practice Test 1
+Chapter 6 Practice Test 2
+Appendix Answers and Explanations
+Chapter 1: Project Basics (Domain 1.0)
+Chapter 2: Project Constraints (Domain 2.0)
+Chapter 3: Communication and Change Management
+(Domain 3.0)
+Chapter 4: Project Tools and Documentation (Domain 4.0)
+Chapter 5: Practice Test 1
+Chapter 6: Practice Test 2
+Advert
+EULA
+
+Introduction
+Welcome to 
+CompTIA Project+ Practice Tests
+! Project
+management is a fast-growing field that seems to be in constant
+need of dependable, certified talent. Project managers are needed
+in just about every field, including, but not limited to, construction,
+engineering, government and civil initiatives, nonprofits,
+information technology, logistics, and transportation. Moreover, it
+can be mighty handy for those projects in your life such as moving,
+putting in a new kitchen, or helping to organize an event for your
+local parent-teacher organization. Heck, it was even surprisingly
+helpful in writing a book on practice questions for the CompTIA
+Project+ exam.
+The Computing Technology Industry Association (CompTIA)
+promotes the Project+ exam for people interested in project
+management to earn certifications. The exam helps to validate the
+various skills, including business and communication skills, that
+an individual would need to lead projects confidently toward on-
+time and on-budget completion.
+The purpose of this book is to help you pass the CompTIA Project+
+Exam PK0-004. As you approach the final validation of your
+project management knowledge before taking this exam, this book
+will help prepare you for the types of questions and content that
+you might encounter on the exam itself. Remember, because of the
+broad range of knowledge and fields that use project management,
+this should not be the only resource you use to prepare for the
+exam. It will be important to use study guides and other exam
+resources in your studies. The more varied resources to which you
+expose yourself, the greater the probability of a successful result on
+the exam.
+One such resource you should consider is the 
+CompTIA Project+
+Study Guide: Exam PK0-004
+ by Kim Heldman (Sybex, 2017). It
+provides a great overview, reference, and additional review
+questions as you strive for certification in your project
+management career.
+
+How This Book Is Organized
+This book consists of four chapters, each based on one of the four
+domains in the CompTIA Project+ objectives for the PK0-004
+exam. The book also has two chapters that are meant to simulate
+the exam based on a variety of the questions from all four domains.
+The chapters are organized as follows:
+Chapter 1, “Project Basics (Domain 1.0),” covers the basic
+concepts of project management, such as project properties,
+roles and responsibilities, project phases, cost control,
+organizational structures, project schedules, the Agile method
+of project management, and human resources and personnel
+management.
+Chapter 2, “Project Constraints (Domain 2.0),” focuses on the
+constraints and influences on a project, as well as risk strategies
+and activities.
+Chapter 3, “Communication and Change Management (Domain
+3.0),” delves into communication method selection, influences
+on communication methods, communication triggers and
+adaptation to the target audience, change control processes, and
+types of organizational change.
+Chapter 4, “Project Tools and Documentation (Domain 4.0),”
+covers project management tools, project-centric
+documentation, and mutual binding documents and
+procurement methods.
+Chapter 5 and Chapter 6 consist of practice exams, roughly
+representing the mix of questions that you will see on the
+actual exam from each of the domains. They also carry a
+representative time limit so that you can simulate the testing
+experience as a part of your preparation.
+Each chapter begins with a list of the Project+ objectives that are
+covered in that chapter. Remember, however, that each chapter
+does not cover the objectives in order, so do not be alarmed as you
+encounter each of the objectives in a randomized order.
+
+ The questions included in this book are 
+not
+ derived
+from the actual Project+ exam questions. They serve to provide
+exposure to the underlying content and to deliver a comparable
+testing vehicle for you to prepare for the exam. It will not be a
+useful exercise to memorize the answers to these questions and
+assume that doing so will enable you to pass the exam. The
+underlying subject matter is the important focus of your studies
+so that you will be able to pass the exam.
+Congratulations on investing in your career and your future as a
+project manager.
+
+Project+ Exam Map
+The following objective map will allow you to find the chapter in
+this book that covers each objective for the exam.
+
+1.0 Project Basics
+Exam Objective
+Chapter
+1.1 Summarize the properties of a project.
+1, 5, 6
+Temporary
+1, 5, 6
+Start and finish
+1, 5, 6
+Unique
+1
+Reason/purpose
+1, 5
+Project as part of a program
+1
+Project as part of a portfolio
+1, 6
+1.2 Classify project roles and responsibilities.
+2, 5, 6
+Sponsor/champion
+2, 5, 6
+Project manager
+2, 5, 6
+Project coordinator
+2
+Stakeholder
+2, 5
+Scheduler
+2
+Project team
+2
+Project Management Office (PMO)
+2, 6
+1.3 Compare and contrast standard project
+phases.
+1, 2, 5, 6
+Initiation
+1, 5, 6
+Planning
+1, 5, 6
+Execution
+1, 5, 6
+Monitor and control
+1, 2, 5, 6
+Closing
+1, 5, 6
+1.4 Identify the basics of project cost control.
+1, 5, 6
+Total project cost
+1, 5, 6
+Expenditure tracking
+1, 5, 6
+Expenditure reporting
+1
+Burn rate
+1, 5, 6
+
+Cost baseline/budget
+1, 5, 6
+1.5 Identify common project team organizational
+structures.
+1, 2, 5, 6
+Functional
+1, 2, 5, 6
+Matrix
+1, 2, 5, 6
+Projectized
+1, 2, 5, 6
+1.6 Given a scenario, execute and develop project
+schedules.
+1, 2, 5, 6
+Work breakdown structure
+1, 2, 5, 6
+Scheduling activities
+1, 2, 5, 6
+1.7 Identify the basic aspects of the Agile
+methodology.
+1, 2, 5, 6
+Readily adapt to new/changing requirements
+1, 6
+Iterative approach
+1, 5
+Continuous requirements gathering
+1, 6
+Establish a backlog
+1, 2, 6
+Burndown charts
+1
+Continuous feedback
+1, 2
+Sprint planning
+1, 5, 6
+Daily standup meetings/SCRUM meetings
+1, 5
+SCRUM retrospective
+1, 2, 5, 6
+Self-organized and self-directed teams
+1
+1.8 Explain the importance of human resource,
+physical resource, and personnel management.
+1, 5, 6
+Resource management concepts
+1, 5, 6
+Personnel management
+1, 5, 6
+
+2.0 Project Constraints
+Exam Objective
+Chapter
+2.1 Given a scenario, predict the impact of
+various constraint variables and influences
+throughout the project.
+2, 5, 6
+Common constraints
+2, 5, 6
+Influences
+2, 5, 6
+2.2 Explain the importance of risk strategies and
+activities.
+2, 5, 6
+Strategies
+2, 5, 6
+Risk activities
+2, 5, 6
+
+3.0 Communication & Change Management
+Exam Objective
+Chapter
+3.1 Given a scenario, use the appropriate
+communication method.
+3, 5, 6
+Meetings
+3, 5, 6
+Email
+3, 6
+Fax
+3
+Instant messaging
+3
+Video conferencing
+3, 5
+Voice conferencing
+3, 5
+Face-to-face
+3, 5
+Text message
+3, 6
+Distribution of printed media
+3, 6
+Social media
+3, 5, 6
+3.2 Compare and contrast factors influencing
+communication methods.
+3, 5, 6
+Language barriers
+3, 5
+Time zones/geographical factors
+3, 5, 6
+Technological factors
+3
+Cultural differences
+3, 5
+Interorganizational differences
+3
+Intraorganizational differences
+3
+Personal preferences
+3, 6
+Rapport building/relationship building
+3
+Tailor method based on content of message
+3
+Criticality factors
+3, 5
+Specific stakeholder communication requirements
+3
+3.3 Explain common communication triggers
+and determine the target audience and rationale.
+3, 5, 6
+
+Audits
+3, 5
+Project planning
+3
+Project change
+3
+Risk register updates
+3, 6
+Milestones
+3
+Schedule changes
+3
+Task initiation/completion
+3, 5, 6
+Stakeholder changes
+3
+Gate reviews
+3, 5, 6
+Business continuity response
+3, 6
+Incident response
+3, 5
+Resource changes
+3
+3.4 Given a scenario, use the following change
+control process within the context of a project.
+3, 5, 6
+Change control process
+3, 5, 6
+Types of common project changes
+3, 5, 6
+3.5 Recognize types of organizational change.
+3, 5, 6
+Business merger/acquisition
+3, 5, 6
+Business demerger/split
+3, 5, 6
+Business process change
+3, 6
+Internal reorganization
+3, 5, 6
+Relocation
+3, 5
+Outsourcing
+3, 5, 6
+
+4.0 Project Tools & Documentation
+Exam Objective
+Chapter
+4.1 Compare and contrast various project
+management tools.
+2, 4, 5,
+6
+Project scheduling software
+4, 6
+Charts
+4, 5, 6
+Dashboard/status report
+4
+Knowledge management tools
+4, 5
+Performance measurement tools
+4, 6
+SWOT analysis
+2, 4, 5, 6
+Responsible, Accountable, Consulted, Informed (RACI)
+Matrix
+2, 4, 6
+4.2 Given a scenario, analyze project centric
+documentation.
+4, 5, 6
+Project charter
+4, 5
+Project management plan
+4, 6
+Issues log
+4
+Organizational chart
+4, 5, 6
+Scope statement
+4, 5
+Communication plan
+4, 5
+Project schedule
+4, 6
+Status report
+4, 5
+Dashboard information
+4, 6
+Action items
+4
+Meeting agenda/meeting minutes
+4, 5, 6
+4.3 Identify common partner or vendor-centric
+documents and their purpose.
+2, 4, 5,
+6
+Request for Information
+2, 4, 5, 6
+Request for Proposal
+2, 4
+
+Request for Quote
+2, 4, 6
+Mutually binding documents
+2, 4, 5, 6
+
+Chapter 1
+Project Basics (Domain 1.0)
+THE FOLLOWING COMPTIA PROJECT+ EXAM
+OBJECTIVES ARE COVERED IN THIS CHAPTER:
+1.1 Summarize the properties of a project.
+Temporary
+Start and finish
+Unique
+Reason/purpose
+Project as part of a program
+Project as part of a portfolio
+1.2 Classify project roles and responsibilities.
+Sponsor/champion
+Approval authority
+Funding
+Project charter
+Baseline
+High-level requirements
+Control
+Marketing
+Roadblocks
+Business case/justification
+Project manager
+Manage team, communication, scope, risk, budget, and
+time
+Manage quality assurance
+
+Responsible for artifacts
+Project coordinator
+Support project manager
+Cross-functional coordination
+Documentation/administrative support
+Time/resource scheduling
+Check for quality
+Stakeholder
+Vested interest
+Provide input and requirements
+Project steering
+Expertise
+Scheduler
+Develop and maintain project schedule
+Communicate timeline and changes
+Reporting schedule performance
+Solicit task status from resources
+Project team
+Contribute expertise to the project
+Contribute deliverables according to schedule
+Estimation of task duration
+Estimation of costs and dependencies
+Project Management Office (PMO)
+Sets standards and practices for organization
+Sets deliverables
+Provides governance
+Key performance indicators and parameters
+
+Provides tools
+Outlines consequences of non-performance
+Standard documentation/templates
+Coordinate resources between projects
+1.3 Compare and contrast standard project phases.
+Initiation
+Project charter
+Business case
+High-level scope definition
+High-level risks
+Planning
+Schedule
+Work breakdown structure
+Resources
+Detailed risks
+Requirements
+Communication plan
+Procurement plan
+Change management plan
+Budget
+Execution
+Deliverables
+Monitor and control
+Risks/issues log
+Performance measuring and reporting
+Quality assurance/governance
+Change control
+
+Budget
+Closing
+Transition/integration plan
+Training
+Project sign off
+Archive project documents
+Lessons learned
+Release resources
+Close contracts
+1.4 Identify the basics of project cost control.
+Total project cost
+Expenditure tracking
+Expenditure reporting
+Burn rate
+Cost baseline/budget
+Plan vs. actual
+1.5 Identify common project team organizational
+structures.
+Functional
+Resources reporting to Functional Manager
+Project Manager has limited or no authority
+Matrix
+Authority is shared between Functional Managers and
+Project Managers
+Resources assigned from Functional area to project
+Project Manager authority ranges from weak to strong
+Projectized
+Project Manager has full authority
+
+Resources report to Project Manager
+Ad hoc resources
+1.6 Given a scenario, execute and develop project
+schedules.
+Work breakdown structure
+Scheduling activities
+Determine tasks
+Determine task start/finish dates
+Determine activity/task durations
+Determine milestones
+Set predecessors
+Set dependencies
+Sequence tasks
+Prioritize tasks
+Determine critical path
+Allocate resources
+Set baseline
+Set quality gates
+Set governance gates
+Client sign off
+Management approval
+Legislative approval
+1.7 Identify the basic aspects of the Agile methodology.
+Readily adapt to new/changing requirements
+Iterative approach
+Continuous requirements gathering
+Establish a backlog
+
+Burndown charts
+Continuous feedback
+Sprint planning
+Daily standup meetings/SCRUM meetings
+SCRUM retrospective
+Self-organized and self-directed teams
+1.8 Explain the importance of human resource,
+physical resource, and personnel management.
+Resource management concepts
+Shared resources
+Dedicated resources
+Resource allocation
+Resource shortage
+Resource overallocation
+Low quality resources
+Benched resources
+Interproject dependencies
+Interproject resource contention
+Personnel management
+Team building
+Trust building
+Team selection
+Skill sets
+Remote vs. in-house
+Personnel removal/replacement
+Communication issues
+Conflict resolution
+
+Smoothing
+Forcing
+Compromising
+Confronting
+Avoiding
+Negotiating
+ 
+1.
+ 
+What are the defining characteristics of a project? (Choose
+two.)
+A
+. 
+A group of related tasks
+B
+. 
+Temporary in nature
+C
+. 
+Operational activities
+D
+. 
+Reworking of an existing project
+E
+. 
+Creation of a unique product or service
+2.
+ The project team is responsible for all of the following
+EXCEPT
+A
+. 
+Providing governance on the project
+B
+. 
+Contributing to the deliverables according to the schedule
+C
+. 
+Contributing expertise to the project
+D
+. 
+Estimating costs and dependencies
+3.
+ What is a work breakdown structure?
+A
+. 
+A task-oriented decomposition of a project
+B
+. 
+A deliverable-oriented decomposition of a project
+C
+. 
+A graphic representation of tasks and their sequence
+D
+. 
+A high-level outline of milestones on a project
+4.
+ What elements are explained in a business case? 
+A
+. 
+Justification by identifying the organizational benefits
+
+B
+. 
+Alternative solutions
+C
+. 
+Alignment to the strategic plan
+D
+. 
+All of the above
+E
+. 
+A and C
+5.
+ Of the following, which are considered key activities of the
+Monitor and Control phase?
+A
+. 
+Performance Measuring and Reporting
+B
+. 
+Develop the Quality Plan
+C
+. 
+Perform Quality Assurance
+D
+. 
+Monitor the Budget
+E
+. 
+Develop the Change Control Plan
+F
+. 
+Develop the Project Charter
+6.
+ What plan determines the information needs of the
+stakeholders, format of information delivery, delivery
+frequency, and the preparer?
+A
+. 
+Stakeholder Analysis Plan
+B
+. 
+Project Charter
+C
+. 
+Human Resources Plan
+D
+. 
+Communications Plan
+7.
+ 
+Which type of cost estimating uses a mathematical model to
+compute costs?
+A
+. 
+Top-down estimating
+B
+. 
+Bottom-up estimating
+C
+. 
+Parametric estimating
+D
+. 
+Three-point estimating
+8.
+ A project has an earned value of $2,500 and an actual cost of
+$2,275. The cost variance for this project would be which of the
+following?
+
+A
+. 
+$2,275
+B
+. 
+$225
+C
+. 
+$2,500
+D
+. 
+$−225
+9.
+ During an Agile daily stand-up meeting, what are three
+questions that are asked and answered?
+A
+. 
+What did I accomplish yesterday? What will I do today?
+What are the necessary next steps?
+B
+. 
+What did I accomplish today? Who will I be working with
+today? What obstacles are preventing progress?
+C
+. 
+What did I accomplish yesterday? Who will I be working
+with today? What obstacles are preventing progress?
+D
+. 
+What did I accomplish yesterday? What will I do today?
+What obstacles are preventing progress?
+10.
+ Marcus works for Wigitcom, and he has been assigned to
+work on a project. Marcus’s regular boss pulls him back to work
+on assignments and will conduct his performance review. What
+type of organizational structure is Wigitcom using?
+A
+. 
+Agile
+B
+. 
+Functional
+C
+. 
+Matrix
+D
+. 
+Projectized
+11.
+ A project has a key contributor who is absent from meetings,
+not meeting deadlines, and affecting the morale of other
+individuals on a team. There is no other person within the
+company with the expertise needed to perform the tasks
+assigned to this team member. Which of the following would be
+the appropriate action for the project manager?
+A
+. 
+Bring the team member in for a counseling session.
+B
+. 
+Leave the employee alone and distribute work to other
+team members.
+
+C
+. 
+Remove the team member from the project and seek a
+replacement.
+D
+. 
+Relocate the team member to a different facility.
+12.
+ The high-level scope definition describes which of the
+following?
+A
+. 
+High-level deliverables of the project
+B
+. 
+Objectives of the project
+C
+. 
+Reason for the project
+D
+. 
+All of the above
+13.
+ In what project phase are the majority of the processes and
+project documents created?
+A
+. 
+Initiation
+B
+. 
+Planning
+C
+. 
+Execution
+D
+. 
+Monitor and Control
+E
+. 
+Closing
+14.
+ Which component of the project charter describes the
+characteristics of the product produced by the project?
+A
+. 
+Project description
+B
+. 
+Business case
+C
+. 
+Deliverables
+D
+. 
+Quality plan
+15.
+ What are the three types of estimates used in three-point
+estimates?
+A
+. 
+Fastest Schedule, Least Resources, Most Desirable
+B
+. 
+Most Likely, Optimistic, Pessimistic
+C
+. 
+Most Likely, Least Resources, Fastest Schedule
+D
+. 
+Fastest Schedule, Optimistic, Most Desirable
+
+16.
+ In what organizational structure does a project manager
+have the most limited authority?
+A
+. 
+Weak-matrix
+B
+. 
+Projectized
+C
+. 
+Strong-matrix
+D
+. 
+Functional
+17.
+ A building project requires the following steps: construction,
+purchasing the build site, blueprinting, and inspection.
+Purchasing the build site has what relationship to construction?
+A
+. 
+It is a successor task.
+B
+. 
+It is a mandatory task.
+C
+. 
+It is a predecessor task.
+D
+. 
+It is a discretionary task.
+18.
+ Which of the following is the form in which project
+schedules are typically displayed?
+A
+. 
+PERT
+B
+. 
+Calendar
+C
+. 
+Gantt chart
+D
+. 
+Pareto chart
+19.
+ 
+In what project phase is the influence of stakeholders the
+least effective?
+A
+. 
+Initiation
+B
+. 
+Planning
+C
+. 
+Execution
+D
+. 
+Monitor and Control
+20.
+ When the project team is dependent on an entity outside
+the organization, like a product vendor delivering equipment,
+this is known as what type of dependency?
+A
+. 
+Discretionary
+
+B
+. 
+Mandatory
+C
+. 
+External
+D
+. 
+Financial
+21.
+ Which conflict resolution technique produces a win-lose
+result for the parties?
+A
+. 
+Forcing
+B
+. 
+Confronting
+C
+. 
+Avoiding
+D
+. 
+Attacking
+22.
+ A project has task A, which will take 2 days; task B, which
+will take 3 days, task C, which will take 2 days; task D, which
+will take 2 days; and task E, which will take 3 days. Task A is a
+predecessor for task B and for task C. Task C is a predecessor
+for task D. Both task B and task D are predecessors for task E.
+What is the task sequence for the critical path?
+A
+. 
+A => B => E
+B
+. 
+A => B => C => D => E
+C
+. 
+A => B => D => E
+D
+. 
+A => C => D => E
+23.
+ All of the following are aspects of an Agile sprint, EXCEPT
+A
+. 
+It is limited to a timeframe such as two weeks.
+B
+. 
+A planning meeting is held to figure out what the team
+can accomplish.
+C
+. 
+A small feature set is taken to completion.
+D
+. 
+The team works at an incredible pace for the entire time.
+24.
+ April works for Wigitcom and has recently been assigned to
+a project. She was given assignments from both her functional
+manager and the project manager, but was directed to do the
+project work. When April requested leave, it was granted by her
+functional manager, but then denied by the project manager.
+
+What type of organizational structure is Wigitcom using?
+A
+. 
+Projectized
+B
+. 
+Strong-matrix
+C
+. 
+Balanced-matrix
+D
+. 
+Weak-matrix
+25.
+ 
+During the Closing phase of the project, what two activities
+are conducted?
+A
+. 
+Accept project deliverables and perform quality
+assurance.
+B
+. 
+Finalize project work and close all vendor contracts.
+C
+. 
+Manage stakeholder expectations and close all vendor
+contracts.
+D
+. 
+Finalize project work and perform quality assurance.
+26.
+ In which project phase is the kickoff meeting typically held?
+A
+. 
+Initiation
+B
+. 
+Planning
+C
+. 
+Execution
+D
+. 
+Monitor and Control
+E
+. 
+Closing
+27.
+ Chase is a project manager, and he has released all of the
+team members from the project, closed vendor contracts, and
+archived project documents. In what phase is the project?
+A
+. 
+Initiation
+B
+. 
+Planning
+C
+. 
+Execution
+D
+. 
+Monitor and Control
+E
+. 
+Closing
+28.
+ What are governance gates?
+
+A
+. 
+A checkpoint between project phases where approval is
+obtained to move forward
+B
+. 
+A checkpoint where quality is checked against a
+previously established criterion
+C
+. 
+Checkpoints at the beginning and end of the project only
+D
+. 
+After a project governor is appointed, unplanned
+interruptions from this project sponsor
+29.
+ What are the defining characteristics of a project? (Choose
+two.)
+A
+. 
+Has a definitive start and end date
+B
+. 
+Is assigned to a portfolio
+C
+. 
+Creates a unique product or service
+D
+. 
+Is a part of ongoing operational activities
+E
+. 
+Is part of an organization’s strategic plan
+30.
+ Which of the following describes a portfolio?
+A
+. 
+A collection of the sample work a project manager has
+done that should be brought to an interview
+B
+. 
+A collection of programs, subportfolios, and projects that
+support strategic business goals or objectives
+C
+. 
+A group of related projects that are managed together
+using shared resources and similar techniques
+D
+. 
+A group of project investments that are maintained to
+help finance projects
+31.
+ 
+The project charter is prepared and agreed to in which
+project phase?
+A
+. 
+Planning
+B
+. 
+Closing
+C
+. 
+Execution
+D
+. 
+Initiation
+
+32.
+ After the project charter is signed, what meeting is held to
+introduce the project team and stakeholders as well as outlining
+the goals for the project?
+A
+. 
+Lessons learned meeting
+B
+. 
+Project introductory meeting
+C
+. 
+Kickoff meeting
+D
+. 
+Team building lunch
+33.
+ Which soft skills are important for a project manager?
+A
+. 
+Time management, earned value calculation, listening,
+critical path diagrams
+B
+. 
+Leadership, time management, team building, listening
+C
+. 
+Time management, earned value calculation, leadership,
+critical path diagrams
+D
+. 
+Leadership, following, independence, listening
+34.
+ Work produced in the high-level risk assessment should be
+documented in which of the following?
+A
+. 
+Work breakdown structure
+B
+. 
+Project charter
+C
+. 
+Risk register
+D
+. 
+Quality control plan
+35.
+ A project schedule serves what function?
+A
+. 
+Determines the project cost accounting codes
+B
+. 
+Creates a deliverable-based decomposition of the project
+C
+. 
+Lists the actions that should be resolved to fulfill
+deliverables
+D
+. 
+Determines start and finish dates for project activities
+36.
+ Analogous estimating is where the cost-estimate is
+developed by which of the following?
+A
+. 
+Using a mathematical model to compute costs for the
+
+project
+B
+. 
+Calculating the cost of each activity in the work
+breakdown structure
+C
+. 
+Using a similar, past project to develop a high-level
+estimate
+D
+. 
+Averaging three different estimates of the project cost
+37.
+ All of the following are ways to determine whether a project
+is completed, EXCEPT
+A
+. 
+When the project manager declares the project is
+complete
+B
+. 
+When the project is canceled
+C
+. 
+When it has been determined that the goals and
+objectives of the project cannot be accomplished
+D
+. 
+When the objectives are accomplished and stakeholders
+are satisfied
+38.
+ Money actually spent for a specific timeframe for complete
+work is known as which of the following?
+A
+. 
+Cost variance
+B
+. 
+Planned value
+C
+. 
+Actual cost
+D
+. 
+Earned value
+39.
+ The creation of a peanut butter and jelly sandwich has the
+following steps:
+Serve
+Gather bread, peanut butter, and jelly
+Place bread on a plate
+Get a knife
+Spread peanut butter on one slice of bread
+Put both slices of bread together
+
+Spread jelly on the other slice of bread
+What is the correct sequence for this project?
+A
+. 
+Serve; put both slices of bread together; gather bread,
+peanut butter, and jelly; get a knife; spread peanut butter
+on one slice of bread; place bread on a plate; spread jelly
+on the other slice of bread.
+B
+. 
+Gather bread, peanut butter. and jelly; get a knife; spread
+peanut butter on one slice of bread; place bread on a
+plate; spread jelly on the other slice of bread; serve; put
+both slices of bread together.
+C
+. 
+Gather bread, peanut butter, and jelly; get a knife; place
+bread on a plate; spread peanut butter on one slice of
+bread; spread jelly on the other slice of bread; put both
+slices of bread together; serve.
+D
+. 
+Gather bread, peanut butter, and jelly; get a knife; place
+bread on a plate; spread peanut butter on one slice of
+bread; spread jelly on the other slice of bread; serve; put
+both slices of bread together.
+40.
+ Which of the following steps are important in the
+development of the project schedule? (Choose three.)
+A
+. 
+Determine tasks
+B
+. 
+Set the quality plan
+C
+. 
+Set the communication plan
+D
+. 
+Sequence the tasks
+E
+. 
+Construct a Pareto diagram
+F
+. 
+Identify the critical path
+41.
+ 
+Not including time off, holidays, or nonproject work, the
+total time involved for an individual to complete a task is
+known as which of the following?
+A
+. 
+Analogous estimating
+B
+. 
+SWAG
+
+C
+. 
+Work effort estimate
+D
+. 
+SPI
+42.
+ Resource allocation, including assigned equipment, team
+members, and money to support a project, occurs in which
+project phase?
+A
+. 
+Initiation
+B
+. 
+Planning
+C
+. 
+Execution
+D
+. 
+Monitor and Control
+E
+. 
+Closing
+43.
+ A project manager is having problems with one team
+member who is being insubordinate. The project manager
+approaches the team member to find out what is going on and
+determines that a change can be made now that the facts are
+known. This is an example of which of the following?
+A
+. 
+Forcing
+B
+. 
+Avoiding
+C
+. 
+Confronting
+D
+. 
+Smoothing
+44.
+ Which of the following are tools and techniques used for
+developing a project team? (Choose three.)
+A
+. 
+Team-building activities
+B
+. 
+Project requirements
+C
+. 
+Recognition and rewards
+D
+. 
+Lessons learned meetings
+E
+. 
+Setting the ground rules
+F
+. 
+Project kickoff meetings
+45.
+ In what stage of team development are teams the most
+productive and trust levels the highest among team members?
+
+A
+. 
+Forming
+B
+. 
+Storming
+C
+. 
+Norming
+D
+. 
+Performing
+E
+. 
+Adjourning
+46.
+ Wigitcom has a project where quality is the most important
+consideration for the sponsor. Which personnel model would
+make the most sense for this project?
+A
+. 
+Outsourcing
+B
+. 
+Collocation
+C
+. 
+Virtual teams
+D
+. 
+Videoconferencing
+47.
+ A startup company is attempting to compete in an emerging
+product market. There are constant disruptive technology
+changes, and the market is shifting in their product tastes. This
+type of situation would be best served by which of the
+following?
+A
+. 
+Agile approach
+B
+. 
+Projectized environment
+C
+. 
+Functional environment
+D
+. 
+Traditional, or waterfall
+48.
+ Kayla works for Wigitcom, and she has been assigned to
+work on a project. Kayla’s project manager gives her direction,
+and consistently prevents Kayla’s regular supervisor from
+giving her any assignments. At the end of the project, the
+project manager will conduct Kayla’s performance review. What
+type of organizational structure is Wigitcom using?
+A
+. 
+Agile
+B
+. 
+Functional
+C
+. 
+Matrix
+
+D
+. 
+Projectized
+49.
+ In an Agile methodology, what is a user story?
+A
+. 
+Key information about stakeholders and their jobs
+B
+. 
+Short stories about someone using the product or service
+C
+. 
+Customer survey results after product release
+D
+. 
+Visual representation of product burndown
+50.
+ A large, well-established organization that has been in
+business for many decades would likely have which
+organizational structures?
+A
+. 
+Weak-matrix
+B
+. 
+Projectized
+C
+. 
+Strong-matrix
+D
+. 
+Functional
+51.
+ 
+What does PMP stand for?
+A
+. 
+Preferred master project
+B
+. 
+Preferred management plan
+C
+. 
+Project management plan
+D
+. 
+Project management practice
+52.
+ What is a list of all things to be completed, whether
+technical or user-centric in nature, which are in the form of
+user stories, known as?
+A
+. 
+Requirements
+B
+. 
+Backlog
+C
+. 
+Risk register
+D
+. 
+Stakeholders
+53.
+ What are the standard project phases?
+A
+. 
+Discovery, Planning, Building, Quality Check, Closing
+B
+. 
+Initiation, Preparing, Building, Monitor and Control,
+
+Wrap-up
+C
+. 
+Initiation, Planning, Execution, Monitor and Control,
+Closing
+D
+. 
+Discovery, Preparing, Execution, Quality Check, Wrap-up
+54.
+ What are milestones?
+A
+. 
+A measure of the distance traveled on a project
+B
+. 
+Characteristics of deliverables that must be met
+C
+. 
+Checkpoints on a project to determine Go/No-Go
+decisions
+D
+. 
+Major events in a project used to measure progress
+55.
+ Which type of cost estimating is done by assigning a cost
+estimate to each work package in the project?
+A
+. 
+Top-down estimating
+B
+. 
+Bottom-up estimating
+C
+. 
+Parametric estimating
+D
+. 
+Three-point estimating
+56.
+ Developing the project team involves all of the following,
+EXCEPT
+A
+. 
+Developing a team that lasts longer than the project
+B
+. 
+Creating a positive environment for team members
+C
+. 
+Creating an effective, functioning, and coordinated group
+D
+. 
+Increasing the team’s competency levels
+57.
+ All of the following are types of dependencies, EXCEPT
+A
+. 
+Mandatory
+B
+. 
+Discretionary
+C
+. 
+External
+D
+. 
+Backlog
+58.
+ 
+A stakeholder has asked to add a change to a project, but the
+
+request is rejected by the project manager. What is the likely
+reason the scope was rejected?
+A
+. 
+There is interaction between constraints.
+B
+. 
+Scope creep is occurring on the project.
+C
+. 
+The request can be handled without the formality.
+D
+. 
+The sponsor is on vacation.
+59.
+ The characteristics of the lower-level WBS include all of the
+following, EXCEPT
+A
+. 
+WBS components are a further decomposition of project
+deliverables.
+B
+. 
+WBS components should always happen concurrently
+with determining major deliverables.
+C
+. 
+WBS components should be tangible and verifiable.
+D
+. 
+WBS components should be organized in terms of project
+organization.
+60.
+ A project manager meets with upset team members to listen
+to their concerns. After hearing their concerns, the project
+manager makes some of the team members’ recommendations
+in exchange for the team members accepting other rules. This is
+an example of which of the following?
+A
+. 
+Forcing
+B
+. 
+Compromising
+C
+. 
+Confronting
+D
+. 
+Smoothing
+61.
+ A company is expanding and has several projects underway.
+One project is building a new wing on the headquarters
+building, and the other is installing a new high-speed fiber
+network. The framing of the new building must begin before
+the installation of the new network can begin. This is an
+example of what type of logical relationship?
+A
+. 
+Finish-to-finish
+
+B
+. 
+Start-to-start
+C
+. 
+Finish-to-start
+D
+. 
+Start-to-finish
+62.
+ A project has task A, which will take 2 days; task B which
+will take 3 days; task C, which will take 2 days; task D, which
+will take 2 days; and task E, which will take 3 days. Task A is a
+predecessor for task B and for task C. Task C is a predecessor
+for task D. Both task B and task D are predecessors for task E.
+63.
+ What is the duration of the critical path?
+A
+. 
+7 days
+B
+. 
+9 days
+C
+. 
+10 days
+D
+. 
+11 days
+64.
+ 
+In what project artifact would you find information relating
+to the quality and availability of resources?
+A
+. 
+Project schedule
+B
+. 
+Organization chart
+C
+. 
+Resource calendar
+D
+. 
+Risk register
+65.
+ In which of the following situations would team-building
+efforts provide the most impact on a project? (Choose three.)
+A
+. 
+Team discord
+B
+. 
+Schedule changes
+C
+. 
+Missed deliverables
+D
+. 
+Project phase completion
+E
+. 
+Lessons learned meeting
+F
+. 
+Change in project manager
+66.
+ An organization needs to add vendor resources to a project,
+but they do not have the physical space to house the team.
+
+What approach should the organization use for their personnel
+management?
+A
+. 
+Deploy projectized teams
+B
+. 
+Deploy functional teams
+C
+. 
+Use in-house teams
+D
+. 
+Use remote teams
+67.
+ Nyssa works for Wigitcom and has been assigned to a
+project. She wants to take a week off for a family reunion,
+which conflicts with a project deadline. The project manager
+denied her leave request, but her functional manager lets her
+attend the family reunion. What type of organizational
+structure is Wigitcom using?
+A
+. 
+Projectized
+B
+. 
+Strong-matrix
+C
+. 
+Balanced-matrix
+D
+. 
+Weak-matrix
+68.
+ When is a project considered to be a success?
+A
+. 
+Stakeholder expectations have been met.
+B
+. 
+The phase completion has been approved.
+C
+. 
+All project phases have been completed.
+D
+. 
+The vendor has been released from the project.
+69.
+ Which of the following in an example of a deliverable?
+A
+. 
+The date work on the project begins
+B
+. 
+The design for a new product
+C
+. 
+Time and materials applied to the project
+D
+. 
+PMO
+70.
+ A project sponsor would be responsible for all of the
+following, EXCEPT
+A
+. 
+Developing high-level requirements for the project
+
+B
+. 
+Functioning as the approval authority and removing
+roadblocks
+C
+. 
+Marketing the project across the organization
+D
+. 
+Estimating the costs and dependencies of the project
+activities
+E
+. 
+Serving to help control the direction of the project
+71.
+ What elements are explained in a business case?
+A
+. 
+Justification by identifying the organizational benefits
+B
+. 
+Alternative solutions
+C
+. 
+Alignment to the strategic plan
+D
+. 
+All of the above
+E
+. 
+A and C
+72.
+ All projects are constrained by which three elements as they
+affect quality?
+A
+. 
+Time, budget, scope
+B
+. 
+Time, risks, budget
+C
+. 
+Cost, benefits, scope
+D
+. 
+Cost, risks, scope
+73.
+ What key milestone is triggered when the project charter is
+signed?
+A
+. 
+A project sponsor can now be chosen.
+B
+. 
+Key stakeholders are freed from project communication.
+C
+. 
+The project is authorized to begin.
+D
+. 
+Project resources are released from the project.
+74.
+ The Closing processes include all of the following, EXCEPT
+A
+. 
+Archiving of project documents
+B
+. 
+Release of project members
+C
+. 
+Review of lessons learned
+
+D
+. 
+Monitoring of the risks and issues log
+75.
+ All of the following are examples of project resources,
+EXCEPT
+A
+. 
+Team members
+B
+. 
+Equipment
+C
+. 
+WBS
+D
+. 
+Materials
+76.
+ 
+Analogous estimating is also referred to as which of the
+following?
+A
+. 
+Top-down estimating
+B
+. 
+Bottom-up estimating
+C
+. 
+Parametric estimating
+D
+. 
+Three-point estimating
+77.
+ Earned value is an indication of which of the following?
+A
+. 
+The actual cost of completing work in a specific
+timeframe
+B
+. 
+The cost of work that has been authorized and budgeted
+C
+. 
+The value of the work completed to date compared to the
+budgeted amount
+D
+. 
+The total sum of sales earned at project completion
+78.
+ Fast-tracking a project is a technique involving which of the
+following?
+A
+. 
+Performing two tasks in parallel that were previously
+scheduled to start sequentially
+B
+. 
+Looking at cost and schedule trade-offs such as adding
+more resources
+C
+. 
+Moving later deliverables to earlier phases to appease
+stakeholders
+D
+. 
+Removing critical path activities that are unnecessary
+
+79.
+ Deliverables are an output of which of which phase?
+A
+. 
+Initiation
+B
+. 
+Planning
+C
+. 
+Execution
+D
+. 
+Monitor and Control
+E
+. 
+Closing
+80.
+ What does a resource shortage mean?
+A
+. 
+There is a shortage of things for team members to work
+on.
+B
+. 
+Not enough resources are available for the task, leading
+to over allocation.
+C
+. 
+There are too many resources, leading to under-
+allocation.
+D
+. 
+There is an abundancy of things for team members to
+work on.
+81.
+ In what stage of team development do the members stop
+working with one another and return to their functional jobs?
+A
+. 
+Forming
+B
+. 
+Storming
+C
+. 
+Norming
+D
+. 
+Performing
+E
+. 
+Adjourning
+82.
+ 
+Wigitcom has a project where cost is the most important
+consideration for the sponsor. Which personnel model would
+make the most sense for the project?
+A
+. 
+Premium team assignments
+B
+. 
+Collocation
+C
+. 
+Virtual teams
+D
+. 
+Videoconferencing
+
+83.
+ Where would the following information be found: types of
+contracts the project will use, authority of the project team, and
+information on how multiple vendors will be managed?
+A
+. 
+Budget
+B
+. 
+Procurement plan
+C
+. 
+WBS
+D
+. 
+Detailed risks
+84.
+ An organization that has a fixed budget and offers a stable
+environment would be best suited for which type of project
+management approach?
+A
+. 
+Traditional, or waterfall
+B
+. 
+Projectized environment
+C
+. 
+Agile approach
+D
+. 
+Functional environment
+85.
+ All of the following are phases of a project, EXCEPT
+A
+. 
+Planning
+B
+. 
+Closing
+C
+. 
+Development
+D
+. 
+Execution
+86.
+ What does a change control board (CCB) do to support the
+project?
+A
+. 
+Helps vet and manage changes to the scope
+B
+. 
+Provides an accounting structure for tasks
+C
+. 
+Sets the standards and templates for the project
+D
+. 
+Sets the costs of quality for the project
+87.
+ Which project role is responsible for coordinating resources
+between projects?
+A
+. 
+Project management office (PMO)
+
+B
+. 
+Project coordinator
+C
+. 
+Project manager
+D
+. 
+Project scheduler
+88.
+ 
+When does an item move from the risk register to the issue
+log?
+A
+. 
+As soon as the risk as identified
+B
+. 
+When the risk is triggered
+C
+. 
+Never
+D
+. 
+In the creation of the project plan
+89.
+ A team member is upset about having to stay late because
+he will miss a Scouts meeting with his son. He approaches the
+project manager, who lets him know that it is a one-time thing,
+and if they work that night they will not have to come in on the
+weekend. Though upset, the team member stays and finishes
+his work. This is an example of what type of conflict resolution?
+A
+. 
+Smoothing
+B
+. 
+Confronting
+C
+. 
+Compromising
+D
+. 
+Avoiding
+E
+. 
+Forcing
+90.
+ When should employee performance expectations be set on
+a project?
+A
+. 
+Lessons learned meeting
+B
+. 
+Employee performance review
+C
+. 
+Stakeholder identification meeting
+D
+. 
+First meeting with a new team member
+91.
+ All of the following are used in an Agile approach to project
+management, EXCEPT
+A
+. 
+Burndown charts
+
+B
+. 
+WBS
+C
+. 
+Continuous requirements gathering
+D
+. 
+Sprint planning
+92.
+ A company decides to bring in a team from outside the
+organization to assist on the project, instead of using company
+employees. This is an example of which of the following?
+A
+. 
+Insourcing
+B
+. 
+Outsourcing
+C
+. 
+Layoffs
+D
+. 
+Collocation
+93.
+ Teams normally go through a similar development cycle.
+Which is the correct order of those stages?
+A
+. 
+Norming, Forming, Storming, Adjourning, Performing
+B
+. 
+Forming, Storming, Norming, Performing, Adjourning
+C
+. 
+Forming, Norming, Performing, Storming, Adjourning
+D
+. 
+Norming, Storming, Forming, Adjourning, Performing
+94.
+ 
+In the development of project schedule, the need to set
+governance gates is important. All of the following are examples
+of governance gates, EXCEPT
+A
+. 
+Daily standup meetings
+B
+. 
+Client sign-off
+C
+. 
+Management approval
+D
+. 
+Legislative approval
+95.
+ Which project role outlines the consequences of
+nonperformance?
+A
+. 
+Project manager
+B
+. 
+Project coordinator
+C
+. 
+Project scheduler
+
+D
+. 
+Project management office
+96.
+ A building project requires the following steps:
+construction, purchasing the build site, blueprinting, and
+inspection. Construction has what relationship to blueprinting?
+A
+. 
+It is a successor task.
+B
+. 
+It is a mandatory task.
+C
+. 
+It is a predecessor task.
+D
+. 
+It is a discretionary task.
+97.
+ The types of organizational structures include which of the
+following? (Choose three.)
+A
+. 
+Agile
+B
+. 
+Functional
+C
+. 
+Matrix
+D
+. 
+Colocation
+E
+. 
+Projectized
+98.
+ A construction company is in the middle of a project to
+build a guest room on a house. The EV value for the project is
+$7,000, and the actual cost for the project is $9,500. Select the
+CV for the project and its meaning.
+A
+. 
+$2,500 and the project is under budget
+B
+. 
+−$2,500 and the project is under budget
+C
+. 
+$2,500 and the project is over budget
+D
+. 
+−$2,500 and the project is over budget
+99.
+ The Closing phase of a project serves what critical purpose?
+A
+. 
+Formal acceptance and turnover to ongoing maintenance
+and support
+B
+. 
+Performing governance activities and turnover to ongoing
+maintenance and support
+C
+. 
+Formal acceptance and producing deliverables
+
+D
+. 
+Performing governance activities and producing
+deliverables
+100.
+ 
+A project management office (PMO) has which of the
+following responsibilities? (Choose three.)
+A
+. 
+Markets the project across the business
+B
+. 
+Provides governance for projects
+C
+. 
+Manages the team, communication, scope, risk, budget,
+and time of the project
+D
+. 
+Maintains standard documentation and templates
+E
+. 
+Establishes key performance indicators and parameters
+F
+. 
+Develops and maintains the project schedule
+101.
+ Which project role helps to market the need and success of
+the project and provides a level of control for funding?
+A
+. 
+Project sponsor or champion
+B
+. 
+Project manager
+C
+. 
+Project coordinator
+D
+. 
+Project scheduler
+102.
+ In terms of project management, what is a program?
+A
+. 
+A listing of all individuals involved in the project,
+including key stakeholders
+B
+. 
+The software package used to enter and track project
+management aspects
+C
+. 
+Related projects that are coordinated and managed with
+similar techniques
+D
+. 
+A collection of projects and subportfolios that support the
+strategic goals of the business
+103.
+ This role supports the project manager, performs cross-
+functional coordination, conducts time and resource
+scheduling, and checks for quality. What role is it?
+A
+. 
+Project sponsor or champion
+
+B
+. 
+Project manager
+C
+. 
+Project coordinator
+D
+. 
+Project scheduler
+104.
+ Which of the following is the measure of the cost efficiency
+of budgeted resources, expressed as a ratio?
+A
+. 
+AC
+B
+. 
+EV
+C
+. 
+CPI
+D
+. 
+SPI
+105.
+ A government agency is working to launch a new service.
+Members of the project team are required to report to both the
+project manager and their functional manager, who share
+authority for the resources. What type of organizational
+structure is this?
+A
+. 
+Projectized
+B
+. 
+Strong-matrix
+C
+. 
+Balanced-matrix
+D
+. 
+Weak-matrix
+106.
+ When breaking down project deliverables, what is the
+lowest level that is recorded in a WBS?
+A
+. 
+Daily work schedules
+B
+. 
+High-level requirements
+C
+. 
+Work package
+D
+. 
+Major milestones
+107.
+ Which of the following are conflict resolution techniques?
+(Choose two.)
+A
+. 
+Threatening
+B
+. 
+Smoothing
+C
+. 
+Storming
+
+D
+. 
+Norming
+E
+. 
+Negotiating
+108.
+ In what stage of team development do team members
+begin to confront each other and vie for position and control?
+A
+. 
+Forming
+B
+. 
+Storming
+C
+. 
+Norming
+D
+. 
+Performing
+E
+. 
+Adjourning
+109.
+ A company is expanding and has several projects
+underway. One project is constructing a new wing on the
+headquarters building, and the other is installing a new high-
+speed fiber network. The framing of the new building must be
+completed before the installation of the new network can begin.
+This is an example of which of the following?
+A
+. 
+Interproject resource contention
+B
+. 
+Start-to-Finish relationship
+C
+. 
+Interproject resource dependencies
+D
+. 
+Dedicated resources
+110.
+ Robert is assigned to work on a project. One of his tasks is
+to reach out to resources and solicit task status on the progress
+of the project. Robert is most likely which of the following?
+A
+. 
+Project manager
+B
+. 
+Project team member
+C
+. 
+Project scheduler
+D
+. 
+Project coordinator
+111.
+ 
+In an Agile approach to project management, what is a
+backlog?
+A
+. 
+Delayed work that is cause by bottlenecks
+
+B
+. 
+Customer prioritized functionality list that still needs to
+be added to the product
+C
+. 
+Inventory not added to the project because of shipping
+delays
+D
+. 
+A daily meeting focusing on three questions
+112.
+ What factors should be considered when scheduling a video
+or telephone conference?
+A
+. 
+Ensure meeting room has sufficient seating.
+B
+. 
+Check whether team members are introverted or
+extroverted.
+C
+. 
+Recognize the different time zones/schedules being used.
+D
+. 
+Make writing materials available in the room.
+113.
+ Nestor is a project manager assigned to build a new branch
+office for a bank. The branch office will be of a similar size and
+design as another branch office. He has been asked to create
+cost and schedule estimates and to follow the bank’s best
+practices for projects. Whose responsibility is it to help Nestor
+with this effort?
+A
+. 
+Project sponsor
+B
+. 
+Project management office
+C
+. 
+Project team
+D
+. 
+Project scheduler
+114.
+ During the initiation phase, what are two activities that
+should be performed?
+A
+. 
+Developing the project charter and project kickoff
+meeting
+B
+. 
+Holding the project kickoff meeting and identifying the
+stakeholders
+C
+. 
+Developing the project charter and stakeholder
+identification
+D
+. 
+Creating the project plan and develop the project charter
+
+115.
+ Where would an organization document the results of their
+buy versus build analysis?
+A
+. 
+WBS
+B
+. 
+Budget
+C
+. 
+Change management plan
+D
+. 
+Procurement plan
+116.
+ All of the following techniques can be used to estimate the
+duration of an activity, except
+A
+. 
+Expert judgment
+B
+. 
+Three-point estimating
+C
+. 
+Analogous estimating
+D
+. 
+Pareto diagramming
+117.
+ Which role of the project is responsible for working to
+create the deliverables according to the project schedule?
+A
+. 
+Project stakeholders
+B
+. 
+Project team members
+C
+. 
+Project scheduler
+D
+. 
+Project coordinator
+118.
+ Which type of cost estimation uses a mathematical model
+to compute costs?
+A
+. 
+Top-down estimating
+B
+. 
+Bottom-up estimating
+C
+. 
+Parametric estimating
+D
+. 
+Three-point estimating
+119.
+ Which of the following project documents are created
+during the Execution phase? (Choose two.)
+A
+. 
+Project charter
+B
+. 
+Communication plan
+
+C
+. 
+Issues log
+D
+. 
+Lessons learned
+E
+. 
+Action items
+120.
+ Project managers should spend how much of their time
+communicating?
+A
+. 
+Up to 40%
+B
+. 
+Up to 50%
+C
+. 
+Up to 75%
+D
+. 
+Up to 90%
+121.
+ A project stakeholder has which of the following
+responsibilities?
+A
+. 
+Documentation and administrative support, estimation of
+task duration, soliciting task status from resources,
+expertise
+B
+. 
+Vested interest, providing input and requirements,
+project steering, expertise
+C
+. 
+Documentation and administrative support, providing
+input and requirements, project steering, expertise
+D
+. 
+Vested interest, providing input and requirements, cross-
+functional coordination, expertise
+122.
+ Jenny works for a company undertaking a project. She will
+ultimately benefit from the service created and would like to
+share her thoughts and input on how it should be created. She
+is also a subject-matter expert in the product area. Jenny is
+most likely which of the following?
+A
+. 
+Project stakeholder
+B
+. 
+Project champion
+C
+. 
+Project sponsor
+D
+. 
+Member of the PMO
+123.
+ The following deliverables/activities all occur in the
+
+Initiation phase, EXCEPT
+A
+. 
+Project sign-off
+B
+. 
+Project charter
+C
+. 
+Business case
+D
+. 
+High-level risks
+124.
+ 
+High-level risk identification is the responsibility of which
+of the following?
+A
+. 
+Project sponsor
+B
+. 
+Project manager
+C
+. 
+Project coordinator
+D
+. 
+Project team
+125.
+ Which of the following project documents are created
+during the Planning phase of a project? (Choose three.)
+A
+. 
+Status reports
+B
+. 
+Communication plan
+C
+. 
+Organizational chart
+D
+. 
+Lessons learned
+E
+. 
+Project schedule
+F
+. 
+Action items
+126.
+ Which project role is responsible for all project artifacts
+like project plans, meeting minutes, and project delivery?
+A
+. 
+Project coordinator
+B
+. 
+Scheduler
+C
+. 
+Project team
+D
+. 
+Project manager
+127.
+ What are project requirements?
+A
+. 
+A measure of the distance traveled on a project
+
+B
+. 
+Characteristics of deliverables that must be met
+C
+. 
+Checkpoints on a project to determine Go/No-Go
+D
+. 
+Major events in a project used to measure progress
+128.
+ What are critical elements that need to be included in the
+project schedule?
+A
+. 
+Define activities, sequence activities, estimate resources,
+estimate duration
+B
+. 
+Define activities, budget activities, estimate resources,
+estimate completion
+C
+. 
+Budget activities, estimate resources, determine
+milestones, estimate completion
+D
+. 
+Develop schedule, determine completion date, check
+stakeholder assumptions, conduct feasibility assessment
+129.
+ In which phase is the project kickoff meeting held?
+A
+. 
+Initiation
+B
+. 
+Planning
+C
+. 
+Execution
+D
+. 
+Monitor and Control
+E
+. 
+Closing
+130.
+ 
+Determining the burn rate and measuring costs to the
+baseline are elements of what activity?
+A
+. 
+Expenditure tracking
+B
+. 
+Spending plan
+C
+. 
+Parametric estimating
+D
+. 
+Cost accounting
+131.
+ Which of the following is the sprint planning meeting used
+to do?
+A
+. 
+Get a head start on the work needed for the project
+B
+. 
+Prepare the project charter and kickoff meeting
+
+C
+. 
+Set a realistic backlog of items completed during this
+iteration
+D
+. 
+Set the communication and quality plans for the project
+132.
+ What is the indication of how fast a project is spending its
+budget?
+A
+. 
+Fast-tracking
+B
+. 
+Expenditure tracking
+C
+. 
+Crashing
+D
+. 
+Burn rate
+133.
+ The project manager has the following responsibilities
+(choose two):
+A
+. 
+Managing quality assurance
+B
+. 
+Setting key performance indicators and parameters
+C
+. 
+Estimating task duration
+D
+. 
+Managing the team, communication, scope, risk, budget,
+and time
+134.
+ The high-level scope definition should be included in
+which project document?
+A
+. 
+Communication plan
+B
+. 
+Project schedule
+C
+. 
+Project charter
+D
+. 
+Lessons learned
+135.
+ Which of the following is the main activity of the
+Execution phase?
+A
+. 
+Performance measuring and reporting
+B
+. 
+Creating and verifying deliverables
+C
+. 
+Key stakeholder identification
+D
+. 
+Determining needed project resources
+
+136.
+ You would expect the WBS dictionary to contain all of the
+following information, EXCEPT
+A
+. 
+Explanations of team member’s roles and responsibilities
+B
+. 
+Description of the work of the component
+C
+. 
+Quality requirements
+D
+. 
+Required resources
+137.
+ 
+In what step would the make-or-buy decision occur?
+A
+. 
+During the design of the product or service
+B
+. 
+In the creation of the procurement plan
+C
+. 
+In the execution of the project plan
+D
+. 
+During the kickoff meeting
+138.
+ All of the following are cost-estimating techniques,
+EXCEPT
+A
+. 
+Bottom-up estimating
+B
+. 
+Program Evaluation and Review Technique (PERT)
+C
+. 
+Parametric estimating
+D
+. 
+Analogous estimating
+139.
+ The EV for a project is 900 and AC is 1100. The CPI for the
+project would be which of the following?
+A
+. 
+.82
+B
+. 
+1.22
+C
+. 
+–200
+D
+. 
+200
+140.
+ In what type of organizational structure would resources
+report solely to the project manager?
+A
+. 
+Weak-matrix
+B
+. 
+Projectized
+C
+. 
+Strong-matrix
+
+D
+. 
+Functional
+141.
+ Predecessor and successor tasks can have four possible
+logical relationships. Which of the following is not one of
+them?
+A
+. 
+Finish-to-finish
+B
+. 
+Start-to-deferred
+C
+. 
+Finish-to-start
+D
+. 
+Start-to-finish
+142.
+ What aspect of project management is shared with Agile
+and other approaches?
+A
+. 
+Sprint planning
+B
+. 
+Self-organized and self-directed teams
+C
+. 
+Iterative approach
+D
+. 
+Adaptive to new/changing requirements
+143.
+ A scope management plan contains which of the following
+elements? (Choose three.)
+A
+. 
+Process for creating the schedule
+B
+. 
+Process for creating the scope statement
+C
+. 
+Definition of how the deliverables will be validated
+D
+. 
+Process for creating, maintaining, and approving the WBS
+E
+. 
+Process for creating the budget
+144.
+ 
+A project team member is not meeting deadlines, and she
+is starting to be tardy in showing up for work. The project
+manager meets with her and inquires as to what is going on.
+The team member replies that she wants to do good work, but
+that she doesn’t seem to have the skills needed for certain
+tasks. They agree to get the team member a mentor for those
+tasks. This is an example of what type of conflict resolution?
+A
+. 
+Smoothing
+B
+. 
+Forcing
+
+C
+. 
+Compromising
+D
+. 
+Confronting
+E
+. 
+Avoiding
+In terms of resource assignments, which best describes how
+resources are assigned in a projectized environment?
+A
+. 
+Resources are assigned on an ad hoc basis.
+B
+. 
+Resources are assigned from a functional area to the
+project.
+C
+. 
+Resources must be outsourced.
+D
+. 
+Resources must not be collocated.
+145.
+ A software company has a project team working to
+establish a new platform. What mechanism would the company
+use to protect their intellectual property?
+A
+. 
+OBS
+B
+. 
+NDA
+C
+. 
+IMS
+D
+. 
+COQ
+146.
+ When would an Adaptive method be preferable to a more
+rigid project management style?
+A
+. 
+In a mature organization with defined processes
+B
+. 
+When the scope can be easily and thoroughly defined
+C
+. 
+Where small incremental improvements offer no value to
+stakeholders
+D
+. 
+with a rapidly changing environment
+147.
+ When evaluating the project phases, in which phase will
+project costs be the highest?
+A
+. 
+Initiation
+B
+. 
+Planning
+C
+. 
+Execution
+
+D
+. 
+Monitor and Control
+E
+. 
+Closing
+148.
+ As a project approaches a critical deadline, Ed contacts the
+project manager about taking a few days off. The project
+manager needs Ed’s skills to meet the deadline but can see how
+exhausted Ed has become. They agree that Ed will work through
+the deadline, and then get a couple of days off after that. Ed
+accepts this plan and goes back to work. This is an example of
+what type of conflict resolution?
+A
+. 
+Smoothing
+B
+. 
+Confronting
+C
+. 
+Compromising
+D
+. 
+Avoiding
+E
+. 
+Forcing
+149.
+ Adric was recently assigned to a project at Wigitcom. He
+received task assignments from both the project manager and
+his normal supervisor. He is notified that both the project
+manager and the supervisor will contribute to his performance
+review. What type of organizational structure is Wigitcom
+using?
+A
+. 
+Projectized
+B
+. 
+Strong-matrix
+C
+. 
+Balanced-matrix
+D
+. 
+Weak-matrix
+150.
+ Wigitcom has a mobile geolocation application that was
+released last year. They are now working on the latest quarterly
+release of the application, which has minor updates and bug
+fixes. Which of the following statements is true regarding the
+geolocation application effort? (Pick all of the answers that are
+true.)
+A
+. 
+This is a project because there are minor changes to the
+application.
+
+B
+. 
+This not a project because the regular releases are a
+continuing effort.
+C
+. 
+This is a project because this effort is temporary
+in nature.
+D
+. 
+This is not a project because the product being produced
+is not unique.
+151.
+ An iterative, incremental approach to managing the
+activities on a project in a highly flexible manner is referred to
+as
+A
+. 
+Waterfall methodology
+B
+. 
+Matrixed management
+C
+. 
+Projectized
+D
+. 
+Agile methodology
+152.
+ A project has a team member who is absent from meetings,
+is not meeting deadlines, and is affecting the morale of other
+individuals on a team. The appropriate action for the project
+manager would be which of the following?
+A
+. 
+Bring the team member in for a counseling session.
+B
+. 
+Leave the employee alone and distribute work to other
+team members.
+C
+. 
+Remove the team member from the project and seek a
+replacement.
+D
+. 
+Relocate the team member to a different facility.
+153.
+ The Widget Company has a project team located in various
+cities across the same continent. There is an urgent update that
+needs to be sent to the entire project team. What would be the
+most effective way to send the communication?
+A
+. 
+Phone calls
+B
+. 
+Memo
+C
+. 
+Email
+D
+. 
+Videoconferencing
+
+154.
+ 
+In what stage of team development are team members
+brought together and introduced to each other?
+A
+. 
+Forming
+B
+. 
+Storming
+C
+. 
+Norming
+D
+. 
+Performing
+E
+. 
+Adjourning
+155.
+ A project manager listens to the concerns of two team
+members who are upset with each other. After asking
+questions, listening, and getting them to talk with each other,
+the project manager gains agreement on a vested interest for all
+parties and work resumes. The team members agree to start
+behaving accordingly. This is an example of which of the
+following?
+A
+. 
+Negotiating
+B
+. 
+Compromising
+C
+. 
+Confronting
+D
+. 
+Avoiding
+156.
+ Benched resources is when the project has which of the
+following issues?
+A
+. 
+Individuals who are finished with the project but haven’t
+yet started a new assignment
+B
+. 
+Individuals who have too much work for them to be able
+to complete the project
+C
+. 
+A lack of talent in the industry, which leads to a shortage
+of qualified personnel on the project
+D
+. 
+Individuals ordered to the sidelines because of their
+performance
+157.
+ Tiffany is the only digital marketer assigned to the project,
+but only 60 percent of her time is available to the project. There
+is enough work for a person assigned 100 percent of the time to
+
+the project, so Tiffany is struggling to meet her deadlines. This
+is an example of which of the following?
+A
+. 
+Low-quality resources
+B
+. 
+Interdependencies
+C
+. 
+Dedicated resources
+D
+. 
+Resource overallocation
+158.
+ Amy has been assigned to a project and reports to Kim, the
+project manager. John, Amy’s functional manager, also requires
+Amy to report to him. What type of resource is Amy?
+A
+. 
+Dedicated
+B
+. 
+Physical
+C
+. 
+Digital
+D
+. 
+Shared
+159.
+ 
+Obtaining a sign-off on the design of a product would be an
+example of which type of dependency?
+A
+. 
+Discretionary
+B
+. 
+Mandatory
+C
+. 
+External
+D
+. 
+Financial
+160.
+ What part of a project request defines the reason for the
+project, the deliverables at a high level, and the project
+objectives?
+A
+. 
+Work breakdown structure
+B
+. 
+High-level risks
+C
+. 
+Business case
+D
+. 
+High-level scope definition
+161.
+ High-level risk assessment includes all of the following,
+EXCEPT
+A
+. 
+Risk identification and rolled-up (or categorized) work-
+
+task groups
+B
+. 
+Cost-benefit analysis weighing relative risks to potential
+gains
+C
+. 
+High-level responses to mitigate impact
+D
+. 
+Risk identification of all potential project alternatives
+162.
+ A project coordinator has which of the following
+responsibilities? (Choose two.)
+A
+. 
+Approval authority for funding
+B
+. 
+Support for the project manager
+C
+. 
+Time and resource scheduling
+D
+. 
+Contribution of expertise to the project
+E
+. 
+Coordination of resources between projects
+163.
+ At the completion of a project sprint, the project team
+meets to examine what went well, what didn’t go well, and what
+improvements could be made. This is an example of which of
+the following?
+A
+. 
+Governance gates
+B
+. 
+Product backlog
+C
+. 
+Daily SCRUM
+D
+. 
+SCRUM retrospective
+164.
+ The project team has completed all of the deliverables for
+the project. They have meetings scheduled to begin the handoff
+from the project team to the ongoing operations team. In what
+phase is the project at this point?
+A
+. 
+Initiation
+B
+. 
+Planning
+C
+. 
+Execution
+D
+. 
+Monitor and Control
+E
+. 
+Closing
+
+165.
+ 
+With an Agile methodology, all of the following are true
+with an adaptive life cycle, EXCEPT
+A
+. 
+Requires a high degree of stakeholder involvement
+B
+. 
+All requirements must be gathered up front
+C
+. 
+Rapid iterations
+D
+. 
+Fixed time and resources
+166.
+ Jessie does not like how the assignments are being
+delegated and confronts the project manager with his
+complaint. The project manager reinforces that this is the way it
+is done, and Jessie better start getting on board with the
+method because it isn’t going to change. Jessie acknowledges
+the situation, goes back to work, and doesn’t bring it up again.
+What type of conflict resolution is this?
+A
+. 
+Negotiating
+B
+. 
+Confronting
+C
+. 
+Compromising
+D
+. 
+Avoiding
+E
+. 
+Forcing
+167.
+ Wigitcom has a group of projects all related to security
+widgets. They want to add a new product for security cameras
+and sell them to customers. The effort must be completed
+within the next three months to beat the competition to market.
+There is an established group of resources that work on security
+efforts. Which of the following is true about this effort?
+(Choose three.)
+A
+. 
+This effort is not a project because security is already
+done.
+B
+. 
+This effort is a project because the product being
+developed is unique.
+C
+. 
+This effort is a project and will be a part of a program.
+D
+. 
+There is no reason to make this effort because they
+already do security.
+
+E
+. 
+This meets the requirements for a project because it
+creates a unique product and is temporary in nature.
+168.
+ What is a visual representation of how quickly
+requirements are being completed with each iteration called?
+A
+. 
+Fishbone diagram
+B
+. 
+Burndown chart
+C
+. 
+Gantt chart
+D
+. 
+Pareto diagram
+169.
+ A company is located in multiple cities across a continent,
+and the project will be staffed with team members from various
+cities. The decision is made to leave all of the team members in
+their home locations and use technology to aid in
+communication. This is an example of which of the following?
+A
+. 
+Insourcing
+B
+. 
+Outsourcing
+C
+. 
+Virtual teams
+D
+. 
+Collocation
+170.
+ 
+The designer for your project is also assigned to several
+other projects. The other projects have similar targets for their
+milestones. What type of situation does this describe?
+A
+. 
+Interproject resource contention
+B
+. 
+Forcing
+C
+. 
+Task sequencing
+D
+. 
+Resource shortage
+171.
+ In what stage of team development do things begin to calm
+down because the team members become more comfortable
+with one another?
+A
+. 
+Forming
+B
+. 
+Storming
+C
+. 
+Norming
+
+D
+. 
+Performing
+E
+. 
+Adjourning
+172.
+ A project manager is having problems with one team
+member who is being insubordinate. The project manager does
+not approach the team member and just tries to carry on as
+business as usual. This is an example of
+A
+. 
+Forcing
+B
+. 
+Avoiding
+C
+. 
+Confronting
+D
+. 
+Smoothing
+173.
+ Benched resources are
+A
+. 
+Great for an organization since there is always staff to
+work on project
+B
+. 
+Bad for an organization since there is always staff to work
+on a project
+C
+. 
+Costly because individuals are being paid to sit around
+D
+. 
+Inexpensive because individuals are not being paid when
+they sit around
+174.
+ As a project manager, a dedicated resource would be the
+ideal situation because
+A
+. 
+The team member will continue to share time with his or
+her functional work.
+B
+. 
+The project manager has full authority and controls time
+and tasks.
+C
+. 
+The dedicated resource won’t have to be paid overtime.
+D
+. 
+Low-quality resources aren’t assigned to a project.
+175.
+ When a dependency is directly related to the type of work
+on which it is being performed, it is what type of dependency?
+A
+. 
+Discretionary
+B
+. 
+Mandatory
+
+C
+. 
+External
+D
+. 
+Financial
+176.
+ 
+The work breakdown structure is created during which
+project phase?
+A
+. 
+Initiation
+B
+. 
+Planning
+C
+. 
+Execution
+D
+. 
+Monitoring and Control
+E
+. 
+Closing
+177.
+ Acceptance criteria reviews that are used across the project
+are known as which of the following?
+A
+. 
+Critical to quality
+B
+. 
+Quality gates
+C
+. 
+Kanban boards
+D
+. 
+Deliverables
+178.
+ Which of the following are ways to organize the WBS?
+(Choose three.)
+A
+. 
+Critical path
+B
+. 
+Subprojects
+C
+. 
+Project phases
+D
+. 
+Prioritized by risk
+E
+. 
+Major deliverables
+179.
+ Duane is a senior resource assigned to the project, but he
+has begun to be short-tempered in meetings, rigid in his
+positions, and argumentative. The project manager approaches
+Duane, but an argument ensues and Duane walks out. The next
+day the project manager decides to give Duane space and not
+discuss his behavior or performance. This is an example of
+which of the following?
+
+A
+. 
+Negotiating
+B
+. 
+Confronting
+C
+. 
+Compromising
+D
+. 
+Avoiding
+E
+. 
+Forcing
+180.
+ Wigitcom is faced with changes to scope and personnel on
+a project. What is the appropriate method to share this
+information with the stakeholders?
+A
+. 
+Via social media and text messages
+B
+. 
+Using memos and email
+C
+. 
+Holding a meeting with the project team
+D
+. 
+Following the communication plan
+181.
+ 
+Marion is a project manager working on implementing a
+new asset management system for an agency. She has
+encountered problems when trying to get participation from
+other departments, and it is creating problems. Whose
+responsibility would it be to help clear the obstacle?
+A
+. 
+Project coordinator
+B
+. 
+PMO
+C
+. 
+Stakeholders
+D
+. 
+Project sponsor
+182.
+ A project manager is seeking to boost the morale of the
+team through a meeting that includes both social and business
+attributes. The project manager is engaged in what type of
+activity?
+A
+. 
+Trust building
+B
+. 
+Forming
+C
+. 
+Team building
+D
+. 
+Management skills
+
+183.
+ A company is located in multiple cities across a continent,
+and the project will be staffed with team members from various
+cities. The decision is made to bring the project team to single
+location. This is an example of
+A
+. 
+Insourcing
+B
+. 
+Outsourcing
+C
+. 
+Layoffs
+D
+. 
+Collocation
+184.
+ Amber is a new team member who has joined the project.
+An expectation-setting meeting has been held, and Amber is
+getting settled. The first deliverables that have been turned in
+by Amber have been a couple of days late. When should Amber
+be notified of a performance discrepancy?
+A
+. 
+At the lessons-learned meeting at the end of the project
+or phase
+B
+. 
+As soon as possible so a correction can occur or help can
+be provided
+C
+. 
+During the first performance review meeting, even if it is
+months away
+D
+. 
+The project manager should wait for someone else to
+correct Amber’s behavior
+185.
+ Ashley is a program manager for the construction of
+several transit projects. She asks the bridge project manager for
+updated estimates on the bridge’s construction. Who has the
+responsibility for the estimating task duration and costs?
+A
+. 
+Project manager
+B
+. 
+PMO
+C
+. 
+Stakeholders
+D
+. 
+Project team
+186.
+ 
+What is rolling wave planning?
+A
+. 
+Planning for areas of intense activity to allocate team
+
+members according to the resource plan
+B
+. 
+The process of elaborating deliverables or project chases
+into differing levels of the WBS
+C
+. 
+A design technique used to ensure the structural integrity
+for earthquake-proof buildings
+D
+. 
+A quick-start technique of where to begin a project with
+little planning or sign-off to generate momentum
+187.
+ Level 1 of the WBS always represents which of the
+following?
+A
+. 
+Critical path
+B
+. 
+Prioritized tasks
+C
+. 
+Project
+D
+. 
+Sponsor
+188.
+ What is the mechanism used to communicate on the
+status of the project budget?
+A
+. 
+Expenditure tracking
+B
+. 
+Expenditure reporting
+C
+. 
+Budget baseline
+D
+. 
+Work breakdown structure
+189.
+ After establishing the product backlog, what tool would be
+used to determine the project’s velocity?
+A
+. 
+Pareto diagram
+B
+. 
+Fishbone diagram
+C
+. 
+Kanban board
+D
+. 
+Burndown chart
+190.
+ Which of the following would be found in the WBS
+dictionary? (Choose three.)
+A
+. 
+List of scheduled milestones
+B
+. 
+Common acronyms used on the project
+
+C
+. 
+Criteria for acceptance
+D
+. 
+Description of work component
+E
+. 
+Frequency of communications
+F
+. 
+Staffing plan
+191.
+ The scope baseline allows project managers to perform all
+of the following activities, EXCEPT
+A
+. 
+Set the approach to conflict resolution
+B
+. 
+Document schedules
+C
+. 
+Assign resources
+D
+. 
+Monitor and control project work
+192.
+ 
+In a situation where the end product is uncertain and/or
+the conditions for developing a product or service are in flux,
+what would be the best project management approach?
+A
+. 
+Traditional, or waterfall
+B
+. 
+Projectized environment
+C
+. 
+Agile approach
+D
+. 
+Functional environment
+193.
+ All of the following are characteristics of an Agile project
+management approach, EXCEPT
+A
+. 
+Strict adherence to a change control process
+B
+. 
+Uses a flexible approach to requirements
+C
+. 
+Team members work in short bursts, or sprints
+D
+. 
+Each release is tested against the customers’ needs
+194.
+ A project assumption can best be described as which of the
+following?
+A
+. 
+Internal or external factors affecting the project team
+B
+. 
+Factors that restrict the project
+C
+. 
+Factors considered to be true for planning purposes
+
+D
+. 
+Factors considered to be true for control purposes
+195.
+ The sprint planning meeting is used to achieve which of
+the following?
+A
+. 
+Getting a head start on the work needed for the project
+B
+. 
+Preparing the project charter and kickoff meeting
+C
+. 
+Setting a realistic backlog of items completed during this
+iteration
+D
+. 
+Establishing the communication and quality plans for the
+project
+196.
+ Which of the following are characteristics of an Agile
+project management approach? (Choose three.)
+A
+. 
+Self-organized teams
+B
+. 
+Sprint planning
+C
+. 
+Upfront, comprehensive requirements gathering
+D
+. 
+Formally organized teams
+E
+. 
+Continuous requirements gathering
+F
+. 
+Feedback based primarily in lessons learned meetings
+197.
+ How does a high-level scope definition help the planning of
+a project?
+A
+. 
+It creates a shared understanding of what is included and
+excluded from the project.
+B
+. 
+It sets exactly what a product or service will do.
+C
+. 
+It is so high level that it ensures that multiple changes
+can be accommodated by the project.
+D
+. 
+It helps to shift the blame to the project sponsor if the
+project is unsuccessful.
+198.
+ 
+What are three of the responsibilities of a project sponsor?
+A
+. 
+Develops the business case and justification
+B
+. 
+Functions as the approval authority for funding
+
+C
+. 
+Sets the standards and practices a project
+D
+. 
+Provides input and requirements
+E
+. 
+Helps to control the project’s direction
+F
+. 
+Manages the risks of the project
+199.
+ A project manager meets with team members who are
+upset. They discuss areas where there is agreement with each
+other and the situation. Work then resumes on the project. This
+is an example of which of the following?
+A
+. 
+Forcing
+B
+. 
+Avoiding
+C
+. 
+Confronting
+D
+. 
+Smoothing
+200.
+ Crashing is a project management technique involving
+which of the following?
+A
+. 
+Performing two tasks in parallel that were previously
+scheduled to start sequentially
+B
+. 
+Looking at cost and schedule trade-offs such as adding
+more resources
+C
+. 
+Moving later deliverables to earlier phases to appease
+stakeholders
+D
+. 
+Removing critical path activities that are unnecessary
+201.
+ All of the following are created during the Planning phase
+of a project, EXCEPT
+A
+. 
+Project schedule
+B
+. 
+Communications plan
+C
+. 
+Lessons learned
+D
+. 
+Change management plan
+202.
+ A construction company is working on a new building. The
+CPI for the project is 1.25, which means:
+
+A
+. 
+The project is over budget.
+B
+. 
+The project is behind schedule.
+C
+. 
+The project is under budget.
+D
+. 
+The project is ahead of schedule.
+203.
+ Judy is a program manager and is monitoring the work
+done on several projects. On the telecom project, she needs
+more information on when certain activities and milestones
+will occur. Who on the telecom project should Judy reach out to
+for this information?
+A
+. 
+Project scheduler
+B
+. 
+Project coordinator
+C
+. 
+PMO
+D
+. 
+Project manager
+204.
+ 
+A project team is assigned two individuals directly out of
+college with no experience working in advanced electronics. The
+two team members cannot be assigned work without a more
+senior team member working alongside them. This is an
+example of which one of the following?
+A
+. 
+Shared resources
+B
+. 
+Resource shortage
+C
+. 
+Low-quality resources
+D
+. 
+Benched resources
+205.
+ Mitch is a project manager working in the Planning phase
+of the project. After completing a skills matrix to understand
+what kind of talent the project will need, he is screening the
+résumés of talent already employed by the company. What
+activity is Mitch performing at this stage of the project?
+A
+. 
+Team building
+B
+. 
+Team selection
+C
+. 
+Conflict resolution
+
+D
+. 
+Trust building
+
+Chapter 2
+Project Constraints (Domain 2.0)
+THE FOLLOWING COMPTIA PROJECT+ EXAM
+OBJECTIVES ARE COVERED IN THIS CHAPTER:
+2.1 Given a scenario, predict the impact of various
+constraint variables and influences throughout the
+project.
+Common constraints
+Budget
+Scope
+Deliverables
+Quality
+Environment
+Resources
+Requirements
+Scheduling
+Influences
+Change request
+Scope creep
+Constraint reprioritization
+Interaction between constraints
+Stakeholders/sponsors/management
+Other projects
+2.2 Explain the importance of risk strategies and
+activities.
+Strategies
+
+Accept
+Mitigate
+Transfer
+Avoid
+Exploit
+Risk activities
+Identification
+Quantification
+Planning
+Review
+Response
+Register
+Prioritization
+Communication
+1.
+ 
+“Factors that may impact the change of an existing constraint
+or may bring about a new constraint” is the definition of which
+one of the following?
+A
+. 
+A dependency
+B
+. 
+A predecessor
+C
+. 
+An influence
+D
+. 
+A constraint
+2.
+ The steering committee originally mandated that cost was the
+most important factor to the project, keeping the project team
+size lean. As the project drags on, the steering committee shifts
+and tells the project manager that schedule is the most
+important factor to the project. This is an example of which type
+of influence on a project?
+A
+. 
+Change request
+B
+. 
+Constraint reprioritization
+
+C
+. 
+Scope creep
+D
+. 
+Interactions between constraints
+3.
+ What does the acronym SWOT stand for?
+A
+. 
+Situation, weaknesses, open source, threats
+B
+. 
+Strengths, work, opportunities, traceability
+C
+. 
+Strengths, weaknesses, opportunities, threats
+D
+. 
+Situation, work, open source, traceability
+4.
+ A potential future event that can have either a negative or
+positive impact on a project is known as which one of the
+following?
+A
+. 
+An issue
+B
+. 
+A risk
+C
+. 
+A hope
+D
+. 
+A requirement
+5.
+ As you identify all of the potential risks that might impact a
+project, you should record them in which one of the following?
+A
+. 
+RACI chart
+B
+. 
+Risk register
+C
+. 
+Risk probability matrix
+D
+. 
+Issue log
+6.
+ The activity of selecting risks that have the greatest chance of
+occurring and the biggest impact on the project should they
+occur is called which one of the following?
+A
+. 
+Three-point estimating
+B
+. 
+Pareto diagraming
+C
+. 
+Monitoring and Controlling
+D
+. 
+Risk analysis
+7.
+ 
+The consequence or opportunity the risk poses to the project
+
+is known as which one of the following?
+A
+. 
+Risk response plan
+B
+. 
+Risk impact
+C
+. 
+Risk register
+D
+. 
+Risk probability
+8.
+ What are the three common constraints found in projects?
+(Choose three.)
+A
+. 
+Time
+B
+. 
+Personnel
+C
+. 
+Working space
+D
+. 
+Budget
+E
+. 
+Inventory
+F
+. 
+Scope
+9.
+ A road construction project is going to require the company’s
+road paver, a piece of equipment that lays asphalt on roadways,
+in the next two weeks. The road paver is in use until this Friday
+in a different city and will require five days to be relocated. This
+is an example of which type of constraint?
+A
+. 
+Environment
+B
+. 
+Scheduling
+C
+. 
+Scope
+D
+. 
+Quality
+10.
+ In the determination of the project scope, which of the
+following constraints need to be factored into the discussion?
+(Choose two.)
+A
+. 
+Project manager
+B
+. 
+Predefined budget
+C
+. 
+Mandated finish date
+D
+. 
+Competitive advantage
+
+11.
+ A project calls for six master craftspeople in a particular
+discipline, but the organization only has four on staff. The
+Human Resources department has attempted to hire more, but
+there is a limited number of these craftspeople looking for
+work. What type of constraint does this represent?
+A
+. 
+Resources
+B
+. 
+Scheduling
+C
+. 
+Requirements
+D
+. 
+Quality
+12.
+ 
+Lisa is the project manager on a project and receives a
+change request to add more scope to her project while not
+changing the schedule or the budget. Which of the following
+options are true of the change request?
+A
+. 
+It represents an influence on the project.
+B
+. 
+It represents a constraint on the project.
+C
+. 
+It represents an avoidance strategy.
+D
+. 
+It represents an environmental constraint.
+13.
+ Which of the following roles should be included in the
+identification of risk on a project?
+A
+. 
+Subject matter experts (SME)
+B
+. 
+Core team members
+C
+. 
+Stakeholders
+D
+. 
+All of the above
+E
+. 
+Both B and C
+14.
+ The steering committee for Wigit Construction monitors
+existing projects and approves new ones. The company just won
+a bid for a new project that must be completed in April, which is
+the same month that an underway project must also be
+completed. The stakeholders are doing which of the following?
+A
+. 
+Reprioritizing constraints by shifting a previously
+
+unmovable constraint within a project
+B
+. 
+Submitting a change request because the scope changed
+for the existing project
+C
+. 
+Demonstrating scope creep for the existing project as
+there are more deliverables to accomplish
+D
+. 
+Exerting influence by losing interest in the existing
+project as a new project begins
+15.
+ At a minimum, which of the following types of information
+would be recorded on a risk register? (Choose three.)
+A
+. 
+Risk score
+B
+. 
+Risk trigger scores
+C
+. 
+Impact if the risk occurs
+D
+. 
+Risk owners
+E
+. 
+Description of risk
+F
+. 
+Mitigation strategy
+16.
+ A company is working on a project to produce a smartphone
+that will have similar features to a competitor’s product. After a
+marketing demo, the company receives correspondence from its
+rival demanding that sale of the smartphone be halted and not
+taken up again later, because it violates their intellectual
+property. This is an example of which one of the following?
+A
+. 
+Memorandum of agreement
+B
+. 
+Cease and desist letter
+C
+. 
+Letter of intent
+D
+. 
+Request for proposal
+17.
+ 
+If a project team wanted to enhance a positive risk, what are
+they trying to accomplish?
+A
+. 
+Assign the risk to a third party who is best able to bring
+about opportunity
+B
+. 
+Increase the probability or impact of the risk event to
+
+ensure that benefits are realized
+C
+. 
+Choose to accept the consequences of the risk
+D
+. 
+Look for opportunities to take advantage of positive
+impacts
+18.
+ Just allowing the consequences of a negative risk to happen
+is which type of risk response strategy?
+A
+. 
+Avoid
+B
+. 
+Transfer
+C
+. 
+Mitigate
+D
+. 
+Accept
+19.
+ What is the process of examining the risk analysis and
+establishing the appropriate course of action should it occur
+called?
+A
+. 
+Risk analysis
+B
+. 
+Risk probability
+C
+. 
+Risk response planning
+D
+. 
+Risk trigger
+20.
+ Which of the following is defined as the likelihood that a
+risk will occur?
+A
+. 
+Risk response plan
+B
+. 
+Probability and impact matrix
+C
+. 
+Risk register
+D
+. 
+Risk probability
+21.
+ In a SWOT analysis, opportunities generally look at which
+one of the following?
+A
+. 
+Positive news within the company that affects the project
+B
+. 
+External conditions that contribute to positive risks
+C
+. 
+Job openings on the project where hiring can occur
+
+D
+. 
+Long-term forecast of inclement weather during the
+project
+22.
+ Which of the following statements is true regarding a SWOT
+analysis?
+A
+. 
+Strengths/weaknesses are external to the organization;
+opportunities/threats are internal to the organization.
+B
+. 
+Strengths/weaknesses/opportunities/threats are all
+external to the organization.
+C
+. 
+Strengths/weaknesses are internal to the organization;
+opportunities/threats are external to the organization.
+D
+. 
+Strengths/weaknesses/opportunities/threats are all
+internal to the organization.
+23.
+ 
+Which of the following techniques could be used to create
+an initial list of risks on a project? (Choose three.)
+A
+. 
+Parametric estimating
+B
+. 
+Brainstorming
+C
+. 
+Three-point estimating
+D
+. 
+Interviews
+E
+. 
+Fishbone diagrams
+F
+. 
+Facilitated workshops
+24.
+ What does IMS stand for in the project management sense?
+A
+. 
+Impulsive management system
+B
+. 
+Innovative mission statement
+C
+. 
+Iterative mapping system
+D
+. 
+Integrated master schedule
+25.
+ All of the following are true regarding influencers, EXCEPT
+A
+. 
+A change request is an influencer.
+B
+. 
+Scope creep can influence schedule and budget.
+C
+. 
+Environmental factors can dictate when a project occurs.
+
+D
+. 
+Influences impact existing constraints or create new
+ones.
+26.
+ A customer submits to have a different requirement added
+to a project, and it follows the formal approval process to be
+added to the scope. This is what type of influence on a project?
+A
+. 
+Change request
+B
+. 
+Scope creep
+C
+. 
+An iteration between constraints
+D
+. 
+Resource scarcity
+27.
+ A project team has been working for months on a project
+and is in the Execution phase. The customer discovers that a
+competitor has added new functionality to their product, and
+they would like to add that functionality to this project. To keep
+the project on time and on budget, this change cannot be
+accepted because of what type of constraint?
+A
+. 
+Environment
+B
+. 
+Budget
+C
+. 
+Scope
+D
+. 
+Scheduling
+28.
+ 
+A road construction project is going to build a road through
+the mountains, and there is a window of June through
+September to get the work done because of the risk of
+inclement weather. This is an example of what type of
+constraint?
+A
+. 
+Environment
+B
+. 
+Budget
+C
+. 
+Scope
+D
+. 
+Scheduling
+29.
+ Every project faces all of the following potential constraints,
+EXCEPT
+
+A
+. 
+Quality
+B
+. 
+Budget
+C
+. 
+Scope
+D
+. 
+Staffing
+E
+. 
+Time
+30.
+ Cherie is working on a construction project where weather
+has the potential to disrupt operations. She determines there is
+a 0.25 percent probability of a wetter than normal season,
+which would have a high impact on the project. What activity is
+Cherie performing?
+A
+. 
+Risk identification
+B
+. 
+Risk analysis
+C
+. 
+Risk response
+D
+. 
+Constraint identification
+31.
+ Which of the following is true of project constraints?
+A
+. 
+Project constraints will never change during a project.
+B
+. 
+Project constraints limit the options of the project team.
+C
+. 
+Project constraints are elements assumed to be true.
+D
+. 
+Project constraints have no impact on project outcomes.
+32.
+ Walt works for Wigit Construction, and he has been
+assigned as a project manager to build a new bridge. The team
+has six months to build the project and a fixed budget, and the
+bridge must handle four lanes of traffic. This is an example of
+which one of the following?
+A
+. 
+Three-point estimating
+B
+. 
+Cost of quality
+C
+. 
+Triple constraints
+D
+. 
+Progressive elaboration
+33.
+ 
+Which of the following is a tool or technique used in
+
+identifying risks to a project?
+A
+. 
+RASI
+B
+. 
+SWOT
+C
+. 
+RACI
+D
+. 
+COQ
+34.
+ Wigitcom’s general counsel lets you know that it received a
+C&D, and there will need to be a meeting on the future of the
+project. In this context, what is a C&D?
+A
+. 
+Consequences and demands
+B
+. 
+Constraints and deliverables
+C
+. 
+Cease and demands
+D
+. 
+Cease and desist
+35.
+ What does it mean to share a positive risk?
+A
+. 
+Assign the risk to a third party who is best able to bring
+about opportunity.
+B
+. 
+Monitor the probability or impact of the risk event to
+ensure that benefits are realized.
+C
+. 
+Choose to accept the consequences of the risk.
+D
+. 
+Look for opportunities to take advantage of positive
+impacts.
+36.
+ The risk response strategy that focuses on shifting the
+liability for a negative risk to a third party is known as which
+one of the following?
+A
+. 
+Avoidance
+B
+. 
+Transference
+C
+. 
+Mitigation
+D
+. 
+Acceptance
+37.
+ When determining risk probability and impact, which tool
+typically offers the best results?
+
+A
+. 
+Expert judgment
+B
+. 
+Parametric estimating
+C
+. 
+Environmental factors
+D
+. 
+Project documentation
+38.
+ What tool would be used to prioritize and quantify risks so
+that the information is easy to understand and is visually
+informative?
+A
+. 
+Probability and impact matrix
+B
+. 
+Fishbone diagram
+C
+. 
+Histogram
+D
+. 
+Responsibility assignment matrix
+39.
+ 
+What does the weaknesses portion analyze in a SWOT
+analysis?
+A
+. 
+The market share of the smallest competitor
+B
+. 
+Which elements are weakest for the company’s
+competitor
+C
+. 
+Which elements are weak areas within the company
+D
+. 
+Portfolio elements that bring a negative return
+40.
+ All of these are common potential risks to a project,
+EXCEPT
+A
+. 
+Teams not attending status meetings
+B
+. 
+Insufficient budget assigned to the project
+C
+. 
+Scope changes after the project execution begins
+D
+. 
+Legal ramifications resulting from the project
+41.
+ Risk planning includes all of the following activities,
+EXCEPT
+A
+. 
+Measuring the SPI and CPI
+B
+. 
+Analyzing the potential impacts of each risk
+
+C
+. 
+Identifying all potential risks to the project
+D
+. 
+Creating a response to each risk
+42.
+ What is a MOU?
+A
+. 
+Memorandum of understatement
+B
+. 
+Memorandum of usability
+C
+. 
+Memorandum of understanding
+D
+. 
+Memorandum of unacceptability
+43.
+ What does the acronym RACI stand for?
+A
+. 
+Responsible, accountable, consulted, and informed
+B
+. 
+Responsibility, authority, consult, and inform
+C
+. 
+Responsible, authority, consulted, and inform
+D
+. 
+Responsibility, accountable, consult, and informed
+44.
+ How do stakeholders, sponsors, and management exert
+influence on a project? (Choose all that apply.)
+A
+. 
+Shift the priorities of the project as it progresses
+B
+. 
+Lose interest in this project as newer projects begin
+C
+. 
+Don’t attend all meetings
+D
+. 
+Don’t work on project deliverables
+45.
+ 
+The project scope statement mandates that a new product
+will be developed along with administrative documentation and
+a user manual in three languages, including English, Spanish,
+and French. What type of constraint does this represent?
+A
+. 
+Quality
+B
+. 
+Deliverables
+C
+. 
+Time
+D
+. 
+Budget
+46.
+ The launch of a new flagship hotel is coming down to the
+wire. The customer wants to add an additional welcome area to
+
+the hotel prior to the grand opening. Which of the following
+impacts would be true?
+A
+. 
+The scope of the project has changed but not the
+schedule, so costs will increase.
+B
+. 
+The schedule of the project has changed but not the costs,
+so the scope will change.
+C
+. 
+The costs of the project have changed but not the scope,
+so the schedule will change.
+D
+. 
+This change will not have a project impact due to
+contingencies.
+47.
+ An aircraft engineering company is forced to cut the project
+budget after poor financial results in the previous quarter. How
+would this most likely impact the project?
+A
+. 
+The project is postponed due to lack of financial
+resources.
+B
+. 
+The project scope is cut back to operate within the new
+budget.
+C
+. 
+The project will take longer because the number of
+resources is cut.
+D
+. 
+The project team goes to the steering committee for more
+funds.
+48.
+ A project is underway, and the team has missed several
+deliverable dates. The steering committee would like the project
+to stay on track, and the project manager indicates that the
+team will need to work overtime to make the deadline. The
+increased cost is restricted by which type of constraint?
+A
+. 
+Environment
+B
+. 
+Budget
+C
+. 
+Scope
+D
+. 
+Scheduling
+49.
+ A simple spreadsheet that contains an identification
+
+number, risk name, risk description, risk owner, and other
+elements is known as which one of the following?
+A
+. 
+Risk response plan
+B
+. 
+Probability and impact matrix
+C
+. 
+RACI chart
+D
+. 
+Risk register
+50.
+ 
+George is working on both positive and negative elements
+that might affect a project. For each element, he is trying to
+figure out the chances of the element occurring and how that
+element would disrupt or enhance the project. George is using
+which one of the following?
+A
+. 
+Probability and impact matrix
+B
+. 
+Risk management plan
+C
+. 
+Risk register
+D
+. 
+Risk response plan
+51.
+ Which of the following would you need in the calculation of
+the risk score? (Choose two.)
+A
+. 
+SPI
+B
+. 
+Risk impact
+C
+. 
+CPI
+D
+. 
+Risk probability
+E
+. 
+Risk trigger scores
+F
+. 
+EAC
+52.
+ The project manager is looking for a way to determine the
+shortest duration in which the project can be completed. The
+project manager tells the scheduler to use CPM. What is CPM?
+A
+. 
+Cost production management
+B
+. 
+Critical project management
+C
+. 
+Critical path method
+
+D
+. 
+Cost project method
+53.
+ What is the event that detects that a known risk’s variable
+has changed and that it is time to move the item from the risk
+register to the issue log?
+A
+. 
+Risk response plan
+B
+. 
+Risk identification
+C
+. 
+Risk trigger
+D
+. 
+Probability and impact matrix
+54.
+ What does it mean to exploit a positive risk?
+A
+. 
+Assign the risk to a third party who is best able to bring
+about opportunity
+B
+. 
+Monitor the probability or impact of the risk event to
+ensure that benefits are realized
+C
+. 
+Choose to accept the consequences of the risk
+D
+. 
+Look for opportunities to take advantage of positive
+impacts, thereby ensuring it occurs
+55.
+ 
+Attempting to ensure that a risk doesn’t happen at all, or
+eliminating the cause of a negative risk, is what type of risk
+response strategy?
+A
+. 
+Transfer
+B
+. 
+Mitigate
+C
+. 
+Accept
+D
+. 
+Avoid
+56.
+ In a SWOT analysis, threats are which one of the following?
+A
+. 
+Situations where physical security is needed
+B
+. 
+Internal conditions that would lead to negative impacts
+C
+. 
+Arguments that get out of hand, leading to raised voices
+D
+. 
+External conditions that would lead to negative impacts
+57.
+ The Transportation Exchange held a kickoff meeting where
+
+they explained the project goals and high-level timeline and
+performed project introductions. What phase of the project are
+they in?
+A
+. 
+Initiation
+B
+. 
+Planning
+C
+. 
+Execution
+D
+. 
+Monitor and Control
+E
+. 
+Closing
+58.
+ What is the activity of determining and documenting any
+potential risks that might happen on a project?
+A
+. 
+Risk planning
+B
+. 
+Risk mitigation
+C
+. 
+Risk avoidance
+D
+. 
+Risk identification
+59.
+ In the project management sense, what does ISO stand for?
+A
+. 
+International Standards Organization
+B
+. 
+Isomorphic Standards of Operations
+C
+. 
+International Structure of Operations
+D
+. 
+Intentional Standards Operations
+60.
+ What does the acronym RASI stand for?
+A
+. 
+Responsible, authority, superior, and inform
+B
+. 
+Responsibly, accountable, support, and informed
+C
+. 
+Responsible, accountable, superior, and inform
+D
+. 
+Responsibility, authority, support, and inform
+61.
+ 
+The scope of a project is expanded through the formal
+change control process, causing the schedule to be extended
+beyond the original due date. This is an example of which type
+of influence?
+
+A
+. 
+Stakeholders, sponsors, and management
+B
+. 
+Interaction between constraints
+C
+. 
+Constraint reprioritization
+D
+. 
+Environmental factors
+62.
+ Even though the project scope statement has been
+approved, the customer has routinely asked for more features
+to be added to the product, causing the due date and resources
+to be adjusted consistently. This is an example of which type of
+influence?
+A
+. 
+Change request
+B
+. 
+Constraint reprioritization
+C
+. 
+Schedule constraint
+D
+. 
+Scope creep
+63.
+ Which of the following are examples of influences? (Choose
+three.)
+A
+. 
+Change request
+B
+. 
+Scope statement
+C
+. 
+Scope creep
+D
+. 
+Constraint reprioritization
+E
+. 
+Deliverables
+F
+. 
+Requirements
+64.
+ Which of the following is defined as anything that restricts
+or forces the actions of the project team?
+A
+. 
+A requirement
+B
+. 
+An assumption
+C
+. 
+A constraint
+D
+. 
+An influence
+65.
+ A wedding planner receives notice that the big event needs
+to be moved forward two weeks due to the pending military
+
+
+[Note: PDF has 410 pages, only first 100 pages extracted]

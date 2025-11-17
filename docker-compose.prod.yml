@@ -1,0 +1,15 @@
+version: "3.9"
+
+services:
+  fame:
+    build: .
+    image: fame-desktop:prod
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - FAME_ENV=production
+      - FAME_LOG_AGGREGATION=${FAME_LOG_AGGREGATION:-0}
+    restart: unless-stopped
+

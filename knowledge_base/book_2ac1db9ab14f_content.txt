@@ -1,0 +1,4104 @@
+CEH
+™
+ Certified Ethical Hacker
+Study Guide
+Version 9
+Sean-Philip Oriyano
+
+
+Development Editor: Kim Wimpsett 
+Technical Editors: Raymond Blockmon, Jason McDowell, Tom Updegrove 
+Production Editor: Rebecca Anderson 
+Copy Editor: Linda Recktenwald 
+Editorial Manager: Mary Beth Wakefield 
+Production Manager: Kathleen Wisor 
+Executive Editor: Jim Minatel 
+Media Supervising Producer: Rich Graves 
+Book Designers: Judy Fung and Bill Gibson 
+Proofreader: Nancy Carrasco 
+Indexer: J & J Indexing 
+Project Coordinator, Cover: Brent Savage 
+Cover Designer: Wiley 
+Cover Image: ©Getty Images Inc./Jeremy Woodhouse
+Copyright © 2016 by John Wiley & Sons, Inc., Indianapolis, Indiana
+Published simultaneously in Canada
+ISBN: 978-1-119-25224-5
+ISBN: 978-1-119-25227-6 (ebk.)
+ISBN: 978-1-119-25225-2 (ebk.)
+Manufactured in the United States of America
+No part of this publication may be reproduced, stored in a retrieval system or transmitted in any form or by any means,
+electronic, mechanical, photocopying, recording, scanning or otherwise, except as permitted under Sections 107 or 108 of
+the 1976 United States Copyright Act, without either the prior written permission of the Publisher, or authorization
+through payment of the appropriate per-copy fee to the Copyright Clearance Center, 222 Rosewood Drive, Danvers, MA
+01923, (978) 750-8400, fax (978) 646-8600. Requests to the Publisher for permission should be addressed to the
+Permissions Department, John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, (201) 748-6011, fax (201) 748-
+6008, or online at 
+http://www.wiley.com/go/permissions
+.
+Limit of Liability/Disclaimer of Warranty: The publisher and the author make no representations or warranties with
+respect to the accuracy or completeness of the contents of this work and specifically disclaim all warranties, including
+without limitation warranties of fitness for a particular purpose. No warranty may be created or extended by sales or
+promotional materials. The advice and strategies contained herein may not be suitable for every situation. This work is
+sold with the understanding that the publisher is not engaged in rendering legal, accounting, or other professional
+services. If professional assistance is required, the services of a competent professional person should be sought. Neither
+the publisher nor the author shall be liable for damages arising herefrom. The fact that an organization or Web site is
+referred to in this work as a citation and/or a potential source of further information does not mean that the author or
+the publisher endorses the information the organization or Web site may provide or recommendations it may make.
+Further, readers should be aware that Internet Web sites listed in this work may have changed or disappeared between
+when this work was written and when it is read.
+For general information on our other products and services or to obtain technical support, please contact our Customer
+Care Department within the U.S. at (877) 762-2974, outside the U.S. at (317) 572-3993 or fax (317) 572-4002.
+Wiley publishes in a variety of print and electronic formats and by print-on-demand. Some material included with
+standard print versions of this book may not be included in e-books or in print-on-demand. If this book refers to media
+such as a CD or DVD that is not included in the version you purchased, you may download this material at
+http://booksupport.wiley.com
+. For more information about Wiley products, visit 
+www.wiley.com
+.
+Library of Congress Control Number: 2016934529
+TRADEMARKS: Wiley, the Wiley logo, and the Sybex logo are trademarks or registered trademarks of John Wiley &
+Sons, Inc. and/or its affiliates, in the United States and other countries, and may not be used without written permission.
+CEH is a trademark of EC-Council. All other trademarks are the property of their respective owners. John Wiley & Sons,
+Inc. is not associated with any product or vendor mentioned in this book.
+
+I would like to dedicate this book to Medal of Honor recipient (and personal hero) Sgt.
+Maj. (USA) Jon R. Cavaiani, who passed away some time before this book was written.
+Thank you for giving me the honor to shake your hand.
+
+Acknowledgments
+Writing acknowledgements is probably the toughest part of writing a book in my opinion
+as I always feel that I have forgotten someone who had to deal with my hijinks over the
+past few months. Anyway, here goes.
+First of all, I want to thank my Mom and Dad for all of your support over the years as well
+as being your favorite son. That’s right, I said it.
+I would also like to take a moment to thank all the men and women I have served with
+over the years. It is an honor for this Chief Warrant Officer to serve with each of you. I
+would also like to extend a special thanks to my own unit for all the work you do, you are
+each a credit to the uniform. Finally, thanks to my Commander for your mentorship,
+support, and faith in my abilities.
+To my friends I want to say thanks for tearing me away from my computer now and then
+when you knew I needed to let my brain cool off a bit. Mark, Jason, Jennifer, Fred, Misty,
+Arnold, Shelly, and especially Lisa, you all helped me put my focus elsewhere for a while
+before I went crazy(er).
+I would also like to thank Shigeru Miyamoto for bringing the Legend of Zelda into reality.
+Finally, on a more serious note, I would like to dedicate this book to Medal of Honor
+recipient (and personal hero) Sgt. Maj. (USA) Jon R. Cavaiani who passed away some
+time before this book was written. Thank you for giving me the honor to shake your hand.
+—Sean-Philip Oriyano
+Duty, Service, Honor
+
+About the Author
+Sean Oriyano
+ (
+www.oriyano.com
+) is a seasoned security professional and entrepreneur.
+Over the past 25 years he has split his time among writing, researching, consulting, and
+training various people and organizations on a wide range of topics relating to both IT and
+security. As an instructor and consultant, Sean has traveled all over the world, sharing his
+knowledge as well as gaining exposure to many different environments and cultures
+along the way. His broad knowledge and easy-to-understand manner, along with a healthy
+dose of humor, have led to Sean being a regularly requested instructor.
+Outside of training and consulting, Sean is also a best-selling author with many years of
+experience in both digital and print media. Sean has published books for McGraw-Hill,
+Wiley, Sybex, O’Reilly Media, and Jones & Bartlett. Over the last decade Sean has
+expanded his reach even further by appearing in shows on both TV and radio. To date,
+Sean has appeared in over a dozen TV programs and radio shows discussing various
+cybersecurity topics and technologies. When in front of the camera, Sean has been noted
+for his casual demeanor and praised for his ability to explain complex topics in an easy-to-
+understand manner.
+Outside his own business activities, Sean is a member of the military as a chief warrant
+officer specializing in infrastructure and security as well as the development of
+new troops. In addition, as a CWO he is recognized as a subject matter expert in his field
+and is frequently called upon to provide expertise, training, and mentoring wherever
+needed.
+When not working, Sean is an avid obstacle course racer, having completed numerous
+races, including a world championship race and a Spartan Trifecta. He also enjoys
+traveling, bodybuilding, training, and developing his mixed martial arts skills plus taking
+survival courses.
+Sean holds many certifications and qualifications that demonstrate his knowledge and
+experience in the IT field, such as the CISSP, CNDA, and Security+.
+
+CONTENTS
+Introduction
+Exam 312-50 Exam Objectives
+Assessment Test
+Answers to Assessment Test
+Chapter 1: Introduction to Ethical Hacking
+Hacking: the Evolution
+So, What Is an Ethical Hacker?
+Summary
+Exam Essentials
+Review Questions
+Chapter 2: System Fundamentals
+Exploring Network Topologies
+Working with the Open Systems Interconnection Model
+Dissecting the TCP/IP Suite
+IP Subnetting
+Hexadecimal vs. Binary
+Exploring TCP/IP Ports
+Understanding Network Devices
+Working with MAC Addresses
+Intrusion Prevention and Intrusion Detection Systems
+Network Security
+Knowing Operating Systems
+Backups and Archiving
+Summary
+Exam Essentials
+Review Questions
+Chapter 3: Cryptography
+Cryptography: Early Applications and Examples
+Cryptography in Action
+Understanding Hashing
+Issues with Cryptography
+Applications of Cryptography
+
+Summary
+Exam Essentials
+Review Questions
+Chapter 4: Footprinting
+Understanding the Steps of Ethical Hacking
+What Is Footprinting?
+Terminology in Footprinting
+Threats Introduced by Footprinting
+The Footprinting Process
+Summary
+Exam Essentials
+Review Questions
+Chapter 5: Scanning
+What Is Scanning?
+Checking for Live Systems
+Checking the Status of Ports
+The Family Tree of Scans
+OS Fingerprinting
+Countermeasures
+Vulnerability Scanning
+Mapping the Network
+Using Proxies
+Summary
+Exam Essentials
+Review Questions
+Chapter 6: Enumeration
+A Quick Review
+What Is Enumeration?
+About Windows Enumeration
+Linux Basic
+Enumeration with SNMP
+Unix and Linux Enumeration
+LDAP and Directory Service Enumeration
+Enumeration Using NTP
+
+SMTP Enumeration
+Summary
+Exam Essentials
+Review Questions
+Chapter 7: System Hacking
+Up to This Point
+System Hacking
+Summary
+Exam Essentials
+Review Questions
+Chapter 8: Malware
+Malware
+Overt and Covert Channels
+Summary
+Exam Essentials
+Review Questions
+Chapter 9: Sniffers
+Understanding Sniffers
+Using a Sniffer
+Switched Network Sniffing
+Summary
+Exam Essentials
+Review Questions
+Chapter 10: Social Engineering
+What Is Social Engineering?
+Social Networking to Gather Information?
+Commonly Employed Threats
+Identity Theft
+Summary
+Exam Essentials
+Review Questions
+Chapter 11: Denial of Service
+Understanding DoS
+Understanding DDoS
+
+DoS Tools
+DDoS Tools
+DoS Defensive Strategies
+DoS Pen-Testing Considerations
+Summary
+Exam Essentials
+Review Questions
+Chapter 12: Session Hijacking
+Understanding Session Hijacking
+Exploring Defensive Strategies
+Summary
+Exam Essentials
+Review Questions
+Chapter 13: Web Servers and Applications
+Exploring the Client-Server Relationship
+Summary
+Exam Essentials
+Review Questions
+Chapter 14: SQL Injection
+Introducing SQL Injection
+Summary
+Exam Essentials
+Review Questions
+Chapter 15: Hacking Wi-Fi and Bluetooth
+What Is a Wireless Network?
+Summary
+Exam Essentials
+Review Questions
+Chapter 16: Mobile Device Security
+Mobile OS Models and Architectures
+Goals of Mobile Security
+Device Security Models
+Countermeasures
+Summary
+
+Exam Essentials
+Review Questions
+Chapter 17: Evasion
+Honeypots, IDSs, and Firewalls
+Summary
+Exam Essentials
+Review Questions
+Chapter 18: Cloud Technologies and Security
+What Is the Cloud?
+Summary
+Exam Essentials
+Review Questions
+Chapter 19: Physical Security
+Introducing Physical Security
+Summary
+Exam Essentials
+Review Questions
+Appendix A: Answers to Review Questions
+Chapter 1: Introduction to Ethical Hacking
+Chapter 2: System Fundamentals
+Chapter 3: Cryptography
+Chapter 4: Footprinting
+Chapter 5: Scanning
+Chapter 6: Enumeration
+Chapter 7: System Hacking
+Chapter 8: Malware
+Chapter 9: Sniffers
+Chapter 10: Social Engineering
+Chapter 11: Denial of Service
+Chapter 12: Session Hijacking
+Chapter 13: Web Servers and Applications
+Chapter 14: SQL Injection
+Chapter 15: Hacking Wi-Fi and Bluetooth
+Chapter 16: Mobile Device Security
+
+Chapter 17: Evasion
+Chapter 18: Cloud Technologies and Security
+Chapter 19: Physical Security
+Appendix B: Penetration Testing Frameworks
+Overview of Alternative Methods
+Penetration Testing Execution Standard
+Summary
+Appendix C: Building a Lab
+Why Build a Lab?
+Creating a Test Setup
+The Installation Process
+Summary
+Advert
+EULA
+List of Tables
+Chapter 1
+Table 1.1
+Table 1.2
+Table 1.3
+Chapter 2
+Table 2.1
+Table 2.2
+Table 2.3
+Chapter 3
+Table 3.1
+Chapter 5
+Table 5.1
+Table 5.2
+Table 5.3
+Table 5.4
+Chapter 9
+
+Table 9.1
+Table 9.2
+Table 9.3
+Chapter 12
+Table 12.1
+Chapter 15
+Table 15.1
+Table 15.2
+List of Illustrations
+Chapter 1
+Figure 1.1 Security versus convenience analysis
+Figure 1.2 The hacking process
+Chapter 2
+Figure 2.1 Bus topology
+Figure 2.2 Ring topology
+Figure 2.3 Star topology
+Figure 2.4 Mesh topology
+Figure 2.5 Hybrid topology
+Figure 2.6 OSI TCP/IP comparative model
+Figure 2.7 TCP three-way handshake
+Figure 2.8 TCP sequencing
+Figure 2.9 Residential network setup
+Figure 2.10 Typical enterprise network
+Chapter 3
+Figure 3.1 The Rosetta stone
+Figure 3.2 Symmetric encryption
+Figure 3.3 Asymmetric encryption
+Figure 3.4 A digital signature in use
+Figure 3.5 The PKI ecosystem
+Figure 3.6 Hash generated from “Hello World” using MD5
+
+Chapter 4
+Figure 4.1 Google Earth
+Figure 4.2 Cameras found by doing a Google hack
+Figure 4.3 Instagram
+Figure 4.4 The Echosec service
+Chapter 5
+Figure 5.1 The three-way handshake
+Figure 5.2 Half-open scan against closed and open ports
+Figure 5.3 Xmas tree scan
+Figure 5.4 An FIN scan against a closed port and an open port
+Figure 5.5 A NULL scan against a closed and an open port
+Figure 5.6 Results of a banner grab
+Figure 5.7 A network map built by a network-mapping software package
+Chapter 8
+Figure 8.1 JPS Virus Maker user interface
+Figure 8.2 TCPView interface
+Chapter 9
+Figure 9.1 TCP three-way handshake packet
+Figure 9.2 Macof MAC flood
+Figure 9.3 Cain & Abel
+Chapter 11
+Figure 11.1 Basic program stack
+Figure 11.2 Smashing the stack
+Figure 11.3 DDoS attack setup
+Chapter 12
+Figure 12.1 Session hijack
+Figure 12.2 Active attack
+Figure 12.3 Passive attack
+Figure 12.4 Spoofing
+Figure 12.5 Source routing
+Figure 12.6 Desynchronizing a connection
+
+Figure 12.7 TCP three-way handshake
+Figure 12.8 MITM attack
+Chapter 15
+Figure 15.1 A Yagi antenna
+Figure 15.2 A parabolic antenna
+Chapter 19
+Figure 19.1 A drive degausser
+Figure 19.2 A mantrap installed in a lobby
+Figure 19.3 One kind of cipher lock
+Figure 19.4 Lock-picking tools
+List of Exercises
+Chapter 2
+Exercise 2.1
+Chapter 3
+Exercise 3.1
+Chapter 4
+Exercise 4.1
+Exercise 4.2
+Exercise 4.3
+Exercise 4.4
+Exercise 4.5
+Chapter 5
+Exercise 5.1
+Chapter 6
+Exercise 6.1
+Exercise 6.2
+Exercise 6.3
+Chapter 7
+Exercise 7.1
+
+Exercise 7.2
+Exercise 7.3
+Exercise 7.4
+Exercise 7.5
+Exercise 7.6
+Exercise 7.7
+Chapter 8
+Exercise 8.1
+Exercise 8.2
+Exercise 8.3
+Chapter 9
+Exercise 9.1
+Exercise 9.2
+Exercise 9.3
+Chapter 11
+Exercise 11.1
+Exercise 11.2
+Exercise 11.3
+Exercise 11.4
+Chapter 12
+Exercise 12.1
+Exercise 12.2
+Exercise 12.3
+Chapter 13
+Exercise 13.1
+Exercise 13.2
+Exercise 13.3
+Exercise 13.4
+Chapter 15
+Exercise 15.1
+Exercise 15.2
+
+Chapter 16
+Exercise 16.1
+Chapter 17
+Exercise 17.1
+
+Introduction
+If you’re preparing to take the CEH exam, you’ll undoubtedly want to find as much
+information as you can about computers, networks, applications, and physical security.
+The more information you have at your disposal and the more hands-on experience you
+gain, the better off you’ll be when taking the exam. This study guide was written with that
+goal in mind—to provide enough information to prepare you for the test, but not so much
+that you’ll be overloaded with information that is too far outside the scope of the exam.
+To make the information more understandable, I’ve included practical examples and
+experience that supplement the theory.
+This book presents the material at an advanced technical level. An understanding of
+network concepts and issues, computer hardware and operating systems, and applications
+will come in handy when you read this book. While every attempt has been made to
+present the concepts and exercises in an easy-to-understand format, you will need to have
+experience with IT and networking technology to get the best results.
+I’ve included review questions at the end of each chapter to give you a taste of what it’s
+like to take the exam. If you’re already working in the security field, check out these
+questions first to gauge your level of expertise. You can then use the book to fill in the
+gaps in your current knowledge. This study guide will help you round out your knowledge
+base before tackling the exam itself.
+If you can answer 85 percent to 90 percent or more of the review questions correctly for a
+given chapter, you can feel safe moving on to the next chapter. If you’re unable to answer
+that many questions correctly, reread the chapter and try the questions again. Your score
+should improve.
+   Don’t just study the questions and answers! The questions on the actual
+exam will be different from the practice questions included in this book. The exam is
+designed to test your knowledge of a concept or objective, so use this book to learn
+the objectives behind the questions.
+Before You Begin Studying
+Before you begin preparing for the exam, it’s imperative that you understand a few things
+about the CEH certification. CEH is a certification from the International Council of
+Electronic Commerce Consultants (EC-Council) granted to those who obtain a passing
+score on a single exam (number 312-50). The exam is predominantly multiple choice,
+with some questions including diagrams and sketches that you must analyze to arrive at
+an answer. This exam requires intermediate- to advanced-level experience; you’re
+
+expected to know a great deal about security from an implementation and theory
+perspective as well as a practical perspective.
+In many books, the glossary is filler added to the back of the text; this book’s glossary
+(included as part of the online test bank at 
+sybextestbanks.wiley.com
+) should be
+considered necessary reading. You’re likely to see a question on the exam about what a
+black- or white-box test is—not how to specifically implement it in a working
+environment. Spend your study time learning the various security solutions and
+identifying potential security vulnerabilities and where they are applicable. Also spend
+time thinking outside the box about how things work—the exam is also known to alter
+phrases and terminology—but keep the underlying concept as a way to test your thought
+process.
+The EC-Council is known for presenting concepts in unexpected ways on their exam. The
+exam tests whether you can apply your knowledge rather than just commit information to
+memory and repeat it back. Use your analytical skills to visualize the situation and then
+determine how it works. The questions throughout this book make every attempt to re-
+create the structure and appearance of the CEH exam questions.
+Why Become CEH Certified?
+There are a number of reasons for obtaining the CEH certification. These include the
+following:
+Provides Proof of Professional Achievement
+ Specialized certifications are the best
+way to stand out from the crowd. In this age of technology certifications, you’ll find
+hundreds of thousands of administrators who have successfully completed the Microsoft
+and Cisco certification tracks. To set yourself apart from the crowd, you need a bit more.
+The CEH exam is part of the EC-Council certification track, which includes other security-
+centric certifications if you wish to attempt those.
+Increases Your Marketability
+ The CEH for several years has provided a valuable
+benchmark of the skills of a pentester to potential employers or clients. Once you hold
+the CEH certification, you’ll have the credentials to prove your competency. Moreover,
+certifications can’t be taken from you when you change jobs—you can take that
+certification with you to any position you accept.
+Provides Opportunity for Advancement
+ Individuals who prove themselves to be
+competent and dedicated are the ones who will most likely be promoted. Becoming
+certified is a great way to prove your skill level and show your employer that you’re
+committed to improving your skill set. Look around you at those who are certified: They
+are probably the people who receive good pay raises and promotions.
+Fulfills Training Requirements
+ Many companies have set training requirements for
+their staff so that they stay up to date on the latest technologies. Having a certification
+program in security provides administrators with another certification path to follow
+when they have exhausted some of the other industry-standard certifications.
+
+Raises Customer Confidence
+ Many companies, small businesses, and the
+governments of various countries have long discovered the advantages of being a CEH.
+Many organizations require that employees and contractors hold the credential in order
+to engage in certain work activities.
+How to Become a CEH-Certified Professional
+The first place to start on your way to certification is to register for the exam at any
+Pearson VUE testing center. Exam pricing might vary by country or by EC-Council
+membership. You can contact Pearson VUE by going to their website (
+www.vue.com
+) or
+in the United States and Canada by calling toll-free (877)-551-7587.
+When you schedule the exam, you’ll receive instructions about appointment and
+cancellation procedures, ID requirements, and information about the testing center
+location. In addition, you will be required to provide a special EC-Council–furnished code
+in order to complete the registration process. Finally, you will also be required to fill out a
+form describing your professional experience and background before a code will be issued
+for you to register.
+   Exam prices and codes may vary based on the country in which the exam
+is administered. For detailed pricing and exam registration procedures, refer to EC-
+Council’s website at 
+www.eccouncil.org/certification
+.
+After you’ve successfully passed your CEH exam, the EC-Council will award you with
+certification. Within four to six weeks of passing the exam, you’ll receive your official EC-
+Council CEH certificate.
+Who Should Read This Book?
+If you want to acquire solid information in hacking and pen-testing techniques and your
+goal is to prepare for the exam by learning how to develop and improve security, this book
+is for you. You’ll find clear explanations of the concepts you need to grasp and plenty of
+help to achieve the high level of professional competency you need to succeed in your
+chosen field.
+If you want to become certified, this book is definitely what you need. However, if you
+just want to attempt to pass the exam without really understanding security, this study
+guide isn’t for you. You must be committed to learning the theory and concepts in this
+book to be successful.
+
+   In addition to reading this book, consider downloading and reading the
+white papers on security that are scattered throughout the Internet.
+What Does This Book Cover?
+This book covers everything you need to know to pass the CEH exam. Here’s a breakdown
+chapter by chapter:
+Chapter 1: Introduction to Ethical Hacking
+ This chapter covers the purpose of
+ethical hacking, defines the ethical hacker, and describes how to get started performing
+security audits.
+Chapter 2: System Fundamentals
+ This chapter presents a look at the various
+components that make up a system and how they are affected by security.
+Chapter 3: Cryptography
+ This chapter explores the art and science of cryptography;
+you’ll learn how cryptography works and how it supports security.
+Chapter 4: Footprinting
+ In this chapter, you’ll learn how to gain information from a
+target using both passive and active methods.
+Chapter 5: Scanning
+ This chapter shows you how to gain information about the hosts
+and devices on a network as well as what the information means.
+Chapter 6: Enumeration
+ In this chapter, you’ll learn how to probe the various services
+present on a given host and how to process the information to determine what it means
+and how to use it for later actions.
+Chapter 7: System Hacking
+ This chapter shows you how to use the information gained
+from footprinting, scanning, and earlier examinations in order to break into or gain access
+to a system.
+Chapter 8: Malware
+ This chapter covers the varieties of malware and how each can be
+created, used, or defended against.
+Chapter 9: Sniffers
+ This chapter discusses using packet sniffers to gather information
+that is flowing across the network. You’ll learn how to dissect this information for
+immediate or later use.
+Chapter 10: Social Engineering
+ This chapter covers how to manipulate human beings
+in order to gain sensitive information.
+Chapter 11: Denial of Service
+ This chapter includes an analysis of attacks that are
+designed to temporarily or permanently shut down a target.
+Chapter 12: Session Hijacking
+ This chapter covers how to disrupt communications as
+well as take over legitimate sessions between two parties.
+
+Chapter 13: Web Servers and Applications
+ This chapter explains how to break into
+and examine web servers and applications as well as the various methods of attack.
+Chapter 14: SQL Injection
+ In this chapter, you’ll learn how to attack databases and
+data stores using SQL injection to alter, intercept, view, or destroy information.
+Chapter 15: Hacking Wi-Fi and Bluetooth
+ In this chapter, you’ll learn how to target,
+analyze, disrupt, and shut down wireless networks either temporarily or permanently.
+Chapter 16: Mobile Device Security
+ In this chapter, you’ll learn how to target,
+analyze, and work with mobile devices.
+Chapter 17: Evasion
+ This chapter covers how to deal with the common protective
+measures that a system administrator may put into place; these measures include
+intrusion detection systems (IDSs), firewalls, and honeypots.
+Chapter 18: Cloud Technologies and Security
+ In this chapter, you’ll learn how to
+integrate and secure cloud technologies.
+Chapter 19: Physical Security
+ This chapter deals with the aspects of physical security
+and how to protect assets from being stolen, lost, or otherwise compromised.
+Appendix A: Answers to Review Questions
+ In this appendix, you can find all the
+answers to the review questions throughout the book.
+Appendix B: Penetration Testing Frameworks
+ In this appendix, you will explore an
+alternative penetration testing framework.
+Appendix C: Building a Lab
+ In this appendix, you’ll learn how to build a lab to test and
+experiment with your penetration testing skills.
+Tips for Taking the CEH Exam
+Here are some general tips for taking your exam successfully:
+Bring two forms of ID with you. One must be a photo ID, such as a driver’s license.
+The other can be a major credit card or a passport. Both forms must include a
+signature.
+Arrive early at the exam center so that you can relax and review your study materials,
+particularly tables and lists of exam-related information. When you are ready to enter
+the testing room, you will need to leave everything outside; you won’t be able to bring
+any materials into the testing area.
+Read the questions carefully. Don’t be tempted to jump to an early conclusion. Make
+sure that you know exactly what each question is asking.
+Don’t leave any unanswered questions. Unanswered questions are scored against you.
+There will be questions with multiple correct responses. When there is more than one
+correct answer, a message at the bottom of the screen will prompt you either to
+“Choose two” or “Choose all that apply.” Be sure to read the messages displayed to
+
+know how many correct answers you must choose.
+When answering multiple-choice questions about which you’re unsure, use a process
+of elimination to get rid of the obviously incorrect answers first. Doing so will improve
+your odds if you need to make an educated guess.
+On form-based tests (nonadaptive), because the hard questions will take the most
+time, save them for last. You can move forward and backward through the exam.
+For the latest pricing on the exams and updates to the registration procedures, visit
+the EC-Council’s website at 
+www.eccouncil.org/certification
+.
+What’s Included in the Book
+I’ve included several testing features in this book and on the online test bank for the book
+at 
+sybextestbanks.wiley.com
+. These tools will help you retain vital exam content as well as
+prepare you to sit for the actual exam:
+Assessment Test
+ At the end of this introduction is an assessment test that you can use
+to check your readiness for the exam. Take this test before you start reading the book; it
+will help you determine the areas in which you might need to brush up. The answers to
+the assessment test questions appear on a separate page after the last question of the test.
+Objective Map and Opening List of Objectives
+ In the book’s front matter, I have
+included a detailed exam objective map showing you where each of the exam objectives is
+covered in this book. In addition, each chapter opens with a list of the exam objectives it
+covers. Use these to see exactly where each of the exam topics is covered.
+Exam Essentials
+ Each chapter, just before the summary, includes a number of exam
+essentials. These are the key topics you should take from the chapter in terms of areas to
+focus on when preparing for the exam.
+Chapter Review Questions
+ To test your knowledge as you progress through the book,
+there are review questions at the end of each chapter. As you finish each chapter, answer
+the review questions and then check your answers. The correct answers and explanations
+are in Appendix A. You can go back to reread the section that deals with each question you
+got wrong to ensure that you answer correctly the next time you’re tested on the material.
+Interactive Online Learning Environment and Test Bank
+I’ve included a number of additional study tools that can be found on the book’s online
+test bank at 
+sybextestbanks.wiley.com
+. All of these electronic study aids will run in your
+browser and you should work through them as you study for the test:
+Sybex Test Engine
+ The main site for the online study aids is 
+sybextestbanks.wiley.com
+.
+After registration, you’ll get access to the Sybex Test Engine. In addition to taking the
+assessment test and the chapter review questions via the electronic test engine, you’ll find
+practice exams. Take these practice exams just as if you were taking the actual exam
+(without any reference material). When you’ve finished the first exam, move on to the
+
+next one to solidify your test-taking skills. If you get more than 90 percent of the answers
+correct, you’re ready to take the certification exam.
+   If you are the type of learner who thrives on practice tests and needs more
+tests than those included with this book at 
+sybextestbanks.wiley.com
+, consider
+buying Sybex’s new 
+CEH: Certified Ethical Hacker Version 9 Practice Tests
+ by
+Raymond Blockmon (ISBN: 978-1-119-25215-3). With five additional complete
+practice tests, there are more than enough tests for anyone to assess their readiness
+to sit for the CEH.
+Electronic Flashcards
+ You’ll find flashcard questions on the website for on-the-go
+review. These are short questions and answers. Use them for quick and convenient
+reviewing. There are 100 flashcards on the website.
+PDF of Glossary of Terms
+ The glossary of terms is on the website in PDF format.
+How to Use This Book and Additional Study Tools
+If you want a solid foundation for preparing for the CEH exam, this is the book for you.
+I’ve spent countless hours putting together this book with the sole intention of helping
+you prepare for the exam.
+This book is loaded with valuable information, and you will get the most out of your study
+time if you understand how I put the book together. Here’s a list that describes how to
+approach studying:
+1
+. 
+Take the assessment test immediately following this introduction. It’s okay if you
+don’t know any of the answers—that’s what this book is for. Carefully read over the
+explanation for any question you get wrong, and make a note of the chapters where
+that material is covered.
+2
+. 
+Study each chapter carefully, making sure that you fully understand the information
+and the exam objectives listed at the beginning of each one. Again, pay extra-close
+attention to any chapter that includes material covered in the questions that you
+missed on the assessment test.
+3
+. 
+Read over the summary and exam essentials. These highlight the sections from the
+chapter with which you need to be familiar before sitting for the exam.
+4
+. 
+Answer all of the review questions at the end of each chapter. Specifically note any
+questions that confuse you, and study those sections of the book again. Don’t just
+skim these questions—make sure you understand each answer completely.
+5
+. 
+Go over the electronic flashcards. These help you prepare for the latest CEH exam,and
+they’re great study tools.
+6
+. 
+Take the practice exams.
+
+Exam 312-50 Exam Objectives
+The EC-Council goes to great lengths to ensure that its certification programs accurately
+reflect the security industry’s best practices. They do this by continually updating their
+questions with help from subject matter experts (SMEs). These individuals use their
+industry experience and knowledge together with the EC-Council’s guidance to create
+questions that challenge a candidate’s knowledge and thought processes.
+Finally, the EC-Council conducts a survey to ensure that the objectives and weightings
+truly reflect job requirements. Only then can the SMEs go to work writing the hundreds
+of questions needed for the exam. Even so, they have to go back to the drawing board for
+further refinements in many cases before the exam is ready to go live in its final state.
+Rest assured that the content you’re about to learn will serve you long after you take the
+exam.
+   Exam objectives are subject to change at any time without prior notice and
+at the EC-Council’s sole discretion. Visit the Certification page of the EC-Council’s
+website at 
+www.eccouncil.org
+ for the most current listing of exam objectives.
+The EC-Council also publishes relative weightings for each of the exam’s objectives. The
+following table lists the five CEH objective domains and the extent to which they are
+represented on the exam. As you use this study guide, you’ll find that we have
+administered just the right dosage of objective knowledge by tailoring coverage to mirror
+the percentages that the EC-Council uses.
+Domain
+% of Exam
+Analysis/Assessment
+16%
+Security
+26%
+Tools/Systems/Programs
+32%
+Procedures/Methodology
+22%
+Regulation/Policy
+4%
+Objectives
+Objective
+Chapter
+I. Background
+  A. Networking technologies (e.g., hardware,
+infrastructure)
+2
+  B. Web technologies
+13
+  C. System technologies
+2, 12
+
+  D. Communication protocols
+2, 9
+  E. Malware operations
+8, 11
+  F. Mobile technologies (e.g., smartphones)
+10
+  G. Telecommunication technologies
+2
+  H. Backups and archiving (e.g., local, network)
+2
+II. Analysis/Assessment
+  A. Data analysis
+9, 14
+  B. Systems analysis
+5, 6
+  C. Risk assessments
+1
+  D. Technical assessment methods
+1
+III. Security
+  A. Systems security controls
+2, 12
+  B. Application/fileserver
+2
+  C. Firewalls
+2
+  D. Cryptography
+3
+  E. Network security
+2, 11, 12, 18, 19
+  F. Physical security
+19
+  G. Threat modeling
+1
+  H. Verification procedures (e.g., false positive/negative
+validation)
+16
+  I. Social engineering (human factors manipulation)
+10
+  J. Vulnerability scanners
+5
+  K. Security policy implications
+1, 17
+  L. Privacy/confidentiality (with regard to engagement)
+1
+  M. Biometrics
+4
+  N. Wireless access technology (e.g., networking, RFID,
+Bluetooth)
+9, 15
+  O. Trusted networks
+2
+  P. Vulnerabilities
+2, 4, 5, 6, 7, 11,12, 13, 14, 15,
+16, 17, 18, 19
+IV. Tools/Systems/Programs
+  A. Network/host-based intrusion
+16
+  B. Network/wireless sniffers (e.g., Wireshark, AirSnort)
+9
+  C. Access control mechanisms (e.g., smart cards)
+3
+
+  D. Cryptography techniques (e.g., IPSec, SSL, PGP)
+3
+  E. Programming languages (e.g., C++, Java, C#, C)
+13
+  F. Scripting languages (e.g., PHP, JavaScript)
+13, 14
+  G. Boundary protection appliances (e.g., DMZ)
+2, 16
+  H. Network topologies
+2
+  I. Subnetting
+2
+  J. Port scanning (e.g., nmap)
+5
+  K. Domain Name System (DNS)
+2, 12
+  L. Routers/modems/switches
+2
+  M. Vulnerability scanner (e.g., Nessus, Retina)
+5
+  N. Vulnerability management and protection systems
+(e.g., Foundstone, Ecora)
+5
+  O. Operating environments (e.g., Linux, Windows, Mac)
+2, 4, 6, 7, 13, 14, 15, 16, 17
+  P. Antivirus systems and programs
+8
+  Q. Log analysis tools
+6, 7, 13, 14, 16, 17
+  R. Security models
+17
+  S. Exploitation tools
+4, 6, 7, 11, 13, 14, 15, 16, 17
+  T. Database structures
+14
+V. Procedures/Methodology
+  A. Cryptography
+3
+  B. Public key infrastructure (PKI)
+3
+  C. Security Architecture (SA)
+17
+  D. Service-Oriented Architecture (SOA)
+14
+  E. Information security incident management
+17
+  F. N-tier application design
+14
+  G. TCP/IP networking (e.g., network routing)
+2
+  H. Security testing methodology
+1
+VI. Regulation/Policy
+  A. Security policies
+17
+  B. Compliance regulations (e.g., PCI)
+17
+VII. Ethics
+  A. Professional code of conduct
+1
+  B. Appropriateness of hacking activities
+1
+X. Social Engineering
+
+  A. Types of social engineering
+10
+  B. Social networking
+10
+  C. Technology assisting social networking
+10
+  D. Defensive strategies
+10
+  E. Pentesting issues
+10
+
+Assessment Test
+1
+. 
+What is the focus of a security audit or vulnerability assessment?
+A
+. 
+Locating vulnerabilities
+B
+. 
+Locating threats
+C
+. 
+Enacting threats
+D
+. 
+Exploiting vulnerabilities
+2
+. 
+What kind of physical access device restricts access to a single individual at any one
+time?
+A
+. 
+Checkpoint
+B
+. 
+Perimeter security
+C
+. 
+Security zones
+D
+. 
+Mantrap
+3
+. 
+Which of the following is a mechanism for managing digital certificates through a
+system of trust?
+A
+. 
+PKI
+B
+. 
+PKCS
+C
+. 
+ISA
+D
+. 
+SSL
+4
+. 
+Which protocol is used to create a secure environment in a wireless network?
+A
+. 
+WAP
+B
+. 
+WPA
+C
+. 
+WTLS
+D
+. 
+WML
+5
+. 
+What type of exercise is conducted with full knowledge of the target environment?
+A
+. 
+White box
+B
+. 
+Gray box
+C
+. 
+Black box
+D
+. 
+Glass box
+6
+. 
+You want to establish a network connection between two LANs using the Internet.
+Which technology would best accomplish that for you?
+
+A
+. 
+IPSec
+B
+. 
+L2TP
+C
+. 
+PPP
+D
+. 
+SLIP
+7
+. 
+Which design concept limits access to systems from outside users while protecting
+users and systems inside the LAN?
+A
+. 
+DMZ
+B
+. 
+VLAN
+C
+. 
+I&A
+D
+. 
+Router
+8
+. 
+In the key recovery process, which key must be recoverable?
+A
+. 
+Rollover key
+B
+. 
+Secret key
+C
+. 
+Previous key
+D
+. 
+Escrow key
+9
+. 
+Which kind of attack is designed to overload a system or resource, taking it
+temporarily or permanently offline?
+A
+. 
+Spoofing
+B
+. 
+Trojan
+C
+. 
+Man in the middle
+D
+. 
+SYN flood
+10
+. 
+Which component of an NIDS collects data?
+A
+. 
+Data source
+B
+. 
+Sensor
+C
+. 
+Event
+D
+. 
+Analyzer
+11
+. 
+What is the process of making an operating system secure from attack called?
+A
+. 
+Hardening
+B
+. 
+Tuning
+C
+. 
+Sealing
+D
+. 
+Locking down
+
+12
+. 
+The integrity component provides which feature of the CIA triad?
+A
+. 
+Verification that information is accurate
+B
+. 
+Verification that ethics are properly maintained
+C
+. 
+Establishment of clear access control of data
+D
+. 
+Verification that data is kept private and secure
+13
+. 
+Which mechanism is used by PKI to allow immediate verification of a certificate’s
+validity?
+A
+. 
+CRL
+B
+. 
+MD5
+C
+. 
+SSHA
+D
+. 
+OCSP
+14
+. 
+Which of the following is used to create a VLAN from a physical security perspective?
+A
+. 
+Hub
+B
+. 
+Switch
+C
+. 
+Router
+D
+. 
+Firewall
+15
+. 
+A user has just reported that he downloaded a file from a prospective client using IM.
+The user indicates that the file was called 
+account.doc
+. The system has been behaving
+unusually since he downloaded the file. What is the most likely event that occurred?
+A
+. 
+Your user inadvertently downloaded a macro virus using IM.
+B
+. 
+Your user may have downloaded a rootkit.
+C
+. 
+Your user may have accidently changed a setting on the system.
+D
+. 
+The system is unstable due to the use of IM.
+16
+. 
+Which mechanism or process is used to enable or disable access to a network resource
+based on attacks that have been detected?
+A
+. 
+NIDS
+B
+. 
+NIPS
+C
+. 
+NITS
+D
+. 
+NADS
+17
+. 
+Which of the following would provide additional security to an Internet web server?
+A
+. 
+Changing the default port for traffic to 80
+B
+. 
+Changing the default port for traffic to 1019
+
+C
+. 
+Changing the default port for traffic to 443
+D
+. 
+Changing the default port for traffic to 161
+18
+. 
+What type of program exists primarily to propagate and spread itself to other systems
+and can do so without interaction from users?
+A
+. 
+Virus
+B
+. 
+Trojan horse
+C
+. 
+Logic bomb
+D
+. 
+Worm
+19
+. 
+An individual presents herself at your office claiming to be a service technician. She is
+attempting to discuss technical details of your environment such as applications,
+hardware, and personnel used to manage it. This may be an example of what type of
+attack?
+A
+. 
+Social engineering
+B
+. 
+Access control
+C
+. 
+Perimeter screening
+D
+. 
+Behavioral engineering
+20
+. 
+Which of the following is a major security problem with FTP?
+A
+. 
+Password files are stored in an unsecure area on disk.
+B
+. 
+Memory traces can corrupt file access.
+C
+. 
+User IDs and passwords are unencrypted.
+D
+. 
+FTP sites are unregistered.
+21
+. 
+Which system would you install to provide detective capabilities within a network?
+A
+. 
+NIDS
+B
+. 
+HIDS
+C
+. 
+NIPS
+D
+. 
+HIPS
+22
+. 
+The process of maintaining the integrity of evidence and ensuring no gaps in
+possession occur is known as what?
+A
+. 
+Security investigation
+B
+. 
+Chain of custody
+C
+. 
+Three As of investigation
+D
+. 
+Security policy
+
+23
+. 
+What encryption process uses one piece of information as a carrier for another?
+A
+. 
+Steganography
+B
+. 
+Hashing
+C
+. 
+MDA
+D
+. 
+Cryptointelligence
+24
+. 
+Which policy dictates how assets can be used by employees of a company?
+A
+. 
+Security policy
+B
+. 
+User policy
+C
+. 
+Use policy
+D
+. 
+Enforcement policy
+E
+. 
+Acceptable use policy
+25
+. 
+Which algorithm is an asymmetric encryption protocol?
+A
+. 
+RSA
+B
+. 
+AES
+C
+. 
+DES
+D
+. 
+3DES
+26
+. 
+Which of the following is an example of a hashing algorithm?
+A
+. 
+ECC
+B
+. 
+PKI
+C
+. 
+SHA
+D
+. 
+MD
+27
+. 
+Which of the following creates a fixed-length output from a variable-length input?
+A
+. 
+MD5
+B
+. 
+MD7
+C
+. 
+SHA12
+D
+. 
+SHA8
+28
+. 
+Granting access to a system based on a factor such as an individual’s retina during a
+scan is an example of what type of authentication method?
+A
+. 
+Smart card
+B
+. 
+I&A
+C
+. 
+Biometrics
+
+D
+. 
+CHAP
+29
+. 
+What item is also referred to as a physical address to a computer system?
+A
+. 
+MAC
+B
+. 
+DAC
+C
+. 
+RBAC
+D
+. 
+STAC
+30
+. 
+What is the process of investigating a computer system for information relating to a
+security incident?
+A
+. 
+Computer forensics
+B
+. 
+Virus scanning
+C
+. 
+Security policy
+D
+. 
+Evidence gathering
+31
+. 
+Which of the following is seen as a replacement for protocols such as Telnet and FTP?
+A
+. 
+SSL
+B
+. 
+SCP
+C
+. 
+Telnet2
+D
+. 
+SSH
+32
+. 
+Which of the following is commonly used to create thumbprints for digital
+certificates?
+A
+. 
+MD5
+B
+. 
+MD7
+C
+. 
+SHA12
+D
+. 
+SHA8
+33
+. 
+Granting access to a system based on a factor such as a password is an example of
+what?
+A
+. 
+Something you have
+B
+. 
+Something you know
+C
+. 
+Something you are
+D
+. 
+Something you smell
+34
+. 
+What item is also referred to as a logical address to a computer system?
+A
+. 
+IP address
+
+B
+. 
+IPX address
+C
+. 
+MAC address
+D
+. 
+SMAC address
+35
+. 
+How many bits are in an IPv6 address?
+A
+. 
+32
+B
+. 
+64
+C
+. 
+128
+D
+. 
+256
+
+Answers to Assessment Test
+1
+. 
+A. A vulnerability assessment is focused on uncovering vulnerabilities or weaknesses
+in an environment but by definition does not exploit those vulnerabilities.
+2
+. 
+D. Mantraps are phone booth–sized devices designed to prevent activities such as
+piggybacking and tailgating.
+3
+. 
+A. Public-key infrastructure (PKI) is a system designed to control the distribution of
+keys and management of digital certificates.
+4
+. 
+B. Wi-Fi Protected Access (WPA) is designed to protect wireless transmissions.
+5
+. 
+A. White-box testing is done with full knowledge of the target environment. Black-box
+testing is done with very little or no information. Gray box is performed with limited
+information somewhere between black and white.
+6
+. 
+B. Layer 2 Tunneling Protocol (L2TP) is a VPN technology used to establish secure
+connections over an insecure medium such as the Internet.
+7
+. 
+A. Demilitarized zone (DMZ) structures act as a buffer zone between the Internet and
+an intranet, establishing a protected barrier. DMZs also allow for the placement of
+publicly accessible resources such as web servers in a semi-secure area.
+8
+. 
+D. The escrow key is a key held by a third party used to perform cryptographic
+operations.
+9
+. 
+D. SYN floods are a form of denial of service (DoS). Attacks of this type are designed to
+overwhelm a resource for a period of time.
+10
+. 
+B. Sensors can be placed in different locations around a network with the intention of
+collecting information and returning it to a central location for analysis and viewing.
+11
+. 
+A. Hardening is designed to remove nonessential services, applications, and other
+items from a system with the intent of making it fit a specific role as well as reducing
+its attack surface.
+12
+. 
+A. Integrity ensures that information is kept reliable and accurate and also allows a
+party to examine the information to detect a change.
+13
+. 
+D. The Online Certificate Status Protocol (OCSP) is used to allow immediate
+verification of certificates’ validity as opposed to the older certificate revocation list
+(CRL) method, which allows for lags in detection.
+14
+. 
+B. A switch allows for the creation of VLANs.
+15
+. 
+A. The file is a Microsoft Word file and as such can have VBA macros embedded into it
+that can be used to deliver macro viruses.
+16
+. 
+B. A network intrusion prevention system (NIPS) is similar to an intrusion detection
+system, but it adds the ability to react to attacks that it detects.
+
+17
+. 
+C. Changing the default port for web server traffic to 443 would mean that all traffic to
+and from the web server would be encrypted using SSL.
+18
+. 
+D. A worm propagates by seeking out vulnerabilities it was designed to exploit and
+then replicating at an extreme rate.
+19
+. 
+A. In a case like this, an individual showing up and asking to discuss intimate details
+of an environment may be attempting to obtain information for an attack.
+20
+. 
+C. FTP is not designed to provide encryption, and thus passwords and user IDs or
+names are not protected as they are with SSH, which uses encryption.
+21
+. 
+A. A network intrusion detection system (NIDS) is installed at the network level and
+detects attacks at that level. Unlike a network-based intrusion prevention system
+(NIPS), an NIDS cannot stop an attack, but it can detect and report the attack to an
+administrator so that appropriate actions can be taken.
+22
+. 
+B. Chain of custody is used in investigations and in the handling of evidence to ensure
+that no gaps in possession occur. Such gaps, if they occurred, could invalidate a case.
+23
+. 
+A. Steganography is used to conceal information inside of other information, thus
+making it difficult to detect.
+24
+. 
+E. Acceptable use policy is an administrative tool used to inform the users of various
+company assets what is and isn’t considered appropriate use of assets.
+25
+. 
+A. RSA is an example of an asymmetric encryption protocol that uses a public and
+private key. The others are examples of symmetric encryption protocols.
+26
+. 
+C. SHA is an example of one type of hashing algorithm that is commonly used today.
+Another example would be MD5.
+27
+. 
+A. MD5 is a hashing algorithm that creates a fixed-length output, as do all hashing
+algorithms. This fixed-length output is referred to as a hash or message digest.
+28
+. 
+C. Biometrics is concerned with measuring physical traits and characteristics of a
+biological organism.
+29
+. 
+A. Media access control (MAC) is a Layer 2 construct in the OSI model. The physical
+address is coded into the network adapter itself and is designed to be unique.
+30
+. 
+A. Computer forensics is the process of methodically collecting information relating to
+a security incident or crime.
+31
+. 
+D. SSH is a modern protocol designed to be more secure and safer than protocols such
+as FTP and Telnet. As such, the SSH protocol is replacing FTP and Telnet in many
+environments.
+32
+. 
+A. MD5 is a hashing algorithm that creates a fixed-length output, referred to as a hash
+or message digest. In the PKI world, SHA and MD5 are the most popular mechanisms
+for creating thumbprints for digital certificates.
+
+33
+. 
+B. Passwords are the simplest form of authentication and are commonly used. They
+fall under first-factor authentication and are referred to as something you know.
+34
+. 
+A. An IP address is a logical address assigned at Layer 3 and can be assigned to an IP-
+based system. The same IP address can be assigned to different systems, albeit at
+different times, unlike MAC addresses.
+35
+. 
+C. An IPv6 address has 128 bits as opposed to IPv4, which has only 32 bits. This
+increased number of bits allows for the generation of many more IP addresses than is
+possible with IPv4.
+
+Chapter 1
+ 
+Introduction to Ethical Hacking
+CEH EXAM OBJECTIVES COVERED IN THIS CHAPTER:
+   
+II. Analysis/Assessment
+   C. Risk assessments
+   D. Technical assessment methods
+   
+III. Security
+   L. Privacy/confidentiality (with regard to engagement)
+   
+V. Procedures/Methodology
+   H. Security testing methodology
+   
+VII. Ethics
+   A. Professional code of conduct
+   B. Appropriateness of hacking activities
+   Welcome to the beginning of your journey to becoming a Certified
+Ethical Hacker. In this book you will learn the tools, technologies, methods, and skills
+needed to earn the EC-Council’s Certified Ethical Hacker v9 qualification. However, while
+this book will give you what you need to be prepared to successfully pass the exam, it will
+also strive to give you the additional knowledge and skills needed to be a successful
+penetration tester.
+In this book, you will learn exactly what it takes to become an ethical hacker and the
+responsibilities and expectations that go with the title. You will experience the ethics and
+questions that go with the technology and the practices involved in this exciting field.
+Ethical hackers, or penetration testers, have been around for a long time, but because of
+increases in cybercrime and regulations over the last decade, they have become more
+popular than in the past. The realization is that finding weaknesses and deficiencies in
+systems and addressing them proactively is less costly than dealing with the fallout that
+comes after the fact. In response, organizations have sought to create their own
+
+penetration testing teams internally as well as contract with outside experts when and if
+they are needed.
+   In this book you will encounter the two terms 
+penetration tester
+ and
+ethical hacker
+. Although both are correct and both are used in the IT and security
+industries, the former tends to be more popular than the latter. In most cases, you
+will run into the term 
+penetration tester
+ or its associated shorthand 
+pentester.
+Taking on the skillset associated with ethical hacking will quickly and effectively put you
+into the role of evaluating environments to identify, exploit, report, and recommend
+corrective actions to be taken in respect to threats and vulnerabilities. Note, however, that
+pentesters usually do not do corrective actions because that is something that the client
+must decide to perform or not, but in some cases the client may ask you do so.
+Through a robust and effective combination of technological, administrative, and physical
+measures, these organizations have learned to address their given situation and head off
+major problems wherever and whenever possible. Technologies such as virtual private
+networks (VPNs), cryptographic protocols, intrusion detection systems (IDSs), intrusion
+prevention systems (IPSs), access control lists (ACLs), biometrics, smart cards, and other
+devices have helped security. Administrative countermeasures such as policies,
+procedures, and other rules have also been strengthened and implemented over the past
+decade. Physical measures include cable locks, device locks, alarm systems, and similar
+devices. Your new role as an ethical hacker will deal with all of these items, plus many
+more.
+As an ethical hacker, you must know not only the environment you will be working in but
+also how to find weaknesses and address them as needed. But before we get to all of that,
+this chapter discusses the history of hacking and what it means to be an ethical hacker.
+We’ll also look at the process of penetration testing and explore the importance of
+contracts.
+Hacking: the Evolution
+Hacker
+ is one of the most misunderstood and overused terms in the security industry.
+Everyone from the nightly news to authors to Hollywood and the rest of the media uses
+the term frequently. Thanks to overuse of the term and the fact that it is almost
+constantly attached to activities that are shady or even criminal in nature, the general
+public looks at anyone with the label 
+hacker
+ as up to no good. Hackers are viewed as
+those operating in the shadows, antisocial and antiestablishment in many cases. Other
+members of the public have even come to embrace hackers as the new social activists
+thwarting politicians, governments, large corporations, and others. Newsworthy events by
+loosely organized groups such as Anonymous and Lizard Squad have contributed to the
+
+public perception of the hacker.
+   While many have taken different stances and have different opinions of
+whether hackers are good or bad, this book will not seek to pass judgment either way
+on many of those who engage in hacking. Groups such as Anonymous have both
+their supporters and detractors, for example; in this book we will mention this group
+but will use it to illustrate points, and that is all. We will leave the judgment of such
+groups up to you.
+So, what is a hacker exactly and how did we get to the point where we are today? We can
+best address this question by looking into the past and seeing how things have evolved.
+The Early Days of Hacking
+The idea of hacking and hackers goes way back to the first technology enthusiasts who
+wanted to learn about new technology and were curious about how it worked. They were
+the same types of people who today are interested not only in acquiring all sorts of
+technology but also in learning how to customize and tweak it to do new things that the
+original designers never intended. In the early days (pre-1970), these hackers may have
+been found taking apart and learning about the inner workings of radios and early
+computers. As technology progressed, these individuals moved to more complex and
+advanced systems available at the time. Fast-forward to the 1970s, and the mainframes
+that were present on college campuses and corporate environments were the target of
+interest by new generations of hackers. Later, in the 1980s, the PC was the newest piece
+of technology, with 
+hackers moving to this environment. In fact, the 1980s saw hackers
+starting to engage in more mischievous and later malicious activities; adding to the
+situation was that fact that their attacks could now be used against many more systems
+because more people had access to PCs. In the 1990s, the Internet was made accessible to
+the public, and systems became interconnected; as a result, curiosity and mischief could
+easily spread beyond a small collection of systems and go worldwide. Since 2000,
+smartphones, tablets, Bluetooth, and other technologies have been added to the devices
+and technologies that hackers target. As you can see, as technology evolves, so do hackers’
+attacks in response to what’s available at the time.
+When the Internet became available to the public at large, hacking and hackers weren’t
+too far behind. When the first generations of browsers became available in the early
+1990s, attacks grew in the form of website defacements and other types of mischief. The
+first forays of hacking in cyberspace resulted in some humorous or interesting pranks,
+but later more aggressive attacks started to emerge. Incidents such as the hacking of
+movie and government websites were some of the first examples. Until the early 2000s,
+website defacing was so common that many incidents were no longer reported.
+
+   Making things easier for hackers is the fact that early network
+technologies such as the Internet were never designed with security as a goal. The
+goal was the sharing of information.
+Current Developments
+In the early 2000s, more malicious activity started to appear in the form of more
+advanced attacks. In the first few years of the new millennium, the aggressiveness of
+attacks increased, with many attacks criminally motivated. Malicious attacks that have
+occurred include the following (although there are many more):
+Denial-of-service attacks
+Manipulation of stock prices
+Identity theft
+Vandalism
+Credit card theft
+Piracy
+Theft of service
+Among the many situations that have contributed to the increase in hacking and
+cybercrime are the amount of information being passed and the overall dependency on
+the Internet and digital devices. Over the last decade, the number of financial transactions
+online has increased, creating a tempting target for crooks. Also, the openness of modern
+devices such as smartphones and technologies such as Bluetooth has made hacking and
+stealing information more prevalent. Lastly, we can also point to the number of Internet-
+connected devices such as 
+tablets and other gadgets that individuals carry around in
+increasing numbers. Each of these devices has attracted the attention of criminals with
+the temptation of stealing never before heard of amounts of money, data, and other
+resources. As computer crime laws began to be passed, the bragging rights for hacking a
+website became less attractive. Prank activity seems to have slowed down, whereas real
+criminal activity has increased. With online commerce, skills started going to the highest
+bidder, with crime rings, organized crime, and nations with hostile interests using the
+Internet as an attack vector.
+
+   Remember that a good number of attacks that occur nowadays can be
+attributed to both crime and people pulling pranks. However, no matter what the
+underlying motivation of the attack, the end result is often the same: System owners
+are denied use of their assets, and the law is broken.
+Hacking: Fun or Criminal Activity?
+As stated earlier, hacking is by no means a new phenomenon; it has existed in one form
+or another since the 1960s. For only a portion of the time since then has hacking been
+viewed as a crime and a situation that needs to be addressed.
+Here’s a look at some famous hacks over time:
+In 1988, Cornell University student Robert T. Morris, Jr., created what is considered to
+be the first Internet worm. Due to an oversight in the design of the worm, it replicated
+extremely quickly, indiscriminately resulting in widespread slowdowns affecting the
+whole Internet.
+In 1994, Kevin Lee Poulsen, going by the name Dark Dante, took over the telephone
+lines of the entire Los Angeles-based radio station KIIS-FM to ensure he would be the
+102nd caller in order to win a Porsche 944 S2. Poulsen has the notable distinction of
+being the first to be banned from using the Internet after his release from prison
+(though the ban was for only a limited time).
+In 1999, David L. Smith created the Melissa virus, which was designed to email itself
+to entries in a user’s address book and later delete files on the infected system.
+In 2001, Jan de Wit authored the Anna Kournikova virus, which was designed to read
+all the entries of a user’s Outlook address book and email itself to each.
+In 2002, Gary McKinnon connected to deleted critical files on U.S. military networks,
+including information on weapons and other systems. He performed this action after
+compromising roughly 2000 computer systems inside the U.S. military’s network.
+In 2004, Adam Botbyl, together with two friends, conspired to steal credit card
+information from the Lowe’s hardware chain.
+In 2005, Cameron Lacroix hacked into the phone of celebrity Paris Hilton and also
+participated in an attack against the site LexisNexis, an online public record
+aggregator, ultimately exposing thousands of personal records.
+In 2009, Kristina Vladimirovna Svechinskaya, a young Russian hacker, got involved in
+several plots to defraud some of the largest banks in the United States and Great
+Britain. She used a Trojan horse to attack and open thousands of bank accounts in the
+Bank of America, through which she was able to skim around $3 billion in total. In an
+interesting footnote to this story, Svechinskaya was named World’s Sexiest Hacker at
+
+one point due to her stunning good looks. I mention this point to illustrate the fact
+that the image of a hacker living in a basement, being socially awkward, or being really
+nerdy looking is gone. In this case the hacker in question was not only very skilled and
+dangerous but also did not fit the stereotype of what a hacker looks like.
+In the mid-2000s, the Stuxnet virus was uncovered in Iran and was shown to be
+specifically designed to attack the systems involved in uranium production. What
+made the virus unique is the fact that it targeted only a very specific set of systems,
+and anything not meeting these requirements was ignored.
+Originating in 2003, the hacking group Anonymous has attacked multiple targets
+including local government networks, news agencies, and others. The group is still
+active and has committed several other high-profile attacks up to the current day.
+The previous examples represent some of the higher-profile incidents that have occurred,
+but for every news item or story that makes it into the public consciousness, many more
+never do. Note that for every incident that is made public, only a small number of the
+individuals who carry them out are caught, and an even smaller number are prosecuted
+for cybercrime. In any case, hacking is indeed a crime, and anyone engaging in such
+activities can be prosecuted under laws that vary from location to location. The volume,
+frequency, and seriousness of attacks have only increased and will continue to do so as
+technology evolves.
+Here are some generic examples of cybercrime:
+Stealing passwords and usernames, or using vulnerabilities in a system to gain access,
+falls under the category of theft of access and the stealing of services and resources
+that the party would not otherwise be given access to. In some cases stealing
+credentials but not using them is enough to constitute a cybercrime. In a few states
+even sharing usernames and passwords with a friend or family member is a crime.
+Network intrusions are a form of digital trespassing where a party goes someplace that
+they would not otherwise have access to. Access to any system or group of systems to
+which a party would not normally be given access is considered a violation of the
+network and therefore a cybercrime. In some cases the actual intrusions may not even
+involve hacking tools; the very act of logging into a guest account without permission
+may be sufficient to be considered an intrusion.
+Social engineering is both the simplest and the most complex form of hacking or
+exploiting a system by going after its weakest point, the human element. On the one
+hand, this is easy to attempt because the human being is many times the most
+accessible component of a system and the simplest to interact with. On the other
+hand, it can be extremely difficult to read both the spoken and unspoken cues to get
+information that may be useful to the attacker.
+Posting and/or transmitting illegal material has gotten to be a difficult problem to
+solve and deal with over the last decade. With the increased use of social media and
+other Internet-related services, illegal material can spread from one corner of the
+
+globe to another in a very short period of time.
+Fraud is the deception of another party or parties to elicit information or access
+typically for financial gain or to cause damage.
+Software piracy is the possession, duplication, or distribution of software in violation
+of a license agreement or the act of removing copy protection or other license-
+enforcing mechanisms. Again this has become a massive problem with the rise of file-
+sharing services and other mechanisms designed to ease sharing and distribution; in
+many cases the systems are used for distribution without the system owner’s consent.
+Dumpster diving is the oldest and simplest way to gather material that has been
+discarded or left in unsecured or unguarded receptacles. Often, discarded data can be
+pieced together to reconstruct sensitive information.
+Malicious code refers to items such as viruses, worms, spyware, adware, rootkits, and
+other types of malware. This crime covers any type of software deliberately written to
+wreak havoc and destruction or disruption.
+Unauthorized destruction or alteration of information includes modifying, destroying,
+or tampering with information without permission.
+Embezzlement is a form of financial fraud that involves theft or redirection of funds
+as a result of violating a position of trust. The crime has been made much easier
+through the use of modern digital means.
+Data-diddling is the unauthorized modification of information to cover up activities.
+Denial-of-service (DoS) and distributed denial-of-service (DDoS) attacks are ways to
+overload a system’s resources so it cannot provide the required services to legitimate
+users.
+Ransomware is a relatively newer class of malware that is designed to hunt down and
+encrypt files on a target system. Once such files are found, the code will encrypt the
+data and then tell the victim that they must pay a certain amount to get their data
+back.
+The Evolution and Growth of Hacking
+As you will see in this book, attacks and strategies have improved and evolved over the
+years in ways you may not be aware of. Attackers have constantly sought to up their game
+with new tactics and strategies to include various types of malware such as worms, spam,
+spyware, adware, and even rootkits. Although they have long known how to harass and
+irritate the public, in recent years they have caused ever bolder disruptions by preying on
+our connected lifestyle.
+Hackers have also started to realize that it is possible to use their skills to generate money
+in many interesting ways. For example, attackers have used techniques to redirect 
+web
+browsers to specific pages that generate revenue for themselves. Another example is a
+
+spammer sending out thousands upon thousands of email messages that advertise a
+product or service. Because sending out bulk email costs mere pennies, it takes only a
+small number of purchasers to make a nice profit.
+The field you are entering (or may already be working in as a security administrator or
+engineer) is one that changes rapidly. In this field attacker and defender are in an ongoing
+struggle to gain dominance. Because attackers have become highly flexible and adaptable,
+so must you be as an ethical hacker. Your ability to think outside the box will serve you
+well as you envision new strategies and potential attacks before they are used against you.
+   Whenever you encounter a new technology or new situation, always try to
+think of different ways the situation or technology can be used. Think, for example,
+how a device such as a tablet or smartphone can be used in ways different from what
+the designer or architect envisioned. Also keep an eye open for weaknesses or
+vulnerabilities that can be exploited. Train your mind to think outside the norm and
+think like someone who is trying to cause harm or get away with something. As an
+ethical hacker you will be expected to think along these lines but in a benevolent
+manner.
+Making your life as a security manager even harder today is that attackers have adopted a
+new pack mentality that makes defensive measures and planning much harder. In the
+early days the attacking person was just that—one person. Nowadays groups such as
+Anonymous and LulzSec have shown us quite convincingly that attacking in numbers
+makes a difference even in the cyberworld. The collective or hive-like mentality has
+reaped huge benefits for attackers who are able to employ multiple methods in a short
+period of time to obtain impressive results. Such groups or packs are able to enhance
+their effectiveness by having a wide range of numbers, diversity, or complementary skill
+sets and also by the lack of any clear leadership structures. Also adding to the concern is
+that some groups can be linked to criminal or terrorist organizations.
+In this book you will learn these methods and what is being used on the front lines to
+perpetrate increasingly complex and devastating attacks. You must be aware of how these
+attacks have evolved, how technology has played a part, and how the law is dealing with
+an ever more complicated landscape.
+You will also learn more about the motivations of attackers and their mind-set. This is
+one of the challenges that you will have as an ethical hacker: understanding and
+empathizing with your attackers. Understanding the motivations can, in some cases, yield
+valuable insight into why a given attack has been committed or may be committed against
+an asset. For now you should keep in mind that an attacker needs three things to carry
+out a crime:
+Means, or the ability to carry out their goals or aims, which in essence means that they
+have the skills and abilities needed to complete the job
+
+Motive, or the reason to be pursuing the given goal
+Opportunity, or the opening or weakness needed to carry out the threat at a given time
+So, What Is an Ethical Hacker?
+When you explore this book and the tools it has to offer, you are learning the skills of the
+hacker. But we can’t leave it at that, because you need to be an 
+ethical hacker
+, so let’s
+explore what that means.
+Ethical hackers are employed either through contracts or direct employment to test the
+security of an organization. They use the same skills and tactics as a hacker but with
+permission from the system owner to carry out their attack against the system. In
+addition, ethical hackers do not reveal the weaknesses of an evaluated system to anyone
+other than the system owner. Finally, ethical hackers work under contract for a company
+or client, and their contracts specify what is off-limits and what they are expected to do.
+Their role depends on the specific needs of a given organization. In fact, some
+organizations keep teams on staff specifically to engage in ethical hacking activities.
+Types of Hackers
+The following are categories of hackers:
+Script Kiddies
+ These hackers have limited or no training and know how to use only
+basic techniques or tools. Even then they may not understand any or all of what they
+are doing.
+White-Hat Hackers
+ These hackers think like the attacking party but work for the
+good guys. They are typically characterized by having a code of ethics that says
+essentially they will cause no harm. This group is also known as ethical hackers or
+pentesters.
+Gray-Hat Hackers
+ These hackers straddle the line between good and bad and have
+decided to reform and become the good side. Once they are reformed, they still might
+not be fully trusted.
+Black-Hat Hackers
+ These hackers are the bad guys who operate on the opposite
+side of the law. They may or may not have an agenda. In most cases, black-hat
+hacking and outright criminal activity are not far removed from each other.
+Suicide Hackers
+ These hackers try to knock out a target to prove a point. They are
+not stealthy, because they are not worried about getting caught or doing prison time.
+What Are Your Responsibilities?
+One of the details you need to understand early and never forget is 
+permission
+. As an
+
+ethical hacker you should never target a system or network that you do not own or have
+permission to test. If you do so, you are guilty of any number of crimes, which would be
+detrimental not only to your career but perhaps to your freedom as well. Before you test a
+target, you should have a contract in hand from the owner giving you permission to do so.
+Also remember that you should test only those things you have been contracted to test. If
+the customer or client decides to add or remove items from the test, the contract must be
+altered to keep both parties out of legal trouble. Take special notice of the fact that ethical
+hackers operate with contracts in place between themselves and the target. Operating
+without permission is unethical; operating without a contract is downright stupid and
+illegal.
+In addition, a contract must include verbiage that deals with the issue of confidentiality
+and privacy. It is possible that during a test you will encounter confidential information
+or develop an intimate knowledge of your client’s network. As part of your contract you
+will need to address whom you will be allowed to discuss your findings with and whom
+you will not. Generally clients will want you to discuss your findings only with them and
+no one else.
+According to the International Council of Electronic Commerce Consultants (EC-Council)
+you, as a CEH, must keep private any confidential information gained in your
+professional work (in particular as it pertains to client lists and client personal
+information). You cannot collect, give, sell, or transfer any personal information (such as
+name, email address, Social Security number, or other unique identifier) to a third party
+without your client’s prior consent. Keep this in mind since a violation of this code could
+not only cause you to lose trust from a client but also land you in legal trouble.
+   Contracts are an important detail to get right; if you get them wrong it could
+easily mean legal problems later. The problem with contracts is that most people find
+the legalese nearly impossible to understand and the amount of preparation
+intimidating to say the least. I strongly recommend that you consider getting a
+lawyer experienced in the field to help you with contracts.
+A contract is essential for another extremely important reason as well: proof.
+Without a contract you have no real proof that you have permission from the system
+owner to perform any tests.
+Once ethical hackers have the necessary permissions and contracts in place, they can
+engage in 
+penetration testing
+, also known as pen testing. This is the structured and
+methodical means of investigating, uncovering, attacking, and reporting on the strengths
+and vulnerabilities of a target system. Under the right circumstances, pen testing can
+provide a wealth of information that the owner of a system can use to plan and adjust
+defenses.
+
+Bad Guys and Good Guys, or Hackers and Ethical Hackers
+The difference between an 
+ethical hacker
+ and a 
+hacker
+ is something that can easily
+get you into an argument. Just saying the word 
+hacker
+ in the wrong place can get you
+into an hours-long conversation of the history of hacking and how hackers are all
+good guys who mean nothing but the best for the world. Others will tell you that
+hackers are all evil and have nothing but bad intentions. In one case I was even told
+that hackers were originally model-train enthusiasts who happened to like
+computers.
+You must understand that for us, hackers are separated by intentions. In our
+worldview hackers who intend to cause harm or who do not have permission for
+their activities are considered 
+black hats
+, whereas those who do have permission and
+whose activities are benign are 
+white hats
+. Calling one side 
+good
+ and the other 
+bad
+may be controversial, but in this book we will adhere to these terms:
+Black Hats
+ They do not have permission or authorization for their activities;
+typically their actions fall outside the law.
+White Hats
+ They have permission to perform their tasks. White hats never share
+information about a client with anyone other than that client.
+Gray Hats
+ These hackers cross into both offensive and defensive actions at different
+times.
+Another type of hacker is the 
+hacktivist
+. 
+Hacktivism
+ is any action that an attacker
+uses to push or promote a political agenda. Targets of hacktivists have included
+government agencies and large corporations.
+Code of Conduct and Ethics
+As an ethical hacker you will need to make sure that you adhere to a code of conduct or
+ethics to ensure you remain trustworthy (and employed). In the case of the EC-Council’s
+CEH credential you are expected to adhere to their Code of Ethics in your dealings lest
+you be decertified.
+In order to make sure you fully understand what you will be expected to abide by when
+you become a CEH, I have provided the official EC-Council Code of Ethics here (with
+slight rewording for clarity). Read it and know it to make sure you are comfortable with
+everything expected of you as a CEH.
+Keep private and confidential information gained in your professional work (in
+particular as it pertains to client lists and client personal information). Not collect,
+give, sell, or transfer any personal information (such as name, email address, Social
+Security number, or other unique identifier) to a third party without client prior
+consent.
+
+Protect the intellectual property of others by relying on your own innovation and
+efforts, thus ensuring that all benefits vest with its originator.
+Disclose to appropriate persons or authorities potential dangers to any e-commerce
+clients, the Internet community, or the public that you reasonably believe to be
+associated with a particular set or type of electronic transactions or related software or
+hardware.
+Provide service in your areas of competence, being honest and forthright about any
+limitations of your experience and education. Ensure that you are qualified for any
+project on which you work or propose to work by an appropriate combination of
+education, training, and experience.
+Never knowingly use software or a process that is obtained or retained either illegally
+or unethically.
+Not engage in deceptive financial practices such as bribery, double billing, or other
+improper financial practices.
+Use the property of a client or employer only in ways properly authorized and with the
+owner’s knowledge and consent.
+Disclose to all concerned parties those conflicts of interest that cannot reasonably be
+avoided or escaped.
+Ensure good management for any project you lead, including effective procedures for
+promotion of quality and full disclosure of risk.
+Add to the knowledge of the e-commerce profession by constant study, share the
+lessons of your experience with fellow EC-Council members, and promote public
+awareness of benefits of electronic commerce.
+Conduct yourself in the most ethical and competent manner when soliciting
+professional service or seeking employment, thus meriting confidence in your
+knowledge and integrity.
+Ensure ethical conduct and professional care at all times on all professional
+assignments without prejudice.
+Not associate with malicious hackers nor engage in any malicious activities.
+Not purposefully compromise or cause to be compromised the client organization’s
+systems in the course of your professional dealings.
+Ensure all penetration testing activities are authorized and within legal limits.
+Not take part in any black-hat activity or be associated with any black-hat community
+that serves to endanger networks.
+Not be part of any underground hacking community for purposes of preaching and
+expanding black-hat activities.
+
+Not make inappropriate reference to the certification or misleading use of certificates,
+marks, or logos in publications, catalogues, documents, or speeches.
+Not be in violation of any law of the land or have any previous conviction.
+Ethical Hacking and Penetration Testing
+Ethical hackers engage in sanctioned hacking—that is, hacking with permission from the
+system’s owner. In the world of ethical hacking, most tend to use the term 
+pentester
+,
+which is short for penetration tester. Pentesters do simply that: penetrate systems like a
+hacker but for benign purposes.
+As an ethical hacker and future test candidate, you must become familiar with the lingo of
+the trade. Here are some of the terms you will encounter in pen testing:
+Hack Value
+ This term describes a target that may attract an above-average level of
+attention from an attacker. Presumably because this target is attractive, it has more value
+to an attacker because of what it may contain.
+Target of Evaluation
+ A target of evaluation (TOE) is a system or resource that is being
+evaluated for vulnerabilities. A TOE would be specified in a contract with the client.
+Attack
+ This is the act of targeting and actively engaging a TOE.
+Exploit
+ This is a clearly defined way to breach the security of a system.
+Zero Day
+ This describes a threat or vulnerability that is unknown to developers and has
+not been addressed. It is considered a serious problem in many cases.
+Security
+ This is a state of well-being in an environment where only actions that are
+defined are allowed.
+Threat
+ This is considered to be a potential violation of security.
+Vulnerability
+ This is a weakness in a system that can be attacked and used as an entry
+point into an environment.
+Daisy Chaining
+ This is the act of performing several hacking attacks in sequence with
+each building on or acting on the results of the previous action.
+As an ethical hacker, you will be expected to take on the role and use the mind-set and
+skills of an attacker to simulate a malicious attack. The idea is that ethical hackers
+understand both sides, the good and the bad, and use this knowledge to help their clients.
+By understanding both sides of the equation, you will be better prepared to defend
+yourself successfully. Here are some things to remember about being an ethical hacker:
+You must have explicit permission in writing from the company being tested prior to
+starting any activity. Legally, the person or persons who must approve this activity or
+changes to the plan must be the owner of the company or their authorized
+representative. If the scope changes, you must update the contract to reflect those
+changes before performing the new tasks.
+
+You will use the same tactics and strategies as malicious attackers.
+You have the potential to cause the same harm that a malicious attack will cause and
+should always consider the effects of every action you carry out.
+You must have knowledge of the target and the weaknesses it possesses.
+You must have clearly defined rules of engagement prior to beginning your assigned
+job.
+You must never reveal any information pertaining to a client to anyone but the client.
+If the client asks you to stop a test, do so immediately.
+You must provide a report of your results and, if asked, a brief on any deficiencies
+found during a test.
+You may be asked to work with the client to fix any problems that you find. As I will
+discuss several times in this text, never accept a verbal agreement to expand test
+parameters. A verbal agreement has no record, and there is a chance of getting sued if
+something goes wrong and there’s no record.
+Under the right circumstances and with proper planning and goals in mind, you can
+provide a wealth of valuable information to your target organization. Working with your
+client, you should analyze your results thoroughly and determine which areas need
+attention and which need none at all. Your client will determine the perfect balance of
+security versus convenience. If the problems you uncover necessitate action, the next
+challenge is to ensure that existing usability is not adversely affected if security controls
+are modified or if new ones are put in place. Security and convenience often conflict: The
+more secure a system becomes, the less convenient it tends to be. 
+Figure 1.1
+ illustrates
+this point.
+Figure 1.1
+ Security versus convenience analysis
+Although ethical hacking sometimes occurs without a formal set of rules of engagement,
+pen testing does require rules to be agreed on in advance in every case. If you choose to
+perform a pen test without having certain parameters determined ahead of time, it may
+be the end of your career if something profoundly bad occurs. For example, not having
+the rules established before engaging in a test could result in criminal or civil charges,
+depending on the injured party and the attack involved. It is also entirely possible that
+without clearly defined rules, an attack may result in shutting down systems or services
+and stopping the functioning of a company completely, which again could result in huge
+legal and other issues for you.
+
+When a pen test is performed it typically takes one of three forms: white box, gray box, or
+black box. The three forms of testing are important to differentiate because you may be
+asked to perform any one of them at some point during your career, so let’s take a
+moment to describe each:
+Black Box
+ A type of testing in which the pentester has little or no knowledge of the
+target. This situation is designed to closely emulate the situation an actual attacker would
+encounter because they would presumably have an extremely low level of knowledge of
+the target going in.
+Gray Box
+ A form of testing where the knowledge given to the testing party is limited. In
+this type of test, the tester acquires knowledge such as IP addresses, operating systems,
+and the network environment, but that information is limited. This type of test would
+closely emulate the type of knowledge that someone on the inside might have; such a
+person would have some knowledge of a target but not always all of it.
+White Box
+ A form of testing in which the information given to the tester is complete.
+This means that the pentester is given all information about the target system. This type
+of test is typically done internally or by teams that perform internal audits of systems.
+Another way to look at the different types of testing and how they stack up is shown in
+Table 1.1
+.
+Table 1.1
+ Available types of pen tests
+Type
+Knowledge
+White box
+Full
+Gray box
+Limited
+Black box
+None
+   Do not forget the terms 
+black box
+, 
+white box
+, and 
+gray box
+ because you will
+be seeing them again both in this book and in the field. As you can see, the terms are
+not that difficult to understand, but you still should make an effort to commit them
+to memory.
+In many cases, you will be performing what is known as an 
+IT audit
+. This process is used
+to evaluate and confirm that the controls that protect an organization work as advertised.
+An IT audit is usually conducted against some standard or checklist that covers security
+protocols, software development, administrative policies, and IT governance. However,
+passing an IT audit does not mean that the system is completely secure; the criteria for
+passing an audit may be out of date compared with what is currently happening in the
+industry.
+An ethical hacker tries to preserve what is known as the CIA triad: confidentiality,
+
+integrity, and availability. The following list describes these core concepts. Keep these
+concepts in mind when performing the tasks and responsibilities of a pentester:
+Confidentiality
+ The core principle that refers to the safeguarding of information and
+keeping it away from those not authorized to possess it. Examples of controls that
+preserve confidentiality are permissions and encryption.
+Integrity
+ Deals with keeping information in a format that is true and correct to its
+original purposes, meaning that the data that the receiver accesses is the data the creator
+intended them to have.
+Availability
+ The final and possibly one of the most important items that you can
+perform, availability deals with keeping information and resources available to those who
+need to use it. Information or resources, no matter how safe and sound, are useful only if
+they are available when called upon.
+   CIA is possibly the most important set of goals to preserve when you are
+assessing and planning security for a system. An aggressor will attempt to break or
+disrupt these goals when targeting a system. As an ethical hacker your job is to find,
+assess, and remedy these issues whenever they are discovered to prevent an
+aggressor from doing harm.
+Another way of looking at this balance is to observe the other side of the triad and how
+the balance is lost. Any of the following break the CIA triad:
+Disclosure is the inadvertent, accidental, or malicious revealing or allowing access of
+information or resources to an outside party. If you are not authorized to have access
+to an object, you should never have access to it.
+Alteration is the counter to integrity; it deals with the unauthorized modification of
+information. This modification can be caused by corruption, accidental access that
+leads to modification, or modifications that are malicious in nature.
+Disruption (also known as loss) means that authorized access to information or
+resources has been lost. Information is useless if it is not there when it is needed.
+Although information or other resources can never be 100 percent available, some
+organizations spend the time and money to ensure 99.999 percent uptime for critical
+systems, which averages about six minutes of downtime per year.
+   Think of these last three points as the 
+anti-CIA triad
+ or the inverse of the
+CIA triad. The CIA triad deals with preserving information and resources, whereas
+the anti-CIA triad deals with violating those points. You can also think of the anti-
+CIA triad as dealing with the aggressor’s perspective rather than the defender’s.
+
+An ethical hacker will be entrusted with ensuring that the CIA triad is preserved at all
+times and threats are dealt with in the most appropriate manner available (as required by
+the organization’s own goals, legal requirements, and other needs). For example, consider
+what could happen if an investment firm or defense contractor suffered a disclosure
+incident at the hands of a malicious party. The results would be catastrophic with lawsuits
+from customers and investigation by law enforcement if that information was personal in
+nature (such as health or financial).
+It is also important to consider two supporting elements to the CIA triad, which are non-
+repudiation and authentication.
+Non-repudiation
+ Non-repudiation is the concept that once an action is carried out by a
+party it cannot be denied by that party. For example, by using techniques such as digital
+signatures it is possible to definitively say who sent a message without any possibility of
+denial that they were the originator of the message.
+Authenticity
+ Authenticity is the ability to state that an object such as a piece of data or
+message came from a legitimate and identifiable source. This is an important property for
+an item to have because it states that the source of an action is valid and known. Because
+the sender has signed their digital signature with their private key, the subsequent
+verification of the signature using their public key proves the sender’s identity and thus
+authenticates the sender and the origin of the message.
+   In this book you will encounter legal issues several times. You are
+responsible for checking the details of what laws apply to you, and you will need to
+get a lawyer to do that. You should be conscious of the law at all times and recognize
+when you may be crossing into a legal area that you need advice on.
+Hacking Methodologies
+A hacking methodology refers to the step-by-step approach used by an aggressor to attack
+a target such as a computer network. There is no specific step-by-step approach used by
+all hackers. As can be expected when a group operates outside the rules as hackers do,
+rules do not apply the same way. A major difference between a hacker and an ethical
+hacker is the code of ethics to which each subscribes.
+The following steps, illustrated in 
+Figure 1.2
+, typically make up the hacking process:
+Footprinting
+ means that you are using primarily passive methods of gaining
+information from a target prior to performing the later active methods. Typically, you
+keep interaction with your target to a minimum to avoid detection, thus alerting the
+target that something is coming in their direction. A myriad of methods are available
+to perform this task, such as Whois queries, Google searches, job board searches, and
+discussion groups. We will examine this topic in Chapter 4, “Footprinting.”
+
+Scanning
+ is the phase in which you take the information gleaned from the
+footprinting phase and use it to target your attack much more precisely (see Chapter 5,
+“Scanning”). The idea here is to act on the information from the prior phase, not to
+blunder around without purpose and set off alarms. Scanning means performing tasks
+like ping sweeps, port scans, and observations of facilities. One of the tools you will
+use is Nmap, which is very useful for this purpose.
+Enumeration
+ is the next phase (see Chapter 6, “Enumeration”), where you extract
+much more detailed information about what you uncovered in the scanning phase to
+determine its usefulness. Think of the information gathered in the previous phase as
+walking down a hallway and rattling the doorknobs, taking note of which ones turn
+and which ones do not. Just because a door is unlocked doesn’t mean anything of use
+is behind it. In this phase you are looking behind the door to see if there is anything of
+value behind it. Results of this step can include a list of usernames, groups,
+applications, banner settings, and auditing information.
+System hacking
+ (Chapter 7, “System Hacking”) follows enumeration. You can now
+plan and execute an attack based on the information you uncovered. You could, for
+example, start choosing user accounts to attack based on the ones uncovered in the
+enumeration phase. You could also start crafting an attack based on service
+information uncovered by retrieving banners from applications or services.
+Escalation of privilege
+ is the hacking phase, where you can start to obtain privileges
+that are granted to higher privileged accounts than you broke into originally.
+Depending on your skills, it might be possible to move from a low-level account such
+as a guest account all the way up to administrator or system-level access.
+Covering tracks
+ is the phase when you attempt to remove evidence of your presence
+in a system. You purge log files and destroy other evidence that might give away the
+valuable clues needed for the system owner to determine an attack occurred. Think of
+it this way: If someone were to pick a lock to get into your house versus throwing a
+brick through the window, the clues are much less obvious in the former than the
+latter. In the latter case you would look for what the visitor took immediately, and in
+the former case you might notice the break-in much later, after the trail had gone cold.
+Planting of backdoors
+ means to leave something behind that would enable you to
+come back later if you wanted. Items such as special accounts or Trojan horses come
+to mind.
+
+Figure 1.2
+ The hacking process
+   Both ethical hackers and hackers follow similar processes as the one
+outlined here though in less or stricter ways. Hackers are able to write their own
+rules and use the process however they want without concern or reasons except
+those that make sense to themselves. Ethical hackers follow the same type of process
+as seen here with little modification, but they have added something that hackers do
+not have: Ethical hackers not only will have 
+permission
+ prior to starting the first
+phase but will also be 
+generating a report
+ that they will present at the end of the
+process. The ethical hacker will be expected to keep detailed notes about what is
+procured at each phase for later generation of that report.
+When you decide to carry out this process, seek your client’s guidance and ask the
+following questions along with any others that you think are relevant. During this phase,
+your goal is to clearly determine why a pen test and its associated tasks are necessary.
+Why did the client request a pen test?
+
+What is the function or mission of the organization to be tested?
+What will be the constraints or rules of engagement for the test?
+What data and services will be included as part of the test?
+Who is the data owner?
+What results are expected at the conclusion of the test?
+What will be done with the results when presented?
+What is the budget?
+What are the expected costs?
+What resources will be made available?
+What actions will be allowed as part of the test?
+When will the tests be performed?
+Will insiders be notified?
+Will the test be performed as black or white box?
+What conditions will determine the success of the test?
+Who will be the emergency contacts?
+Pen testing can take several forms. You must decide, along with your client, which tests
+are appropriate and will yield the desired results. Tests that can be part of a pen test may
+include the following:
+An insider attack is intended to mimic the actions that may be undertaken by internal
+employees or parties who have authorized access to a system.
+An outsider attack is intended to mimic those actions and attacks that would be
+undertaken by an outside party.
+A stolen equipment attack is a type of attack where an aggressor steals a piece of
+equipment and uses it to gain access or extracts the information desired from the
+equipment itself.
+A social engineering attack is a form of attack where the pentester targets the users of
+a system seeking to extract the needed information. The attack exploits the trust
+inherent in human nature.
+Once you discuss each test, determine the suitability of each, and evaluate the potential
+advantages and side effects, you can finalize the planning and contracts and begin testing.
+When you are undertaking an actual test against a system or environment you must be
+prepared to think as a malicious party would in the same conditions. Remember that as a
+pentester you must understand the tools and techniques and use them the same way a
+bad guy would; however, you temper that with the mindset that you are doing this to help
+
+the client and only with their permission would you carry out a test. Be prepared for
+problems to arise and roadblocks to emerge during the test; you’ll have to deal with them
+each accordingly much like a malicious party would when attacking a target. The idea is to
+understand how an attack can or would happen, what an attacker would encounter, and
+how to defeat it. You must understand both sides, the good and the bad, and use this
+knowledge to help the clients and customers.
+Penetration testing does require rules to be agreed upon in advance in every case. If a
+penetration tester chooses to perform a penetration test without having certain
+parameters determined ahead of time, it may be the end of that tester’s career if
+something profoundly bad occurs. For example, not having the rules established prior to
+engaging in a test could result in criminal or civil charges, depending on the injured party
+and the attack involved. It is also entirely possible that without clearly defined rules, an
+attack may result in shutting down systems or services and stopping the functioning of a
+company completely, which again could result in huge legal and other issues for the
+tester.
+With these goals in mind and a good plan, a penetration tester should be on track to
+extract valuable information from the target. Whatever vulnerabilities, weaknesses, or
+other problems you find during your test should be fully documented and ranked in order
+of seriousness or importance. Once this is complete, the tester should be prepared to
+present a detailed report of their findings to the client. Presentation of the report may be
+the last task the tester has, or there may be additional steps. Expect any one of the
+following outcomes to occur upon completion of the testing phase:
+Presentation of the report to the client—This is just what it states; the report is
+generated and handed over to the client, and if they need any further explanations or
+discussion they will request it. If no explanation is needed, then the testing and
+reporting process is complete and the job is finished.
+Presentation plus recommendations—If the client requests it, the tester will explain
+the results of the test and then propose recommendations to fix the problems
+discovered. The client may not ultimately use all or any of the recommendations, but
+they will request them to see what needs to be done.
+Presentation plus recommendation with remediation—In this particular outcome the
+test is completed and the review and recommendations are made. What differentiates
+this outcome from the others is that the client asks the tester to get involved at some
+level with actually implementing fixes.
+Ultimately the client will determine what the next steps are and if this actually involves
+the testing party or not. The client will decide what the perfect balance of security versus
+convenience is in their environment and if the recommended fixes will maintain their
+desired balance. In other words, the client should not look at the results and immediately
+start thinking that they must fix every problem because doing so may impair the
+usefulness of the system. If the problems uncovered necessitate action, the next
+challenge is to ensure that if security controls are modified or if new ones are put in place,
+
+existing usability is not adversely affected.
+Your role as a penetration tester is to provide your expertise to the client and try to
+answer their questions. Be proactive and attempt to address questions that they may have
+ahead of time, and always be available to answer questions after the fact should they have
+questions later on about your report.
+Vulnerability Research and Tools
+An important part of your toolkit as an ethical hacker will be the information gathered
+from vulnerability research. This process involves searching for and uncovering
+vulnerabilities in a system and determining their nature. In addition, the research seeks
+to classify each vulnerability as high, medium, or low. You or other security personnel can
+use this research to keep up to date on the latest weaknesses involving software,
+hardware, and environments.
+The benefit of having this information is that an administrator or other personnel could
+use this information to position defenses. The information may also show where to place
+new resources or be used to plan monitoring.
+Vulnerability research is not the same as ethical hacking in that it passively uncovers
+security issues, whereas the process of ethical hacking actively looks for the
+vulnerabilities. However, vulnerability scanning may be utilized as part of a test but not
+by itself.
+What Is Incident Response?
+As a penetration tester your job is to provide information that will reduce the chance of a
+security breach or incident to the lowest possible level, but does a regular user have no
+responsibility? Absolutely not; users have an important role to play as well. So as a well-
+prepared individual, you must plan how you will react when a security incident occurs or
+follow the plans the company or client provides to you. Planning ahead or knowing plans
+others have made will be beneficial because it will give you the edge when determining
+what to do after an incident and how to do it. Proper security incident response will
+determine if an incident is dealt with swiftly and completely or if it gets worse and out of
+control.
+One of the first things to keep in mind when thinking about incident response is the fact
+that you may very well be dealing with something that falls under the banner of crime
+and as such will require that you take special care. Responding to an incident of computer
+crime can be particularly challenging and should be left to professionals because the
+evidence that needs to be collected is intangible and can prevent a case from being
+prosecuted if you damage it.
+Before going too far, however, it is worth defining what is inferred by the term 
+computer
+crime
+. Computer crime is defined as any criminal act during which a computer or
+computing device is used in the commission of a crime. The goal of computer crime can
+
+be anything that negatively impacts in some way, shape, or form the operations of a
+company, individual, or government. By its very nature computer crime does not
+discriminate against activities that are initiated via the Internet or launched internally
+against a private network.
+Incident Response Policies
+The next detail that is important when considering incident response is incident response
+policy (IRP). The IRP defines the course of action that a company or organization will
+take in the time following a security incident. An IRP specifies many details, but the
+following are usually always included:
+Who will determine when and if a security incident has occurred
+Which individuals and/or departments are to be notified
+The means through which they will be notified
+Who will be responsible for responding to the incident
+Appropriate response guidelines
+What you as a system administrator will be responsible for doing in the event of an
+incident
+So who will be involved in the incident response process? This depends on the
+organization, assets involved, and the overall severity of the situation. Several
+departments within an organization can work together such as human resources, public
+relations, information technology, corporate security, and others. The idea is to get the
+appropriate personnel and departments involved in order to properly deal with the
+situation at hand. The personnel involved can also determine which information can be
+released and to whom. For example, employees may not be privy to all the details of a
+security incident and may be informed only on a need-to-know basis.
+Typically you will not be included in the development of this policy, but you will be
+included as someone who must follow it when the time comes and an incident has been
+declared by the person in charge.
+Phases of an Incident and Response
+There exist a number of phases in the incident response process; each incident will
+traverse these phases as the incident occurs, evolves, and moves to its final resolution.
+While an end user will not be truly aware of each of the phases of incident response,
+having some idea of the big picture may help you understand what you are doing and why
+you are being asked to do it. Each phase has distinct actions that take place within it,
+which you will learn more about as you move on, but for now let’s take a high-level look
+at the incident response 
+process itself. 
+Table 1.2
+ covers what is generally accepted by the
+National Institute of Standards and Technology (NIST) and others as the phases of
+incident response.
+
+Table 1.2
+ The phases of incident response
+Phase
+Description
+Response
+It is important to early on establish just what has actually occurred. Is the
+incident an actual security incident or is it something else? The incident
+response team will be the ones responsible for making this determination
+as well as making the determination or discovery as to what was impacted.
+Triage
+The next step after the determination that a security incident has occurred
+is to determine how seriously the incident has impacted critical systems.
+Remember, not all systems or services will be affected the same way, and
+so some will require more attention than others. Also remember that some
+systems are more mission critical than others and will require more
+attention as well. In a computer crime security incident scenario, once the
+incident response team has evaluated the situation and determined the
+extent of the incidents, a triage approach will be implemented and the
+situation will be responded to according to criticality. If multiple events
+have occurred, the most serious event will be addressed first and
+remaining events will be investigated based on risk level.
+Investigation
+Once the response team discovers the cause of the problem, the
+investigative process can start. The investigation is designed to
+methodically collect evidence without destroying or altering it in any way.
+This process can be performed by internal personnel or by an external
+team where appropriate. The key point in either case is that the team
+involved in the investigative process understands how to collect the
+evidence properly because the end result of the process may be to take this
+collected information to court. So who may investigate a security incident
+may vary depending on the extent and type of security breach. In some
+cases internal teams or consultants may be all that’s needed to investigate
+and analyze a crime scene; however, in some cases that may not be
+enough. It is possible under certain conditions to get local law
+enforcement involved in the investigation of a crime. This option will vary
+depending on the skills that the local law enforcement have. Some police
+departments are adept at dealing with computer crime, but this is not
+always the case. Investigations should never be taken lightly, and once
+local law enforcement is involved other issues arise. Police departments
+may not be able to respond in a timely fashion because corporate security
+problems are not part of the police mission and therefore are low priority.
+Containment
+It is necessary early on in the process of incident response to contain and
+control the crime scene as much as possible. When considering a crime
+scene it is important that no alterations or tampering of any sort occur to
+avoid damaging of evidence. This means that the crime scene should not
+be tampered with in any way including disconnecting any devices, wires, or
+
+peripherals or even shutting down the system. It is important to let trained
+professionals do their job at the crime scene.
+Analysis and
+tracking
+Evidence that has been gathered is useless unless it is examined and
+dissected to determine what has occurred. At this point the company will
+either be involving external professionals to examine the evidence or
+employing its own internal teams. These teams will be responsible for
+determining what evidence is relevant to the investigation and what is not.
+Additionally the team must maintain the chain of custody, which means
+that evidence must be accounted for and under positive control of the team
+at all times.
+Recovery
+During the recovery phase it is assumed that all relevant evidence has been
+collected and the crime scene has been cleaned. At this point the crime
+scene investigation has been completed and the effected systems can be
+restored and returned to service. This process will include restoring and
+rebuilding operating systems with their applications and data from
+backups or drive images.
+Repair
+In the event that a system has experienced substantial damage in the
+course of an attack, it becomes necessary to repair the system. The
+recovery process is designed to deal with rebuilding a system after
+evidence has been collected, but it does not account for potential damage
+done that may need to be repaired. Also, the collection of evidence may
+have required the removal of components to preserve the evidence, and
+those components will need to be replaced.
+Debriefing
+and feedback
+When the situation is under control, you will need to debrief and obtain
+feedback from all involved. The incident happened for a reason;
+presumably at this point you have determined what this reason is, at least
+in some part. The goal of this phase is to determine what the company did
+right, what it did wrong, and how to improve. Additionally, depending on
+the crime it may be necessary to start the process of informing clients and
+other agencies and regulatory bodies of the breach. This last point may be
+the most important one because failure to inform the appropriate
+regulatory bodies can mean you or your company is guilty of a crime.
+It is important to note that the actual phases described here may vary wildly between
+organizations because they fine-tune the incident response process to their own needs.
+You may work in an industry that is heavily regulated and that has its own requirements
+that dictate a unique incident response process.
+Incident Response Team
+As organizations grow in size and importance it is likely that they will build or already
+have a group known as an incident response team. These teams will comprise individuals
+who have the training and experience to properly collect and preserve evidence of a crime
+
+and the associated components of the response process. You may, depending on your
+experience and background, be asked to participate in these teams in the event an
+incident occurs. Of course, you will know ahead of time and be prepared so you are ready
+when and if the call ever comes. As part of the incident response team, you must be both
+properly trained and have the requisite experience to respond to and investigate any
+security incident.
+One of the components of incident response is the first individuals to respond when an
+incident is reported. In the broadest sense this can be the individuals appropriate for the
+security incident, including the following:
+IT personnel
+Human resources
+Public relations
+Local law enforcement
+Security officers
+Chief security officer
+The goal of security response is to have a team in place that is well versed and aware of
+how to deal with security incidents. These members will know what to do and have been
+drilled on how to do it in the event an incident occurs. You may be asked, if you are not a
+member of the team, to contact certain individuals if a security incident occurs and
+determine what information to provide these first responders in order for them to do
+their job properly.
+Incident Response Plans
+Once a security incident has been recognized and declared, it is vital that the team have a
+plan to follow. This plan will include all the steps and details required to investigate the
+crime as necessary.
+Some of the elements required to investigate a security crime are the following:
+If an IRP exists and is relevant, follow the process outlined in this plan.
+If an IRP does not currently exist, is out of data, or is irrelevant, then designate a lead
+examiner for the process so there is a coordinated response.
+Examine and evaluate the nature of the events that occurred and, as much as possible,
+determine the damage that has been incurred by the systems, services, and other
+items involved.
+Document and identify all involved components of the incident as completely as
+possible.
+Undertake a complete analysis to determine the different risk priorities for all
+systems, services, and other processes involved.
+
+Evaluate the need for outside expertise or consultants.
+Determine if local law enforcement involvement is needed.
+Determine how to contain the crime scene, including hardware, software, and other
+artifacts present.
+Decide how to collect the required evidence at the crime scene with special provisions
+for electronic evidence, hardware, and other items.
+Set up a procedure for interviewing personnel who may have additional knowledge or
+other information to share that would be beneficial to investigating the crime scene.
+Put in place a reporting mechanism for the crime and determine who should receive
+the report, such as regulatory bodies.
+Business Continuity Plan
+At some point you may be asked to follow a business continuity plan (BCP). This policy
+defines how the organization will maintain what is acceptable as normal day-to-day
+business in the event of a security incident or other event disruptive to the business. This
+plan will be called into play in the event that a disaster or severely disruptive event occurs
+and causes the business to become unavailable. If a company provides services to
+customers or clients and the business becomes unavailable, the company loses both
+money and the faith of its customers—something that no business wants to experience.
+The importance of the BCP cannot be understated because it is necessary in ensuring that
+the business continues to perform and can continue to operate on a limited basis through
+a disaster. A BCP is designed to ensure that vital systems, services, and documents that
+support the business remain available to alert key stakeholders and recover assets even
+when the bulk of critical systems are down.
+Next to a BCP, and closely intertwined with it, is a disaster recovery plan (DRP). This
+document outlines a policy that defines how personnel and assets will be safeguarded in
+the event of a disaster and how those assets will be restored and brought back to an
+operating state once the disaster passes. The DRP typically will include a list of
+responsible individuals who will be involved in the recovery process, an inventory of vital
+hardware and software, steps to respond to and address the outage, and how to rebuild
+affected systems.
+Supporting Business Continuity and Disaster Recovery
+Several techniques can be used to keep the organization running and diminish the impact
+of a disaster when it occurs. Some of these techniques are discussed in this section. While
+some or all of these techniques may be out of your control, they are provided here for you
+to understand what IT will do to keep services available for you and clients.
+Fault tolerance is a valuable tool in the company arsenal because it provides the ability to
+weather potential failures while providing some measure of service. While this service
+
+may not be optimal, it should be enough to maintain some business operations even if
+not at the normal level of performance. Fault-tolerant mechanisms include service and
+infrastructure duplication designed to handle a component failure when it occurs.
+Another mechanism commonly used by companies is high-availability architecture. This
+is simply a gauge of how well the system is providing its services, specifically how
+available the system actually is. Ideally a system should be available 100 percent of the
+time, but in practice this is usually not possible and over long periods of time unlikely.
+High availability simply states, as a percentage, how available a system is, so the closer a
+system’s availability is to 100 percent, the less time it spends offline. High availability can
+be attained by having redundant systems and reliable backup systems. When
+implemented properly, it means that the services you rely on to do your job and provide
+service to clients are available and ready to use for the greatest possible amount of time.
+A document that is commonly mentioned when discussing high availability and fault
+tolerance is a service-level agreement (SLA). This document spells out the obligations of
+the service provider to you, the client. Specifically, an SLA is a legal contract that lays out
+what the service provider will provide, at what performance level, and steps that will be
+taken in the event of an outage. For an idea of what an SLA looks like, you can look at the
+contract you signed with your cell phone provider. Cell phone providers use this
+document to describe what they will provide and what you can expect should an outage
+occur. This document can include specific performance and availability levels that are
+expected and the associated penalties for not meeting these levels. Additionally it will
+spell out the parties responsible and the extent of their responsibilities in the event of a
+disaster, such as who will take care of the problems related to the disaster.
+Alternate sites are another technique used in the event of a system failure or disaster. The
+idea is to have another location to conduct business operations from in the event of a
+disaster. Under ideal conditions all operations will be moved to an alternate site if the
+primary or normal site is no longer able to provide services.
+Not all alternate sites are created equal, however. There are three types of sites that an
+organization can use:
+Cold site—This is the most basic type of alternate site and the least expensive to
+operate. A cold site, by normal definition, does not include backed-up copies of data or
+configuration data from the primary location. It also does not have any sort of
+hardware set up and in place. The lack of these essentials makes the cold site the
+cheapest option but also contributes to greater outage times because this
+infrastructure will need to be built and the data restored prior to going back online.
+Warm site—This is the middle-of-the-road option, offering a balance between expense
+and outage time. A warm site typically has some if not all of the hardware in place,
+with other items such as power and Internet connectivity already established though
+not to the degree that the primary site has in place. This type of site also has some
+backups on hand, though they may be out of date by several days or even weeks.
+
+Hot site—This is the top option as far as capabilities go, offering little to no downtime
+and the greatest expense. This type of site typically has a high degree of
+synchronization with the primary site up to the point of completely duplicating the
+primary site. The setup requires a high degree of complexity in the form of complex
+network links and other systems and services designed to keep the sites in sync. This
+level of complexity adds to the expense of the site but also has the advantage of
+substantially reduced (or eliminated) downtime.
+Before an alternate site can work, however, the company must have a data backup, and
+this backup must be kept secure because it contains information about the company, its
+clients, and its infrastructure. Backups should be stored safely and securely, with copies
+kept both onsite and offsite to give optimal protection. In addition, backups should always
+be stored on separate media and ideally in a locked location offsite. Most of the time,
+these backups are encrypted for further protection of unauthorized disclosure if stolen.
+Other safeguards should be taken to protect the backups from environmental concerns
+such as fire, floods, and earthquakes, to name a few.
+Recovering Systems
+Secure recovery requires a number of items to be in place; primary among these is the
+requirement to have an administrator designated to guide the recovery process. This
+administrator may come to you as a trained employee to carry out the recovery process.
+They may ask you to follow specific steps that you will have been trained in and indicate
+what needs to be restored. As is the case with any backup and recovery process, you will
+need to review the steps and relevance of the process and update the process where
+necessary or at least consult with experts on what to do.
+Planning for Disaster and Recovery
+In order to properly plan for disaster recovery you will need to know where you stand,
+specifically where the company stands. You need to completely assess the state of
+preparedness of the organization and understand what you need to do to be properly
+prepared.
+In order to properly plan for disaster recovery, you should observe the following
+guidelines and best practices:
+Once your organization has established a BCP it is important for this plan to undergo
+regular testing and review. Consider conducting simulations and drills designed to
+evaluate the efficacy of the plan.
+If the company has not recently tested the DRP, make it a point to do so. Much like
+BCPs, consider the use of drills and other similar types of simulations to evaluate how
+well the DRP functions.
+Always consider and evaluate the proper redundancy measures for all critical
+resources. Look for adequate protection for systems such as servers, routers, and
+
+other devices in the event they are needed for emergency use.
+Check with all critical service providers to ensure that they’ve taken adequate
+precautions to guarantee that the services provided will be available.
+Check for the existence or the ability to obtain spare hardware wherever necessary.
+Ensure that the devices are not only appropriate for use but also can be obtained
+quickly in an emergency.
+Evaluate any existing SLAs currently in place so that you know what constitutes
+acceptable downtime.
+Establish mechanisms for communication that do not require the company resources,
+which may be unavailable. Such communication channels should also take into
+account that power may be unavailable.
+Ensure that the organization’s designated hot site can be brought online immediately.
+Identify and document any and all points of failure, as well as any up-to-date
+redundancy measures that have been put in place to safeguard these points.
+Ensure that the company’s redundant storage is secure.
+Once the incident response process has been defined, at a high level at this point, you can
+turn your attention to the collection of evidence from a crime scene. While you may be
+involved in this process, it is possible that you will require special teams or external
+consultants for this task.
+In many cases companies will have specially trained professionals on staff or externally
+contracted to respond to security incidents and collect evidence. It is important for you to
+know which it is or at the very least who to contact in the event an incident happens.
+Evidence-Collection Techniques
+Proper collection of evidence is essential as stated previously and is something that is
+best left to professionals. In addition, when a crime has been suspected it becomes
+mandatory to have trained professionals involved in the process. If this is not you, then
+you should not disturb the crime scene; rather you should contact a manager or someone
+in charge for guidance on how to proceed. The process here is really one of forensics—the
+methodical and defensible process of collecting information from a crime scene. This
+process is best left to those professionals trained to do so because novices can
+inadvertently damage evidence in such a way that makes the investigation impossible or
+indefensible in court. Trained personnel will know how to avoid these blunders and
+properly collect everything relevant.
+Evidence Types
+Evidence is the key to proving a case, and not all evidence is created equal and should not
+be treated as such. Collecting the wrong evidence or treating evidence incorrectly can
+have an untold impact on your company’s case, which should not be underestimated.
+
+Table 1.3
+ lists some of the different types of evidence that can be collected and what
+makes each unique.
+Table 1.3
+ Types of evidence
+Evidence
+Description
+Best
+The best evidence is category evidence that is admissible by requirement
+in any court of law. The existence of best evidence eliminates your ability
+to use any copies of the same evidence in court.
+Secondary
+Secondary evidence is a copy of the original evidence. This could be items
+such as backups and drive images. This type of evidence may not always
+be admissible in a court of law and is not admissible if best evidence of
+the item exists.
+Direct
+Direct evidence is received as the result of testimony or interview of an
+individual. This individual could have obtained their evidence as a result
+of observation. Evidence in this category can be used to prove a case
+based on its existence.
+Conclusive
+Conclusive evidence includes that which is above dispute. Conclusive
+evidence is considered so strong that it directly overrides all other
+evidence types by its existence.
+Opinion
+Opinion evidence is derived from an individual’s gut feelings. Opinion
+evidence is divided into the following types: Expert–Any evidence that is
+based on known facts, experience, and an expert’s knowledge. Non-
+expert–Any evidence that is derived from fact alone and comes from a
+non-expert in the field.
+Corroborative
+Corroborative evidence is obtained from multiple sources and is
+supportive in nature. This type of evidence cannot stand on its own and
+is used to bolster the strength of other evidence.
+Circumstantial
+Circumstantial evidence can be obtained from multiple sources, but
+unlike corroborative evidence it is only able to indirectly infer a crime.
+Chain of Custody
+When collecting evidence the chain of custody must be maintained at all times. The chain
+of custody documents the whereabouts of the evidence from the point of collection to the
+time it is presented in court and then when it is returned to its owner or destroyed. The
+chain is essential because any break in the chain or question about the status of evidence
+at 
+any point can result in a case being thrown out. A chain of custody needs to include
+every detail about the evidence, from how it was collected up to how it was processed.
+A chain of custody can be thought of as enforcing or maintaining six key points. These
+points will ensure that you focus on how information is handled at every step:
+What evidence has been collected?
+
+How was the evidence obtained?
+When was the evidence collected?
+Who has handled the evidence?
+What reason did each person have for handling the evidence?
+Where has the evidence traveled and where was this evidence ultimately stored?
+Also remember if you are involved to keep the chain of custody information up to date at
+all times. Every time any evidence is handled by an investigator, you must update the
+record to reflect this. You may be asked at some point to sign off on where evidence was
+or that it was collected from you; this would be an example of where you would fit in
+regard to the chain of custody. This information should explain every detail such as what
+the evidence actually consists of, where it originated, and where it was delivered to. It is
+important that no gaps exist at any point.
+For added legal protection, evidence can be validated through the use of hashing to prove
+that it has not been altered. Ideally the evidence you collected at the crime scene is the
+same evidence you present in court.
+Remember, a verifiable or non-verifiable chain of custody can win or lose a case.
+Rules of Evidence
+All evidence, no matter the type, may not be admissible in court. Evidence cannot be
+presented in court unless certain rules are followed, and you should review those rules
+ahead of time. The five rules of evidence presented here are general guidelines and are
+not consistent across jurisdictions:
+Reliable—The evidence presented is consistent and leads to a common conclusion.
+Preserved—Chain of custody comes into play and the records help identify and prove
+the preservation of the evidence in question.
+Relevant—The evidence directly relates to the case being tried.
+Properly identified—Records can provide proper proof of preservation and
+identification of the evidence.
+Legally permissible—The evidence is deemed by the judge to fit the rules of evidence
+for the court and case at hand.
+Recovering from a Security Incident
+When a security incident happens, and it will happen, the company should have a plan to
+restore business operations as quickly and effectively as possible. This may require you
+and possibly your team to correctly assess the damage, complete the investigation, and
+then 
+initiate the recovery process. From the time of the initial security incident onward,
+the organization presumably has been operating at some reduced capacity, and so you
+
+need to recover the systems and environment as quickly as possible to restore normal
+business operations. Other key requirements are the need to generate a report on what
+happened and the ability to communicate with appropriate team members.
+Reporting a Security Incident
+Once an incident has been responded to and a team has gotten involved to assess the
+damage and start the cleanup, the required parties will need to be informed. These parties
+will be responsible for getting the ball rolling whether it is legal action, an investigative
+process, or other requirements as necessary.
+When considering how to report a security incident the following guidelines are worth
+keeping in mind and can prove helpful at the time of crisis:
+Adhere to known best practices and guidelines that have been previously established.
+These best practices and guidelines will describe how to best assess the damage and
+implement loss control as necessary.
+Wherever feasible refer to previously established guidelines as documented and
+described in the company IRP. The IRP should include guidelines on how to create a
+report and who to report to. Furthermore, the IRP should define the formats and
+guidelines for putting the report together in order to ensure that the information is
+actually usable by its intended audience.
+Consider the situations where it is necessary to report the incident to local law
+enforcement in addition to the company officials.
+Consider the situations and conditions about when and if the security incident must
+be reported to regulatory bodies as required by law.
+In situations where security incidents are reported outside the organization, note this
+in the company incident report.
+During the preparation of a security incident report include all the relevant information
+to detail and describe the incident. The following items should be included at a minimum:
+A timeline of the events of the security incident that includes any and all actions taken
+during the process.
+A risk assessment that includes extensive details of the state of the system before and
+after the security incident occurred.
+A detailed list of any and all who took part in the discovery, assessment, and final
+resolution (if this has occurred) of the security incident. It is important to include
+every person who took part in this process regardless of how important or
+unimportant their role may be perceived.
+Detailed listing of the motivations for the decisions that were made during the
+process. Document these actions in a format that states what each action was and
+what factors led to the decision to take the designated action.
+
+Recommendation as to what could be done to prevent a repeat of the incident and
+what could be done to reduce any damage that may result.
+Two sections in the report to ensure that it is usable by all parties. First, prepare a
+long-format report that includes specific details and actions that occurred during the
+security incident. Second, include an executive-level summary that provides a high-
+level, short-format description of what occurred.
+Ethics and the Law
+As an ethical hacker, you need to be aware of the law and how it affects what you do.
+Ignorance or lack of understanding of the law not only is a bad idea but can quickly put
+you out of business—or even in prison. In fact, under some situations the crime may be
+serious enough to get you prosecuted in several jurisdictions in different states, counties,
+or even countries due to the highly distributed nature of the Internet. Of course,
+prosecution of a crime can also be difficult considering the web of various legal systems
+in play. A mix of common, military, and civil law exists, requiring knowledge of a given
+legal system to be successful in any move toward prosecution.
+As an ethical hacker you must also obey the Code of Ethics as defined by the EC-Council.
+One thing to remember though about ethics is that while you can get in legal trouble for
+violating a law, breaking a code of ethics won’t get you in legal trouble but could lead to
+other actions such as getting decertified.
+   Depending on when and where your testing takes place, it is even possible
+for you to break religious laws. Although you may never encounter this problem, it is
+something that you should be aware of—you never know what type of laws you may
+break.
+Always ensure that you exercise the utmost care and concern to ensure that you observe
+proper safety and avoid legal issues. When your client has determined their goals along
+with your input, together you must put the contract in place. Remember the following
+points when developing a contract and establishing guidelines:
+Trust
+ The client is placing trust in you to use proper discretion when performing a
+penetration test. If you break this trust, it can lead to the questioning of other details such
+as the results of the test.
+Legal Implications
+ Breaking a limit placed on a test may be sufficient cause for your
+client to take legal action against you.
+The following is a summary of laws, regulations, and directives that you should have a
+basic knowledge of:
+1973—U.S. Code of Fair Information Practices governs the maintenance and storage of
+
+personal information by data systems such as health and credit bureaus.
+1974—U.S. Privacy Act governs the handling of personal information by the U.S.
+government.
+1984—U.S. Medical Computer Crime Act addresses illegally accessing or altering
+medication data.
+1986 (amended in 1996)—U.S. Computer Fraud and Abuse Act includes issues such as
+altering, damaging, or destroying information in a federal computer and trafficking in
+computer passwords if it affects interstate or foreign commerce or permits
+unauthorized access to government computers.
+1986—U.S. Electronic Communications Privacy Act prohibits eavesdropping or the
+interception of message contents without distinguishing between private or public
+systems.
+1994—U.S. Communications Assistance for Law Enforcement Act requires all
+communications carriers to make wiretaps possible.
+1996—U.S. Kennedy-Kassebaum Health Insurance and Portability Accountability Act
+(HIPAA) (with additional requirements added in December 2000) addresses the
+issues of personal healthcare information privacy and health plan portability in the
+United States.
+1996—U.S. National Information Infrastructure Protection Act was enacted in October
+1996 as part of Public Law 104-294; it amended the Computer Fraud and Abuse Act,
+which is codified in 18 U.S.C. § 1030. This act addresses the protection of the
+confidentiality, integrity, and availability of data and systems. This act is intended to
+encourage other countries to adopt a similar framework, thus creating a more uniform
+approach to addressing computer crime in the existing global information
+infrastructure.
+2002—Sarbanes–Oxley Act (SOX or SarBox) is a law pertaining to accountability for
+public companies relating to financial information.
+2002—Federal Information Security Management Act (FISMA) is a law designed to
+protect the security of information stored or managed by government systems at the
+federal level.
+Summary
+When becoming an ethical hacker, you must develop a rich and diverse skill set and
+mind-set. Through a robust and effective combination of technological, administrative,
+and physical measures, organizations have learned to address their given situation and
+head off major problems through detection and testing. Technology such as virtual
+private networks (VPNs), cryptographic protocols, intrusion detection systems (IDSs),
+intrusion prevention systems (IPSs), access control lists (ACLs), biometrics, smart cards,
+
+and other devices has helped security become much stronger but still has not eliminated
+the need for vigilance. 
+Administrative countermeasures such as policies, procedures, and
+other rules have also been strengthened and implemented over the past decade. Physical
+measures include devices such as cable locks, device locks, alarm systems, and other
+similar devices. Your new role as an ethical hacker will deal with all of these items, plus
+many more.
+As an ethical hacker you must know not only the environment you will be working in but
+also how to find weaknesses and address them as needed. You will also need to
+understand the laws and ethics involved and know the client’s expectations. Understand
+the value of getting the proper contracts in place and not deviating from them.
+Hacking that is not performed under contract is considered illegal and is treated as such.
+By its very nature, hacking activities can easily cross state and national borders into
+multiple legal jurisdictions. Breaking out of the scope of a contract can expose you to legal
+problems and become a career-ending blunder.
+Exam Essentials
+Know the purpose of an ethical hacker.
+ Ethical hackers perform their duties against
+a target system 
+only
+ with the explicit permission of the system owner. To do so without
+permission is a violation of ethics and the law in some cases.
+Know the difference between black, white, and gray box tests.
+ Know the
+differences in the types of tests you can offer to your client and the advantages of each.
+Not all tests are the same nor will they yield the same results. Make sure you know what
+your client’s expectations are so you can choose the most appropriate form.
+Understand your targets.
+ Be sure you know what the client is looking to gain from a
+pen test early in the process. The client must be able to provide some guidance as to what
+they are trying to accomplish as a result of your services.
+Understand the Code of Ethics.
+ Be sure you know what is required as acceptable
+behavior when you become a CEH. Violations of the ethical code could easily get you
+decertified by the EC-Council if serious enough and reported.
+Know your opponents.
+ Understand the differences between the various types of
+hackers. You should know what makes a gray-hat hacker different from a black-hat
+hacker, as well as the differences between all types.
+Know your tools and terms.
+ The CEH exam is drenched with terms and tool names
+that can eliminate even the most skilled test takers if they don’t know what the question
+is even talking about. Familiarize yourself with all the key terms, and be able to recognize
+the names of the different tools on the exam.
+
+Review Questions
+1
+. 
+If you have been contracted to perform an attack against a target system, you are what
+type of hacker?
+A
+. 
+White hat
+B
+. 
+Gray hat
+C
+. 
+Black hat
+D
+. 
+Red hat
+2
+. 
+Which of the following describes an attacker who goes after a target to draw attention
+to a cause?
+A
+. 
+Terrorist
+B
+. 
+Criminal
+C
+. 
+Hacktivist
+D
+. 
+Script kiddie
+3
+. 
+What level of knowledge about hacking does a script kiddie have?
+A
+. 
+Low
+B
+. 
+Average
+C
+. 
+High
+D
+. 
+Advanced
+4
+. 
+Which of the following does an ethical hacker require to start evaluating a system?
+A
+. 
+Training
+B
+. 
+Permission
+C
+. 
+Planning
+D
+. 
+Nothing
+5
+. 
+A white-box test means the tester has which of the following?
+A
+. 
+No knowledge
+B
+. 
+Some knowledge
+C
+. 
+Complete knowledge
+D
+. 
+Permission
+6
+. 
+Which of the following describes a hacker who attacks without regard for being caught
+or punished?
+
+A
+. 
+Hacktivist
+B
+. 
+Terrorist
+C
+. 
+Criminal
+D
+. 
+Suicide hacker
+7
+. 
+What is a code of ethics?
+A
+. 
+A law for expected behavior
+B
+. 
+A description of expected behavior
+C
+. 
+A corporate policy
+D
+. 
+A standard for civil conduct
+8
+. 
+The group Anonymous is an example of what?
+A
+. 
+Terrorists
+B
+. 
+Script kiddies
+C
+. 
+Hacktivists
+D
+. 
+Grayware
+9
+. 
+Companies may require a penetration test for which of the following reasons?
+A
+. 
+Legal reasons
+B
+. 
+Regulatory reasons
+C
+. 
+To perform an audit
+D
+. 
+To monitor network performance
+10
+. 
+What should a pentester do prior to initiating a new penetration test?
+A
+. 
+Plan
+B
+. 
+Study the environment
+C
+. 
+Get permission
+D
+. 
+Study the code of ethics
+11
+. 
+Which of the following best describes what a hacktivist does?
+A
+. 
+Defaces websites
+B
+. 
+Performs social engineering
+C
+. 
+Hacks for political reasons
+D
+. 
+Hacks with basic skills
+12
+. 
+Which of the following best describes what a suicide hacker does?
+A
+. 
+Hacks with permission
+
+B
+. 
+Hacks without stealth
+C
+. 
+Hacks without permission
+D
+. 
+Hacks with stealth
+13
+. 
+Which type of hacker may use their skills for both benign and malicious goals at
+different times?
+A
+. 
+White hat
+B
+. 
+Gray hat
+C
+. 
+Black hat
+D
+. 
+Suicide hacker
+14
+. 
+What separates a suicide hacker from other attackers?
+A
+. 
+A disregard for the law
+B
+. 
+A desire to be helpful
+C
+. 
+The intent to reform
+D
+. 
+A lack of fear of being caught
+15
+. 
+Which of the following would most likely engage in the pursuit of vulnerability
+research?
+A
+. 
+White hat
+B
+. 
+Gray hat
+C
+. 
+Black hat
+D
+. 
+Suicide hacker
+16
+. 
+Vulnerability research deals with which of the following?
+A
+. 
+Actively uncovering vulnerabilities
+B
+. 
+Passively uncovering vulnerabilities
+C
+. 
+Testing theories
+D
+. 
+Applying security guidance
+17
+. 
+How is black-box testing performed?
+A
+. 
+With no knowledge
+B
+. 
+With full knowledge
+C
+. 
+With partial knowledge
+D
+. 
+By a black hat
+18
+. 
+A contract is important because it does what?
+
+A
+. 
+Gives permission
+B
+. 
+Gives test parameters
+C
+. 
+Gives proof
+D
+. 
+Gives a mission
+19
+. 
+What does TOE stand for?
+A
+. 
+Target of evaluation
+B
+. 
+Time of evaluation
+C
+. 
+Type of evaluation
+D
+. 
+Term of evaluation
+20
+. 
+Which of the following best describes a vulnerability?
+A
+. 
+A worm
+B
+. 
+A virus
+C
+. 
+A weakness
+D
+. 
+A rootkit
+
+Chapter 2
+ 
+System Fundamentals
+CEH EXAM OBJECTIVES COVERED IN THIS CHAPTER:
+   
+I. Background
+   A. Networking technologies
+   C. System technologies
+   D. Transport protocols
+   G. Telecommunications technologies
+   H. Backup and restore
+   
+III. Security
+   A. Systems security controls
+   B. Application/fileserver
+   C. Firewalls
+   E. Network security
+   O. Trusted networks
+   P. Vulnerabilities
+   
+IV. Tools/Systems/Programs
+   G. Boundary protection appliances
+   H. Network topologies
+   
+I. Subnetting
+   K. Domain Name System (DNS)
+   L. Routers/modems/switches
+   O. Operating environments
+   
+V. Procedures/Methodology
+   G. TCP/IP networking
+
+   Every skill set comes with a history of time and effort spent learning
+those foundational concepts that allow you to become proficient in a specific area. You
+are about to embark on a journey through one of those critical areas where understanding
+and true investment in the material can improve your technical understanding, your
+career, and your odds of passing the CEH exam. This is where it all begins—
+understanding those key fundamental concepts that give you a basis on which all other
+more complex subjects can firmly rest.
+In this chapter, you’ll delve into some basic concepts, most of which system
+administrators and network administrators should be comfortable with. These
+fundamentals are critical to building a solid base for the more advanced topics yet to
+come. You’ll learn about key concepts such as the OSI model, the TCP/IP suite,
+subnetting, network appliances and devices, cloud technologies, and good old-fashioned
+client system concepts and architectures. Ever hear the phrase “where the rubber hits the
+road”? Well, consider this a burnout across a quarter-mile drag strip. Let’s dig in and
+devour this material!
+Exploring Network Topologies
+Whether you are a veteran or a novice—or just have a bad memory—a review of
+networking technologies is helpful and an important part of understanding the attacks
+and defenses that we’ll explore later on.
+Network topologies represent the physical side of the network, and they form part of the
+foundation of our overall system. Before we explore too far, the first thing you need to
+understand is that you must consider two opposing yet related concepts in this section:
+the physical layout of the network and the logical layout of the network. The physical
+layout of a network relates directly to the wiring and cabling that connects devices. Some
+of the common layouts we’ll cover are the bus, ring, star, mesh, and hybrid topologies.
+The logical layout of the network equates to the methodology of access to the network,
+the stuff you can’t readily see or touch, or the flow of information and other data. We’ll
+get to the logical side, but first let’s break down each physical design.
+Bus
+ The bus topology (
+Figure 2.1
+) lays out all connecting nodes in a single run that acts
+as the common backbone connection for all connected devices. As with the public
+transport of the same name, signals get on, travel to their destination, and get off. The bus
+is the common link to all devices and cables. The downside to its simplicity is its
+vulnerability; all connectivity is lost if the bus backbone is damaged. The best way to
+envision this vulnerability is to think of those strings of Christmas lights that go
+
+completely out when one light burns out or is removed. Although not seen in its purest
+form in today’s networks, the concept still applies to particular segments.
+Figure 2.1
+ Bus topology
+Ring
+ Ring topologies (
+Figure 2.2
+) are as true to their names as bus layouts. Essentially
+the backbone, or common connector of the network, is looped into a ring; some ring
+layouts use a concentric circle design to provide redundancy if one ring fails. Each client
+or node attaches to the ring and delivers packets according to its designated turn or the
+availability of the token. As you can see in 
+Figure 2.2
+, a concentric circle design provides
+redundancy; though a good idea, a redundant second ring is not required for the network
+to function properly. The redundant ring architecture is typically seen in setups that use
+Fiber Distributed Data Interface (FDDI).
+
+Figure 2.2
+ Ring topology
+Star
+ The star layout (
+Figure 2.3
+) is one of the most common because of its ease of setup
+and isolation of connectivity problems should an issue arise. A star topology attaches
+multiple nodes to a centralized network device that ties the network together. Think of it
+as looking like an old-style wagon wheel or the wheels on a bike. The hub is the
+centerpiece of the wheel, and the spokes of the wheel are the legs of the star. The center
+could be a hub or a switch; as long as it acts as a central point of connection, you have a
+star topology. Stars are popular for numerous reasons, but the biggest reason has long
+been its resistance to outages. Unlike nodes in bus and ring topologies, a single node of a
+star can go offline without affecting other nodes. However, if the hub or switch joining
+everything together fails, then the network will fail.
+
+Figure 2.3
+ Star topology
+Mesh
+ A mesh topology (
+Figure 2.4
+) is essentially a web of cabling that attaches a group of
+clients or nodes to each other. It can look a little messy and convoluted, and it can also
+make troubleshooting a bear. However, this setup is often used for mission-critical
+services because of its high level of redundancy and resistance to outages. The largest
+network in the world, the Internet, which was designed to survive nuclear attack, is built
+as one large mesh network.
+
+Figure 2.4
+ Mesh topology
+Hybrid
+ Hybrid topologies are by far the most common layout in use today. Rarely will
+you encounter a pure setup that strictly follows the topologies previously listed. Our
+networks of today are complex and multifaceted. More often than not, current networks
+are the offspring of many additions and alterations over many years of expansion or
+logistical changes. A hybrid layout combines different topologies into one mixed topology;
+it takes the best of other layouts and uses them to its advantage. 
+Figure 2.5
+ shows one
+possibility.
+
+Figure 2.5
+ Hybrid topology
+   Gone are the days when an attacker could gain access to the flow of data
+on a network only through the use of vampire taps and bus or other layouts. Today,
+rogue wireless access points, a lost smartphone, and a little social engineering can
+logically put any hacker right through the front door without actually obtaining
+physical access.
+Working with the Open Systems Interconnection Model
+No network discussion or network device explanation would be complete without a brief
+overview of the Open Systems Interconnection (OSI) model. Although this model may
+seem overly complex, it does have value in our later discussions of attacks, defenses, and
+infrastructure, as you will see. The OSI model is a general framework that enables
+network protocols, software, and systems to be designed around a general set of
+
+guidelines. Common guidelines allow higher probability of system compatibility and
+logical traffic flow. In other words, if we all play by the same rules, everyone will get along
+with as few errors as possible.
+The OSI model, shown in the left side of 
+Figure 2.6
+, has seven layers. As you read through
+each layer’s function, keep in mind that we are working our way through how data flows.
+Each layer is connected to the next; this concept will prove valuable as a reference for
+more advanced data analysis.
+Figure 2.6
+ OSI TCP/IP comparative model
+   You may already have some experience with the OSI model or none at all.
+If you are in the latter group, you may have avoided learning the model because it
+seems non-applicable to your day-to-day operations. But you must learn it, because it
+is essential to furthering your career—and to passing the exam.
+
+   The CEH exam will focus on your understanding of the OSI model as it
+applies to specific attacks. General knowledge of the model and the stages of traffic
+flow within it will help you figure out what each question is asking. Using the OSI
+model as a reference when answering questions can help categorize the topic and
+help determine what technologies you are dealing with.
+Layer 1: Physical
+ The Physical layer consists of the physical media and dumb devices
+that make up the infrastructure of our networks. This pertains to the cabling and
+connections such as Category 5e and RJ-45 connectors. Note that this layer also includes
+light and rays, which pertain to media such as fiber optics and microwave transmission
+equipment. Attack considerations are aligned with the physical security of site resources.
+Although not flashy, physical security still bears much fruit in penetration (pen) testing
+and real-world scenarios.
+Stuxnet
+A few years ago an interesting little worm named Stuxnet showed up on the scene—
+wreaking havoc and destroying industrial equipment. The operation of the virus isn’t
+important here; the interesting part was in how the worm spread. Although it did
+replicate on the local LAN, the original infection occurred via USB flash drives. The
+primary vector was actually physical in nature, and the vector was the unaware user
+or perhaps an outsider. The takeaway is never underestimate the complexity of what
+can occur from a purely physical perspective.
+Layer 2: Data Link
+ The Data Link layer works to ensure that the data it transfers is free
+of errors. At this layer, data is contained in frames. Functions such as media access
+control and link establishment occur at this layer. This layer encompasses basic protocols
+such as 802.3 for Ethernet and 802.11 for Wi-Fi.
+Layer 3: Network
+ The Network layer determines the path of data packets based on
+different factors as defined by the protocol used. At this layer we see IP addressing for
+routing of data packets. This layer also includes routing protocols such as the Routing
+Information Protocol (RIP) and the Interior Gateway Routing Protocol (IGRP). This is
+the know-where-to-go layer.
+Layer 4: Transport
+ The Transport layer ensures the transport or sending of data is
+successful. This function can include error-checking operations as well as working to keep
+data messages in sequence. At this layer we find the Transmission Control Protocol (TCP)
+and the User Datagram Protocol (UDP).
+Layer 5: Session
+ The Session layer identifies established system sessions between
+different network entities. When you access a system remotely, for example, you are
+
+creating a session between your computer and the remote system. The Session layer
+monitors and controls such connections, allowing multiple, separate connections to
+different resources. Common use includes NetBIOS and RPC.
+   As you progress through the chapters, you’ll notice that much of our
+attack surface resides within layers 3, 4, and 5, with a handful of other attacks taking
+place outside these layers. Keep this in mind as a reference for questions regarding
+attacks at specific layers or when trying to understand the mechanics of an attack and
+its defense. Understanding what the layer accomplishes can help you determine how
+a specific attack works and what it may be targeting.
+Layer 6: Presentation
+ The Presentation layer provides a translation of data that is
+understandable by the next receiving layer. Traffic flow is presented in a format that can
+be consumed by the receiver and can optionally be encrypted with protocols such as
+Secure Sockets Layer (SSL).
+Layer 7: Application
+ The Application layer functions as a user platform in which the
+user and the software processes within the system can operate and access network
+resources. Applications and software suites that we use on a daily basis are under this
+layer. Common examples include protocols we interact with on a daily basis, such as FTP
+and HTTP.
+Two mnemonics that I use to remember the order of layers are these:
+All People Seem To Need Data Processing, which uses the first letter of each layer
+(from the top down) as the first letter of each word in the sentence: Application,
+Presentation, Session, Transport, Network, Data Link, Physical.
+Please Do Not Teach Stupid People Acronyms, which does the layers in the opposite
+order—that is, from the ground up.
+Knowing the operational sequence of these layers serves well as a high-level
+troubleshooting tool. Being able to track data traffic from its inception to its destination
+will prove to be a useful skill during your exploration and on the exam.
+   Using the OSI model as a basic framework will provide you with a
+reference that will apply to many CEH processes. Usable attacks can all be traced
+back to a specific layer or layers of the OSI model.
+Dissecting the TCP/IP Suite
+Complementary to the OSI model is the TCP/IP protocol suite. TCP/IP is not necessarily
+
+a direct offshoot, but it’s a progressive step from the standard OSI version of traffic flow.
+Each layer of the TCP/IP suite maps to one or several layers of the OSI model. The
+TCP/IP suite is important for protocol reference as well as aiding in tracking exactly
+where data is in the traffic flow process. The right side of 
+Figure 2.6
+ earlier in this chapter
+shows the TCP/IP suite layers and how they map to the OSI model.
+TCP is known as a connection-oriented protocol because it establishes a connection and
+verifies that packets sent across that connection make it to their destination. The process
+(see 
+Figure 2.7
+) starts with a SYN packet. This SYN packet starts the handshake process
+by telling the receiving system that another system wants its attention (via TCP of
+course). The receiving system then replies to the originating system with a SYN-ACK
+response. A SYN-ACK response is an acknowledgment response to the original SYN
+packet. Once the original sender receives the SYN-ACK response, it in turn responds with
+an ACK packet to verify that it has received the SYN-ACK and is ready to communicate via
+TCP.
+Figure 2.7
+ TCP three-way handshake
+
+   TCP packet sequence numbers are important both for the exam and for
+understanding attacks such as session hijacking and man-in-the-middle (MITM)
+exploits. You’ll see how this comes into play in Chapter 12, “Session Hijacking.” For
+now keep in mind how TCP works and how it uses sequence and acknowledgment
+numbers to guarantee data delivery.
+To further explain the sequence, a SYN packet has a random beginning sequence
+number that will be sent to the target host. Upon receipt of the SYN packet, the
+receiving host will respond with a SYN-ACK that has its own randomized sequence
+number. The ACK response packet from the first host will bump the sequence
+number up accordingly to signify the order of the packets being transferred. 
+Figure
+2.8
+ shows the sequence numbers.
+Figure 2.8
+ TCP sequencing
+
+   You’ll want to become comfortable with TCP and its three-way handshake
+process. The surface-level process is fairly easy to understand. Pay close attention to
+packet sequence numbers. They will definitely be an exam item.
+IP Subnetting
+So far we’ve established the basics through an overview of the OSI model layers and the
+common network topologies. Let’s get a little deeper into the Network layer and look at IP
+addressing and its subnetting capabilities. Our goal here is to flex those subnetting
+muscles and get our brains back to thinking about networking and its underlying
+nuances. Why? Understanding the basics of subnetting enables you to add specificity to
+your efforts and to have a more complete understanding of your target and network
+resources.
+Subnetting is the logical breakdown of a network address space into progressively smaller
+subnetworks. As you break down your address space into smaller subnetworks, you
+determine the numbers of network bits and host bits by the requirements of your
+network. Network bits and host bits are manipulated by the subnet mask. At this point
+I’m hoping you’re saying to yourself, “Oh yeah, I remember this stuff.” If not, please dig
+into the details on your own. We are looking at this topic from a fairly high level in terms
+of how it will aid our effort as hackers.
+Now that you grasp the basics of the subnet mask and how to use it to manipulate the
+address space, you can see how knowing a few IP addresses can give you a clue as to how
+an organization’s network is laid out. There’s more to come on this topic, but as a quick
+example, knowing a single internal IP address can give a hacker much insight into the
+company’s addressing scheme.
+   You will be expected to know how to accomplish basic slash notation for
+finding the broadcast address of specific subnets. Additionally, remember the basic
+127.0.0.1 for the local loopback address.
+Hexadecimal vs. Binary
+Understanding hexadecimal and binary conversion is an important skill to have for the
+exam. In the real world, for most network administrators conversion is done either by a
+calculator or is not needed, but as an ethical hacker, you have opportunities to apply the
+basic conversions to something useful. See 
+Table 2.1
+ for the basic conversion between
+hex, binary, and decimal.
+
+Table 2.1
+ Hex, binary, and decimal
+Hex
+Binary
+Decimal
+0
+0000
+0
+1
+0001
+1
+2
+0010
+2
+3
+0011
+3
+4
+0100
+4
+5
+0101
+5
+6
+0110
+6
+7
+0111
+7
+8
+1000
+8
+9
+1001
+9
+A
+1010
+10
+B
+1011
+11
+C
+1100
+12
+D
+1101
+13
+E
+1110
+14
+F
+1111
+15
+This should be a refresher for you, but for the exam it is important that you have a
+comfortable understanding of the conversion process. To rehash some of the basics,
+remember that bits are 1s and 0s, a nibble is 4 bits, and a byte is 2 nibbles. Your
+knowledge and ability to apply this across the conversion process will prove important for
+questions that expect you to identify network items and traffic based on hexadecimal
+values.
+   TCP flags and their binary or hex values play an integral part in identifying
+the type and effectively creating custom scans. You’ll see this in action in Chapter 5,
+“Scanning.”
+Exploring TCP/IP Ports
+We can’t let you escape the fundamentals without touching on ports. Ports allow
+computers to send data out the door while simultaneously identifying that data by
+category. What this 
+means is each of the common ports you use is associated with a
+particular protocol or particular application. For example, sending data from port 21
+
+signifies to the receiving system that the traffic received is an FTP request because of the
+port it came from. In addition, the response from the initially queried system will end up
+at the right location because the port from which the traffic came has already been
+identified. This holds true for web traffic, mail traffic, and so forth. Knowledge of these
+ports and their corresponding protocols and applications becomes important when you’re
+scanning a system for specific vulnerabilities. There will be more to come on that, but
+first let’s take a look at how these ports are categorized and what the well-known ones
+mean to you:
+Well-known ports are most common in daily operations and range from 1 to 1023.
+Much of the initial portion of this range should be familiar to you. Refer to 
+Table 2.2
+for a list of the ports you need to know.
+Registered ports range from 1024 to 49151. Registered ports are those that have been
+identified as usable by other applications running outside the user’s present purview.
+An example would be port 1512, which supports Windows Internet Name Service
+(WINS) traffic. Take a look at 
+Table 2.3
+ for a list of registered ports of interest.
+Dynamic ports range from 49152 to 65535. These are the free ports that are available
+for any TCP or UDP request made by an application. They are available to support
+application traffic that has not been officially registered in the previous range.
+
+Table 2.2
+ Well-known ports
+Port
+Use
+20–21
+FTP
+22
+SSH
+23
+Telnet
+25
+SMTP
+42
+WINS
+53
+DNS
+80, 8080
+HTTP
+88
+Kerberos
+110
+POP3
+111
+PortMapper - Linux
+123
+NTP
+135
+RPC-DCOM
+139
+SMB
+143
+IMAP
+161, 162
+SNMP
+389
+LDAP
+445
+CIFS
+514
+Syslog
+636
+Secure LDAP
+Table 2.3
+ Registered ports of interest
+Port
+Use
+1080
+Socks5
+1241
+Nessus Server
+1433, 1434
+SQL Server
+1494, 2598
+Citrix Applications
+1521
+Oracle Listener
+2512, 2513
+Citrix Management
+3389
+RDP
+6662–6667
+IRC
+
+   You must familiarize yourself with all the ports mentioned here if you are
+to master the exam and become a CEH. Take the time to memorize these ports—this
+knowledge will also come in handy when performing later exercises and activities in
+this book.
+Domain Name System
+Don’t want to remember all those IP addresses? Well, you don’t have to thanks to the
+Domain Name System (DNS) and its ability to translate names to IP addresses and back.
+The DNS that you may already be aware of, even if you don’t actively think about it, is the
+one used to translate names to IPs on the Internet. DNS is incredibly powerful and easy
+to use, but at the end of the day it is simply a database that contains name-to-IP mappings
+that can be queried by any DNS-aware applications.
+The Internet root servers, or top-level servers, include the addresses of the DNS servers
+for all of the top-level domains, such as .com and .org. Each top-level server contains a
+DNS database of all the names and addresses in that domain.
+Local networks that are isolated from the Internet may use their own domain name
+systems. These translate only the names and addresses that are on the local network.
+They often use DNS management software and protocols, which are similar or identical to
+those used by the Internet implementation.
+The Importance of DNS
+In this book we’ll discuss many attacks against systems, a portion of which will
+include manipulating DNS. Although DNS is a simple service and its loss may seem
+only an inconvenience, this is far from the case. In many modern environments,
+applications may not work without DNS present and functioning. Tools such as
+Microsoft’s Active Directory won’t work at all without DNS present or accessible.
+Understanding Network Devices
+We’ve covered the basic design fundamentals of common local area network layouts. Now
+let’s fill in the gaps by exploring those common networking devices that you typically see
+in a larger network setup.
+Routers and Switches
+Routers and switches are integral to the successful operation of nearly all of today’s
+modern networks. For that matter, many of our home networks are now advancing to
+
+their own local routing and switching capabilities not seen in homes just a decade ago.
+Remember that routers connect networks and that switches simply create multiple
+broadcast domains. Yes, back to the good stuff indeed, but don’t shy away just yet;
+concepts such as broadcast domains will play a large part in our more interesting
+endeavors, such as sniffing and packet capturing. A solid understanding of the functions
+of routers and switches will give you a substantial edge when spying out goodies on a
+network (authorized spying of course!).
+Routers
+Let’s begin with routers. Our aim here is to give you a firm understanding of the basic
+functions of routers, so you’ll use this knowledge for more complex hacking techniques
+and tools. A quick overview of the fundamentals: A router’s main function is to direct
+packets (layer 3 traffic) to the appropriate location based on network addressing. Because
+routers direct traffic at the Network layer, they are considered layer 3 devices. When
+talking about routers, we are talking about common protocols such as IP—that is, we are
+dealing with IP addressing. Routers are also used as a gateway between different kinds of
+networks, such as networks on different IP ranges or networks that don’t understand
+each other’s protocol. For example, in an enterprise or business setup, it’s not possible to
+jam a fiber-run T1 connection into a client computer and expect to have blazingly fast
+network speeds. The computer, or more accurately the network interface card (NIC), is
+not capable of speaking the same language as the outside connection. Routers bridge that
+gap and allow the different protocols on different networks to communicate.
+Routers also use Network Address Translation (NAT). This is an extremely useful
+technology that allows internal network clients to share a single public IP address for
+access to the outside world. Essentially a router has two interfaces: one for the outside
+world and one for the internal network. The outside connection, or the public side, is
+assigned a public IP address purchased from a local Internet service provider (ISP). The
+internal side of the router is connected to your local intranet, which contains all of your
+internal IPs and your protected resources. From the internal side you are free to create
+any IP scheme you want because it’s internal to your site. When an internal client then
+makes a request for an outside resource, the router receives that traffic and sends it out
+the public side with its public IP. This process safeguards the internal client’s IP address
+and also funnels all outbound requests through the same public IP. Because NAT is so
+common these days, you rarely notice that it’s actually occurring.
+   Real-world reasoning behind using NAT is not just for security’s sake. It’s
+a major money saver for the business as well as a method of conserving IP addresses
+for the ISP.
+Switches
+
+Switches deliver data (frames) based on the hardware addresses of the destination
+computers or devices. Hardware addresses, also called media access control (MAC)
+addresses, are permanent identifiers burned into each NIC by the manufacturer. MAC
+addresses are broken down into a six-pair hexadecimal value—for example, c0-cb-38-ad-
+2b-c4. The first half of the MAC is specific to the manufacturer. So, in this case the c0-cb-
+38 identifies the vendor. The ad-2b-c4 identifies the device or NIC itself. Switches are
+considered layer 2 devices because they operate just one level below the layer 3 router
+functions. Remember, layer 3 is the Network layer. The Network layer contains all the IP
+addressing; layer 2 deals 
+strictly with MAC addresses (see Exercise 2.1). Note that quite a
+few switches are available today that operate at both layer 2 and layer 3, but for
+simplicity’s sake, and for our purposes, switches are at layer 2.
+Working with MAC Addresses
+EXERCISE 2.1
+Finding the MAC Address
+Since we are mentioning MAC addresses, you should be familiar with what they look
+like as well as how to locate one on a given system. With that in mind, this exercise
+shows you how to find the MAC address.
+On a Windows system, follow this step:
+1
+. 
+On a Windows system, open a command window and enter 
+ipconfig/all
+. The
+characters next to the physical address are the MAC address.
+On a Linux system, follow this step:
+1
+. 
+On a Linux system, open a shell and enter 
+ifconfig
+.
+Note that with both systems it is possible to see more than one MAC address if the
+system has more than one NIC installed or a virtual adapter.
+To extend our conversation on switches a bit further, let’s take a quick peek at broadcast
+domains and collision domains since this concept will directly impact our network-
+scanning capabilities. A broadcast domain simply means that traffic sent across the wire
+will be broadcast to all hosts or nodes attached to that network. Address Resolution
+Protocol (ARP) requests, which are sent to the network to resolve hardware addresses, are
+an example of broadcast traffic. Collision domains are network segments in which traffic
+sent will potentially collide with other traffic. In a collision domain, data sent will not be
+broadcast to all attached nodes; it will bump heads with whatever other traffic is present
+on the wire. So what this means is that when you throw your little penetration testing
+laptop on a wire and connect to a switch, you need to be aware that no matter how
+promiscuous your NIC decides to be, your captured traffic will be limited to the collision
+
+domain (aka switchport) you are attached to.
+   Techniques used to convert a switch into a giant hub and thus one large
+collision domain will be addressed in future chapters. For now just understand the
+initial limitations of a switch in terms of sniffing and packet capture.
+With the explosion of wireless routers and switches that have flooded the market in the
+last decade, sniffing has regained some of its prowess and ease. Sniffing a Wi-Fi network
+captures traffic from all of its clients; it is not limited to a particular switchport collision
+domain. A simple utility and a laptop can pull in some amazingly useful data.
+   Hubs are devices similar to switches except they operate at the Physical
+layer and are considered dumb devices. They make no decisions in terms of data
+direction or addressing. Highly reduced prices and increased focus on security have
+allowed switches to make hubs virtually obsolete, except in specific applications.
+Proxies and Firewalls
+No network device discussion would be complete without delving into the world of
+proxies and firewalls. These devices are the bread and butter of ethical hackers in that
+they are the devices deliberately put in place to prevent unauthorized access. To test the
+strength of an organization’s perimeter is to ensure that its perimeter gate guard is alive
+and well.
+Proxies
+Proxy servers work in the middle of the traffic scene. You may have been exposed to the
+forwarding side of proxies; for example, your browser at work may have been pointed to a
+proxy server to enable access to an outside resource such as a website. There are multiple
+reasons to implement such a solution. Protection of the internal client systems is one
+benefit. Acting as an intermediary between the internal network client systems and
+outside untrusted entities, the proxy is the only point of exposure to the outside world. It
+prevents the client system from communicating directly with an outside source, thereby
+reducing exposure and risk. As the middleman, the proxy also has the capability of
+protecting users (client systems) from themselves. In other words, proxies can filter
+traffic by content. This means proxies operate at the Application layer (layer 7).
+A substantial leg up on lower-level firewalls, proxies can filter outgoing traffic requests
+and verify legitimate traffic at a detailed level. Thus, if users try to browse to, say,
+hackme.com
+, they’ll be denied the request completely if the filters are applied to prevent
+it. Proxies also speed up browsing by caching frequently visited sites and resources.
+
+Cached sites can be served to local clients at a speed much faster than downloading the
+actual web resource.
+   The concept of proxy operation is applicable to other realms besides just
+caching traffic and being an Application layer firewall. In Chapter 12, session
+hijacking uses proxy-like techniques to set up the attack.
+Firewalls
+The firewall category includes proxy firewalls; however, because of a proxy’s varied
+functions it seems appropriate to give them their own subsection. Firewalls are most
+commonly broken down into the following main categories:
+Packet filtering
+Stateful packet filtering
+Application proxies, which we covered earlier
+Packet-filtering firewalls look at the header information of the packets to determine
+legitimate traffic. Rules such as IP addresses and ports are used from the header to
+determine whether to allow or deny the packet entry. Stateful firewalls, on the other
+hand, determine the legitimacy of traffic based on the state of the connection from which
+the traffic originated. For example, if a legitimate connection has been established
+between a client machine and a web server, then the stateful firewall refers to its state
+table to verify that traffic originating from within that connection is vetted and legitimate.
+   Firewalls and proxies are only as effective as their configuration, and their
+configuration is only as effective as the administrator creating them. Many firewall
+attacks are intended to circumvent them as opposed to a head-on assault; for us
+hackers, the softest target is our aim.
+Intrusion Prevention and Intrusion Detection Systems
+Intrusion prevention systems (IPSs) and intrusion detection systems (IDSs) are
+important considerations for any smart hacker. It is important for you, as a hacker, to
+cover your tracks and keep a low profile—as in no profile at all. It should be common
+sense, but consider this: If instead of tiptoeing around a network, you slam the network
+with ARP requests, ping sweeps, and port scans; how far do you think you’ll get? Exactly!
+Not far at all. IPSs and IDSs are network appliances put in place to catch the very activity
+that serves our purposes best. The key is to walk lightly but still walk. First let’s
+familiarize ourselves with IPS and IDS basics; if you know how something works, you can
+
+also learn how to circumvent its defenses.
+The goal of an IDS is to detect any suspicious network activity. The keyword here is
+detect
+. An IDS is passive in nature; it senses a questionable activity occurring and
+passively reacts by sending a notification to an administrator signifying something is
+wrong. Think of it as a burglar alarm. While a burglar alarm alerts you that a burglar is
+present, it does not stop the burglar from breaking in and stealing items from you.
+Although such an appliance is passive, the benefit of using it is being able to reactively
+catch potentially malicious network activity without negatively impacting the operation of
+the network as a whole. The obvious drawback is that the only response such an appliance
+creates is a notification. IPSs, on the other hand, are proactive and preventive. Not only
+does an IPS sense potential malicious activity on the network; it also takes steps to
+prevent further damage and thwart further attacks.
+Network Security
+Many books deal with network security, but here we focus on what hackers can use.
+Firewalls and IDS/IPS appliances are part of a secure network, but in this section we’ll
+look briefly at the placement and functional value of each device. As you venture through
+the details, keep in mind that securing a network is a holistic process; breaking into a
+network, on the other hand, is a focused process. Consider it akin to building a dam. As
+the engineer of a dam, you must consider the integrity of the entire structure and plan
+accordingly. If you are looking to sabotage the dam, then all it takes is just one little poke
+in the right place and it all comes flooding down. The same is true with network security.
+Taking our fundamental knowledge of firewalls, whether proxy or network, let’s look at
+some basic placement strategies that are commonly used in today’s networks.
+Figure 2.9
+ is a basic setup you’ll run into in nearly every household setup today. Of course
+this isn’t necessarily the enterprise-level network you’ll be attacking, but this basic layout
+still encompasses the ingredients of the vulnerable points of larger layouts. The purpose
+of including this design is to give you an idea of how closely it relates to our larger
+network.
+
+
+[Note: PDF has 662 pages, only first 100 pages extracted]

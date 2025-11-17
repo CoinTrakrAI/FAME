@@ -1,0 +1,5350 @@
+CRACKING	CODES	WITH	PYTHON
+
+CRACKING	CODES	WITH	PYTHON
+An	Introduction	to	Building	and	Breaking
+Ciphers
+by	Al	Sweigart
+San	Francisco	
+
+CRACKING	CODES	WITH	PYTHON.	 Copyright	©	2018	by	Al	Sweigart.
+Some	rights	reserved.	This	work	is	licensed	under	the	Creative	Commons	Attribution-
+NonCommercial-ShareAlike	3.0	United	States	License.	To	view	a	copy	of	this	license,	visit	
+http://creativecommons.org/licenses/by-nc-sa/3.0/us/	 or	send	a	letter	to	Creative	Commons,	PO	Box	
+1866,	Mountain	View,	CA	94042,	USA.
+ISBN-10:	1-59327-822-5
+ISBN-13:	978-1-59327-822-9
+Publisher:	William	Pollock
+Production	Editor:	Riley	Hoffman
+Cover	Illustration:	Josh	Ellingson
+Interior	Design:	Octopod	Studios
+Developmental	Editors:	Jan	Cash	and	Annie	Choi
+Technical	Reviewers:	Ari	Lacenski	and	Jean-Philippe	Aumasson
+Copyeditor:	Anne	Marie	Walker
+Compositors:	Riley	Hoffman	and	Meg	Sneeringer
+Proofreader:	Paula	L.	Fleming
+For	information	on	distribution,	translations,	or	bulk	sales,	
+please	contact	No	Starch	Press,	Inc.	directly:
+No	Starch	Press,	Inc.
+245	8th	Street,	San	Francisco,	CA	94103
+phone:	1.415.863.9900;	info@nostarch.com
+www.nostarch.com
+Library	of	Congress	Cataloging-in-Publication	Data
+Names: Sweigart, Al, author.
+Title: Cracking codes with Python : an introduction to building and breaking
+   ciphers / Al Sweigart.
+Description: San Francisco : No Starch Press,Inc., [2018]
+Identifiers: LCCN 2017035704 (print) | LCCN 2017047589 (ebook) | ISBN
+ 9781593278694 (epub) | ISBN 1593278691 (epub) | ISBN 9781593278229 (pbk.)
+   | ISBN 1593278225 (pbk.)
+Subjects: LCSH: Data encryption (Computer science) | Python (Computer program
+ language) | Computer security. | Hacking.
+Classification: LCC QA76.9.A25 (ebook) | LCC QA76.9.A25 S9317 2018 (print) |
+   DDC 005.8/7--dc23
+LC record available at https://lccn.loc.gov/2017035704
+No	Starch	Press	and	the	No	Starch	Press	logo	are	registered	trademarks	of	No	Starch	Press,	Inc.	
+Other	product	and	company	names	mentioned	herein	may	be	the	trademarks	of	their	respective	
+owners.	Rather	than	use	a	trademark	symbol	with	every	occurrence	of	a	trademarked	name,	we	are	
+using	the	names	only	in	an	editorial	fashion	and	to	the	benefit	of	the	trademark	owner,	with	no	
+intention	of	infringement	of	the	trademark.
+The	information	in	this	book	is	distributed	on	an	“As	Is”	basis,	without	warranty.	While	every	
+precaution	has	been	taken	in	the	preparation	of	this	work,	neither	the	author	nor	No	Starch	Press,	
+Inc.	shall	have	any	liability	to	any	person	or	entity	with	respect	to	any	loss	or	damage	caused	or	
+alleged	to	be	caused	directly	or	indirectly	by	the	information	contained	in	it.
+
+Dedicated	to	Aaron	Swartz,	1986–2013
+“Aaron	was	part	of	an	army	of	citizens	that	believes	democracy	only	works	when	the	citizenry	are	informed,	
+when	we	know	about	our	rights—and	our	obligations.	An	army	that	believes	we	must	make	justice	and	
+knowledge	available	to	all—not	just	the	well	born	or	those	that	have	grabbed	the	reins	of	power—so	that	we	
+may	govern	ourselves	more	wisely.	When	I	see	our	army,	I	see	Aaron	Swartz	and	my	heart	is	broken.	We	
+have	truly	lost	one	of	our	better	angels.”
+—Carl	Malamud
+
+About	the	Author
+Al	Sweigart	is	a	software	developer	and	tech	book	author	living	in	San	
+Francisco.	Python	is	his	favorite	programming	language,	and	he	is	the	
+developer	 of	 several	 open	 source	 modules	 for	 it.	 His	 other	 books	 are	
+freely	 available	 under	 a	 Creative	 Commons	 license	 on	 his	 website	
+https://inventwithpython.com/.	His	cat	weighs	12	pounds.
+
+About	the	Technical	Reviewers
+Ari	 Lacenski	 creates	 mobile	 apps	 and	 Python	 software.	 She	 lives	 in	
+Seattle.
+Jean-Philippe	Aumasson	(Chapters	22–24)	is	Principal	Research	Engineer	
+at	 Kudelski	 Security,	 Switzerland.	 He	 speaks	 regularly	 at	 information	
+security	 conferences	 such	 as	 Black	 Hat,	 DEF	 CON,	 Troopers,	 and	
+Infiltrate.	 He	 is	 the	 author	 of	 Serious	 Cryptography	 (No	 Starch	 Press,	
+2017).
+
+BRIEF	CONTENTS
+Acknowledgments
+Introduction
+Chapter	1:	Making	Paper	Cryptography	Tools
+Chapter	2:	Programming	in	the	Interactive	Shell
+Chapter	3:	Strings	and	Writing	Programs
+Chapter	4:	The	Reverse	Cipher
+Chapter	5:	The	Caesar	Cipher
+Chapter	6:	Hacking	the	Caesar	Cipher	with	Brute-Force
+Chapter	7:	Encrypting	with	the	Transposition	Cipher
+Chapter	8:	Decrypting	with	the	Transposition	Cipher
+Chapter	9:	Programming	a	Program	to	Test	Your	Program
+Chapter	10:	Encrypting	and	Decrypting	Files
+Chapter	11:	Detecting	English	Programmatically
+Chapter	12:	Hacking	the	Transposition	Cipher
+Chapter	13:	A	Modular	Arithmetic	Module	for	the	Affine	Cipher
+Chapter	14:	Programming	the	Affine	Cipher
+Chapter	15:	Hacking	the	Affine	Cipher
+Chapter	16:	Programming	the	Simple	Substitution	Cipher
+Chapter	17:	Hacking	the	Simple	Substitution	Cipher
+Chapter	18:	Programming	the	Vigenère	Cipher
+Chapter	19:	Frequency	Analysis
+Chapter	20:	Hacking	the	Vigenère	Cipher
+Chapter	21:	The	One-Time	Pad	Cipher
+
+Chapter	22:	Finding	and	Generating	Prime	Numbers
+Chapter	23:	Generating	Keys	for	the	Public	Key	Cipher
+Chapter	24:	Programming	the	Public	Key	Cipher
+Appendix:	Debugging	Python	Code
+Index
+
+CONTENTS	IN	DETAIL
+ACKNOWLEDGMENTS
+INTRODUCTION
+Who	Should	Read	This	Book?
+What’s	in	This	Book?
+How	to	Use	This	Book
+Typing	Source	Code
+Checking	for	Typos
+Coding	Conventions	in	This	Book
+Online	Resources
+Downloading	and	Installing	Python
+Windows	Instructions
+macOS	Instructions
+Ubuntu	Instructions
+Downloading	pyperclip.py
+Starting	IDLE
+Summary
+1
+MAKING	PAPER	CRYPTOGRAPHY	TOOLS
+What	Is	Cryptography?
+Codes	vs.	Ciphers
+The	Caesar	Cipher
+The	Cipher	Wheel
+Encrypting	with	the	Cipher	Wheel
+Decrypting	with	the	Cipher	Wheel
+Encrypting	and	Decrypting	with	Arithmetic
+Why	Double	Encryption	Doesn’t	Work
+Summary
+Practice	Questions
+2
+PROGRAMMING	IN	THE	INTERACTIVE	SHELL
+Some	Simple	Math	Expressions
+
+Integers	and	Floating-Point	Values
+Expressions
+Order	of	Operations
+Evaluating	Expressions
+Storing	Values	with	Variables
+Overwriting	Variables
+Variable	Names
+Summary
+Practice	Questions
+3
+STRINGS	AND	WRITING	PROGRAMS
+Working	with	Text	Using	String	Values
+String	Concatenation	with	the	+	Operator
+String	Replication	with	the	*	Operator
+Getting	Characters	from	Strings	Using	Indexes
+Printing	Values	with	the	print()	Function
+Printing	Escape	Characters
+Quotes	and	Double	Quotes
+Writing	Programs	in	IDLE’s	File	Editor
+Source	Code	for	the	“Hello,	World!”	Program
+Checking	Your	Source	Code	with	the	Online	Diff	Tool
+Using	IDLE	to	Access	Your	Program	Later
+Saving	Your	Program
+Running	Your	Program
+Opening	the	Programs	You’ve	Saved
+How	the	“Hello,	World!”	Program	Works
+Comments
+Printing	Directions	to	the	User
+Taking	a	User’s	Input
+Ending	the	Program
+Summary
+Practice	Questions
+4
+THE	REVERSE	CIPHER
+Source	Code	for	the	Reverse	Cipher	Program
+
+Sample	Run	of	the	Reverse	Cipher	Program
+Setting	Up	Comments	and	Variables
+Finding	the	Length	of	a	String
+Introducing	the	while	Loop
+The	Boolean	Data	Type
+Comparison	Operators
+Blocks
+The	while	Loop	Statement
+“Growing”	a	String
+Improving	the	Program	with	an	input()	Prompt
+Summary
+Practice	Questions
+5
+THE	CAESAR	CIPHER
+Source	Code	for	the	Caesar	Cipher	Program
+Sample	Run	of	the	Caesar	Cipher	Program
+Importing	Modules	and	Setting	Up	Variables
+Constants	and	Variables
+The	for	Loop	Statement
+An	Example	for	Loop
+A	while	Loop	Equivalent	of	a	for	Loop
+The	if	Statement
+An	Example	if	Statement
+The	else	Statement
+The	elif	Statement
+The	in	and	not	in	Operators
+The	find()	String	Method
+Encrypting	and	Decrypting	Symbols
+Handling	Wraparound
+Handling	Symbols	Outside	of	the	Symbol	Set
+Displaying	and	Copying	the	Translated	String
+Encrypting	Other	Symbols
+Summary
+Practice	Questions
+6
+HACKING	THE	CAESAR	CIPHER	WITH	BRUTE-FORCE
+
+Source	Code	for	the	Caesar	Cipher	Hacker	Program
+Sample	Run	of	the	Caesar	Cipher	Hacker	Program
+Setting	Up	Variables
+Looping	with	the	range()	Function
+Decrypting	the	Message
+Using	String	Formatting	to	Display	the	Key	and	Decrypted	Messages
+Summary
+Practice	Question
+7
+ENCRYPTING	WITH	THE	TRANSPOSITION	CIPHER
+How	the	Transposition	Cipher	Works
+Encrypting	a	Message	by	Hand
+Creating	the	Encryption	Program
+Source	Code	for	the	Transposition	Cipher	Encryption	Program
+Sample	Run	of	the	Transposition	Cipher	Encryption	Program
+Creating	Your	Own	Functions	with	def	Statements
+Defining	a	Function	that	Takes	Arguments	with	Parameters
+Changes	to	Parameters	Exist	Only	Inside	the	Function
+Defining	the	main()	Function
+Passing	the	Key	and	Message	As	Arguments
+The	List	Data	Type
+Reassigning	the	Items	in	Lists
+Lists	of	Lists
+Using	len()	and	the	in	Operator	with	Lists
+List	Concatenation	and	Replication	with	the	+	and	*	Operators
+The	Transposition	Encryption	Algorithm
+Augmented	Assignment	Operators
+Moving	currentIndex	Through	the	Message
+The	join()	String	Method
+Return	Values	and	return	Statements
+A	return	Statement	Example
+Returning	the	Encrypted	Ciphertext
+The	__name__	Variable
+Summary
+Practice	Questions
+
+8
+DECRYPTING	WITH	THE	TRANSPOSITION	CIPHER
+How	to	Decrypt	with	the	Transposition	Cipher	on	Paper
+Source	Code	for	the	Transposition	Cipher	Decryption	Program
+Sample	Run	of	the	Transposition	Cipher	Decryption	Program
+Importing	Modules	and	Setting	Up	the	main()	Function
+Decrypting	the	Message	with	the	Key
+The	round(),	math.ceil(),	and	math.floor()	Functions
+The	decryptMessage()	Function
+Boolean	Operators
+Adjusting	the	column	and	row	Variables
+Calling	the	main()	Function
+Summary
+Practice	Questions
+9
+PROGRAMMING	A	PROGRAM	TO	TEST	YOUR	PROGRAM
+Source	Code	for	the	Transposition	Cipher	Tester	Program
+Sample	Run	of	the	Transposition	Cipher	Tester	Program
+Importing	the	Modules
+Creating	Pseudorandom	Numbers
+Creating	a	Random	String
+Duplicating	a	String	a	Random	Number	of	Times
+List	Variables	Use	References
+Passing	References
+Using	copy.deepcopy()	to	Duplicate	a	List
+The	random.shuffle()	Function
+Randomly	Scrambling	a	String
+Testing	Each	Message
+Checking	Whether	the	Cipher	Worked	and	Ending	the	Program
+Calling	the	main()	Function
+Testing	the	Test	Program
+Summary
+Practice	Questions
+10
+ENCRYPTING	AND	DECRYPTING	FILES
+
+Plain	Text	Files
+Source	Code	for	the	Transposition	File	Cipher	Program
+Sample	Run	of	the	Transposition	File	Cipher	Program
+Working	with	Files
+Opening	Files
+Writing	to	and	Closing	Files
+Reading	from	a	File
+Setting	Up	the	main()	Function
+Checking	Whether	a	File	Exists
+The	os.path.exists()	Function
+Checking	Whether	the	Input	File	Exists	with	the	os.path.exists()
+Function
+Using	String	Methods	to	Make	User	Input	More	Flexible
+The	upper(),	lower(),	and	title()	String	Methods
+The	startswith()	and	endswith()	String	Methods
+Using	These	String	Methods	in	the	Program
+Reading	the	Input	File
+Measuring	the	Time	It	Took	to	Encrypt	or	Decrypt
+The	time	Module	and	time.time()	Function
+Using	the	time.time()	Function	in	the	Program
+Writing	the	Output	File
+Calling	the	main()	Function
+Summary
+Practice	Questions
+11
+DETECTING	ENGLISH	PROGRAMMATICALLY
+How	Can	a	Computer	Understand	English?
+Source	Code	for	the	Detect	English	Module
+Sample	Run	of	the	Detect	English	Module
+Instructions	and	Setting	Up	Constants
+The	Dictionary	Data	Type
+The	Difference	Between	Dictionaries	and	Lists
+Adding	or	Changing	Items	in	a	Dictionary
+Using	the	len()	Function	with	Dictionaries
+Using	the	in	Operator	with	Dictionaries
+Finding	Items	Is	Faster	with	Dictionaries	than	with	Lists
+
+Using	for	Loops	with	Dictionaries
+Implementing	the	Dictionary	File
+The	split()	Method
+Splitting	the	Dictionary	File	into	Individual	Words
+Returning	the	Dictionary	Data
+Counting	the	Number	of	English	Words	in	message
+Divide-by-Zero	Errors
+Counting	the	English	Word	Matches
+The	float(),	int(),	and	str()	Functions	and	Integer	Division
+Finding	the	Ratio	of	English	Words	in	the	Message
+Removing	Non-Letter	Characters
+The	append()	List	Method
+Creating	a	String	of	Letters
+Detecting	English	Words
+Using	Default	Arguments
+Calculating	Percentages
+Summary
+Practice	Questions
+12
+HACKING	THE	TRANSPOSITION	CIPHER
+Source	Code	of	the	Transposition	Cipher	Hacker	Program
+Sample	Run	of	the	Transposition	Cipher	Hacker	Program
+Importing	the	Modules
+Multiline	Strings	with	Triple	Quotes
+Displaying	the	Results	of	Hacking	the	Message
+Getting	the	Hacked	Message
+The	strip()	String	Method
+Applying	the	strip()	String	Method
+Failing	to	Hack	the	Message
+Calling	the	main()	Function
+Summary
+Practice	Questions
+13
+A	MODULAR	ARITHMETIC	MODULE	FOR	THE	AFFINE
+CIPHER
+
+Modular	Arithmetic
+The	Modulo	Operator
+Finding	Factors	to	Calculate	the	Greatest	Common	Divisor
+Multiple	Assignment
+Euclid’s	Algorithm	for	Finding	the	GCD
+Understanding	How	the	Multiplicative	and	Affine	Ciphers	Work
+Choosing	Valid	Multiplicative	Keys
+Encrypting	with	the	Affine	Cipher
+Decrypting	with	the	Affine	Cipher
+Finding	Modular	Inverses
+The	Integer	Division	Operator
+Source	Code	for	the	Cryptomath	Module
+Summary
+Practice	Questions
+14
+PROGRAMMING	THE	AFFINE	CIPHER
+Source	Code	for	the	Affine	Cipher	Program
+Sample	Run	of	the	Affine	Cipher	Program
+Setting	Up	Modules,	Constants,	and	the	main()	Function
+Calculating	and	Validating	the	Keys
+The	Tuple	Data	Type
+Checking	for	Weak	Keys
+How	Many	Keys	Can	the	Affine	Cipher	Have?
+Writing	the	Encryption	Function
+Writing	the	Decryption	Function
+Generating	Random	Keys
+Calling	the	main()	Function
+Summary
+Practice	Questions
+15
+HACKING	THE	AFFINE	CIPHER
+Source	Code	for	the	Affine	Cipher	Hacker	Program
+Sample	Run	of	the	Affine	Cipher	Hacker	Program
+Setting	Up	Modules,	Constants,	and	the	main()	Function
+The	Affine	Cipher	Hacking	Function
+
+The	Exponent	Operator
+Calculating	the	Total	Number	of	Possible	Keys
+The	continue	Statement
+Using	continue	to	Skip	Code
+Calling	the	main()	Function
+Summary
+Practice	Questions
+16
+PROGRAMMING	THE	SIMPLE	SUBSTITUTION	CIPHER
+How	the	Simple	Substitution	Cipher	Works
+Source	Code	for	the	Simple	Substitution	Cipher	Program
+Sample	Run	of	the	Simple	Substitution	Cipher	Program
+Setting	Up	Modules,	Constants,	and	the	main()	Function
+The	sort()	List	Method
+Wrapper	Functions
+The	translateMessage()	Function
+The	isupper()	and	islower()	String	Methods
+Preserving	Cases	with	isupper()
+Generating	a	Random	Key
+Calling	the	main()	Function
+Summary
+Practice	Questions
+17
+HACKING	THE	SIMPLE	SUBSTITUTION	CIPHER
+Using	Word	Patterns	to	Decrypt
+Finding	Word	Patterns
+Finding	Potential	Decryption	Letters
+Overview	of	the	Hacking	Process
+The	Word	Pattern	Modules
+Source	Code	for	the	Simple	Substitution	Hacking	Program
+Sample	Run	of	the	Simple	Substitution	Hacking	Program
+Setting	Up	Modules	and	Constants
+Finding	Characters	with	Regular	Expressions
+Setting	Up	the	main()	Function
+Displaying	Hacking	Results	to	the	User
+
+Creating	a	Cipherletter	Mapping
+Creating	a	Blank	Mapping
+Adding	Letters	to	a	Mapping
+Intersecting	Two	Mappings
+How	the	Letter-Mapping	Helper	Functions	Work
+Identifying	Solved	Letters	in	Mappings
+Testing	the	removeSolvedLetterFromMapping()	Function
+The	hackSimpleSub()	Function
+The	replace()	String	Method
+Decrypting	the	Message
+Decrypting	in	the	Interactive	Shell
+Calling	the	main()	Function
+Summary
+Practice	Questions
+18
+PROGRAMMING	THE	VIGENÈRE	CIPHER
+Using	Multiple	Letter	Keys	in	the	Vigenère	Cipher
+Longer	Vigenère	Keys	Are	More	Secure
+Choosing	a	Key	That	Prevents	Dictionary	Attacks
+Source	Code	for	the	Vigenère	Cipher	Program
+Sample	Run	of	the	Vigenère	Cipher	Program
+Setting	Up	Modules,	Constants,	and	the	main()	Function
+Building	Strings	with	the	List-Append-Join	Process
+Encrypting	and	Decrypting	the	Message
+Calling	the	main()	Function
+Summary
+Practice	Questions
+19
+FREQUENCY	ANALYSIS
+Analyzing	the	Frequency	of	Letters	in	Text
+Matching	Letter	Frequencies
+Calculating	the	Frequency	Match	Score	for	the	Simple
+Substitution	Cipher
+Calculating	the	Frequency	Match	Score	for	the	Transposition
+Cipher
+Using	Frequency	Analysis	on	the	Vigenère	Cipher
+
+Source	Code	for	Matching	Letter	Frequencies
+Storing	the	Letters	in	ETAOIN	Order
+Counting	the	Letters	in	a	Message
+Getting	the	First	Member	of	a	Tuple
+Ordering	the	Letters	in	the	Message	by	Frequency
+Counting	the	Letters	with	getLetterCount()
+Creating	a	Dictionary	of	Frequency	Counts	and	Letter	Lists
+Sorting	the	Letter	Lists	in	Reverse	ETAOIN	Order
+Sorting	the	Dictionary	Lists	by	Frequency
+Creating	a	List	of	the	Sorted	Letters
+Calculating	the	Frequency	Match	Score	of	the	Message
+Summary
+Practice	Questions
+20
+HACKING	THE	VIGENÈRE	CIPHER
+Using	a	Dictionary	Attack	to	Brute-Force	the	Vigenère	Cipher
+Source	Code	for	the	Vigenère	Dictionary	Hacker	Program
+Sample	Run	of	the	Vigenère	Dictionary	Hacker	Program
+About	the	Vigenère	Dictionary	Hacker	Program
+Using	Kasiski	Examination	to	Find	the	Key’s	Length
+Finding	Repeated	Sequences
+Getting	Factors	of	Spacings
+Getting	Every	Nth	Letters	from	a	String
+Using	Frequency	Analysis	to	Break	Each	Subkey
+Brute-Forcing	Through	the	Possible	Keys
+Source	Code	for	the	Vigenère	Hacking	Program
+Sample	Run	of	the	Vigenère	Hacking	Program
+Importing	Modules	and	Setting	Up	the	main()	Function
+Finding	Repeated	Sequences
+Calculating	the	Factors	of	the	Spacings
+Removing	Duplicates	with	the	set()	Function
+Removing	Duplicate	Factors	and	Sorting	the	List
+Finding	the	Most	Common	Factors
+Finding	the	Most	Likely	Key	Lengths
+The	extend()	List	Method
+Extending	the	repeatedSeqSpacings	Dictionary
+
+Getting	the	Factors	from	factorsByCount
+Getting	Letters	Encrypted	with	the	Same	Subkey
+Attempting	Decryption	with	a	Likely	Key	Length
+The	end	Keyword	Argument	for	print()
+Running	the	Program	in	Silent	Mode	or	Printing	Information	to
+the	User
+Finding	Possible	Combinations	of	Subkeys
+Printing	the	Decrypted	Text	with	the	Correct	Casing
+Returning	the	Hacked	Message
+Breaking	Out	of	the	Loop	When	a	Potential	Key	Is	Found
+Brute-Forcing	All	Other	Key	Lengths
+Calling	the	main()	Function
+Modifying	the	Constants	of	the	Hacking	Program
+Summary
+Practice	Questions
+21
+THE	ONE-TIME	PAD	CIPHER
+The	Unbreakable	One-Time	Pad	Cipher
+Making	Key	Length	Equal	Message	Length
+Making	the	Key	Truly	Random
+Avoiding	the	Two-Time	Pad
+Why	the	Two-Time	Pad	Is	the	Vigenère	Cipher
+Summary
+Practice	Questions
+22
+FINDING	AND	GENERATING	PRIME	NUMBERS
+What	Is	a	Prime	Number?
+Source	Code	for	the	Prime	Numbers	Module
+Sample	Run	of	the	Prime	Numbers	Module
+How	the	Trial	Division	Algorithm	Works
+Implementing	the	Trial	Division	Algorithm	Test
+The	Sieve	of	Eratosthenes
+Generating	Prime	Numbers	with	the	Sieve	of	Eratosthenes
+The	Rabin-Miller	Primality	Algorithm
+Finding	Large	Prime	Numbers
+
+Generating	Large	Prime	Numbers
+Summary
+Practice	Questions
+23
+GENERATING	KEYS	FOR	THE	PUBLIC	KEY	CIPHER
+Public	Key	Cryptography
+The	Problem	with	Authentication
+Digital	Signatures
+Beware	the	MITM	Attack
+Steps	for	Generating	Public	and	Private	Keys
+Source	Code	for	the	Public	Key	Generation	Program
+Sample	Run	of	the	Public	Key	Generation	Program
+Creating	the	main()	Function
+Generating	Keys	with	the	generateKey()	Function
+Calculating	an	e	Value
+Calculating	a	d	Value
+Returning	the	Keys
+Creating	Key	Files	with	the	makeKeyFiles()	Function
+Calling	the	main()	Function
+Hybrid	Cryptosystems
+Summary
+Practice	Questions
+24
+PROGRAMMING	THE	PUBLIC	KEY	CIPHER
+How	the	Public	Key	Cipher	Works
+Creating	Blocks
+Converting	a	String	into	a	Block
+The	Mathematics	of	Public	Key	Cipher	Encryption	and
+Decryption
+Converting	a	Block	to	a	String
+Why	We	Can’t	Hack	the	Public	Key	Cipher
+Source	Code	for	the	Public	Key	Cipher	Program
+Sample	Run	of	the	Public	Key	Cipher	Program
+Setting	Up	the	Program
+How	the	Program	Determines	Whether	to	Encrypt	or	Decrypt
+
+Converting	Strings	to	Blocks	with	getBlocksFromText()
+The	min()	and	max()	Functions
+Storing	Blocks	in	blockInt
+Using	getTextFromBlocks()	to	Decrypt
+Using	the	insert()	List	Method
+Merging	the	Message	List	into	One	String
+Writing	the	encryptMessage()	Function
+Writing	the	decryptMessage()	Function
+Reading	in	the	Public	and	Private	Keys	from	Their	Key	Files
+Writing	the	Encryption	to	a	File
+Decrypting	from	a	File
+Calling	the	main()	Function
+Summary
+APPENDIX
+DEBUGGING	PYTHON	CODE
+How	the	Debugger	Works
+Debugging	the	Reverse	Cipher	Program
+Setting	Breakpoints
+Summary
+INDEX
+
+ACKNOWLEDGMENTS
+This	book	would	not	have	been	possible	without	the	exceptional	work	of	
+the	No	Starch	Press	team.	Thanks	to	my	publisher,	Bill	Pollock;	thanks	to	
+my	editors,	Riley	Hoffman,	Jan	Cash,	Annie	Choi,	Anne	Marie	Walker,	
+and	Laurel	Chun,	for	their	incredible	help	throughout	the	process;	thanks	
+to	my	technical	editor,	Ari	Lacenski,	for	her	help	in	this	edition	and	back	
+when	it	was	just	a	stack	of	printouts	I	showed	her	at	Shotwell’s;	thanks	to	
+JP	 Aumasson	 for	 lending	 his	 expertise	 in	 the	 public	 key	 chapters;	 and	
+thanks	to	Josh	Ellingson	for	a	great	cover.
+
+INTRODUCTION
+“I	couldn’t	help	but	overhear,	probably	because	I	was	eavesdropping.”
+—Anonymous
+If	you	could	travel	back	to	the	early	1990s	with	this	book,	the	contents	of
+Chapter	23
+	that	implement	part	of	the	RSA	cipher	would	be	illegal	to
+export	out	of	the	United	States.	Because	messages	encrypted	with	RSA
+are	impossible	to	hack,	the	export	of	encryption	software	like	RSA	was
+deemed	a	matter	of	national	security	and	required	State	Department
+approval.	In	fact,	strong	cryptography	was	regulated	at	the	same	level	as
+tanks,	missiles,	and	flamethrowers.
+In	1990,	Daniel	J.	Bernstein,	a	student	at	the	University	of	California,
+Berkeley,	wanted	to	publish	an	academic	paper	that	featured	source	code
+of	his	Snuffle	encryption	system.	The	US	government	informed	him	that
+he	would	need	to	become	a	licensed	arms	dealer	before	he	could	post	his
+source	code	on	the	internet.	The	government	also	told	him	that	it	would
+deny	him	an	export	license	if	he	applied	for	one	because	his	technology
+was	too	secure.
+The	Electronic	Frontier	Foundation,	a	young	digital	civil	liberties
+organization,	represented	Bernstein	in	
+Bernstein	v.	United	States
+.	For	the
+first	time	ever,	the	courts	ruled	that	written	software	code	was	speech
+protected	by	the	First	Amendment	and	that	the	export	control	laws	on
+encryption	violated	Bernstein’s	First	Amendment	rights.
+Now,	strong	cryptography	is	at	the	foundation	of	a	large	part	of	the
+global	economy,	safeguarding	businesses	and	e-commerce	sites	used	by
+millions	of	internet	shoppers	every	day.	The	intelligence	community’s
+predictions	that	encryption	software	would	become	a	grave	national
+security	threat	were	unfounded.
+But	as	recently	as	the	1990s,	spreading	this	knowledge	freely	(as	this
+book	does)	would	have	landed	you	in	prison	for	arms	trafficking.	For	a
+
+more	detailed	history	of	the	legal	battle	for	freedom	of	cryptography,	read
+Steven	Levy’s	book	
+Crypto:	How	the	Code	Rebels	Beat	the	Government,
+Saving	Privacy	in	the	Digital	Age
+	(Penguin,	2001).
+Who	Should	Read	This	Book?
+Many	books	teach	beginners	how	to	write	secret	messages	using	ciphers.
+A	couple	of	books	teach	beginners	how	to	hack	ciphers.	But	no	books
+teach	beginners	how	to	program	computers	to	hack	ciphers.	This	book
+fills	that	gap.
+This	book	is	for	those	who	are	curious	about	encryption,	hacking,	or
+cryptography.	The	ciphers	in	this	book	(except	for	the	public	key	cipher
+in	
+Chapters	23
+	and	
+24
+)	are	all	centuries	old,	but	any	laptop	has	the
+computational	power	to	hack	them.	No	modern	organizations	or
+individuals	use	these	ciphers	anymore,	but	by	learning	them,	you’ll	learn
+the	foundations	cryptography	was	built	on	and	how	hackers	can	break
+weak	encryption.
+NOTE
+The	ciphers	you’ll	learn	in	this	book	are	fun	to	play	with,	but	they	don’t
+provide	true	security.	Don’t	use	any	of	the	encryption	programs	in	this	book
+to	secure	your	actual	files.	As	a	general	rule,	you	shouldn’t	trust	the	ciphers
+that	you	create.	Real-world	ciphers	are	subject	to	years	of	analysis	by
+professional	cryptographers	before	being	put	into	use.
+This	book	is	also	for	people	who	have	never	programmed	before.	It
+teaches	basic	programming	concepts	using	the	Python	programming
+language,	which	is	one	of	the	best	languages	for	beginners.	It	has	a	gentle
+learning	curve	that	novices	of	all	ages	can	master,	yet	it’s	also	a	powerful
+language	used	by	professional	software	developers.	Python	runs	on
+Windows,	macOS,	Linux,	and	even	the	Raspberry	Pi,	and	it’s	free	to
+download	and	use.	(See	“
+Downloading	and	Installing	Python
+”	on	
+page	xxv
+for	instructions.)
+In	this	book,	I’ll	use	the	term	
+hacker
+	often.	The	word	has	two
+definitions.	A	hacker	can	be	a	person	who	studies	a	system	(such	as	the
+rules	of	a	cipher	or	a	piece	of	software)	to	understand	it	so	well	that
+they’re	not	limited	by	that	system’s	original	rules	and	can	modify	it	in
+creative	ways.
+	A	hacker	can	also	be	a	criminal	who	breaks	into	computer
+
+systems,	violates	people’s	privacy,	and	causes	damage.	This	book	uses	the
+term	in	the	first	sense.	Hackers	are	cool.	Criminals	are	just	people	who
+think	they’re	being	clever	by	breaking	stuff.
+What’s	in	This	Book?
+The	first	few	chapters	introduce	basic	Python	and	cryptography	concepts.
+Thereafter,	chapters	generally	alternate	between	explaining	a	program	for
+a	cipher	and	then	explaining	a	program	that	hacks	that	cipher.	Each
+chapter	also	includes	practice	questions	to	help	you	review	what	you’ve
+learned.
+Chapter	1:	Making	Paper	Cryptography	Tools
+	covers	some
+simple	paper	tools,	showing	how	encryption	was	done	before
+computers.
+Chapter	2:	Programming	in	the	Interactive	Shell
+	explains	how	to
+use	Python’s	interactive	shell	to	play	around	with	code	one	line	at	a
+time.
+Chapter	3:	Strings	and	Writing	Programs
+	covers	writing	full
+programs	and	introduces	the	string	data	type	used	in	all	programs	in
+this	book.
+Chapter	4:	The	Reverse	Cipher
+	explains	how	to	write	a	simple
+program	for	your	first	cipher.
+Chapter	5:	The	Caesar	Cipher
+	covers	a	basic	cipher	first	invented
+thousands	of	years	ago.
+Chapter	6:	Hacking	the	Caesar	Cipher	with	Brute-Force
+explains	the	brute-force	hacking	technique	and	how	to	use	it	to
+decrypt	messages	without	the	encryption	key.
+Chapter	7:	Encrypting	with	the	Transposition	Cipher
+	introduces
+the	transposition	cipher	and	a	program	that	encrypts	messages	with
+it.
+Chapter	8:	Decrypting	with	the	Transposition	Cipher
+	covers	the
+second	half	of	the	transposition	cipher:	being	able	to	decrypt
+messages	with	a	key.
+Chapter	9:	Programming	a	Program	to	Test	Your	Program
+introduces	the	programming	technique	of	testing	programs	with
+other	programs.
+Chapter	10:	Encrypting	and	Decrypting	Files
+	explains	how	to
+
+write	programs	that	read	files	from	and	write	files	to	the	hard	drive.
+Chapter	11:	Detecting	English	Programmatically
+	describes	how
+to	make	the	computer	detect	English	sentences.
+Chapter	12:	Hacking	the	Transposition	Cipher
+	combines	the
+concepts	from	previous	chapters	to	hack	the	transposition	cipher.
+Chapter	13:	A	Modular	Arithmetic	Module	for	the	Affine
+Cipher
+	explains	the	math	concepts	behind	the	affine	cipher.
+Chapter	14:	Programming	the	Affine	Cipher
+	covers	writing	an
+affine	cipher	encryption	program.
+Chapter	15:	Hacking	the	Affine	Cipher
+	explains	how	to	write	a
+program	to	hack	the	affine	cipher.
+Chapter	16:	Programming	the	Simple	Substitution	Cipher
+covers	writing	a	simple	substitution	cipher	encryption	program.
+Chapter	17:	Hacking	the	Simple	Substitution	Cipher
+	explains
+how	to	write	a	program	to	hack	the	simple	substitution	cipher.
+Chapter	18:	Programming	the	Vigenère	Cipher
+	explains	a
+program	for	the	Vigenère	cipher,	a	more	complex	substitution
+cipher.
+Chapter	19:	Frequency	Analysis
+	explores	the	structure	of	English
+words	and	how	to	use	it	to	hack	the	Vigenère	cipher.
+Chapter	20:	Hacking	the	Vigenère	Cipher
+	covers	a	program	for
+hacking	the	Vigenère	cipher.
+Chapter	21:	The	One-Time	Pad	Cipher
+	explains	the	one-time
+pad	cipher	and	why	it’s	mathematically	impossible	to	hack.
+Chapter	22:	Finding	and	Generating	Prime	Numbers
+	covers	how
+to	write	a	program	that	quickly	determines	whether	a	number	is
+prime.
+Chapter	23:	Generating	Keys	for	the	Public	Key	Cipher
+describes	public	key	cryptography	and	how	to	write	a	program	that
+generates	public	and	private	keys.
+Chapter	24:	Programming	the	Public	Key	Cipher
+	explains	how
+to	write	a	program	for	a	public	key	cipher,	which	you	can’t	hack
+using	a	mere	laptop.
+The	appendix,	
+Debugging	Python	Code
+,	shows	you	how	to	use
+IDLE’s	debugger	to	find	and	fix	bugs	in	your	programs.
+
+How	to	Use	This	Book
+Cracking	Codes	with	Python
+	is	different	from	other	programming	books
+because	it	focuses	on	the	source	code	of	complete	programs.	Instead	of
+teaching	you	programming	concepts	and	leaving	it	up	to	you	to	figure	out
+how	to	make	your	own	programs,	this	book	shows	you	complete
+programs	and	explains	how	they	work.
+In	general,	you	should	read	the	chapters	in	this	book	in	order.	The
+programming	concepts	build	on	those	in	the	previous	chapters.	However,
+Python	is	such	a	readable	language	that	after	the	first	few	chapters,	you
+can	probably	jump	ahead	to	later	chapters	and	piece	together	what	the
+code	does.	If	you	jump	ahead	and	feel	lost,	return	to	earlier	chapters.
+Typing	Source	Code
+As	you	read	through	this	book,	I	encourage	you	to	
+manually	type	the	source
+code	from	this	book	into	Python
+.	Doing	so	will	definitely	help	you	understand
+the	code	better.
+When	typing	the	source	code,	don’t	include	the	line	numbers	that
+appear	at	the	beginning	of	each	line.	These	numbers	are	not	part	of	the
+actual	programs,	and	we	use	them	only	to	refer	to	specific	lines	in	the
+code.	But	aside	from	the	line	numbers,	be	sure	to	enter	the	code	exactly	as
+it	appears,	including	the	uppercase	and	lowercase	letters.
+You’ll	also	notice	that	some	of	the	lines	don’t	begin	at	the	leftmost
+edge	of	the	page	but	are	indented	by	four,	eight,	or	more	spaces.	Be	sure
+to	enter	the	correct	number	of	spaces	at	the	beginning	of	each	line	to
+avoid	errors.
+But	if	you	would	rather	not	type	the	code,	you	can	download	the
+source	code	files	from	this	book’s	website	at
+https://www.nostarch.com/crackingcodes/
+.
+Checking	for	Typos
+Although	manually	entering	the	source	code	for	the	programs	is	helpful
+for	learning	Python,	you	might	occasionally	make	typos	that	cause	errors.
+These	typos	can	be	difficult	to	spot,	especially	when	your	source	code	is
+very	long.
+To	quickly	and	easily	check	for	mistakes	in	your	typed	source	code,
+you	can	copy	and	paste	the	text	into	the	online	diff	tool	on	the	book’s
+website	at	
+https://www.nostarch.com/crackingcodes/
+.	The	diff	tool	shows	any
+
+differences	between	the	source	code	in	the	book	and	yours.
+Coding	Conventions	in	This	Book
+This	book	is	not	designed	to	be	a	reference	manual;	it’s	a	hands-on	guide
+for	beginners.	For	this	reason,	the	coding	style	sometimes	goes	against
+best	practices,	but	that’s	a	conscious	decision	to	make	the	code	easier	to
+learn.	This	book	also	skips	theoretical	computer	science	concepts.
+Veteran	programmers	may	point	out	ways	the	code	in	this	book	could
+be	changed	to	improve	efficiency,	but	this	book	is	mostly	concerned	with
+getting	programs	to	work	with	the	least	amount	of	effort.
+Online	Resources
+This	book’s	website	(
+https://www.nostarch.com/crackingcodes/
+)	includes
+many	useful	resources,	including	downloadable	files	of	the	programs	and
+sample	solutions	to	the	practice	questions.	This	book	covers	classical
+ciphers	thoroughly,	but	because	there	is	always	more	to	learn,	I’ve	also
+included	suggestions	for	further	reading	on	many	of	the	topics	introduced
+in	this	book.
+Downloading	and	Installing	Python
+Before	you	can	begin	programming,	you’ll	need	to	install	the	
+Python
+interpreter
+,	which	is	software	that	executes	the	instructions	you’ll	write	in
+the	Python	language.	I’ll	refer	to	“the	Python	interpreter”	as	“Python”
+from	now	on.
+Download	Python	for	Windows,	macOS,	and	Ubuntu	for	free	from
+https://www.python.org/downloads/
+.	If	you	download	the	latest	version,	all	of
+the	programs	in	this	book	should	work.
+NOTE
+Be	sure	to	download	a	version	of	Python	3	(such	as	3.6).	The	programs	in
+this	book	are	written	to	run	on	Python	3	and	may	not	run	correctly,	if	at	all,
+on	Python	2.
+Windows	Instructions
+
+On	 Windows,	 download	 the	 Python	 installer,	 which	 should	 have	 a
+filename	ending	with	 .msi,	and	double-click	it.	Follow	the	instructions	the
+installer	displays	on	the	screen	to	install	Python,	as	listed	here:
+1.Select	Install	Now	to	begin	the	installation.
+2.When	the	installation	is	finished,	click	Close.
+macOS	Instructions
+On	macOS,	download	the	 .dmg	file	for	your	version	of	macOS	from	the
+website	and	double-click	it.	Follow	the	instructions	the	installer	displays
+on	the	screen	to	install	Python,	as	listed	here:
+1.When	the	DMG	package	opens	in	a	new	window,	double-click	the
+Python.mpkg 	 file.	 You	 may	 have	 to	 enter	 your	 computer’s
+administrator	password.
+2.Click	 Continue	through	the	Welcome	section	and	click	 Agree	to
+accept	the	license.
+3.Select	 HD	 Macintosh	(or	the	name	of	your	hard	drive)	and	click
+Install.
+Ubuntu	Instructions
+If	 you’re	 running	 Ubuntu,	 install	 Python	 from	 the	 Ubuntu	 Software
+Center	by	following	these	steps:
+1.Open	the	Ubuntu	Software	Center.
+2.Type	Python 	in	the	search	box	in	the	top-right	corner	of	the	window.
+3.Select	IDLE	(using	Python	3.6),	or	whatever	is	the	latest	version.
+4.Click	Install .
+You	may	have	to	enter	the	administrator	password	to	complete	the
+installation.
+Downloading	pyperclip.py
+Almost	every	program	in	this	book	uses	a	custom	module	I	wrote	called
+pyperclip.py .	This	module	provides	functions	that	let	your	programs	copy
+and	paste	text	to	the	clipboard.	It	doesn’t	come	with	Python,	so	you’ll
+
+need	to	download	it	from	
+https://www.nostarch.com/crackingcodes/
+.
+This	file	must	be	in	the	same	folder	(also	called	
+directory
+)	as	the	Python
+program	files	you	write.	Otherwise	you’ll	see	the	following	error	message
+when	you	try	to	run	your	programs:
+ImportError: No module named pyperclip
+Now	that	you’ve	downloaded	and	installed	the	Python	interpreter	and
+the	
+pyperclip.py
+	module,	let’s	look	at	where	you’ll	be	writing	your
+programs.
+Starting	IDLE
+While	the	Python	interpreter	is	the	software	that	runs	your	Python
+programs,	the	
+interactive	development	environment
+	
+(IDLE)
+	software	is	where
+you’ll	write	your	programs,	much	like	a	word	processor.	IDLE	is	installed
+when	you	install	Python.	To	start	IDLE,	follow	these	steps:
+On	Windows	7	or	newer,	click	the	Start	icon	in	the	lower-left	corner
+of	your	screen,	enter	
+IDLE
+	in	the	search	box,	and	select	
+IDLE
+(Python	3.6	64-bit)
+.
+On	macOS,	open	Finder,	click	
+Applications
+,	click	
+Python	3.6
+,	and
+then	click	the	
+IDLE
+	icon.
+On	Ubuntu,	select	
+Applications
+▸
+Accessories
+▸
+Terminal
+	and	then
+enter	
+idle3
+.	(You	may	also	be	able	to	click	
+Applications
+	at	the	top	of
+the	screen,	select	
+Programming
+,	and	then	click	
+IDLE	3
+.)
+No	matter	which	operating	system	you’re	running,	the	IDLE	window
+should	look	something	like	
+Figure	1
+.	The	header	text	may	be	slightly
+different	depending	on	your	specific	version	of	Python.
+
+
+Figure	1:	The	IDLE	window
+This	window	is	called	the	 interactive	shell.	A	shell	is	a	program	that	lets
+you	 type	 instructions	 into	 the	 computer,	 much	 like	 the	 Terminal	 on
+macOS	or	the	Windows	Command	Prompt.	Sometimes	you’ll	want	to
+run	short	snippets	of	code	instead	of	writing	a	full	program.	Python’s
+interactive	 shell	 lets	 you	 enter	 instructions	 for	 the	 Python	 interpreter
+software,	which	the	computer	reads	and	runs	immediately.
+For	example,	type	the	following	into	the	interactive	shell	next	to	the
+>>>	prompt:
+>>> print('Hello, world!')
+Press	 enter,	and	the	interactive	shell	should	display	this	in	response:
+Hello, world!
+Summary
+Before	the	introduction	of	computers	ushered	in	modern	cryptography,
+breaking	 many	 codes	 was	 impossible	 using	 just	 pencil	 and	 paper.
+Although	computing	made	many	of	the	old,	classical	ciphers	vulnerable	to
+attack,	they’re	still	fun	to	learn	about.	Writing	cryptanalysis	programs
+that	crack	these	ciphers	is	a	great	way	to	learn	how	to	program.
+In	Chapter	1,	we’ll	start	with	some	basic	cryptography	tools	to	encrypt
+and	decrypt	messages	without	the	aid	of	computers.
+Let’s	get	hacking.
+
+1
+MAKING	PAPER	CRYPTOGRAPHY	TOOLS
+“The	encryption	genie	is	out	of	the	bottle.”
+—Jan	Koum,	WhatsApp	founder
+Before	we	start	writing	cipher	programs,	let’s	look	at	the	process	of
+encrypting	and	decrypting	with	just	pencil	and	paper.	This	will	help	you
+understand	how	ciphers	work	and	the	math	that	goes	into	producing	their
+secret	messages.	In	this	chapter,	you’ll	learn	what	we	mean	by
+cryptography	and	how	codes	are	different	from	ciphers.	Then	you’ll	use	a
+simple	cipher	called	the	Caesar	cipher	to	encrypt	and	decrypt	messages
+using	paper	and	pencil.
+TOPICS	COVERED	IN	THIS	CHAPTER
+What	is	cryptography?
+Codes	and	ciphers
+The	Caesar	cipher
+Cipher	wheels
+Doing	cryptography	with	arithmetic
+Double	encryption
+What	Is	Cryptography?
+Historically,	anyone	who	has	needed	to	share	secrets	with	others,	such	as
+
+spies,	soldiers,	hackers,	pirates,	merchants,	tyrants,	and	political	activists,
+has	relied	on	cryptography	to	make	sure	their	secrets	stay	secret.
+Cryptography
+	is	the	science	of	using	secret	codes.	To	understand	what
+cryptography	looks	like,	look	at	the	following	two	pieces	of	text:
+The	text	on	the	left	is	a	secret	message	that	has	been	
+encrypted
+,	or
+turned	into	a	secret	code.	It’s	completely	unreadable	to	anyone	who
+doesn’t	know	how	to	
+decrypt
+	it,	or	turn	it	back	into	the	original	English
+message.	The	message	on	the	right	is	random	gibberish	with	no	hidden
+meaning.	Encryption	keeps	a	message	secret	from	other	people	who	can’t
+decipher	it,	even	if	they	get	their	hands	on	the	encrypted	message.	
+An
+encrypted	message	looks	exactly	like	random	nonsense.
+A	
+cryptographer
+	uses	and	studies	secret	codes.	Of	course,	these	secret
+messages	don’t	always	remain	secret.	A	
+cryptanalyst
+,	also	called	a	
+code
+breaker
+	or	
+hacker
+,	can	hack	secret	codes	and	read	other	people’s	encrypted
+messages.	This	book	teaches	you	how	to	encrypt	and	decrypt	messages
+using	various	techniques.	But	unfortunately	(or	fortunately),	the	type	of
+hacking	you’ll	learn	in	this	book	isn’t	dangerous	enough	to	get	you	in
+trouble	with	the	law.
+Codes	vs.	Ciphers
+Unlike	ciphers,	
+codes
+	are	made	to	be	understandable	and	publicly	available.
+Codes	substitute	messages	with	symbols	that	anyone	should	be	able	to
+look	up	to	translate	into	a	message.
+In	the	early	19th	century,	one	well-known	code	came	from	the
+development	of	the	electric	telegraph,	which	allowed	for	near-instant
+communication	across	continents	through	wires.	Sending	messages	by
+telegraph	was	much	faster	than	the	previous	alternative	of	sending	a
+horseback	rider	carrying	a	bag	of	letters.	However,	the	telegraph	couldn’t
+directly	send	written	letters	drawn	on	paper.	Instead,	it	could	send	only
+two	types	of	electric	pulses:	a	short	pulse	called	a	“dot”	and	a	long	pulse
+called	a	“dash.”
+To	convert	letters	of	the	alphabet	into	these	dots	and	dashes,	you	need
+
+an	encoding	system	to	translate	English	to	electric	pulses.	The	process	of
+converting	English	into	dots	and	dashes	to	send	over	a	telegraph	is	called
+encoding
+,	and	the	process	of	translating	electric	pulses	to	English	when	a
+message	is	received	is	called	
+decoding
+.	The	code	used	to	encode	and
+decode	messages	over	telegraphs	(and	later,	radio)	was	called	
+Morse	code
+,	as
+shown	in	
+Table	1-1
+.	Morse	code	was	developed	by	Samuel	Morse	and
+Alfred	Vail.
+Table	1-1:
+	International	Morse	Code	Encoding
+Letter
+Encoding
+Letter
+Encoding
+Number
+Encoding
+A
+●
+	
+▬
+N
+▬
+	
+●
+1
+●
+	
+▬
+	
+▬
+	
+▬
+	
+▬
+B
+▬
+	
+●
+	
+●
+	
+●
+O
+▬
+	
+▬
+	
+▬
+2
+●
+	
+●
+	
+▬
+	
+▬
+	
+▬
+C
+▬
+	
+●
+	
+▬
+	
+●
+P
+●
+	
+▬
+	
+▬
+	
+●
+3
+●
+	
+●
+	
+●
+	
+▬
+	
+▬
+D
+▬
+	
+●
+	
+●
+Q
+▬
+	
+▬
+	
+●
+	
+▬
+4
+●
+	
+●
+	
+●
+	
+●
+	
+▬
+E
+●
+R
+●
+	
+▬
+	
+●
+5
+●
+	
+●
+	
+●
+	
+●
+	
+●
+F
+●
+	
+●
+	
+▬
+	
+●
+S
+●
+	
+●
+	
+●
+6
+▬
+	
+●
+	
+●
+	
+●
+	
+●
+G
+▬
+	
+▬
+	
+●
+T
+▬
+7
+▬
+	
+▬
+	
+●
+	
+●
+	
+●
+H
+●
+	
+●
+	
+●
+	
+●
+U
+●
+	
+●
+	
+▬
+8
+▬
+	
+▬
+	
+▬
+	
+●
+	
+●
+I
+●
+	
+●
+V
+●
+	
+●
+	
+●
+	
+▬
+9
+▬
+	
+▬
+	
+▬
+	
+▬
+	
+●
+J
+●
+	
+▬
+	
+▬
+	
+▬
+W
+●
+	
+▬
+	
+▬
+0
+▬
+	
+▬
+	
+▬
+	
+▬
+	
+▬
+K
+▬
+	
+●
+	
+▬
+X
+▬
+	
+●
+	
+●
+	
+▬
+L
+●
+	
+▬
+	
+●
+	
+●
+Y
+▬
+	
+●
+	
+▬
+	
+▬
+M
+▬
+	
+▬
+Z
+▬
+	
+▬
+	
+●
+	
+●
+By	tapping	dots	and	dashes	with	a	one-button	telegraph,	a	telegraph
+operator	could	communicate	an	English	message	to	someone	on	the	other
+side	of	the	world	almost	instantly!	(To	learn	more	about	Morse	code,	visit
+https://www.nostarch.com/crackingcodes/
+.)
+In	contrast	with	codes,	a	
+cipher
+	is	a	specific	type	of	code	meant	to	keep
+
+messages	secret.	You	can	use	a	cipher	to	turn	understandable	English	text,
+called	
+plaintext
+,	into	gibberish	that	hides	a	secret	message,	called	the
+ciphertext
+.	A	cipher	is	a	set	of	rules	for	converting	between	plaintext	and
+ciphertext.	These	rules	often	use	a	secret	key	to	encrypt	or	decrypt	that
+only	the	communicators	know.	In	this	book,	you’ll	learn	several	ciphers
+and	write	programs	to	use	these	ciphers	to	encrypt	and	decrypt	text.	But
+first,	let’s	encrypt	messages	by	hand	using	simple	paper	tools.
+The	Caesar	Cipher
+The	first	cipher	you’ll	learn	is	the	Caesar	cipher,	which	is	named	after
+Julius	Caesar	who	used	it	2000	years	ago.	The	good	news	is	that	it’s
+simple	and	easy	to	learn.	The	bad	news	is	that	because	it’s	so	simple,	it’s
+also	easy	for	a	cryptanalyst	to	break.	However,	it’s	still	a	useful	learning
+exercise.
+The	Caesar	cipher	works	by	substituting	each	letter	of	a	message	with
+a	new	letter	after	shifting	the	alphabet	over.	For	example,	Julius	Caesar
+substituted	letters	in	his	messages	by	shifting	the	letters	in	the	alphabet
+down	by	three,	and	then	replacing	every	letter	with	the	letters	in	his
+shifted	alphabet.
+For	example,	every	A	in	the	message	would	be	replaced	by	a	D,	every	B
+would	be	an	E,	and	so	on.	When	Caesar	needed	to	shift	letters	at	the	end
+of	the	alphabet,	such	as	Y,	he	would	wrap	around	to	the	beginning	of	the
+alphabet	and	shift	three	places	to	B.	In	this	section,	we’ll	encrypt	a
+message	by	hand	using	the	Caesar	cipher.
+The	Cipher	Wheel
+To	make	converting	plaintext	to	ciphertext	using	the	Caesar	cipher	easier,
+we’ll	use	a	
+cipher	wheel
+,	also	called	a	
+cipher	disk
+.	The	cipher	wheel	consists
+of	two	rings	of	letters;	each	ring	is	split	up	into	26	slots	(for	a	26-letter
+alphabet).	The	outer	ring	represents	the	plaintext	alphabet,	and	the	inner
+ring	represents	the	corresponding	letters	in	the	ciphertext.	The	inner	ring
+also	numbers	the	letters	from	0	to	25.	These	numbers	represent	the
+encryption	key
+,	which	in	this	case	is	the	number	of	letters	required	to	shift
+from	A	to	the	corresponding	letter	on	the	inner	ring.	Because	the	shift	is
+circular,	shifting	with	a	key	greater	than	25	makes	the	alphabets	wrap
+around,	so	shifting	by	26	would	be	the	same	as	shifting	by	0,	shifting	by
+27	would	be	the	same	as	shifting	by	1,	and	so	on.
+
+You	can	access	a	virtual	cipher	wheel	online	at
+https://www.nostarch.com/crackingcodes/
+.	
+Figure	1-1
+	shows	what	it	looks	like.
+To	spin	the	wheel,	click	it	and	then	move	the	mouse	cursor	around	until
+the	configuration	you	want	is	in	place.	Then	click	the	mouse	again	to	stop
+the	wheel	from	spinning.
+Figure	1-1:	The	online	cipher	wheel
+A	printable	paper	cipher	wheel	is	also	available	from	the	book’s
+website.	Cut	out	the	two	circles	and	lay	them	on	top	of	each	other,
+placing	the	smaller	one	in	the	middle	of	the	larger	one.	Insert	a	pin	or
+brad	through	the	center	of	both	circles	so	you	can	spin	them	around	in
+place.
+Using	either	the	paper	or	the	virtual	wheel,	you	can	encrypt	secret
+messages	by	hand.
+Encrypting	with	the	Cipher	Wheel
+To	begin	encrypting,	write	your	message	in	English	on	a	piece	of	paper.
+For	this	example,	we’ll	encrypt	the	message	THE	SECRET
+PASSWORD	IS	ROSEBUD.	Next,	spin	the	inner	wheel	of	the	cipher
+wheel	until	its	slots	match	up	with	slots	in	the	outer	wheel.	Notice	the	dot
+next	to	the	letter	A	in	the	outer	wheel.	Take	note	of	the	number	in	the
+inner	wheel	next	to	this	dot.	This	is	the	encryption	key.
+For	example,	in	
+Figure	1-1
+,	the	outer	circle’s	A	is	over	the	inner
+
+circle’s	number	8.	We’ll	use	this	encryption	key	to	encrypt	the	message	in
+our	example,	as	shown	in	
+Figure	1-2
+.
+Figure	1-2:	Encrypting	a	message	with	a	Caesar	cipher	key	of	8
+For	each	letter	in	the	message,	find	it	in	the	outer	circle	and	replace	it
+with	the	corresponding	letter	in	the	inner	circle.	In	this	example,	the	first
+letter	in	the	message	is	T	(the	first	T	in	“THE	SECRET…”),	so	find	the
+letter	T	in	the	outer	circle	and	then	find	the	corresponding	letter	in	the
+inner	circle,	which	is	the	letter	B.	So	the	secret	message	always	replaces	a
+T	with	a	B.	(If	you	were	using	a	different	encryption	key,	each	T	in	the
+plaintext	would	be	replaced	with	a	different	letter.)	The	next	letter	in	the
+message	is	H,	which	turns	into	P.	The	letter	E	turns	into	M.	Each	letter
+on	the	outer	wheel	always	encrypts	to	the	same	letter	on	the	inner	wheel.
+To	save	time,	after	you	look	up	the	first	T	in	“THE	SECRET…”	and	see
+that	it	encrypts	to	B,	you	can	replace	every	T	in	the	message	with	B,	so
+you	only	need	to	look	up	a	letter	once.
+After	you	encrypt	the	entire	message,	the	original	message,	THE
+SECRET	PASSWORD	IS	ROSEBUD,	becomes	BPM	AMKZMB
+XIAAEWZL	QA	ZWAMJCL.	Notice	that	non-letter	characters,	such	as
+the	spaces,	are	not	changed.
+Now	you	can	send	this	encrypted	message	to	someone	(or	keep	it	for
+yourself),	and	nobody	will	be	able	to	read	it	unless	you	tell	them	the	secret
+encryption	key.	Be	sure	to	keep	the	encryption	key	a	secret;	the	ciphertext
+can	be	read	by	anyone	who	knows	that	the	message	was	encrypted	with
+key	8.
+Decrypting	with	the	Cipher	Wheel
+To	decrypt	a	ciphertext,	start	from	the	inner	circle	of	the	cipher	wheel
+and	then	move	to	the	outer	circle.	For	example,	let’s	say	you	receive	the
+ciphertext	IWT	CTL	EPHHLDGS	XH	HLDGSUXHW.	You	wouldn’t
+be	able	to	decrypt	the	message	unless	you	knew	the	key	(or	unless	you
+were	a	clever	hacker).	Luckily,	your	friend	has	already	told	you	that	they
+use	the	key	15	for	their	messages.	The	cipher	wheel	for	this	key	is	shown
+in	
+Figure	1-3
+.
+
+Figure	1-3:	A	cipher	wheel	set	to	key	15
+Now	you	can	line	up	the	letter	A	on	the	outer	circle	(the	one	with	the
+dot	below	it)	over	the	letter	on	the	inner	circle	that	has	the	number	15
+(which	is	the	letter	P).	Then,	find	the	first	letter	in	the	secret	message	on
+the	inner	circle,	which	is	I,	and	look	at	the	corresponding	letter	on	the
+outer	circle,	which	is	T.	The	second	letter	in	the	ciphertext,	W,	decrypts
+to	the	letter	H.	Decrypt	the	rest	of	the	letters	in	the	ciphertext	back	to	the
+plaintext,	and	you’ll	get	the	message	THE	NEW	PASSWORD	IS
+SWORDFISH,	as	shown	in	
+Figure	1-4
+.
+Figure	1-4:	Decrypting	a	message	with	a	Caesar	cipher	key	of	15
+If	you	used	an	incorrect	key,	like	16,	the	decrypted	message	would	be
+SGD	MDV	OZRRVNQC	HR	RVNQCEHRG,	which	is	unreadable.
+Unless	the	correct	key	is	used,	the	decrypted	message	won’t	be
+understandable.
+Encrypting	and	Decrypting	with	Arithmetic
+The	cipher	wheel	is	a	convenient	tool	for	encrypting	and	decrypting	with
+the	Caesar	cipher,	but	you	can	also	encrypt	and	decrypt	using	arithmetic.
+To	do	so,	write	the	letters	of	the	alphabet	from	A	to	Z	with	the	numbers
+from	0	to	25	under	each	letter.	Begin	with	0	under	the	A,	1	under	the	B,
+and	so	on	until	25	is	under	the	Z.	
+Figure	1-5
+	shows	what	it	should	look
+like.
+
+Figure	1-5:	Numbering	the	alphabet	from	0	to	25
+You	can	use	this	letters-to-numbers	code	to	represent	letters.	This	is	a
+powerful	concept,	because	it	allows	you	to	do	math	on	letters.	For
+example,	if	you	represent	the	letters	CAT	as	the	numbers	2,	0,	and	19,
+you	can	add	3	to	get	the	numbers	5,	3,	and	22.	These	new	numbers
+represent	the	letters	FDW,	as	shown	in	
+Figure	1-5
+.	You	have	just	“added”
+3	to	the	word	
+cat
+!	Later,	we’ll	be	able	to	program	a	computer	to	do	this
+math	for	us.
+To	use	arithmetic	to	encrypt	with	the	Caesar	cipher,	find	the	number
+under	the	letter	you	want	to	encrypt	and	add	the	key	number	to	it.	The
+resulting	sum	is	the	number	under	the	encrypted	letter.	For	example,	let’s
+encrypt	HELLO.	HOW	ARE	YOU?	using	the	key	13.	(You	can	use	any
+number	from	1	to	25	for	the	key.)	First,	find	the	number	under	H,	which
+is	7.	Then	add	13	to	this	number:	7	+	13	=	20.	Because	the	number	20	is
+under	the	letter	U,	the	letter	H	encrypts	to	U.
+Similarly,	to	encrypt	the	letter	E	(4),	add	4	+	13	=	17.	The	number
+above	17	is	R,	so	E	gets	encrypted	to	R,	and	so	on.
+This	process	works	fine	until	the	letter	O.	The	number	under	O	is	14.
+But	14	plus	13	is	27,	and	the	list	of	numbers	only	goes	up	to	25.	If	the	sum
+of	the	letter’s	number	and	the	key	is	26	or	more,	you	need	to	subtract	26
+from	it.	In	this	case,	27	–	26	=	1.	The	letter	above	the	number	1	is	B,	so	O
+encrypts	to	B	using	the	key	13.	When	you	encrypt	each	letter	in	the
+message,	the	ciphertext	will	be	URYYB.	UBJ	NER	LBH?
+To	decrypt	the	ciphertext,	subtract	the	key	instead	of	adding	it.	The
+number	of	the	ciphertext	letter	B	is	1.	Subtract	13	from	1	to	get	–12.	Like
+our	“subtract	26”	rule	for	encrypting,	when	the	result	is	less	than	0	when
+decrypting,	we	need	to	add	26.	Because	–12	+	26	=	14,	the	ciphertext
+letter	B	decrypts	to	O.
+NOTE
+If	you	don’t	know	how	to	add	and	subtract	with	negative	numbers,	you	can
+read	about	it	at
+	
+https://www.nostarch.com/crackingcodes/
+.
+As	you	can	see,	you	don’t	need	a	cipher	wheel	to	use	the	Caesar	cipher.
+All	you	need	is	a	pencil,	a	piece	of	paper,	and	some	simple	arithmetic!
+
+Why	Double	Encryption	Doesn’t	Work
+You	might	think	encrypting	a	message	twice	using	two	different	keys
+would	double	the	strength	of	the	encryption.	But	this	isn’t	the	case	with
+the	Caesar	cipher	(and	most	other	ciphers).	In	fact,	the	result	of	double
+encryption	is	the	same	as	what	you	would	get	after	one	normal
+encryption.	Let’s	try	double	encrypting	a	message	to	see	why.
+For	example,	if	you	encrypt	the	word	KITTEN	using	the	key	3,	you’re
+adding	3	to	the	plaintext	letter’s	number,	and	the	resulting	ciphertext
+would	be	NLWWHQ.	If	you	then	encrypt	NLWWHQ,	this	time	using
+the	key	4,	the	resulting	ciphertext	would	be	RPAALU	because	you’re
+adding	4	to	the	plaintext	letter’s	number.	But	this	is	the	same	as
+encrypting	the	word	KITTEN	once	with	a	key	of	7.
+For	most	ciphers,	encrypting	more	than	once	doesn’t	provide
+additional	strength.	In	fact,	if	you	encrypt	some	plaintext	with	two	keys
+that	add	up	to	26,	the	resulting	ciphertext	will	be	the	same	as	the	original
+plaintext!
+Summary
+The	Caesar	cipher	and	other	ciphers	like	it	were	used	to	encrypt	secret
+information	for	several	centuries.	But	if	you	wanted	to	encrypt	a	long
+message—say,	an	entire	book—it	could	take	days	or	weeks	to	encrypt	it	all
+by	hand.	This	is	where	programming	can	help.	A	computer	can	encrypt
+and	decrypt	a	large	amount	of	text	in	less	than	a	second!
+To	use	a	computer	for	encryption,	you	need	to	learn	how	to	
+program
+,
+or	instruct,	the	computer	to	do	the	same	steps	we	just	did	using	a
+language	the	computer	can	understand.	Fortunately,	learning	a
+programming	language	like	Python	isn’t	nearly	as	difficult	as	learning	a
+foreign	language	like	Japanese	or	Spanish.	You	also	don’t	need	to	know
+much	math	besides	addition,	subtraction,	and	multiplication.	All	you	need
+is	a	computer	and	this	book!
+Let’s	move	on	to	
+Chapter	2
+,	where	we’ll	learn	how	to	use	Python’s
+interactive	shell	to	explore	code	one	line	at	a	time.
+PRACTICE	QUESTIONS
+Answers	to	the	practice	questions	can	be	found	on	the	book’s
+website	at	
+https://www.nostarch.com/crackingcodes/
+.
+
+1.Encrypt	 the	 following	 entries	 from	 Ambrose	 Bierce’s	 The
+Devil’s	Dictionary 	with	the	given	keys:
+a.With	key	4:	“AMBIDEXTROUS:	Able	to	pick	with	equal
+skill	a	right-hand	pocket	or	a	left.”
+b.With	key	17:	“GUILLOTINE:	A	machine	which	makes	a
+Frenchman	shrug	his	shoulders	with	good	reason.”
+c.With	 key	 21:	 “IMPIETY:	 Your	 irreverence	 toward	 my
+deity.”
+2.Decrypt	the	following	ciphertexts	with	the	given	keys:
+a.With	key	15:	“ZXAI:	P	RDHIJBT	HDBTIXBTH	LDGC
+QN	HRDIRWBTC	XC	PBTGXRP	PCS	PBTGXRPCH
+XC	HRDIAPCS.”
+b.With	 key	 4:	 “MQTSWXSV:	 E	 VMZEP	 EWTMVERX
+XS	TYFPMG	LSRSVW.”
+3.Encrypt	the	following	sentence	with	the	key	0:	“This	is	a	silly
+example.”
+4.Here	are	some	words	and	their	encryptions.	Which	key	was
+used	for	each	word?
+a.ROSEBUD	–	LIMYVOX
+b.YAMAMOTO	–	PRDRDFKF
+c.ASTRONOMY	–	HZAYVUVTF
+5.What	does	this	sentence	encrypted	with	key	8	decrypt	to	with
+key	 9?	 “UMMSVMAA:	 Cvkwuuwv	 xibqmvkm	 qv	 xtivvqvo	 i
+zmdmvom	bpib	qa	ewzbp	epqtm.”
+
+2
+PROGRAMMING	IN	THE	INTERACTIVE	SHELL
+“The	Analytical	Engine	has	no	pretensions	whatever	to	originate	anything.	It	can	do	whatever	we	know	how
+to	order	it	to	perform.”
+—Ada	Lovelace,	October	1842
+Before	you	can	write	encryption	programs,	you	need	to	learn	some	basic
+programming	concepts.	These	concepts	include	values,	operators,
+expressions,	and	variables.
+TOPICS	COVERED	IN	THIS	CHAPTER
+Operators
+Values
+Integers	and	floating-point	numbers
+Expressions
+Evaluating	expressions
+Storing	values	in	variables
+Overwriting	variables
+Let’s	start	by	exploring	how	to	do	some	simple	math	in	Python’s
+interactive	shell.	Be	sure	to	read	this	book	next	to	your	computer	so	you
+can	enter	the	short	code	examples	and	see	what	they	do.	Developing
+muscle	memory	from	typing	programs	will	help	you	remember	how
+Python	code	is	constructed.
+
+Some	Simple	Math	Expressions
+Start	by	opening	IDLE	(see	“
+Starting	IDLE
+”	on	
+page	xxvii
+).	You’ll	see
+the	interactive	shell	and	the	cursor	blinking	next	to	the	
+>>>
+	prompt.	The
+interactive	shell	can	work	just	like	a	calculator.	Type	
+2 + 2
+	into	the	shell
+and	press	
+enter
+	on	your	keyboard.	(On	some	keyboards,	this	is	the	
+return
+key.)	The	computer	should	respond	by	displaying	the	number	
+4
+,	as	shown
+in	
+Figure	2-1
+.
+Figure	2-1:	Type	
+2 + 2
+	into	the	shell.
+In	the	example	in	
+Figure	2-1
+,	the	
++
+	sign	tells	the	computer	to	add	the
+numbers	
+2
+	and	
+2
+,	but	Python	can	do	other	calculations	as	well,	such	as
+subtract	numbers	using	the	minus	sign	(
+–
+),	multiply	numbers	with	an
+asterisk	(
+*
+),	or	divide	numbers	with	a	forward	slash	(
+/
+).	When	used	in	this
+way,	
++
+,	
+-
+,	
+*
+,	and	
+/
+	are	called	
+operators
+	because	they	tell	the	computer	to
+perform	an	operation	on	the	numbers	surrounding	them.	
+Table	2-1
+summarizes	the	Python	math	operators.	The	
+2
+s	(or	other	numbers)	are
+called	
+values
+.
+Table	2-1:
+	Math	Operators	in	Python
+Operator
+Operation
++
+Addition
+-
+Subtraction
+*
+Multiplication
+/
+Division
+
+By	itself,	
+2 + 2
+	isn’t	a	program;	it’s	just	a	single	instruction.	Programs
+are	made	of	many	of	these	instructions.
+Integers	and	Floating-Point	Values
+In	programming,	whole	numbers,	such	as	
+4
+,	
+0
+,	and	
+99
+,	are	called	
+integers
+.
+Numbers	with	decimal	points	(
+3.5
+,	
+42.1
+,	and	
+5.0
+)	are	called	
+floating-point
+numbers
+.	In	Python,	the	number	
+5
+	is	an	integer,	but	if	you	wrote	it	as	
+5.0
+,	it
+would	be	a	floating-point	number.
+Integers	and	floating	points	are	
+data	types
+.	The	value	
+42
+	is	a	value	of	the
+integer,	or	
+int
+,	data	type.	The	value	
+7.5
+	is	a	value	of	the	floating	point,	or
+float
+,	data	type.
+Every	value	has	a	data	type.	You’ll	learn	about	a	few	other	data	types
+(such	as	strings	in	
+Chapter	3
+),	but	for	now	just	remember	that	any	time
+we	talk	about	a	value,	that	value	is	of	a	certain	data	type.	It’s	usually	easy
+to	identify	the	data	type	just	by	looking	at	how	the	value	is	written.	Ints
+are	numbers	without	decimal	points.	Floats	are	numbers	with	decimal
+points.	So	
+42
+	is	an	int,	but	
+42.0
+	is	a	float.
+Expressions
+You’ve	already	seen	Python	solve	one	math	problem,	but	Python	can	do	a
+lot	more.	Try	typing	the	following	math	problems	into	the	shell,	pressing
+the	
+enter
+	key	after	each	one:
+➊
+ >>> 
+2+2+2+2+2
+   10
+   >>> 
+8*6
+   48
+➋
+ >>> 
+10-5+6
+   11
+➌
+ >>> 
+2  +       2
+   4
+Figure	2-2:	An	expression	is	made	up	of	values	(like	
+2
+)	and	operators	(like	
++
+).
+These	math	problems	are	called	
+expressions
+.	Computers	can	solve
+millions	of	these	problems	in	seconds.	Expressions	are	made	up	of	values
+(the	numbers)	connected	by	operators	(the	math	signs),	as	shown	in
+
+Figure	2-2
+.	You	can	have	as	many	numbers	in	an	expression	as	you	want
+➊
+,	as	long	as	they’re	connected	by	operators;	you	can	even	use	multiple
+types	of	operators	in	a	single	expression	
+➋
+.	You	can	also	enter	any
+number	of	spaces	between	the	integers	and	these	operators	
+➌
+.	But	be	sure
+to	always	start	an	expression	at	the	beginning	of	the	line,	with	no	spaces	in
+front,	because	spaces	at	the	beginning	of	a	line	change	how	Python
+interprets	instructions.	You’ll	learn	more	about	spaces	at	the	beginning	of
+a	line	in	“
+Blocks
+”	on	
+page	45
+.
+Order	of	Operations
+You	might	remember	the	phrase	“order	of	operations”	from	your	math
+class.	For	example,	multiplication	is	done	before	addition.	The	expression
+2 + 4 * 3
+	evaluates	to	
+14
+	because	multiplication	is	done	first	to	evaluate	
+4 *
+3
+,	and	then	
+2
+	is	added.	Parentheses	can	make	different	operators	go	first.
+In	the	expression	
+(2 + 4) * 3
+,	the	addition	is	done	first	to	evaluate	
+(2 + 4)
+,
+and	then	that	sum	is	multiplied	by	
+3
+.	The	parentheses	make	the	expression
+evaluate	to	
+18
+	instead	of	
+14
+.	The	order	of	operations	(also	called	
+precedence
+)
+of	Python	math	operators	is	similar	to	that	of	mathematics.	Operations
+inside	parentheses	are	evaluated	first;	next	the	
+*
+	and	
+/
+	operators	are
+evaluated	from	left	to	right;	and	then	the	
++
+	and	
+-
+	operators	are	evaluated
+from	left	to	right.
+Evaluating	Expressions
+When	a	computer	solves	the	expression	
+10 + 5
+	and	gets	the	value	
+15
+,	we	say
+it	has	
+evaluated
+	the	expression.	Evaluating	an	expression	reduces	the
+expression	to	a	single	value,	just	like	solving	a	math	problem	reduces	the
+problem	to	a	single	number:	the	answer.
+The	expressions	
+10 + 5
+	and	
+10 + 3 + 2
+	have	the	same	value,	because	they
+both	evaluate	to	
+15
+.	Even	single	values	are	considered	expressions:	the
+expression	
+15
+	evaluates	to	the	value	
+15
+.
+Python	continues	to	evaluate	an	expression	until	it	becomes	a	single
+value,	as	in	the	following:
+
+Python	evaluates	an	expression	starting	with	the	innermost,	leftmost
+parentheses.	Even	when	parentheses	are	nested	in	each	other,	the	parts	of
+expressions	inside	them	are	evaluated	with	the	same	rules	as	any	other
+expression.	So	when	Python	encounters	
+((7 + 1) / (3 - 1))
+,	it	first	solves
+the	expression	in	the	leftmost	inner	parentheses,	
+(7 + 1)
+,	and	then	solves
+the	expression	on	the	right,	
+(3 - 1)
+.	When	each	expression	in	the	inner
+parentheses	is	reduced	to	a	single	value,	the	expressions	in	the	outer
+parentheses	are	then	evaluated.	Notice	that	division	evaluates	to	a
+floating-point	value.	Finally,	when	there	are	no	more	expressions	in
+parentheses,	Python	performs	any	remaining	calculations	in	the	order	of
+operations.
+In	an	expression,	you	can	have	two	or	more	values	connected	by
+operators,	or	you	can	have	just	one	value,	but	if	you	enter	one	value	and
+an	operator	into	the	interactive	shell,	you’ll	get	an	error	message:
+>>> 
+5 +
+SyntaxError: invalid syntax
+This	error	happens	because	
+5 +
+	is	not	an	expression.	Expressions	with
+multiple	values	need	operators	to	connect	those	values,	and	in	the	Python
+language,	the	
++
+	operator	expects	to	connect	two	values.	A	
+syntax	error
+means	that	the	computer	doesn’t	understand	the	instruction	you	gave	it
+because	you	typed	it	incorrectly.	This	may	not	seem	important,	but
+computer	programming	isn’t	just	about	telling	the	computer	what	to	do—
+it’s	also	about	knowing	the	correct	way	to	give	the	computer	instructions
+that	it	can	follow.
+ERRORS	ARE	OKAY!
+
+It’s	perfectly	fine	to	make	errors!	You	won’t	break	your	computer	by
+entering	code	that	causes	errors.	Python	will	simply	tell	you	an	error
+has	occurred	and	then	display	the	>>>	prompt	again.	You	can
+continue	entering	new	code	into	the	interactive	shell.
+Until	you	gain	more	programming	experience,	error	messages
+might	not	make	a	lot	of	sense	to	you.	However,	you	can	always
+google	the	error	message	text	to	find	web	pages	that	explain	that
+specific	error.	You	can	also	go	to
+https://www.nostarch.com/crackingcodes/
+	to	see	a	list	of	common
+Python	error	messages	and	their	meanings.
+Storing	Values	with	Variables
+Programs	often	need	to	save	values	to	use	later	in	the	program.	You	can
+store	values	in	
+variables
+	by	using	the	
+=
+	sign	(called	the	
+assignment	operator
+).
+For	example,	to	store	the	value	
+15
+	in	a	variable	named	
+spam
+,	enter	
+spam = 15
+into	the	shell:
+>>> 
+spam = 15
+You	can	think	of	the	variable	like	a	box	with	the	value	
+15
+	inside	it	(as
+shown	in	
+Figure	2-3
+).	The	variable	name	
+spam
+	is	the	label	on	the	box	(so
+we	can	tell	one	variable	from	another),	and	the	value	stored	in	it	is	like	a
+note	inside	the	box.
+When	you	press	
+enter
+,	you	won’t	see	anything	except	a	blank	line	in
+response.	Unless	you	see	an	error	message,	you	can	assume	that	the
+instruction	executed	successfully.	The	next	
+>>>
+	prompt	appears	so	you	can
+enter	the	next	instruction.
+This	instruction	with	the	
+=
+	assignment	operator	(called	an	
+assignment
+statement
+)	creates	the	variable	
+spam
+	and	stores	the	value	
+15
+	in	it.	Unlike
+expressions,	
+statements
+	are	instructions	that	don’t	evaluate	to	any	value;
+instead,	they	just	perform	an	action.	This	is	why	no	value	is	displayed	on
+the	next	line	in	the	shell.
+Figuring	out	which	instructions	are	expressions	and	which	are
+statements	might	be	confusing.	Just	remember	that	if	a	Python	instruction
+evaluates	to	a	single	value,	it’s	an	expression.	If	it	doesn’t,	it’s	a	statement.
+
+Figure	2-3:	Variables	are	like	boxes	with	names	that	can	hold	value.
+An	assignment	statement	is	written	as	a	variable,	followed	by	the	
+=
+operator,	followed	by	an	expression,	as	shown	in	
+Figure	2-4
+.	The	value
+that	the	expression	evaluates	to	is	stored	inside	the	variable.
+Figure	2-4:	The	parts	of	an	assignment	statement
+Keep	in	mind	that	variables	store	single	values,	not	the	expressions
+they	are	assigned.	For	example,	if	you	enter	the	statement	
+spam = 10 + 5
+,	the
+expression	
+10 + 5
+	is	first	evaluated	to	
+15
+	and	then	the	value	
+15
+	is	stored	in
+the	variable	
+spam
+,	as	we	can	see	by	entering	the	variable	name	into	the
+shell:
+>>> 
+spam = 10 + 5
+>>> 
+spam
+15
+A	variable	by	itself	is	an	expression	that	evaluates	to	the	value	stored	in
+the	variable.	A	value	by	itself	is	also	an	expression	that	evaluates	to	itself:
+>>> 
+15
+15
+And	here’s	an	interesting	twist.	If	you	now	enter	
+spam + 5
+	into	the	shell,
+you’ll	get	the	integer	
+20
+:
+>>> 
+spam = 15
+>>> 
+spam + 5
+
+20
+As	you	can	see,	variables	can	be	used	in	expressions	the	same	way
+values	can.	Because	the	value	of	
+spam
+	is	
+15
+,	the	expression	
+spam + 5
+	evaluates
+to	the	expression	
+15 + 5
+,	which	then	evaluates	to	
+20
+.
+Overwriting	Variables
+You	can	change	the	value	stored	in	a	variable	by	entering	another
+assignment	statement.	For	example,	enter	the	following:
+   >>> 
+spam = 15
+➊
+ >>> 
+spam + 5
+➋
+ 20
+➌
+ >>> 
+spam = 3
+➍
+ >>> 
+spam + 5
+➎
+ 8
+The	first	time	you	enter	
+spam + 5
+	
+➊
+,	the	expression	evaluates	to	
+20
+	
+➋
+because	you	stored	the	value	
+15
+	inside	the	variable	
+spam
+.	But	when	you
+enter	
+spam = 3
+	
+➌
+,	the	value	
+15
+	is	
+overwritten
+	(that	is,	replaced)	with	the	value
+3
+,	as	shown	in	
+Figure	2-5
+.	Now	when	you	enter	
+spam + 5
+	
+➍
+,	the	expression
+evaluates	to	
+8
+	
+➎
+	because	
+spam + 5
+	evaluates	to	
+3 + 5
+.	The	old	value	in	
+spam
+	is
+forgotten.
+Figure	2-5:	The	value	
+15
+	in	spam	is	over-written	by	the	value	
+3
+.
+
+You	can	even	use	the	value	in	the	
+spam
+	variable	to	assign	
+spam
+	a	new
+value:
+>>> 
+spam = 15
+>>> 
+spam = spam + 5
+>>> 
+spam
+20
+The	assignment	statement	
+spam = spam + 5
+	tells	the	computer	that	“the
+new	value	of	the	
+spam
+	variable	is	the	current	value	of	
+spam
+	plus	five.”	The
+variable	on	the	left	side	of	the	
+=
+	sign	is	assigned	the	value	of	the	expression
+on	the	right	side.	You	can	keep	increasing	the	value	in	
+spam
+	by	
+5
+	several
+times:
+>>> 
+spam = 15
+>>> 
+spam = spam + 5
+>>> 
+spam = spam + 5
+>>> 
+spam = spam + 5
+>>> 
+spam
+30
+The	value	in	
+spam
+	is	changed	each	time	
+spam = spam + 5
+	is	executed.	The
+value	stored	in	
+spam
+	ends	up	being	
+30
+.
+Variable	Names
+Although	the	computer	doesn’t	care	what	you	name	your	variables,	you
+should.	Giving	variables	names	that	reflect	what	type	of	data	they	contain
+makes	it	easier	to	understand	what	a	program	does.	You	could	give	your
+variables	names	like	
+abrahamLincoln
+	or	
+monkey
+	even	if	your	program	had
+nothing	to	do	with	Abraham	Lincoln	or	monkeys—the	computer	would
+still	run	the	program	(as	long	as	you	consistently	used	
+abrahamLincoln
+	or
+monkey
+).	But	when	you	return	to	a	program	after	not	seeing	it	for	a	long
+time,	you	might	not	remember	what	each	variable	does.
+A	good	variable	name	describes	the	data	it	contains.	Imagine	that	you
+moved	to	a	new	house	and	labeled	all	of	your	moving	boxes	
+Stuff
+.	You’d
+never	find	anything!	The	variable	names	
+spam
+,	
+eggs
+,	
+bacon
+,	and	so	on
+(inspired	by	the	
+Monty	Python
+	“Spam”	sketch)	are	used	as	generic	names
+for	the	examples	in	this	book	and	in	much	of	Python’s	documentation,
+but	in	your	programs,	a	descriptive	name	helps	make	your	code	more
+readable.
+Variable	names	(as	well	as	everything	else	in	Python)	are	case	sensitive.
+Case	sensitive
+	means	the	same	variable	name	in	a	different	case	is
+considered	an	entirely	different	variable.	For	example,	
+spam
+,	
+SPAM
+,	
+Spam
+,	and
+
+sPAM
+	are	considered	four	different	variables	in	Python.	They	each	can
+contain	their	own	separate	values	and	can’t	be	used	interchangeably.
+Summary
+So	when	are	we	going	to	start	making	encryption	programs?	Soon.	But
+before	you	can	hack	ciphers,	you	need	to	learn	just	a	few	more	basic
+programming	concepts	so	there’s	one	more	programming	chapter	you
+need	to	read.
+In	this	chapter,	you	learned	the	basics	of	writing	Python	instructions	in
+the	interactive	shell.	Python	needs	you	to	tell	it	exactly	what	to	do	in	a
+way	it	expects,	because	computers	only	understand	very	simple
+instructions.	You	learned	that	Python	can	evaluate	expressions	(that	is,
+reduce	the	expression	to	a	single	value)	and	that	expressions	are	values
+(such	as	
+2
+	or	
+5
+)	combined	with	operators	(such	as	
++
+	or	
+-
+).	You	also	learned
+that	you	can	store	values	inside	variables	so	your	program	can	remember
+them	to	use	later	on.
+The	interactive	shell	is	a	useful	tool	for	learning	what	Python
+instructions	do	because	it	lets	you	enter	them	one	at	a	time	and	see	the
+results.	In	
+Chapter	3
+,	you’ll	create	programs	that	contain	many
+instructions	that	are	executed	in	sequence	rather	than	one	at	a	time.	We’ll
+discuss	some	more	basic	concepts,	and	you’ll	write	your	first	program!
+PRACTICE	QUESTIONS
+Answers	to	the	practice	questions	can	be	found	on	the	book’s
+website	at	
+https://www.nostarch.com/crackingcodes/
+.
+1
+.	
+Which	is	the	operator	for	division,	
+/
+	or	
+\
+	?
+2
+.	
+Which	of	the	following	is	an	integer	value,	and	which	is	a
+floating-point	value?
+42
+3.141592
+3
+.	
+Which	of	the	following	lines	are	
+not
+	expressions?
+4 x 10 + 2
+3 * 7 + 1
+2 +
+42
+2 + 2
+
+spam = 42
+4.If	 you	 enter	 the	 following	 lines	 of	 code	 into	 the	 interactive
+shell,	what	do	lines	➊ 	and	➋	print?
+ spam = 20
+➊spam + 20
+SPAM = 30
+➊spam
+
+3
+STRINGS	AND	WRITING	PROGRAMS
+“The	only	way	to	learn	a	new	programming	language	is	by	writing	programs	in	it.”
+—Brian	Kernighan	and	Dennis	Ritchie,
+The	C	Programming	Language
+Chapter	2
+	gave	you	enough	integers	and	math	for	now.	Python	is	more
+than	just	a	calculator.	Because	cryptography	is	all	about	dealing	with	text
+values	by	turning	plaintext	into	ciphertext	and	back	again,	you’ll	learn
+how	to	store,	combine,	and	display	text	on	the	screen	in	this	chapter.
+You’ll	also	make	your	first	program,	which	greets	the	user	with	the	text
+“Hello,	world!”	and	lets	the	user	input	their	name.
+TOPICS	COVERED	IN	THIS	CHAPTER
+Strings
+String	concatenation	and	replication
+Indexes	and	slices
+The	
+print()
+	function
+Writing	source	code	with	IDLE
+Saving	and	running	programs	in	IDLE
+Comments
+The	
+input()
+	function
+Working	with	Text	Using	String	Values
+
+In	Python,	we	work	with	little	chunks	of	text	called	string	values	(or
+simply	
+strings
+).	All	of	our	cipher	and	hacking	programs	deal	with	string
+values	to	turn	plaintext	like	
+'One if by land, two if by space'
+	into	ciphertext
+like	
+'
+b1rJvsJo
+!Jyn1q,J702JvsJo!J63nprM'
+.	The	plaintext	and	ciphertext	are
+represented	in	our	program	as	string	values,	and	there	are	many	ways	in
+which	Python	code	can	manipulate	these	values.
+You	can	store	string	values	inside	variables	just	as	you	can	with	integer
+and	floating-point	values.	When	you	type	a	string,	put	it	between	two
+single	quotes	(
+'
+)	to	show	where	the	string	starts	and	ends.	Enter	the
+following	into	the	interactive	shell:
+>>> 
+spam = 'hello'
+The	single	quotes	are	not	part	of	the	string	value.	Python	knows	that
+'hello'
+	is	a	string	and	
+spam
+	is	a	variable	because	strings	are	surrounded	by
+quotes	and	variable	names	are	not.
+If	you	enter	
+spam
+	into	the	shell,	you	will	see	the	contents	of	the	
+spam
+variable	(the	
+'hello'
+	string):
+>>> 
+spam = 'hello'
+>>> 
+spam
+'hello'
+This	is	because	Python	evaluates	a	variable	to	the	value	stored	inside	it:
+in	this	case,	the	string	
+'hello'
+.	Strings	can	have	almost	any	keyboard
+character	in	them.	These	are	all	examples	of	strings:
+>>> 
+'hello'
+'hello'
+>>> 
+'KITTENS'
+'KITTENS'
+>>> 
+''
+''
+>>> 
+'7 apples, 14 oranges, 3 lemons'
+'7 apples, 14 oranges, 3 lemons'
+>>> 
+'Anything not pertaining to elephants is irrelephant.'
+'Anything not pertaining to elephants is irrelephant.'
+>>> 
+'O*&#wY%*&OcfsdYO*&gfC%YO*&%3yc8r2'
+'O*&#wY%*&OcfsdYO*&gfC%YO*&%3yc8r2'
+Notice	that	the	
+''
+	string	has	zero	characters	in	it;	there	is	nothing
+between	the	single	quotes.	This	is	known	as	a	
+blank	string
+	or	
+empty	string
+.
+String	Concatenation	with	the	+	Operator
+You	can	add	two	string	values	to	create	one	new	string	by	using	the	
++
+operator.	Doing	so	is	called	
+string	concatenation
+.	Enter	
+'Hello,' + 'world!'
+
+into	the	shell:
+>>> 
+'Hello,' + 'world!'
+'Hello,world!'
+Python	concatenates	
+exactly
+	the	strings	you	tell	it	to	concatenate,	so	it
+won’t	put	a	space	between	strings	when	you	concatenate	them.	If	you
+want	a	space	in	the	resulting	string,	there	must	be	a	space	in	one	of	the
+two	original	strings.	To	put	a	space	between	
+'Hello,'
+	and	
+'world!'
+,	you	can
+put	a	space	at	the	end	of	the	
+'Hello,'
+	string	and	before	the	second	single
+quote,	like	this:
+>>> 
+'Hello, ' + 'world!'
+'Hello, world!'
+The	
++
+	operator	can	concatenate	two	string	values	into	a	new	string
+value	(
+'
+Hello, ' + 'world!'
+	to	
+'Hello, world!'
+),	just	like	it	can	add	two	integer
+values	to	result	in	a	new	integer	value	(
+2 + 2
+	to	
+4
+).	Python	knows	what	the
++
+	operator	should	do	because	of	the	data	types	of	the	values.	As	you
+learned	in	
+Chapter	2
+,	the	data	type	of	a	value	tells	us	(and	the	computer)
+what	kind	of	data	the	value	is.
+You	can	use	the	
++
+	operator	in	an	expression	with	two	or	more	strings
+or	integers	as	long	as	the	data	types	match.	If	you	try	to	use	the	operator
+with	one	string	and	one	integer,	you’ll	get	an	error.	Enter	this	code	into
+the	interactive	shell:
+>>> 
+'Hello' + 42
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: must be str, not int
+>>> 
+'Hello' + '42'
+'Hello42'
+The	first	line	of	code	causes	an	error	because	
+'Hello'
+	is	a	string	and	
+42
+	is
+an	integer.	But	in	the	second	line	of	code,	
+'42'
+	is	a	string,	so	Python
+concatenates	it.
+String	Replication	with	the	*	Operator
+You	can	also	use	the	
+*
+	operator	on	a	string	and	an	integer	to	do	
+string
+replication
+.	This	replicates	(that	is,	repeats)	a	string	by	however	many
+times	the	integer	value	is.	Enter	the	following	into	the	interactive	shell:
+➊
+ >>> 
+'
+Hello' * 3
+   'HelloHelloHello'
+   >>> 
+spam = 'Abcdef'
+
+➋
+ >>> 
+spam = spam * 3
+   >>> 
+spam
+   'AbcdefAbcdefAbcdef'
+To	replicate	a	string,	type	the	string,	then	the	
+*
+	operator,	and	then	the
+number	of	times	you	want	the	string	to	repeat	
+➊
+.	You	can	also	store	a
+string,	like	we’ve	done	with	the	
+spam
+	variable,	and	then	replicate	the
+variable	instead	
+➋
+.	You	can	even	store	a	replicated	string	back	into	the
+same	variable	or	a	new	variable.
+As	you	saw	in	
+Chapter	2
+,	the	
+*
+	operator	can	work	with	two	integer
+values	to	multiply	them.	But	it	can’t	work	with	two	string	values,	which
+would	cause	an	error,	like	this:
+>>> 
+'Hello' * 'world!'
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: can't multiply sequence by non-int of type 'str'
+String	concatenation	and	string	replication	show	that	operators	in
+Python	can	do	different	tasks	based	on	the	data	types	of	the	values	they
+operate	on.	The	
++
+	operator	can	do	addition	or	string	concatenation.	The	
+*
+operator	can	do	multiplication	or	string	replication.
+Getting	Characters	from	Strings	Using	Indexes
+Your	encryption	programs	often	need	to	get	a	single	character	from	a
+string,	which	you	can	accomplish	through	indexing.	With	
+indexing
+,	you
+add	square	brackets	
+[
+	and	
+]
+	to	the	end	of	a	string	value	(or	a	variable
+containing	a	string)	with	a	number	between	them	to	access	one	character.
+This	number	is	called	the	
+index
+,	and	it	tells	Python	which	position	in	the
+string	has	the	character	you	want.	Python	indexes	start	at	
+0
+,	so	the	index
+of	the	first	character	in	a	string	is	
+0
+.	The	index	
+1
+	is	for	the	second
+character,	the	index	
+2
+	is	for	the	third	character,	and	so	on.
+Enter	the	following	into	the	interactive	shell:
+>>> 
+spam = 'Hello'
+>>> 
+spam[0]
+'H'
+>>> 
+spam[1]
+'e'
+>>> 
+spam[2]
+'l'
+
+
+Figure	3-1:	The	string	
+'Hello'
+	and	its	indexes
+Notice	that	the	expression	
+spam[0]
+	evaluates	to	the	string	value	
+'H'
+,
+because	
+H
+	is	the	first	character	in	the	string	
+'Hello'
+	and	indexes	start	at	
+0
+,
+not	
+1
+	(see	
+Figure	3-1
+).
+You	can	use	indexing	with	a	variable	containing	a	string	value,	as	we
+did	with	the	previous	example,	or	a	string	value	by	itself,	like	this:
+>>> 
+'Zophie'[2]
+'p'
+The	expression	
+'Zophie'[2]
+	evaluates	to	the	third	string	value,	which	is	a
+'p'
+.	This	
+'p'
+	string	is	just	like	any	other	string	value	and	can	be	stored	in	a
+variable.	Enter	the	following	into	the	interactive	shell:
+>>> 
+eggs = 'Zophie'[2]
+>>> 
+eggs
+'p'
+If	you	enter	an	index	that	is	too	large	for	the	string,	Python	displays	an
+"index out of range"
+	error	message,	as	you	can	see	in	the	following	code:
+>>> 
+'Hello'[10]
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+IndexError: string index out of range
+There	are	five	characters	in	the	string	
+'Hello'
+,	so	if	you	try	to	use	the
+index	
+10
+,	Python	displays	an	error.
+Figure	3-2:	The	string	
+'Hello'
+	and	its	negative	indexes
+Negative	Indexes
+Negative	indexes
+	start	at	the	end	of	a	string	and	go	backward.	The	negative
+index	
+-1
+	is	the	index	of	the	
+last
+	character	in	a	string.	The	index	
+-2
+	is	the
+index	of	the	second	to	last	character,	and	so	on,	as	shown	in	
+Figure	3-2
+.
+Enter	the	following	into	the	interactive	shell:
+>>> 
+'Hello'[-1]
+'o'
+>>> 
+'Hello'[-2]
+'l'
+>>> 
+'Hello'[-3]
+'l'
+
+>>> 
+'Hello'[-4]
+'e'
+>>> 
+'Hello'[-5]
+'H'
+>>> 
+'Hello'[0]
+'H'
+Notice	that	
+-5
+	and	
+0
+	are	the	indexes	for	the	same	character.	Most	of	the
+time,	your	code	will	use	positive	indexes,	but	sometimes	it’s	easier	to	use
+negative	ones.
+Getting	Multiple	Characters	from	Strings	Using	Slices
+If	you	want	to	get	more	than	one	character	from	a	string,	you	can	use
+slicing	instead	of	indexing.	A	
+slice
+	also	uses	the	
+[
+	and	
+]
+	square	brackets	but
+has	two	integer	indexes	instead	of	one.	The	two	indexes	are	separated	by	a
+colon	(
+:
+)	and	tell	Python	the	index	of	the	first	and	last	characters	in	the
+slice.	Enter	the	following	into	the	interactive	shell:
+>>> 
+'Howdy'[0:3]
+'How'
+The	string	that	the	slice	evaluates	to	begins	at	the	first	index	value	and
+goes	up	to,	but	does	not	include,	the	second	index	value.	Index	
+0
+	of	the
+string	value	
+'Howdy'
+	is	
+H
+	and	index	
+3
+	is	
+d
+.	Because	a	slice	goes	up	to	but	does
+not	include	the	second	index,	the	slice	
+'Howdy'[0:3]
+	evaluates	to	the	string
+value	
+'How'
+.
+Enter	the	following	into	the	interactive	shell:
+>>> 
+'Hello, world!'[0:5]
+'Hello'
+>>> 
+'Hello, world!'[7:13]
+'world!'
+>>> 
+'Hello, world!'[-6:-1]
+'world'
+>>> 
+'Hello, world!'[7:13][2]
+'r'
+Notice	that	the	expression	
+'Hello, world!'[7:13][2]
+	first	evaluates	the	list
+slice	to	
+'world!'[2]
+	and	then	further	evaluates	to	
+'r'
+.
+Unlike	indexes,	slicing	never	gives	you	an	error	if	you	give	too	large	an
+index	for	the	string.	It’ll	just	return	the	widest	matching	slice	it	can:
+>>> 
+'Hello'[0:999]
+'Hello'
+>>> 
+'Hello'[2:999]
+'llo'
+>>> 
+'Hello'[1000:2000]
+
+''
+The	expression	
+'Hello'[1000:2000]
+	returns	a	blank	string	because	the
+index	
+1000
+	is	after	the	end	of	the	string,	so	there	are	no	possible	characters
+this	slice	could	include.	Although	our	examples	don’t	show	this,	you	can
+also	slice	strings	stored	in	variables.
+Blank	Slice	Indexes
+If	you	omit	the	first	index	of	a	slice,	Python	will	automatically	use	index	
+0
+for	the	first	index.	The	expressions	
+'Howdy'[0:3]
+	and	
+'Howdy'[:3]
+	evaluate	to
+the	same	string:
+>>> 
+'Howdy'[:3]
+'How'
+>>> 
+'Howdy'[0:3]
+'How'
+If	you	omit	the	second	index,	Python	will	automatically	use	the	rest	of
+the	string	starting	from	the	first	index:
+>>> 
+'Howdy'[2:]
+'wdy'
+You	can	use	blank	indexes	in	many	different	ways.	Enter	the	following
+into	the	shell:
+>>> 
+myName = 'Zophie the Fat Cat'
+>>> 
+myName[-7:]
+'Fat Cat'
+>>> 
+myName[:10]
+'Zophie the'
+>>> 
+myName[7:]
+'the Fat Cat'
+As	you	can	see,	you	can	even	use	negative	indexes	with	a	blank	index.
+Because	
+-7
+	is	the	starting	index	in	the	first	example,	Python	counts
+backward	seven	characters	from	the	end	and	uses	that	as	its	starting	index.
+Then	it	returns	everything	from	that	index	to	the	end	of	the	string
+because	of	the	second	blank	index.
+Printing	Values	with	the	print()	Function
+Let’s	try	another	type	of	Python	instruction:	a	
+print()
+	function	call.	Enter
+the	following	into	the	interactive	shell:
+
+>>> 
+print('Hello!')
+Hello!
+>>> 
+print(42)
+42
+A	
+function
+	(like	
+print()
+	in	this	example)	has	code	inside	it	that	performs
+a	task,	such	as	printing	values	onscreen.	Many	different	functions	come
+with	Python	and	can	perform	useful	tasks	for	you.	To	
+call
+	a	function
+means	to	execute	the	code	inside	the	function.
+The	instructions	in	this	example	pass	a	value	to	
+print()
+	between	the
+parentheses,	and	the	
+print()
+	function	prints	the	value	to	the	screen.	The
+values	that	are	passed	when	a	function	is	called	are	
+arguments
+.	When	you
+write	programs,	you’ll	use	
+print()
+	to	make	text	appear	on	the	screen.
+You	can	pass	an	expression	to	
+print()
+	instead	of	a	single	value.	This	is
+because	the	value	that	is	actually	passed	to	
+print()
+	is	the	evaluated	value	of
+that	expression.	Enter	this	string	concatenation	expression	into	the
+interactive	shell:
+>>> 
+spam = 'Al'
+>>> 
+print('Hello, ' + spam)
+Hello, Al
+The	
+'Hello, ' + spam
+	expression	evaluates	to	
+'Hello, ' + 'Al'
+,	which	then
+evaluates	to	the	string	value	
+'Hello, Al'
+.	This	string	value	is	what	is	passed
+to	the	
+print()
+	call.
+Printing	Escape	Characters
+You	might	want	to	use	a	character	in	a	string	value	that	would	confuse
+Python.	For	example,	you	might	want	to	use	a	single	quote	character	as
+part	of	a	string.	But	you’d	get	an	error	message	because	Python	thinks
+that	single	quote	is	the	quote	ending	the	string	value	and	the	text	after	it
+is	bad	Python	code,	instead	of	the	rest	of	the	string.	Enter	the	following
+into	the	interactive	shell	to	see	the	error	in	action:
+>>> 
+print('Al's cat is named Zophie.')
+SyntaxError: invalid syntax
+To	use	a	single	quote	in	a	string,	you	need	to	use	an	
+escape	character
+.	An
+escape	character	is	a	backslash	character	followed	by	another	character—
+for	example,	
+\t
+,	
+\n
+,	or	
+\'
+.	The	slash	tells	Python	that	the	character	after
+the	slash	has	a	special	meaning.	Enter	the	following	into	the	interactive
+shell.
+
+>>> 
+print('Al\'s cat is named Zophie.')
+Al's cat is named Zophie.
+Now	Python	will	know	the	apostrophe	is	a	character	in	the	string
+value,	not	Python	code	marking	the	end	of	the	string.
+Table	3-1
+	shows	some	escape	characters	you	can	use	in	Python.
+Table	3-1:
+	Escape	Characters
+Escape	character
+Printed	result
+\\
+Backslash	(
+\
+)
+\'
+Single	quote	(
+'
+)
+\"
+Double	quote	(
+"
+)
+\n
+Newline
+\t
+Tab
+The	backslash	always	precedes	an	escape	character.	Even	if	you	just
+want	a	backslash	in	your	string,	you	can’t	add	a	backslash	alone	because
+Python	will	interpret	the	next	character	as	an	escape	character.	For
+example,	this	line	of	code	wouldn’t	work	correctly:
+>>> 
+print('It is a green\teal color.')
+It is a green    eal color.
+The	
+'t'
+	in	
+'teal'
+	is	identified	as	an	escape	character	because	it	comes
+after	a	backslash.	The	escape	character	
+\t
+	simulates	pushing	the	
+tab
+	key	on
+your	keyboard.
+Instead,	enter	this	code:
+>>> 
+print('It is a green\\teal color.')
+It is a green\teal color.
+This	time	the	string	will	print	as	you	intended,	because	putting	a
+second	backslash	in	the	string	makes	the	backslash	the	escape	character.
+Quotes	and	Double	Quotes
+Strings	don’t	always	have	to	be	between	two	single	quotes	in	Python.	You
+can	use	double	quotes	instead.	These	two	lines	print	the	same	thing:
+>>> 
+print('Hello, world!')
+
+Hello, world!
+>>> 
+print("Hello, world!")
+Hello, world!
+But	you	can’t	mix	single	and	double	quotes.	This	line	gives	you	an
+error:
+>>> 
+print('Hello, world!")
+SyntaxError: EOL while scanning string literal
+I	prefer	to	use	single	quotes	because	they’re	a	bit	easier	to	type	than
+double	quotes	and	Python	doesn’t	care	either	way.
+But	just	like	you	have	to	use	the	escape	character	
+\'
+	to	have	a	single
+quote	in	a	string	surrounded	by	single	quotes,	you	need	the	escape
+character	
+\"
+	to	have	a	double	quote	in	a	string	surrounded	by	double
+quotes.	For	example,	look	at	these	two	lines:
+>>> 
+print('Al\'s cat is Zophie. She says, "Meow."')
+Al's cat is Zophie. She says, "Meow."
+>>> 
+print("Zophie said, \"I can say things other than 'Meow' you know.\"")
+Zophie said, "I can say things other than 'Meow' you know."
+You	don’t	need	to	escape	double	quotes	in	single-quote	strings,	and
+you	don’t	need	to	escape	single	quotes	in	double-quote	strings.	The
+Python	interpreter	is	smart	enough	to	know	that	if	a	string	starts	with	one
+kind	of	quote,	the	other	kind	of	quote	doesn’t	mean	the	string	is	ending.
+Writing	Programs	in	IDLE’s	File	Editor
+Until	now,	you’ve	been	entering	instructions	one	at	a	time	into	the
+interactive	shell.	But	when	you	write	programs,	you’ll	enter	several
+instructions	and	have	them	run	without	waiting	on	you	for	the	next	one.
+It’s	time	to	write	your	first	program!
+The	name	of	the	software	program	that	provides	the	interactive	shell	is
+called	IDLE	(
+I
+ntegrated	
+D
+eve
+L
+opment	
+E
+nvironment).	In	addition	to	the
+interactive	shell,	IDLE	also	has	a	
+file	editor
+,	which	we’ll	open	now.
+At	the	top	of	the	Python	shell	window,	select	
+File
+▸
+New	Window
+.	A
+new	blank	window,	the	file	editor,	will	appear	for	you	to	enter	a	program,
+as	shown	in	
+Figure	3-3
+.	The	bottom-right	corner	of	the	file	editor
+window	shows	you	what	line	and	column	the	cursor	currently	is	on.
+
+Figure	3-3:	The	file	editor	window	with	the	cursor	at	line	1,	column	0
+You	can	tell	the	difference	between	the	file	editor	window	and	the
+interactive	shell	window	by	looking	for	the	
+>>>
+	prompt.	The	interactive
+shell	always	displays	the	prompt,	and	the	file	editor	doesn’t.
+Source	Code	for	the	“Hello,	World!”	Program
+Traditionally,	programmers	who	are	learning	a	new	language	make	their
+first	program	display	the	text	
+"Hello, world!"
+	on	the	screen.	We’ll	create
+our	own	“Hello,	world!”	program	next	by	entering	text	into	the	new	file
+editor	window.	We	call	this	text	the	program’s	
+source	code
+	because	it
+contains	the	instructions	that	Python	will	follow	to	determine	exactly	how
+the	program	should	behave.
+You	can	download	the	“Hello,	world!”	source	code	from
+https://www.nostarch.com/crackingcodes/
+.	If	you	get	errors	after	entering	this
+code,	compare	it	to	the	book’s	code	using	the	online	diff	tool	(see
+“
+Checking	Your	Source	Code	with	the	Online	Diff	Tool
+”	next).
+Remember	that	you	don’t	type	the	line	numbers;	they	only	appear	in	this
+book	to	aid	explanation.
+hello.py
+1. # This program says hello and asks for my name.
+2. print('Hello, world!')
+3. print('What is your name?')
+4. myName = input()
+5. print('It is good to meet you, ' + myName)
+The	IDLE	program	will	display	different	types	of	instructions	in
+different	colors.	When	you’re	done	entering	this	code,	the	window	should
+
+look	like	
+Figure	3-4
+.
+Figure	3-4:	The	file	editor	window	will	look	like	this	after	you	enter	the	code.
+Checking	Your	Source	Code	with	the	Online	Diff	Tool
+Even	though	you	could	copy	and	paste	or	download	the	
+hello.py
+	code	from
+this	book’s	website,	you	should	still	type	this	program	manually.	Doing	so
+will	give	you	more	familiarity	with	the	code	in	the	program.	However,
+you	might	make	some	mistakes	while	typing	it	into	the	file	editor.
+To	compare	the	code	you	typed	to	the	code	in	this	book,	use	the
+online	diff	tool	shown	in	
+Figure	3-5
+.	Copy	the	text	of	your	code	and	then
+navigate	to	the	diff	tool	on	the	book’s	website	at
+https://www.nostarch.com/crackingcodes/
+.	Select	the	
+hello.py
+	program	from
+the	drop-down	menu.	Paste	your	code	into	the	text	field	on	this	web	page
+and	click	the	
+Compare
+	button.	The	diff	tool	shows	any	differences
+between	your	code	and	the	code	in	this	book.	This	is	an	easy	way	to	find
+any	typos	causing	errors	in	your	program.
+
+Figure	3-5:	The	online	diff	tool
+Using	IDLE	to	Access	Your	Program	Later
+When	you	write	programs,	you	might	want	to	save	them	and	come	back
+to	them	later,	especially	after	you’ve	typed	a	very	long	program.	IDLE	has
+features	for	saving	and	opening	programs	just	like	a	word	processer	has
+features	to	save	and	reopen	your	documents.
+Saving	Your	Program
+After	you’ve	entered	your	source	code,	save	it	so	you	won’t	have	to	retype
+it	each	time	you	want	to	run	it.	Choose	
+File
+▸
+Save	As
+	from	the	menu	at
+the	top	of	the	file	editor	window.	The	Save	As	dialog	should	open,	as
+shown	in	
+Figure	3-6
+.	Enter	
+hello.py
+	in	the	
+File	Name
+	field	and	click
+Save
+.
+
+Figure	3-6:	Saving	the	program
+You	should	save	your	programs	often	as	you	type	them	so	you	won’t
+lose	your	work	if	the	computer	crashes	or	if	you	accidentally	exit	from
+IDLE.	As	a	shortcut,	you	can	press	
+ctrl
+-S	on	Windows	and	Linux	or	
+-S
+on	macOS	to	save	your	file.
+Running	Your	Program
+Now	it’s	time	to	run	your	program.	Select	
+Run
+▸
+Run	Module
+	or	just
+press	the	F5	key	on	your	keyboard.	Your	program	should	run	in	the	shell
+window	that	appeared	when	you	first	started	IDLE.	Remember	that	you
+must	press	F5	from	the	file	editor’s	window,	not	the	interactive	shell’s
+window.
+When	the	program	asks	for	your	name,	enter	it,	as	shown	in	
+Figure	3-
+7
+.
+Figure	3-7:	The	interactive	shell	looks	like	this	when	running	the	“Hello,	world!”	program.
+
+Now	when	you	press	
+enter
+,	the	program	should	greet	you	(the	
+user
+,	that
+is,	the	one	using	the	program)	by	name.	Congratulations!	You’ve	written
+your	first	program.	You	are	now	a	beginning	computer	programmer.	(If
+you	like,	you	can	run	this	program	again	by	pressing	F5	again.)
+If	instead	you	get	an	error	that	looks	like	this,	it	means	you	are	running
+the	program	with	Python	2	instead	of	Python	3:
+Hello, world!
+What is your name?
+Albert
+Traceback (most recent call last):
+  File "C:/Python27/hello.py", line 4, in <module>
+    myName = input()
+  File "<string>", line 1, in <module>
+NameError: name 'Albert' is not defined
+The	error	is	caused	by	the	
+input()
+	function	call,	which	behaves
+differently	in	Python	2	and	3.	Before	continuing,	install	Python	3	by
+following	the	instructions	in	“
+Downloading	and	Installing	Python
+”	on
+page	xxv
+.
+Opening	the	Programs	You’ve	Saved
+Close	the	file	editor	by	clicking	the	X	in	the	top	corner.	To	reload	a	saved
+program,	choose	
+File
+▸
+Open
+	from	the	menu.	Do	that	now,	and	in	the
+window	that	appears,	choose	
+hello.py
+.	Then	click	the	
+Open
+	button.	Your
+saved	
+hello.py
+	program	should	open	in	the	file	editor	window.
+How	the	“Hello,	World!”	Program	Works
+Each	line	in	the	“Hello,	world!”	program	is	an	instruction	that	tells
+Python	exactly	what	to	do.	A	computer	program	is	a	lot	like	a	recipe.	Do
+the	first	step	first,	then	the	second,	and	so	on	until	you	reach	the	end.
+When	the	program	follows	instructions	step-by-step,	we	call	it	the
+program	execution
+,	or	just	the	
+execution
+.
+Each	instruction	is	followed	in	sequence,	beginning	from	the	top	of
+the	program	and	working	down	the	list	of	instructions.	The	execution
+starts	at	the	first	line	of	code	and	then	moves	downward.	But	the
+execution	can	also	skip	around	instead	of	just	going	from	top	to	bottom;
+you’ll	find	out	how	to	do	this	in	
+Chapter	4
+.
+Let’s	look	at	the	“Hello,	world!”	program	one	line	at	a	time	to	see
+what	it’s	doing,	beginning	with	line	1.
+
+Comments
+Any	text	following	a	
+hash	mark
+	(
+#
+)	is	a	comment:
+1. # This program says hello and asks for my name.
+Comments	are	not	for	the	computer	but	instead	are	for	you,	the
+programmer.	The	computer	ignores	them.	They’re	used	to	remind	you
+what	the	program	does	or	to	tell	others	who	might	look	at	your	code	what
+your	code	does.
+Programmers	usually	put	a	comment	at	the	top	of	their	code	to	give
+the	program	a	title.	The	IDLE	program	displays	comments	in	red	text	to
+help	them	stand	out.	Sometimes,	programmers	will	put	a	
+#
+	in	front	of	a
+line	of	code	to	temporarily	skip	it	while	testing	a	program.	This	is	called
+commenting	out
+	code,	and	it	can	be	useful	when	you’re	trying	to	figure	out
+why	a	program	doesn’t	work.	You	can	remove	the	
+#
+	later	when	you’re
+ready	to	put	the	line	back	in.
+Printing	Directions	to	the	User
+The	next	two	lines	display	directions	to	the	user	with	the	
+print()
+	function.
+A	function	is	like	a	mini-program	inside	your	program.	The	great	benefit
+of	using	functions	is	that	we	only	need	to	know	what	the	function	does,
+not	how	it	does	it.	For	instance,	you	need	to	know	that	
+print()
+	displays	text
+onscreen,	but	you	don’t	need	to	know	the	exact	code	inside	the	function
+that	does	this.	
+A	function	call	is	a	piece	of	code	that	tells	the	program	to
+run	the	code	inside	a	function.
+Line	2	of	
+hello.py
+	is	a	call	to	
+print()
+	(with	the	string	to	be	printed	inside
+the	parentheses).	Line	3	is	another	
+print()
+	call.	This	time	the	program
+displays	
+'What is your name?'
+2. print('Hello, world!')
+3. print('What is your name?')
+We	add	parentheses	to	the	end	of	function	names	to	make	it	clear	that
+we’re	referring	to	a	function	named	
+print()
+,	not	a	variable	named	
+print
+.
+The	parentheses	at	the	end	of	the	function	tell	Python	we’re	using	a
+function,	much	as	the	quotes	around	the	number	
+'42'
+	tell	Python	that
+we’re	using	the	string	
+'42'
+,	not	the	integer	
+42
+.
+Taking	a	User’s	Input
+
+Line	4	has	an	assignment	statement	with	a	variable	(
+myName
+)	and	the	new
+function	call	
+input()
+:
+4. myName = input()
+When	
+input()
+	is	called,	the	program	waits	for	the	user	to	type	in	some
+text	and	press	
+enter
+.	The	text	string	that	the	user	enters	(their	name)
+becomes	the	string	value	that	is	stored	in	
+myName
+.
+Like	expressions,	function	calls	evaluate	to	a	single	value.	The	value
+that	the	call	evaluates	to	is	called	the	
+return	value
+.	(In	fact,	we	can	also	use
+the	word	“returns”	to	mean	the	same	thing	as	“evaluates”	for	function
+calls.)	In	this	case,	the	return	value	of	
+input()
+	is	the	string	that	the	user
+entered,	which	should	be	their	name.	If	the	user	entered	
+Albert
+,	the	
+input()
+call	evaluates	to	(that	is,	returns)	the	string	
+'Albert'
+.
+Unlike	
+print()
+,	the	
+input()
+	function	doesn’t	need	any	arguments,	which
+is	why	there	is	nothing	between	the	parentheses.
+The	last	line	of	the	code	in	
+hello.py
+	is	another	
+print()
+	call:
+5. print('It is good to meet you, ' + myName)
+For	line	5’s	
+print()
+	call,	we	use	the	plus	operator	(
++
+)	to	concatenate	the
+string	
+'It is good to meet you, '
+	and	the	string	stored	in	the	
+myName
+	variable,
+which	is	the	name	that	the	user	input	into	the	program.	This	is	how	we
+get	the	program	to	greet	the	user	by	name.
+Ending	the	Program
+When	the	program	executes	the	last	line,	it	stops.	At	this	point	it	has
+terminated
+	or	
+exited
+,	and	all	the	variables	are	forgotten	by	the	computer,
+including	the	string	stored	in	
+myName
+.	If	you	try	running	the	program	again
+and	entering	a	different	name,	it	will	print	that	name.
+Hello, world!
+What is your name?
+Zophie
+It is good to meet you, Zophie
+Remember	that	the	computer	only	does	exactly	what	you	program	it	to
+do.	In	this	program,	it	asks	you	for	your	name,	lets	you	enter	a	string,	and
+then	says	hello	and	displays	the	string	you	entered.
+But	computers	are	dumb.	The	program	doesn’t	care	if	you	enter	your
+name,	someone	else’s	name,	or	just	something	silly.	You	can	type	in
+anything	you	want,	and	the	computer	will	treat	it	the	same	way:
+
+Hello, world!
+What is your name?
+poop
+It is good to meet you, poop
+Summary
+Writing	programs	is	just	about	knowing	how	to	speak	the	computer’s
+language.	You	learned	a	bit	about	how	to	do	this	in	
+Chapter	2
+,	and	now
+you’ve	put	together	several	Python	instructions	to	make	a	complete
+program	that	asks	for	the	user’s	name	and	greets	that	user.
+In	this	chapter,	you	learned	several	new	techniques	to	manipulate
+strings,	like	using	the	
++
+	operator	to	concatenate	strings.	You	can	also	use
+indexing	and	slicing	to	create	a	new	string	from	part	of	a	different	string.
+The	rest	of	the	programs	in	this	book	will	be	more	complex	and
+sophisticated,	but	they’ll	all	be	explained	line	by	line.	You	can	always
+enter	instructions	into	the	interactive	shell	to	see	what	they	do	before	you
+put	them	into	a	complete	program.
+Next,	we’ll	start	writing	our	first	encryption	program:	the	reverse
+cipher.
+PRACTICE	QUESTIONS
+Answers	to	the	practice	questions	can	be	found	on	the	book’s
+website	at	
+https://www.nostarch.com/crackingcodes/
+.
+1
+.	
+If	you	assign	
+spam = 'Cats'
+,	what	do	the	following	lines	print?
+spam + spam + spam
+spam * 3
+2
+.	
+What	do	the	following	lines	print?
+print("Dear Alice,\nHow are you?\nSincerely,\nBob")
+print('Hello' + 'Hello')
+3
+.	
+If	you	assign	
+spam = 'Four score and seven years is eighty seven
+years.'
+,	what	would	each	of	the	following	lines	print?
+print(spam[5])
+print(spam[-3])
+print(spam[0:4] + spam[5])
+print(spam[-3:-1])
+
+print(spam[:10])
+print(spam[-5:])
+print(spam[:])
+4.Which	window	displays	the	 >>>	prompt,	the	interactive	shell	or
+the	file	editor?
+5.What	does	the	following	line	print?
+#print('Hello, world!')
+
+4
+THE	REVERSE	CIPHER
+“Every	man	is	surrounded	by	a	neighborhood	of	voluntary	spies.”
+—Jane	Austen,
+	Northanger	Abbey
+The	reverse	cipher	encrypts	a	message	by	printing	it	in	reverse	order.	So
+“Hello,	world!”	encrypts	to	“!dlrow	,olleH”.	To	decrypt,	or	get	the
+original	message,	you	simply	reverse	the	encrypted	message.	The
+encryption	and	decryption	steps	are	the	same.
+However,	this	reverse	cipher	is	weak,	making	it	easy	to	figure	out	the
+plaintext.	Just	by	looking	at	the	ciphertext,	you	can	figure	out	the	message
+is	in	reverse	order.
+.syas	ti	tahw	tuo	erugif	llits	ylbaborp	nac	uoy	,detpyrcne	si	siht	hguoht
+neve	,elpmaxe	roF
+But	the	code	for	the	reverse	cipher	program	is	easy	to	explain,	so	we’ll
+use	it	as	our	first	encryption	program.
+TOPICS	COVERED	IN	THIS	CHAPTER
+The	
+len()
+	function
+while
+	loops
+Boolean	data	type
+Comparison	operators
+Conditions
+Blocks
+
+Source	Code	for	the	Reverse	Cipher	Program
+In	IDLE,	click	
+File
+▸
+New	Window
+	to	create	a	new	file	editor	window.
+Enter	the	following	code,	save	it	as	
+reverseCipher.py
+,	and	press	F5	to	run	it,
+but	remember	not	to	type	the	numbers	before	each	line:
+reverseCipher.py
+ 1. # Reverse Cipher
+ 2. # https://www.nostarch.com/crackingcodes/ (BSD Licensed)
+ 3.
+ 4. message = 'Three can keep a secret, if two of them are dead.'
+ 5. translated = ''
+ 6.
+ 7. i = len(message) - 1
+ 8. while i >= 0:
+ 9.     translated = translated + message[i]
+10.     i = i - 1
+11.
+12. print(translated)
+Sample	Run	of	the	Reverse	Cipher	Program
+When	you	run	the	
+reverseCipher.py
+	program,	the	output	looks	like	this:
+.daed era meht fo owt fi ,terces a peek nac eerhT
+To	decrypt	this	message,	copy	the	
+.daed era meht fo owt fi ,terces a peek
+nac eerhT
+	text	to	the	clipboard	by	highlighting	the	message	and	pressing
+ctrl
+-C	on	Windows	and	Linux	or	
+-C	on	macOS.	Then	paste	it	(using
+ctrl
+-V	on	Windows	and	Linux	or	
+-V	on	macOS)	as	the	string	value
+stored	in	
+message
+	on	line	4.	Be	sure	to	retain	the	single	quotes	at	the
+beginning	and	end	of	the	string.	The	new	line	4	looks	like	this	(with	the
+change	in	bold):
+ 
+4. message = 
+'.daed era meht fo owt fi ,terces a peek nac eerhT'
+Now	when	you	run	the	
+reverseCipher.py
+	program,	the	output	decrypts
+to	the	original	message:
+Three can keep a secret, if two of them are dead.
+Setting	Up	Comments	and	Variables
+
+The	first	two	lines	in	
+reverseCipher.py
+	are	comments	explaining	what	the
+program	is	and	the	website	where	you	can	find	it.
+ 1. # Reverse Cipher
+ 2. # https://www.nostarch.com/crackingcodes/ (BSD Licensed)
+The	
+BSD Licensed
+	part	means	this	program	is	free	to	copy	and	modify	by
+anyone	as	long	as	the	program	retains	the	credits	to	the	original	author	(in
+this	case,	the	book’s	website	at	
+https://www.nostarch.com/crackingcodes/
+	in	the
+second	line).	I	like	to	have	this	info	in	the	file	so	if	it	gets	copied	around
+the	internet,	a	person	who	downloads	it	always	knows	where	to	look	for
+the	original	source.	They’ll	also	know	this	program	is	open	source
+software	and	free	to	distribute	to	others.
+Line	3	is	just	a	blank	line,	and	Python	skips	it.	Line	4	stores	the	string
+we	want	to	encrypt	in	a	variable	named	
+message
+:
+ 4. message = 'Three can keep a secret, if two of them are dead.'
+Whenever	we	want	to	encrypt	or	decrypt	a	new	string,	we	just	type	the
+string	directly	into	the	code	on	line	4.
+The	
+translated
+	variable	on	line	5	is	where	our	program	will	store	the
+reversed	string:
+ 5. translated = ''
+At	the	start	of	the	program,	the	
+translated
+	variable	contains	this	blank
+string.	(Remember	that	the	blank	string	is	two	single	quote	characters,
+not	one	double	quote	character.)
+Finding	the	Length	of	a	String
+Line	7	is	an	assignment	statement	storing	a	value	in	a	variable	named	
+i
+:
+ 7. i = len(message) - 1
+The	expression	evaluated	and	stored	in	the	variable	is	
+len(message) - 1
+.
+The	first	part	of	this	expression,	
+len(message)
+,	is	a	function	call	to	the	
+len()
+function,	which	accepts	a	string	argument,	just	like	
+print()
+,	and	returns	an
+integer	value	of	how	many	characters	are	in	the	string	(that	is,	the	
+length
+of	the	string).	In	this	case,	we	pass	the	
+message
+	variable	to	
+len()
+,	so
+len(message)
+	returns	how	many	characters	are	in	the	string	value	stored	in
+message
+.
+
+Let’s	experiment	with	the	
+len()
+	function	in	the	interactive	shell.	Enter
+the	following	into	the	interactive	shell:
+>>> 
+len('Hello')
+5
+>>> 
+len('')
+0
+>>> 
+spam = 'Al'
+>>> 
+len(spam)
+2
+>>> 
+len('Hello,' + ' ' + 'world!')
+13
+From	the	return	value	of	
+len()
+,	we	know	the	string	
+'Hello'
+	has	five
+characters	in	it	and	the	blank	string	has	zero	characters	in	it.	If	we	store
+the	string	
+'Al'
+	in	a	variable	and	then	pass	the	variable	to	
+len()
+,	the	function
+returns	
+2
+.	If	we	pass	the	expression	
+'Hello,' + ' ' + 'world!'
+	to	the	
+len()
+function,	it	returns	
+13
+.	The	reason	is	that	
+'Hello,' + ' ' + 'world!'
+	evaluates
+to	the	string	value	
+'Hello, world!'
+,	which	has	13	characters	in	it.	(The	space
+and	the	exclamation	point	count	as	characters.)
+Now	that	you	understand	how	the	
+len()
+	function	works,	let’s	return	to
+line	7	of	the	
+reverseCipher.py
+	program.	Line	7	finds	the	index	of	the	last
+character	in	
+message
+	by	subtracting	1	from	
+len(message)
+.	It	has	to	subtract	1
+because	the	indexes	of,	for	example,	a	5-character	length	string	like	
+'Hello'
+are	from	0	to	4.	This	integer	is	then	stored	in	the	
+i
+	variable.
+Introducing	the	while	Loop
+Line	8	is	a	type	of	Python	instruction	called	a	
+while
+	loop	or	
+while
+statement:
+ 8. while i >= 0:
+A	
+while
+	loop	is	made	up	of	four	parts	(as	shown	in	
+Figure	4-1
+).
+
+
+Figure	4-1:	The	parts	of	a	
+while
+	loop
+A	
+condition
+	is	an	expression	used	in	a	
+while
+	statement.	The	block	of	code
+in	the	
+while
+	statement	will	execute	as	long	as	the	condition	is	true.
+To	understand	
+while
+	loops,	you	first	need	to	learn	about	Booleans,
+comparison	operators,	and	blocks.
+The	Boolean	Data	Type
+The	
+Boolean
+	data	type	has	only	two	values:	
+True
+	or	
+False
+.	These	Boolean
+values,	or	
+bools
+,	are	case	sensitive	(you	always	need	to	capitalize	the	
+T
+	and
+F
+,	while	leaving	the	rest	in	lowercase).	They	are	not	string	values,	so	you
+don’t	put	quotes	around	
+True
+	or	
+False
+.
+Try	out	some	bools	by	entering	the	following	into	the	interactive	shell:
+>>> 
+spam = True
+>>> 
+spam
+True
+>>> 
+spam = False
+>>> 
+spam
+False
+Like	a	value	of	any	other	data	type,	bools	can	be	stored	in	variables.
+Comparison	Operators
+In	line	8	of	the	
+reverseCipher.py
+	program,	look	at	the	expression	after	the
+while
+	keyword:
+ 8. while i >= 0:
+The	expression	that	follows	the	
+while
+	keyword	(the	
+i >= 0
+	part)	contains
+two	values	(the	value	in	the	variable	
+i
+	and	the	integer	value	
+0
+)	connected
+by	the	
+>=
+	sign,	called	the	“greater	than	or	equal”	operator.	The	
+>=
+	operator
+is	a	
+comparison
+	
+operator
+.
+We	use	comparison	operators	to	compare	two	values	and	evaluate	to	a
+True
+	or	
+False
+	Boolean	value.	
+Table	4-1
+	lists	the	comparison	operators.
+Table	4-1:
+	Comparison	Operators
+Operator	sign
+Operator	name
+<
+Less	than
+>
+Greater	than
+
+<=
+Less	than	or	equal	to
+>=
+Greater	than	or	equal	to
+==
+Equal	to
+!=
+Not	equal	to
+Enter	the	following	expressions	in	the	interactive	shell	to	see	the
+Boolean	value	they	evaluate	to:
+>>> 
+0 < 6
+True
+>>> 
+6 < 0
+False
+>>> 
+50 < 10.5
+False
+>>> 
+10.5 < 11.3
+True
+>>> 
+10 < 10
+False
+The	expression	
+0 < 6
+	returns	the	Boolean	value	
+True
+	because	the
+number	
+0
+	is	less	than	the	number	
+6
+.	But	because	
+6
+	is	not	less	than	
+0
+,	the
+expression	
+6 < 0
+	evaluates	to	
+False
+.	The	expression	
+50 < 10.5
+	is	
+False
+	because
+50
+	isn’t	less	than	
+10.5
+.	The	expression	
+10 < 11.3
+	evaluates	to	
+True
+	because	
+10.5
+is	less	than	
+11.3
+.
+Look	again	at	
+10 < 10
+.	It’s	
+False
+	because	the	number	
+10
+	isn’t	less	than	the
+number	
+10
+.	They	are	exactly	the	same.	(If	Alice	were	the	same	height	as
+Bob,	you	wouldn’t	say	that	Alice	was	shorter	than	Bob.	That	statement
+would	be	false.)
+Enter	some	expressions	using	the	
+<=
+	(less	than	or	equal	to)	and	
+>=
+(greater	than	or	equal	to)	operators:
+>>> 
+10 <= 20
+True
+>>> 
+10 <= 10
+True
+>>> 
+10 >= 20
+False
+>>> 
+20 >= 20
+True
+Notice	that	
+10 <= 10
+	is	
+True
+	because	the	operator	checks	if	10	is	less	than
+or	equal	to
+	10.	Remember	that	for	the	“less	than	or	equal	to”	and	“greater
+than	or	equal	to”	operators,	the	
+<
+	or	
+>
+	sign	always	comes	before	the	
+=
+	sign.
+Now	enter	some	expressions	that	use	the	
+==
+	(equal	to)	and	
+!=
+	(not	equal
+to)	operators	into	the	shell	to	see	how	they	work:
+
+>>> 
+10 == 10
+True
+>>> 
+10 == 11
+False
+>>> 
+11 == 10
+False
+>>> 
+10 != 10
+False
+>>> 
+10 != 11
+True
+These	operators	work	as	you	would	expect	for	integers.	Comparing
+integers	that	are	equal	to	each	other	with	the	
+==
+	operator	evaluates	as	
+True
+and	unequal	values	as	
+False
+.	When	you	compare	with	the	
+!=
+	operator,	it’s
+the	opposite.
+String	comparisons	work	similarly:
+>>> 
+'Hello' == 'Hello'
+True
+>>> 
+'Hello' == 'Goodbye'
+False
+>>> 
+'Hello' == 'HELLO'
+False
+>>> 
+'Goodbye' != 'Hello'
+True
+Capitalization	matters	to	Python,	so	string	values	that	don’t	match
+capitalization	exactly	are	not	the	same	string.	For	example,	the	strings
+'
+Hello
+'
+	and	
+'
+HELLO
+'
+	are	not	equal	to	each	other,	so	comparing	them	with	
+==
+evaluates	to	
+False
+.
+Notice	the	difference	between	the	assignment	operator	(
+=
+)	and	the
+“equal	to”	comparison	operator	(
+==
+).	The	single	equal	sign	(
+=
+)	is	used	to
+assign	a	value	to	a	variable,	and	the	double	equal	sign	(
+==
+)	is	used	in
+expressions	to	check	whether	two	values	are	the	same.	If	you’re	asking
+Python	whether	two	things	are	equal,	use	
+==
+.	If	you’re	telling	Python	to
+set	a	variable	to	a	value,	use	
+=
+.
+In	Python,	string	and	integer	values	are	always	considered	different
+values	and	will	never	be	equal	to	each	other.	For	example,	enter	the
+following	into	the	interactive	shell:
+>>> 
+42 == 'Hello'
+False
+>>> 
+42 == '42'
+False
+>>> 
+10 == 10.0
+True
+Even	though	they	look	alike,	the	integer	
+42
+	and	the	string	
+'42'
+	aren’t
+considered	equal	because	a	string	isn’t	the	same	as	a	number.	Integers	and
+
+floating-point	numbers	can	be	equal	to	each	other	because	they’re	both
+numbers.
+When	you’re	working	with	comparison	operators,	just	remember	that
+every	expression	always	evaluates	to	a	
+True
+	or	
+False
+	value.
+Blocks
+A	
+block
+	is	one	or	more	lines	of	code	grouped	together	with	the	same
+minimum	amount	of	
+indentation
+	(that	is,	the	number	of	spaces	in	front	of
+the	line).
+A	block	begins	when	a	line	is	indented	by	four	spaces.	Any	following
+line	that	is	also	indented	by	at	least	four	spaces	is	part	of	the	block.	When
+a	line	is	indented	with	another	four	spaces	(for	a	total	of	eight	spaces	in
+front	of	the	line),	a	new	block	begins	inside	the	first	block.	A	block	ends
+when	there	is	a	line	of	code	with	the	same	indentation	as	before	the	block
+started.
+Let’s	look	at	some	imaginary	code	(it	doesn’t	matter	what	the	code	is,
+because	we’re	only	going	to	focus	on	the	indentation	of	each	line).	The
+indented	spaces	are	replaced	with	gray	dots	here	to	make	them	easier	to
+count.
+You	can	see	that	line	1	has	no	indentation;	that	is,	there	are	zero	spaces
+in	front	of	the	line	of	code.	But	line	2	has	four	spaces	of	indentation.
+Because	this	is	a	larger	amount	of	indentation	than	the	previous	line,	we
+know	a	new	block	has	begun.	Line	3	also	has	four	spaces	of	indentation,
+so	we	know	the	block	continues	on	line	3.
+Line	4	has	even	more	indentation	(eight	spaces),	so	a	new	block	has
+begun.	This	block	is	inside	the	other	block.	In	Python,	you	can	have
+blocks	within	blocks.
+On	line	5,	the	amount	of	indentation	has	decreased	to	four,	so	we
+know	that	the	block	on	the	previous	line	has	ended.	Line	4	is	the	only	line
+
+in	that	block.	Because	line	5	has	the	same	amount	of	indentation	as	the
+block	in	lines	2	and	3,	it’s	still	part	of	the	original	outer	block,	even
+though	it’s	not	part	of	the	block	on	line	4.
+Line	6	is	a	blank	line,	so	we	just	skip	it;	it	doesn’t	affect	the	blocks.
+Line	7	has	four	spaces	of	indentation,	so	we	know	that	the	block	that
+started	on	line	2	has	continued	to	line	7.
+Line	8	has	zero	spaces	of	indentation,	which	is	less	indentation	than
+the	previous	line.	This	decrease	in	indentation	tells	us	that	the	previous
+block,	the	block	that	started	on	line	2,	has	ended.
+This	code	shows	two	blocks.	The	first	block	goes	from	line	2	to	line	7.
+The	second	block	just	consists	of	line	4	(and	is	inside	the	other	block).
+NOTE
+Blocks	don’t	always	have	to	be	delineated	by	four	spaces.	Blocks	can	use	any
+number	of	spaces,	but	the	convention	is	to	use	four	per	indentation.
+The	while	Loop	Statement
+Let’s	look	at	the	full	
+while
+	statement	starting	on	line	8	of	
+reverseCipher.py
+:
+ 8. while i >= 0:
+ 9.     translated = translated + message[i]
+10.     i = i - 1
+11.
+12. print(translated)
+A	
+while
+	statement	tells	Python	to	first	check	what	the	condition
+evaluates	to,	which	on	line	8	is	
+i >= 0
+.	You	can	think	of	the	
+while
+	statement
+while i >= 0:
+	as	meaning	“While	the	variable	
+i
+	is	greater	than	or	equal	to
+zero,	keep	executing	the	code	in	the	following	block.”	If	the	condition
+evaluates	to	
+True
+,	the	program	execution	enters	the	block	following	the
+while
+	statement.	By	looking	at	the	indentation,	you	can	see	that	this	block
+is	made	up	of	lines	9	and	10.	When	it	reaches	the	bottom	of	the	block,	the
+program	execution	jumps	back	to	the	
+while
+	statement	on	line	8	and	checks
+the	condition	again.	If	it’s	still	
+True
+,	the	execution	jumps	into	the	start	of
+the	block	and	runs	the	code	in	the	block	again.
+If	the	
+while
+	statement’s	condition	evaluates	to	
+False
+,	the	program
+execution	skips	the	code	inside	the	following	block	and	jumps	down	to	the
+first	line	after	the	block	(which	is	line	12).
+
+“Growing”	a	String
+Keep	in	mind	that	on	line	7,	the	
+i
+	variable	is	first	set	to	the	length	of	the
+message
+	minus	1,	and	the	
+while
+	loop	on	line	8	keeps	executing	the	lines
+inside	the	following	block	until	the	condition	
+i >= 0
+	is	
+False
+:
+ 7. i = len(message) - 1
+ 8. while i >= 0:
+ 9.     translated = translated + message[i]
+10.     i = i – 1
+11.
+12. print(translated)
+Line	9	is	an	assignment	statement	that	stores	a	value	in	the	
+translated
+variable.	The	value	that	is	stored	is	the	current	value	of	
+translated
+concatenated	with	the	character	at	the	index	
+i
+	in	
+message
+.	As	a	result,	the
+string	value	stored	in	
+translated
+	“grows”	one	character	at	a	time	until	it
+becomes	the	fully	encrypted	string.
+Line	10	is	also	an	assignment	statement.	It	takes	the	current	integer
+value	in	
+i
+	and	subtracts	1	from	it	(this	is	called	
+decrementing
+	the	variable).
+Then	it	stores	this	value	as	the	new	value	of	
+i
+.
+The	next	line	is	12,	but	because	this	line	has	less	indentation,	Python
+knows	that	the	
+while
+	statement’s	block	has	ended.	So	rather	than	moving
+on	to	line	12,	the	program	execution	jumps	back	to	line	8	where	the	
+while
+loop’s	condition	is	checked	again.	If	the	condition	is	
+True
+,	the	lines	inside
+the	block	(lines	9	and	10)	are	executed	again.	This	keeps	happening	until
+the	condition	is	
+False
+	(that	is,	when	
+i
+	is	less	than	
+0
+),	in	which	case	the
+program	execution	goes	to	the	first	line	after	the	block	(line	12).
+Let’s	think	about	the	behavior	of	this	loop	to	understand	how	many
+times	it	runs	the	code	in	the	block.	The	variable	
+i
+	starts	with	the	value	of
+the	last	index	of	
+message
+,	and	the	
+translated
+	variable	starts	as	a	blank	
+string.
+Then	inside	the	loop,	the	value	of	
+message[i]
+	(which	is	the	last	character	in
+the	
+message
+	string,	because	
+i
+	will	have	the	value	of	the	last	index)	is	added
+to	the	end	of	the	
+translated
+	string.
+Then	the	value	in	
+i
+	is	decremented	(that	is,	reduced)	by	
+1
+,	meaning
+that	
+message[i]
+	will	be	the	second	to	last	character.	So	while	
+i
+	as	an	index
+keeps	moving	from	the	back	of	the	string	in	
+message
+	to	the	front,	the	string
+message[i]
+	is	added	to	the	end	of	
+translated
+.	This	is	how	
+translated
+	ends	up
+holding	the	reverse	of	the	string	in	the	
+message
+.	When	
+i
+	is	finally	set	to	
+-1
+,
+which	happens	when	we	reach	index	
+0
+	of	the	message,	the	
+while
+	loop’s
+condition	is	
+False
+,	and	the	execution	jumps	to	line	12:
+12. print(translated)
+
+At	the	end	of	the	program	on	line	12,	we	print	the	contents	of	the
+translated
+	variable	(that	is,	the	string	
+'.daed era meht fo owt fi ,terces a peek
+nac eerhT'
+)	to	the	screen.	This	shows	the	user	what	the	reversed	string
+looks	like.
+If	you’re	still	having	trouble	understanding	how	the	code	in	the	
+while
+loop	reverses	the	string,	try	adding	the	new	line	(shown	in	bold)	to	the
+loop’s	block:
+ 8. while i >= 0:
+ 9.     translated = translated + message[i]
+10.     
+print('i is', i, ', message[i] is', message[i], ', translated is',
+          translated)
+11.     i = i - 1
+12.
+13. print(translated)
+Line	10	prints	the	values	of	
+i
+,	
+message[i]
+,	and	
+translated
+	along	with	string
+labels	each	time	the	execution	goes	through	the	loop	(that	is,	on	each
+iteration
+	of	the	loop).	This	time,	we	aren’t	using	string	concatenation	but
+something	new.	The	commas	tell	the	
+print()
+	function	that	we’re	printing
+six	separate	things,	so	the	function	adds	a	space	between	them.	Now	when
+you	run	the	program,	you	can	see	how	the	
+translated
+	variable	“grows.”	The
+output	looks	like	this:
+i is 48 , message[i] is . , translated is .
+i is 47 , message[i] is d , translated is .d
+i is 46 , message[i] is a , translated is .da
+i is 45 , message[i] is e , translated is .dae
+i is 44 , message[i] is d , translated is .daed
+i is 43 , message[i] is   , translated is .daed
+i is 42 , message[i] is e , translated is .daed e
+i is 41 , message[i] is r , translated is .daed er
+i is 40 , message[i] is a , translated is .daed era
+i is 39 , message[i] is   , translated is .daed era
+i is 38 , message[i] is m , translated is .daed era m
+i is 37 , message[i] is e , translated is .daed era me
+i is 36 , message[i] is h , translated is .daed era meh
+i is 35 , message[i] is t , translated is .daed era meht
+i is 34 , message[i] is   , translated is .daed era meht
+i is 33 , message[i] is f , translated is .daed era meht f
+i is 32 , message[i] is o , translated is .daed era meht fo
+i is 31 , message[i] is   , translated is .daed era meht fo
+i is 30 , message[i] is o , translated is .daed era meht fo o
+i is 29 , message[i] is w , translated is .daed era meht fo ow
+i is 28 , message[i] is t , translated is .daed era meht fo owt
+i is 27 , message[i] is   , translated is .daed era meht fo owt
+i is 26 , message[i] is f , translated is .daed era meht fo owt f
+i is 25 , message[i] is i , translated is .daed era meht fo owt fi
+i is 24 , message[i] is   , translated is .daed era meht fo owt fi
+i is 23 , message[i] is , , translated is .daed era meht fo owt fi ,
+i is 22 , message[i] is t , translated is .daed era meht fo owt fi ,t
+i is 21 , message[i] is e , translated is .daed era meht fo owt fi ,te
+i is 20 , message[i] is r , translated is .daed era meht fo owt fi ,ter
+
+i is 19 , message[i] is c , translated is .daed era meht fo owt fi ,terc
+i is 18 , message[i] is e , translated is .daed era meht fo owt fi ,terce
+i is 17 , message[i] is s , translated is .daed era meht fo owt fi ,terces
+i is 16 , message[i] is   , translated is .daed era meht fo owt fi ,terces
+i is 15 , message[i] is a , translated is .daed era meht fo owt fi ,terces a
+i is 14 , message[i] is   , translated is .daed era meht fo owt fi ,terces a
+i is 13 , message[i] is p , translated is .daed era meht fo owt fi ,terces a p
+i is 12 , message[i] is e , translated is .daed era meht fo owt fi ,terces a pe
+i is 11 , message[i] is e , translated is .daed era meht fo owt fi ,terces a pee
+i is 10 , message[i] is k , translated is .daed era meht fo owt fi ,terces a peek
+i is 9 , message[i] is   , translated is .daed era meht fo owt fi ,terces a peek
+i is 8 , message[i] is n , translated is .daed era meht fo owt fi ,terces a peek n
+i is 7 , message[i] is a , translated is .daed era meht fo owt fi ,terces a peek na
+i is 6 , message[i] is c , translated is .daed era meht fo owt fi ,terces a peek
+nac
+i is 5 , message[i] is   , translated is .daed era meht fo owt fi ,terces a peek
+nac
+i is 4 , message[i] is e , translated is .daed era meht fo owt fi ,terces a peek
+nac e
+i is 3 , message[i] is e , translated is .daed era meht fo owt fi ,terces a peek
+nac ee
+i is 2 , message[i] is r , translated is .daed era meht fo owt fi ,terces a peek
+nac eer
+i is 1 , message[i] is h , translated is .daed era meht fo owt fi ,terces a peek
+nac eerh
+i is 0 , message[i] is T , translated is .daed era meht fo owt fi ,terces a peek
+nac eerhT
+The	line	of	output,	
+"i is 48 , message[i] is . , translated is ."
+,	shows
+what	the	expressions	
+i
+,	
+message[i]
+,	and	
+translated
+	evaluate	to	after	the	string
+message[i]
+	has	been	added	to	the	end	of	
+translated
+	but	before	
+i
+	is
+decremented.	You	can	see	that	the	first	time	the	program	execution	goes
+through	the	loop,	
+i
+	is	set	to	
+48
+,	so	
+message[i]
+	(that	is,	
+message[48]
+)	is	the	string
+'.'
+.	The	
+translated
+	variable	started	as	a	blank	string,	but	when	
+message[i]
+was	added	to	the	end	of	it	on	line	9,	it	became	the	string	value	
+'.'
+.
+On	the	next	iteration	of	the	loop,	the	output	is	
+"i is 47 , message[i] is d
+, translated is .d"
+.	You	can	see	that	
+i
+	has	been	decremented	from	
+48
+	to	
+47
+,
+so	now	
+message[i]
+	is	
+message[47]
+,	which	is	the	
+'d'
+	string.	(That’s	the	second
+'d'
+	in	
+'
+dead'
+.)	This	
+'d'
+	gets	added	to	the	end	of	
+translated
+,	so	
+translated
+	is
+now	the	value	
+'.d'
+.
+Now	you	can	see	how	the	
+translated
+	variable’s	string	is	slowly	“grown”
+from	a	blank	string	to	the	reversed	
+message
+.
+Improving	the	Program	with	an	input()	Prompt
+The	programs	in	this	book	are	all	designed	so	the	strings	that	are	being
+encrypted	or	decrypted	are	typed	directly	into	the	source	code	as
+assignment	statements.	This	is	convenient	while	we’re	developing	the
+programs,	but	you	shouldn’t	expect	users	to	be	comfortable	modifying	the
+source	code	themselves.	To	make	the	programs	easier	to	use	and	share,
+
+you	can	modify	the	assignment	statements	so	they	call	the	
+input()
+function.	You	can	also	pass	a	string	to	
+input()
+	so	it	will	display	a	prompt
+for	the	user	to	enter	a	string	to	encrypt.	For	example,	change	line	4	in
+reverseCipher.py
+	to	this:
+ 4. message = 
+input('Enter message: ')
+When	you	run	the	program,	it	prints	the	prompt	to	the	screen	and
+waits	for	the	user	to	enter	a	message.	The	message	that	the	user	enters
+will	be	the	string	value	that	is	stored	in	the	
+message
+	variable.	When	you	run
+the	program	now,	you	can	put	in	any	string	you’d	like	and	get	output	like
+this:
+Enter message: 
+Hello, world!
+!dlrow ,olleH
+Summary
+We’ve	just	completed	our	second	program,	which	manipulates	a	string
+into	a	new	string	using	techniques	from	
+Chapter	3
+,	such	as	indexing	and
+concatenation.	A	key	part	of	the	program	was	the	
+len()
+	function,	which
+takes	a	string	argument	and	returns	an	integer	of	how	many	characters	are
+in	the	string.
+You	also	learned	about	the	Boolean	data	type,	which	has	only	two
+values,	
+True
+	and	
+False
+.	Comparison	operators	
+==
+,	
+!=
+,	
+<
+,	
+>
+,	
+<=
+,	and	
+>=
+	can
+compare	two	values	and	evaluate	to	a	Boolean	value.
+Conditions	are	expressions	that	use	comparison	operators	and	evaluate
+to	a	Boolean	data	type.	They	are	used	in	
+while
+	loops,	which	will	execute
+code	in	the	block	following	the	
+while
+	statement	until	the	condition
+evaluates	as	
+False
+.	A	block	is	made	up	of	lines	with	the	same	level	of
+indentation,	including	any	blocks	inside	them.
+Now	that	you’ve	learned	how	to	manipulate	text,	you	can	start	making
+programs	that	the	user	can	run	and	interact	with.	This	is	important
+because	text	is	the	main	way	the	user	and	the	computer	communicate	with
+each	other.
+PRACTICE	QUESTIONS
+Answers	to	the	practice	questions	can	be	found	on	the	book’s
+website	at	
+https://www.nostarch.com/crackingcodes/
+.
+
+1.What	does	the	following	piece	of	code	print	to	the	screen?
+print(len('Hello') + len('Hello'))
+2.What	does	this	code	print?
+i = 0
+while i < 3:
+ print('Hello')
+ i = i + 1
+3.How	about	this	code?
+i = 0
+spam = 'Hello'
+while i < 5:
+ spam = spam + spam[i]
+   i = i + 1
+print(spam)
+4.And	this?
+i = 0
+while i < 4:
+ while i < 6:
+ i = i + 2
+ print(i)
+
+5
+THE	CAESAR	CIPHER
+“
+BIG	BROTHER	IS	WATCHING	YOU.”
+—George	Orwell
+,	Nineteen	Eighty-Four
+In	
+Chapter	1
+,	we	used	a	cipher	wheel	and	a	chart	of	letters	and	numbers
+to	implement	the	Caesar	cipher.	In	this	chapter,	we’ll	implement	the
+Caesar	cipher	in	a	computer	program.
+The	reverse	cipher	we	made	in	
+Chapter	4
+	always	encrypts	the	same
+way.	But	the	Caesar	cipher	uses	keys,	which	encrypt	the	message
+differently	depending	on	which	key	is	used.	The	keys	for	the	Caesar
+cipher	are	the	integers	from	
+0
+	to	
+25
+.	Even	if	a	cryptanalyst	knows	the
+Caesar	cipher	was	used,	that	alone	doesn’t	give	them	enough	information
+to	break	the	cipher.	They	must	also	know	the	key.
+TOPICS	COVERED	IN	THIS	CHAPTER
+The	
+import
+	statement
+Constants
+for
+	loops
+if, else
+,	and	
+elif
+	statements
+The	
+in
+	and	
+not in
+	operators
+The	
+find()
+	string	method
+Source	Code	for	the	Caesar	Cipher	Program
+
+Enter	the	following	code	into	the	file	editor	and	save	it	as	
+caesarCipher.py
+.
+Then	download	the	
+pyperclip.py
+	module	from
+https://www.nostarch.com/crackingcodes/
+	and	place	it	in	the	same	directory
+(that	is,	the	same	folder)	as	the	file	
+caesarCipher.py
+.	This	module	will	be
+imported	by	
+caesarCipher.py
+;	we’ll	discuss	this	in	more	detail	in	“
+Importing
+Modules	and	Setting	Up	Variables
+”	on	
+page	56
+.
+When	you’re	finished	setting	up	the	files,	press	F5	to	run	the	program.
+If	you	run	into	any	errors	or	problems	with	your	code,	you	can	compare	it
+to	the	code	in	the	book	using	the	online	diff	tool	at
+https://www.nostarch.com/crackingcodes/
+.
+caesarCipher.py
+ 1. # Caesar Cipher
+ 2. # https://www.nostarch.com/crackingcodes/ (BSD Licensed)
+ 3.
+ 4. import pyperclip
+ 5.
+ 6. # The string to be encrypted/decrypted:
+ 7. message = 'This is my secret message.'
+ 8.
+ 9. # The encryption/decryption key:
+10. key = 13
+11.
+12. # Whether the program encrypts or decrypts:
+13. mode = 'encrypt' # Set to either 'encrypt' or 'decrypt'.
+14.
+15. # Every possible symbol that can be encrypted:
+16. SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz12345
+      67890 !?.'
+17.
+18. # Store the encrypted/decrypted form of the message:
+19. translated = ''
+20.
+21. for symbol in message:
+22.     # Note: Only symbols in the SYMBOLS string can be
+          encrypted/decrypted.
+23.     if symbol in SYMBOLS:
+24.         symbolIndex = SYMBOLS.find(symbol)
+25.
+26.         # Perform encryption/decryption:
+27.         if mode == 'encrypt':
+28.             translatedIndex = symbolIndex + key
+29.         elif mode == 'decrypt':
+30.             translatedIndex = symbolIndex - key
+31.
+32.         # Handle wraparound, if needed:
+33.         if translatedIndex >= len(SYMBOLS):
+34.             translatedIndex = translatedIndex - len(SYMBOLS)
+35.         elif translatedIndex < 0:
+36.             translatedIndex = translatedIndex + len(SYMBOLS)
+37.
+38.         translated = translated + SYMBOLS[translatedIndex]
+39.     else:
+40.         # Append the symbol without encrypting/decrypting:
+41.         translated = translated + symbol
+42.
+
+43. # Output the translated string:
+44. print(translated)
+45. pyperclip.copy(translated)
+Sample	Run	of	the	Caesar	Cipher	Program
+When	you	run	the	
+caesarCipher.py
+	program,	the	output	looks	like	this:
+guv6Jv6Jz!J6rp5r7Jzr66ntrM
+The	output	is	the	string	
+'This is my secret message.'
+	encrypted	with	the
+Caesar	cipher	using	a	key	of	
+13
+.	The	Caesar	cipher	program	you	just	ran
+automatically	copies	this	encrypted	string	to	the	clipboard	so	you	can
+paste	it	in	an	email	or	text	file.	As	a	result,	you	can	easily	send	the
+encrypted	output	from	the	program	to	another	person.
+You	might	see	the	following	error	message	when	you	run	the	program:
+Traceback (most recent call last):
+  File "C:\caesarCipher.py", line 4, in <module>
+    import pyperclip
+ImportError: No module named pyperclip
+If	so,	you	probably	haven’t	downloaded	the	
+pyperclip.py
+	module	into	the
+right	folder.	If	you	confirm	that	
+pyperclip.py
+	is	in	the	folder	with
+caesarCipher.py
+	but	still	can’t	get	the	module	to	work,	just	comment	out
+the	code	on	lines	4	and	45	(which	have	the	text	
+pyperclip
+	in	them)	from	the
+caesarCipher.py
+	program	by	placing	a	
+#
+	in	front	of	them.	This	makes
+Python	ignore	the	code	
+that	depends	on	the	
+pyperclip.py
+	module	and
+should	allow	the	program	to	run	successfully.	Note	that	if	you	comment
+out	that	code,	the	encrypted	or	decrypted	text	won’t	be	copied	to	the
+clipboard	at	the	end	of	the	program.	You	can	also	comment	out	the
+pyperclip
+	code	from	the	programs	in	future	chapters,	which	will	remove
+the	copy-to-clipboard	functionality	from	those	programs,	too.
+To	decrypt	the	message,	just	paste	the	output	text	as	the	new	value
+stored	in	the	
+message
+	variable	on	line	7.	Then	change	the	assignment
+statement	on	line	13	to	store	the	string	
+'decrypt'
+	in	the	variable	
+mode
+:
+ 6. # The string to be encrypted/decrypted:
+ 7. message = 
+'guv6Jv6Jz!J6rp5r7Jzr66ntrM'
+ 8.
+ 9. # The encryption/decryption key:
+10. key = 13
+11.
+12. # Whether the program encrypts or decrypts:
+13. mode = 
+'decrypt'
+ # Set to either 'encrypt' or 'decrypt'.
+
+When	you	run	the	program	now,	the	output	looks	like	this:
+This is my secret message.
+Importing	Modules	and	Setting	Up	Variables
+Although	Python	includes	many	built-in	functions,	some	functions	exist
+in	separate	programs	called	modules.	
+Modules
+	are	Python	programs	that
+contain	additional	functions	that	your	program	can	use.	We	import
+modules	with	the	appropriately	named	
+import
+	statement,	which	consists	of
+the	
+import
+	keyword	followed	by	the	module	name.
+Line	4	contains	an	
+import
+	statement:
+ 1. # Caesar Cipher
+ 2. # https://www.nostarch.com/crackingcodes/ (BSD Licensed)
+ 3.
+ 4. import pyperclip
+In	this	case,	we’re	importing	a	module	named	
+pyperclip
+	so	we	can	call
+the	
+pyperclip.copy()
+	function	later	in	this	program.	The	
+pyperclip.copy()
+function	will	automatically	copy	strings	to	your	computer’s	clipboard	so
+you	can	conveniently	paste	them	into	other	programs.
+The	next	few	lines	in	
+caesarCipher.py
+	set	three	variables:
+ 6. # The string to be encrypted/decrypted:
+ 7. message = 'This is my secret message.'
+ 8.
+ 9. # The encryption/decryption key:
+10. key = 13
+11.
+12. # Whether the program encrypts or decrypts:
+13. mode = 'encrypt' # Set to either 'encrypt' or 'decrypt'.
+The	
+message
+	variable	stores	the	string	to	be	encrypted	or	decrypted,	and
+the	
+key
+	variable	stores	the	integer	of	the	encryption	key.	The	
+mode
+	variable
+stores	either	the	string	
+'encrypt'
+,	which	makes	code	later	in	the	program
+encrypt	the	string	in	
+message
+,	or	
+'decrypt'
+,	which	makes	the	program
+decrypt	rather	than	encrypt.
+Constants	and	Variables
+Constants
+	are	variables	whose	values	shouldn’t	be	changed	when	the
+program	runs.	For	example,	the	Caesar	cipher	program	needs	a	string	that
+contains	every	possible	character	that	can	be	encrypted	with	this	Caesar
+cipher.	Because	that	string	shouldn’t	change,	we	store	it	in	the	constant
+
+variable	named	
+SYMBOLS
+	in	line	16:
+15. # Every possible symbol that can be encrypted:
+16. SYMBOLS = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz12345
+      67890 !?.'
+Symbol
+	is	a	common	term	used	in	cryptography	for	a	single	character
+that	a	cipher	can	encrypt	or	decrypt.	A	
+symbol	set
+	is	every	possible	symbol	a
+cipher	is	set	up	to	encrypt	or	decrypt.	Because	we’ll	use	the	symbol	set
+many	times	in	this	program,	and	because	we	don’t	want	to	type	the	full
+string	value	each	time	it	appears	in	the	program	(we	might	make	typos,
+which	would	cause	errors),	we	use	a	constant	variable	to	store	the	symbol
+set.	We	enter	the	code	for	the	string	value	once	and	place	it	in	the	
+SYMBOLS
+constant.
+Note	that	
+SYMBOLS
+	is	in	all	uppercase	letters,	which	is	the	naming
+convention	for	constants.	Although	we	
+could
+	change	
+SYMBOLS
+	just	like	any
+other	variable,	the	all	uppercase	name	reminds	the	programmer	not	to
+write	code	that	does	so.
+As	with	all	conventions,	we	don’t	
+have
+	to	follow	this	one.	But	doing	so
+makes	it	easier	for	other	programmers	to	understand	how	these	variables
+are	used.	(It	can	even	help	you	when	you’re	looking	at	your	own	code
+later.)
+On	line	19,	the	program	stores	a	blank	string	in	a	variable	named
+translated
+	that	will	later	store	the	encrypted	or	decrypted	message:
+18. # Store the encrypted/decrypted form of the message:
+19. translated = ''
+Just	as	in	the	reverse	cipher	in	
+Chapter	5
+,	by	the	end	of	the	program,
+the	
+translated
+	variable	will	contain	the	completely	encrypted	(or	decrypted)
+message.	But	for	now	it	starts	as	a	blank	string.
+The	for	Loop	Statement
+At	line	21,	we	use	a	type	of	loop	called	a	
+for
+	loop:
+21. for symbol in message:
+Recall	that	a	
+while
+	loop	will	loop	as	long	as	a	certain	condition	is	
+True
+.
+The	
+for
+	loop	has	a	slightly	different	purpose	and	doesn’t	have	a	condition
+like	the	
+while
+	loop.	Instead,	it	loops	over	a	string	or	a	group	of	values.
+Figure	5-1
+	shows	the	six	parts	of	a	
+for
+	loop.
+
+Figure	5-1:	The	six	parts	of	a	
+for
+	loop	statement
+Each	time	the	program	execution	goes	through	the	loop	(that	is,	on
+each	iteration	through	the	loop)	the	variable	in	the	
+for
+	statement	(which
+in	line	21	is	
+symbol
+)	takes	on	the	value	of	the	next	character	in	the	variable
+containing	a	string	(which	in	this	case	is	
+message
+).	The	
+for
+	statement	is
+similar	to	an	assignment	statement	because	the	variable	is	created	and
+assigned	a	value	except	the	
+for
+	statement	cycles	through	different	values	to
+assign	the	variable.
+An	Example	for	Loop
+For	example,	type	the	following	into	the	interactive	shell.	Note	that	after
+you	type	the	first	line,	the	
+>>>
+	prompt	will	disappear	(represented	in	our
+code	as	
+...
+)	because	the	shell	is	expecting	a	block	of	code	after	the	
+for
+statement’s	colon.	In	the	interactive	shell,	the	block	will	end	when	you
+enter	a	blank	line:
+>>> 
+for letter in 'Howdy':
+...     
+print('The letter is ' + letter)
+...
+The letter is H
+The letter is o
+The letter is w
+The letter is d
+The letter is y
+This	code	loops	over	each	character	in	the	string	
+'Howdy'
+.	When	it	does,
+the	variable	
+letter
+	takes	on	the	value	of	each	character	in	
+'Howdy'
+	one	at	a
+time	in	order.	To	see	this	in	action,	we’ve	written	code	in	the	loop	that
+prints	the	value	of	
+letter
+	for	each	iteration.
+A	while	Loop	Equivalent	of	a	for	Loop
+The	
+for
+	loop	is	very	similar	to	the	
+while
+	loop,	but	when	you	only	need	to
+iterate	over	characters	in	a	string,	using	a	
+for
+	loop	is	more	efficient.	You
+
+could	make	a	
+while
+	loop	act	like	a	
+for
+	loop	by	writing	a	bit	more	code:
+➊
+ >>> 
+i = 0
+➋
+ >>> 
+while i < len('Howdy'):
+➌
+ ...      
+letter = 'Howdy'[i]
+➍
+ ...      
+print('The letter is ' + letter)
+➎
+ ...      
+i = i + 1
+   ...
+   The letter is H
+   The letter is o
+   The letter is w
+   The letter is d
+   The letter is y
+Notice	that	this	
+while
+	loop	works	the	same	as	the	
+for
+	loop	but	is	not	as
+short	and	simple	as	the	
+for
+	loop.	First,	we	set	a	new	variable	
+i
+	to	
+0
+	before
+the	
+while
+	statement	
+➊
+.	This	statement	has	a	condition	that	will	evaluate	to
+True
+	as	long	as	the	variable	
+i
+	is	less	than	the	length	of	the	string	
+'Howdy'
+	
+➋
+.
+Because	
+i
+	is	an	integer	and	only	keeps	track	of	the	current	position	in	the
+string,	we	need	to	declare	a	separate	
+letter
+	variable	to	hold	the	character
+in	the	string	at	the	
+i
+	position	
+➌
+.	Then	we	can	print	the	current	value	of
+letter
+	to	get	the	same	output	as	the	
+for
+	loop	
+➍
+.	When	the	code	is	finished
+executing,	we	need	to	increment	
+i
+	by	adding	
+1
+	to	it	to	move	to	the	next
+position	
+➎
+.
+To	understand	lines	23	and	24	in	
+caesarCipher.py
+,	you	need	to	learn
+about	the	
+if
+,	
+elif
+,	and	
+else
+	statements,	the	
+in
+	and	
+not in
+	operators,	and	the
+find()
+	string	method.	We’ll	look	at	these	in	the	following	sections.
+The	if	Statement
+Line	23	in	the	Caesar	cipher	has	another	kind	of	Python	instruction—the
+if
+	statement:
+23.     if symbol in SYMBOLS:
+You	can	read	an	
+if
+	statement	as,	“If	this	condition	is	
+True
+,	execute	the
+code	in	the	following	block.	Otherwise,	if	it	is	
+False
+,	skip	the	block.”	An	
+if
+statement	is	formatted	using	the	keyword	
+if
+	followed	by	a	condition,
+followed	by	a	colon	(
+:
+).	The	code	to	execute	is	indented	in	a	block	just	as
+with	loops.
+An	Example	if	Statement
+
+Let’s	try	an	example	of	an	
+if
+	statement.	Open	a	new	file	editor	window,
+enter	the	following	code,	and	save	it	as	
+checkPw.py
+:
+checkPw.py
+   print('Enter your password.')
+➊
+ typedPassword = input()
+➋
+ if typedPassword == 'swordfish':
+➌
+     print('Access Granted')
+➍
+ print('Done')
+When	you	run	this	program,	it	displays	the	text	
+Enter your
+	
+password.
+	and
+lets	the	user	type	in	a	password.	The	password	is	then	stored	in	the
+variable	
+typedPassword
+	
+➊
+.	Next,	the	
+if
+	statement	checks	whether	the
+password	is	equal	to	the	string	
+'swordfish'
+	
+➋
+.	If	it	is,	the	execution	moves
+inside	the	block	following	the	
+if
+	statement	to	display	the	text	
+Access Granted
+to	the	user	
+➌
+;	otherwise,	if	
+typedPassword
+	isn’t	equal	to	
+'swordfish'
+,	the
+execution	skips	the	
+if
+	statement’s	block.	Either	way,	the	execution
+continues	on	to	the	code	after	the	
+if
+	block	to	display	
+Done
+	
+➍
+.
+The	else	Statement
+Often,	we	want	to	test	a	condition	and	execute	one	block	of	code	if	the
+condition	is	
+True
+	and	another	block	of	code	if	it’s	
+False
+.	We	can	use	an	
+else
+statement	after	an	
+if
+	statement’s	block,	and	the	
+else
+	statement’s	block	of
+code	will	be	executed	if	the	
+if
+	statement’s	condition	is	
+False
+.	For	an	
+else
+statement,	you	just	write	the	keyword	
+else
+	and	a	colon	(
+:
+).	It	doesn’t	need
+a	condition	because	it	will	be	run	if	the	
+if
+	statement’s	condition	isn’t	true.
+You	can	read	the	code	as,	“If	this	condition	is	
+True
+,	execute	this	block,	or
+else,	if	it	is	
+False
+,	execute	this	other	block.”
+Modify	the	
+checkPw.py
+	program	to	look	like	the	following	(the	new
+lines	are	in	bold):
+checkPw.py
+   print('Enter your password.')
+   typedPassword = input()
+➊
+ if typedPassword == 'swordfish':
+       print('Access Granted')
+   
+else:
+➋
+      
+print('Access Denied')
+➌
+ print('Done')
+This	version	of	the	program	works	almost	the	same	as	the	previous
+
+version.	The	text	
+Access Granted
+	will	still	display	if	the	
+if
+	statement’s
+condition	is	
+True
+	
+➊
+.	But	now	if	the	user	types	something	other	than
+swordfish
+,	the	
+if
+	statement’s	condition	will	be	
+False
+,	causing	the	execution
+to	enter	the	
+else
+	statement’s	block	and	display	
+Access Denied
+	
+➋
+.	Either	way,
+the	execution	will	still	continue	and	display	
+Done
+	
+➌
+.
+The	elif	Statement
+Another	statement,	called	the	
+elif
+	statement,	can	also	be	paired	with	
+if
+.
+Like	an	
+if
+	statement,	it	has	a	condition.	Like	an	
+else
+	statement,	it	follows
+an	
+if
+	(or	another	
+elif
+)	statement	and	executes	if	the	previous	
+if
+	(or	
+elif
+)
+statement’s	condition	is	
+False
+.	You	can	read	
+if
+,	
+elif
+,	and	
+else
+	statements	as,
+“If	this	condition	is	
+True
+,	run	this	block.	Or	else,	check	if	this	next
+condition	is	
+True
+.	Or	else,	just	run	this	last	block.”	Any	number	of	
+elif
+statements	can	follow	an	
+if
+	statement.	Modify	the	
+checkPw.py
+	program
+again	to	make	it	look	like	the	following:
+checkPw.py
+   print('Enter your password.')
+   typedPassword = input()
+➊
+ if typedPassword == 'swordfish':
+➋
+     print('Access Granted')
+➌
+ elif typedPassword == 'mary':
+       print('Hint: the password is a fish.')
+➍
+ elif typedPassword == '12345':
+       print('That is a really obvious password.')
+   else:
+       print('Access Denied')
+   print('Done')
+This	code	contains	four	blocks	for	the	
+if
+,	
+elif
+,	and	
+else
+	statements.	If
+the	user	enters	
+12345
+,	then	
+typedPassword == 'swordfish'
+	evaluates	to	
+False
+	
+➊
+,	so
+the	first	block	with	
+print('Access Granted')
+	
+➋
+	is	skipped.	The	execution	next
+checks	the	
+typedPassword == 'mary'
+	condition,	which	also	evaluates	to	
+False
+	
+➌
+,
+so	the	second	block	is	also	skipped.	The	
+typedPassword == '12345'
+	condition	is
+True
+	
+➍
+,	so	the	execution	enters	the	block	following	this	
+elif
+	statement	to
+run	the	code	
+print('That is a really obvious password.')
+	and	skips	any
+remaining	
+elif
+	and	
+else
+	statements.	
+Notice	that	one	and	only	one	of	these	blocks
+will	be	executed.
+You	can	have	zero	or	more	
+elif
+	statements	following	an	
+if
+	statement.
+You	can	have	zero	or	one	but	not	multiple	
+else
+	statements,	and	the	
+else
+statement	always	comes	last	because	it	only	executes	if	none	of	the
+
+conditions	evaluate	to	
+True
+.	The	first	statement	with	a	
+True
+	condition	has
+its	block	executed.	The	rest	of	the	conditions	(even	if	they’re	also	
+True
+)
+aren’t	checked.
+The	in	and	not	in	Operators
+Line	23	in	
+caesarCipher.py
+	also	uses	the	
+in
+	operator:
+23.     if symbol in SYMBOLS:
+An	
+in
+	operator	can	connect	two	strings,	and	it	will	evaluate	to	
+True
+	if
+the	first	string	is	inside	the	second	string	or	evaluate	to	
+False
+	if	not.	The	
+in
+operator	can	also	be	paired	with	
+not
+,	which	will	do	the	opposite.	Enter	the
+following	into	the	interactive	shell:
+   >>> 
+'hello' in 'hello world!'
+   True
+   >>> 
+'hello' not in 'hello world!'
+   False
+   >>> 
+'ello' in 'hello world!'
+   True
+➊
+ >>> 
+'HELLO' in 'hello world!'
+   False
+➋
+ >>> 
+'' in 'Hello'
+   True
+Notice	that	the	
+in
+	and	
+not in
+	operators	are	case	sensitive	
+➊
+.	Also,	a
+blank	string	is	always	considered	to	be	in	any	other	string	
+➋
+.
+Expressions	using	the	
+in
+	and	
+not
+	
+in
+	operators	are	handy	to	use	as
+conditions	of	
+if
+	statements	to	execute	some	code	if	a	string	exists	inside
+another	string.
+Returning	to	
+caesarCipher.py
+,	line	23	checks	whether	the	string	in	
+symbol
+(which	the	
+for
+	loop	on	line	21	set	to	a	single	character	from	the	
+message
+string)	is	in	the	
+SYMBOLS
+	string	(the	symbol	set	of	all	characters	that	can	be
+encrypted	or	decrypted	by	this	cipher	program).	If	
+symbol
+	is	in	
+SYMBOLS
+,	the
+execution	enters	the	block	that	follows	starting	on	line	24.	If	it	isn’t,	the
+execution	skips	this	block	and	instead	enters	the	block	following	line	39’s
+else
+	statement.	The	cipher	program	needs	to	run	different	code
+depending	on	whether	the	symbol	is	in	the	symbol	set.
+The	find()	String	Method
+Line	24	finds	the	index	in	the	
+SYMBOLS
+	string	where	
+symbol
+	is:
+
+24.         symbolIndex = SYMBOLS.find(symbol)
+This	code	includes	a	method	call.	
+Methods
+	are	just	like	functions	except
+they’re	attached	to	a	value	with	a	period	(or	in	line	24,	a	variable
+containing	a	value).	The	name	of	this	method	is	
+find()
+,	and	it’s	being
+called	on	the	string	value	stored	in	
+SYMBOLS
+.
+Most	data	types	(such	as	strings)	have	methods.	The	
+find()
+	method
+takes	one	string	argument	and	returns	the	integer	index	of	where	the
+argument	appears	in	the	method’s	string.	Enter	the	following	into	the
+interactive	shell:
+   >>> 
+'hello'.find('e')
+   1
+   >>> 
+'hello'.find('o')
+   4
+   >>> 
+spam = 'hello'
+   >>> 
+spam.find('h')
+➊
+ 0
+You	can	use	the	
+find()
+	method	on	either	a	string	or	a	variable
+containing	a	string	value.	Remember	that	indexing	in	Python	starts	with	
+0
+,
+so	when	the	index	returned	by	
+find()
+	is	for	the	first	character	in	the	string,
+a	
+0
+	is	returned	
+➊
+.
+If	the	string	argument	can’t	be	found,	the	
+find()
+	method	returns	the
+integer	
+-1
+.	Enter	the	following	into	the	interactive	shell:
+   >>> 
+'hello'.find('x')
+   -1
+➊
+ >>> 
+'hello'.find('H')
+   -1
+Notice	that	the	
+find()
+	method	is	also	case	sensitive	
+➊
+.
+The	string	you	pass	as	an	argument	to	
+find()
+	can	be	more	than	one
+character.	The	integer	that	
+find()
+	returns	will	be	the	index	of	the	first
+character	where	the	argument	is	found.	Enter	the	following	into	the
+interactive	shell:
+>>> 
+'hello'.find('ello')
+1
+>>> 
+'hello'.find('lo')
+3
+>>> 
+'hello hello'.find('e')
+1
+The	
+find()
+	string	method	is	like	a	more	specific	version	of	using	the	
+in
+operator.	It	not	only	tells	you	whether	a	string	exists	in	another	string	but
+
+also	tells	you	where.
+Encrypting	and	Decrypting	Symbols
+Now	that	you	understand	
+if
+,	
+elif
+,	and	
+else
+	statements;	the	
+in
+	operator;	and
+the	
+find()
+	string	method,	it	will	be	easier	to	understand	how	the	rest	of	the
+Caesar	cipher	program	works.
+The	cipher	program	can	only	encrypt	or	decrypt	symbols	that	are	in
+the	symbol	set:
+23.     if symbol in SYMBOLS:
+24.         symbolIndex = SYMBOLS.find(symbol)
+So	before	running	the	code	on	line	24,	the	program	must	figure	out
+whether	
+symbol
+	is	in	the	symbol	set.	Then	it	can	find	the	index	in	
+SYMBOLS
+where	
+symbol
+	is	located.	The	index	returned	by	the	
+find()
+	call	is	stored	in
+symbolIndex
+.
+Now	that	we	have	the	current	symbol’s	index	stored	in	
+symbolIndex
+,	we
+can	do	the	encryption	or	decryption	math	on	it.	The	Caesar	cipher	adds
+the	key	number	to	the	symbol’s	index	to	encrypt	it	or	subtracts	the	key
+number	
+from	the	symbol’s	index	to	decrypt	it.	This	value	is	stored	in
+translatedIndex
+	because	it	will	be	the	index	in	
+SYMBOLS
+	of	the	translated
+symbol.
+caesarCipher.py
+26.         # Perform encryption/decryption:
+27.         if mode == 'encrypt':
+28.             translatedIndex = symbolIndex + key
+29.         elif mode == 'decrypt':
+30.             translatedIndex = symbolIndex - key
+The	
+mode
+	variable	contains	a	string	that	tells	the	program	whether	it
+should	be	encrypting	or	decrypting.	If	this	string	is	
+'encrypt'
+,	then	the
+condition	for	line	27’s	
+if
+	statement	will	be	
+True
+,	and	line	28	will	be
+executed	to	add	the	
+key
+	to	
+symbolIndex
+	(and	the	block	after	the	
+elif
+	statement
+will	be	skipped).	Otherwise,	if	
+mode
+	is	
+'decrypt'
+,	then	line	30	is	executed	to
+subtract	the	
+key
+.
+Handling	Wraparound
+When	we	were	implementing	the	Caesar	cipher	with	paper	and	pencil	in
+Chapter	1
+,	sometimes	adding	or	subtracting	the	key	would	result	in	a
+
+number	greater	than	or	equal	to	the	size	of	the	symbol	set	or	less	than
+zero.	In	those	cases,	we	have	to	add	or	subtract	the	length	of	the	symbol
+set	so	that	it	will	“wrap	around,”	or	return	to	the	beginning	or	end	of	the
+symbol	set.	We	can	use	the	code	
+len(SYMBOLS)
+	to	do	this,	which	returns	
+66
+,
+the	length	of	the	
+SYMBOLS
+	string.	Lines	33	to	36	handle	this	wraparound	in
+the	cipher	program.
+32.         # Handle wraparound, if needed:
+33.         if translatedIndex >= len(SYMBOLS):
+34.             translatedIndex = translatedIndex - len(SYMBOLS)
+35.         elif translatedIndex < 0:
+36.             translatedIndex = translatedIndex + len(SYMBOLS)
+If	
+translatedIndex
+	is	greater	than	or	equal	to	
+66
+,	the	condition	on	line	33
+is	
+True
+	and	line	34	is	executed	(and	the	
+elif
+	statement	on	line	35	is
+skipped).	Subtracting	the	length	of	
+SYMBOLS
+	from	
+translatedIndex
+	points	the
+index	of	the	variable	back	to	the	beginning	of	the	
+SYMBOLS
+	string.
+Otherwise,	Python	will	check	whether	
+translatedIndex
+	is	less	than	
+0
+.	If	that
+condition	is	
+True
+,	line	36	is	executed,	and	
+translatedIndex
+	wraps	around	to
+the	end	of	the	
+SYMBOLS
+	string.
+You	might	be	wondering	why	we	didn’t	just	use	the	integer	value	
+66
+directly	instead	of	
+len(SYMBOLS)
+.	By	using	
+len(SYMBOLS)
+	instead	of	
+66
+,	we	can
+add	to	or	remove	symbols	from	
+SYMBOLS
+	and	the	rest	of	the	code	will	still
+work.
+Now	that	you	have	the	index	of	the	translated	symbol	in	
+translatedIndex
+,
+SYMBOLS[translatedIndex]
+	will	evaluate	to	the	translated	symbol.	Line	38	adds
+this	encrypted/decrypted	symbol	to	the	end	of	the	
+translated
+	string	using
+string	concatenation:
+38.         translated = translated + SYMBOLS[translatedIndex]
+Eventually,	the	
+translated
+	string	will	be	the	whole	encoded	or	decoded
+message.
+Handling	Symbols	Outside	of	the	Symbol	Set
+The	
+message
+	string	might	contain	characters	that	are	not	in	the	
+SYMBOLS
+string.	These	characters	are	outside	of	the	cipher	program’s	symbol	set
+and	can’t	be	encrypted	or	decrypted.	Instead,	they	will	just	be	appended
+to	the	
+translated
+	string	as	is,	which	happens	in	lines	39	to	41:
+39.     else:
+40.         # Append the symbol without encrypting/decrypting:
+41.         translated = translated + symbol
+
+
+[Note: PDF has 466 pages, only first 100 pages extracted]

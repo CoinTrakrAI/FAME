@@ -1,0 +1,4545 @@
+MCSA
+Windows	Server
+®
+	2016
+Complete	Study	Guide	Exam	70-740,	70-741,	70-742
+Will	Panek
+
+
+Senior	Acquisitions	Editor:	Kenyon	Brown
+Development	Editor:	Kim	Wimpsett
+Technical	Editors:	Rodney	R.	Fournier	and	Chris	Crayton
+Senior	Production	Editor:	Rebecca	Anderson	and	Christine	O’Connor
+Copy	Editor:	Judy	Flynn
+Editorial	Manager:	Mary	Beth	Wakefield
+Production	Manager:	Kathleen	Wisor
+Executive	Editor:	Jim	Minatel
+Book	Designers:	Bill	Gibson	and	Judy	Fung
+Proofreader:	Nancy	Carrasco
+Indexer:	Jack	Lewis
+Project	Coordinator,	Cover:	Brent	Savage
+Cover	Designer:	Wiley
+Cover	Image:	Getty	Images	Inc./Jeremy	Woodhouse
+Copyright	©	2018	by	John	Wiley	&	Sons,	Inc.,	Indianapolis,	Indiana
+Published	simultaneously	in	Canada
+ISBN:	978-1-119-35914-2
+ISBN:	978-1-119-35916-6	(ebk.)
+ISBN:	978-1-119-35915-9	(ebk.)
+Manufactured	in	the	United	States	of	America
+No	part	of	this	publication	may	be	reproduced,	stored	in	a	retrieval	system	or	transmitted	in	any	form	or	by	any	means,
+electronic,	mechanical,	photocopying,	recording,	scanning	or	otherwise,	except	as	permitted	under	Sections	107	or	108	of	the
+1976	United	States	Copyright	Act,	without	either	the	prior	written	permission	of	the	Publisher,	or	authorization	through	payment
+of	the	appropriate	per-copy	fee	to	the	Copyright	Clearance	Center,	222	Rosewood	Drive,	Danvers,	MA	01923,	(978)	750-8400,
+fax	(978)	
+646-8600.	Requests	to	the	Publisher	for	permission	should	be	addressed	to	the	Permissions	Department,	John	Wiley	&	Sons,
+Inc.,	111	River	Street,	Hoboken,	NJ	07030,	(201)	748-6011,	fax	(201)	748-6008,	or	online	at
+http://www.wiley.com/go/permissions
+.
+Limit	of	Liability/Disclaimer	of	Warranty:	The	publisher	and	the	author	make	no	representations	or	warranties	with	respect	to
+the	accuracy	or	completeness	of	the	contents	of	this	work	and	specifically	disclaim	all	warranties,	including	without	limitation
+warranties	of	fitness	for	a	particular	purpose.	No	warranty	may	be	created	or	extended	by	sales	or	promotional	materials.	The
+advice	and	strategies	contained	herein	may	not	be	suitable	for	every	situation.	This	work	is	sold	with	the	understanding	that	the
+publisher	is	not	engaged	in	rendering	legal,	accounting,	or	other	professional	services.	If	professional	assistance	is	required,	the
+services	of	a	competent	professional	person	should	be	sought.	Neither	the	publisher	nor	the	author	shall	be	liable	for	damages
+arising	herefrom.	The	fact	that	an	organization	or	Web	site	is	referred	to	in	this	work	as	a	citation	and/or	a	potential	source	of
+further	information	does	not	mean	that	the	author	or	the	publisher	endorses	the	information	the	organization	or	Web	site	may
+provide	or	recommendations	it	may	make.	Further,	readers	should	be	aware	that	Internet	Web	sites	listed	in	this	work	may	have
+changed	or	disappeared	between	when	this	work	was	written	and	when	it	is	read.
+For	general	information	on	our	other	products	and	services	or	to	obtain	technical	support,	please	contact	our	Customer	Care
+Department	within	the	U.S.	at	(877)	762-2974,	outside	the	U.S.	at	(317)	572-3993	or	fax	(317)	572-4002.
+Wiley	publishes	in	a	variety	of	print	and	electronic	formats	and	by	print-on-demand.	Some	material	included	with	standard	print
+versions	of	this	book	may	not	be	included	in	e-books	or	in	print-on-demand.	If	this	book	refers	to	media	such	as	a	CD	or	DVD
+that	is	not	included	in	the	version	you	purchased,	you	may	download	this	material	at	
+http://booksupport.wiley.com
+.	For	more
+information	about	Wiley	
+products,	visit	
+www.wiley.com
+.
+Library	of	Congress	Control	Number:
+	2018932871
+TRADEMARKS:	Wiley,	the	Wiley	logo,	and	the	Sybex	logo	are	trademarks	or	registered	trademarks	of	John	Wiley	&	Sons,
+
+Inc.	and/or	its	affiliates,	in	the	United	States	and	other	countries,	and	may	not	be	used	without	written	permission.	Windows
+Server	is	a	registered	trademark	of	Microsoft	Corporation.	All	other	trademarks	are	the	property	of	their	respective	owners.
+John	Wiley	&	Sons,	Inc.	is	not	associated	with	any	product	or	vendor	mentioned	in	this	book.
+
+This	book	is	dedicated	to	the	three	ladies	of	my	life,	Crystal,	Alexandria,	and	Paige.
+
+Acknowledgments
+I	would	like	to	thank	my	wife	and	best	friend,	Crystal.	She	is	always	the	light	at	the	end	of	my
+tunnel.	I	want	to	thank	my	two	daughters,	Alexandria	and	Paige,	for	all	of	their	love	and
+support	during	the	writing	of	all	my	books.	The	three	of	them	are	my	support	system,	and	I
+couldn’t	do	any	of	this	without	them.
+I	want	to	thank	all	of	my	family	and	friends	who	always	help	me	when	I’m	writing	my	books.	I
+want	to	thank	my	brothers	Rick,	Gary,	and	Rob.	I	want	to	thank	my	great	friends	Shaun,	Jeremy,
+and	Gene.
+I	would	like	to	thank	all	of	my	friends	and	co-workers	at	StormWind	Studios.	I	want	to
+especially	thank	the	team	who	I	work	with	on	a	daily	basis	and	that	includes	Tom	W,	Dan	Y,
+Corey	F,	Ronda,	Dan	J,	Jessica,	Dave,	Tiffany,	Tara,	Ashley,	Brittany,	Doug,	Mike,	Vince,
+Desiree,	Ryan,	Ralph,	Dan	G,	Tyler,	Jeff	B,	Shayne,	Patrick,	Noemi,	Michelle,	Zachary,	Colin,
+and	the	man	who	makes	it	all	possible,	Tom	Graunke.	Thanks	to	all	of	you	for	everything	that
+you	do.	I	would	not	have	been	able	to	complete	this	book	without	all	of	your	help	and	support.
+I	want	to	thank	everyone	on	my	Sybex	team,	especially	my	development	editor,	Kim	Wimpsett,
+who	helped	me	make	this	the	best	book	possible,	and	Rodney	R.	Fournier,	who	is	the	technical
+editor	of	many	of	my	books.	It’s	always	good	to	have	the	very	best	technical	guy	backing	you
+up.	I	want	to	thank	Rebecca	Anderson	and	Christine	O’Connor,	who	were	my	production
+editors,	and	Judy	Flynn	for	being	the	Copy	Editor.
+I	want	to	also	thank	Chris	Crayton	who	is	my	Technical	Proofreader.	Special	thanks	to	my
+acquisitions	editor,	Kenyon	Brown,	who	was	the	lead	for	the	entire	book.	Finally,	I	want	to
+thank	everyone	else	behind	the	scenes	that	helped	make	this	book	possible.	It’s	truly	an
+amazing	thing	to	have	so	many	people	work	on	my	books	to	help	make	them	the	very	best.	I
+can’t	thank	you	all	enough	for	your	hard	work.
+
+About	the	Author
+William	Panek
+	
+holds	the	following	certifications:	MCP,	MCP+I,
+MCSA,	MCSA+	Security	and	Messaging,	MCSE-NT	(3.51	&	4.0),
+MCSE	2000,	2003,	2012/2012	R2,	MCSE+Security	and	Messaging,
+MCDBA,	MCT,	MCTS,	MCITP,	CCNA,	CCDA,	and	CHFI.	Will	is
+also	a	four	time	and	current	Microsoft	MVP	winner.
+After	many	successful	years	in	the	computer	industry,	Will	decided
+that	he	could	better	use	his	talents	and	his	personality	as	an
+instructor.	He	began	teaching	for	schools	such	as	Boston	University
+and	the	University	of	Maryland,	just	to	name	a	few.	He	has	done
+consulting	and	training	for	some	of	the	biggest	government	and
+corporate	companies	in	the	world	including	the	United	States	Secret	Service,	Cisco,	United
+States	Air	Force,	and	US	Army.
+In	2015,	Will	became	a	Sr.	Microsoft	Instructor	for	StormWind	Studios
+(
+www.stormwindstudios.com
+).	He	currently	lives	in	New	Hampshire	with	his	wife	and	two
+daughters.	Will	was	also	a	Representative	in	the	New	Hampshire	House	of	Representatives
+from	2010	to	2012.	In	his	spare	time,	he	likes	to	do	blacksmithing,	shooting	(trap	and	skeet),
+snowmobiling,	playing	racquetball,	and	riding	his	Harley.	Will	is	also	a	commercially-rated
+helicopter	pilot.
+
+Contents
+About	the	Author
+Acknowledgments
+Introduction
+The	Microsoft	Certification	Program
+Who	Should	Read	This	Book?
+What’s	Inside?
+What’s	Included	with	the	Book
+Recommended	Home	Lab	Setup
+How	to	Contact	Sybex/Author
+Certification	Objectives	Maps
+Assessment	Test
+Answers	to	Assessment	Test
+Chapter	1	Installing	Windows	Server	2016
+Features	and	Advantages	of	Windows	Server	2016
+Planning	the	Windows	Server	2016	Installation
+Activating	and	Servicing	Windows
+Using	Windows	Deployment	Services
+Understanding	Features	On	Demand
+Summary
+Video	Resources
+Exam	Essentials
+Review	Questions
+Chapter	2	Installing	in	the	Enterprise
+Understanding	Automated	Deployment	Options
+Deploying	Unattended	Installations
+Understanding	Hyper-V
+Summary
+Video	Resources
+Exam	Essentials
+Review	Questions
+Chapter	3	Configuring	Storage	and	Replication
+
+Understanding	File	Systems
+Storage	in	Windows	Server	2016
+Configuring	Permissions
+Configuring	Disk	Quotas
+Windows	PowerShell
+Using	Server	Manager
+Understanding	Data	Deduplication
+Summary
+Video	Resources
+Exam	Essentials
+Review	Questions
+Chapter	4	Understanding	Hyper-V
+Hyper-V	Overview
+Hyper-V	Installation	and	Configuration
+Configuring	Virtual	Machines
+PowerShell	Commands
+Summary
+Video	Resources
+Exam	Essentials
+Review	Questions
+Chapter	5	Configuring	High	Availability
+Components	of	High	Availability
+Achieving	High	Availability
+Understanding	Network	Load	Balancing
+Achieving	High	Availability	with	Hyper-V
+Summary
+Video	Resources
+Exam	Essentials
+Review	Questions
+Chapter	6	Understanding	Clustering
+Achieving	High	Availability	with	Failover	Clustering
+Windows	Server	2016	Clustering	Features
+PowerShell	Commands	for	Clustering
+Implementing	Storage	Spaces	Direct
+
+Summary
+Video	Resources
+Exam	Essentials
+Review	Questions
+Chapter	7	Configuring	Windows	Containers
+Understanding	Windows	Containers
+Using	PowerShell	for	Containers
+Summary
+Video	Resources
+Exam	Essentials
+Review	Questions
+Chapter	8	Maintaining	Windows	Server
+Configuring	Windows	Server	Updates
+Understanding	Backups
+PowerShell	Commands
+Summary
+Video	Resources
+Exam	Essentials
+Review	Questions
+Chapter	9	Understanding	Monitoring
+Overview	of	Windows	Server	2016	Performance	Monitoring
+Using	Windows	Server	2016	Performance	Tools
+Summary
+Video	Resources
+Exam	Essentials
+Review	Questions
+Chapter	10	Configuring	TCP/IP
+Understanding	TCP/IP
+Understanding	IP	Addressing
+Subnetting	a	Network
+Understanding	IPv6
+Summary
+Exam	Essentials
+Review	Questions
+
+Chapter	11	Configuring	DNS
+Introducing	DNS
+Introducing	DNS	Database	Zones
+Advantages	of	DNS	in	Windows	Server	2016
+Introducing	DNS	Record	Types
+Configuring	DNS
+Monitoring	and	Troubleshooting	DNS
+DNS	PowerShell	Commands
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	12	Configuring	DHCP
+Understanding	DHCP
+Installing	and	Authorizing	DHCP
+Creating	and	Managing	DHCP	Scopes
+Working	with	Advanced	DHCP	Configuration	Options
+PowerShell	Commands
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	13	Implement	IP	Address	Management
+Understanding	IPAM
+Managing	Services
+IPAM	Access	and	Auditing
+PowerShell	Commands	for	IPAM
+Summary
+Exam	Essentials
+Video	Resources
+Review	Questions
+Chapter	14	Configuring	Network	Access
+Overview	of	Dial-Up	Networking
+Overview	of	Virtual	Private	Networks
+Configuring	Your	Remote	Access	Server
+Understanding	a	VPN
+
+Configuring	a	VPN
+Managing	Your	Remote	Access	Server
+Configuring	a	VPN	Client
+Configuring	a	Web	Application	Proxy
+Understanding	DirectAccess
+Overview	of	Wireless	Access
+Remote	Access	Security
+Configuring	User	Access
+Configuring	Security
+PowerShell	for	Remote	Access
+Summary
+Exam	Essentials
+Video	Resources
+Review	Questions
+Chapter	15	Understanding	File	Services
+Configuring	File	Server	Resource	Manager
+Configure	File	and	Disk	Encryption
+Configuring	Distributed	File	System
+Configure	Advanced	File	Services
+Implementing	an	Audit	Policy
+Configure	and	Optimize	Storage
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	16	Configuring	High	Availability
+Components	of	High	Availability
+Achieving	High	Availability
+Understanding	Network	Load	Balancing
+Achieving	High	Availability	with	Failover	Clustering
+Windows	Server	2016	Clustering	Features
+PowerShell	Commands	for	Clustering
+Implementing	Storage	Spaces	Direct
+Achieving	High	Availability	with	Hyper-V
+Summary
+
+Exam	Essentials
+Video	Resources
+Review	Questions
+Chapter	17	Implementing	Software	Defined	Networking
+Understanding	Software	Defined	Networking
+Hyper-V	Overview
+Hyper-V	Installation	and	Configuration
+Configuring	Virtual	Machines
+PowerShell	Commands
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	18	Installing	Active	Directory
+Verifying	the	File	System
+Verifying	Network	Connectivity
+Understanding	Domain	and	Forest	Functionality
+Planning	the	Domain	Structure
+Installing	Active	Directory
+Verifying	Active	Directory	Installation
+Creating	and	Configuring	Application	Data	Partitions
+Configuring	DNS	Integration	with	Active	Directory
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	19	Administer	Active	Directory
+Active	Directory	Overview
+An	Overview	of	OUs
+Planning	the	OU	Structure
+Creating	OUs
+Managing	OUs
+Troubleshooting	OUs
+Creating	and	Managing	Active	Directory	Objects
+Using	Group	Policy	for	Security
+Publishing	Active	Directory	Objects
+
+Using	the	Command	Prompt	for	Active	Directory	Configuration
+PowerShell	for	Active	Directory
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	20	Maintaining	Active	Directory
+Overview	of	Network	Planning
+Overview	of	Active	Directory	Replication	and	Sites
+Implementing	Sites	and	Subnets
+Configuring	Replication
+Monitoring	and	Troubleshooting	Active	Directory	Replication
+Reasons	for	Creating	Multiple	Domains
+Creating	Domain	Trees	and	Forests
+Demoting	a	Domain	Controller
+Managing	Multiple	Domains
+Maintain	Active	Directory
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	21	Implementing	GPOs
+Introducing	Group	Policy
+Planning	a	Group	Policy	Strategy
+Implementing	Group	Policy
+Managing	Group	Policy
+Deploying	Software	Through	a	GPO
+Implementing	Software	Deployment
+Configuring	Software	Deployment	Settings
+Troubleshooting	Group	Policies
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	22	Understanding	Certificates
+Features	of	Windows	Server	2016	Certificate	Services
+PowerShell	for	AD	CS
+
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	23	Configure	Access	and	Information	Protection	Solutions
+Implement	Active	Directory	Federation	Services
+Workplace	Join
+Active	Directory	Rights	Management	Services
+Configuring	a	Web	Application	Proxy
+PowerShell	Commands
+Summary
+Exam	Essentials
+Review	Questions
+Appendix	Answers	to	the	Review	Questions
+Chapter	1:	Installing	Windows	Server	2016
+Chapter	2:	Installing	in	the	Enterprise
+Chapter	3:	Configuring	Storage	and	Replication
+Chapter	4:	Understanding	Hyper-V
+Chapter	5:	Configuring	High	Availability
+Chapter	6:	Understanding	Clustering
+Chapter	7:	Configuring	Windows	Containers
+Chapter	8:	Maintaining	Windows	Server
+Chapter	9:	Understanding	Monitoring
+Chapter	10:	Configuring	TCP/IP
+Chapter	11:	Configuring	DNS
+Chapter	12:	Configuring	DHCP
+Chapter	13:	Implement	IP	Address	Management
+Chapter	14:	Configuring	Network	Access
+Chapter	15:	Understanding	File	Services
+Chapter	16:	Configuring	High	Availability
+Chapter	17:	Implementing	Software	Defined	Networking
+Chapter	18:	Installing	Active	Directory
+Chapter	19:	Administer	Active	
+Directory
+Chapter	20:	Maintaining	Active	Directory
+
+Chapter	21:	Implementing	GPOs
+Chapter	22:	Understanding	Certificates
+Chapter	23:	Configure	Access	and	Information	Protection	Solutions
+Advert
+EULA
+List	of	Tables
+Introduction
+TABLE	I.1
+TABLE	I.2
+TABLE	I.3
+Chapter	1
+TABLE	1.1
+TABLE	1.2
+TABLE	1.3
+TABLE	1.4
+TABLE	1.5
+Chapter	2
+TABLE	2.1
+TABLE	2.2
+TABLE	2.3
+TABLE	2.4
+TABLE	2.5
+TABLE	2.6
+TABLE	2.7
+TABLE	2.8
+Chapter	3
+TABLE	3.1
+TABLE	3.2
+TABLE	3.3
+Chapter	4
+
+TABLE	4.1
+TABLE	4.2
+TABLE	4.3
+TABLE	4.4
+TABLE	4.5
+TABLE	4.6
+Chapter	5
+TABLE	5.1
+TABLE	5.2
+TABLE	5.3
+Chapter	6
+TABLE	6.1
+TABLE	6.2
+TABLE	6.3
+Chapter	7
+TABLE	7.1
+TABLE	7.2
+TABLE	7.3
+TABLE	7.4
+TABLE	7.5
+Chapter	8
+TABLE	8.1
+TABLE	8.2
+TABLE	8.3
+TABLE	8.4
+TABLE	8.5
+Chapter	9
+TABLE	9.1
+Chapter	10
+TABLE	10.1
+
+TABLE	10.2
+TABLE	10.3
+TABLE	10.4
+TABLE	10.5
+TABLE	10.6
+TABLE	10.7
+TABLE	10.8
+Chapter	11
+TABLE	11.1
+TABLE	11.2
+TABLE	11.3
+TABLE	11.4
+TABLE	11.5
+TABLE	11.6
+TABLE	11.7
+TABLE	11.8
+TABLE	11.9
+TABLE	11.10
+Chapter	12
+TABLE	12.1
+Chapter	13
+TABLE	13.1
+Chapter	14
+TABLE	14.1
+TABLE	14.2
+TABLE	14.3
+Chapter	15
+TABLE	15.1
+TABLE	15.2
+TABLE	15.3
+
+TABLE	15.4
+TABLE	15.5
+Chapter	16
+TABLE	16.1
+TABLE	16.2
+TABLE	16.3
+TABLE	16.4
+TABLE	16.5
+TABLE	16.6
+Chapter	17
+TABLE	17.1
+TABLE	17.2
+TABLE	17.3
+TABLE	17.4
+TABLE	17.5
+TABLE	17.6
+Chapter	18
+Table	18.1
+Table	18.2
+Table	18.3
+Chapter	19
+Table	19.1
+Table	19.2
+Table	19.3
+Table	19.4
+Chapter	20
+Table	20.1
+Table	20.2
+Table	20.3
+Table	20.4
+
+Chapter	21
+Table	21.1
+Table	21.2
+Table	21.3
+Chapter	22
+Table	22.1
+Table	22.2
+Table	22.3
+Chapter	23
+Table	23.1
+Table	23.2
+Table	23.3
+Table	23.4
+Table	23.5
+Table	23.6
+Table	23.7
+Table	23.8
+List	of	Illustrations
+Chapter	1
+FIGURE	1.1	Available	roles	in	Windows	Server	2016
+FIGURE	1.2	Windows	Server	2016	Setup
+FIGURE	1.3	Windows	Server	Edition
+FIGURE	1.4	Windows	Server	Installation
+FIGURE	1.5	Installing	Windows	screen
+FIGURE	1.6	Customize	settings
+FIGURE	1.7	Windows	Server	Edition
+FIGURE	1.8	Change	Password	Screen
+FIGURE	1.9	Password	Changed	Screen
+FIGURE	1.10	Server	Core	Command	Prompt
+
+FIGURE	1.11	Nano	Server	Image	Builder
+FIGURE	1.12	Nano	Server	Image	Builder	Destination
+FIGURE	1.13	Nano	Server	Image	Choice
+FIGURE	1.14	Deployment	Type
+FIGURE	1.15	Advanced	Configuration	Screen
+FIGURE	1.16	Verifying	the	Created	VHD
+Chapter	2
+FIGURE	2.1	Microsoft	Deployment	Toolkit	console
+FIGURE	2.2	Microsoft	Deployment	Toolkit	Download
+FIGURE	2.3	Microsoft	Deployment	Toolkit	Setup	Screen
+FIGURE	2.4	Microsoft	Deployment	Toolkit	Setup	Screen
+FIGURE	2.5	Ready	to	Install	Screen
+FIGURE	2.6	Deployment	Workbench
+FIGURE	2.7	Microsoft	Deployment	Toolkit	Setup	Screen
+FIGURE	2.8	Descriptive	Name	Screen
+FIGURE	2.9	Options	Screen
+FIGURE	2.10	Summary	Screen
+FIGURE	2.11	Confirmation	Screen
+FIGURE	2.12	Unattended	installation	with	distribution	share	and	a	target	computer
+Chapter	3
+FIGURE	3.1	Format	options	on	Windows	Server	2016
+FIGURE	3.2	Disk	Management
+FIGURE	3.3	Converting	a	disk
+FIGURE	3.4	Select	Disks	page	of	the	New	Mirrored	Volume	Wizard
+FIGURE	3.5	Newly	created	mirrored	volume	set
+FIGURE	3.6	Multipath	I/O
+FIGURE	3.7	Discovery	Domain	Tab
+FIGURE	3.8	
+DiskPart
+	commands
+FIGURE	3.9	Setting	up	compression	on	a	folder
+FIGURE	3.10	Setting	up	encryption	on	a	folder
+
+FIGURE	3.11	Security	settings	on	the	
+StormWind	Documents
+	folder
+FIGURE	3.12	Individual	permissions
+FIGURE	3.13	Setting	up	permissions	on	a	shared	folder
+FIGURE	3.14	NTFS	security	and	shared	permissions	example
+FIGURE	3.15	NTFS	security	and	shared	permissions
+FIGURE	3.16	Advanced	Sharing
+FIGURE	3.17	Using	Server	Manager
+FIGURE	3.18	Selecting	Data	Deduplication
+FIGURE	3.19	Enabling	Data	Deduplication
+FIGURE	3.20	Data	Deduplication	setup
+Chapter	4
+FIGURE	4.1	Hyper-V	architecture
+FIGURE	4.2	Warning	window	that	Hyper-V	cannot	be	installed
+FIGURE	4.3	Server	Manager	Add	Features
+FIGURE	4.4	Virtual	switch	screen
+FIGURE	4.5	Hyper-V	in	Server	Manager
+FIGURE	4.6	Hyper-V	Manager
+FIGURE	4.7	Hyper-V	Settings
+FIGURE	4.8	Virtual	Network	Manager
+FIGURE	4.9	Virtual	network	card
+FIGURE	4.10	In	Disk	Management,	you	can	set	disks	as	Offline.
+FIGURE	4.11	The	Edit	Virtual	Hard	Disk	Wizard
+FIGURE	4.12	Hyper-V	Manager
+FIGURE	4.13	Specify	Generation	screen
+FIGURE	4.14	VM	RAM
+FIGURE	4.15	Networking	page
+FIGURE	4.16	Virtual	Hard	Disk	page
+FIGURE	4.17	Installing	OS	screen
+FIGURE	4.18	Completing	the	New	Virtual	Machine	Wizard	screen
+FIGURE	4.19	Options	available	when	right-clicking	a	virtual	machine
+
+FIGURE	4.20	Delete	Virtual	Machine	warning	window
+FIGURE	4.21	Virtual	Machine	Connection	window	when	the	machine	is	turned	off
+FIGURE	4.22	Virtual	Machine	Connection	window	showing	a	running	Windows
+Server	2016	virtual	machine
+FIGURE	4.23	New	Virtual	Machine
+Chapter	5
+FIGURE	5.1	Network	Load	Balancing
+FIGURE	5.2	New	Cluster
+FIGURE	5.3	Host	Name	setup
+FIGURE	5.4	Add	IP	address
+FIGURE	5.5	Cluster	Parameters
+FIGURE	5.6	Port	Rules
+FIGURE	5.7	VM	Advanced	Features
+FIGURE	5.8	Live	Migration	Advanced	Features
+FIGURE	5.9	Storage	Migration	Settings
+Chapter	6
+FIGURE	6.1	Using	Failover	Clustering	to	cluster	SQL	Server
+FIGURE	6.2	Failing	the	SQL	Server	service	to	another	node
+FIGURE	6.3	Majority	needed
+FIGURE	6.4	Failover	Cluster	feature
+FIGURE	6.5	Confirmation	screen
+FIGURE	6.6	The	Validate	A	Configuration	Wizard
+FIGURE	6.7	Cluster	Tests
+FIGURE	6.8	Validate	A	Configuration	Wizard	results
+FIGURE	6.9	High	availability	roles
+FIGURE	6.10	Configuring	a	generic	application
+FIGURE	6.11	Resource	dependencies
+FIGURE	6.12	Resource	policies
+FIGURE	6.13	Resource	Advanced	Policies
+Chapter	7
+
+FIGURE	7.1	Regedit	version
+FIGURE	7.2	Server	Configuration	screen
+FIGURE	7.3	Install	NuGet
+FIGURE	7.4	Install	Docker
+FIGURE	7.5	Checking	the	Docker	service
+FIGURE	7.6	Docker	Info
+FIGURE	7.7	Docker	information
+FIGURE	7.8	Docker	images
+FIGURE	7.9	Container	created
+FIGURE	7.10	Docker	images
+FIGURE	7.11	Docker	run	command
+FIGURE	7.12	Docker	info	command
+FIGURE	7.13	Docker	Network	Info
+FIGURE	7.14	Docker	Network	Info
+FIGURE	7.15	Docker	Search	Microsoft
+Chapter	8
+FIGURE	8.1	Windows	Update	control	panel
+FIGURE	8.2	Seeing	the	Update	Status
+FIGURE	8.3	Viewing	your	Update	History
+FIGURE	8.4	Viewing	Advanced	Options
+FIGURE	8.5	Choosing	to	install	WSUS
+FIGURE	8.6	Select	Role	screen
+FIGURE	8.7	Content	Location	Selection	screen
+FIGURE	8.8	Confirmation	screen
+FIGURE	8.9	Status	screen
+FIGURE	8.10	Status	screen
+FIGURE	8.11	Administrative	Tools
+FIGURE	8.12	WSUS	Options
+FIGURE	8.13	Connect	to	Upstream	Server
+FIGURE	8.14	Choose	Products	screen
+
+FIGURE	8.15	The	main	screen	of	the	Windows	Server	2016	Backup	utility
+FIGURE	8.16	Viewing	the	Archive	attributes	for	a	folder
+FIGURE	8.17	Bare	Metal	Restore	option
+FIGURE	8.18	Selecting	Windows	Server	Backup
+FIGURE	8.19	Backup	Options	screen
+FIGURE	8.20	Select	Items	for	Backup	screen
+FIGURE	8.21	Specify	Destination	screen
+Chapter	9
+FIGURE	9.1	Adding	a	new	Performance	Monitor	counter
+FIGURE	9.2	Viewing	information	in	Performance	Monitor	Line	view
+FIGURE	9.3	Viewing	information	in	Performance	Monitor	Histogram	view
+FIGURE	9.4	Viewing	information	in	Performance	Monitor	Report	view
+FIGURE	9.5	General	tab	of	the	Performance	Monitor	Properties	dialog	box
+FIGURE	9.6	Source	tab	of	the	Performance	Monitor	Properties	dialog	box
+FIGURE	9.7	The	Data	tab	of	the	Performance	Monitor	Properties	dialog	box
+FIGURE	9.8	The	Graph	tab	of	the	Performance	Monitor	Properties	dialog	box
+FIGURE	9.9	The	Appearance	tab	of	the	Performance	Monitor	Properties	dialog	box
+FIGURE	9.10	Viewing	process	statistics	and	information	using	Task	Manager
+FIGURE	9.11	Viewing	CPU	and	memory	performance	information	using	Task	Manager
+FIGURE	9.12	Viewing	user	information	using	Task	Manager
+FIGURE	9.13	Viewing	applications	that	are	currently	running	using	Task	Manager
+FIGURE	9.14	Viewing	services	information	using	Task	Manager
+FIGURE	9.15	Event	Viewer
+FIGURE	9.16	Information,	errors,	and	warnings	in	Event	Viewer
+FIGURE	9.17	An	Event	Properties	dialog	box
+FIGURE	9.18	The	applications	and	services	DNS	Server	log
+FIGURE	9.19	Create	Custom	View	dialog	box
+FIGURE	9.20	Subscription	Properties	dialog	box
+FIGURE	9.21	Resource	Monitor
+FIGURE	9.22	Resource	Monitor	CPU	tab
+
+FIGURE	9.23	Resource	Monitor	Memory	tab
+FIGURE	9.24	Resource	Monitor	Disk	tab
+FIGURE	9.25	Resource	Monitor	Network	tab
+Chapter	10
+FIGURE	10.1	TCP/IP	model
+FIGURE	10.2	TCP/IP	process
+FIGURE	10.3	A	sample	subnet
+FIGURE	10.4	Network	vs.	host	addresses
+FIGURE	10.5	The	network	address	and	its	subnet
+FIGURE	10.6	The	subnet	mask	revealed
+FIGURE	10.7	Different	ways	to	represent	the	same	mask
+FIGURE	10.8	Applying	the	subnet	mask
+FIGURE	10.9	Converting	the	subnet	mask	to	decimal
+FIGURE	10.10	An	example	of	a	smaller	subnet	address
+FIGURE	10.11	Will’s	IPv4	subnetting	chart
+FIGURE	10.12	Subnet	mask	represented	by	1s
+FIGURE	10.13	IPv4/IPv6	comparison
+FIGURE	10.14	TCP/IPv6	Properties	window
+FIGURE	10.15	IPv6	configuration	as	seen	from	the	command	prompt
+FIGURE	10.16	IPv6	dual	IP	layer	diagram
+FIGURE	10.17	IPv6	interface	identifier	for	
+ipconfig	
+display
+Chapter	11
+FIGURE	11.1	HOSTS	file
+FIGURE	11.2	The	DNS	hierarchy
+FIGURE	11.3	Setting	the	Dynamic	Updates	option
+FIGURE	11.4	DHCP	settings	for	DNS
+FIGURE	11.5	A	sample	DNS	query
+FIGURE	11.6	Setting	up	an	Active	Directory	Integrated	zone
+FIGURE	11.7	DNS	stub	zone	type
+FIGURE	11.8	DNS	Notify	dialog	box
+
+FIGURE	11.9	DNS	Zone	Transfers	tab
+FIGURE	11.10	DNS	zone	replication	scope
+FIGURE	11.11	The	Root	Hints	tab	of	the	DNS	server’s	Properties	dialog	box
+FIGURE	11.12	The	Start	Of	Authority	(SOA)	tab	of	the	zone	Properties	dialog	box
+FIGURE	11.13	The	Name	Servers	tab	of	the	zone	Properties	dialog	box
+FIGURE	11.14	The	Event	Logging	tab	of	the	server’s	Properties	dialog	box
+FIGURE	11.15	The	Monitoring	tab	of	the	server’s	Properties	dialog	box
+FIGURE	11.16	Enabling	BIND	Secondaries
+Chapter	12
+FIGURE	12.1	Choosing	DHCP
+FIGURE	12.2	DHCP	snap-in
+FIGURE	12.3	Choosing	Authorize
+FIGURE	12.4	Choosing	Unauthorize
+FIGURE	12.5	Welcome	page	of	the	New	Scope	Wizard
+FIGURE	12.6	IP	Address	Range	page	of	the	New	Scope	Wizard
+FIGURE	12.7	Add	Exclusions	And	Delay	page	of	the	New	Scope	Wizard
+FIGURE	12.8	Lease	Duration	page	of	the	New	Scope	Wizard
+FIGURE	12.9	Configure	DHCP	Options	page	of	the	New	Scope	Wizard
+FIGURE	12.10	Router	(Default	Gateway)	page	of	the	New	Scope	Wizard
+FIGURE	12.11	Domain	Name	And	DNS	Servers	page	of	the	New	Scope	Wizard
+FIGURE	12.12	WINS	Servers	page	of	the	New	Scope	Wizard
+FIGURE	12.13	Activate	Scope	page	of	the	New	Scope	Wizard
+FIGURE	12.14	IPv6	Scope	Name	page	of	the	New	Scope	Wizard
+FIGURE	12.15	Scope	Prefix	page	of	the	New	Scope	Wizard
+FIGURE	12.16	General	tab	of	the	scope’s	Properties	dialog	box	for	an	IPv4	scope
+FIGURE	12.17	General	tab	of	the	IPv4	Properties	dialog	box	for	the	server
+FIGURE	12.18	Advanced	tab	of	the	IPv4	Properties	dialog	box	for	the	server
+FIGURE	12.19	New	Reservation	dialog	box	for	IPv4	and	IPv6
+FIGURE	12.20	DNS	tab	of	the	scope’s	IPv4	Properties	dialog	box
+Chapter	13
+
+FIGURE	13.1	Choosing	the	IPAM	feature
+FIGURE	13.2	Confirmation	Screen
+FIGURE	13.3	IPAM	Overview	screen
+FIGURE	13.4	Select	Provisioning
+FIGURE	13.5	GPOs	Needed
+FIGURE	13.6	New	GPOs
+FIGURE	13.7	Configuring	server	discovery
+FIGURE	13.8	Server	Inventory	screen
+FIGURE	13.9	IPAM	DNS	Management
+FIGURE	13.10	Adding	DNS	records
+FIGURE	13.11	Adding	A	Record
+FIGURE	13.12	Verifying	the	DNS	record
+FIGURE	13.13	Managing	the	DNS	Zone
+FIGURE	13.14	DNS	Zone	Advanced	Properties
+FIGURE	13.15	Configuring	DHCP	using	IPAM
+FIGURE	13.16	Create	DHCP	Scope
+FIGURE	13.17	DHCP	Scope	settings
+FIGURE	13.18	Configuring	DHCP	Policy
+FIGURE	13.19	DHCP	Policy	settings
+FIGURE	13.20	IPAM	event	catalog
+FIGURE	13.21	IPAM	Access	Control
+FIGURE	13.22	Add	User	Role
+FIGURE	13.23	User	Operations
+FIGURE	13.24	Event	Catalog
+FIGURE	13.25	DHCP	Event	Catalog
+FIGURE	13.26	DNS	Event	Catalog
+Chapter	14
+FIGURE	14.1	Drilling	a	tunnel	through	the	Internet
+FIGURE	14.2	The	encapsulation	process
+FIGURE	14.3	The	PPP	tab	of	the	RRAS	server’s	Properties	dialog	box
+
+FIGURE	14.4	The	IPv4	tab	of	the	RRAS	server’s	Properties	dialog	box
+FIGURE	14.5	The	IPv6	tab	of	the	RRAS	Server’s	Properties	dialog	box
+FIGURE	14.6	Remote	Access	check	box
+FIGURE	14.7	Remote	Access
+FIGURE	14.8	Remote	Access	configuration	needed
+FIGURE	14.9	Opening	the	Getting	Started	Wizard
+FIGURE	14.10	VPNs	provide	private	connections	between	clients	and	servers	across
+the	Internet.
+FIGURE	14.11	Remote	access	choice
+FIGURE	14.12	The	Log	File	tab
+FIGURE	14.13	Change	Log	File	Properties
+FIGURE	14.14	The	Port	Status	dialog	box
+FIGURE	14.15	Network	Layout
+FIGURE	14.16	General	tab	of	the	VPN	Connection	Properties	dialog	box
+FIGURE	14.17	Options	tab	of	the	VPN	Connection	Properties	dialog	box
+FIGURE	14.18	Security	tab	of	the	VPN	Connection	Properties	dialog	box
+FIGURE	14.19	Networking	tab	of	the	VPN	Connection	Properties	dialog	box
+FIGURE	14.20	Sharing	tab	of	the	VPN	Connection	Properties	dialog	box
+FIGURE	14.21	The	Dial-In	tab	of	the	user’s	Properties	dialog	box
+FIGURE	14.22	The	Security	tab	of	the	RRAS	server’s	Properties	dialog	box
+Chapter	15
+FIGURE	15.1	Select	Server	Roles
+FIGURE	15.2	DFS	Management	console
+FIGURE	15.3	Adding	a	Namespace
+FIGURE	15.4	Adding	a	Namespace
+FIGURE	15.5	New	Folder
+FIGURE	15.6	Home	Folder
+FIGURE	15.7	BranchCache	Option
+Chapter	16
+FIGURE	16.1	Network	Load	Balancing
+
+FIGURE	16.2	New	Cluster
+FIGURE	16.3	Host	Name	setup
+FIGURE	16.4	Add	IP	address
+FIGURE	16.5	Cluster	Parameters
+FIGURE	16.6	Port	Rules
+FIGURE	16.7	Using	Failover	Clustering	to	cluster	SQL	Server
+FIGURE	16.8	Failing	the	SQL	Server	service	to	another	node
+FIGURE	16.9	Majority	needed
+FIGURE	16.10	Failover	Cluster	Feature
+FIGURE	16.11	Confirmation	Screen
+FIGURE	16.12	The	Validate	a	Configuration	Wizard
+FIGURE	16.13	Cluster	Tests
+FIGURE	16.14	Validate	a	Configuration	Wizard	results
+FIGURE	16.15	High	availability	roles
+FIGURE	16.16	Configuring	a	generic	application
+FIGURE	16.17	Resource	dependencies
+FIGURE	16.18	Resource	policies
+FIGURE	16.19	Resource	Advanced	Policies
+FIGURE	16.20	VM	Advanced	Features
+FIGURE	16.21	Live	Migration	Advanced	Features
+FIGURE	16.22	Storage	Migration	Settings
+Chapter	17
+FIGURE	17.1	Hyper-V	architecture
+FIGURE	17.2	Warning	window	that	Hyper-V	cannot	be	installed
+FIGURE	17.3	Server	Manager	Add	Features
+FIGURE	17.4	Virtual	Switch	Screen
+FIGURE	17.5	Hyper-V	in	Server	Manager
+FIGURE	17.6	Hyper-V	Manager
+FIGURE	17.7	Hyper-V	Settings
+FIGURE	17.8	Virtual	Network	Manager
+
+FIGURE	17.9	Virtual	Switch	Manager
+FIGURE	17.10	In	Disk	Management,	you	can	set	disks	as	Offline.
+FIGURE	17.11	The	Edit	Virtual	Hard	Disk	Wizard
+FIGURE	17.12	Hyper-V	Manager
+FIGURE	17.13	Specify	Generation	Screen
+FIGURE	17.14	VM	RAM
+FIGURE	17.15	Networking	Page
+FIGURE	17.16	Virtual	Hard	Disk	Page
+FIGURE	17.17	Installing	OS	screen
+FIGURE	17.18	Completing	the	New	Virtual	Machine	Wizard	screen
+FIGURE	17.19	Options	available	when	right-clicking	a	virtual	machine
+FIGURE	17.20	Delete	Virtual	Machine	warning	window
+FIGURE	17.21	Virtual	Machine	Connection	window	when	the	machine	is	turned	off
+FIGURE	17.22	Virtual	Machine	Connection	window	showing	a	running	Windows
+Server	2016	virtual	machine
+FIGURE	17.23	New	Virtual	Machine
+Chapter	18
+FIGURE	18.1	Format	options	on	Windows	Server	2016
+FIGURE	18.2	Disk	Management
+FIGURE	18.3	Viewing	TCP/IP	information	with	the	
+ipconfig
+	utility
+FIGURE	18.4	New	Forest	screen
+FIGURE	18.5	Domain	Controller	Options
+FIGURE	18.6	Review	Options	screen
+FIGURE	18.7	Prerequisites	Check	screen
+FIGURE	18.8	Viewing	Active	Directory	information	using	the	Active	Directory	Users
+and	Computers	tool
+FIGURE	18.9	Viewing	
+ntdsutil
+	commands	on	the	local	domain	controller
+FIGURE	18.10	General	Tab	of	DNS	zone	properties
+Chapter	19
+FIGURE	19.1	Active	Directory	OUs
+FIGURE	19.2	Mapping	a	business	organization	to	an	OU	structure
+
+FIGURE	19.3	A	geographically	based	OU	structure
+FIGURE	19.4	New	OU	dialog	box
+FIGURE	19.5	The	General	tab	of	the	OUs	Properties	dialog	box
+FIGURE	19.6	The	Managed	By	tab	of	the	OUs	Properties	dialog	box
+FIGURE	19.7	User	Properties
+FIGURE	19.8	New	Group	dialog	box
+FIGURE	19.9	The	Filter	Options	dialog	box
+FIGURE	19.10	Advanced	Features	in	the	
+System
+	folder	of	the	Active	Directory	Users
+and	Computers	tool
+FIGURE	19.11	Administrative	Center	Overview	screen
+FIGURE	19.12	Password	Settings	Container
+FIGURE	19.13	New	Password	Settings
+FIGURE	19.14	PSO	settings
+FIGURE	19.15	Select	Users	or	Groups
+Chapter	20
+FIGURE	20.1	Potential	relationships	between	domains	and	sites
+FIGURE	20.2	Using	a	bridgehead	server
+FIGURE	20.3	Active	Directory	replication	objects
+FIGURE	20.4	Renaming	the	site	to	CorporateHQ
+FIGURE	20.5	Configuring	intersite	replication	schedules
+FIGURE	20.6	An	example	of	site	links	and	site	link	bridges
+FIGURE	20.7	Choosing	a	new	site	for	a	specific	server
+FIGURE	20.8	A	replication	scenario	using	bridgehead	servers
+FIGURE	20.9	Enabling	the	global	catalog	on	an	Active	Directory	domain	controller
+FIGURE	20.10	A	domain	tree
+FIGURE	20.11	A	single	forest	consisting	of	multiple	trees
+FIGURE	20.12	Default	trusts	in	an	Active	Directory	forest
+FIGURE	20.13	Example	of	a	forest
+FIGURE	20.14	The	main	screen	of	the	Windows	Server	2016	Backup	utility
+FIGURE	20.15	Viewing	the	Archive	attributes	for	a	folder
+
+FIGURE	20.16	Bare	Metal	Recovery	option
+Chapter	21
+FIGURE	21.1	Group	Policy	configuration	settings
+FIGURE	21.2	Group	Policy	options
+FIGURE	21.3	Viewing	GPO	links	to	an	Active	Directory	OU
+FIGURE	21.4	A	GPO’s	Security	Settings	dialog	box
+FIGURE	21.5	Setting	the	Enforced	GPO	option
+FIGURE	21.6	Viewing	Startup/Shutdown	script	policy	settings
+FIGURE	21.7	Setting	scripting	options
+FIGURE	21.8	Viewing	Group	Policy	User	network	configuration	options
+FIGURE	21.9	Viewing	the	properties	of	an	MSI	package	file
+FIGURE	21.10	Deployment	tab	of	the	Software	Installation	Properties	dialog	box
+FIGURE	21.11	Advanced	Deployment	dialog	box
+FIGURE	21.12	The	Categories	tab	of	the	Software	Installation	Properties	dialog	box
+FIGURE	21.13	Removing	a	software	package
+FIGURE	21.14	The	Computer	Selection	page	of	the	Group	Policy	Results	Wizard
+FIGURE	21.15	The	User	Selection	page	of	the	Group	Policy	Results	Wizard
+FIGURE	21.16	The	Summary	Of	Selections	page	of	the	Group	Policy	Results	Wizard
+FIGURE	21.17	The	User	Selection	page	for	the	administrator	on	computer
+WinSRV2016
+FIGURE	21.18	The	Details	tab	of	the	object’s	Properties	window
+FIGURE	21.19	The	Infrastructure	Dashboard
+Chapter	22
+FIGURE	22.1	Cryptography	for	CA	screen
+FIGURE	22.2	Two-tier	PKI	hierarchy	model
+FIGURE	22.3	Specifying	the	name	of	the	CA
+FIGURE	22.4	Request	Handling	tab	of	the	Certificate	Templates	Management	console
+Chapter	23
+FIGURE	23.1	Active	Directory	Federation	Certificate	Console	screen
+FIGURE	23.2	AD	FS	claim	descriptions
+
+FIGURE	23.3	Adding	a	claim	description
+FIGURE	23.4	Claim	transformation	claim	rule
+FIGURE	23.5	Editing	the	claims	rules
+FIGURE	23.6	Example	of	Web	Proxy	setup
+
+Table	of	Exercises
+EXERCISE	1.1
+	Installing	Windows	Server	2016	Datacenter	(Desktop	Experience)
+EXERCISE	1.2
+	Installing	Windows	Server	2016	Using	Server	Core
+EXERCISE	1.3
+	Creating	a	Nano	Server	VHD
+EXERCISE	2.1
+	Downloading	and	Installing	MDT	2013
+EXERCISE	2.2
+	Configuring	MDT	2013
+EXERCISE	2.3
+	Prepare	a	System	for	Imaging	by	Using	the	System	Preparation	Tool
+EXERCISE	2.4
+	Installing	Windows	Server	2016	from	a	Disk	Image
+EXERCISE	2.5
+	Installing	the	Microsoft	Assessment	and	Planning	Toolkit
+EXERCISE	2.6
+	Configuring	MAP
+EXERCISE	3.1
+	Viewing	Disk	Configurations
+EXERCISE	3.2
+	Initializing	Disk	Drives
+EXERCISE	3.3
+	Converting	a	Basic	Disk	to	a	Dynamic	Disk
+EXERCISE	3.4
+	Creating	a	Volume	Set
+EXERCISE	3.5
+	Creating	Mount	Points
+EXERCISE	3.6
+	Installing	Microsoft	MPIO
+EXERCISE	3.7
+	Configuring	iSCSI	Storage	Connection
+EXERCISE	3.8
+	Installing	the	iSNS	Feature
+EXERCISE	3.9
+	Configuring	Shared	and	NTFS	Settings
+EXERCISE	3.10
+	Configure	the	NFS	Data	Store
+EXERCISE	3.11
+	Configuring	Disk	Quotas
+EXERCISE	3.12
+	Starting	the	Windows	PowerShell	Utility
+EXERCISE	4.1
+	Installing	Hyper-V	in	Full	Installation	Mode
+EXERCISE	4.2
+	Creating	an	Internal	Virtual	Network
+EXERCISE	4.3
+	Creating	a	Differencing	Hard	Disk
+EXERCISE	4.4
+	Creating	a	New	Virtual	Machine
+EXERCISE	4.5
+	Installing	Hyper-V	Integration	Components
+EXERCISE	4.6
+	Creating	a	Linux	Virtual	Machine
+
+EXERCISE	4.7
+	Updating	Linux	Ubuntu	16.10
+EXERCISE	5.1
+	Installing	NLB	Nodes
+EXERCISE	6.1
+	Installing	the	Failover	Cluster	Feature
+EXERCISE	6.2
+	Running	the	Validate	A	Configuration	Wizard
+EXERCISE	6.3
+	Creating	a	Cluster
+EXERCISE	6.4
+	Clustering	the	Print	Services	Role
+EXERCISE	6.5
+	Using	the	Dependency	Viewer
+EXERCISE	7.1
+	Installing	Docker
+EXERCISE	7.2
+	Installing	a	Base	Operating	System
+EXERCISE	7.3
+	Adding	an	Image	to	a	Container
+EXERCISE	7.4
+	Uninstalling	an	Image
+EXERCISE	8.1
+	Installing	a	WSUS	Server
+EXERCISE	8.2
+	Setting	WSUS	Server	Options
+EXERCISE	8.3
+	Configuring	a	GPO	for	WSUS
+EXERCISE	8.4
+	Backing	Up	Active	Directory
+EXERCISE	9.1
+	Using	Performance	Monitor
+EXERCISE	9.2
+	Installing	SNMP
+EXERCISE	9.3
+	Configuring	SNMP
+Subnet	Mask	Exercise	10.1
+	Class	C,	10	Hosts	per	Subnet
+Subnet	Mask	Exercise	10.2
+	Class	C,	20	Hosts	per	Subnet
+Subnet	Mask	Exercise	10.3
+	Class	C,	Five	Subnets
+Subnet	Mask	Exercise	10.4
+	Class	B,	1,500	Hosts	per	Subnet
+Subnet	Mask	Exercise	10.5
+	Class	B,	3,500	Hosts	per	Subnet
+EXERCISE	11.1
+	Installing	and	Configuring	the	DNS	Service
+EXERCISE	11.2
+	Configuring	a	Zone	for	Dynamic	Updates
+EXERCISE	11.3
+	Creating	a	Delegated	DNS	Zone
+EXERCISE	11.4
+	Manually	Creating	DNS	RRs
+EXERCISE	11.5
+	Simple	DNS	Testing
+EXERCISE	11.6
+	Using	the	
+nslookup
+	Command
+EXERCISE	11.7
+	Enabling	DHCP-DNS	Integration
+
+EXERCISE	12.1
+	Installing	the	DHCP	Service
+EXERCISE	12.2
+	Authorizing	a	DHCP	Server
+EXERCISE	12.4
+	Creating	a	New	Scope
+EXERCISE	12.5
+	Configuring	User	Class	Options
+EXERCISE	12.6
+	Creating	a	Superscope
+EXERCISE	12.7
+	Creating	a	New	Multicast	Scope
+EXERCISE	12.8
+	Enabling	DHCP-DNS	Integration
+EXERCISE	12.9
+	Creating	and	Activating	a	New	DHCPv6	Scope
+EXERCISE	12.10
+	Configuring	DHCP	Failover
+EXERCISE	12.11
+	Configuring	DHCP	Filtering
+EXERCISE	12.12
+	Enabling	DHCP	Name	Protection
+EXERCISE	13.1
+	Installing	the	IPAM	Feature
+EXERCISE	13.2
+	Provisioning	an	IPAM	Server
+EXERCISE	13.3
+	Configuring	IPAM	Server	Discovery
+EXERCISE	13.4
+	Manually	Add	IPAM	IP	Address	and	Blocks
+EXERCISE	13.5
+	Adding	Resource	Records
+EXERCISE	13.6
+	Managing	the	DNS	zone
+EXERCISE	13.7
+	Creating	a	DHCP	Scope
+EXERCISE	13.8
+	Setting	up	DHCP	Policies
+EXERCISE	13.9
+	Configuring	Role-Based	Access	Control
+EXERCISE	13.10
+	Configuring	Auditing
+EXERCISE	14.1
+	Installing	the	Remote	Access	Role
+EXERCISE	14.2
+	Setting	Up	a	VPN	Server
+EXERCISE	14.3
+	Changing	Remote	Access	Logging	Settings
+EXERCISE	14.4
+	Creating	a	Network	Access	Policy
+EXERCISE	14.5
+	Restricting	a	User	Profile	for	Dial-In	Access
+EXERCISE	14.6
+	Configuring	Encryption
+EXERCISE	14.7
+	Creating	a	VPN	Network	Access	Policy
+EXERCISE	15.1
+	Enabling	BitLocker	in	Windows	Server	2016
+EXERCISE	15.2
+	Installing	the	DFS	Namespace	Service
+
+EXERCISE	15.3
+	Setting	Up	a	DFS	Namespace
+EXERCISE	15.4
+	Configure	the	NFS	Data	Store
+EXERCISE	15.5
+	Configuring	BranchCache	Firewall	Exceptions
+EXERCISE	15.6
+	Installing	BranchCache	on	Windows	Server	2016
+EXERCISE	15.7
+	Enabling	Auditing	of	Active	Directory	Objects
+EXERCISE	15.8
+	Generating	and	Viewing	Audit	Logs
+EXERCISE	15.9
+	Configuring	iSCSI	Storage	Connection
+EXERCISE	15.10
+	Installing	the	iSNS	Feature	on	Windows	Server	2016
+EXERCISE	16.1
+	Installing	NLB	Nodes
+EXERCISE	16.2
+	Installing	the	Failover	Cluster	Feature
+EXERCISE	16.3
+	Running	the	Validate	a	Configuration	Wizard
+EXERCISE	16.4
+	Creating	a	Cluster
+EXERCISE	16.5
+	Clustering	the	Print	Services	Role
+EXERCISE	16.6
+	Using	the	Dependency	Viewer
+EXERCISE	17.1
+	Installing	Hyper-V	in	Full	Installation	Mode
+EXERCISE	17.2
+	Creating	an	Internal	Virtual	Network
+EXERCISE	17.3
+	Creating	a	Differencing	Hard	Disk
+EXERCISE	17.4
+	Creating	a	New	Virtual	Machine
+EXERCISE	17.5
+	Installing	Hyper-V	Integration	Components
+EXERCISE	17.6
+	Creating	a	Linux	Virtual	Machine
+EXERCISE	17.7
+	Updating	Linux	Ubuntu	16.10
+EXERCISE	18.1
+	Viewing	the	Disk	Configurations
+EXERCISE	18.2
+	Promoting	a	Domain	Controller
+EXERCISE	18.3
+	Installing	AD	DS	on	Server	Core	Using	PowerShell
+EXERCISE	18.4
+	Creating	an	RODC	Server
+EXERCISE	18.5
+	Viewing	the	Active	Directory	Event	Log
+EXERCISE	18.6
+	Joining	a	Computer	to	an	Active	Directory	Domain
+EXERCISE	18.7
+	Configuring	DNS	Integration	with	Active	Directory
+EXERCISE	19.1
+	Creating	an	OU	Structure
+EXERCISE	19.2
+	Modifying	OU	Structure
+
+EXERCISE	19.3
+	Using	the	Delegation	of	Control	Wizard
+EXERCISE	19.4
+	Delegating	Custom	Tasks
+EXERCISE	19.5
+	Creating	Active	Directory	Objects
+EXERCISE	19.6
+	Creating	a	User	Template
+EXERCISE	19.7
+	Managing	Object	Properties
+EXERCISE	19.8
+	Moving	Active	Directory	Objects
+EXERCISE	19.9
+	Resetting	an	Existing	Computer	Account
+EXERCISE	19.10
+	Applying	Security	Policies	by	Using	Group	Policy
+EXERCISE	19.11
+	Fine-Grained	Password	Policy
+EXERCISE	19.12
+	Creating	and	Publishing	a	Printer
+EXERCISE	19.13
+	Creating	and	Publishing	a	Shared	Folder
+EXERCISE	19.14
+	Finding	Objects	in	Active	Directory
+EXERCISE	19.15
+	Creating	a	PSO	Using	the	Active	Directory	Administrative	Center
+EXERCISE	20.1
+	Creating	Sites
+EXERCISE	20.2
+	Creating	Subnets
+EXERCISE	20.3
+	Configuring	Sites
+EXERCISE	20.4
+	Creating	Site	Links	and	Site	Link	Bridges
+EXERCISE	20.5
+	Moving	Server	Objects	Between	Sites
+EXERCISE	20.6
+	Creating	a	New	Subdomain
+EXERCISE	20.7
+	Assigning	Single-Master	Operations
+EXERCISE	20.8
+	Managing	Trust	Relationships
+EXERCISE	20.9
+	Adding	a	UPN	Suffix
+EXERCISE	20.10
+	Managing	GC	Servers
+EXERCISE	20.11
+	Managing	Universal	Group	Membership	Caching
+EXERCISE	20.12
+	Backing	Up	Active	Directory
+EXERCISE	21.1
+	Creating	a	Group	Policy	Object	Using	the	GPMC
+EXERCISE	21.2
+	Linking	Existing	GPOs	to	Active	Directory
+EXERCISE	21.3
+	Filtering	Group	Policy	Using	Security	Groups
+EXERCISE	21.4
+	Delegating	Administrative	Control	of	Group	Policy
+EXERCISE	21.5
+	Configuring	Automatic	Certificate	Enrollment	in	Group	Policy
+
+EXERCISE	21.6
+	Configuring	Folder	Redirection	in	Group	Policy
+EXERCISE	21.7
+	Creating	a	Software	Deployment	Share
+EXERCISE	21.8
+	Publishing	and	Assigning	Applications	Using	Group	Policy
+EXERCISE	21.9
+	Applying	Software	Updates
+EXERCISE	22.1
+	Installing	AD	CS	Through	Server	Manager
+EXERCISE	22.2
+	Configuring	AD	CS	Through	Server	Manager
+EXERCISE	22.3
+	Configure	an	Auto-Enrollment	Group	Policy	for	a	Domain
+EXERCISE	22.4
+	Creating	a	Certificate	Template
+EXERCISE	22.5
+	Publishing	a	Certificate	Template
+EXERCISE	22.6
+	Revoking	a	Certificate
+EXERCISE	22.7
+	Configuring	CA	Policy	Auditing
+EXERCISE	22.8
+	Backing	Up	the	Certificate	Authority	Server
+EXERCISE	23.1
+	Installing	the	AD	FS	Role	on	a	Computer	Using	Server	Manager
+EXERCISE	23.2
+	Configuring	the	AD	FS	Role	on	the	Computer	Using	Server	Manager
+EXERCISE	23.3
+	Configuring	Multifactor	Authentication
+EXERCISE	23.4
+	Workplace	Joining	a	Device
+EXERCISE	23.5
+	Installing	an	AD	RMS	Role	on	the	Local	Computer	Using	Server	Manager
+EXERCISE	23.6
+	Backing	Up	an	AD	RMS	Database
+EXERCISE	23.7
+	Adding	a	Trusted	User	Domain
+EXERCISE	23.8
+	Exporting	the	Trusted	User	Domain
+EXERCISE	23.9
+	Exporting	the	Trusted	Publishing	Domain
+EXERCISE	23.10
+	Adding	the	Trusted	Publishing	Domain
+
+Introduction
+This	book	is	drawn	from	more	than	20	years	of	IT	experience.	I	have	taken	that	experience	and
+translated	it	into	a	Windows	Server	2016	book	that	will	help	you	not	only	prepare	for	the
+MCSA:	Windows	Server	2016	exams	but	also	develop	a	clear	understanding	of	how	to	install
+and	configure	Windows	Server	2016	while	avoiding	all	of	the	possible	configuration	pitfalls.
+Many	Microsoft	books	just	explain	the	Windows	operating	system,	but	with	
+MCSA:	Windows
+Server	2016	Complete	Study	Guide
+,	I	go	a	step	further	by	providing	many	in-depth,	step-by-
+step	procedures	to	support	my	explanations	of	how	the	operating	system	performs	at	its	best.
+Microsoft	Windows	Server	2016	is	the	newest	version	of	Microsoft’s	server	operating	system
+software.	Microsoft	has	taken	the	best	of	Windows	Server	2003,	Windows	Server	2008,	and
+Windows	Server	2012	and	combined	them	into	the	latest	creation,	Windows	Server	2016.
+Windows	Server	2016	eliminates	many	of	the	problems	that	plagued	the	previous	versions	of
+Windows	Server,	and	it	includes	a	much	faster	boot	time	and	shutdown.	It	is	also	easier	to
+install	and	configure,	and	it	barely	stops	to	ask	the	user	any	questions	during	installation.	In	this
+book,	I	will	show	you	what	features	are	installed	during	the	automated	installation	and	where
+you	can	make	changes	if	you	need	to	be	more	in	charge	of	your	operating	system	and	its
+features.
+This	book	takes	you	through	all	the	ins	and	outs	of	Windows	Server	2016,	including
+installation,	configuration,	Group	Policy	Objects,	auditing,	backups,	and	so	much	more.
+Windows	Server	2016	has	improved	on	Microsoft’s	desktop	environment,	made	networking
+easier,	enhanced	searching	capability,	and	improved	performance—and	that’s	only	scratching
+the	surface.
+When	all	is	said	and	done,	this	is	a	technical	book	for	IT	professionals	who	want	to	take
+Windows	Server	2016	to	the	next	step	and	get	certified.	With	this	book,	you	will	not	only	learn
+Windows	Server	2016	and	ideally	pass	the	exams,	but	you	will	also	become	a	Windows
+Server	2016	expert.
+The	Microsoft	Certification	Program
+Since	the	inception	of	its	certification	program,	Microsoft	has	certified	more	than	2	million
+people.	As	the	computer	network	industry	continues	to	increase	in	both	size	and	complexity,
+this	number	is	sure	to	grow—and	the	need	for	proven	ability	will	also	increase.	Certifications
+can	help	companies	verify	the	skills	of	prospective	employees	and	contractors.
+The	Microsoft	certification	tracks	for	Windows	Server	2016	include	the	following:
+MCSA:	Windows	Server	2016
+	The	MCSA	is	now	the	lowest-level	certification	you	can
+achieve	with	Microsoft	in	relation	to	Windows	Server	2016.	It	requires	passing	three	exams:
+
+70-740,	70-741,	and	70-742.
+MCSE:	Cloud	Platform	and	Infrastructure
+	The	MCSE	certifications,	in	relation	to	Windows
+Server	2016,	require	that	you	become	an	MCSA	first	and	then	pass	two	additional	exams.	The
+additional	exams	will	vary	depending	on	which	of	the	two	MCSE	tracks	you	choose.	For	more
+information,	visit	Microsoft’s	website	at	
+www.microsoft.com/learning
+.
+How	Do	You	Become	Certified	on	Windows	Server	2016?
+Attaining	Microsoft	certification	has	always	been	a	challenge.	In	the	past,	students	have	been
+able	to	acquire	detailed	exam	information—even	most	of	the	exam	questions—from	online
+“brain	dumps”	and	third-party	“cram”	books	or	software	products.	For	the	new	generation	of
+exams,	this	is	simply	not	the	case.
+Microsoft	has	taken	strong	steps	to	protect	the	security	and	integrity	of	its	new	certification
+tracks.	Now	prospective	candidates	must	complete	a	course	of	study	that	develops	detailed
+knowledge	about	a	wide	range	of	topics.	It	supplies	them	with	the	true	skills	needed,	derived
+from	working	with	the	technology	being	tested.
+The	new	generations	of	Microsoft	certification	programs	are	heavily	weighted	toward	hands-
+on	skills	and	experience.	It	is	recommended	that	candidates	have	troubleshooting	skills
+acquired	through	hands-on	experience	and	working	knowledge.
+Fortunately,	if	you	are	willing	to	dedicate	the	time	and	effort	to	learn	Windows	Server	2016,
+you	can	prepare	yourself	well	for	the	exam	by	using	the	proper	tools.	By	working	through	this
+book,	you	can	successfully	meet	the	requirements	to	pass	the	Windows	Server	2016	exams.
+MCSA	Exam	Requirements
+Candidates	for	MCSA	certification	on	Windows	Server	2016	must	pass	at	least	the	following
+three	Windows	Server	2016	exams:
+70-740:
+	Installation,	Storage,	and	Compute	with	Windows	Server	2016
+70-741:
+	Networking	with	Windows	Server	2016
+70-742:
+	Identity	with	Windows	Server	2016
+ For	those	who	have	a	qualifying	certification,	they	can	take	the	Upgrading
+exam	“Upgrading	Your	Skills	to	MCSA:	Windows	Server	2016”	(Exam	70-743).	The
+objectives	for	this	exam	span	the	three	individual	exams.	This	book	covers	all	of	the
+objectives	for	the	Upgrading	exam.	For	details	about	the	exam,	visit	Microsoft’s	website
+at	
+www.microsoft.com/learning
+.
+Microsoft	provides	exam	objectives	to	give	you	a	general	overview	of	possible	areas	of
+coverage	on	the	Microsoft	exams.	Keep	in	mind,	however,	that	exam	objectives	are	subject	to
+
+change	at	any	time	without	prior	notice	and	at	Microsoft’s	sole	discretion.	Visit	the	Microsoft
+Learning	website	(
+www.microsoft.com/learning
+)	for	the	most	current	listing	of	
+exam
+objectives.	The	published	objectives	and	how	they	map	to	this	book	are	listed	later	in	this
+Introduction.
+ For	a	more	detailed	description	of	the	Microsoft	certification	programs,
+including	a	list	of	all	the	exams,	visit	the	Microsoft	Learning	website	at
+www.microsoft.com/learning
+.
+Tips	for	Taking	the	Windows	Server	2016	Exams
+Here	are	some	general	tips	for	achieving	success	on	your	certification	exam:
+Arrive	early	at	the	exam	center	so	that	you	can	relax	and	review	your	study	materials.
+During	this	final	review,	you	can	look	over	tables	and	lists	of	exam-related	information.
+Read	the	questions	carefully.	Do	not	be	tempted	to	jump	to	an	early	conclusion.	Make	sure
+you	know	
+exactly
+	what	the	question	is	asking.
+Answer	all	questions.	If	you	are	unsure	about	a	question,	mark	it	for	review	and	come	back
+to	it	at	a	later	time.
+On	simulations,	do	not	change	settings	that	are	not	directly	related	to	the	question.	Also,
+assume	the	default	settings	if	the	question	does	not	specify	or	imply	which	settings	are
+used.
+For	questions	about	which	you’re	unsure,	use	a	process	of	elimination	to	get	rid	of	the
+obviously	incorrect	answers	first.	This	improves	your	odds	of	selecting	the	correct	answer
+when	you	need	to	make	an	educated	guess.
+Exam	Registration
+At	the	time	this	book	was	released,	Microsoft	exams	are	given	two	ways.	You	can	take	the
+exam	live	online	or	through	the	more	than	1,000	Authorized	VUE	Testing	Centers	around	the
+world.	For	the	location	of	a	testing	center	near	you,	go	to	VUE’s	website	at	
+www.vue.com
+.	If
+you	are	outside	of	the	United	States	and	Canada,	contact	your	local	VUE	registration	center.
+Find	out	the	number	of	the	exam	that	you	want	to	take	and	then	register	with	the	VUE
+registration	center	nearest	to	you.	At	this	point,	you	will	be	asked	for	advance	payment	for	the
+exam.	The	exams	are	$165	each,	and	you	must	take	them	within	one	year	of	payment.	You	can
+schedule	exams	up	to	six	weeks	in	advance	or	as	late	as	one	working	day	prior	to	the	date	of
+the	exam.	You	can	cancel	or	reschedule	your	exam	if	you	contact	the	center	at	least	two
+working	days	prior	to	the	exam.	Same-day	registration	is	available	in	some	locations,	subject
+to	space	availability.	Where	same-day	registration	is	available,	you	must	register	a	minimum
+of	two	hours	before	test	time.
+
+When	you	schedule	the	exam,	you	will	be	provided	with	instructions	regarding	appointment
+and	cancellation	procedures,	ID	requirements,	and	information	about	the	testing	center
+location.	In	addition,	you	will	receive	a	registration	and	payment	confirmation	letter	from
+VUE.
+Who	Should	Read	This	Book?
+This	book	is	intended	for	individuals	who	want	to	earn	their	MCSA:	Windows	Server	2016
+certification.
+This	book	will	not	only	help	anyone	who	is	looking	to	pass	the	Microsoft	exams,	it	will	also
+help	anyone	who	wants	to	learn	the	real	ins	and	outs	of	the	Windows	Server	2016	operating
+system.
+What’s	Inside?
+Here	is	a	glance	at	what’s	in	each	chapter:
+Chapter	1:	Installing	Windows	Server	2016
+	In	the	first	chapter,	I	explain	the	requirements
+and	steps	required	to	install	and	configure	Windows	Server	2016.
+Chapter	2:	Installing	in	the	Enterprise
+	This	chapter	shows	you	how	to	install	Windows
+Server	2016	in	an	enterprise	environment.
+Chapter	3:	Configuring	Storage	and	Replication
+	I	take	you	through	the	advantages	and
+benefits	of	Windows	Server	2016	storage	and	replication	configurations.
+Chapter	4:	Understanding	Hyper-V
+	This	chapter	will	show	you	how	to	implement	and
+configure	Windows	Server	Hyper-V	and	virtual	machines.	You	will	learn	about	virtual
+networking,	virtual	hard	disks,	migration	types,	and	Integration	Services.
+Chapter	5:	Configuring	High	Availability
+	This	chapter	takes	you	through	the	different	ways	to
+create	and	manage	Network	Load	Balancing	(NLB)	and	high	availability.
+Chapter	6:	Understanding	Clustering
+	You	will	see	the	different	ways	that	you	can	set	up	and
+configure	clustering.	I	will	explain	how	to	set	up	clustering	for	applications	or	Hyper-V
+servers.
+Chapter	7:	Configuring	Windows	Containers
+	In	this	chapter	I	will	explain	the	advantages	of
+using	Microsoft	Containers.	I	will	also	explain	how	containers	and	images	are	created	and
+managed	using	Docker.
+Chapter	8:	Maintaining	Windows	Server
+	This	chapter	shows	you	how	to	maintain	your
+Windows	Server	2016	system.
+Chapter	9:	Understanding	Monitoring
+	This	chapter	will	show	you	how	to	implement	and
+configure	monitoring.	Monitoring	allows	you	to	look	at	the	different	resources	on	a	system	and
+fine-tune	those	resources	for	best	performance.
+
+Chapter	10:	Configuring	TCP/IP
+	In	the	first	chapter,	I	show	you	how	TCP/IP	gets	configured
+on	a	server	and	within	a	network.	I	also	show	you	how	to	subnet	an	IPv4	network.	I	also	show
+you	how	to	work	with	IPv6.
+Chapter	11:	Configuring	DNS
+	This	chapter	shows	you	how	to	install	Windows	Server	2016
+DNS	in	an	enterprise	environment.
+Chapter	12:	Configuring	DHCP
+	I	take	you	through	the	advantages	and	benefits	of	using
+Windows	Server	2016	DHCP.
+Chapter	13:	Implement	IP	Address	Management	
+This	chapter	will	show	you	how	to
+implement	and	configure	Windows	Server	2016	IPAM.
+Chapter	14:	Configuring	Network	Access
+	This	chapter	takes	you	through	the	different	ways
+to	create	and	manage	configure	network	access	and	VPN	access.
+Chapter	15:	Understanding	File	Services
+	You	will	see	the	different	ways	that	you	can	set	up
+and	configure	Windows	Server	2016	file	servers	and	tools	that	work	with	file	servers.
+Chapter	16:	Configuring	High	Availability
+	In	this	chapter	I	will	explain	the	advantages	of
+using	Windows	Server	2016	high	availability.	I	show	you	how	to	configure	NLB	and	high
+availability.
+Chapter	17:	Implementing	Software	Defined	Networking
+	This	chapter	shows	you	how	to
+create	and	maintain	a	Windows	Server	2016	Software	Defined	Network.
+Chapter	18:	Installing	Active	Directory
+	In	the	first	chapter,	I	will	explain	the	benefits	of
+using	Active	Directory.	I	will	explain	how	Forests,	Trees,	and	Domains	work	and	I	will	also
+show	you	how	to	install	Active	Directory.
+Chapter	19:	Administer	Active	Directory
+	This	chapter	shows	you	how	to	create	accounts	in
+Active	Directory.	I	will	show	you	how	to	do	bulk	imports	into	Active	Directory	and	also	how
+to	create	and	manage	groups.	I	will	also	show	you	how	to	create	and	manage	service	accounts.
+Chapter	20:	Maintaining	Active	Directory
+	In	this	chapter	I	explain	how	to	configure	Active
+Directory	components	like	an	RODC,	DFSR,	and	trusts.	I	will	also	show	you	how	to	configure
+and	use	Active	Directory	snapshots.
+Chapter	21:	Implementing	GPOs	
+This	chapter	will	show	you	how	to	implement	and
+configure	Group	Policy	Objects	(GPOs).
+Chapter	22:	Understanding	Certificates
+	This	chapter	takes	you	through	the	different	ways	to
+create	and	manage	and	configure	certificates.	I	will	show	you	how	to	install	and	configure	a
+Certificate	Server.
+Chapter	23:	Configure	Access	and	Information	Protection	Solutions
+	You	will	see	the	
+different	ways	that	you	can	set	up	and	configure	Active	Directory	Federation	Services.	I	will
+also	show	you	how	to	configure	a	Web	Application	Proxy.
+What’s	Included	with	the	Book
+
+This	book	includes	many	helpful	items	intended	to	prepare	you	for	the	MCSA:	Windows
+Server	2016	certification.
+Assessment	Test
+	There	is	an	assessment	test	at	the	conclusion	of	the	Introduction	that	can	be
+used	to	evaluate	quickly	where	you	are	with	Windows	Server	2016.	This	test	should	be	
+taken
+prior	to	beginning	your	work	in	this	book,	and	it	should	help	you	identify	areas	in	which	you
+are	either	strong	or	weak.	Note	that	these	questions	are	purposely	more	simple	than	the	types	of
+questions	you	may	see	on	the	exams.
+Objective	Map	and	Opening	List	of	Objectives
+	Later	in	this	Introduction,	I	include	a
+detailed	exam	objective	map	showing	you	where	each	of	the	exam	objectives	are	covered.
+Each	chapter	also	includes	a	list	of	the	exam	objectives	that	are	covered.
+Helpful	Exercises
+	Throughout	the	book,	I	have	included	step-by-step	exercises	of	some	of	the
+more	important	tasks	that	you	should	be	able	to	perform.	Some	of	these	exercises	have
+corresponding	videos	that	can	be	downloaded	from	the	book’s	website.	Also,	in	the	following
+section	I	have	a	recommended	home	lab	setup	that	will	be	helpful	in	completing	these	tasks.
+Exam	Essentials
+	The	end	of	each	chapter	also	includes	a	listing	of	exam	essentials.	These	are
+essentially	repeats	of	the	objectives,	but	remember	that	any	objective	on	the	exam	blueprint
+could	show	up	on	the	exam.
+Chapter	Review	Questions
+	Each	chapter	includes	review	questions.	These	are	used	to	assess
+your	understanding	of	the	chapter	and	are	taken	directly	from	the	chapter.	These	questions	are
+based	on	the	exam	objectives,	and	they	are	similar	in	difficulty	to	items	you	might	actually
+receive	on	the	MCSA:	Windows	Server	2016	exams.
+ The	Sybex	Interactive	Online	Test	Bank,	flashcards,	videos,	and	Glossary	can
+be	accessed	at	
+http://www.wiley.com/go/sybextestprep
+.
+Interactive	Online	Learning	Environment	and	Test	Bank
+The	interactive	online	learning	environment	that	accompanies	this	study	guide	provides	a	test
+bank	with	study	tools	to	help	you	prepare	for	the	certification	exams	and	increase	your	chances
+of	passing	them	the	first	time!	The	test	bank	includes	the	following	elements:
+Sample	Tests	
+All	of	the	questions	in	this	book	are	provided,	including	the	assessment	test,
+which	you’ll	find	at	the	end	of	this	Introduction,	and	the	chapter	tests	that	include	the	review
+questions	at	the	end	of	each	chapter.	In	addition,	there	are	three	practice	exams.	Use	these
+questions	to	test	your	knowledge	of	the	study	guide	material.	The	online	test	bank	runs	on
+multiple	devices.
+Electronic	Flashcards
+	One	set	of	questions	is	provided	in	digital	flashcard	format	(a	question
+followed	by	a	single	correct	answer).	You	can	use	the	flashcards	to	reinforce	your	learning	and
+provide	last-minute	test	prep	before	the	exam.
+
+Glossary
+	
+The	key	terms	from	this	book	and	their	definitions	are	available	as	a	fully	searchable
+PDF.
+Videos
+	Some	of	the	exercises	include	corresponding	videos.	These	videos	show	you	how	the
+author	does	the	exercises.	There	is	also	a	video	that	shows	you	how	to	set	up	virtualization	so
+that	you	can	complete	the	exercises	within	a	virtualized	environment.	The	author	also	has
+videos	to	help	you	on	the	Microsoft	exams	at	
+www.youtube.com/c/williampanek
+.
+Recommended	Home	Lab	Setup
+To	get	the	most	out	of	this	book,	you	will	want	to	make	sure	you	complete	the	exercises
+throughout	the	chapters.	To	complete	the	exercises,	you	will	need	one	of	two	setups.	First,	you
+can	set	up	a	machine	with	Windows	Server	2016	and	complete	the	labs	using	a	regular
+Windows	Server	2016	machine.
+The	second	way	to	set	up	Windows	Server	2016	(the	way	I	set	up	Server	2016)	is	by	using
+virtualization.	I	set	up	Windows	Server	2016	as	a	virtual	hard	disk	(VHD),	and	I	did	all	the
+labs	this	way.	The	advantages	of	using	virtualization	are	that	you	can	always	just	wipe	out	the
+system	and	start	over	without	losing	a	real	server.	Plus,	you	can	set	up	multiple	virtual	servers
+and	create	a	full	lab	environment	on	one	machine.
+I	created	a	video	for	this	book	showing	you	how	to	set	up	a	virtual	machine	and	how	to	install
+Windows	Server	2016	onto	that	virtual	machine.
+How	to	Contact	Sybex/Author
+Sybex	strives	to	keep	you	supplied	with	the	latest	tools	and	information	you	need	for	your
+work.	Please	check	the	website	at	
+www.wiley.com/go/sybextestprep
+,	where	I’ll	post
+additional	content	and	updates	that	supplement	this	book	should	the	need	arise.
+You	can	contact	me	by	going	to	my	website	at	
+www.willpanek.com
+.	You	can	also	watch	free
+videos	on	Microsoft	networking	at	
+www.youtube.com/c/williampanek
+.	If	you	would	like	to
+follow	information	about	Windows	Server	2016	from	Will	Panek,	please	visit	Twitter
+@AuthorWillPanek.
+Certification	Objectives	Maps
+Tables	I.1
+,	
+I.2
+,	and	
+I.3
+	provide	the	objective	mappings	for	the	70-740,	70-741,	and	70-742
+exams.	In	addition	to	the	book	chapters,	you	will	find	coverage	of	exam	objectives	in	the
+flashcards,	practice	exams,	and	videos	on	the	book’s	companion	website:
+www.wiley.com/go/sybextestprep
+.
+TABLE	I.1
+	70-740	exam	objectives
+Objective
+Chapter
+
+Install	Windows	Servers	in	host	and	compute	environments	(10–15%)
+Install,	upgrade,	and	migrate	servers	and	workloads
+Chapter
+1
+Determine	Windows	Server	2016	installation	requirements;	determine	appropriate
+Windows	Server	2016	editions	per	workloads;	install	Windows	Server	2016;
+install	Windows	Server	2016	features	and	roles;	install	and	configure	Windows
+Server	Core;	manage	Windows	Server	Core	installations	using	Windows
+PowerShell,	command	line,	and	remote	management	capabilities;	implement
+Windows	PowerShell	Desired	State	Configuration	(DSC)	to	install	and	maintain
+integrity	of	installed	environments;	perform	upgrades	and	migrations	of	servers	and
+core	workloads	from	Windows	Server	2008	and	Windows	Server	2012	to	Windows
+Server	2016;	determine	the	appropriate	activation	model	for	server	installation,
+such	as	Automatic	Virtual	Machine	Activation	(AVMA),	Key	Management	Service
+(KMS),	and	Active	Directory-based	Activation
+Chapter
+1
+Install	and	configure	Nano	Server
+Chapter
+1
+Determine	appropriate	usage	scenarios	and	requirements	for	Nano	Server,	install
+Nano	Server,	implement	Roles	and	Features	on	Nano	Server,	manage	and	configure
+Nano	Server,	manage	Nano	Server	remotely	using	Windows	PowerShell
+Chapter
+1
+Create,	manage,	and	maintain	images	for	deployment
+Chapter
+2
+Plan	for	Windows	Server	virtualization;	plan	for	Linux	and	FreeBSD	deployments;
+assess	virtualization	workloads	using	the	Microsoft	Assessment	and	Planning
+(MAP)	Toolkit;	determine	considerations	for	deploying	workloads	into	virtualized
+environments;	update	images	with	patches,	hotfixes,	and	drivers;	install	roles	and
+features	in	offline	images;	manage	and	maintain	Windows	Server	Core,	Nano	Server
+images,	and	VHDs	using	Windows	PowerShell
+Chapter
+2
+Implement	storage	solutions	(10–15%)
+Configure	disks	and	volumes
+Chapter
+3
+Configure	sector	sizes	appropriate	for	various	workloads,	configure	GUID	partition
+table	(GPT)	disks,	create	VHD	and	VHDX	files	using	Server	Manager	or	Windows
+PowerShell,	mount	virtual	hard	disks,	determine	when	to	use	NTFS	and	ReFS	file
+systems,	configure	NFS	and	SMB	shares	using	Server	Manager,	configure	SMB
+share	and	session	settings	using	Windows	PowerShell,	configure	SMB	server	and
+SMB	client	configuration	settings	using	Windows	PowerShell,	configure	file	and
+folder	permissions
+Chapter
+3
+Implement	server	storage
+Chapter
+3
+Configure	storage	pools;	implement	simple,	mirror,	and	parity	storage	layout	options
+Chapter
+
+for	disks	or	enclosures;	expand	storage	pools;	configure	Tiered	Storage;	configure
+iSCSI	target	and	initiator;	configure	iSNS;	configure	Datacenter	Bridging	(DCB);
+configure	Multi-Path	IO	(MPIO);	determine	usage	scenarios	for	Storage	Replica;
+implement	Storage	Replica	for	server-to-server,	cluster-to-cluster,	and	stretch
+cluster	scenarios
+3
+Implement	data	deduplication
+Chapter
+3
+Implement	and	configure	deduplication,	determine	appropriate	usage	scenarios	for
+deduplication,	monitor	deduplication,	implement	a	backup	and	restore	solution	with
+deduplication
+Chapter
+3
+Implement	Hyper-V	(20–25%)
+Install	and	configure	Hyper-V
+Chapter
+4
+Determine	hardware	and	compatibility	requirements	for	installing	Hyper-V,	install
+Hyper-V,	install	management	tools,	upgrade	from	existing	versions	of	Hyper-V,
+delegate	virtual	machine	management,	perform	remote	management	of	Hyper-V
+hosts,	configure	virtual	machines	using	Windows	PowerShell	Direct,	implement
+nested	virtualization
+Chapter
+4
+Configure	virtual	machine	(VM)	settings
+Chapter
+4
+Add	or	remove	memory	in	running	a	VM,	configure	dynamic	memory,	configure
+Non-Uniform	Memory	Access	(NUMA)	support,	configure	smart	paging,	configure
+Resource	Metering,	manage	Integration	Services,	create	and	configure	Generation	1
+and	2	VMs	and	determine	appropriate	usage	scenarios,	implement	Enhanced
+Session	Mode,	create	Linux	and	FreeBSD	VMs,	install	and	configure	Linux
+Integration	Services	(LIS),	install	and	configure	FreeBSD	Integration	Services
+(BIS),	implement	Secure	Boot	for	Windows	and	Linux	environments,	move	and
+convert	VMs	from	previous	versions	of	Hyper-V	to	Windows	Server	2016	Hyper-V,
+export	and	import	VMs,	implement	Discrete	Device	Assignment	(DDA)
+Chapter
+4
+Configure	Hyper-V	storage
+Chapter
+4
+Create	VHDs	and	VHDX	files	using	Hyper-V	Manager,	create	shared	VHDX	files,
+configure	differencing	disks,	modify	virtual	hard	disks,	configure	pass-through
+disks,	resize	a	virtual	hard	disk,	manage	checkpoints,	implement	production
+checkpoints,	implement	a	virtual	Fibre	Channel	adapter,	configure	Storage	Quality
+of	Service	(QoS)
+Chapter
+4
+Configure	Hyper-V	networking
+Chapter
+4
+Add	and	remove	virtual	network	interface	cards	(vNICs),	configure	Hyper-V	virtual
+Chapter
+
+switches,	optimize	network	performance,	configure	MAC	addresses,	configure
+network	isolation,	configure	synthetic	and	legacy	virtual	network	adapters,
+configure	NIC	Teaming	in	VMs,	configure	virtual	machine	queue	(VMQ),	enable
+Remote	Direct	Memory	Access	(RDMA)	on	network	adapters	bound	to	a	Hyper-V
+virtual	switch	using	Switch	Embedded	Teaming	(SET),	configure	Bandwidth
+Management
+4
+Implement	Windows	Containers	(5–10%)
+	
+Deploy	Windows	Containers
+Chapter
+7
+Determine	installation	requirements	and	appropriate	sScenarios	for	Windows
+Containers,	install	and	configure	Windows	Server	Container	host	in	physical	or
+virtualized	environments,	install	and	configure	Windows	Server	container	host	to
+Windows	Server	Core	or	Nano	Server	in	a	physical	or	virtualized	environment,
+install	Docker	on	Windows	Server	and	Nano	Server,	configure	Docker	daemon
+startup	options,	configure	Windows	PowerShell	for	use	with	Containers,	install	a
+base	operating	system,	tag	an	image,	uninstall	an	operating	system	image,	create
+Windows	Server	Containers,	create	Hyper-V	Containers
+Chapter
+7
+Manage	Windows	Containers
+Chapter
+7
+Containers	using	Windows	PowerShell,	manage	container	networking,	manage
+container	data	volumes,	manage	Resource	Control,	create	new	Container	images
+using	Dockerfile,	manage	Container	images	using	DockerHub	repository	for	public
+and	private	scenarios,	manage	container	images	using	Microsoft	Azure
+Chapter
+7
+Implement	high	availability	(30–35%)
+Implement	high	availability	and	disaster	recovery	options	in	Hyper-V
+Chapter
+5
+Implement	Hyper-V	Replica,	implement	Live	Migration,	implement	Shared	Nothing
+Live	Migration,	configure	CredSSP	or	Kerberos	authentication	protocol	for	Live
+Migration,	implement	storage	migration
+Chapter
+5
+Implement	Failover	Clustering
+Chapter
+6
+Implement	Workgroup,	Single,	and	Multi-domain	clusters;	configure	quorum;
+configure	cluster	networking;	restore	single	node	or	cluster	configuration;	configure
+cluster	storage;	implement	Cluster-Aware	Updating;	implement	Cluster	Operating
+System	Rolling	Upgrade;	configure	and	optimize	clustered	shared	volumes	(CSVs);
+configure	clusters	without	network	names;	implement	Scale-Out	File	Server	(SoFS);
+determine	different	scenarios	for	the	use	of	SoFS	vs.	clustered	File	Server;
+determine	usage	scenarios	for	implementing	guest	clustering;	implement	a	Clustered
+Storage	Spaces	solution	using	Shared	SAS	storage	enclosures;	implement	Storage
+Chapter
+6
+
+Replica;	implement	Cloud	Witness;	implement	VM	resiliency;	implement	shared
+VHDX	as	a	storage	solution	for	guest	clusters
+Implement	Storage	Spaces	Direct
+Chapter
+6
+Determine	scenario	requirements	for	implementing	Storage	Spaces	Direct,	enable
+Storage	Spaces	direct	using	Windows	PowerShell,	implement	a	disaggregated
+Storage	Spaces	Direct	scenario	in	a	cluster,	implement	a	hyper-converged	Storage
+Spaces	Direct	scenario	in	a	cluster
+Chapter
+6
+Manage	Failover	Clustering
+Chapter
+6
+Configure	role-specific	settings,	including	continuously	available	shares;	configure
+VM	monitoring;	configure	failover	and	preference	settings;	implement	stretch	and
+site-aware	failover	clusters;	enable	and	configure	node	fairness
+Chapter
+6
+Manage	VM	movement	in	clustered	nodes
+Chapter
+5
+Perform	a	live	migration;	perform	a	quick	migration;	perform	a	storage	migration;
+import,	export,	and	copy	VMs;	configure	VM	network	health	protection;	configure
+drain	on	shutdown
+Chapter
+5
+Implement	Network	Load	Balancing	(NLB)
+Chapter
+5
+Install	NLB	nodes,	configure	NLB	prerequisites,	configure	affinity,	configure	port
+rules,	configure	cluster	operation	mode,	upgrade	an	NLB	cluster
+Chapter
+5
+Maintain	and	monitor	server	environments	(10–15%)
+Maintain	server	installations
+8
+Implement	Windows	Server	Update	Services	(WSUS)	solutions;	configure	WSUS
+groups;	manage	patch	management	in	mixed	environments;	implement	an
+antimalware	solution	with	Windows	Defender;	integrate	Windows	Defender	with
+WSUS	and	Windows	Update;	perform	back	up	and	restore	operations	using
+Windows	Server	Backup;	determine	backup	strategies	for	different	Windows	Server
+roles	and	workloads,	including	Hyper-V	Host,	Hyper-V	Guests,	Active	Directory,
+File	Servers,	and	Web	Servers	using	Windows	Server	2016	native	tools	and
+solutions
+8
+Monitor	server	installations
+Chapter
+9
+Monitor	workloads	using	Performance	Monitor;	configure	Data	Collector	Sets;
+determine	appropriate	CPU,	memory,	disk,	and	networking	counters	for	storage	and
+compute	workloads;	configure	alerts;	monitor	workloads	using	Resource	Monitor
+Chapter
+9
+TABLE	I.2
+	70-741	exam	objectives
+
+Implement	Domain	Name	System	(DNS)	(15–20%)
+Chapter
+1.1.	Install	and	configure	DNS	servers
+Chapter
+11
+This	objective	may	include	but	is	not	limited	to:	Determine	DNS	installation
+requirements;	determine	supported	DNS	deployment	scenarios	on	Nano	Server;
+install	DNS;	configure	forwarders;	configure	Root	Hints;	configure	delegation;
+implement	DNS	policies;	implement	DNS	global	settings	using	Windows
+PowerShell;	configure	Domain	Name	System	Security	Extensions	(DNSSEC);
+configure	DNS	Socket	Pool;	configure	cache	locking;	enable	Response	Rate
+Limiting;	configure	DNS-based	Authentication	of	Named	Entities	(DANE);
+configure	DNS	logging;	configure	delegated	administration;	configure	recursion
+settings;	implement	DNS	performance	tuning;	configure	global	settings	using
+Windows	PowerShell
+Chapter
+11
+1.2.	Create	and	configure	DNS	zones	and	records
+Chapter
+11
+This	objective	may	include	but	is	not	limited	to:	Create	primary	zones;	configure
+Active	Directory	integration	of	primary	zones;	create	and	configure	secondary
+zones;	create	and	configure	stub	zones;	configure	a	GlobalNames	zone;	analyze
+zone-level	statistics;	create	and	configure	DNS	Resource	Records	(RR),	including
+A,	AAAA,	PTR,	SOA,	NS,	SRV,	CNAME,	and	MX	records;	configure	zone
+scavenging;	configure	record	options,	including	Time	To	Live	(TTL)	and	weight;
+configure	round	robin;	configure	secure	dynamic	updates;	configure	unknown	record
+support;	use	DNS	audit	events	and	analytical	(query)	events	for	auditing	and
+troubleshooting;	configure	Zone	Scopes;	configure	records	in	Zone	Scopes;
+configure	policies	for	zones
+Chapter
+11
+Implement	DHCP	(15–20%)
+	
+2.1.	Install	and	configure	DHCP
+Chapter
+12
+This	objective	may	include	but	is	not	limited	to:	Install	and	configure	DHCP
+servers;	authorize	a	DHCP	server;	create	and	configure	scopes;	create	and	configure
+superscopes	and	multicast	scopes;	configure	a	DHCP	reservation;	configure	DHCP
+options;	configure	DNS	options	from	within	DHCP;	configure	policies;	configure
+client	and	server	for	PXE	boot;	configure	DHCP	Relay	Agent;	implement	IPv6
+addressing	using	DHCPv6;	perform	export	and	import	of	a	DHCP	server;	perform
+DHCP	server	migration
+Chapter
+12
+2.2.	Manage	and	maintain	DHCP
+Chapter
+12
+This	objective	may	include	but	is	not	limited	to:	Configure	a	lease	period;	back	up
+and	restore	the	DHCP	database;	configure	high	availability	using	DHCP	failover;
+configure	DHCP	name	protection;	troubleshoot	DHCP
+Chapter
+12
+
+Implement	IP	Address	Management	(IPAM)	(15–20%)
+	
+3.1.	Install	and	configure	IP	Address	Management	(IPAM)
+Chapter
+13
+This	objective	may	include	but	is	not	limited	to:	Provision	IPAM	manually	or	by
+using	Group	Policy;	configure	server	discovery;	create	and	manage	IP	blocks	and
+ranges;	monitor	utilization	of	IP	address	space;	migrate	existing	workloads	to	IPAM;
+configure	IPAM	database	storage	using	SQL	Server;	determine	scenarios	for	using
+IPAM	with	System	Center	Virtual	Machine	Manager	for	physical	and	virtual	IP
+address	space	management
+Chapter
+13
+3.2.	Manage	DNS	and	DHCP	using	IPAM
+Chapter
+13
+This	objective	may	include	but	is	not	limited	to:	Manage	DHCP	server	properties
+using	IPAM;	configure	DHCP	scopes	and	options;	configure	DHCP	policies	and
+failover;	manage	DNS	server	properties	using	IPAM;	manage	DNS	zones	and
+records;	manage	DNS	and	DHCP	servers	in	multiple	Active	Directory	forests;
+delegate	administration	for	DNS	and	DHCP	using	role-based	access	control
+(RBAC)
+Chapter
+13
+3.3.	Audit	IPAM
+Chapter
+13
+This	objective	may	include	but	is	not	limited	to:	Audit	the	changes	performed	on	the
+DNS	and	DHCP	servers;	audit	the	IPAM	address	usage	trail;	audit	DHCP	lease
+events	and	user	logon	events
+Chapter
+13
+Implement	Network	Connectivity	and	Remote	Access	Solutions	(25–30%)
+	
+Implement	network	connectivity	solutions
+Chapter
+14
+This	objective	may	include	but	is	not	limited	to:	Implement	Network	Address
+Translation	(NAT);	configure	routing
+Chapter
+14
+Implement	virtual	private	network	(VPN)	and	DirectAccess	solutions
+Chapter
+14
+This	objective	may	include	but	is	not	limited	to:	Implement	remote	access	and	site-
+to-site	(S2S)	VPN	solutions	using	remote	access	gateway;	configure	different	VPN
+protocol	options;	configure	authentication	options;	configure	VPN	reconnect;	create
+and	configure	connection	profiles;	determine	when	to	use	remote	access	VPN	and
+site-to-site	VPN	and	configure	appropriate	protocols;	install	and	configure
+DirectAccess;	implement	server	requirements;	implement	client	configuration;
+troubleshoot	DirectAccess
+Chapter
+14
+Implement	Network	Policy	Server	(NPS)
+Chapter
+14
+
+This	objective	may	include	but	is	not	limited	to:	Configure	a	RADIUS	server
+including	RADIUS	proxy;	configure	RADIUS	clients;	configure	NPS	templates;
+configure	RADIUS	accounting;	configure	certificates;	configure	Connection	Request
+Policies;	configure	network	policies	for	VPN	and	wireless	and	wired	clients;
+import	and	export	NPS	policies
+Chapter
+14
+Implement	Core	and	Distributed	Network	Solutions	(10–15%)
+	
+Implement	IPv4	and	IPv6	addressing
+Chapter
+10
+This	objective	may	include	but	is	not	limited	to:	Configure	IPv4	addresses	and
+options;	determine	and	configure	appropriate	IPv6	addresses;	configure	IPv4	or
+IPv6	subnetting;	implement	IPv6	stateless	addressing;	configure	interoperability
+between	IPv4	and	IPv6	by	using	ISATAP,	6to4,	and	Teredo	scenarios;	configure
+Border	Gateway	Protocol	(BGP);	configure	IPv4	and	IPv6	routing
+Chapter
+10
+Implement	Distributed	File	System	(DFS)	and	Branch	Office	solutions
+Chapter
+15
+This	objective	may	include	but	is	not	limited	to:	Install	and	configure	DFS
+namespaces;	configure	DFS	replication	targets;	configure	replication	scheduling;
+configure	Remote	Differential	Compression	(RDC)	settings;	configure	staging;
+configure	fault	tolerance;	clone	a	Distributed	File	System	Replication	(DFSR)
+database;	recover	DFSR	databases;	optimize	DFS	Replication;	install	and	configure
+BranchCache;	implement	distributed	and	hosted	cache	modes;	implement
+BranchCache	for	web,	file,	and	application	servers;	troubleshoot	BranchCache
+Chapter
+15
+Implement	an	Advanced	Network	Infrastructure	(10–15%)
+	
+6.1	Implement	high	performance	network	solutions
+Chapter
+16
+This	objective	may	include	but	is	not	limited	to:	Implement	NIC	Teaming	or	the
+Switch	Embedded	Teaming	(SET)	solution	and	identify	when	to	use	each;	enable
+and	configure	Receive	Side	Scaling	(RSS);	enable	and	configure	network	Quality	of
+Service	(QoS)	with	Data	Center	Bridging	(DCB);	enable	and	configure	SMB	Direct
+on	Remote	Direct	Memory	Access	(RDMA)	enabled	network	adapters;	enable	and
+configure	SMB	Multichannel;	enable	and	configure	virtual	Receive	Side	Scaling
+(vRSS)	on	a	Virtual	Machine	Queue	(VMQ)	capable	network	adapter;	enable	and
+configure	Virtual	Machine	Multi-Queue	(VMMQ);	enable	and	configure	Single-Root
+I/O	Virtualization	(SR-IOV)	on	a	supported	network	adapter
+Chapter
+16
+6.2.	Determine	scenarios	and	requirements	for	implementing	Software	Defined
+Networking	(SDN)
+Chapter
+17
+This	objective	may	include	but	is	not	limited	to:	Determine	deployment	scenarios
+and	network	requirements	for	deploying	SDN;	determine	requirements	and
+scenarios	for	implementing	Hyper-V	Network	Virtualization	(HNV)	using	Network
+Chapter
+17
+
+Virtualization	Generic	Route	Encapsulation	(NVGRE)	encapsulation	or	Virtual
+Extensible	LAN	(VXLAN)	encapsulation;	determine	scenarios	for	implementation
+of	Software	Load	Balancer	(SLB)	for	North-South	and	East-West	load	balancing;
+determine	implementation	scenarios	for	various	types	of	Windows	Server
+Gateways,	including	L3,	GRE,	and	S2S,	and	their	use;	determine	requirements	and
+scenarios	for	distributed	firewall	policies	and	network	security	groups
+TABLE	I.3
+	70-742	exam	objectives
+Objective
+Chapter
+Install	and	configure	Active	Directory	Domain	Services	(AD	DS)	(20–25%)
+Install	and	configure	domain	controllers
+Chapter
+18
+Install	a	new	forest,	add	or	remove	a	domain	controller	from	a	domain,	upgrade	a
+domain	controller,	install	AD	DS	on	a	Server	Core	installation,	install	a	domain
+controller	from	Install	from	Media	(IFM),	resolve	DNS	SRV	record	registration
+issues,	configure	a	global	catalog	server,	transfer	and	seize	operations	master	roles,
+install	and	configure	a	read-only	domain	controller	(RODC),	configure	domain
+controller	cloning
+Chapter
+18
+Create	and	manage	Active	Directory	users	and	computers
+Chapter
+19
+Automate	the	creation	of	Active	Directory	accounts;	create,	copy,	configure,	and
+delete	users	and	computers;	configure	templates;	perform	bulk	Active	Directory
+operations;	configure	user	rights;	implement	offline	domain	join;	manage	inactive
+and	disabled	accounts;	automate	unlocking	of	disabled	accounts	using	Windows
+PowerShell;	automate	password	resets	using	Windows	PowerShell
+Chapter
+19
+Create	and	manage	Active	Directory	groups	and	organizational	units	(OUs)
+Chapter
+19
+Configure	group	nesting;	convert	groups,	including	security,	distribution,	universal,
+domain	local,	and	domain	global;	manage	group	membership	using	Group	Policy;
+enumerate	group	membership;	automate	group	membership	management	using
+Windows	PowerShell;	delegate	the	creation	and	management	of	Active	Directory
+groups	and	OUs;	manage	default	Active	Directory	containers;	create,	copy,
+configure,	and	delete	groups	and	OUs
+Chapter
+19
+Manage	and	maintain	AD	DS	(15–20%)
+Configure	service	authentication	and	account	policies
+Chapter
+19
+Create	and	configure	Service	Accounts,	create	and	configure	Group	Managed
+Service	Accounts	(gMSAs),	configure	Kerberos	Constrained	Delegation	(KCD),
+manage	Service	Principal	Names	(SPNs),	configure	virtual	accounts,	configure
+domain	and	local	user	password	policy	settings,	configure	and	apply	Password
+Chapter
+19
+
+Settings	objects	(PSOs),	delegate	password	settings	management,	configure	account
+lockout	policy	settings,	configure	Kerberos	policy	settings	within	Group	Policy
+Maintain	Active	Directory
+Chapter
+20
+Back	up	Active	Directory	and	SYSVOL,	manage	Active	Directory	offline,	perform
+offline	defragmentation	of	an	Active	Directory	database,	clean	up	metadata,
+configure	Active	Directory	snapshots,	perform	object-	and	container-level	recovery,
+perform	Active	Directory	restore,	configure	and	restore	objects	by	using	the	Active
+Directory	Recycle	Bin,	configure	replication	to	read-only	domain	controllers
+(RODCs),	configure	Password	Replication	Policy	(PRP)	for	RODC,	monitor	and
+manage	replication,	upgrade	SYSVOL	replication	to	Distributed	File	System
+Replication	(DFSR)
+Chapter
+20
+Configure	Active	Directory	in	a	complex	enterprise	environment
+Chapter
+20
+Configure	a	multi-domain	and	multi-forest	Active	Directory	infrastructure;	deploy
+Windows	Server	2016	domain	controllers	within	a	pre-existing	Active	Directory
+environment;	upgrade	existing	domains	and	forests;	configure	domain	and	forest
+functional	levels;	configure	multiple	user	principal	name	(UPN)	suffixes;	configure
+external,	forest,	shortcut,	and	realm	trusts;	configure	trust	authentication;	configure
+SID	filtering;	configure	name	suffix	routing;	configure	sites	and	subnets;	create	and
+configure	site	links;	manage	site	coverage;	manage	registration	of	SRV	records;
+move	domain	controllers	between	sites
+Chapter
+20
+Create	and	manage	Group	Policy	(25–30%)
+Create	and	manage	Group	Policy	Objects	(GPOs)
+Chapter
+21
+Configure	a	central	store;	manage	starter	GPOs;	configure	GPO	links;	configure
+multiple	local	Group	Policies;	back	up,	import,	copy,	and	restore	GPOs;	create	and
+configure	a	migration	table;	reset	default	GPOs;	delegate	Group	Policy	management;
+detect	health	issues	using	the	Group	Policy	Infrastructure	Status	dashboard
+Chapter
+21
+Configure	Group	Policy	processing
+Chapter
+21
+Configure	processing	order	and	precedence,	configure	blocking	of	inheritance,
+configure	enforced	policies,	configure	security	filtering	and	Windows	Management
+Instrumentation	(WMI)	filtering,	configure	loopback	processing,	configure	and
+manage	slow-link	processing	and	Group	Policy	caching,	configure	client-side
+extension	(CSE)	behavior,	force	a	Group	Policy	update
+Chapter
+21
+Configure	Group	Policy	settings
+Chapter
+21
+Configure	software	installation,	configure	folder	redirection,	configure	scripts,
+Chapter
+
+configure	administrative	templates,	import	security	templates,	import	a	custom
+administrative	template	file,	configure	property	filters	for	administrative	templates
+21
+Configure	Group	Policy	preferences
+Chapter
+21
+Configure	printer	preferences,	define	network	drive	mappings,	configure	power
+options,	configure	custom	Registry	settings,	configure	Control	Panel	settings,
+configure	Internet	Explorer	settings,	configure	file	and	folder	deployment,	configure
+shortcut	deployment,	configure	item-level	targeting
+Chapter
+21
+Implement	Active	Directory	Certificate	Services	(AD	CS)	(10–15%)
+Install	and	configure	AD	CS
+Chapter
+22
+Install	Active	Directory	Integrated	Enterprise	Certificate	Authority	(CA),
+install	offline	root	and	subordinate	CAs,	install	standalone	CAs,	configure
+Certificate	Revocation	List	(CRL)	distribution	points,	install	and	configure	Online
+Responder,	implement	administrative	role	separation,	configure	CA	backup	and
+recovery
+Chapter
+22
+Manage	certificates
+Chapter
+22
+Manage	certificate	templates;	implement	and	manage	certificate	deployment,
+validation,	and	revocation;	manage	certificate	renewal;	manage	certificate
+enrollment	and	renewal	for	computers	and	users	using	Group	Policies;	configure
+and	manage	key	archival	recovery
+Chapter
+22
+Implement	identity	federation	and	access	solutions	(15–20%)
+Install	and	configure	Active	Directory	Federation	Services	(AD	FS)
+Chapter
+23
+Upgrade	and	migrate	previous	AD	FS	workloads	to	Windows	Server	2016;
+implement	claims-based	authentication,	including	Relying-Party	Trusts;	configure
+authentication	policies;	configure	multifactor	authentication;	implement	and
+configure	device	registration;	integrate	AD	FS	with	Microsoft	Passport;	configure
+for	use	with	Microsoft	Azure	and	Office	365;	configure	AD	FS	to	enable
+authentication	of	users	stored	in	LDAP	directories
+Chapter
+23
+Implement	Web	Application	Proxy	(WAP)
+Chapter
+23
+Install	and	configure	WAP,	implement	WAP	in	pass-through	mode,	implement	WAP
+as	AD	FS	proxy,	integrate	WAP	with	AD	FS,	configure	AD	FS	requirements,
+publish	web	apps	via	WAP,	publish	Remote	Desktop	Gateway	applications,
+configure	HTTP	to	HTTPS	redirects,	configure	internal	and	external	Fully	Qualified
+Domain	Names	(FQDNs)
+Chapter
+23
+Install	and	configure	Active	Directory	Rights	Management	Services	(AD	RMS)
+Chapter
+
+23
+Install	a	licensor	certificate	AD	RMS	server,	manage	AD	RMS	Service	Connection
+Point	(SCP),	manage	AD	RMS	templates,	configure	Exclusion	Policies,	back	up	and
+restore	AD	RMS
+Chapter
+23
+ Exam	objectives	are	subject	to	change	at	any	time	without	prior	notice	and	at
+Microsoft’s	sole	discretion.	Please	visit	Microsoft’s	website
+(
+www.microsoft.com/learning
+)	for	the	most	current	listing	of	exam	objectives.
+
+Assessment	Test
+1
+.	
+Which	of	the	following	is	a	valid	role	for	a	Windows	Server	2016	computer?
+A
+.	
+Standalone	server
+B
+.	
+Member	server
+C
+.	
+Domain	controller
+D
+.	
+All	of	the	above
+2
+.	
+You	need	to	add	a	new	Windows	Server	2016	image	to	your	WDS	server.	You	want	to	use
+a	command-line	command	to	complete	this	task.	What	command	would	you	use?
+A
+.	
+WDSUTIL	/Add
+B
+.	
+WDSUTIL	/image
+C
+.	
+WDSUTIL	/prepareimage
+D
+.	
+WDSUTIL	/addimage
+3
+.	
+You	have	been	hired	to	help	a	small	company	set	up	its	first	Windows	network.	It	has	had
+the	same	13	users	for	the	entire	two	years	it	has	been	open,	and	the	company	has	no	plans
+to	expand.	What	version	of	Windows	Server	2016	would	you	recommend?
+A
+.	
+Windows	Server	2016	Datacenter	(Desktop	Experience)
+B
+.	
+Windows	Server	2016	Standard	(Desktop	Experience)
+C
+.	
+Windows	Server	2016	Datacenter
+D
+.	
+Windows	Server	2016	Essentials
+4
+.	
+You	are	using	WDS	to	deploy	Windows	Server	2016	images	across	your	organization,	and
+you	are	using	the	WDSUTIL	command-line	utility	to	perform	this	task.	You	want	to	copy	a
+previously	created	image	from	the	image	store	using	this	utility.	Which	option	of	WDSUTIL
+should	you	use?
+A
+.	
+/move
+B
+.	
+/copy-image
+C
+.	
+/get
+D
+.	
+/enable
+5
+.	
+You	want	to	install	a	group	of	25	computers	using	disk	images	created	in	conjunction	with
+the	System	Preparation	Tool.	Your	plan	is	to	create	an	image	from	a	reference	computer
+and	then	copy	the	image	to	all	the	machines.	You	do	not	want	to	create	an	SID	on	the
+destination	computer	when	you	use	the	image.	Which	
+Sysprep.exe
+	command-line	option
+
+should	you	use	to	set	this	up?
+A
+.	
+/specialize
+B
+.	
+/generalize
+C
+.	
+/oobe
+D
+.	
+/quiet
+6
+.	
+You	have	a	Hyper-V	host	that	runs	Windows	Server	2016.	The	host	contains	a	virtual
+machine	named	Virtual1.	Virtual1	has	resource	metering	enabled.	You	need	to	use	resource
+metering	to	track	the	amount	of	network	traffic	that	Virtual1	sends	to	the	10.10.16.0/20
+network.	Which	command	would	you	run?
+A
+.	
+Add-VMNetworkAdapteiAd
+B
+.	
+Set-VMNetworkAdapter
+C
+.	
+New-VMResourcePool
+D
+.	
+Set-VMNetworkAdapterRoutingDomamMapping
+7
+.	
+You	need	to	ensure	that	the	company’s	two	Virtual	Machines,	VM1	and	VM2,	can
+communicate	with	each	other	only.	The	solution	must	prevent	VM1	and	VM2	from
+communicating	with	Server1.	Which	cmdlet	should	you	use?
+A
+.	
+Set-NetNeighbor
+B
+.	
+Remove-VMSwitchTeamMember
+C
+.	
+Set-VMSwitch
+D
+.	
+Enable-VMSwitchExtension
+8
+.	
+You	want	to	make	sure	the	hard	disk	space	for	your	virtual	machines	is	occupied	only	when
+needed.	What	type	of	virtual	hard	disk	would	you	recommend?
+A
+.	
+Dynamically	expanding	disk
+B
+.	
+Fixed-size	disk
+C
+.	
+Differencing	disk
+D
+.	
+Physical	or	pass-through	disk
+9
+.	
+What	is	the	command	to	install	Hyper-V	on	a	Windows	Server	2016	machine	that	was
+installed	in	Server	Core?
+A
+.	
+start	/w	ocsetup	Hyper-V
+B
+.	
+start	/w	ocsetup	microsoft-hyper-v
+C
+.	
+start	/w	ocsetup	Microsoft-Hyper-V
+D
+.	
+start	/w	ocsetup	hyper-v
+
+10
+.	
+You	are	a	network	administrator	for	a	small	company	that	uses	Hyper-V.	You	need	to
+reboot	your	virtual	machine.	What	PowerShell	command	can	you	use?
+A
+.	
+Restart-VM
+B
+.	
+Reboot-VM
+C
+.	
+Shutdown-VM
+D
+.	
+ShutStateOff
+11
+.	
+You	are	the	administrator	for	a	mid-size	organization.	You	have	been	asked	by	the	owner	to
+set	up	an	NLB	cluster.	You	want	to	use	PowerShell	to	set	up	the	cluster.	What	command
+would	you	use?
+A
+.	
+New-NlbCluster
+B
+.	
+Create-NlbCluster
+C
+.	
+Setup-NlbCluster
+D
+.	
+Set-NlbCluster
+12
+.	
+Which	of	the	following	actions	should	be	performed	against	an	NLB	cluster	node	if
+maintenance	needs	to	be	performed	while	not	terminating	current	connections?
+A
+.	
+Evict
+B
+.	
+Drainstop
+C
+.	
+Pause
+D
+.	
+Stop
+13
+.	
+If	you	have	a	running	cluster	and	need	to	run	the	Validate	a	Configuration	Wizard	again,
+which	of	the	following	tests	may	require	cluster	resources	to	be	taken	offline?
+A
+.	
+Network	tests
+B
+.	
+Storage	tests
+C
+.	
+System	configuration	tests
+D
+.	
+Inventory	tests
+14
+.	
+What	PowerShell	command	would	you	use	to	run	a	validation	test	on	a	cluster?
+A
+.	
+Test-Cluster
+B
+.	
+Validate-Cluster
+C
+.	
+Set-Cluster
+D
+.	
+Add-Cluster
+15
+.	
+You	download	the	wrong	image	from	Docker.	What	command	allows	you	to	delete	an
+image?
+
+A
+.	
+docker	del
+B
+.	
+docker	rm
+C
+.	
+docker	kill
+D
+.	
+docker	dl
+16
+.	
+You	have	built	a	bunch	of	Containers.	What	PowerShell	command	allows	you	to	view	the
+Containers?
+A
+.	
+docker	view
+B
+.	
+docker	see
+C
+.	
+View-Container
+D
+.	
+Get-Container
+17
+.	
+What	command	allows	you	to	see	your	container	images?
+A
+.	
+docker	images
+B
+.	
+docker	info
+C
+.	
+docker	view
+D
+.	
+docker	see
+18
+.	
+You	need	to	use	an	Active	Directory	application	data	partition.	Which	command	can	you
+use	to	create	and	manage	application	data	partitions?
+A
+.	
+DCPromo.exe
+B
+.	
+NTDSUtil.exe
+C
+.	
+ADUtil.exe
+D
+.	
+ADSI.exe
+19
+.	
+What	command-line	command	would	you	type	to	start	Performance	Monitor?
+A
+.	
+Netmon.exe
+B
+.	
+Perfmon.exe
+C
+.	
+Performon.exe
+D
+.	
+Resmon.exe
+20
+.	
+What	command-line	command	would	you	type	to	start	Resource	Monitor?
+A
+.	
+Netmon.exe
+B
+.	
+Perfmon.exe
+C
+.	
+Performon.exe
+D
+.	
+Resmon.exe
+
+21
+.	
+Which	of	the	following	subnet	masks	is	represented	with	the	CIDR	of	/27?
+A
+.	
+255.255.255.254
+B
+.	
+255.255.255.248
+C
+.	
+255.255.255.224
+D
+.	
+255.255.255.240
+22
+.	
+You	are	the	network	administrator	for	a	midsize	organization	that	has	installed	Windows
+Server	2016	onto	the	network.	You	are	thinking	of	moving	all	machines	to	Windows	10	and
+IPv6.	You	decide	to	set	up	a	test	environment	with	four	subnets.	What	type	of	IPv6
+addresses	do	you	need	set	up?
+A
+.	
+Global	addresses
+B
+.	
+Link-local	addresses
+C
+.	
+Unique	local	addresses
+D
+.	
+Site-local	addresses
+23
+.	
+You	are	the	network	administrator	for	ABC	Company.	You	have	an	IPv6	prefix	of
+2001:DB8:BBCC:0000::/53,	and	you	need	to	set	up	your	network	so	that	your	IPv6
+addressing	scheme	can	handle	1,000	more	subnets.	Which	network	mask	would	you	use?
+A
+.	
+/60
+B
+.	
+/61
+C
+.	
+/62
+D
+.	
+/63
+24
+.	
+You	assign	two	DNS	server	addresses	as	part	of	the	options	for	a	scope.	Later	you	find	a
+client	workstation	that	isn’t	using	those	addresses.	What’s	the	most	likely	cause?
+A
+.	
+The	client	didn’t	get	the	option	information	as	part	of	its	lease.
+B
+.	
+The	client	has	been	manually	configured	with	a	different	set	of	DNS	servers.
+C
+.	
+The	client	has	a	reserved	IP	address	in	the	address	pool.
+D
+.	
+There’s	a	bug	in	the	DHCP	server	service.
+25
+.	
+Your	DHCP	server	crashed	in	the	middle	of	the	day.	You	rebooted	the	server,	got	it	running
+within	5	minutes,	and	nobody	but	you	seemed	to	notice	that	it	had	gone	down	at	all.	What
+additional	steps	must	you	take?
+A
+.	
+None.	If	there	were	no	lease-renewal	requests	during	the	5-minute	period	in	which	the
+DHCP	server	was	down,	none	of	the	clients	will	ever	know	that	it	went	down.
+B
+.	
+You	need	to	renew	all	the	leases	manually.
+C
+.	
+None.	The	DHCP	server	automatically	assigned	new	addresses	to	all	the	clients	on	the
+
+network	transparently.
+D
+.	
+You	must	reboot	all	the	client	machines.
+26
+.	
+You	are	the	administrator	for	a	Windows	Server	2016	network	that	uses	DHCP.	You	notice
+that	your	DHCP	database	is	getting	too	large	and	you	want	to	reduce	the	size	of	the
+database.	What	should	you	do?
+A
+.	
+From	the	folder	containing	the	DHCP	database,	run	
+jetpack.exe	dhcp.mdb
+temp.mdb
+.
+B
+.	
+From	the	folder	containing	the	DHCP	database,	run	
+shrinkpack.exe	dhcp.mdb
+temp.mdb
+.
+C
+.	
+From	the	folder	containing	the	DHCP	database,	run	
+jetshrink.exe	dhcp.mdb
+temp.mdb
+.
+D
+.	
+From	the	folder	containing	the	DHCP	database,	run	
+shrinkjet.exe	dhcp.mdb
+temp.mdb
+.
+27
+.	
+You	are	the	network	admin	for	an	Active	Directory	domain	named	Stormwind.com.	You
+have	a	new	security	policy	that	states	that	whenever	possible,	you	should	install	new	Nano
+Servers.	Which	server	role	can	be	deployed	on	a	Nano	Server?
+A
+.	
+Active	Directory	Domain	Services
+B
+.	
+DHCP	Server
+C
+.	
+Network	Policy	and	Access	Services
+D
+.	
+Web	Server	(IIS)
+28
+.	
+You	have	been	asked	to	explain	how	DHCP	works.	What	abbreviation	can	you	explain	to
+show	how	DHCP	operates?
+A
+.	
+DORA
+B
+.	
+RODA
+C
+.	
+DHRA
+D
+.	
+AORD
+29
+.	
+You	are	the	network	administrator	for	a	large	training	company.	You	have	been	asked	to	set
+up	the	default	gateway	setting	using	DHCP.	Which	option	would	you	configure?
+A
+.	
+003	Router
+B
+.	
+006	DNS
+C
+.	
+015	DNS	Domain	Name
+D
+.	
+028	Broadcast	Address
+30
+.	
+You	are	the	network	administrator	for	your	organization.	You	need	to	view	the	DNS	server
+
+information	from	the	IPAM	database.	What	PowerShell	command	would	you	use?
+A
+.	
+View-IpamDnsServer
+B
+.	
+Get-IpamDnsServer
+C
+.	
+View-DnsServer
+D
+.	
+Get-DnsServer
+31
+.	
+You	are	the	administrator	for	StormWind	Studios	online	training	company.	You	need	to
+change	the	IPAM	discovery	configuration.	What	PowerShell	command	do	you	use?
+A
+.	
+Get-IpamDiscovery
+B
+.	
+Get-IpamDiscoveryDomain
+C
+.	
+Set-IpamDiscovery
+D
+.	
+Set-IpamDiscoveryDomain
+32
+.	
+You	are	the	network	administrator	for	your	company.	You	need	to	use	a	PowerShell
+command	to	configure	an	IP	address	block	in	IPAM.	What	command	do	you	use?
+A
+.	
+Set-IpamIP
+B
+.	
+Set-IpamBlock
+C
+.	
+Set-IPBlock
+D
+.	
+Set-IPAddressBlock
+33
+.	
+Your	network	contains	an	Active	Directory	domain	named	
+contoso.com
+.	Network	Access
+Protection	(NAP)	is	deployed	to	the	domain.	You	need	to	create	NAP	event	trace	log	files
+on	a	client	computer.	What	should	you	run?
+A
+.	
+Register-ObjectEvent
+B
+.	
+Register-EngineEvent
+C
+.	
+tracert
+D
+.	
+logman
+34
+.	
+Your	network	contains	an	Active	Directory	domain	named	
+Stormwind.com
+.	The	domain
+contains	a	RADIUS	server	named	Server1	that	runs	Windows	Server	2016.	You	add	a	VPN
+server	named	Server2	to	the	network.	On	Server1,	you	create	several	network	policies.
+You	need	to	configure	Server1	to	accept	authentication	requests	from	Server2.	Which	tool
+should	you	use	on	Server1?
+A
+.	
+Set-RemoteAccessRadius
+B
+.	
+CMAK
+C
+.	
+NPS
+D
+.	
+Routing	and	Remote	Access
+
+35
+.	
+You	are	the	administrator	for	a	large	communications	company.	Your	company	uses
+Windows	Server	2016,	and	your	user’s	files	are	encrypted	using	EFS.	What	command-line
+command	would	you	use	to	change	or	modify	the	EFS	files?
+A
+.	
+Convert
+B
+.	
+Cipher
+C
+.	
+Gopher
+D
+.	
+Encrypt
+36
+.	
+You	want	to	publish	a	printer	to	Active	Directory.	Where	would	you	click	in	order	to
+accomplish	this	task?
+A
+.	
+The	Sharing	tab
+B
+.	
+The	Advanced	tab
+C
+.	
+The	Device	Settings	tab
+D
+.	
+The	Printing	Preferences	button
+37
+.	
+You	have	been	hired	by	a	small	company	to	implement	new	Windows	Server	2016
+systems.	The	company	wants	you	to	set	up	a	server	for	users’	home	folder	locations.	What
+type	of	server	would	you	be	setting	up?
+A
+.	
+PDC	server
+B
+.	
+Web	server
+C
+.	
+Exchange	server
+D
+.	
+File	server
+38
+.	
+In	a	three-node	cluster	set	to	a	node	majority	quorum	model,	how	many	cluster	nodes	can
+be	offline	before	the	quorum	is	lost?
+A
+.	
+Zero
+B
+.	
+One
+C
+.	
+Two
+D
+.	
+Three
+39
+.	
+You	are	the	administrator	for	a	mid-size	company	who	wants	to	set	up	and	test	a	cluster.
+What	PowerShell	command	would	you	use	to	run	a	validation	test	on	a	cluster?
+A
+.	
+Test-Cluster
+B
+.	
+Validate-Cluster
+C
+.	
+Set-Cluster
+D
+.	
+Add-Cluster
+
+40
+.	
+You	are	a	network	administrator	for	a	small	company	that	uses	Hyper-V.	You	need	to
+reboot	your	virtual	machine.	What	PowerShell	command	can	you	use?
+A
+.	
+Restart-VM
+B
+.	
+Reboot-VM
+C
+.	
+Shutdown-VM
+D
+.	
+ShutStateOff
+41
+.	
+What	is	the	maximum	number	of	domains	that	a	Windows	Server	2016	computer	configured
+as	a	domain	controller	may	participate	in	at	one	time?
+A
+.	
+Zero
+B
+.	
+One
+C
+.	
+Two
+D
+.	
+Any	number	of	domains
+42
+.	
+Which	of	the	following	file	systems	are	required	for	Active	Directory?
+A
+.	
+FAT
+B
+.	
+FAT32
+C
+.	
+HPFS
+D
+.	
+NTFS
+43
+.	
+Which	of	the	following	services	and	protocols	are	required	for	Active	Directory?	(Choose
+all	that	apply.)
+A
+.	
+NetBEUI
+B
+.	
+TCP/IP
+C
+.	
+DNS
+D
+.	
+DHCP
+44
+.	
+Which	of	the	following	PowerShell	commands	allows	you	to	view	Active	Directory	users?
+A
+.	
+Get-ADUser
+B
+.	
+Get-User
+C
+.	
+View-User
+D
+.	
+See-ADUser
+45
+.	
+Which	of	the	following	PowerShell	commands	allows	you	to	enable	an	Active	Directory
+account	after	it’s	been	locked	out?
+A
+.	
+release-ADAccount
+
+B
+.	
+enable-ADAccount
+C
+.	
+Unlock-ADAccount
+D
+.	
+enable-Account
+46
+.	
+You	need	to	create	a	new	user	account	using	the	command	prompt.	Which	command	would
+you	use?
+A
+.	
+dsmodify
+B
+.	
+dscreate
+C
+.	
+dsnew
+D
+.	
+dsadd
+47
+.	
+What	kind	of	trust	is	set	up	between	one	domain	and	another	domain	in	the	same	forest?
+A
+.	
+External	trust
+B
+.	
+Forest	trust
+C
+.	
+Shortcut	trust
+D
+.	
+Domain	trust
+48
+.	
+You	need	to	deactivate	the	Global	Catalog	option	on	some	of	your	domain	controllers.	At
+which	level	in	Active	Directory	would	you	deactivate	Global	Catalogs?
+A
+.	
+Server
+B
+.	
+Site
+C
+.	
+Domain
+D
+.	
+Forest
+49
+.	
+You	want	to	allow	the	new	Sales	Director	to	have	permissions	to	reset	passwords	for	all
+users	within	the	sales	OU.	Which	of	the	following	is	the	best	way	to	do	this?
+A
+.	
+Create	a	special	administration	account	within	the	OU	and	grant	it	full	permissions	for
+all	objects	within	Active	Directory.
+B
+.	
+Move	the	user’s	login	account	into	the	OU	that	he	or	she	is	to	administer.
+C
+.	
+Move	the	user’s	login	account	to	an	OU	that	contains	the	OU	(that	is,	the	parent	OU	of
+the	one	that	he	or	she	is	to	administer).
+D
+.	
+Use	the	Delegation	of	Control	Wizard	to	assign	the	necessary	permissions	on	the	OU
+that	he	or	she	is	to	administer.
+50
+.	
+You	need	to	create	OUs	in	Active	Directory.	In	which	MMCs	can	you	accomplish	this	task?
+(Choose	all	that	apply.)
+A
+.	
+Active	Directory	Administrative	Center
+
+B
+.	
+Active	Directory	Sites	and	Services
+C
+.	
+Active	Directory	Users	and	Computers
+D
+.	
+Active	Directory	Domains	and	Trusts
+51
+.	
+You	want	a	GPO	to	take	effect	immediately,	and	you	need	to	use	Windows	PowerShell.
+Which	PowerShell	cmdlet	command	would	you	use?
+A
+.	
+Invoke-GPUpdate
+B
+.	
+Invoke-GPForce
+C
+.	
+Invoke-GPResult
+D
+.	
+Invoke-GPExecute
+52
+.	
+GPOs	assigned	at	which	of	the	following	level(s)	will	override	GPO	settings	at	the	domain
+level?
+A
+.	
+OU
+B
+.	
+Site
+C
+.	
+Domain
+D
+.	
+Both	OU	and	site
+53
+.	
+A	system	administrator	wants	to	ensure	that	only	the	GPOs	set	at	the	OU	level	affect	the
+Group	Policy	settings	for	objects	within	the	OU.	Which	option	can	they	use	to	do	this
+(assuming	that	all	other	GPO	settings	are	the	defaults)?
+A
+.	
+The	Enforced	option
+B
+.	
+The	Block	Policy	Inheritance	option
+C
+.	
+The	Disable	option
+D
+.	
+The	Deny	permission
+54
+.	
+To	disable	GPO	settings	for	a	specific	security	group,	which	of	the	following	permissions
+should	you	apply?
+A
+.	
+Deny	Write
+B
+.	
+Allow	Write
+C
+.	
+Enable	Apply	Group	Policy
+D
+.	
+Deny	Apply	Group	Policy
+55
+.	
+You	want	to	configure	modifications	of	the	Certification	Authority	role	service	to	be
+logged.	What	should	you	enable?	(Choose	all	that	apply.)
+A
+.	
+Enable	auditing	of	system	events.
+B
+.	
+Enable	logging.
+
+C
+.	
+Enable	auditing	of	privilege	use.
+D
+.	
+Enable	auditing	of	object	access.
+E
+.	
+You	should	consider	enabling	auditing	of	process	tracking.
+56
+.	
+You	need	to	add	a	certificate	template	to	the	Certificate	Authority.	What	PowerShell
+command	would	you	use?
+A
+.	
+Get-CSTemplate
+B
+.	
+Add-CSTemplate
+C
+.	
+Add-CATemplate
+D
+.	
+New-Template
+57
+.	
+You	need	to	see	all	of	the	location	sets	for	the	CRL	distribution	point	(CDP).	What
+PowerShell	command	would	you	use?
+A
+.	
+View-CACrlDistributionPoint
+B
+.	
+See-CACrlDistributionPoint
+C
+.	
+Add-CACrlDistributionPoint
+D
+.	
+Get-CACrlDistributionPoint
+58
+.	
+You	have	a	server	named	Server1	that	runs	Windows	Server	2016.	You	need	to	configure
+Server1	as	a	Web	Application	Proxy.	Which	server	role	or	role	service	should	you	install
+on	Server1?
+A
+.	
+Remote	Access
+B
+.	
+Active	Directory	Federation	Services
+C
+.	
+Web	Server	(IIS)
+D
+.	
+DirectAccess	and	VPN	(RAS)
+59
+.	
+You	have	installed	Active	Directory	Federation	Services	server	and	the	Web	Application
+Proxy.	Which	two	inbound	TCP	ports	should	you	open	on	the	firewall?	Each	correct
+answer	presents	part	of	the	solution.	(Choose	two.)
+A
+.	
+443
+B
+.	
+390
+C
+.	
+8443
+D
+.	
+49443
+60
+.	
+You	need	to	modify	configuration	settings	for	a	server	application	role	of	an	application	in
+AD	FS.	What	PowerShell	command	do	you	use?
+A
+.	
+Add-AdfsServerApplication
+
+B
+.	
+Set-AdfsServerApplication
+C
+.	
+Get-AdfsServerApplication
+D
+.	
+Install-AdfsServerApplication
+
+Answers	to	Assessment	Test
+1
+.	
+D.	Based	on	the	business	needs	of	an	organization,	a	Windows	2016	Server	computer	can
+be	configured	in	any	of	the	roles	listed.	See	Chapter	1	for	more	information.
+2
+.	
+A.	The	
+WDSUTIL/Add
+	command	allows	an	administrator	to	add	an	image	to	a	WDS	server.
+See	Chapter	1	for	more	information.
+3
+.	
+D.	Windows	Server	2016	Essentials	is	ideal	for	small	businesses	that	have	as	many	as	25
+users	and	50	devices.	Windows	Server	2016	Essentials	has	a	simpler	interface	and
+preconfigured	connectivity	to	cloud-based	services	but	no	virtualization	rights.	See
+Chapter	1	for	more	information.
+4
+.	
+B.	You	should	use	the	
+/copy-image
+	option	of	the	WDSUTIL	utility	to	copy	an	image	from
+the	image	store.	See	Chapter	2	for	more	information.
+5
+.	
+B.	The	
+/generalize
+	option	prevents	system-specific	information	from	being	included	in
+the	image.	The	
+Sysprep.exe
+	command	can	be	used	with	a	variety	of	options.	You	can	see
+a	complete	list	by	typing	
+sysprep/?
+	at	a	command-line	prompt.	See	Chapter	2	for	more
+information.
+6
+.	
+B.	The	
+Set-VMNetworkAdapter
+	command	allows	an	administrator	to	configure	features	of
+the	virtual	network	adapter	in	a	virtual	machine	or	the	management	operating	system.	See
+Chapter	3	for	more	information.
+7
+.	
+C.	The	
+Set-VMSwitch
+	cmdlet	allows	an	administrator	to	configure	a	virtual	switch.	See
+Chapter	3	for	more	information.
+8
+.	
+A.	The	only	virtual	hard	disk	that	increases	in	size	is	the	dynamically	expanding	disk.	See
+Chapter	4	for	more	information.
+9
+.	
+C.	This	question	relates	to	the	setup	command	used	to	install	the	Hyper-V	server	role	on	a
+Windows	Server	2016	Server	Core	machine.	It’s	important	to	remember	that	these
+commands	are	case	sensitive,	and	that	the	correct	command	is	
+start	/wocsetup
+Microsoft-Hyper-V
+.	See	Chapter	4	for	more	information.
+10
+.	
+A.	The	PowerShell	command	
+Restart-VM
+	restarts	a	virtual	machine.	See	Chapter	4	for
+more	information.
+11
+.	
+A.	To	create	a	new	NLB	cluster,	you	would	use	the	PowerShell	command	
+New-
+NlbCluster
+.	See	Chapter	5	for	more	information.
+12
+.	
+B.	If	an	administrator	decides	to	use	the	drainstop	command,	the	cluster	stops	after
+answering	all	of	the	current	NLB	connections.	So	the	current	NLB	connections	are	finished
+but	no	new	connections	to	that	node	are	accepted.	See	Chapter	5	for	more	information.
+13
+.	
+B.	The	storage	tests	require	the	clustered	disk	resource	to	be	offline.	If	you	need	to	run	the
+storage	tests,	the	Validate	a	Configuration	Wizard	will	prompt	you	to	make	sure	you	want
+
+to	take	the	resources	offline.	See	Chapter	6	for	more	information.
+14
+.	
+A.	Administrators	would	use	the	
+Test-Cluster
+	to	complete	validation	tests	for	a	cluster.
+See	Chapter	6	for	more	information.
+15
+.	
+B.	The	
+docker	rm
+	command	is	the	command	that	is	used	to	delete	an	image.	You	should
+run	
+docker	images
+	first	and	get	the	ID	number	or	name	of	the	image	that	you	want	to
+delete.	See	Chapter	7	for	more	information.
+16
+.	
+D.	The	
+Get-Container
+	PowerShell	command	allows	an	administrator	to	view	information
+about	Containers.	See	Chapter	7	for	more	information.
+17
+.	
+A.	The	
+docker	images
+	command	gives	you	the	ability	to	see	your	images.	The	
+docker
+info
+	command	allows	you	to	see	how	many	images	you	have	on	a	host	but	it	does	not	give
+you	details	about	the	images.	See	Chapter	7	for	more	information.
+18
+.	
+B.	The	primary	method	by	which	system	administrators	create	and	manage	application	data
+partitions	is	through	the	
+ntdsutil
+	tool.	See	Chapter	8	for	more	information.
+19
+.	
+B.	
+Perfmon.exe
+	is	the	command-line	command	to	start	Performance	Monitor.	See	Chapter
+9	for	more	information.
+20
+.	
+D.	
+Resmon.exe
+	is	the	command-line	command	to	start	Resource	Monitor.	See	Chapter	9
+for	more	information.
+21
+.	
+C.	The	CIDR	/27	tells	you	that	27	1s	are	turned	on	in	the	subnet	mask.	Twenty-seven	1s
+equals	11111111.11111111.11111111.11100000.	This	would	then	equal	255.255.255.224.
+See	Chapter	10	for	more	information.
+22
+.	
+C.	The	unique	local	address	can	be	FC00	or	FD00,	and	it	is	used	like	the	private	address
+space	of	IPv4.	Unique	local	addresses	are	not	expected	to	be	routable	on	the	global
+Internet,	but	they	are	used	for	private	routing	within	an	organization.	See	Chapter	10	for
+more	information.
+23
+.	
+D.	To	calculate	the	network	mask,	you	need	to	figure	out	which	power	number	(2
+x
+)	is
+greater	than	or	equal	to	the	number	you	need.	Since	we	are	looking	for	1000,	2
+10
+	=	1024.
+You	then	add	the	power	(10)	to	the	current	network	mask	(53	+	10	=	63).	See	Chapter	10
+for	more	information.
+24
+.	
+B.	Manual	settings	override	DHCP	options.	See	Chapter	11	for	more	information.
+25
+.	
+A.	When	the	DHCP	server	crashed,	the	scope	was	effectively	deactivated.	Deactivating	a
+scope	has	no	effect	on	the	client	until	it	needs	to	renew	the	lease.	See	Chapter	11	for	more
+information.
+26
+.	
+A.	Microsoft’s	
+jetpack.exe
+	utility	allows	you	to	compact	a	JET	database.	Microsoft	JET
+databases	are	used	for	WINS	and	DHCP	databases.	See	Chapter	12	for	more	information.
+27
+.	
+B.	One	of	the	nice	advantages	of	DHCP	is	that	it	is	one	of	the	only	Roles	that	can	be
+installed	onto	a	Nano	Server.	See	Chapter	12	for	more	information.
+
+28
+.	
+A.	The	abbreviation	that	helps	you	remember	how	DHCP	works	is	DORA:	Discover,
+Offer,	Request,	and	Acknowledge.	See	Chapter	12	for	more	information.
+29
+.	
+A.	003	Router	is	used	to	provide	a	list	of	available	routers	or	default	gateways	on	the	same
+subnet.	See	Chapter	12	for	more	information.
+30
+.	
+B.	The	
+Get-IpamDnsServer
+	command	allows	an	administrator	to	view	DNS	server
+information	from	the	IPAM	database.	See	Chapter	13	for	more	information.
+31
+.	
+D.	Administrators	can	use	the	
+Set-IpamDiscoveryDomain
+	PowerShell	command	to
+change	the	IPAM	discovery	configuration.	See	Chapter	13	for	more	information.
+32
+.	
+B.	Administrators	can	use	the	
+Set-IpamBlock
+	PowerShell	command	to	configure	an	IP
+address	block	in	IPAM.	See	Chapter	13	for	more	information.
+33
+.	
+D.	Logman	creates	and	manages	Event	Trace	Session	and	Performance	logs	and	allows	an
+administrator	to	monitor	many	different	applications	through	the	use	of	the	command	line.
+See	Chapter	14	for	more	information.
+34
+.	
+C.	The	NPS	snap-in	allows	you	to	set	up	RADIUS	servers	and	which	RADIUS	server
+would	accept	authentication	from	other	RADIUS	servers.	You	can	do	your	entire	RADIUS
+configuration	through	the	NPS	snap-in.	See	Chapter	14	for	more	information.
+35
+.	
+B.	Cipher	is	a	command-line	utility	that	allows	you	to	configure	or	change	EFS	files	and
+folders.	See	Chapter	15	for	more	information.
+36
+.	
+A.	The	Sharing	tab	contains	a	check	box	that	you	can	use	to	list	the	printer	in	Active
+Directory.	See	Chapter	15	for	more	information.
+37
+.	
+D.	File	servers	are	used	for	storage	of	data,	especially	for	users’	home	folders.	Home
+folders	are	folder	locations	for	your	users	to	store	data	that	is	important	and	that	needs	to
+be	backed	up.	See	Chapter	15	for	more	information.
+38
+.	
+B.	In	a	three-node	cluster,	only	one	node	can	be	offline	before	the	quorum	is	lost;	a
+majority	of	the	votes	must	be	available	to	achieve	the	quorum.	See	Chapter	16	for	more
+information.
+39
+.	
+A.	Administrators	would	use	the	
+Test-Cluster
+	to	complete	validation	tests	for	a	cluster.
+See	Chapter	16	for	more	information.
+40
+.	
+A.	The	PowerShell	command	
+Restart-VM
+	restarts	a	virtual	machine.	See	Chapter	17	for
+more	information.
+41
+.	
+B.	A	domain	controller	can	contain	Active	Directory	information	for	only	one	domain.	If
+you	want	to	use	a	multi-domain	environment,	you	must	use	multiple	domain	controllers
+configured	in	either	a	tree	or	a	forest	setting.	See	Chapter	18	for	more	information.
+42
+.	
+D.	NTFS	has	file-level	security,	and	it	makes	efficient	usage	of	disk	space.	Since	this
+machine	is	to	be	configured	as	a	domain	controller,	the	configuration	requires	at	least	one
+NTFS	partition	to	store	the	Sysvol	information.	See	Chapter	18	for	more	information.
+
+43
+.	
+B,	C.	TCP/IP	and	DNS	are	both	required	when	installing	Active	Directory.	See	Chapter	18
+for	more	information.
+44
+.	
+A.	The	
+Get-ADUser
+	command	allows	you	to	view	Active	Directory	user	accounts	using
+PowerShell.	See	Chapter	19	for	more	information.
+45
+.	
+C.	Administrators	can	use	the	
+Unlock-ADAccount
+	command	to	unlock	an	Active	Directory
+account.	See	Chapter	19	for	more	information.
+46
+.	
+D.	The	
+dsadd
+	command	allows	you	to	add	an	object	(user’s	account)	to	the	Active
+Directory	database.	See	Chapter	19	for	more	information.
+47
+.	
+C.	Shortcut	trusts	are	trusts	set	up	between	two	domains	in	the	same	forest.	See	Chapter	20
+for	more	information.
+48
+.	
+B.	The	NTDS	settings	for	the	site	level	are	where	you	would	activate	and	deactivate
+Global	Catalogs.	See	Chapter	20	for	more	information.
+49
+.	
+D.	The	Delegation	of	Control	Wizard	is	designed	to	allow	administrators	to	set	up
+permissions	on	specific	Active	Directory	objects.	See	Chapter	20	for	more	information.
+50
+.	
+A,	C.	Administrators	can	create	new	Organizational	Units	(OUs)	by	using	either	the	Active
+Directory	Administrative	Center	or	Active	Directory	Users	and	Computers.	See	Chapter
+20	for	more	information.
+51
+.	
+A.	You	would	use	the	Windows	PowerShell	Invoke-GPUpdate	cmdlet.	This	PowerShell
+cmdlet	allows	you	to	force	the	GPO	to	reapply	the	policies	immediately.	See	Chapter	21
+for	more	information.
+52
+.	
+A.	GPOs	at	the	OU	level	take	precedence	over	GPOs	at	the	domain	level.	GPOs	at	the
+domain	level,	in	turn,	take	precedence	over	GPOs	at	the	site	level.	See	Chapter	21	for
+more	information.
+53
+.	
+B.	The	Block	Policy	Inheritance	option	prevents	group	policies	of	higher-level	Active
+Directory	objects	from	applying	to	lower-level	objects	as	long	as	the	Enforced	option	is
+not	set.	See	Chapter	21	for	more	information.
+54
+.	
+D.	To	disable	the	application	of	Group	Policy	on	a	security	group,	you	should	deny	the
+Apply	Group	Policy	option.	This	is	particularly	useful	when	you	don’t	want	GPO	settings
+to	apply	to	a	specific	group,	even	though	that	group	may	be	in	an	OU	that	includes	the	GPO
+settings.	See	Chapter	21	for	more	information.
+55
+.	
+B,	D.	To	enable	AD	FS	auditing,	you	must	check	the	boxes	for	Success	Audits	and	Failure
+Audits	on	the	Events	tab	of	the	Federation	Service	Properties	dialog	box.	You	must	also
+enable	Object	Access	Auditing	in	Local	Policy	or	Group	Policy.	See	Chapter	22	for	more
+information.
+56
+.	
+C.	The	
+Add-CATemplate
+	command	allows	an	administrator	to	add	a	certificate	template	to
+the	CA.	See	Chapter	22	for	more	information.
+57
+.	
+D.	Administrators	can	use	the	
+Get-CACrlDistributionPoint
+	command	to	view	all	the
+
+locations	set	for	the	CRL	distribution	point	(CDP).	See	Chapter	22	for	more	information.
+58
+.	
+A.	To	use	the	Web	Application	Proxy,	you	must	install	the	Remote	Access	role.	See
+Chapter	23	for	more	information.
+59
+.	
+A,	D.	To	use	a	Web	Application	Proxy	and	AD	FS,	you	should	set	your	firewall	to	allow
+for	ports	443	and	49443.	See	Chapter	23	for	more	information.
+60
+.	
+B.	The	
+Set-AdfsServerApplication
+	command	allows	an	administrator	to	modify
+configuration	settings	for	a	server	application	role	of	an	application	in	AD	FS	See	Chapter
+23	for	more	information.
+
+Chapter	1
+Installing	Windows	Server	2016
+THE	FOLLOWING	70-740	EXAM	OBJECTIVES	ARE	COVERED	IN	THIS
+CHAPTER:
+ 
+Install,	upgrade,	and	migrate	servers	and	workloads
+This	objective	may	include	but	is	not	limited	to:	Determine	Windows	Server	2016
+installation	requirements;	determine	appropriate	Windows	Server	2016	editions	per
+workloads;	install	Windows	Server	2016;	install	Windows	Server	2016	features
+and	roles;	install	and	configure	Windows	Server	Core;	manage	Windows	Server
+Core	installations	using	Windows	PowerShell,	command	line,	and	remote
+management	capabilities;	implement	Windows	PowerShell	Desired	State
+Configuration	(DSC)	to	install	and	maintain	integrity	of	installed	environments;
+perform	upgrades	and	migrations	of	servers	and	core	workloads	from	Windows
+Server	2008	and	Windows	Server	2012	to	Windows	Server	2016;	determine	the
+appropriate	activation	model	for	server	installation,	such	as	Automatic	Virtual
+Machine	Activation	(AVMA),	Key	Management	Service	(KMS),	and	Active
+Directory-based	Activation.
+ 
+Install	and	configure	Nano	Server
+This	objective	may	include	but	is	not	limited	to:	Determine	appropriate	usage
+scenarios	and	requirements	for	Nano	Server;	install	Nano	Server;	implement	Roles
+and	Features	on	Nano	Server.
+ So,	you	have	decided	to	start	down	the	track	of	Windows	Server	2016.
+The	first	question	you	must	ask	yourself	is	what’s	the	first	step?	Well,	the	first	step	is	to	learn
+about	what	Windows	Server	2016	features	and	benefits	are	available	and	how	these	features
+can	help	improve	your	organization’s	network.
+So	that’s	where	I	am	going	to	start.	I	will	talk	about	the	different	Windows	Server	2016
+versions	and	what	version	may	be	best	for	you.	After	I	show	you	some	of	the	new	and
+improved	Windows	Server	2016	features,	I	will	then	show	you	how	to	install	these	different
+versions	onto	your	network.
+I	will	also	show	you	how	to	use	some	PowerShell	commands	in	the	Windows	Server	2016
+
+installation.	Let’s	dive	right	into	the	server	by	talking	about	some	of	the	new	features	and
+advantages	of	Windows	Server	2016.
+ The	Windows	Server	2016	installations	will	all	be	done	on	a	virtual	server.
+You	can	use	any	virtual	software	as	long	as	its	supports	Windows	Server	2016	and	64-bit
+processors.
+Features	and	Advantages	of	Windows	Server	2016
+Before	I	show	how	to	install	and	configure	Windows	Server	2016,	let’s	take	a	look	at	some	of
+the	new	features	and	the	advantages	it	offers.	Microsoft	has	stated	that	Windows	Server	2016
+is	“the	cloud-ready	operating	system.”	This	means	that	many	of	the	features	of	Windows	Server
+2016	are	built	and	evolve	around	cloud	based	software	and	networking.
+ Since	many	of	you	will	be	upgrading	from	previous	versions	of	Windows
+Server,	these	are	the	new	and/or	improved	features	introduced	by	Microsoft	since	then.	I
+will	specifically	identify	any	new	features	or	advantages	that	are	new	to	Windows	Server
+2016	only.
+I	will	talk	about	all	of	these	features	in	greater	detail	throughout	this	book.	What	follows	are
+merely	brief	descriptions.
+Built-in	Security
+	Microsoft	has	always	tried	to	make	sure	that	their	operating	systems	are	as
+secure	as	possible,	but	with	Windows	Server	2016,	Microsoft	has	included	built-in	breach
+resistance.	This	feature	helps	stop	attackers	on	your	system	and	allows	a	company	to	meet	any
+compliance	requirements.
+Active	Directory	Certificate	Services
+	
+Active	Directory	Certificate	Services	(AD	CS)
+provides	a	customizable	set	of	services	that	allow	you	to	issue	and	manage	
+public	key
+infrastructure	(PKI)	certificates
+.	These	certificates	can	be	used	in	software	security	systems
+that	employ	public	key	technologies.
+Active	Directory	Domain	Services
+	
+Active	Directory	Domain	Services	(AD	DS)
+	includes	new
+features	that	make	deploying	domain	controllers	simpler	and	that	let	you	implement	them	faster.
+AD	DS	also	makes	the	domain	controllers	more	flexible,	both	to	audit	and	to	authorize	for
+access	to	files.	Moreover,	AD	DS	has	been	designed	to	make	performing	administrative	tasks
+easier	through	consistent	graphical	and	scripted	management	experiences.
+Active	Directory	Rights	Management	Services
+	
+Active	Directory	Rights	Management
+
+Services	(AD	RMS)
+	provides	management	and	development	tools	that	let	you	work	with
+industry	security	technologies,	including	encryption,	certificates,	and	authentication.	Using
+these	technologies	allows	organizations	to	create	reliable	information	protection	solutions.
+BitLocker
+	
+BitLocker
+	is	a	tool	that	allows	you	to	encrypt	the	hard	drives	of	your	computer.	By
+encrypting	the	hard	drives,	you	can	provide	enhanced	protection	against	data	theft	or
+unauthorized	exposure	of	your	computers	or	removable	drives	that	are	lost	or	stolen.
+BranchCache
+	
+BranchCache
+	allows	data	from	files	and	web	servers	on	a	wide	area	network
+(WAN)	to	be	cached	on	computers	at	a	local	branch	office.	By	using	BranchCache,	you	can
+improve	application	response	times	while	also	reducing	WAN	traffic.	Cached	data	can	be
+either	distributed	across	peer	client	computers	(distributed	cache	mode)	or	centrally	hosted	on
+a	server	(hosted	cache	mode).	BranchCache	is	included	with	Windows	Server	2016	and
+Windows	10.
+Containers
+	Windows	Server	2016	has	started	focusing	on	an	isolated	operating	system
+environment	called	Dockers.	Dockers	allow	applications	to	run	in	isolated	environments
+called	Containers.	Containers	are	a	separate	location	where	applications	can	operate	without
+affecting	other	applications	or	other	operating	system	resources.	To	understand	Dockers	and
+Containers,	think	of	virtualization.
+Virtual	machines	are	operating	systems	that	run	in	their	own	space	on	top	of	another	operating
+system.	Well	Dockers	and	Containers	allow	an	application	to	run	in	its	own	space	and	because
+of	this,	it	doesn’t	affect	other	applications.	There	are	two	different	types	of	containers	to	focus
+on.
+Windows	Server	Containers
+	Windows	Server	2016	allows	for	an	isolated	application	to
+run	by	using	a	technology	called	process	and	namespace	isolation.	Windows	Server	2016
+containers	allow	applications	to	share	the	system’s	kernel	with	their	container	and	all	other
+containers	running	on	the	same	host.
+Hyper-V	Containers
+	Windows	Server	2016	Hyper-V	Containers	add	another	virtual	layer
+by	isolating	applications	in	their	own	optimized	virtual	machine.	Hyper-V	Containers	work
+differently	than	Windows	Server	Containers	in	the	fact	that	the	Hyper-V	Containers	do	not
+share	the	system’s	kernel	with	other	Hyper-V	Containers.
+Credential	Guard
+	Credential	Guard	helps	protect	a	system’s	credentials	and	this	helps	avoid
+pass	the	hash	attacks.	Credential	Guard	offers	better	protection	against	advanced	persistent
+threats	by	protecting	credentials	on	the	system	from	being	stolen	by	a	compromised
+administrator	or	malware.
+Credential	Guard	can	also	be	enabled	on	Remote	Desktop	Services	servers	and	Virtual
+Desktop	Infrastructure	so	that	the	credentials	for	users	connecting	to	their	sessions	are
+protected.
+DHCP
+	
+Dynamic	Host	Configuration	Protocol	(DHCP)
+	is	an	Internet	standard	that	allows
+organizations	to	reduce	the	administrative	overhead	of	configuring	hosts	on	a	TCP/IP-based
+network.	Some	of	the	features	are	DHCP	failover,	policy-based	assignment,	and	the	ability	to
+
+use	Windows	PowerShell	for	DHCP	Server.
+DNS
+	
+Domain	Name	System	(DNS)
+	services	are	used	in	TCP/IP	networks.	DNS	will	convert	a
+computer	name	or	fully	qualified	domain	name	(FQDN)	to	an	IP	address.	DNS	also	has	the
+ability	to	do	a	reverse	lookup	and	convert	an	IP	address	to	a	computer	name.	DNS	allows	you
+to	locate	computers	and	services	through	user-friendly	names.
+Failover	Clustering
+	
+Failover	Clustering
+	gives	an	organization	the	ability	to	provide	high
+availability	and	scalability	to	networked	servers.	Failover	clusters	can	include	file	share
+storage	for	server	applications,	such	as	Hyper-V	and	Microsoft	SQL	Server,	and	those	that	run
+on	physical	servers	or	virtual	machines.
+File	Server	Resource	Manager
+	
+File	Server	Resource	Manager
+	is	a	set	of	tools	that	allows
+administrators	to	manage	and	control	the	amount	and	type	of	data	stored	on	the	organization’s
+servers.	By	using	File	Server	Resource	Manager,	administrators	have	the	ability	to	set	up	file
+management	tasks,	use	quota	management,	get	detailed	reports,	set	up	a	file	classification
+infrastructure,	and	configure	file-screening	management.
+Group	Policy	Objects
+	
+Group	Policy	Objects
+	are	a	set	of	rules	and	management	configuration
+options	that	you	can	control	through	the	Group	Policy	settings.	These	policy	settings	can	be
+placed	on	users’	computers	throughout	the	organization.
+Hyper-V
+	
+Hyper-V
+	is	one	of	the	most	changed	features	in	Windows	Server	2016.	Hyper-V
+allows	an	organization	to	consolidate	servers	by	creating	and	managing	a	virtualized
+computing	environment.	It	does	this	by	using	virtualization	technology	that	is	built	into
+Windows	Server	2016.
+Hyper-V	allows	you	to	run	multiple	operating	systems	simultaneously	on	one	physical
+computer.	Each	virtual	operating	system	runs	in	its	own	virtual	machine	environment.
+Windows	Server	2016	Hyper-V	now	allows	an	administrator	to	protect	their	corporate	virtual
+machines	using	the	new	feature	called	Shielded	Virtual	Machine.	Shielded	Virtual	Machines
+are	encrypted	using	BitLocker	and	the	VMs	can	only	run	on	approved	Hyper-V	host	systems.
+Hyper-V	also	now	includes	a	new	feature	called	containers.	Containers	add	a	new	unique
+additional	layer	of	isolation	for	a	containerized	applications.
+IPAM
+	
+IP	Address	Management	(IPAM)
+	is	one	of	the	features	introduced	with	Windows	Server
+2012.	IPAM	allows	an	administrator	to	customize	and	monitor	the	IP	address	infrastructure	on
+a	corporate	network.
+Kerberos	Authentication
+	Windows	Server	2016	uses	the	
+Kerberos	authentication
+	(version
+5)	protocol	and	extensions	for	password-based	and	public	key	authentication.	The	Kerberos
+client	is	installed	as	a	
+security	support	provider	(SSP)
+,	and	it	can	be	accessed	through	the
+Security	Support	Provider	Interface	(SSPI)
+.
+Managed	Service	Accounts	(gMSAs)
+	Stand-alone	
+group	managed	service	accounts
+,
+originally	created	for	Windows	Server	2008	R2	and	Windows	7,	are	configured	domain
+accounts	that	allow	automatic	password	management	and	
+service	principal	names	(SPNs)
+
+management,	including	the	ability	to	delegate	management	to	other	administrators.	Service
+accounts	are	accounts	that	an	administrator	creates	so	that	the	account	can	be	used	to	start	a
+service.	Managed	service	accounts	are	accounts	that	are	created	using	PowerShell,	and	then
+Active	Directory	manages	the	account.	This	includes	changing	the	password	on	a	regular
+frequency.
+Nano	Server
+	Windows	Server	2016	has	introduced	a	brand-new	type	of	server	installation
+called	Nano	Server.	Nano	Server	allows	an	administrator	to	remotely	administer	the	server
+operating	system.	It	was	primarily	designed	and	optimized	for	private	clouds	and	datacenters.
+Nano	Server	is	very	similar	to	Server	Core,	but	the	Nano	Server	operating	system	uses
+significantly	less	hard	drive	space,	has	no	local	logon	capability,	and	only	supports	64-bit
+applications	and	tools.
+Nested	Virtualization
+	Windows	Server	2016	introduces	a	new	Hyper-V	feature	called	Nested
+Virtualization.	Nested	Virtualization	allows	administrators	to	create	virtual	machines	within
+virtual	machines.	As	an	instructor,	I	think	this	is	an	awesome	new	feature.	Now	I	can	build	a
+Windows	Server	2016	Hyper-V	server	with	a	training	virtual	machine.	Then	when	I	get	to	the
+part	when	I	need	to	teach	Hyper-V,	I	can	just	do	that	right	in	the	classroom	virtual	machine.
+There	are	numerous	possibilities	and	we	will	talk	more	about	them	throughout	this	book.
+Networking
+	There	are	many	networking	technologies	and	features	in	Windows	Server	2016,
+including	BranchCache,	Data	Center	Bridging	(DCB),	NIC	Teaming,	and	many	more.
+PowerShell	Direct
+	Windows	Server	2016	includes	a	new	simple	way	to	manage	Hyper-V
+virtual	machines	called	PowerShell	Direct.	PowerShell	Direct	is	a	new	powerful	set	of
+parameters	for	the	PSSession	cmdlet	called	VMName.	This	will	be	discussed	in	greater	detail
+in	the	Hyper-V	chapters.
+Remote	Desktop	Services
+	Before	Windows	Server	2008,	we	used	to	refer	to	this	as	Terminal
+Services.	
+Remote	Desktop	Services
+	allows	users	to	connect	to	virtual	desktops,	RemoteApp
+programs,	and	session-based	desktops.	Using	Remote	Desktop	Services	allows	users	to	access
+remote	connections	from	within	a	corporate	network	or	from	the	Internet.
+Security	Auditing
+	
+Security	auditing
+	gives	an	organization	the	ability	to	help	maintain	the
+security	of	an	enterprise.	By	using	security	audits,	you	can	verify	authorized	or	unauthorized
+access	to	machines,	resources,	applications,	and	services.	One	of	the	best	advantages	of
+security	audits	is	to	verify	regulatory	compliance.
+Smart	Cards
+	Using	
+smart	cards
+	(referred	to	as	
+two-factor	authentication
+)	and	their
+associated	
+personal	identification	numbers	(PINs)
+	is	a	popular,	reliable,	and	cost-effective
+way	to	provide	authentication.	When	using	smart	cards,	the	user	not	only	must	have	the
+physical	card	but	also	
+must	know	the	PIN	to	be	able	to	gain	access	to	network	resources.	This
+is	effective	because	even	if	the	smart	card	is	stolen,	thieves	can’t	access	the	network	unless
+they	know	the	PIN.
+TLS/SSL	(Schannel	SSP)
+	
+Schannel
+	is	a	security	support	provider	(SSP)	that	uses	the	
+Secure
+Sockets	Layer	(SSL)
+	and	
+Transport	Layer	Security	(TLS)
+	Internet	standard	authentication
+protocols	together.	The	Security	Support	Provider	Interface	is	an	API	used	by	Windows
+
+systems	to	allow	security-related	functionality,	including	authentication.
+Windows	Deployment	Services
+	
+Windows	Deployment	Services
+	allows	an	administrator	to
+install	Windows	operating	systems	remotely.	Administrators	can	use	Windows	Deployment
+Services	to	set	up	new	computers	by	using	a	network-based	installation.
+Windows	PowerShell	Desired	State	Configuration
+	Windows	Server	2016	created	a	new
+PowerShell	management	platform	called	Windows	PowerShell	Desired	State	Configuration
+(DSC).	DSC	enables	the	deploying	and	managing	of	configuration	data	for	software	services
+and	it	also	helps	manage	the	environment	in	which	these	services	run.
+DSC	allows	administrators	to	use	Windows	PowerShell	language	extensions	along	with	new
+Windows	PowerShell	cmdlets,	and	resources.	DSC	allows	you	to	declaratively	specify	how	a
+corporation	wants	their	software	environment	to	be	configured	and	maintained.
+DSC	allows	you	to	automate	tasks	like	enabling	or	disabling	server	roles	and	features,	manage
+Registry	settings,	manage	files	and	directories,	manage	groups	and	users,	deploy	software,	and
+run	PowerShell	scripts	to	just	name	a	few.
+Windows	Server	Backup	Feature
+	The	
+Windows	Server	Backup
+	feature	gives	an	organization
+a	way	to	back	up	and	restore	Windows	servers.	You	can	use	Windows	Server	Backup	to	back
+up	the	entire	server	(all	volumes),	selected	volumes,	the	system	state,	or	specific	files	or
+folders.
+Planning	the	Windows	Server	2016	Installation
+Before	you	install	Windows	Server	2016,	you	must	first	ask	yourself	these	important	questions:
+What	type	of	server	do	I	need?	Will	the	server	be	a	domain	controller?	What	roles	do	I	need	to
+install	on	this	server?
+Once	you	have	figured	out	what	you	need	the	server	to	do,	you	can	make	a	game	plan	for	the
+installation.	So,	let’s	start	by	looking	at	some	of	the	server	roles	and	technologies	that	can	be
+installed	on	a	Windows	Server	2016	computer.
+Server	Roles	in	Windows	Server	2016
+When	you	install	Windows	Server	2016,	you	have	to	decide	which	roles	and	features	are	going
+to	be	installed	onto	that	server.	This	is	an	important	decision	in	the	computer	world.	Many
+administrators	not	only	overuse	a	server	but	also	underutilize	servers	in	their	organization.
+For	example,	many	administrators	refuse	to	put	any	other	roles	or	features	on	a	domain
+controller.	This	may	not	be	a	good	use	of	a	server.	Domain	controllers	help	authenticate	users
+onto	the	network,	but	after	that	the	domain	controllers	are	really	not	very	busy	all	day	long.
+Domain	controllers	have	tasks	that	they	must	perform	all	day,	but	the	server	on	which	they
+reside	is	not	heavily	used	when	compared	to	a	SQL	Server	machine	or	an	Exchange	mail
+server.	This	is	where	monitoring	your	server	can	be	useful.
+If	your	domain	controller	is	a	virtual	machine	or	if	you	have	more	than	enough	servers,	then
+
+having	a	domain	controller	with	no	other	applications	on	it	(except	DNS)	may	be	fine.	But	if
+servers	are	limited,	then	think	about	putting	other	services	or	applications	on	your	server	if	the
+server	can	handle	them.	Just	remember,	some	applications	work	better	on	member	servers	than
+on	domain	controllers.	So	before	just	adding	any	application	to	a	domain	controller,	make	sure
+you	research	the	application	and	find	out	best	practices.
+Now	let’s	take	a	look	at	some	of	the	roles	and	features	you	can	install	onto	a	Windows	Server
+2016	machine.	Knowing	the	different	roles	and	features	you	can	install	will	help	you	to	design,
+deploy,	manage,	and	troubleshoot	technologies	in	Windows	Server	2016.	
+Figure	1.1
+	shows	the
+Add	Roles	and	Features	Wizard	in	Server	Manager.	It	shows	you	just	some	of	the	roles	that	can
+be	installed	on	a	Windows	Server	2016	machine.
+FIGURE	1.1
+	Available	roles	in	Windows	Server	2016
+Roles	and	Features
+Many	of	these	roles	were	discussed	in	the	section	“Features	and	Advantages	of	Windows
+Server	2016.”	I	include	them	here	again	because	they	are	also	
+roles
+	that	can	also	be
+installed	on	Windows	Server	2016.
+The	following	roles	are	available	in	Windows	Server	2016:
+Active	Directory	Certificate	Services
+	The	AD	CS	server	role	in	Windows	Server	2016
+allows	you	to	build	a	PKI	and	provide	public	key	cryptography,	digital	certificates,	and	digital
+signature	capabilities	for	your	organization.
+
+Feature
+	AD	CS	provides	a	customizable	set	of	services	that	allows	you	to	issue	and
+manage	PKI	certificates.	These	certificates	can	be	used	in	software	security	systems	that
+employ	public	key	technologies.
+Role
+	AD	CS	in	Windows	Server	2016	is	the	server	role	that	allows	you	to	build	a	PKI	and
+provide	public	key	cryptography,	digital	certificates,	and	digital	signature	capabilities	for
+your	organization.
+Active	Directory	Domain	Services
+	The	AD	DS	server	role	allows	you	to	create	a	scalable,
+secure,	and	manageable	infrastructure	for	user	and	resource	management	and	to	provide
+support	for	directory-enabled	applications,	such	as	Microsoft	Exchange	Server.
+Active	Directory	Federation	Services
+	
+Active	Directory	Federation	Services	(AD	FS)
+provides	Internet-based	clients	with	a	secure	identity	access	solution	that	works	on	both
+Windows	and	non-Windows	operating	systems.	AD	FS	gives	users	the	ability	to	do	a	
+single
+sign-on	(SSO)
+	and	access	applications	on	other	networks	without	needing	a	secondary
+password.
+Active	Directory	Lightweight	Directory	Services
+	
+Active	Directory	Lightweight	Directory
+Services	(AD	LDS)
+	is	a	
+Lightweight	Directory	Access	Protocol	(LDAP)
+	directory	service	that
+provides	flexible	support	for	directory-enabled	applications,	without	the	dependencies	and
+domain-related	restrictions	of	AD	DS.
+Active	Directory	Rights	Management	Services
+	Active	Directory	Rights	Management
+Services	(AD	RMS)	in	Windows	Server	2016	is	the	server	role	that	provides	you	with
+management	and	development	tools	that	work	with	industry	security	technologies	including
+encryption,	certificates,	and	authentication	to	help	organizations	create	reliable	information
+protection	solutions.
+Device	Health	Attestation
+	The	Device	Health	Attestation	helps	protect	your	corporate
+network	by	verifying	that	client	systems	meet	corporate	policy.	For	example,	you	can	make
+sure	that	all	computers	that	connect	to	your	network	have	their	proper	updates,	antivirus,	and
+proper	configuration	policies	before	connecting	to	the	network.
+DHCP
+	
+Dynamic	Host	Configuration	Protocol	(DHCP)
+	is	an	Internet	standard	that	allows
+organizations	to	reduce	the	administrative	overhead	of	configuring	hosts	on	a	TCP/IP-based
+network.	Some	of	the	features	are	DHCP	failover,	policy-based	assignment,	and	the	ability	to
+use	Windows	PowerShell	for	DHCP	Server.
+DNS
+	
+Domain	Name	System	(DNS)
+	services	are	used	in	TCP/IP	networks.	DNS	will	convert	a
+computer	name	or	fully	qualified	domain	name	(FQDN)	to	an	IP	address.	DNS	also	has	the
+ability	to	do	a	reverse	lookup	and	convert	an	IP	address	to	a	computer	name.	DNS	allows	you
+to	locate	computers	and	services	through	user-friendly	names.
+Fax	Server
+	The	fax	server	allows	you	to	send	and	receive	faxes,	and	it	also	allows	you	to
+manage	fax	resources	such	as	jobs,	settings,	reports,	and	fax	devices	on	a	specific	computer	or
+on	the	network.
+File	and	Storage	Services
+	
+File	and	Storage	Services
+	allows	an	administrator	to	set	up	and
+
+manage	one	or	more	file	servers.	These	servers	can	provide	a	central	location	on	your	network
+where	you	can	store	files	and	then	share	those	files	with	network	users.	If	users	require	access
+to	the	same	files	and	applications	or	if	centralized	backup	and	file	management	are	important
+issues	for	your	organization,	administrators	should	set	up	network	servers	as	a	file	server.
+Host	Guardian	Service
+	The	Host	Guardian	Service	(HGS)	allows	you	to	have	a	more	secure
+environment	for	your	network’s	virtual	machines.	The	HGS	role	provides	the	Attestation	&
+Key	Protection	services	that	enable	Guarded	Hosts	to	run	Shielded	virtual	machines.
+Hyper-V
+	The	Hyper-V	role	allows	administrators	to	create	and	manage	a	virtualized
+environment	by	taking	advantage	of	the	technology	built	into	the	Windows	Server	2016
+operating	system.	When	an	administrator	installs	the	Hyper-V	role,	all	required	virtualization
+components	are	installed.
+Some	of	the	required	components	include	the	Windows	hypervisor,	Virtual	Machine
+Management	Service,	the	virtualization	WMI	provider,	the	virtual	machine	bus	(VMbus),	the
+virtualization	service	provider	(VSP),	and	the	virtual	infrastructure	driver	(VID).
+MultiPoint	Services
+	MultiPoint	Services	allows	multiple	users,	each	with	their	own
+independent	and	familiar	Windows	experience,	to	simultaneously	share	one	computer.
+Network	Controller
+	The	Network	Controller	provides	the	point	of	automation	needed	for
+continual	configuration,	monitoring,	and	diagnostics	of	virtual	networks,	physical	networks,
+network	services,	network	topology,	address	management,	and	so	on	within	a	datacenter.
+Network	Policy	and	Access	Services
+	Use	the	
+Network	Policy	and	Access	Services
+	server
+role	to	install	and	configure	
+Network	Policy	Server	(NPS)
+,	which	helps	safeguard	the	security
+of	your	network.
+Print	and	Document	Services
+	
+Print	and	Document	Services
+	allows	an	administrator	to
+centralize	print	server	and	network	printer	tasks.	This	role	also	allows	you	to	receive	scanned
+documents	from	network	scanners	and	route	the	documents	to	a	shared	network	resource,
+Windows	SharePoint	Services	site,	or	email	addresses.	Print	and	Document	Services	also
+provides	fax	servers	with	the	ability	to	send	and	receive	faxes	while	also	giving	the
+administrator	the	ability	to	manage	fax	resources	such	as	jobs,	settings,	reports,	and	fax
+devices	on	the	fax	server.
+Remote	Access
+	Remote	Access	provides	connectivity	through	DirectAccess,	VPN,	and	Web
+Application	Proxies.	DirectAccess	provides	an	Always	On	and	Always	Managed	experience.
+Remote	Access	provides	VPN	access	including	site-to-site	connectivity.	Web	Application
+Proxies	enable	web-based	applications	from	your	corporate	network	to	client	devices	outside
+of	the	corporate	network.	Remote	Access	also	includes	routing	capabilities,	including	Network
+Address	Translation	(NAT).
+Remote	Desktop	Services
+	Remote	Desktop	Services	allows	for	faster	desktop	and
+application	deployments	to	any	device,	improving	remote	user	effectiveness	while	helping	to
+keep	critical	data	secure.	Remote	Desktop	Services	allows	for	both	a	
+virtual	desktop
+infrastructure	(VDI)
+	and	session-based	desktops,	allowing	users	to	connect	from	anywhere.
+
+Volume	Activation	Services
+	Windows	Server	2016	
+Volume	Activation	Services
+	will	help
+your	organization	benefit	from	using	this	service	to	deploy	and	manage	volume	licenses	for	a
+medium	to	large	number	of	computers.
+Web	Server	(IIS)
+	The	
+Web	Server	(IIS)
+	role	in	Windows	Server	2016	allows	an	administrator
+to	set	up	a	secure,	easy-to-manage,	modular,	and	extensible	platform	for	reliably	hosting
+websites,	services,	and	applications.
+Windows	Deployment	Services
+	Windows	Deployment	Services	allows	an	administrator	to
+install	a	Windows	operating	system	over	the	network.	Administrators	do	not	have	to	install
+each	operating	system	directly	from	a	CD	or	DVD.
+Windows	Server	Essentials	Experience
+	Windows	Server	Essentials	Experience	allows	an
+administrator	to	set	up	the	IT	infrastructure,	and	it	also	provides	powerful	functions	such	as	PC
+backups	to	help	protect	your	corporate	data	and	Remote	Web	Access	that	allows	access	to
+business	information	from	anywhere	in	the	world.	Windows	Server	Essentials	Experience	also
+allows	you	to	easily	connect	to	cloud-based	applications	and	services.
+Windows	Server	Update	Services
+	
+Windows	Server	Update	Services	(WSUS)
+	allows
+administrators	to	deploy	application	and	operating	system	updates.	By	deploying	WSUS,
+administrators	have	the	ability	to	manage	updates	that	are	released	through	Microsoft	Update	to
+computers	in	their	network.	This	feature	is	integrated	with	the	operating	system	as	a	server	role
+on	a	Windows	Server	2016	system.
+Migrating	Roles	and	Features	to	Windows	Server	2016
+Once	you	decide	on	which	roles	and	features	you	are	going	to	install	onto	your	Windows
+Server	2016	system,	then	you	either	have	to	install	those	roles	and	features	from	scratch	or
+migrate	them	from	a	previous	version	of	Windows	server.
+Windows	Server	2016	includes	a	set	of	migration	tools	that	administrators	can	use	to	help	ease
+the	process	of	migrating	server	roles,	features,	operating	system	settings,	and	data.
+Administrators	can	migrate	this	data	from	an	existing	server	that	are	running	Windows	Server
+2008	R2,	Windows	Server	2012,	Windows	Server	2012	R2,	or	Windows	Server	2016	to	a
+computer	that	is	running	Windows	Server	2016.
+Using	Windows	Server	Migration	Tools	to	migrate	roles,	role	services,	and	features	can
+simplify	the	deployment	of	new	servers.	You	can	migrate	roles	and	features	on	any	server,
+including	Server	Core,	installation	option	of	Windows	Server	2016,	and	virtual	servers.	By
+using	Windows	Server	Migration	Tools,	an	administrator	can	reduce	migration	downtime,
+increase	the	accuracy	of	the	migration	process,	and	help	eliminate	conflicts	that	could
+otherwise	occur	during	the	migration	process.
+One	advantage	of	using	the	migration	tools	is	that	most	of	them	support	cross-architecture
+migrations	(x86-based	to	x64-based	computing	platforms),	migrations	between	physical	and
+virtual	environments,	and	migrations	between	both	the	full	and	Server	Core	installation	options
+of	the	Windows	Server	operating	system.	In	Windows	Server	2016,	Windows	Server
+
+Migration	Tools	also	supports	cross-subnet	migrations.
+To	use	Windows	Server	Migration	Tools,	the	feature	must	be	installed	on	both	the	source	and
+destination	computers.	Windows	Server	Migration	Tools	installation	and	preparation	can	be
+divided	into	the	following	stages:
+1
+.	
+Installing	Windows	Server	Migration	Tools	on	destination	servers	that	run	Windows
+Server	2016
+2
+.	
+Creating	deployment	folders	on	destination	servers	that	run	Windows	Server	2016	for
+copying	to	source	servers
+3
+.	
+Copying	deployment	folders	from	destination	servers	to	source	servers
+4
+.	
+Registering	Windows	Server	Migration	Tools	on	source	servers
+If	you	plan	to	use	Windows	Server	Migration	Tools,	you	must	be	a	member	of	the
+Administrators	group	on	both	the	source	and	destination	servers	to	install,	remove,	or	set	up
+the	tools.
+Administrators	can	install	Windows	Server	Migration	Tools	2016	by	using	either	the	Add
+Roles	Or	Features	Wizard	in	Server	Manager	or	Windows	PowerShell	deployment	cmdlets	for
+Server	Manager.
+To	install	Windows	Server	Migration	Tools	on	a	Server	Core	installation	of	Windows	Server
+2016,	you	would	complete	the	following	steps:
+1
+.	
+Open	a	Windows	PowerShell	session	by	typing	
+powershell.exe
+	in	the	current	command
+prompt	session	and	then	pressing	Enter.
+2
+.	
+In	the	Windows	PowerShell	session,	install	Windows	Server	Migration	Tools	by	using	the
+Windows	PowerShell	
+Install-WindowsFeature
+	cmdlet	for	Server	Manager.	In	the
+Windows	PowerShell	session,	type	the	following,	and	then	press	Enter.	(Omit	the
+ComputerName
+	parameter	if	you	are	installing	the	Windows	Server	Migration	Tools	on	the
+local	server.)
+Install-WindowsFeature	Migration	–ComputerName	computer_name
+Deciding	Which	Windows	Server	2016	Versions	to	Use
+You	may	be	wondering	which	version	of	Windows	Server	2016	is	best	for	your	organization.
+After	all,	Microsoft	offers	the	following	six	versions	of	Windows	Server	2016.
+ At	the	time	this	book	was	written,	there	were	six	versions	of	Windows	Server
+2016.	But	Microsoft	is	always	improving	and	creating	new	versions	of	their	products.	Be
+sure	to	check	out	Microsoft’s	website	for	any	other	versions	or	changes.
+
+Windows	Server	2016	Datacenter
+	
+This	version	is	designed	for	organizations	that	are	looking
+to	migrate	to	a	highly	virtualized,	private	cloud	environment.	Windows	Server	2016
+Datacenter	has	full	Windows	Server	functionality	with	unlimited	virtual	instances.
+Windows	Server	2016	Standard
+	
+This	version	is	designed	for	organizations	with	physical	or
+minimally	virtualized	environments.	Windows	Server	2016	Standard	has	full	Windows	Server
+functionality	with	two	virtual	instances.
+Windows	Server	2016	Essentials
+	
+This	version	is	ideal	for	small	businesses	that	have	as	many
+as	25	users	and	50	devices.	Windows	Server	2016	Essentials	has	a	simpler	interface	and
+preconfigured	connectivity	to	cloud-based	services	but	no	virtualization	rights.
+Windows	Hyper-V	Server	2016
+	
+Microsoft	Hyper-V	Server	2016	has	the	exact	same	Hyper-V
+role	components	as	Windows	Server	2016.	Hyper-V	2016	Server	is	a	stand-alone	version	that
+has	the	Windows	hypervisor,	the	Windows	Server	driver	model,	and	the	other	virtualization
+components	only.	Windows	Hyper-V	Server	2016	allows	you	to	have	a	simple	virtualization
+solution	which	allows	you	to	reduce	costs.
+Windows	Storage	Server	2016
+	
+Windows	Storage	Server	2016	is	not	openly	available	for
+sale	to	the	general	public.	Windows	Storage	Server	2016	is	only	available	as	an	integrated
+hardware	offering	or	as	an	available	field	upgrade	from	your	hardware	manufacturer.
+Windows	Storage	Server	2016	fully	supports	upgrades	from	previous	versions.
+Windows	MultiPoint	Premium	2016	Server
+	
+Windows	MultiPoint	Premium	Server	2016	is	a
+Stand-Alone	Windows	product	designed	for	environments	that	have	multiple	users
+simultaneously	sharing	one	computer.	Windows	MultiPoint	Premium	2016	Server	is	the	same
+as	a	Windows	Server	2016	with	Multipoint	Services	Installed.	MultiPoint	Services	allows
+multiple	users,	each	with	their	own	independent	and	familiar	Windows	experience	to
+simultaneously	share	one	computer.
+Once	you	choose	what	roles	are	going	on	your	server,	you	must	then	decide	how	you’re	going
+to	install	Windows	Server	2016.	There	are	two	ways	to	install	Windows	Server	2016.	You	can
+upgrade	a	Windows	Server	2012	or	Windows	Server	2012	R2	machine	to	Windows	Server
+2016,	or	you	can	do	a	clean	install	of	Windows	Server	2016.	If	you	decide	that	you	are	going
+to	upgrade,	there	are	specific	upgrade	paths	you	must	follow.
+Your	choice	of	Windows	Server	2016	version	is	dictated	by	how	your	current	network	is
+designed.	If	you	are	building	a	network	from	scratch,	then	it’s	pretty	straightforward.	Just
+choose	the	Windows	Server	2016	version	based	on	your	server’s	tasks.	However,	if	you
+already	have	a	version	of	Windows	Server	2012	installed,	you	should	follow	the
+recommendations	in	
+Table	1.1
+,	which	briefly	summarize	the	supported	upgrade	paths	to
+Windows	Server	2016.
+
+TABLE	1.1
+	Supported	Windows	Server	2016	upgrade	path	recommendations
+Current	System
+Upgraded	System
+Windows	Server	2012	Standard
+Windows	Server	2016	Standard	or	Datacenter
+Windows	Server	2012	Datacenter
+Windows	Server	2016	Datacenter
+Windows	Server	2012	R2	Standard
+Windows	Server	2016	Standard	or	Datacenter
+Windows	Server	2012	R2	Datacenter
+Windows	Server	2016	Datacenter
+Windows	Server	2012	R2	Essentials
+Windows	Server	2016	Essentials
+Hyper-V	Server	2012	R2
+Hyper-V	Server	2016
+Windows	Storage	Server	2012	Standard
+Windows	Storage	Server	2016	Standard
+Windows	Storage	Server	2012	Workgroup
+Windows	Storage	Server	2016	Workgroup
+Windows	Storage	Server	2012	R2	Workgroup
+Windows	Storage	Server	2016	Workgroup
+ If	your	version	of	Microsoft	Windows	Server	is	not	64-bit,	you	can’t	upgrade
+to	Windows	Server	2016.
+Deciding	on	the	Type	of	Installation
+One	of	the	final	choices	you	must	make	before	installing	Windows	Server	2016	is	what	type	of
+installation	you	want.	There	are	three	ways	to	install	Windows	Server	2016.
+Windows	Server	2016	(Desktop	Experience)
+	
+This	is	the	version	with	which	most
+administrators	are	familiar.	This	is	the	version	that	uses	
+Microsoft	Management	Console
+(MMC)
+	windows,	and	it	is	the	version	that	allows	the	use	of	a	mouse	to	navigate	through	the
+installation.
+Windows	Server	2016	Server	Core
+	
+This	is	a	bare-bones	installation	of	Windows	Server
+2016.	You	can	think	of	it	this	way:	If	Windows	Server	2016	(Desktop	Experience)	is	a	
+top-of-
+the-line	luxury	car,	then	Windows	Server	2016	Server	Core	is	the	stripped-down	model	with
+no	air-conditioning,	manual	windows,	and	cloth	seats.	It	might	not	be	pretty	to	look	at,	but	it
+gets	the	job	done.
+Windows	Server	2016	Nano	Server
+	
+Windows	Server	2016	has	introduced	a	brand	new	type
+of	server	installation	called	Nano	Server.	Nano	Server	allows	an	administrator	to	remotely
+administer	the	server	operating	system.	It	was	primarily	designed	and	optimized	for	private
+clouds	and	datacenters.	Nano	Server	is	very	similar	to	Server	Core,	but	the	Nano	Server
+operating	system	uses	significantly	smaller	hard	drive	space,	has	no	local	logon	capability,	and
+only	supports	64-bit	applications	and	tools.
+
+ Server	Core
+Here	is	an	explanation	of	Server	Core	that	I	have	used	ever	since	it	was	introduced	in
+Windows	Server	2008.
+I	am	a	
+huge
+	sports	fan.	I	love	watching	sports	on	TV,	and	I	enjoy	going	to	games.	If	you
+have	ever	been	to	a	hockey	game,	you	know	what	a	hockey	goal	looks	like.	Between
+hockey	periods,	the	stadium	workers	often	bring	out	a	huge	piece	of	Plexiglas	onto	the	ice.
+There	is	a	tiny	square	cut	out	of	the	bottom	of	the	glass.	The	square	is	just	a	bit	
+bigger	than
+a	hockey	puck	itself.
+Now	they	pick	some	lucky	fan	out	of	the	stands,	give	them	a	puck	at	center	ice,	and	then
+ask	them	to	shoot	the	puck	into	the	net	with	the	Plexiglas	in	front	of	it.	If	they	get	it	through
+that	tiny	little	square	at	the	bottom	of	the	Plexiglas,	they	win	a	car	or	some	such	great
+prize.
+Well,	Windows	Server	2016	(Desktop	Experience)	is	like	regular	hockey	with	a	net,	and
+Windows	Server	2016	Server	Core	is	the	Plexiglas	version.
+Server	Core	supports	a	limited	number	of	roles:
+Active	Directory	Certificate	Services	(AD	CS)
+Active	Directory	Domain	Services	(AD	DS)
+Active	Directory	Federation	Services	(AD	FS)
+Active	Directory	Lightweight	Directory	Services	(AD	LDS)
+Active	Directory	Rights	Management	Services	(AD	RMS)
+DHCP	Server
+DNS	Server
+Fax	Server
+File	and	Storage	Services
+BITS	Server
+BranchCache
+Hyper-V
+Network	Policy	and	Access	Services
+Print	and	Document	Services
+Remote	Access
+
+Remote	Desktop	Services
+Volume	Activation	Services
+Web	Server	(IIS)
+Windows	Deployment	Services
+Windows	Server	Update	Services
+.NET	Framework	3.5	Features
+.NET	Framework	4.6	Features
+Streaming	Media	Services
+Failover	Clustering
+iSCSI
+Network	Load	Balancing
+MPIO
+qWave
+Telnet	Server/Client
+Windows	Server	Migration	Tools
+Windows	PowerShell	4.0
+Server	Core	does	not	have	the	normal	Windows	interface	or	GUI.	Almost	everything	has	to	be
+configured	via	the	command	line	or,	in	some	cases,	using	the	Remote	Server	Administration
+Tools	from	a	full	version	of	Windows	Server	2016.	While	this	might	scare	off	some
+administrators,	it	has	the	following	benefits:
+Reduced	Management
+	
+Because	Server	Core	has	a	minimum	number	of	applications	installed,
+it	reduces	management	effort.
+Minimal	Maintenance
+	
+Only	basic	systems	can	be	installed	on	Server	Core,	so	it	reduces	the
+upkeep	you	would	need	to	perform	in	a	normal	server	installation.
+Smaller	Footprint
+	
+Server	Core	requires	only	1GB	of	disk	space	to	install	and	2GB	of	free
+space	for	operations.
+Tighter	Security
+	
+With	only	a	few	applications	running	on	a	server,	it	is	less	vulnerable	to
+attacks.
+The	prerequisites	for	Server	Core	are	basic.	It	requires	the	Windows	Server	2016	installation
+media,	a	product	key,	and	the	hardware	on	which	to	install	it.
+After	you	install	the	base	operating	system,	you	use	PowerShell	or	the	remote	administrative
+tools	to	configure	the	network	settings,	add	the	machine	to	the	domain,	create	and	format	disks,
+and	install	roles	and	features.	It	takes	only	a	few	minutes	to	install	Server	Core,	depending	on
+
+the	hardware.
+ Better	Security
+When	I	started	in	this	industry	more	than	20	years	ago,	I	was	a	programmer.	I	used	to
+program	computer	hospital	systems.	When	I	switched	to	the	networking	world,	I	continued
+to	work	under	contract	with	hospitals	and	with	doctors’	offices.
+One	problem	I	ran	into	is	that	many	doctors	are	affiliated	with	hospitals,	but	they	don’t
+actually	have	offices	within	the	hospital.	Generally,	they	have	offices	either	near	the
+hospital	or,	in	some	cases,	right	across	the	street.
+Here	is	the	issue:	Do	we	put	servers	in	the	doctors’	offices,	or	do	we	make	the	doctor	log
+into	the	hospital	network	through	a	remote	connection?	Doctors’	offices	normally	don’t
+have	computer	rooms,	and	we	don’t	want	to	place	a	domain	controller	or	server	on
+someone’s	desk.	It’s	just	unsafe!
+This	is	where	Windows	Server	2016	Server	Core	can	come	into	play.	Since	it	is	a
+slimmed-down	version	of	Windows	and	there	is	no	GUI,	it	makes	it	harder	for	anyone	in
+the	office	to	hack	into	the	system.	Also,	Microsoft	has	a	domain	controller	in	Windows
+Server	2016	called	a	
+read-only	domain	controller	(RODC)
+.	As	its	name	suggests,	it	is	a
+read-only	version	of	a	domain	controller.
+With	Server	Core	and	an	RODC,	you	can	feel	safer	placing	a	server	on	someone’s	desk	or
+in	any	office.	Server	Core	systems	allow	you	to	place	servers	in	areas	that	you	would
+never	have	placed	them	before.	This	can	be	a	great	advantage	to	businesses	that	have
+small,	remote	locations	without	full	server	rooms.
+NIC	Teaming
+NIC	Teaming
+,	also	known	as	
+load	balancing	and	failover	(LBFO)
+,	gives	an	administrator	the
+ability	to	allow	multiple	network	adapters	on	a	system	to	be	placed	into	a	team.	Independent
+hardware	vendors	(IHVs)	have	required	NIC	Teaming,	but	until	Windows	Server	2012,	NIC
+Teaming	was	
+not
+	part	of	the	Windows	Server	Operating	System.
+To	be	able	to	use	NIC	Teaming,	the	computer	system	must	have	at	least	one	Ethernet	adapter.	If
+you	want	to	provide	fault	protection,	an	administrator	must	have	a	minimum	of	two	Ethernet
+adapters.	One	advantage	of	Windows	Server	2016	is	that	an	administrator	can	setup	32
+network	adapters	in	a	NIC	Team.
+NIC	Teaming	is	a	very	common	practice	when	setting	up	virtualization.	It	is	one	way	that	you
+can	have	load	balancing	with	Hyper-V.
+NIC	Teaming	gives	an	administrator	the	ability	to	allow	a	virtual	machine	to	use	virtual
+
+network	adapters	in	Hyper-V.	The	advantage	of	using	NIC	Teaming	in	Hyper-V	is	that	the
+administrator	can	use	it	to	connect	to	more	than	one	Hyper-V	switch.	This	allows	Hyper-V	to
+maintain	connectivity	even	if	the	network	adapter	under	the	Hyper-V	switch	gets	disconnected.
+An	administrator	can	configure	NIC	Teaming	in	either	Server	Manager	or	PowerShell.
+Installing	Windows	Server	2016
+In	the	following	sections,	I	am	going	to	walk	you	through	two	different	types	of	installs.	I	will
+show	you	how	to	do	a	full	install	of	Windows	Server	2016	Datacenter	(Desktop	Experience),
+and	then	I	will	show	you	how	to	install	the	Server	Core	version	of	the	same	software	and	Nano
+Server.
+ For	these	labs,	I	am	using	the	full	release	of	Windows	Server	2016	Datacenter,
+but	you	can	use	Windows	Server	2016	Standard.
+Installing	with	the	Desktop	Experience
+In	Exercise	1.1,	I	will	show	you	how	to	install	Windows	Server	2016	Datacenter	(Desktop
+Experience).	This	installation	will	have	a	Graphical	User	Interface	(GUI)	and	this	means	that
+an	administrator	will	be	able	to	control	the	applications	on	the	Desktop	and	the	operating
+system	functions	with	a	mouse.
+Windows	Installation
+At	the	time	of	this	writing,	I	used	the	first	full	release	of	Windows	Server	2016
+Datacenter.	For	this	reason,	there	may	be	screens	that	have	changed	somewhat	since	this
+book	was	published.
+EXERCISE	1.1
+Installing	Windows	Server	2016	Datacenter	(Desktop	Experience)
+1
+.	
+Insert	the	Windows	Server	2016	installation	DVD,	and	restart	the	machine	from	the
+installation	media.
+2
+.	
+At	the	first	screen,	Windows	Server	2016	(see	
+Figure	1.2
+)	will	ask	you	to	configure
+your	language,	time	and	currency,	and	keyboard.	Make	your	selections,	and	click	Next.
+
+FIGURE	1.2
+	Windows	Server	2016	Setup
+3
+.	
+At	the	next	screen,	click	Install	Now.
+4
+.	
+Depending	on	what	version	of	Windows	Server	2016	you	have	(MSDN,	TechNet,	and
+so	on),	you	may	be	asked	to	enter	a	product	key.	If	this	screen	appears,	enter	your
+product	key,	and	click	Next.	If	this	screen	does	not	appear,	just	go	to	step	5.
+5
+.	
+The	Select	The	Operating	System	That	You	Want	To	Install	screen	then	appears.
+Choose	the	Windows	Server	2016	Datacenter	(Desktop	Experience)	selection	(see
+Figure	1.3
+)	and	click	Next.
+
+FIGURE	1.3
+	Windows	Server	Edition
+6
+.	
+The	license	terms	screen	appears.	After	reading	the	Windows	Server	2016	license
+agreement,	check	the	I	Accept	The	License	Terms	check	box,	and	click	Next.
+7
+.	
+On	the	Which	type	of	installation	do	you	want?	Screen	(see	
+Figure	1.4
+),	choose
+Custom:	Install	Windows	Only	(Advanced).
+FIGURE	1.4
+	Windows	Server	Installation
+8
+.	
+The	next	screen	will	ask	you	where	you	want	to	install	Windows.	If	your	hard	disk	is
+
+already	formatted	as	NTFS,	click	the	drive,	and	then	click	Next.	If	the	hard	disk	is	not
+yet	set	up	or	formatted,	choose	the	New	link,	and	create	a	partition.	After	creating	the
+partition,	click	the	Format	link.	Once	the	format	is	done,	make	sure	you	choose	the
+new	partition,	and	click	Next.
+9
+.	
+The	Installing	Windows	screen	will	appear	next.	This	is	where	the	files	from	your
+media	will	be	installed	onto	the	system	(see	
+Figure	1.5
+).	The	machine	will	reboot
+during	this	installation.
+FIGURE	1.5
+	Installing	Windows	screen
+10
+.	
+After	the	machine	is	finished	rebooting,	a	screen	requesting	the	administrator
+password	will	appear	(see	
+Figure	1.6
+).	Type	in	your	password.	(P@ssword	is	used	in
+this	exercise.)	Your	password	must	meet	the	password	complexity	requirements.
+(Three	of	the	following	four	are	needed	for	complexity:	one	capitalized	letter,	one
+lowercase	letter,	one	number,	and/or	one	special	character.)	Click	Finish.
+
+FIGURE	1.6
+	Customize	settings
+11
+.	
+Next,	log	into	the	system.	Press	Ctrl+Alt+Del,	and	type	in	the	administrator	password.
+The	machine	will	set	up	the	properties	of	the	administrator	account.
+12
+.	
+Notice	that	the	Server	Manager	dashboard	automatically	appears.	Your	Windows
+Server	2016	installation	is	now	complete.
+13
+.	
+Close	Server	Manager.
+After	you	have	logged	into	the	Windows	Server	2016	Datacenter	system,	you	will	notice	some
+features	right	away.	The	first	is	that	there	is	a	Start	button	in	the	lower-left	corner	of	the	screen.
+ Administrators	can	also	access	the	Start	button	by	pressing	the	Windows	key
+on	a	standard	keyboard.
+Installing	Windows	Server	2016	Server	Core
+In	Exercise	1.2,	you	will	learn	how	to	install	Windows	Server	2016	Server	Core.	
+You’ll
+notice	that	the	steps	are	similar	to	the	ones	in	Exercise	1.1,	with	a	couple	of	exceptions.	As
+mentioned	earlier,	Server	Core	is	a	command	line	configuration	of	Windows	Server	2016.
+
+EXERCISE	1.2
+Installing	Windows	Server	2016	Using	Server	Core
+1
+.	
+Insert	the	Windows	Server	2016	installation	DVD,	and	restart	the	machine	from	the
+installation	media.
+2
+.	
+At	the	first	screen,	Windows	Server	2016	will	prompt	you	to	configure	your	language,
+time	and	currency,	and	keyboard.	Make	your	selections,	and	click	Next.
+3
+.	
+At	the	next	screen,	click	Install	Now.
+4
+.	
+Depending	on	what	version	of	Windows	Server	2016	you	have	(MSDN,	TechNet,	and
+so	on),	you	may	be	asked	to	enter	a	product	key.	If	this	screen	appears,	enter	your
+product	key,	and	click	Next.	If	this	screen	does	not	appear,	just	go	to	step	5.
+5
+.	
+The	Select	The	Operating	System	That	You	Want	To	Install	screen	then	appears.
+Choose	the	Windows	Server	2016	Datacenter	selection	(see	
+Figure	1.7
+)	and
+click	Next.
+FIGURE	1.7
+	Windows	Server	Edition
+6
+.	
+The	license	terms	screen	appears.	After	reading	the	Windows	Server	2016	license
+agreement,	check	the	I	Accept	The	License	Terms	check	box	and	click	Next.
+7
+.	
+At	the	Which	Type	Of	Installation	Do	You	Want?	screen,	choose	Custom:	Install
+Windows	Only	(Advanced).
+8
+.	
+The	next	screen	will	ask	you	where	you	want	to	install	Windows.	If	your	hard	disk	is
+already	formatted	as	NTFS,	click	the	drive	and	then	click	Next.	If	the	hard	disk	is	not
+
+set	up	or	formatted,	choose	the	New	link	and	create	a	partition.	After	creating	the
+partition,	click	the	Format	link.	Once	the	format	is	done,	make	sure	you	choose	the
+new	partition	and	click	Next.
+9
+.	
+The	Installing	Windows	screen	will	appear	next.	This	is	where	the	files	from	your
+media	will	be	installed	onto	the	system.	The	machine	will	reboot	during	this
+installation.
+10
+.	
+After	the	machine	is	finished	rebooting,	a	screen	requesting	the	administrator
+password	will	appear.	Click	OK	(see	
+Figure	1.8
+)	and	then	type	in	your	password.
+(P@ssword	is	used	in	this	exercise.)	Your	password	must	meet	the	password
+complexity	requirements	(one	capitalized	letter,	one	number,	and/or	one	special
+character).
+FIGURE	1.8
+	Change	Password	Screen
+11
+.	
+After	the	password	is	changed,	a	screen	will	appear	telling	you	that	the	password	has
+changed	(see	
+Figure	1.9
+).	Hit	the	Enter	key.
+FIGURE	1.9
+	Password	Changed	Screen
+12
+.	
+You	will	automatically	get	logged	in.	You	will	notice	that	the	command	prompt	will
+
+automatically	appear	(see	
+Figure	1.10
+).	Your	Windows	Server	2016	Server	Core
+installation	is	now	complete.	To	turn	off	the	machine,	type	
+Shutdown	/s	/t	0
+.
+FIGURE	1.10
+	Server	Core	Command	Prompt
+ We	will	be	showing	many	PowerShell	commands	throughout	this	book.	The
+new	Windows	Server	2016	exams	will	be	PowerShell	intensive.	I	will	show	you	the
+PowerShell	commands	needed	to	configure	and	maintain	Windows	Server	2016	Server
+Core	throughout	this	entire	book.
+Installing	Windows	Server	2016	Nano	Server
+With	the	release	of	Windows	Server	2016,	Microsoft	has	released	a	brand	new	installation
+option	called	Nano	Server.	Nano	Server	is	a	version	of	Windows	Server	2016	that	is
+controlled	remotely	and	it	was	specifically	designed	to	optimize	the	Windows	Server	for
+private	cloud	and	Datacenter	installations.
+Windows	Server	2016	Nano	Server	is	a	lot	like	Server	Core	but	the	advantage	is	that	it	is	even
+a	smaller	installation	of	the	operating	system.	Nano	Server	has	
+NO
+	local	logon	or	GUI
+capabilities	and	it	will	allow	only	64-bit	applications	and	utilities.
+Since	Nano	Server	takes	much	less	hard	drive	space	and	does	not	have	many	of	the	normal
+server	components,	its	allows	Nano	Server	to	be	much	faster	when	it	comes	to	setups,	reboots,
+and	even	updates.	Nano	Server	is	available	for	both	Standard	and	Datacenter	editions	of
+Windows	Server	2016.
+When	Microsoft	created	Nano	Server,	they	had	some	very	specific	ideas	of	how	companies
+
+
+[Note: PDF has 1258 pages, only first 100 pages extracted]

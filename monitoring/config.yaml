@@ -1,0 +1,24 @@
+monitoring:
+  enabled: true
+  metrics_port: 8000
+  grafana:
+    enabled: true
+    port: 3000
+  prometheus:
+    enabled: true
+    port: 9090
+
+alerting:
+  enabled: true
+  slack_webhook: "https://hooks.slack.com/services/..."
+  email_notifications: "alerts@yourdomain.com"
+
+drift_detection:
+  feature_drift_threshold: 0.15
+  model_drift_threshold: 0.10
+  check_interval: 300
+
+performance_thresholds:
+  max_inference_latency: 1.0
+  max_feature_engineering_time: 5.0
+  max_queue_depth: 1000

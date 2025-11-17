@@ -1,0 +1,449 @@
+{
+  "techniques": {
+    "unknown": {
+      "success_count": 0,
+      "failure_count": 7,
+      "first_used": "2025-11-02T15:22:47.313381",
+      "last_used": "2025-11-05T18:49:09.969427",
+      "effectiveness": 0.0
+    }
+  },
+  "vulnerabilities": {},
+  "exploits": {},
+  "methodologies": {},
+  "evolution_history": [],
+  "incident_response": {
+    "ransomware_containment": {
+      "scenario": {
+        "environment": "Windows domain",
+        "threat": "Active ransomware encrypting SMB shares",
+        "severity": "CRITICAL"
+      },
+      "response": {
+        "timestamp": "2025-11-02T17:59:37.094729",
+        "methodology": "ransomware_incident_response",
+        "threat_type": "Active ransomware encrypting SMB shares",
+        "environment": "Windows domain",
+        "containment_steps": [
+          {
+            "step": 1,
+            "action": "Network Isolation",
+            "timeframe": "0-2 minutes",
+            "details": [
+              "Disconnect affected servers from network (unplug or disable NIC)",
+              "Block SMB ports (445, 139) at firewall/router",
+              "Isolate domain controllers from affected systems",
+              "Create isolated network segment for containment"
+            ],
+            "tools": [
+              "Firewall rules",
+              "Network switches",
+              "Power down if necessary"
+            ],
+            "priority": "CRITICAL"
+          },
+          {
+            "step": 2,
+            "action": "Identify Encryption Process",
+            "timeframe": "2-5 minutes",
+            "details": [
+              "Use Task Manager or PowerShell: Get-Process | Where-Object {$_.CPU -gt 50}",
+              "Check for suspicious processes: svchost.exe variants, random .exe names",
+              "Monitor file system activity: Process Monitor (ProcMon)",
+              "Look for high I/O processes accessing SMB shares",
+              "Common ransomware processes: Locky, WannaCry, Ryuk, Sodinokibi variants"
+            ],
+            "tools": [
+              "Task Manager",
+              "PowerShell",
+              "Process Monitor",
+              "Sysinternals"
+            ],
+            "priority": "CRITICAL"
+          },
+          {
+            "step": 3,
+            "action": "Terminate Encryption Processes",
+            "timeframe": "5-7 minutes",
+            "details": [
+              "Kill identified ransomware processes immediately",
+              "Use: Stop-Process -Name \"ransomware.exe\" -Force",
+              "Kill child processes spawned by ransomware",
+              "Check Task Scheduler for persistence mechanisms",
+              "Stop any suspicious scheduled tasks"
+            ],
+            "tools": [
+              "PowerShell",
+              "Task Manager",
+              "Process Explorer"
+            ],
+            "priority": "CRITICAL"
+          },
+          {
+            "step": 4,
+            "action": "Disable SMB Shares",
+            "timeframe": "7-10 minutes",
+            "details": [
+              "Disable SMB via Group Policy: Computer Configuration > Policies > Windows Settings > Security Settings > Network > Network Security",
+              "Or via PowerShell: Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol",
+              "Stop SMB services: Stop-Service LanmanServer, Stop-Service LanmanWorkstation",
+              "Block SMB at firewall: New-NetFirewallRule -DisplayName \"Block SMB\" -Direction Inbound -LocalPort 445,139 -Protocol TCP -Action Block"
+            ],
+            "tools": [
+              "Group Policy",
+              "PowerShell",
+              "Windows Firewall"
+            ],
+            "priority": "CRITICAL"
+          },
+          {
+            "step": 5,
+            "action": "Stop Domain Replication",
+            "timeframe": "10-12 minutes",
+            "details": [
+              "Prevent ransomware from spreading via AD replication",
+              "On secondary DCs: Stop-Service NTDS",
+              "On primary DC: Limit replication to critical systems only",
+              "Create network segmentation to prevent lateral movement"
+            ],
+            "tools": [
+              "Active Directory",
+              "Group Policy",
+              "Network segmentation"
+            ],
+            "priority": "HIGH"
+          },
+          {
+            "step": 6,
+            "action": "Preserve Evidence",
+            "timeframe": "12-15 minutes",
+            "details": [
+              "Capture memory dump: DumpIt.exe or WinPmem",
+              "Save process list: Get-Process | Export-Csv processes.csv",
+              "Export Event Logs: Export-EventLog -LogName Security,Application,System",
+              "Capture network traffic if possible",
+              "Document all actions taken"
+            ],
+            "tools": [
+              "DumpIt",
+              "WinPmem",
+              "PowerShell",
+              "Network capture tools"
+            ],
+            "priority": "MEDIUM"
+          }
+        ],
+        "triage_steps": [
+          {
+            "step": 1,
+            "action": "Assess Encryption Scope",
+            "timeframe": "15-20 minutes",
+            "details": [
+              "Scan network for encrypted files (look for ransom note files)",
+              "Check VSS (Volume Shadow Service) status: vssadmin list shadows",
+              "Identify encrypted file extensions: .locked, .encrypted, .crypto, .xxx",
+              "Map affected SMB shares and servers",
+              "Count encrypted vs. accessible files",
+              "Identify encryption pattern (full disk vs. selective files)"
+            ],
+            "tools": [
+              "PowerShell scripts",
+              "VSSAdmin",
+              "File system scanners"
+            ],
+            "priority": "HIGH"
+          },
+          {
+            "step": 2,
+            "action": "Identify Ransomware Variant",
+            "timeframe": "20-30 minutes",
+            "details": [
+              "Check ransom note filename and content",
+              "Analyze file extensions added by ransomware",
+              "Query CISA/NIST ransomware databases",
+              "Check IOCs (Indicators of Compromise)",
+              "Identify encryption algorithm if possible",
+              "Determine if decryption tool exists"
+            ],
+            "tools": [
+              "Ransomware identification tools",
+              "VirusTotal",
+              "CISA advisories"
+            ],
+            "priority": "HIGH"
+          },
+          {
+            "step": 3,
+            "action": "Assess Backup Availability",
+            "timeframe": "30-40 minutes",
+            "details": [
+              "Verify backup system integrity",
+              "Check last successful backup timestamp",
+              "Verify backups are not on encrypted SMB shares",
+              "Test backup restoration process",
+              "Identify backup gaps (files not backed up)",
+              "Assess backup recovery point objective (RPO)"
+            ],
+            "tools": [
+              "Backup management systems",
+              "Veeam, Backup Exec, Windows Backup"
+            ],
+            "priority": "CRITICAL"
+          },
+          {
+            "step": 4,
+            "action": "Assess Lateral Movement",
+            "timeframe": "40-50 minutes",
+            "details": [
+              "Check Active Directory logs for privilege escalation",
+              "Review Windows Event Logs: Event ID 4624 (logon), 4648 (explicit credentials)",
+              "Identify compromised user accounts",
+              "Check for Pass-the-Hash or Pass-the-Ticket attacks",
+              "Review network connections from affected servers",
+              "Map infection path through network"
+            ],
+            "tools": [
+              "Windows Event Viewer",
+              "SIEM",
+              "Network monitoring tools"
+            ],
+            "priority": "HIGH"
+          },
+          {
+            "step": 5,
+            "action": "Identify Initial Infection Vector",
+            "timeframe": "50-60 minutes",
+            "details": [
+              "Check email logs for phishing attachments",
+              "Review web proxy logs for malicious downloads",
+              "Check SMB exploit attempts (EternalBlue, CVE-2017-0144)",
+              "Review RDP connection logs",
+              "Check for unpatched vulnerabilities (SMBv1, RDP)",
+              "Identify patient zero (first infected system)"
+            ],
+            "tools": [
+              "Email security logs",
+              "Proxy logs",
+              "Vulnerability scanners"
+            ],
+            "priority": "MEDIUM"
+          }
+        ],
+        "recovery_steps": [
+          {
+            "step": 1,
+            "action": "Restore from Backups",
+            "timeframe": "Hours 1-4",
+            "details": [
+              "Restore critical systems first (domain controllers, file servers)",
+              "Use most recent clean backup (<24 hours old preferred)",
+              "Restore to isolated network first for testing",
+              "Verify restored data integrity",
+              "Replicate clean data to production",
+              "Document data loss window (time between last backup and encryption)"
+            ],
+            "tools": [
+              "Backup restoration software",
+              "VSS snapshots if available"
+            ],
+            "priority": "CRITICAL",
+            "data_loss": "Minimized to backup gap window"
+          },
+          {
+            "step": 2,
+            "action": "Patch Vulnerabilities",
+            "timeframe": "Hours 4-6",
+            "details": [
+              "Install MS17-010 (EternalBlue) patch on all systems",
+              "Disable SMBv1: Disable-WindowsOptionalFeature -Online -FeatureName SMB1Protocol",
+              "Update all Windows systems to latest patches",
+              "Apply SMB hardening: Enable SMB signing, disable SMBv1",
+              "Patch RDP vulnerabilities if applicable",
+              "Update antivirus/EDR signatures"
+            ],
+            "tools": [
+              "WSUS",
+              "SCCM",
+              "Group Policy",
+              "Manual patching"
+            ],
+            "priority": "CRITICAL"
+          },
+          {
+            "step": 3,
+            "action": "Restore SMB Shares Securely",
+            "timeframe": "Hours 6-12",
+            "details": [
+              "Re-enable SMB with hardened configuration",
+              "Enable SMB signing: Set-ItemProperty -Path \"HKLM:\\SYSTEM\\CurrentControlSet\\Services\\LanmanServer\\Parameters\" -Name RequireSecuritySignature -Value 1",
+              "Enable SMB encryption",
+              "Restrict SMB access via firewall rules",
+              "Implement least-privilege access controls",
+              "Enable auditing on SMB shares"
+            ],
+            "tools": [
+              "Group Policy",
+              "PowerShell",
+              "Windows Firewall"
+            ],
+            "priority": "HIGH"
+          },
+          {
+            "step": 4,
+            "action": "Recover Encrypted Files (if possible)",
+            "timeframe": "Hours 12-24",
+            "details": [
+              "Check if VSS (Volume Shadow Service) snapshots available: vssadmin list shadows",
+              "Restore from VSS if ransomware did not delete shadows",
+              "Use decryption tools if available (Check NoMoreRansom project)",
+              "Attempt recovery of partially encrypted files",
+              "Identify files that cannot be recovered",
+              "Prioritize critical business data recovery"
+            ],
+            "tools": [
+              "VSSAdmin",
+              "ShadowExplorer",
+              "Ransomware decryption tools"
+            ],
+            "priority": "MEDIUM"
+          },
+          {
+            "step": 5,
+            "action": "Verify System Integrity",
+            "timeframe": "Hours 18-24",
+            "details": [
+              "Run full antivirus scan on all systems",
+              "Check for backdoors or persistence mechanisms",
+              "Review system logs for anomalies",
+              "Verify domain controller integrity",
+              "Test critical business applications",
+              "Validate authentication mechanisms"
+            ],
+            "tools": [
+              "Antivirus",
+              "EDR",
+              "Security scanners",
+              "Log analysis"
+            ],
+            "priority": "HIGH"
+          },
+          {
+            "step": 6,
+            "action": "Restore Production Services",
+            "timeframe": "Hours 20-24",
+            "details": [
+              "Gradually restore SMB shares to production",
+              "Monitor for reinfection signs",
+              "Implement additional monitoring and alerting",
+              "Document recovery process and lessons learned",
+              "Update incident response playbook",
+              "Communicate recovery status to stakeholders"
+            ],
+            "tools": [
+              "Monitoring systems",
+              "SIEM",
+              "Documentation"
+            ],
+            "priority": "HIGH"
+          }
+        ],
+        "data_loss_minimization": {
+          "immediate_actions": [
+            "Network isolation within 5 minutes prevents further encryption",
+            "Process termination within 10 minutes stops active encryption",
+            "SMB service shutdown prevents ransomware from accessing shares"
+          ],
+          "backup_strategies": [
+            "3-2-1 backup rule: 3 copies, 2 different media, 1 offsite",
+            "Immutable backups (write-once, read-many)",
+            "Air-gapped backups not accessible via SMB",
+            "Backup verification and regular restoration testing",
+            "Frequent backups (hourly for critical data)"
+          ],
+          "recovery_options": [
+            "VSS snapshots (if not deleted by ransomware)",
+            "Backup restoration from most recent clean backup",
+            "Decryption tools if ransomware variant has known key",
+            "Forensic recovery of partially encrypted files"
+          ],
+          "prevention_measures": [
+            "SMB hardening (disable SMBv1, enable signing/encryption)",
+            "Network segmentation to limit lateral movement",
+            "Regular patching (especially MS17-010)",
+            "User training on phishing awareness",
+            "EDR/antivirus with behavioral detection",
+            "Email security filtering",
+            "Application whitelisting"
+          ],
+          "estimated_data_loss": {
+            "if_contained_in_5_min": "<1% of total data",
+            "if_contained_in_15_min": "<5% of total data",
+            "if_contained_in_60_min": "<20% of total data",
+            "worst_case_no_containment": "100% of accessible data"
+          }
+        },
+        "timeline": {
+          "minutes_0_5": {
+            "phase": "Immediate Containment",
+            "actions": [
+              "Network isolation",
+              "Identify encryption process",
+              "Block SMB ports"
+            ],
+            "goal": "Stop active encryption"
+          },
+          "minutes_5_15": {
+            "phase": "Rapid Response",
+            "actions": [
+              "Terminate ransomware processes",
+              "Disable SMB services",
+              "Stop domain replication",
+              "Preserve evidence"
+            ],
+            "goal": "Contain spread"
+          },
+          "minutes_15_60": {
+            "phase": "Triage",
+            "actions": [
+              "Assess encryption scope",
+              "Identify ransomware variant",
+              "Verify backup availability",
+              "Assess lateral movement"
+            ],
+            "goal": "Understand impact"
+          },
+          "hours_1_4": {
+            "phase": "Initial Recovery",
+            "actions": [
+              "Restore critical systems from backups",
+              "Verify backup integrity",
+              "Begin restoration process"
+            ],
+            "goal": "Restore critical services"
+          },
+          "hours_4_12": {
+            "phase": "System Hardening",
+            "actions": [
+              "Patch vulnerabilities",
+              "Harden SMB configuration",
+              "Implement security controls"
+            ],
+            "goal": "Prevent reinfection"
+          },
+          "hours_12_24": {
+            "phase": "Full Recovery",
+            "actions": [
+              "Complete data restoration",
+              "Verify system integrity",
+              "Restore production services",
+              "Post-incident documentation"
+            ],
+            "goal": "Full operational restoration"
+          }
+        },
+        "key_insight": "Ransomware on Windows domain SMB requires immediate network isolation, process termination, SMB service shutdown, and backup restoration. Critical actions: (1) Isolate domain controllers and SMB servers in <5 minutes, (2) Identify encryption process and kill it immediately, (3) Disable SMB shares via Group Policy or registry, (4) Restore from recent backups (<24 hours old), (5) Patch EternalBlue/SMBv1 vulnerabilities. Minimal data loss requires rapid response within first 15 minutes - every minute of delay increases encrypted file count."
+      },
+      "timestamp": "2025-11-02T17:59:37.094780"
+    }
+  }
+}

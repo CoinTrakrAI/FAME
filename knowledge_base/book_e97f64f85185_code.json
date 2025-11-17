@@ -1,0 +1,5 @@
+{
+  "examples": [
+    "$ms = New-Object IO.MemoryStream \n$action = [IO.Compression.CompressionMode]: :Compress \n$cs =New-Object IO.Compression.DeflateStream ($ms,$action) \n$sw =New-Object IO.StreamWriter ($cs, [Text.Encoding] ::ASCII) \n$contents I ForEach-Object {$sw.WriteLine($ I) \n$sw.Close() "
+  ]
+}

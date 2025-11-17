@@ -1,0 +1,2253 @@
+Scanned by kineticstomp
+THE ART OF DECEPTION
+Controlling the Human Element of Security
+KEVIN D. MITNICK
+& William L. Simon
+Foreword by Steve Wozniak
+
+For Reba Vartanian, Shelly Jaffe, Chickie Leventhal, and Mitchell
+Mitnick, and for the late Alan Mitnick, Adam Mitnick,
+and Jack Biello
+For Arynne, Victoria, and David, Sheldon,Vincent, and Elena.
+Social Engineering
+Social Engineering uses influence and persuasion to deceive people
+by convincing them that the social engineer is someone he is not,
+or by manipulation. As a result, the social engineer is able to take
+advantage of people to obtain information with or without the use of
+technology.
+Contents
+Foreword
+Preface
+Introduction
+Part 1 Behind the Scenes
+Chapter 1 Security's Weakest Link
+Part 2 The Art of the Attacker
+Chapter 2 When Innocuous Information Isn't
+Chapter 3 The Direct Attack: Just Asking for it
+Chapter 4 Building Trust
+Chapter 5 "Let Me Help You"
+Chapter 6 "Can You Help Me?"
+Chapter 7 Phony Sites and Dangerous Attachments
+Chapter 8 Using Sympathy, Guilt and Intimidation
+Chapter 9 The Reverse Sting
+Part 3 Intruder Alert
+Chapter 10 Entering the Premises
+Chapter 11 Combining Technology and Social Engineering
+Chapter 12 Attacks on the Entry-Level Employee
+Chapter 13 Clever Cons
+Chapter 14 Industrial Espionage
+
+Part 4 Raising the Bar
+Chapter 15 Information Security Awareness and Training
+Chapter 16 Recommended Corporate Information Security Policies
+Security at a Glance
+Sources
+Acknowledgments
+Foreword
+We humans are born with an inner drive to explore the nature
+of our surroundings. As young men, both Kevin Mitnick and
+I were intensely curious about the world and eager to prove
+ourselves. We were rewarded often in our attempts to learn new things,
+solve puzzles, and win at games. But at the same time, the world around
+us taught us rules of behavior that constrained our inner urge toward free
+exploration. For our boldest scientists and technological entrepreneurs, as
+well as for people like Kevin Mitnick, following this inner urge offers the
+greatest thrills, letting us accomplish things that others believe cannot be
+done.
+Kevin Mitnick is one of the finest people I know. Ask him, and he will
+say forthrightly that what he used to do - social engineering - involes
+conning people. But Kevin is no longer a social engineer. And even when
+he was, his motive never was to enrich himself or damage others. That's
+not to say that there aren't dangerous and destructive criminals out there
+who use social engineering to cause real harm. In fact, that's exactly why
+Kevin wrote this book - to warn you about them.
+The Art of Deception shows how vulnerable we all are - government,
+business, and each of us personally - to the intrusions of the social
+engineer. In this security-conscious era, we spend huge sums on
+technology
+to protect our computer networks and data. This book points out how easy
+it is to trick insiders and circumvent all this technological protection.
+Whether you work in business or government, this book provides a
+powerful road map to help you understand how social engineers work and
+what you can do to foil them. Using fictionalized stories that are both
+
+entertaining and eye-opening, Kevin and co-author Bill Simon bring to
+life
+the techniques of the social engineering underworld. After each story,
+they offer practical guidelines to help you guard against the breaches and
+threats they're described.
+Technological security leaves major gaps that people like Kevin can help
+us close. Read this book and you may finally realize that we all need to
+turn to the Mitnick's among us for guidance.
+-Steve Wozniak
+
+PREFACE
+Some hackers destroy people's files orentire hard drives; they're called
+crackers orvandals. Some novice hackers don't bother learning the
+technology, butsimply download hacker tools tobreak into computer
+systems; they're called script kiddies. More experienced hackers with
+programming skills develop hacker programs andpost them totheWeb
+andtobulletin board systems. And then there areindividuals who have no
+interest inthetechnology, butusethecomputer merely asatool toaid
+them in stealing money, goods, or services. 
+Despite themedia-created myth ofKevin Mitnick, Iamnotamalicious
+hacker. 
+But I'm getting ahead of myself. 
+STARTING OUT 
+Mypath was probably setearly inlife. Iwas ahappy-go-lucky kid, but
+bored. After myfather split when Iwas three, mymother worked asa
+waitress tosupport us.Toseemethen -anonly child being raised bya
+mother who putinlong, harried days onasometimes-erratic schedule -
+would have been toseeayoungster onhisown almost allhiswaking
+hours. I was my own babysitter. 
+Growing upinaSanFernando Valley community gave methewhole of
+LosAngeles toexplore, andbytheageoftwelve Ihaddiscovered away
+totravel free throughout thewhole greater L.A. area. Irealized oneday
+while riding thebusthatthesecurity ofthebustransfer Ihadpurchased
+relied ontheunusual pattern ofthepaper-punch, thatthedrivers used to
+mark day; time, and route onthetransfer slips. Afriendly driver,
+answering mycarefully planted question, told mewhere tobuy that
+special type of punch. 
+Thetransfers aremeant toletyouchange buses andcontinue ajourney to
+your destination, butIworked outhow tousethem totravel anywhere I
+wanted to go for free. Obtaining blank transfers was a walk in the park. 
+ 
+
+The trash bins atthebusterminals were always filled with only-partly
+used books oftransfers that thedrivers tossed away attheend ofthe
+shifts. With apadofblanks andthepunch, Icould mark myown transfers
+and travel anywhere that L.A. buses went. Before long, Ihad allbut
+memorized thebusschedules oftheentire system. (This was anearly
+example ofmysurprising memory forcertain types ofinformation; Ican
+still, today, remember phone numbers, passwords, andother seemingly
+trivial details as far back as my childhood.) 
+Another personal interest that surfaced at an early age was my fascination
+with performing magic. Once I learned how a new trick worked, would
+practice, practice, and practice some more until I mastered it. To an
+extent, it was through magic that I discovered the enjoyment in gaining
+secret knowledge. 
+From Phone Phreak to Hacker 
+My first encounter with what Iwould eventually learn tocall social
+engineering came about during myhigh school years when Imetanother
+student who was caught upinahobby called phone phreakin. Phone
+phreaking isatype ofhacking thatallows you toexplore thetelephone
+network byexploiting thephone systems andphone company employees.
+He showed me neat tricks he could do with a telephone, like obtaining any
+information thephone company hadonanycustomer, andusing asecret
+testnumber tomake long-distance calls forfree. (Actually itwasfreeonly
+tous.Ifound outmuch later thatitwasn't asecret testnumber atall.The
+calls were, in fact, being billed to some poor company's MCI account.) 
+That was myintroduction tosocial engineering-my kindergarten, soto
+speak. Myfriend andanother phone phreaker Imetshortly thereafter let
+melisten inasthey each made pretext calls tothephone company. Iheard
+thethings they said that made them sound believable; Ilearned about
+different phone company offices, lingo, and procedures. But that
+"training" didn't lastlong; itdidn't have to.Soon Iwasdoing itallonmy
+own, learning as I went, doing it even better than my first teachers. 
+Thecourse mylifewould follow forthenext fifteen years hadbeen set.In
+high school, oneofmyall-time favorite pranks wasgaining unauthorized
+access tothetelephone switch and changing theclass ofservice ofa
+fellow phone phreak. When he'd attempt tomake acallfrom home, he'd
+getamessage telling him todeposit adime because thetelephone
+
+company switch hadreceived input thatindicated hewas calling from a
+pay phone. 
+
+Ibecame absorbed ineverything about telephones, not only the
+electronics, switches, andcomputers, butalso thecorporate organization,
+theprocedures, andtheterminology. After awhile, Iprobably knew more
+about thephone system than anysingle employee. And Ihaddeveloped
+mysocial engineering skills tothepoint that, atseventeen years old,Iwas
+able totalk most telco employees into almost anything, whether Iwas
+speaking with them in person or by telephone. 
+Mymuch-publicized hacking career actually started when Iwas inhigh
+school. While Icannot describe thedetail here, suffice ittosaythatoneof
+thedriving forces inmyearly hacks wastobeaccepted bytheguys inthe
+hacker group. 
+Back then weused theterm hacker tomean aperson who spent agreat
+deal oftime tinkering with hardware andsoftware, either todevelop more
+efficient programs ortobypass unnecessary steps andgetthejobdone
+more quickly. The term has now become apejorative, carrying the
+meaning of"malicious criminal." Inthese pages Iusetheterm theway I
+have always used it - in its earlier, more benign sense. 
+After high school Istudied computers attheComputer Learning Center in
+Los Angeles. Within afew months, theschool's computer manager
+realized Ihadfound vulnerability intheoperating system andgained full
+administrative privileges ontheir IBM minicomputer. The best computer
+experts ontheir teaching staff couldn't figure outhow Ihaddone this. In
+what may have been oneoftheearliest examples of"hire thehacker," I
+wasgiven anoffer Icouldn't refuse: Doanhonors project toenhance the
+school's computer security, orface suspension forhacking thesystem. Of
+course, Ichose todothehonors project, andended upgraduating cum
+laude with honors. 
+Becoming a Social Engineer 
+Some people getoutofbed each morning dreading their daily work
+routine attheproverbial saltmines. I'vebeen lucky enough toenjoy my
+work. nparticular, youcan't imagine thechallenge, reward, andpleasure I
+had thetime Ispent asaprivate investigator. Iwas honing mytalents in
+theperformance artcalled social engineering (getting people todothings
+they wouldn't ordinarily do for a stranger) and being paid for it. 
+
+Formeitwasn't difficult becoming proficient insocial engineering. My
+father's side ofthefamily hadbeen inthesales field forgenerations, so
+theartofinfluence and persuasion might have been aninherited trait.
+When youcombine thattrait with aninclination fordeceiving people, you
+have the profile of a typical social engineer. 
+
+You might saythere aretwo specialties within thejobclassification of
+conartist. Somebody who swindles andcheats people outoftheir money
+belongs toonesub-specialty, thegrifter. Somebody who uses deception,
+influence, and persuasion against businesses, usually targeting their
+information, belongs totheother sub-specialty, thesocial engineer. From
+thetime ofmybus-transfer trick, when Iwas tooyoung toknow there
+was anything wrong with what Iwas doing, Ihadbegun torecognize a
+talent forfinding outthesecrets Iwasn't supposed tohave. Ibuilt onthat
+talent byusing deception, knowing thelingo, and developing awell-
+honed skill of manipulation. 
+One way Iworked ondeveloping theskills ofmycraft, ifImay callita
+craft, wastopick outsome piece ofinformation Ididn't really care about
+and seeifIcould talk somebody ontheother end ofthephone into
+providing it,justtoimprove myskills. Inthesame way Iused topractice
+mymagic tricks, Ipracticed pretexting. Through these rehearsals, Isoon
+found that I could acquire virtually any information I targeted.   
+AsIdescribed inCongressional testimony before Senators Lieberman and
+Thompson years later: 
+Ihave gained unauthorized access tocomputer systems atsome ofthe
+largest corporations ontheplanet, andhave successfully penetrated some
+ofthemost resilient computer systems ever developed. Ihave used both
+technical andnon-technical means toobtain thesource code tovarious
+operating systems and telecommunications devices tostudy their
+vulnerabilities  and their inner workings. 
+Allofthisactivity was really tosatisfy myown curiosity; toseewhat I
+could do;andfind outsecret information about operating systems, cell
+phones, and anything else that stirred my curiosity. 
+FINAL THOUGHTS 
+I'veacknowledged since myarrest thattheactions Itook were illegal, and
+that I committed invasions of privacy. 
+Mymisdeeds were motivated bycuriosity. Iwanted toknow asmuch asI
+could about how phone networks worked and the ins-and-outs of
+computer security. Iwent from being akidwho loved toperform magic
+tricks tobecoming the world's most notorious hacker, feared by
+
+corporations andthegovernment. AsIreflect back onmylifeforthelast
+30years, Iadmit Imade some extremely poor decisions, driven bymy
+curiosity, thedesire tolearn about technology, andtheneed foragood
+intellectual challenge. 
+ 
+
+I'machanged person now. I'mturning mytalents and theextensive
+knowledge I've gathered about information security and social
+engineering tactics tohelping government, businesses, and individuals
+prevent, detect, and respond to information-security threats.
+This book isonemore way thatIcanusemyexperience tohelp others
+avoid theefforts ofthemalicious information thieves oftheworld. Ithink
+you will find the stories enjoyable, eye-opening, and educational.
+ 
+
+Introduction    
+This book contains a wealth of information about information security and
+social engineering. Tohelp youfind your way, here's aquick look athow
+this book is organized: 
+InPart 1I'llreveal security's weakest link andshow you why you and
+your company are at risk from social engineering attacks. 
+InPart2you'll seehow social engineers toywith your trust, your desire to
+behelpful, your sympathy, andyour human gullibility togetwhat they
+want. Fictional stories oftypical attacks will demonstrate that social
+engineers canwear many hats andmany faces. Ifyouthink you've never
+encountered one, you're probably wrong. Will you recognize ascenario
+you've experienced inthese stories andwonder ifyou hadabrush with
+social engineering? You very well might. Butonce you've read Chapters 2
+through 9,you'll know how togettheupper hand when thenext social
+engineer comes calling.   
+Part 3isthepartofthebook where youseehow thesocial engineer ups
+theante, inmade-up stories that show how hecan step onto your
+corporate premises, steal thekind ofsecret thatcanmake orbreak your
+company, andthwart your hi-tech security measures. Thescenarios inthis
+section will make youaware ofthreats thatrange from simple employee
+revenge tocyber terrorism. Ifyouvalue theinformation thatkeeps your
+business running and theprivacy ofyour data, you'll want toread
+Chapters 10 through 14 from beginning to end. 
+It'simportant tonote that unless otherwise stated, theanecdotes inthis
+book are purely fictional. 
+InPart 4Italkthecorporate talkabout how toprevent successful social
+engineering attacks onyour organization. Chapter 15provides ablueprint
+forasuccessful security-training program. And Chapter 16might just
+save your neck -it'sacomplete security policy you cancustomize for
+your organization andimplement right away tokeep your company and
+information safe. 
+
+Finally, I've provided aSecurity ataGlance section, which includes
+checklists, tables, andcharts thatsummarize keyinformation youcanuse
+tohelp your employees foilasocial engineering attack onthejob.These
+tools also provide valuable information youcanuseindevising your own
+security-training program. 
+Throughout thebook you'll also find several useful elements: Lingo boxes
+provide definitions ofsocial engineering and computer hacker
+terminology; Mitnick Messages offer brief words ofwisdom tohelp
+strengthen your security strategy; andnotes andsidebars give interesting
+background or additional information. 
+
+Part 1
+Behind The Scenes  
+
+Chapter 1
+Security's Weakest Link 
+A company may have purchased the best security technologies that money
+canbuy, trained their people sowell that they lock upalltheir secrets
+before going home atnight, and hired building guards from thebest
+security firm in the business. 
+That company is still totally Vulnerable. 
+Individuals may follow every best-security practice recommended bythe
+experts, slavishly install every recommended security product, and be
+thoroughly vigilant about proper system configuration and applying
+security patches. 
+Those individuals are still completely vulnerable. 
+THE HUMAN FACTOR 
+Testifying before Congress notlong ago, Iexplained thatIcould often get
+passwords andother pieces ofsensitive information from companies by
+pretending to be someone else and just asking for it. 
+It'snatural toyearn forafeeling ofabsolute safety, leading many people
+tosettle forafalse sense ofsecurity. Consider theresponsible andloving
+homeowner who hasaMedico, atumbler lock known asbeing pickproof,
+installed inhisfront door toprotect hiswife, hischildren, andhishome.
+He's now comfortable that hehasmade hisfamily much safer against
+intruders. Butwhat about theintruder-who breaks awindow, orcracks the
+code tothegarage door opener? How about installing arobust security
+system? Better, but still noguarantee. Expensive locks orno, the
+homeowner remains vulnerable. 
+Why? Because the human factor is truly security's weakest link. 
+
+Security is too often merely an illusion, an illusion sometimes made even
+worse when gullibility, naivete, or ignorance come into play. The world's
+most respected scientist of the twentieth century, Albert Einstein, is
+quoted as saying, "Only two things are infinite, the universe and human
+stupidity, and I'm not sure about the former." In the end, social
+engineering attacks can succeed when people are stupid or, more
+commonly, simply ignorant about good security practices. With the same
+attitude as our security-conscious homeowner, many information
+technology (IT) professionals hold to the misconception that they've made
+their companies largely immune to attack because they've deployed
+standard security products - firewalls, intrusion detection systems, or
+stronger authentication devices such as time-based tokens or biometric
+smart cards. Anyone who thinks that security products alone offer true
+security is settling for. the illusion of security. It's a case of living in a
+world of fantasy: They will inevitably, later if not sooner, suffer a security
+incident.
+As noted security consultant Bruce Schneier puts it, "Security is not a
+product, it's a process." Moreover, security is not a technology problem -
+it's a people and management problem. 
+Asdevelopers invent continually better security technologies, making it
+increasingly difficult toexploit technical vulnerabilities, attackers will
+turnmore andmore toexploiting thehuman element. Cracking thehuman
+firewall isoften easy, requires noinvestment beyond thecost ofaphone
+call, and involves minimal risk. 
+A CLASSIC CASE OF DECEPTION 
+What's thegreatest threat tothesecurity ofyour business assets? That's
+easy: the social engineer--an unscrupulous magician who has you
+watching hislefthand while with hisright hesteals your secrets. This
+character isoften sofriendly, glib, andobliging that you're grateful for
+having encountered him. 
+Take alook atanexample ofsocial engineering. Notmany people today
+stillremember theyoung man named Stanley Mark Rifkin andhislittle
+adventure with thenow defunct Security Pacific National Bank inLos
+Angeles. Accounts ofhisescapade vary, andRifkin (like me) hasnever
+told his own story, so the following is based on published reports. 
+
+Code Breaking 
+One dayin1978, Rifkin moseyed over toSecurity Pacific's authorized-
+personnel-only wire-transfer room, where thestaff sent and received
+transfers totaling several billion dollars every day. 
+
+Hewas working foracompany under contract todevelop abackup
+system forthewire room's data incase their main computer ever went
+down. That rolegave himaccess tothetransfer procedures, including how
+bank officials arranged foratransfer tobesent. Hehadlearned thatbank
+officers who were authorized toorder wire transfers would begiven a
+closely guarded daily code each morning tousewhen calling thewire
+room.
+Inthewire room theclerks saved themselves thetrouble oftrying to
+memorize each day's code: They wrote down thecode onaslipofpaper
+andposted itwhere they could seeiteasily. This particular November day
+Rifkin hadaspecific reason forhisvisit. Hewanted togetaglance atthat
+paper.
+Arriving inthewire room, hetook some notes onoperating procedures,
+supposedly tomake sure thebackup system would mesh properly with the
+regular systems. Meanwhile, hesurreptitiously read thesecurity code
+from theposted slipofpaper, andmemorized it.Afewminutes later he
+walked out. As he said afterward, he felt as if he had just won the lottery.
+There's This Swiss Bank Account...
+Leaving theroom atabout 3o'clock intheafternoon, heheaded straight
+forthepayphone inthebuilding's marble lobby, where hedeposited a
+coin and dialed into thewire-transfer room. Hethen changed hats,
+transforming himself from Stanley Rifkin, bank consultant, into Mike
+Hansen, a member of the bank's International Department.
+According to one source, the conversation went something like this:
+"Hi, thisisMike Hansen inInternational," hesaid totheyoung woman
+who answered the phone.
+Sheasked fortheoffice number. That wasstandard procedure, andhewas
+prepared: 286 he said.
+The girl then asked, "Okay, what's the code?"
+Rifkin hassaid thathisadrenaline-powered heartbeat "picked upitspace"
+atthispoint. Heresponded smoothly, "4789." Then hewent ontogive
+instructions forwiring "Ten million, two-hundred thousand dollars
+exactly" totheIrving Trust Company inNew York, forcredit ofthe
+
+Wozchod Handels Bank ofZurich, Switzerland, where hehad already
+established an account.
+The girlthen said, "Okay, Igotthat. And now Ineed theinteroffice
+settlement number."
+Rifkin broke outinasweat; thiswas aquestion hehadn't anticipated,
+something that had slipped through the cracks in his research. But he
+ 
+
+managed tostay incharacter, acted asifeverything was fine, andonthe
+spot answered without missing abeat, "Let mecheck; I'llcallyou right
+back." Hechanged hatsonce again tocallanother department atthebank,
+this time claiming tobeanemployee inthewire-transfer room. He
+obtained the settlement number and called the girl back. 
+Shetook thenumber andsaid, "Thanks." (Under thecircumstances, her
+thanking him has to be considered highly ironic.) 
+Achieving Closure 
+Afew days later Rifkin flew toSwitzerland, picked uphiscash, and
+handed over $8million toaRussian agency forapileofdiamonds. He
+flew back, passing through U.S. Customs with thestones hidden ina
+money belt. Hehadpulled offthebiggest bank heist inhistory--and done
+itwithout using agun, even without acomputer. Oddly, hiscaper
+eventually made itintothepages oftheGuinness Book ofWorld Records
+in the category of "biggest computer fraud." 
+Stanley Rifkin hadused theartofdeception--the skills andtechniques that
+aretoday called social engineering. Thorough planning andagood giftof
+gab is all it really took. 
+And that's what thisbook isabout--the techniques ofsocial engineering
+(atwhich yours truly isproficient) andhow todefend against their being
+used at your company. 
+THE NATURE OF THE THREAT 
+The Rifkin story makes perfectly clear how misleading oursense of
+security canbe.Incidents likethis-okay, maybe not$10million heists,
+butharmful incidents nonetheless -arehappening every day. You may be
+losing money right now, orsomebody may bestealing new product plans,
+and you don't even know it.Ifithasn't already happened toyour
+company, it's not a question of if it will happen, but when. 
+A Growing Concern 
+The Computer Security Institute, inits2001 survey ofcomputer crime,
+reported that 85percent ofresponding organizations had detected
+computer security breaches inthepreceding twelve months. That's an
+astounding number: Only fifteen outofevery hundred organizations
+responding were able tosaythatthey hadnothadasecurity breach during
+
+theyear. Equally astounding was thenumber oforganizations that
+reported that they had experienced financial losses due to computer 
+  
+
+breaches: 64percent. Well over half theorganizations had suffered
+financially. In a single year.
+Myown experiences lead metobelieve thatthenumbers inreports like
+thisaresomewhat inflated. I'msuspicious oftheagenda ofthepeople
+conducting thesurvey. But that's not tosay that thedamage isn't
+extensive; itis.Those who failtoplan forasecurity incident areplanning
+for failure.
+Commercial security products deployed inmost companies aremainly
+aimed atproviding protection against theamateur computer intruder, like
+theyoungsters known asscript kiddies. Infact, these wannabe hackers
+with downloaded software aremostly justanuisance. Thegreater losses,
+thereal threats, come from sophisticated attackers with well-defined
+targets who aremotivated byfinancial gain. These people focus onone
+target atatime rather than, liketheamateurs, trying toinfiltrate asmany
+systems aspossible. While amateur computer intruders simply gofor
+quantity, the professionals target information of quality and value.
+Technologies like authentication devices (for proving identity), access
+control (formanaging access tofiles andsystem resources), andintrusion
+detection systems (the electronic equivalent ofburglar alarms) are
+necessary toacorporate security program. Yet it'stypical today fora
+company tospend more money on coffee than on deploying
+countermeasures to protect the organization against security attacks.
+Just asthecriminal mind cannot resist temptation, thehacker mind is
+driven tofind ways around powerful security technology safeguards. And
+inmany cases, they dothat bytargeting thepeople who use the
+technology.
+Deceptive Practices
+There's apopular saying thatasecure computer isonethat's turned off.
+Clever, butfalse: The pretexter simply talks someone into going into the
+office and turning that computer on.Anadversary who wants your
+information canobtain it,usually inanyoneofseveral different ways. It's
+justamatter oftime, patience, personality, andpersistence. That's where
+the art of deception comes in.
+
+Todefeat security measures, anattacker, intruder, orsocial engineer must
+find away todeceive atrusted user intorevealing information, ortrick an
+unsuspecting mark into providing him with access. When trusted
+employees are deceived, influenced, ormanipulated into revealing
+sensitive information, orperforming actions thatcreate asecurity hole for
+theattacker toslip through, notechnology intheworld canprotect a
+business. Justascryptanalysts aresometimes able toreveal theplain text
+ofacoded message byfinding aweakness that letsthem bypass the
+encryption
+ 
+
+technology, social engineers use deception practiced on your employees
+to bypass security technology. 
+ABUSE OF TRUST 
+Inmost cases, successful social engineers have strong people skills.
+They're charming, polite, and easy tolike--social traits needed for
+establishing rapid rapport and trust. Anexperienced social engineer is
+able togain access tovirtually any targeted information byusing the
+strategies and tactics of his craft. 
+Savvy technologists have painstakingly developed information-security
+solutions tominimize therisks connected with theuseofcomputers, yet
+leftunaddressed themost significant vulnerability, thehuman factor.
+Despite ourintellect, wehumans -you, me,andeveryone else -remain
+the most severe threat to each other's security.  
+ 
+Our National Character 
+We're notmindful ofthethreat, especially intheWestern world. Inthe
+United States most ofall,we're nottrained tobesuspicious ofeach other.
+Wearetaught to"love thyneighbor" andhave trust and faith ineach
+other. Consider how difficult itisforneighborhood watch organizations
+togetpeople tolock their homes andcars. This sort ofvulnerability is
+obvious, andyetitseems tobeignored bymany who prefer toliveina
+dream world - until they get burned. 
+Weknow thatallpeople arenotkind andhonest, buttoooften weliveas
+ifthey were. This lovely innocence hasbeen thefabric ofthelives of
+Americans andit'spainful togive itup.Asanation wehave built intoour
+concept offreedom thatthebest places tolivearethose where locks and
+keys are the least necessary. 
+Most people goontheassumption that they will notbedeceived by
+others, based upon abelief thattheprobability ofbeing deceived isvery
+low; theattacker, understanding thiscommon belief, makes hisrequest
+sound soreasonable thatitraises nosuspicion, allthewhile exploiting the
+victim's trust.  
+Organizational Innocence 
+
+That innocence that ispart ofournational character was evident back
+when computers were first being connected remotely. Recall that the
+ARPANet (the Defense Department's Advanced Research Projects
+Agency 
+ 
+
+Network), thepredecessor oftheInternet, was designed asaway of
+sharing research information between government, research, and
+educational institutions. The goal was information freedom, aswell as
+technological advancement. Many educational institutions therefore setup
+early computer systems with little ornosecurity. One noted software
+libertarian, Richard Stallman, even refused toprotect hisaccount with a
+password.
+Butwith theInternet being used forelectronic commerce, thedangers of
+weak security inourwired world have changed dramatically. Deploying
+more technology is not going to solve the human security problem.
+Justlook atourairports today. Security hasbecome paramount, yetwe're
+alarmed bymedia reports oftravelers who have been able tocircumvent
+security and carry potential weapons past checkpoints. How isthis
+possible during atime when ourairports areonsuch astate ofalert? Are
+themetal detectors failing? No. The problem isn't themachines. The
+problem isthehuman factor: The people manning themachines. Airport
+officials canmarshal theNational Guard andinstall metal detectors and
+facial recognition systems, buteducating thefrontline security staff on
+how to properly screen passengers is much more likely to help.
+The same problem exists within government, business, andeducational
+institutions throughout the world. Despite the efforts ofsecurity
+professionals, information everywhere remains vulnerable and will
+continue tobeseen asaripe target byattackers with social engineering
+skills, until theweakest link inthesecurity chain, thehuman link, has
+been strengthened.
+Now more than ever wemust learn tostop wishful thinking andbecome
+more aware ofthetechniques thatarebeing used bythose who attempt to
+attack theconfidentiality, integrity, and availability ofour computer
+systems and networks. We've come toaccept theneed fordefensive
+driving; it's time to accept and learn the practice of defensive computing.
+The threat ofabreak-in that violates your privacy, your mind, oryour
+company's information systems may notseem real until ithappens. To
+avoid such acostly dose ofreality, weallneed tobecome aware,
+educated, vigilant, andaggressively protective ofourinformation assets,
+
+ourown personal information, and ournation's critical infrastructures.
+And we must implement those precautions today.
+TERRORISTS AND DECEPTION
+Ofcourse, deception isn't anexclusive tool ofthesocial engineer.
+Physical terrorism makes thebiggest news, andwehave come torealize
+as never
+ 
+
+before thattheworld isadangerous place. Civilization is,after all,justa
+thin veneer. 
+The attacks onNew York and Washington, D.C., inSeptember 2001
+infused sadness and fear into thehearts ofevery one ofus-notjust
+Americans, butwell-meaning people ofallnations. We're now alerted to
+thefactthatthere areobsessive terrorists located around theglobe, well -
+trained and waiting to launch further attacks against us. 
+Therecently intensified effort byourgovernment hasincreased thelevels
+ofoursecurity consciousness. Weneed tostay alert, onguard against all
+forms ofterrorism. Weneed tounderstand how terrorists treacherously
+create false identities, assume roles asstudents andneighbors, andmelt
+into thecrowd. They mask their true beliefs while they plot against us-
+practicing tricks ofdeception similar tothose youwillread about inthese
+pages. 
+And while, to the best of my knowledge, terrorists have not yet used
+social engineering ruses to infiltrate corporations, water-treatment plants,
+electrical generation facilities, or other vital components of our national
+infrastructure, the potential is there. It's just too easy. The security
+awareness and security policies that I hope will be put into place and
+enforced by corporate senior management because of this book will come
+none too  soon.  
+ABOUT THIS BOOK   
+Corporate security isaquestion ofbalance. Toolittle security leaves your
+company vulnerable, butanoveremphasis onsecurity gets intheway of
+attending tobusiness, inhibiting thecompany's growth and prosperity.
+The challenge is to achieve a balance between security and productivity. 
+Other books oncorporate security focus onhardware and software
+technology, anddonotadequately cover themost serious threat ofall:
+human deception. The purpose ofthisbook, incontrast, istohelp you
+understand how you, your co-workers, andothers inyour company are
+being manipulated, andthebarriers youcanerect tostop being victims.
+The book focuses mainly onthenon-technical methods that hostile
+intruders use to steal information, compromise the integrity of information
+that is believed to be safe but isn't., or destroy company work product. 
+
+Mytask ismade more difficult byasimple truth: Every reader will have
+been manipulated bythegrand experts ofalltime insocial engineering -
+their parents. They found ways to get you - "for your own good" - to do  
+ 
+
+what they thought best. Parents become great storytellers inthesame way
+thatsocial engineers skillfully develop very plausible stories, reasons, and
+justifications forachieving their goals. Yes, wewere allmolded byour
+parents: benevolent (and sometimes not so benevolent) social engineers. 
+Conditioned bythattraining, wehave become vulnerable tomanipulation.
+We would live adifficult lifeifwehad tobealways onourguard,
+mistrustful ofothers, concerned that wemight become thedupe of
+someone trying totake advantage ofus.Inaperfect world wewould
+implicitly trust others, confident thatthepeople weencounter aregoing to
+behonest andtrustworthy. Butwedonotliveinaperfect world, andso
+wehave toexercise astandard ofvigilance torepel thedeceptive efforts
+of our adversaries. 
+Themain portions ofthisbook, Parts 2and3,aremade upofstories that
+show you social engineers in action. In these sections you'll read about:  
+ What phone phreaks discovered years ago: Aslick method forgetting
+an unlisted phone number from the telephone company. 
+ Several different methods used byattackers toconvince even alert,
+suspicious employees toreveal their computer usernames and
+passwords.   
+ How anOperations Center manager cooperated inallowing anattacker
+to steal his company's most secret product information. 
+ The methods ofanattacker who deceived alady into downloading
+software that spies onevery keystroke shemakes and emails the
+details to him. 
+ How private investigators get information about your company, and
+about you personally, that I can practically guarantee will send a chill
+up your spine.  
+You might think asyou read some ofthestories inParts 2and3that
+they're notpossible, thatnoonecould really succeed ingetting away with
+thelies, dirty tricks, andschemes de,scribed inthese pages. Thereality is
+that inevery case, these stories depict events that canand dohappen;
+many ofthem arehappening every daysomewhere ontheplanet, maybe
+even to your business as you read this book. 
+
+The material inthis book will beareal eye-opener when itcomes to
+protecting your business, butalso personally deflecting theadvances ofa
+social engineer to protect the integrity of information in your private life.
+InPart 4ofthisbook Iswitch gears. Mygoal here istohelp youcreate
+thenecessary business policies andawareness training tominimize the
+chances ofyour employees ever being duped byasocial engineer.
+Understanding thestrategies, methods, andtactics ofthesocial engineer
+will help prepare youtodeploy reasonable controls tosafeguard your IT
+assets, without undermining your company's productivity.
+Inshort, I'vewritten thisbook toraise your awareness about theserious
+threat posed bysocial engineering, andtohelp youmake sure thatyour
+company and its employees are less likely to be exploited in this way.
+Or perhaps I should say, far less likely to be exploited ever again.
+ 
+
+Part 2
+The Art Of The Attacker
+
+Chapter 2
+When Innocuous Information Isn't 
+What do most people think is the real threat from social engineers? What
+should you do to be on your guard?
+If the goal is to capture some highly valuable prize--say, a vital
+component of the company's intellectual capital - then perhaps what's
+needed is, figuratively,  just a stronger vault and more heavily armed
+guards. Right? 
+But in reality penetrating a company's security often starts with the bad
+guy obtaining some piece of information or some document that seems so
+innocent, so everyday and unimportant, that most people in the
+organization wouldn't  see any reason why the item should be protected
+and restricted
+HIDDEN VALUE OF INFORMATION 
+Much of the seemingly innocuous information in a company's possession
+is prized
+by a social engineering attacker because it can play a vital role in his
+effort to dress himself in a cloak of believability. 
+Throughout these pages, I'm going to show you how social engineers do
+what they do by letting you "witness" the attacks for yourself--sometimes
+presenting the action from the viewpoint of the people being victimized,
+allowing you to put yourself in their shoes and gauge how you yourself
+(or maybe one of your employees or co-workers) might have responded.
+In many cases you'll also experience the same events from the perspective
+of the social engineer. 
+The first story looks at a vulnerability in the financial industry.  
+ 
+
+CREDITCHEX 
+Foralong time, theBritish putupwith avery stuffy banking system. As
+anordinary, upstanding citizen, you couldn't walk inoffthestreet and
+open abank account. No,thebank wouldn't consider accepting youasa
+customer unless some person already well established asacustomer
+provided you with a letter of recommendation.
+Quite adifference, ofcourse, intheseemingly egalitarian banking
+world oftoday. And ourmodern ease ofdoing business isnowhere more
+inevidence than infriendly, democratic America, where almost anyone
+canwalk intoabank andeasily open achecking account, right? Well, not
+exactly. The truth isthatbanks understandably have anatural reluctance
+toopen. anaccount forsomebody who just might have ahistory of
+writing badchecks--that would beabout aswelcome asarapsheet of
+bank robbery orembezzlement charges. Soit'sstandard practice atmany
+banks togetaquick thumbs-up orthumbs-down onaprospective new
+customer.  
+One ofthemajor companies thatbanks contract with forthisinformation
+isanoutfit we'll callCreditChex. They provide avaluable service totheir
+clients, butlikemany companies, canalso unknowingly provide ahandy
+service to knowing social engineers. 
+The First Call: Kim Andrews
+"National Bank, this is Kim. Did you want to open an account today?" 
+"Hi, Kim. I have a question for you. Do you guys use CreditChex?" 
+"Yes." 
+"When you phone in to CreditChex, what do you call the number you give
+them--is it a 'Merchant ID'?"  
+A pause; she was weighing the question, wondering what this was about
+and whether she should answer. 
+The caller quickly continued without missing a beat:
+"Because, Kim, I'm working on a book. It deals with private
+investigations." 
+"Yes," she said, answering the question with new confidence, pleased to
+be helping a writer. 
+
+"So it's called a Merchant ID, right?" 
+"Uh huh."  
+ 
+
+"Okay, great. Because I wanted to male sure I had the lingo right. For the
+book. Thanks for your help. Good-bye, Kim." 
+The Second Call: Chris Talbert
+"National Bank, New Accounts, this is Chris." 
+"Hi, Chris. This isAlex," thecaller said. "I'm acustomer service rep
+with CreditChex. We're doing asurvey toimprove ourservices. Can you
+spare me a couple of minutes?" 
+She was glad to, and the caller went on: 
+"Okay - what are the hours your branch is open for business?" She
+answered, and continued answering his string of questions. 
+"How many employees at your branch use our service?" 
+"How often do you call us with an inquiry?" 
+"Which of our 800-numbers have we assigned you for calling us?" 
+"Have our representatives always been courteous?" 
+"How's our response time?" 
+"How long have you been with the bank?" 
+"What Merchant ID are you currently using?" 
+"Have you ever found any inaccuracies with the information we've
+provided you?" 
+"If you had any suggestions for improving our service, what would they
+be?" 
+And: 
+"Would you be willing to fill out periodic questionnaires if we send them
+to your branch?" 
+She agreed, they chatted a bit, the caller rang off, and Chris went back to
+work. 
+The Third Call: Henry McKinsey
+"CreditChex, this is Henry McKinsey, how can I help you?"  
+Thecaller said hewasfrom National Bank. Hegave theproper Merchant
+IDandthen gave thename andsocial security number oftheperson he
+
+was looking forinformation on.Henry asked forthebirth date, andthe
+caller gave that, too. 
+ 
+
+After a few moments, Henry read the listing from his computer screen. 
+"Wells Fargo reported NSF in 1998, one time, amount of $2,066." NSF 
+non sufficient funds - is the familiar banking lingo for checks that have
+been written when there isn't enough money in the account to cover them. 
+"Any activities since then?" 
+"No activities." 
+"Have there been any other inquiries?" 
+"Let's see. Okay, two of them, both last month. Third United Credit Union
+of Chicago." He stumbled over the next name, Schenectady Mutual
+Investments, and had to spell it. "That's in New York State," he added.  
+Private Investigator at Work 
+Allthree ofthose calls were made bythesame person: aprivate
+investigator we'll callOscar Grace. Grace hadanew client, oneofhis
+first. Acopuntil afewmonths before, hefound that some ofthisnew
+work came naturally, butsome offered achallenge tohisresources and
+inventiveness. This one came down firmly in the challenge category. 
+The hardboiled private eyes offiction -theSam Spades andthePhilip
+Marlowes -spend long night time hours sitting incars waiting tocatch a
+cheating spouse. Real-life PIsdothesame. They also doaless written
+about, butnoless important kind ofsnooping forwarring spouses, a
+method that leans more heavily onsocial engineering skills than on
+fighting off the boredom of night time vigils. 
+Grace's new client was alady who looked asifshe had apretty
+comfortable budget forclothes andjewelry. She walked into hisoffice
+onedayandtook aseatintheleather chair, theonly onethatdidn't have
+papers piled onit.Shesettled herlarge Gucci handbag onhisdesk with
+thelogo turned toface him andannounced shewas planning totellher
+husband that shewanted adivorce, butadmitted to"just avery little
+problem." 
+Itseemed herhubby was onestep ahead. Hehadalready pulled thecash
+outoftheir savings account andaneven larger sum from their brokerage
+account. Shewanted toknow where their assets hadbeen squirreled away,
+andherdivorce lawyer wasn't anyhelp atall.Grace surmised thelawyer
+wasoneofthose uptown, high-rise counselors who wouldn't gethishands
+dirty on something messy like where did the money go. 
+
+Could Grace help?  
+
+Heassured heritwould beabreeze, quoted afee,expenses billed atcost,
+and collected a check for the first payment. 
+Then hefaced hisproblem. What doyou doifyou've never handled a
+piece ofwork like this before and don't quite know how togoabout
+tracking down amoney trail? You move forward bybaby steps. Here,
+accord- mg to our source, is Grace's story. 
+I knew about CreditChex and how banks used the outfit - my ex-wife used
+towork atabank. ButIdidn't know thelingo andprocedures, andtrying
+to ask my ex- would be a waste of time. 
+Step one: Gettheterminology straight andfigure outhow tomake the
+request soitsounds like Iknow what I'mtalking about. Atthebank I
+called, thefirst young lady, Kim, wassuspicious when Iasked about how
+they identify themselves when they phone CreditChex. Shehesitated; she
+didn't know whether totellme.Was Iputoffbythat? Notabit.Infact,
+thehesitation gave meanimportant clue, asign that Ihadtosupply a
+reason she'd find believable. When Iworked thecononherabout doing
+research forabook, itrelieved hersuspicions. You sayyou're anauthor or
+a movie writer, and everybody opens up.  
+She had other knowledge that would have helped -things like what
+reformation CreditChex requires toidentify theperson you're calling
+about, what information youcanaskfor,andthebigone, what wasKim's
+bank Merchant IDnumber. Iwas ready toaskthose questions, buther
+hesitation sent uptheredflag. Shebought thebook research story, butshe
+already hadafew niggling suspicions. Ifshe'd been more willing right
+way, I would have asked her to reveal more details about their procedures.
+LINGO  
+MARK: The victim of a con.  
+BURN THE SOURCE: An attacker is said to have burned the source
+when he allows a victim to recognize that an attack has taken place. Once
+the victim becomes aware and notifies other employees or management of
+the attempt, it becomes extremely difficult to exploit the same source in
+future attacks.
+
+You have togoongutinstinct, listen closely towhat themark issaying
+andhow she's saying it.This lady sounded smart enough foralarm bells
+tostart going offifIasked toomany unusual questions. And even though
+she didn't know who I was or what number I was calling from, still in this 
+ 
+
+business you never want anybody putting out the word to be on the look
+out for someone calling to get information about the business. Thats
+because you don't want to burn the source - you may want to call same
+office back another time. 
+I'm always on the watch for little signs that give me a read on how
+cooperative a person is, on a scale that runs from "You sound like a nice
+person and I believe everything you're saying" to "Call the cops, alert the
+National Guard, this guy's up to no good." 
+I read Kim as a little bit on edge, so I just called somebody at a different
+branch. On my second call with Chris, the survey trick played like a
+charm. The tactic here is to slip the important questions in among
+inconsequential ones that are used to create a sense of believability.
+Before I dropped the question about the Merchant ID number with
+CreditChex, I ran a little last-minute test by asking her a personal question
+about how long she'd been with the bank. 
+A personal question is like a land mine - some people step right over it
+and never notice; for other people, it blows up and sends them scurrying
+for safety. So if I ask a personal question and she answers the question
+and the tone of her voice doesn't change, that means she probably isn't
+skeptical about the nature of the request. I can safely ask the sought after
+question without arousing her suspicions, and she'll probably give me the
+answer I'm looking for. 
+One more thing a good PI knows: Never end the conversation after getting
+the key information. Another two or three questions, a little chat, and then
+it's okay to say good-bye. Later, if the victim remembers anything about
+what you asked, it will probably be the last couple of questions. The rest
+will usually be forgotten. 
+So Chris gave me their Merchant ID number, and the phone number they
+call to make requests. I would have been happier if I had gotten to ask
+some questions about how much information you can get from
+CreditChex. But it was better not to push my luck. 
+It was like having a blank check on CreditChex. I could now call and get
+information whenever I wanted. I didn't even have to pay for the service.
+As it turned out, the CreditChex rep was happy to share exactly the
+
+information I wanted: two places my client's husband had recently applied
+to open an account. So where were the assets his soon-to-be ex-wife was
+looking for? Where else but at the banking institutions the guy at
+CreditChex listed? 
+ 
+
+Analyzing the Con 
+This entire ruse was based ononeofthefundamental tactics ofsocial
+engineering: gaining access toinformation that acompany employee
+treats as innocuous, when it isn't. 
+Thefirst bank clerk confirmed theterminology todescribe theidentifying
+number used when calling CreditChex: theMerchant ID.The second
+provided thephone number forcalling CreditChex, and themost vital
+piece ofinformation, thebank's Merchant IDnumber. Allthisinformation
+appeared totheclerk tobeinnocuous. After all,thebank clerk thought
+shewastalking tosomeone from CreditChex -sowhat could betheharm
+in disclosing the number? 
+Allofthislaidthegroundwork forthethird call. Grace hadeverything he
+needed tophone CreditChex, pass himself offasarepfrom oneoftheir
+customer banks, National, and simply askfortheinformation hewas
+after. 
+With asmuch skill atstealing information asagood swindler hasat
+stealing your money, Grace hadwell-honed talents forreading people. He
+knew thecommon tactic ofburying thekeyquestions among innocent
+ones. Heknew apersonal question would test the second clerk's
+willingness tocooperate, before innocently asking fortheMerchant ID
+number. 
+The first clerk's error in confirming the terminology for the CreditChex ID
+number would bealmost impossible toprotect against. Theinformation is
+sowidely known within thebanking industry that itappears tobe
+unimportant -thevery model oftheinnocuous. But thesecond clerk,
+Chris, should nothave been sowilling toanswer questions without
+positively verifying thatthecaller was really who heclaimed tobe.She
+should, atthevery least, have taken hisname and number and called
+back; thatway, ifanyquestions arose later, shemay have kept arecord of
+what phone number theperson hadused. Inthiscase, making acalllike
+that would have made itmuch more difficult forthe attacker to
+masquerade as a representative from CreditChex. 
+MITNICK MESSAGE
+AMerchant IDinthis situation isanalogous toapassword. Ifbank
+personnel treated itlikeanATM PIN, they might appreciate thesensitive
+
+nature oftheinformation. Isthere aninternal code ornumber inyour
+organization that people aren't treating with enough care? 
+
+Better still would have been a call to CreditChex using a nun bank already
+had on record - not a number provided by the caller  to verify that the
+person really worked there, and that the company was really doing a
+customer survey. Given the practicalities of the real world and the time
+pressures that most people work under today, though, this kind of
+verification phone call is a lot to expect, except when an employee is
+suspicious that some kind of attack is being made. 
+THE ENGINEER TRAP 
+It is widely known that head-hunter firms use social engineering to recruit
+corporate talent. Here's an example of how it can happen. 
+Inthelate1990s, anotvery ethical employment agency signed anew
+client, acompany looking forelectrical engineers with experience inthe
+telephone industry. Thehoncho ontheproject wasalady endowed with a
+throaty voice and sexy manner that shehad learned tousetodevelop
+initial trust and rapport over the phone. 
+The lady decided tostage araid onacellular phone service provider to
+seeifshecould locate some engineers who might betempted towalk
+across the street to a competitor. She couldn't exactly call the switch board
+and say, "Let me talk toanybody with five years ofengineering
+experience." Instead, forreasons thatwillbecome clear inamoment, she
+began thetalent assault byseeking apiece ofinformation thatappeared to
+have nosensitivity atall,information that company people give outto
+almost anybody who asks. 
+The First Call: The receptionist
+The attacker, using thename Didi Sands, placed acalltothecorporate
+offices ofthecellular phone service. Inpart, theconversation went like
+this: 
+Receptionist: Good afternoon. This is Marie, how may I help you? 
+Didi: Can you connect me to the Transportation Department? 
+R: I'm not sure if we have one, I'll look in my directory. Who's calling? 
+D:  It's Didi. 
+R:  Are you in the building, or... ? 
+D:  No, I'm outside the building. 
+ 
+
+R:   Didi who? 
+D: Didi Sands. Ihadtheextension forTransportation, butIforgot what
+it was. 
+R:   One moment. 
+Toallay suspicions, atthis point Didi asked acasual, just making
+conversation question designed toestablish thatshewas onthe"inside,"
+familiar with company locations. 
+D:  What building are you in - Lakeview or Main Place? 
+R:   Main Place. (pause) It's 805 555 6469. 
+Toprovide herself with abackup incase thecalltoTransportation didn't
+provide what shewas looking for,Didi said shealso wanted totalk to
+Real Estate. The receptionist gave herthat number, aswell. When Didi
+asked tobeconnected totheTransportation number, thereceptionist tried,
+but the line was busy. 
+Atthat point Didi asked forathird phone number, forAccounts
+Receivable, located atacorporate facility inAustin, Texas. The
+receptionist asked hertowait amoment, andwent offtheline. Reporting
+toSecurity that shehadasuspicious phone calland thought there was
+something fishy going on?Notatall,andDidi didn't have theleast bitof
+concern. Shewasbeing abitofanuisance, buttothereceptionist itwas
+allpartofatypical workday. After about aminute, thereceptionist came
+back ontheline, looked uptheAccounts Receivable number, tried it,and
+put Didi through. 
+The Second Call: Peggy
+The next conversation went like this: 
+Peggy: Accounts Receivable, Peggy. 
+Didi:    Hi, Peggy. This is Didi, in Thousand Oaks. 
+P:   Hi, Didi. 
+D:  How ya doing? 
+P:   Fine. 
+Didi then used afamiliar term inthecorporate world thatdescribes the
+charge code forassigning expenses against thebudget ofaspecific
+organization or workgroup: 
+
+D:Excellent. Ihave aquestion foryou. How doIfind outthecostcenter
+for a particular department? 
+P:   You'd have to get a hold of the budget analyst for the department. 
+
+D:     Do you know who'd be the budget analyst
+for Thousand Oaks - headquarters? I'm trying to
+fill out a form and I don't know the proper cost
+center. 
+P: Ijustknow when y'all need acost center number, you callyour
+budget analyst. 
+D:     Do you have a cost center for your department there in   Texas? 
+P: Wehave ourown costcenter butthey don't give usacomplete listof
+them. 
+D: How many digits isthecost center? FOr example, what's your cost
+center? 
+P:     Well, like, are you with 9WC or with SAT? 
+Didi had no idea what departments or groups these referred to, but it
+didn't matter. She answered: 
+D:     9WC. 
+P:     Then it's usually four digits. Who did you say you were with? 
+D:     Headquarters--Thousand Oaks. 
+P: Well, here's oneforThousand Oaks. It's1A5N, that's Nlike in
+Nancy. 
+By just hanging out long enough with somebody willing to be helpful,
+Didi had the cost center number she needed - one of those pieces of
+information that no one thinks to protect because it seems like something
+that couldn't be of any value to an outsider. 
+The Third Call: A Helpful Wrong Number  
+Didi's next step would be to parlay the cost center number into something
+of real value by using it as a poker chip. 
+She began bycalling theReal Estate department, pretending shehad
+reached awrong number. Starting with a"Sorry tobother you, but...."
+sheclaimed shewas anemployee who hadlosthercompany directory,
+andasked who youwere supposed tocalltogetanew copy. Theman said
+theprint copy was outofdate because itwas available onthecompany
+intranet site. 
+
+Didi said shepreferred using ahard copy, andtheman told hertocall
+Publications, andthen, without being asked -maybe justtokeep thesexy-
+sounding lady onthephone alittle longer -helpfully looked upthe
+number and gave it to her. 
+ 
+
+The Fourth Call: Bart in Publications
+InPublications, shespoke with aman named Bart. Didi said shewasfrom
+Thousand Oaks, andthey hadanew consultant who needed acopy ofthe
+company directory. Shetold him aprint copy would work better forthe
+consultant, even ifitwassomewhat outofdate. Bart toldhershe'd have to
+fill out a requisition form and send the form over to him.
+Didi said shewas outofforms anditwas arush, andcould Bart bea
+sweetheart andfillouttheform forher? Heagreed with alittle toomuch
+enthusiasm, andDidi gave himthedetails. Fortheaddress ofthefictional
+contractor, shedrawled thenumber ofwhat social engineers callamail
+drop,inthiscase aMail Boxes Etc.-type ofcommercial business where
+her company rented boxes for situations just like this.
+The earlier spadework now came inhandy: There would beacharge for
+thecost andshipping ofthedirectory. Fine -Didi gave thecost center for
+Thousand Oaks:
+"IA5N, that's N like in Nancy."
+Afewdays later, when thecorporate directory arrived, Didi found itwas
+aneven bigger payoff than shehadexpected: Itnotonly listed thenames
+and phone numbers, butalso showed who worked forwhom -the
+corporate structure of the whole organization.
+The lady of the husky voice was ready to start making her head-hunter,
+people-raiding phone calls. She had conned the information she needed to
+launch her raid using the gift of gab honed to a high polish by every
+skilled social engineer. Now she was ready for the payoff.
+LINGO
+MAIL DROP: The social engineers term for a rental mailbox, typically
+rented under an assumed name, which is used to deliver documents or
+packages the victim has been duped into sending
+MITNICK MESSAGE
+Just like pieces of a jigsaw puzzle, each piece of information may be
+irrelevant by itself. However, when the pieces are put together, a clear
+picture emerges. In this I case, the picture the social engineer saw was the
+entire internal structure of the company .
+
+Analyzing the Con
+Inthissocial engineering attack, Didi started bygetting phone numbers
+forthree departments inthetarget company. This was easy, because the
+numbers shewas asking forwere nosecret, especially toemployees. A
+social engineer learns to sound like an insider, and Didi was skilled at this
+
+game. One ofthephone numbers ledhertoacost center number, which
+she then used to obtain a copy of the firm's employee directory. 
+The main tools she needed: sounding friendly, using some corporate
+lingo, and, with the last victim, throwing in a little verbal eyelash-batting. 
+And one more tool, an essential element not easily acquired - the
+manipulative skills of the social engineer, refined through extensive
+practice and the unwritten lessons of bygone generations of confidence
+men.
+MORE "WORTHLESS" INFO 
+Besides acost center number andinternal phone extensions, what other
+seemingly useless information can be extremely valuable to your enemy?.
+Peter Abels Phone Call
+"Hi," the voice at the other end of the line says. "This is Tom at Parkhurst
+Travel. Your tickets to San Francisco are ready. Do you want us to deliver
+them, or do you want to pick them up?" 
+"San Francisco?" Peter says. "I'm not going to San Francisco." "Is this
+Peter Abels?" 
+"Yes, but I don't have any trips coming up." 
+"Well," the caller says with a friendly laugh, "you sure you don't want to
+go to San Francisco?" 
+"If you think you can talk my boss into it..." Peter says, playing along
+with the friendly conversation. 
+"Sounds likeamix-up," thecaller says. "On oursystem, webook travel
+arrangements under theemployee number. Maybe somebody used the
+wrong number. What's your employee number?" 
+Peter obligingly recites hisnumber. And why not? Itgoes onjustabout
+every personnel form hefills out, lots ofpeople inthecompany have
+access toit-human resources, payroll, and, obviously, theoutside travel
+agency. Noonetreats anemployee number likesome sortofsecret. What
+difference could it make? 
+ 
+
+The answer isn't hard tofigure out. Two orthree pieces ofinformation
+might beallittakes tomount aneffective impersonation -thesocial
+engineer cloaking himself insomeone else's identity. Get hold ofan
+employee's name, hisphone number, hisemployee number--and maybe,
+forgood measure, hismanager's name andphone number--and ahalfway-
+competent social engineer isequipped with most ofwhat he's likely to
+need to sound authentic to the next target he calls. 
+Ifsomeone who said hewas from another department inyour company
+had called yesterday, given aplausible reason, and asked foryour
+employee number, would you have had any reluctance in giving it to him?
+And by the way, what is your social security number? 
+MITNICK MESSAGE
+Themoral ofthestory is,don't give outanypersonal orinternal company
+information oridentifiers toanyone, unless his orher voice is
+recognizable and the requestor has a need to know. 
+PREVENTING THE CON 
+Your company hasaresponsibility tomake employees aware ofhow a
+serious mistake canoccur from mishandling non public information. A
+well thought-out information security policy, combined with proper
+education and training, will dramatically increase employee awareness
+about theproper handling ofcorporate business information. Adata
+classification policy will help you toimplement proper controls with
+respect todisclosing information. Without adata classification policy, all
+internal information must beconsidered confidential, unless otherwise
+specified. 
+Take these steps toprotect your company from therelease ofseemingly
+innocuous information: 
+The Information Security Department needs to conduct awareness training
+detailing themethods used bysocial engineers. One method, asdescribed
+above, istoobtain seemingly non sensitive information anduseitasa
+poker chip togain short-term trust. Each andevery employee needs tobe
+aware thatwhen acaller hasknowledge about company procedures, lingo,
+andinternal identifiers itdoes notinanyway, shape, orform authenticate
+therequestor orauthorize him orherashaving aneed toknow. Acaller
+could be a former employee or 
+
+contractor with therequisite insider information. Accordingly, each
+corporation has aresponsibility todetermine the appropriate
+authentication method tobeused when employees interact with people
+they don't recognize in person or over the telephone.
+The person or persons with the role and responsibility of drafting a data
+classification policy should examine the types of details that may be used
+to gain access for legitimate employees that seem innocuous, but could
+lead to information that is, sensitive. Though you'd never give out the
+access codes for your ATM card, would you tell somebody what server
+you use to develop company software products? Could that information
+be used by a person pretending to be somebody who has legitimate access
+to the corporate network?
+Sometimes justknowing inside terminology canmake thesocial engineer
+appear authoritative andknowledgeable. The attacker often relies onthis
+common misconception todupe hisorhervictims into compliance. For
+example, aMerchant IDisanidentifier thatpeople intheNew Accounts
+department ofabank casually useevery day. But such anidentifier
+exactly thesame asapassword. Ifeach andevery employee understands
+thenature ofthisidentifier -that itisused topositively authenticate a
+requestor--they might treat it with more respect.
+MITNICK MESSAGE
+Astheoldadage goes -even realparanoids probably have enemies. We
+must assume thatevery business hasitsenemies, too-attackers thattarget
+thenetwork infrastructure tocompromise business secrets. Don't endup
+being astatistic oncomputer crime -it'shigh time toshore upthe
+necessary defenses byimplementing proper controls through well-
+thought-out security policies and procedures.
+Nocompanies -well, very few, atleast -give outthedirect dialphone
+numbers oftheir CEO orboard chairman. Most companies, though, have
+noconcern about giving outphone numbers tomost departments and
+workgroups inthe, organization -especially tosomeone who is,or
+appears tobe,anemployee. Apossible countermeasure: Implement a
+policy
+ 
+
+that prohibits giving internal phone numbers ofemployees, contractors,
+consultants, andtemps tooutsiders. More importantly, develop astep-by-
+step procedure topositively identify whether acaller asking forphone
+numbers is really an employee.
+Accounting codes forworkgroups anddepartments, aswell ascopies of
+thecorporate directory (whether hard copy, data file, orelectronic phone
+book ontheintranet) arefrequent targets ofsocial engineers. Every
+company needs awritten, well-publicized policy ondisclosure ofthistype
+ofinformation. The safeguards should include maintaining anaudit log
+that records instances when sensitive information isdisclosed topeople
+outside of the company.
+Information such asanemployee number, byitself, should notbeused as
+anysortofauthentication. Every employee must betrained toverify not
+just the identity of a requestor, but also the requestor's need to know.
+Inyour security training, consider teaching employees this approach:
+Whenever asked aquestion orasked forafavor byastranger, learn first
+topolitely decline until therequest canbeverified. Then -before giving
+intothenatural desire tobeMr.orMs.Helpful -follow company policies
+andprocedures with respect toverification anddisclosure ofnon public
+information. This style may goagainst our natural tendency tohelp
+others, butalittle healthy paranoia may benecessary toavoid being the
+social engineer's next dupe.
+Asthe stories inthis chapter have shown, seemingly innocuous
+information can be the key to your company's most prized secrets.
+
+Chapter 3
+The Direct Attack: Just Asking for It
+Many social engineering attacks areintricate, involving anumber ofsteps
+and elaborate planning, combining amix ofmanipulation and
+technological know-how.
+But Ialways find itstriking that askillful social engineer can often
+achieve hisgoal with asimple, straightforward, direct attack. Just asking
+outright for the information may be all that's needed - as you'll see.
+AN MLAC QUICKIE
+Want toknow someone's unlisted phone number? Asocial engineer can
+tellyou half adozen ways (and you'll find some ofthem described in
+other stories inthese pages), butprobably thesimplest scenario isonethat
+uses a single phone call, like this one.
+Number, Please
+The attacker dialed the private phone company number for the MLAC, the
+Mechanized Line Assignment Center. Tothewoman who answered, he
+said:
+"Hey, thisisPaul Anthony. I'macable splicer. Listen, aterminal boxout
+here gotfried inafire. Cops think some creep tried toburn hisown house
+down fortheinsurance. They gotmeouthere alone trying torewire this
+entire twohundred-pair terminal. Icould really usesome help right now.
+What facilities should be working at 6723 South Main?"
+
+In other parts of the phone company, the person called would know that
+reverse lookup information on non pub (non published) numbers is
+supposed to be given out only to authorized phone company MLAC is
+supposed to be known only to company employees. And while they'd
+never give out information to the public, who would want to refuse a little
+help to a company man coping with that heavy-duty assignment?.  She
+feels sorry for him, she's had bad days on the job herself, and shell
+bend the rules a little to help out a fellow employee with a problem. She
+gives him the cable and pairs and each working number assigned to the
+address. 
+MITNICK MESSAGE
+It's human nature to trust our fellow man, especially when the request
+meets the test of being reasonable. Social engineers use this knowledge to
+exploit their victims and to achieve their goals.
+Analyzing the Con 
+As you'll notice repeatedly in these stories, knowledge of a companys
+lingo, and of its corporate structure - its various offices and departments
+what each does and what information each has - is part of the essential
+bag of tricks of the successful social engineer. 
+ 
+YOUNG MAN ON THE RUN 
+A man we'll call Frank Parsons had been on the run for years, still wanted
+by the federal government for being part of an underground antiwar group
+in the 1960s. In restaurants he sat facing the door and he had a way of
+glancing over his shoulder every once in a while that other people found
+disconcerting. He moved every few years. 
+At one point Frank landed in a city he didn't know, and set about job
+hunting. For someone like Frank, with his well-developed computer skills
+(and social engineering skills as well, even ,though he never listed those
+on a job application), finding a good job usually wasn't a problem. Except
+in times when the economy is very tight, people with good technical
+computer knowledge usually find their talents in high demand and they
+have little problem landing on their feet. Frank quickly located a well 
+
+paying job opportunity at a large, upscale, long-term care facility near
+where he was living.
+ 
+
+ 
+Justtheticket, hethought. Butwhen hestarted plodding hisway through
+theapplication forms, hecame upon anuh-oh: Theemployer required the
+applicant toprovide acopy ofhisstate criminal history record, which he
+had toobtain himself from thestate police. The stack ofemployment
+papers included aform torequest thisdocument, andtheform hadalittle
+boxforproviding afingerprint. Even though they were asking foraprint
+ofjusttheright index finger, ifthey matched hisprint with oneinthe
+FBI's database, he'd probably soon beworking infood service ata
+federally funded resort. 
+Ontheother hand, itoccurred toFrank thatmaybe, justmaybe, hemight
+still beable togetaway with this. Perhaps thestate didn't send those
+fingerprint samples to the FBI at all. How could he find out? 
+How? Hewas asocial engineer--how doyou think hefound out? He
+placed aphone calltothestate patrol: "Hi. We're doing astudy forthe
+State Department ofJustice. We're researching the requirements to
+implement anew fingerprint identification system. Can Italk to
+somebody there that's really familiar with what you're doing who could
+maybe help us out?" 
+And when thelocal expert came onthephone, Frank asked aseries of
+questions about what systems they were using, and thecapabilities to
+search andstore fingerprint data. Had they hadanyequipment problems?
+Were they tied into theNational Crime Information Center's (NCIC)
+Fingerprint Search orjustwithin thestate? Was theequipment pretty easy
+for everybody to learn to use? 
+Slyly, he sneaked the key question in among the rest. 
+The answer was music tohisears: Nothey weren't tied into theNCIC,
+they only checked against the state's Criminal Information Index (CII). 
+MITNICK MESSGAE
+Savvy information swindlers have noqualms about ringing upfederal,
+state, orlocal government officials tolearn about theprocedures oflaw
+enforcement. With such information inhand, thesocial engineer may be
+able to circumvent your company's standard security checks. 
+ 
+
+That was allFrank needed toknow. Hedidn't have anyrecord inthat
+state, sohesubmitted hisapplication, was hired forthejob, andnobody
+ever showed upathisdesk onedaywith thegreeting, "These gentlemen,
+are from the FBI and they'd like to have a little talk with you." 
+And, according to him, he proved to be a model employee. 
+ON THE DOORSTEP 
+Inspite ofthemyth ofthepaperless office, companies continue toprint
+outreams ofpaper every day. Information inprint atyour company may
+bevulnerable, even ifyou use security precautions and stamp it
+confidential. 
+Here's onestory thatshows youhow social engineers might obtain your
+most secret documents. 
+Loop-Around Deception 
+Every year thephone company publishes avolume called theTest
+Number Directory (oratleast they used to,and because Iamstill on
+supervised release, I'mnotgoing toaskifthey still do). This document
+was highly prized byphone phreaks because itwas packed with alistof
+alltheclosely guarded phone numbers used bycompany craftsmen,
+technicians, aothers forthings liketrunk testing orchecking numbers that
+always ring busy. 
+One of these test numbers, known in the lingo as a loop-around, was
+particularly useful. Phone phreaks used it as a way to find other phone
+phreaks to chat with, at no cost to them. Phone phreaks also used it a way
+to create a call back number to give to, say, a bank. A social engineer
+would tell somebody at the bank the phone number to call to reach at his
+office. When the bank called back to the test number (loop-around) the
+phone phreak would be able to receive the call, yet he had the protection
+of having used a phone number that could not be traced back to him. 
+A Test Number Directory provided a lot of neat information that could be
+used by any information-hungry, testosteroned, phone phreak. So when
+the new directories were published each year, they were coveted by a lot
+of youngsters whose hobby was exploring the telephone network. 
+ 
+
+MITNICK MESSAGE
+Security training with respect tocompany policy designed toprotect
+information assets needs tobeforeveryone inthecompany, notjustany
+employee who haselectronic orphysical access tothecompany's IT
+assets. 
+Stevies Scam 
+Naturally phone companies don't make these books easy to get hold of, so
+phone phreaks have to be creative to get one. How can they do this? An
+eager youngster with a mind bent on acquiring the directory might enact a
+scenario like this. 
+Late oneday, amild evening inthesouthern California autumn, aguyI'll
+callhimStevie phones asmall telephone company central office, which is
+thebuilding from which phone lines runtoallthehomes andbusinesses
+in the established service area. 
+When theswitchman onduty answers thecall, Stevie announces thathe's
+from thedivision ofthephone company that publishes and distributes
+printed materials. "We have your new Test Number Directory," hesays.
+"But forsecurity reasons, wecant deliver your copy until wepick upthe
+oldone. And thedelivery guy isrunning late. Ifyou wanna leave your
+copy justoutside your door, hecanswing by,pick upyours, drop thenew
+one and be on his way." 
+The unsuspecting switchman seems tothink that sounds reasonable. He
+does exactly asasked, putting outonthedoorstep ofthebuilding hiscopy
+ofthedirectory, itscover clearly marked inbigredletters with the
+"COMPANY CONFIDENTIAL -WHEN NO LONGER NEEDED
+THIS DOCUMENT MUST BE SHREDDED." 
+Stevie drives byandlooks around carefully tospot anycops orphone
+company security people who might belurking behind trees orwatching
+forhim from parked cars. Nobody insight. Hecasually picks upthe
+coveted directory and drives away.
+Here's justonemore example ofhow easy itcanbeforasocial engineer
+to get what he wants by following the simple principle of "just ask for it." 
+ 
+
+GAS ATTACK
+Not only company assets are at risk in a social engineering scenario.
+Sometimes it's a company's customers who are the victims.
+Working asacustomer-service clerk brings itsshare offrustrations, its
+share oflaughs, anditsshare ofinnocent mistakes -some ofwhich can
+have unhappy consequences for a company's customers.
+Janie Acton's Story
+Janie Acton had been manning acubicle asacustomer service repf
+Hometown Electric Power, inWashington, D.C., forjustover three years.
+She was considered to be one of the better clerks, smart and conscientious
+Itwas Thanksgiving week when this one particular call came in.The
+caller, said, "This isEduardo intheBilling Department. I'vegotalady on
+hold, she's asecretary intheexecutive offices thatworks foroneofthe
+vice presidents, andshe's asking forsome information andIcan't usemy
+computer Igotanemail from this girlinHuman Resources that said
+'ILOVEYOU. and when Iopened theattachment, Icouldn't usemy
+machine any more. Avirus. Igotcaught byastupid virus. Anyways,
+could you look up some customer information for me?"
+"Sure," Janie answered. "It crashed your computer? That's terrible."
+"Yeah."
+"How can I help?" Janie asked.
+Here theattacker called oninformation from hisadvance research to
+make himself sound authentic. Hehadlearned that theinformation he,
+wanted wasstored insomething called theCustomer Billing Information
+System, andhehadfound outhow employees referred tothesystem. He
+asked, "Can you bring up an account on CBIS?"
+"Yes, what's the account number.? "
+"I don't have the number; I need you to bring it up by name."
+"Okay, what's the name?"
+"It's Heather Marning." He spelled the name, and Janie typed it in.
+"Okay, I have it up."
+"Great. Is the account current?"
+"Uh huh, it's current."
+"What's the account number?" he asked.
+"Do you have a pencil?"
+
+ 
+"Ready to write." 
+"Account number BAZ6573NR27Q." 
+He read the number back and then said, "And what's the service
+address?" 
+She gave him the address. 
+"And what's the phone?" 
+Janie obligingly read off that information, too. 
+Thecaller thanked her,said good-bye, andhung up.Janie went ontothe
+next call, never thinking further about it. 
+Art Sealy's Research Project 
+ArtSealy hadgiven upworking asafreelance editor forsmall publishing
+houses when hefound hecould make more money doing research for
+writers andbusinesses. Hesoon figured outthatthefeehecould charge
+went upinproportion tohow close theassignment took him tothe
+sometimes hazy line between thelegal and theillegal. Without ever
+realizing it,certainly without ever giving itaname, Artbecame asocial
+engineer, using techniques familiar toevery information broker. He
+turned outtohave anative talent forthebusiness, figuring outforhimself
+techniques that most social engineers hadtolearn from others. After a
+while, he crossed the line without the least twinge of guilt. 
+Aman contacted mewho was writing abook about theCabinet inthe
+Nixon years, andwas looking foraresearcher who could gettheinside
+scoop onWilliam E.Simon, who hadbeen Nixon's Treasury secretary.
+Mr.Simon haddied, buttheauthor hadthename ofawoman who had
+been onhisstaff. Hewas pretty sure shestill lived inD.C., buthadn't
+been able togetanaddress. Shedidn't have atelephone inhername, orat
+least none thatwaslisted. Sothat's when hecalled me.Itoldhim, sure, no
+problem. 
+This isthekind ofjobyoucanusually bring offinaphone callortwo, if
+youknow what you're doing. Every local utility company cangenerally
+becounted ontogive theinformation away. Ofcourse, youhave toBSa
+little. But what's a little white lie now and then - right? 
+Iliketouseadifferent approach each time, justtokeep things interesting.
+"This isso-and-so intheexecutive offices" hasalways worked well for
+
+me. Sohas "I've got somebody onthe line from Vice President
+Somebody's office," which worked this time, too. 
+
+MITNICK MESSAGE
+Never think allsocial engineering attacks need tobe
+elaborate ruses socomplex that they're likely tobe
+recognized before they canbecompleted. Some arein-and-
+out, strike-and-disappear, very simple attacks that areno
+more than.., well, just asking for it. 
+You have tosortofdevelop thesocial engineer's instinct, getasense of
+how cooperative theperson ontheother endisgoing tobewith you. This
+time I lucked out with a friendly, helpful lady. In a single phone call, I had
+the address and phone number. Mission accomplished. 
+Analyzing the Con 
+Certainly Janie knew that customer information is sensitive. She would 
+never discuss one customer's account with another customer, or give out 
+private information to the public. 
+But naturally, for a caller from within the company, different rules apply. 
+For a fellow employee it's all about being a team player and helping each 
+other get the job done. The man from Billing could have looked up the 
+details himself if his computer hadn't been down with a virus, and she was
+glad to be able to help a co-worker. 
+Art built up gradually to the key information he was really after, asking 
+questions  along the way about things he didn't really need, such as the 
+account number. Yet at the same time, the account number information 
+provided a fallback: If the clerk had become suspicious, he'd call a
+second 
+time and stand a better chance of success, because knowing the account 
+number would make him sound all the more authentic to the next clerk 
+he reached. 
+It never occurred to Janie that somebody might actually lie about some
+thing  like this, that the caller might not really be from the billing
+department 
+at all. Of course, the blame doesn't lie at Janie's feet. She wasn't well 
+versed in the rule about making sure you know who you're talking to 
+before discussing information in a customer's file. Nobody had ever told 
+her about the danger of a phone call like the one from Art. It wasn't in the
+
+company policy, it wasn't part of her training, and her supervisor had 
+never mentioned it. 
+ 
+
+PREVENTING THE CON
+Apoint toinclude inyour security training: Justbecause acaller orvisitor
+knows thenames ofsome people inthecompany, orknows some ofthe
+corporate lingo orprocedures, doesn't mean heiswho heclaims tobe.
+And itdefinitely doesn't establish himasanybody authorized tobegiven
+internal information, or access to your computer system or network.
+Security training needs to emphasize: When in doubt, verify, verify,
+verify.
+In earlier times, access to information within a company was a mark of
+rank andprivilege. Workers stoked thefurnaces, ranthemachines, typed
+theletters, andfiled thereports. The foreman orboss told them what to
+do,when, andhow. Itwas theforeman orboss who knew how many
+widgets each worker should beproducing onashift, how many andin
+what colors andsizes thefactory needed toturn outthisweek, next week,
+and by the end of the month.
+Workers handled machines andtools andmaterials, andbosses handled
+information. Workers needed only theinformation specific totheir
+specific jobs.
+The picture is a little different today, isn't it? Many factory workers use
+some form ofcomputer orcomputer-driven machine. Foralarge part of
+theworkforce, critical information ispushed down totheusers' desktops
+sothat they can fulfill their responsibility togettheir work done. In
+today's environment, almost everything employees doinvolves the
+handling of information.
+That's why a company's security policy needs to be distributed enterprise-
+wide, regardless ofposition. Everybody must understand thatit'snotjust
+thebosses andexecutives who have theinformation thatanattacker might
+beafter. Today, workers atevery level, even those who don't usea
+computer, areliable tobetargeted. The newly hired repinthecustomer
+service group may bejusttheweak link thatasocial engineer breaks to
+achieve his objective.
+Security training and corporate security policies need to strengthen that
+link.
+
+Chapter 4
+Building Trust 
+Some ofthese stories might lead youtothink thatIbelieve everyone in
+business isacomplete idiot, ready, even eager, togive away every secret
+inhisorherpossession. The social engineer knows isn't true. Why are
+social engineering attacks sosuccessful? Itisn't because people arestupid
+orlack common sense. Butwe,ashuman beings areallvulnerable to
+being deceived because people canmisplace their trust ifmanipulated in
+certain ways. 
+The social engineer anticipates suspicion andresistance, andhe'salways
+prepared toturndistrust intotrust. Agood social engineer plans hisattack
+like a chess game, anticipating the questions his target might ask so he can
+be ready with the proper answers. 
+One ofhiscommon techniques involves building asense oftrust onthe
+part ofhisvictims. How does aconman make youtrust him? Trust me,
+he can.
+TRUST: THE KEY TO DECEPTION 
+The more a social engineer can make his contact seem like business as
+usual, the more he allays suspicion. When people don't have a reason to
+be suspicious, it's easy for a social engineer to gain their trust. 
+Once he's got your trust, the drawbridge is lowered and the castle door
+thrown open so he can enter and take whatever information he wants. 
+
+NOTE
+You may notice Irefer tosocial engineers, phone phreaks, andcon-
+game operators as'he" through most ofthese stories. This isnot
+chauvinism; itsimply reflects thetruth that most practitioners in
+these fields aremale. Butthough there arent many women social
+engineers, thenumber isgrowing. There areenough female social
+engineers outthere that you shouldnt letyour guard down just
+because youhear awomens voice. Infact, female social engineers
+have adistinct advantage because they canusetheir sexuality to
+obtain cooperation. Youll find asmall number oftheso-called
+gentler sex represented in these pages
+The First Call: Andrea Lopez
+Andrea Lopez answered thephone atthevideo rental store where she
+worked, and inamoment was smiling: It'salways apleasure when a
+customer takes thetrouble tosayhe'shappy about theservice. This caller
+said hehadhadavery good experience dealing with thestore, andhe
+wanted to send the manager a letter about it. 
+Heasked forthemanager's name andthemailing address, andshetold
+himitwasTommy Allison, andgave himtheaddress. Ashewasabout to
+hang up,hehadanother idea andsaid, "Imight want towrite toyour
+company headquarters, too. What's your store number?" She gave him
+thatinformation, aswell. Hesaid thanks, added something pleasant about
+how helpful she had been, and said goodbye. 
+"A call like that," she thought, "always seems to make the shift go by
+faster. How nice it would be if people did that more often." 
+The Second Call: Ginny
+"Thanks for calling Studio Video. This is Ginny, how can I help you?" 
+"Hi, Ginny," the caller said enthusiastically, sounding as if he talked to
+Ginny every week or so. "It's Tommy Allison, manager at Forest Park,
+Store 863. We have a customer in here who wants to rent Rocky 5 and
+we're all out of copies. Can you check on what you've got?" 
+She came back onthelineafter afewmoments andsaid, "Yeah, we've
+got three copies." 
+"Okay, I'll see if he wants to drive over there. Listen, thanks. If you ever
+need any help from our store, just call and ask for Tommy. I'll be glad to
+do whatever I can for you." 
+ 
+
+Three orfour times over thenext couple ofweeks, Ginny gotcalls from
+Tommy forhelp with one thing oranother. They were seemingly
+legitimate requests, andhewas always very friendly without sounding
+likehewastrying tocome ontoher.Hewasalittle chatty along theway,
+aswell -"Did youhear about thebigfireinOak Park? Bunch ofstreets
+closed over there," and thelike. The calls were alittle break from the
+routine of the day, and Ginny was always glad to hear from him. 
+One day Tommy called sounding stressed. He asked, "Have 
+you guys been having trouble with your computers?" 
+"No," Ginny answered. "Why?" 
+"Some guy crashed his car into a telephone pole, and the phone company
+repairman says a whole part of the city will lose their phones and Internet
+connection till they get this fixed." 
+"Oh, no. Was the man hurt?" 
+"They took him away in an ambulance. Anyway, I could use a little help.
+I've got a customer of yours here who wants to rent Godfather II and
+doesn't have his card with him. Could you verify his information for me?"
+"Yeah, sure." 
+Tommy gave the customer's name and address, and Ginny 
+found him in the computer. She gave Tommy the 
+account number. 
+"Any late returns or balance owed?" Tommy asked.
+"Nothing showing." 
+"Okay, great. I'll sign him up by hand for an account here and put it in our
+database later on when the computers come back up again. And he wants
+to put this charge on the Visa card he uses at your store, and he doesn't
+have it with him. What's the card number and expiration date?" 
+She gave ittohim, along with theexpiration date. Tommy said, "Hey,
+thanks for the help. Talk to you soon," and hung up. 
+Doyle Lonnegan's Story 
+Lonnegan isnotayoung man youwould want tofind waiting when you
+open your front door. Aone-time collection man forbadgambling debts,
+hestilldoes anoccasional favor, ifitdoesn't puthim outvery much. In
+this case, hewas offered asizable bundle ofcash forlittle more than
+making 
+ 
+
+some phone calls toavideo store. Sounds easy enough. It'sjustthatnone
+ofhis"customers" knew how torunthiscon; they needed somebody with
+Lonnegan's talent and know-how. 
+People don't write checks to cover their bets when they're unlucky or
+stupid 
+at the poker table. Everybody knows that. Why did these friends of 
+mine keep on playing with a cheat that didn't have green out on the table?
+Don't ask. Maybe they're a little light in the IQ department. But they're 
+friends of mine--what can you do? 
+This guy didn't have the money, so they took a check. I ask you! Should 
+of drove him to an ATM machine, is what they should of done. But no, 
+a check. For $3,230. 
+Naturally, it bounced. What would you expect? So then they call me; 
+can I help? I don't close doors on people's knuckles any more. Besides, 
+there are better ways nowadays. I told them, 30 percent commission, I'd 
+see what I could do. So they give me his name and address, and I go up 
+on the computer to see what's the closest video store to him. 
+ I wasn't in a big hurry. Four phone calls to cozy up to the store manager, 
+and then, bingo, I've got the cheat's Visa card number. 
+ Another friend of mine owns a topless bar. For fifty bucks, he put the 
+guy's poker money through as a Visa charge from the bar. Let the cheat 
+ explain that to his wife. You think he might try to tell Visa it's not his 
+charge? Think again. He knows we know who he is. And if we could get 
+his Visa number, he'll figure we could get a lot more besides. No worries 
+on that score. 
+Analyzing the Con 
+Tommy's initial calls toGinny were simply tobuild uptrust. When time
+came fortheactual attack, sheletherguard down andaccepted Tommy
+for who he claimed to be, the manager at another store in the chain. 
+And why wouldn't sheaccept him--she already knew him. She'd only
+methimover thetelephone, ofcourse, butthey hadestablished abusiness
+friendship that isthebasis fortrust. Once shehadaccepted him asan
+authority figure, amanager inthesame company, thetrust had been
+established and the rest was a walk in the park. 
+ 
+
+MITNICK MESSAGE
+The sting technique ofbuilding trust isoneofthemost effective social
+engineering tactics. You have to think whether you really know the person
+you're talking to.Insome rareinstances, theperson might notbewho he
+claims tobe.Accordingly, weallhave tolearn toobserve, think, and
+question authority. 
+VARIATION ON A THEME: CARD CAPTURE  
+Building a sense of trust doesn't necessarily demand a series of phone
+calls with the victim, as suggested by the previous story. I recall one
+incident I witnessed where five minutes was all it took. 
+Surprise, Dad 
+Ionce satatatable inarestaurant with Henry andhisfather. Inthecourse
+ofconversation, Henry scolded hisfather forgiving outhiscredit card
+number asifitwere hisphone number. "Sure, youhave togive your card
+number when youbuysomething," hesaid. "But giving ittoastore that
+files your number in their records - that's real dumb." 
+The only place I do that is at Studio Video," Mr. Conklin said, naming
+ the same chain of video stores. "But I go over my Visa bill every month.
+If they started running up charges, I'd know it. 
+Sure," said Henry, "but once they have your number, it's so easy for 
+somebody to steal it " 
+You mean a crooked employee." 
+No, anybody - not  just an employee." 
+You're talking through your hat," Mr. Conklin said. 
+I can call up right now and get them to tell me your Visa number," Henry
+shot back. 
+No, you can't,  "his father said. 
+"I can do it in five minutes, right here in front of you without ever leaving
+ the table." 
+Mr. Conklin looked tight around the eyes, the look of somebody feeling
+sure of himself, but not wanting to show it. "I say you don't know  that
+you're talking about," he barked, taking out his wallet and slapping  fifty
+dollar bill down on the table. "If you can do what you say, that's 
+yours. 
+ 
+
+"I don't want your money, Dad," Henry said. 
+He pulled out his cell phone, asked his father which branch he used, and
+called Directory Assistance for the phone number, as well as the number
+of the store in nearby Sherman Oaks. 
+He then called the Sherman Oaks store. Using pretty much the same
+approach described in the previous story, he quickly got the manager's
+name and the store number. 
+Then he called the store where his father had an account. He pulled the 
+old impersonate-the-manager trick, using the manager's name as his own 
+and giving the store number he had just obtained. Then he used the same 
+ruse: "Are your computers working okay? Ours have been up and down."
+He listened to her reply and then said, "Well, look, I've got one of your 
+customers here who wants to rent a video, but our computers are down 
+right now. I need you to look up the customer account and make sure he's
+a customer at your branch." 
+Henry gave him his father's name. Then, using only a slight variation in 
+technique, he made the request to read off the account information: 
+address, phone number, and date the account was opened. And then he 
+said, "Hey, listen, I'm holding up a long line of customers here. What's
+the 
+ credit card number and expiration date?" 
+Henry  held the cell phone to his ear with one hand while he wrote on a 
+paper napkin with the other. As he finished the call, he slid the napkin in 
+front of his father, who stared at it with his mouth hanging open. The 
+to poor guy looked totally shocked, as if his whole system of trust had
+just 
+gone down the drain. 
+Analyzing the Con 
+Think ofyour own attitude when somebody youdon't know asks youfor
+something. Ifashabby stranger comes toyour door, you're notlikely to
+lethim in;ifastranger comes toyour door nicely dressed, shoes shined,
+hairperfect, with polite manner andasmile, you're likely tobemuch less
+suspicious. Maybe he'sreally Jason from theFriday the13th movies, but
+you're willing tostart outtrusting thatperson aslong ashelooks normal
+and doesn't have a carving knife in his hand. 
+
+What's less obvious isthat wejudge people onthetelephone thesame
+way. Does thisperson sound likehe'strying tosellmesomething? Ishe
+friendly andoutgoing ordoIsense some kind ofhostility orpressure?
+Does heorshehave thespeech ofaneducated person? Wejudge these
+things andperhaps adozen others unconsciously, inaflash, often inthe
+first few moments of the conversation. 
+ 
+
+MITNICK MESSAGE
+It'shuman nature tothink thatit'sunlikely you're being deceived inany
+particular transaction, atleast until you have some reason tobelieve
+otherwise. Weweigh therisks andthen, most ofthetime, give people the
+benefit ofthedoubt. That's thenatural behavior ofcivilized people.., at
+least civilized people who have never been conned ormanipulated or
+cheated out of a large amount of money.
+Aschildren ourparents taught usnottotrust strangers. Maybe weshould
+all heed this age-old principle in today's workplace.
+Atwork, people make requests ofusallthetime. Doyouhave anemail
+address forthis guy? Where's thelatest version ofthecustomer list?
+Who's thesubcontractor onthispart oftheproject? Please send methe
+latest project update. I need the new version of the source code.
+And guess what: Sometimes people who make those requests arepeople
+your don't personally know, folks who work forsome other part ofthe
+company, orclaim they do.Butiftheinformation they give checks out,
+andthey appear tobeintheknow ("Marianne said ...";"It's ontheK-16
+server..."; "...revision 26ofthenew product plans"), weextend ourcircle
+of trust to include them, and blithely give them what they're asking for.
+Sure, wemay stumble alittle, asking ourselves "Why does somebody in
+theDallas plant need toseethenew product plans?" or"Could ithurt
+anything togive outthename oftheserver it'son?" Soweaskanother
+question ortwo. Iftheanswers appear reasonable andtheperson's manner
+isreassuring, weletdown ourguard, return toournatural inclination to
+trust ourfellow man orwoman, and do(within reason) whatever itis
+we're being asked to do.
+And don't think foramoment thattheattacker willonly target people 'ho
+usecompany computer systems. What about theguy inthemail room?
+"Will you domeaquick favor? Drop thisinto theintra company mail
+pouch?" Does themail room clerk know itcontains afloppy disk with a
+special little program fortheCEO's secretary? Now thatattacker gets his
+own personal copy oftheCEO's email. Wow! Could thatreally happen at
+your company? The answer is, absolutely.
+THE ONE-CENT CELL PHONE
+
+Many people look around until the); find abetter deal; social engineers
+don't look forabetter deal, they find away tomake adeal better. For
+example, sometimes acompany launches amarketing campaign that's so
+youcanhardly bear topass itup,while thesocial engineer looks atthe
+offer and wonders how he can sweeten the deal.
+
+Not long ago, anationwide wireless company had amajor promotion
+underway offering abrand-new phone foronecent when yousigned up
+for one of their calling plans. 
+Aslots ofpeople have discovered toolate, there areagood many
+questions aprudent shopper should askbefore signing upforacellphone
+calling plan whether theservice isanalog, digital, oracombination; the
+number ofanytime minutes you canuseinamonth; whether roaming
+charges areincluded.., andon,andon.Especially important tounderstand
+upfront isthecontract term ofcommitment--how many months oryears
+will you have to commit to? 
+Picture asocial engineer inPhiladelphia who isattracted byacheap
+phone model offered byacellular phone company onsign-up, buthe
+hates thecalling plan thatgoes with it.Notaproblem. Here's oneway he
+might handle the situation. 
+The First Call: Ted
+First, the social engineer dials an electronics chain store on West Girard. 
+"Electron City. This is Ted." 
+"Hi, Ted. This is Adam. Listen, I was in a few nights ago talking to a
+sales guy about a cell phone. I said I'd call him back when I decided on
+the plan I wanted, and I forgot his name. Who's the guy who works in that
+department on the night shift? 
+"There's more than one. Was it William?" 
+"I'm not sure. Maybe it was William. What's he look like?" "Tall guy.
+Kind of skinny." 
+"I think that's him. What's his last name, again? 
+"Hadley. H--A--D--L--E-- Y." 
+"Yeah, that sounds right. When's he going to be on?" 
+"Don't know his schedule this week, but the evening people come in about
+five." 
+"Good. I'll try him this evening, then. Thanks, Ted." 
+The Second Call: Katie
+The next call is to a store of the same chain on North Broad Street. 
+"Hi, Electron City. Katie speaking, how can I help you?" 
+ 
+
+"Katie, hi. This is William Hadley, over at the West Girard store. How're
+you today?" 
+"Little slow, what's up?" 
+"I've got a customer who came in for that one-cent cell phone program.
+You know the one I mean?" 
+"Right. I sold a couple of those last week." 
+"You still have some of the phones that go with that plan?" 
+"Got a stack of them." 
+"Great. 'Cause Ijustsold onetoacustomer. The guy passed credit; we
+signed him uponthecontract. Ichecked thedamned inventory andwe
+don't have anyphones left. I'msoembarrassed. Can youdomeafavor?
+I'llsend him over toyour store topick upaphone. Can yousellhim the
+phone foronecent andwrite himupareceipt? And he'ssupposed tocall
+meback once he's gotthephone soIcan talk him through how to
+program it." 
+"Yeah, sure. Send him over." 
+"Okay. His name is Ted. Ted Yancy." 
+When the guy who calls himself Ted Yancy shows up at the 
+North Broad St. store, Katie writes up an invoice and sells him 
+the cell phone for one cent, just as she had been asked to do 
+by her "co worker." She fell for the con hook, line, and sinker. 
+When it'stime topay, thecustomer doesn't have any pennies inhis
+pocket, sohereaches intothelittle dish ofpennies atthecashier's counter,
+takes oneout, andgives ittothegirlattheregister. Hegets thephone
+without paying even the one cent for it. 
+He's then freetogotoanother wireless company thatuses thesame model
+ofphone, and choose any service plan helikes. Preferably one ona
+month-to-month basis, with no commitment required. 
+Analyzing the Con 
+Itsnatural forpeople tohave ahigher degree ofacceptance foranyone
+who claims tobeafellow employee, andwho knows company procedures
+,dlingo. The social engineer inthis story took advantage ofthat by
+finding out the details of a promotion, identifying himself as a company 
+employee, and asking for a favor from another branch. This happens 
+between branches of retail stores and between departments in a company,
+people are physically separated and deal with fellow employees they have
+never actually met day in and day out. 
+
+HACKING INTO THE FEDS
+People often don't stop tothink about what materials their organization is
+making available ontheWeb. Formyweekly show onKFI Talk Radio in
+Los Angeles, theproducer didasearch online andfound acopy ofan
+instruction manual foraccessing-the database oftheNational Crime
+Information Center. Later hefound theactual NCIC manual itself online,
+asensitive document that gives allthe instructions for retrieving
+information from the FBI's national crime database.
+The manual isahandbook forlawenforcement agencies that gives the
+formatting andcodes forretrieving information oncriminals andcrimes
+from thenational database. Agencies allover thecountry cansearch the
+same database forinformation tohelp solve crimes intheir own
+jurisdiction. The manual contains thecodes used inthedatabase for
+designating everything from different kinds oftattoos, todifferent boat
+hulls, to denominations of stolen money and bonds.
+Anybody with access tothemanual can look upthesyntax and the
+commands toextract information from thenational database. Then,
+following instructions from theprocedures guide, with alittle nerve,
+anyone canextract information from thedatabase. Themanual also gives
+phone numbers tocallforsupport inusing thesystem. You may have
+similar manuals inyour company offering product codes orcodes for
+retrieving sensitive information.
+TheFBIalmost certainly hasnever discovered thattheir sensitive manual
+andprocedural instructions areavailable toanyone online, andIdon't
+think they'd bevery happy about itifthey knew. One copy wasposted by
+agovernment department inOregon, theother byalaw enforcement
+agency inTexas. Why? Ineach case, somebody probably thought the
+information was ofnovalue andposting itcouldn't doanyharm. Maybe
+somebody posted itontheir intranet justasaconvenience totheir own
+employees, never realizing that itmade theinformation available to
+everyone ontheInternet who hasaccess toagood search engine such as
+Google -including thejust-plain-curious, thewannabe cop, thehacker,
+and the organized crime boss.
+Tapping into the System
+The principle ofusing such information todupe someone inthe
+government orabusiness setting isthesame: Because asocial engineer
+knows how toaccess specific databases orapplications, orknows the
+
+names ofacompany's computer servers, orthelike, hegains credibility.
+Credibility leads to trust.
+ 
+
+Once a social engineer has such codes, getting the information he needs 
+isaneasy process. Inthisexample, hemight begin bycalling aclerk ina
+local state police Teletype office, andasking aquestion about oneofthe
+codes inthemanual -forexample, theoffense code. Hemight say
+something like, "When IdoanOFF inquiry intheNCIC, I'mgetting a
+"System isdown' error. Areyougetting thesame thing when youdoan
+OFF? Would youtryitforme?" Ormaybe he'd sayhewastrying tolook
+up a wpf - police  talk for a wanted person's file. 
+The Teletype clerk on the other end of the phone would pick up the cue 
+that thecaller was familiar with theoperating procedures and the
+commands toquery theNCIC database. Who else other than someone
+trained in using NCIC would know these procedures? 
+After the clerk has confirmed that her system is working okay, the
+conversation
+ might go something like this:
+"I could use a little help." "What're you looking for?" 
+"I need you to do an OFF command on Reardon, Martin. DOB
+10118/66." 
+"What's the sosh?" (Law enforcement people sometimes refer to the 
+social security number as the sosh.)  
+"700-14-7435." 
+After looking for the listing, she might come back with something like, 
+"He's got a 2602." 
+The attacker would only have to look at the NCIC on line to find the
+meaning of the number: The man has a case of swindling on his record. 
+Analyzing the Con 
+Anaccomplished social engineer wouldn't stop foraminute toponder
+ways ofbreaking intotheNCIC database. Why should he,when asimple
+calltohislocal police department, andsome smooth talking sohesounds
+convincingly like an insider, is all it takes to get the information he wants?
+And thenext time, hejustcalls adifferent police agency anduses the
+same pretext. 
+  
+ LINGO 
+ SOSH: Law enforcement slang for a social security number 
+ 
+
+You might wonder, isn't itrisky tocallapolice department, asheriff's
+station, or a highway patrol office? Doesn't the attacker run a huge risk? 
+Theanswer isno...andforaspecific reason. People inlawenforcement,
+likepeople inthemilitary, have ingrained inthem from thefirst dayinthe
+academy arespect forrank. Aslong asthesocial engineer isposing asa
+sergeant orlieutenant--a higher rank than theperson he'stalking to-the
+victim will begoverned bythat well-learned lesson that says you don't
+question people who areinaposition ofauthority over you. Rank, in
+other words, hasitsprivileges, inparticular theprivilege ofnotbeing
+challenged by people of lower rank. 
+But don't think law enforcement and themilitary aretheonly places
+where thisrespect forrank canbeexploited bythesocial engineer. Social
+engineers often useauthority orrank inthecorporate hierarchy asa
+weapon intheir attacks onbusinesses -asanumber ofthestories inthese
+pages demonstrate. 
+PREVENTING THE CON 
+What aresome steps your organization cantake toreduce thelikelihood
+that social engineers will take advantage ofyour employees' natural
+instinct to trust people? Here are some suggestions. 
+Protect Your Customers 
+Inthis electronic agemany companies that selltotheconsumer keep
+credit cards onfile. There arereasons forthis: Itsaves thecustomer the
+nuisance ofhaving toprovide thecredit card information each time he
+visits thestore ortheWeb sitetomake apurchase. However, thepractice
+should be discouraged. 
+Ifyou must keep credit card numbers onfile, that process needs tobe
+accompanied bysecurity provisions that gobeyond encryption orusing
+access control. Employees need tobetrained torecognize social
+engineering scams like theones inthis chapter. That fellow employee
+you've never metinperson butwho hasbecome atelephone friend may
+notbewho heorsheclaims tobe.Hemay nothave the"need toknow" to
+access sensitive customer information, because hemay notactually work
+for the company at all.
+MITNICK MESSAGE
+
+Everyone should beaware ofthesocial engineer's modus operandi:
+Gather asmuch information about thetarget aspossible, and usethat
+information to gain trust as an insider. Then go for the jugular! 
+ 
+
+ 
+Trust Wisely 
+It'snotjustthepeople who have access toclearly sensitive information -
+thesoftware engineers, thefolks inR&D, andsoon-who need tobeon
+thedefensive against intrusions. Almost everyone inyour organization
+needs training toprotect the enterprise from industrial spies and
+information thieves. 
+Laying thegroundwork forthisshould begin with asurvey ofenterprise-
+wide information assets, looking separately ateach sensitive, critical, or
+valuable asset, and asking what methods anattacker might use to
+compromise those assets through theuseofsocial engineering tactics.
+Appropriate training for people who have trusted access tosuch
+information should be designed around the answers to these questions. 
+When anyone you don't know personally requests some information or
+material, orasks you toperform anytask onyour computer, have your
+employees askthemselves some. questions. IfIgave thisinformation to
+myworst enemy, could itbeused toinjure meormycompany? DoI
+completely understand thepotential effect ofthecommands Iambeing
+asked to enter into my computer? 
+Wedon't want togothrough lifebeing suspicious ofevery new person we
+encounter. Yetthemore trusting weare, themore likely that thenext
+social engineer toarrive intown willbeable todeceive usintogiving up
+our company's proprietary information. 
+What Belongs on Your Intranet? 
+Parts ofyour intranet may beopen totheoutside world, other parts
+restricted toemployees. How careful isyour company inmaking sure
+sensitive information isn't posted where it'saccessible toaudiences you
+meant toprotect itfrom? When isthe last time anyone inyour
+organization checked tosee ifany sensitive information onyour
+company's intranet had inadvertently been made available through the
+public-access areas of your Web site? 
+Ifyour company hasimplemented proxy servers asintermediaries to
+protect theenterprise from electronic security threats, have those servers
+been checked recently to be sure they're configured properly? 
+
+In fact, has anyone ever checked the security of your intranet? 
+ 
+
+ Chapter 5  
+"Let Me Help You" 
+We're allgrateful when we're plagued byaproblem andsomebody with
+theknowledge, skill, andwillingness comes along offering tolend usa
+hand. The social engineer understands that, and knows how totake
+advantage of it. 
+Healso knows how tocause aproblem foryou.., then make yougrateful
+when heresolves theproblem.., and finally play onyour gratitude to
+extract some information orasmall favor from youthatwill leave your
+company (ormaybe you, individually) very much worse offforthe
+encounter. And youmay never even know you've lostsomething ofvalue.
+Here are some typical ways that social engineers step forward to "help." 
+THE NETWORK OUTAGE 
+Day/Time: Monday, February 12, 3:25 p.m.  
+Place:  Offices of Starboard Shipbuilding 
+The First Call: Tom Delay
+"Tom DeLay, Bookkeeping." 
+"Hey, Tom, this is Eddie Martin from the Help Desk. We're trying to
+troubleshoot a computer networking problem. Do you know if anyone in
+your group has been having trouble staying on line?" 
+"Uh, not that I know of." 
+"And you're not having any problems yourself." 
+"No, seems fine." 
+ 
+
+"Okay, that's good. Listen, we're calling people who might beaffected
+'cause itLsimportant youletusknow right away ifyoulose your network
+connection."
+"That doesn't sound good. You think it might happen?"
+"We hope not, but you'll call if it does, right?"
+"You better believe it."
+"Listen, sounds like having your network connection go down would be a
+problem for you..."
+"You bet it would."
+"... so while we're working on this, let me give you my cell phone
+number. Then you can reach me directly if you need to."
+"That'd be great. Go ahead."
+"It's 555 867 5309."
+"555 867 5309. Got it. Hey, thanks. What was your name again?"
+"It's Eddie. Listen, one other thing--I need to check which port your
+computer is connected to. Take a look on your computer and see if there's
+a sticker somewhere that says something like 'Port Number'."
+"Hang on No, don't see anything like that."
+"Okay, then in the back of the computer, can you recognize the network
+cable."
+"Yeah."
+"Trace it back to where it's plugged in. See if there's a label on the jack it's
+plugged into."
+"Hold on a second. Yeah, wait a minute - I have to squat down here so I
+can get close enough to read it. Okay - it says Port 6 dash 47."
+"Good - that's what we had you down as, just making sure."
+The Second Call: The IT Guy
+Two days later, acall came through tothesame company's Network
+Operations Center.
+"Hi, thisisBob; I'minTom DeLay's office inBookkeeping. We're trying
+to troubleshoot a cabling problem. I need you to disable Port 6-47."
+The IT guy said it would be done in just a few minutes, and to let them
+know when he was ready to have it enabled.
+ 
+
+The Third Call: Getting Help from the Enemy 
+ About an hour later, the guy who called himself Eddie Martin was
+shopping at Circuit City when his cell phone rang. He checked the caller
+ID, saw the call was from the shipbuilding company, and hurried to a
+quiet spot before answering. 
+"Help Desk, Eddie." 
+"Oh, hey, Eddie. You've got an echo, where are you?" 
+"I'm, uh, in a cabling closet. Who's this? 
+"It's Tom DeLay. Boy, am I glad I got ahold of you. Maybe you
+remember you called me the other day? My network connection just went
+down like you said it might, and I'm a little panicky here." 
+"Yeah, we've got a bunch of people down right now. We should have it
+taken care of by the end of the day. That okay?" 
+"NO! Damn, I'll get way behind if I'm down that long. What's the best you
+can do for me?" 
+"How pressed are you?" 
+"I could do some other things for right now. Any chance you could take
+care of it in half an hour?" 
+"HALF AN HOUR! You don't want much. Well, look, I'll drop what I'm
+doing and see if I can tackle it for you." 
+"Hey, I really appreciate that, Eddie." 
+The Fourth Call: Gotcha! 
+Forty-five minutes later...
+"Tom? It's Eddie. Go ahead and try your network connection." 
+After a couple of moments: 
+"Oh, good, it's working. That's just great." 
+"Good, glad I could take care of it for you." 
+"Yeah, thanks a lot." 
+"Listen, ifyouwant tomake sure your connection doesn't godown again,
+there's some software you oughta berunning. Just take acouple of
+minutes." 
+"Now's not the best time." 
+"Iunderstand... Itcould save usboth bigheadaches thenext time this
+network problem happens." 
+ 
+
+"Well . . . if it's only a few minutes." 
+"Here's what you do..." 
+Eddie then took Tom through the steps ofdownloading asmall
+application from aWeb site. After theprogram haddownloaded, Eddie
+told Tom to double-click on it. He tried, but reported: 
+"It's not working. It's not doing anything." 
+"Oh, what apain. Something must bewrong with theprogram. Let's just
+getridofit,wecantryagain another time." And hetalked Tom through
+the steps of deleting the program so it couldn't be recovered. 
+Total elapsed time, twelve minutes. 
+The Attacker's Story 
+Bobby Wallace always thought itwas laughable when hepicked upa
+good assignment like this one and hisclient pussyfooted around the
+unasked butobvious question ofwhy they wanted theinformation. Inthis
+case hecould only think oftwo reasons. Maybe they represented some
+outfit that was interested inbuying the target company, Starboard
+Shipbuilding, andwanted toknow what kind offinancial shape they were
+really in-especially allthestuff thetarget might want tokeep hidden
+from apotential buyer. Ormaybe they represented investors who thought
+there was something fishy about theway themoney was being handled
+and wanted tofind outwhether some oftheexecutives had acase of
+hands-in-the cookie-jar.    
+And maybe hisclient also didn't want totellhimtherealreason because,
+ifBobby knew how valuable theinformation was, he'd probably want
+more money for doing the job. 
+There arealotofways tocrack intoacompany's most secret files. Bobby
+spent afew days mulling over thechoices and doing alittle checking
+around before hedecided onaplan. Hesettled ononethatcalled foran
+approach heespecially liked, where thetarget issetupsothatheasks the
+attacker for help. 
+Forstarters, Bobby picked upa$39.95 cellphone ataconvenience store.
+Heplaced acalltotheman hehadchosen ashistarget, passed himself off
+asbeing from thecompany help desk, andsetthings upsotheman would
+
+callBobby's cellphone anytime hefound aproblem with hisnetwork
+connection. 
+
+Heleftapause oftwodays soasnottobetooobvious, andthen made a
+calltothenetwork operations center (NOC) atthecompany. Heclaimed
+hewastrouble-shooting aproblem forTom, thetarget, andasked tohave
+Tom's network connection disabled. Bobby knew thiswas thetrickiest
+part ofthewhole escapade -inmany companies, thehelp desk people
+work closely with theNOC; infact, heknew thehelp desk isoften partof
+theITorganization. Buttheindifferent NOC guy hespoke with treated
+thecallasroutine, didn't askforthename ofthehelp desk person who
+was supposedly working onthenetworking problem, and agreed to
+disable thetarget's network port. When done, Tom would betotally
+isolated from thecompany's intranet, unable toretrieve files from the
+server, exchange files with hisco-workers, download hisemail, oreven
+send apage ofdata totheprinter. Intoday's world, that's likeliving ina
+cave. 
+AsBobby expected, itwasn't long before hiscellphone rang. Ofcourse
+hemade himself sound eager tohelp this poor "fellow employee" in
+distress. Then hecalled theNOC andhadtheman's network connection
+turned back on.Finally, hecalled theman and manipulated him once
+again, thistime making him feel guilty forsaying noafter Bobby had
+done him afavor. Tom agreed totherequest thathedownload apiece of
+software to his computer. 
+Ofcourse, what heagreed towasn't exactly what itseemed. Thesoftware
+thatTom was toldwould keep hisnetwork connection from going down,
+was really aTrojan Horse, asoftware application that didforTom's
+computer what theoriginal deception didfortheTrojans: Itbrought the
+enemy inside thecamp. Tom reported that nothing happened when he
+double-clicked onthesoftware icon; thefact was that, bydesign, he
+couldn't seeanything happening, even though thesmall application was
+installing asecret program thatwould allow theinfiltrator covert access to
+Tom's computer. 
+With thesoftware running, Bobby was provided with complete control
+over Tom's computer, anarrangement known asaremote command shell .
+When Bobby accessed Tom's computer, hecould look fortheaccounting
+files that might beofinterest andcopy them. Then, athisleisure, he'd
+examine them fortheinformation thatwould give hisclients what they
+were looking for.
+
+LINGO
+TROJAN HORSE: Aprogram containing malicious orharmful code,
+designed todamage thevictim's computer orfiles, orobtain information
+from thevictim's computer ornetwork. Some Trojans aredesigned tohide
+within thecomputer's operating system and spyonevery keystroke or
+action, oraccept instruction over anetwork connection toperform some
+function, all without the victim being aware of its presence.
+ 
+
+ 
+And thatwasn't all.Hecould goback atanytime tosearch through the
+email messages andprivate memos ofthecompany's executives, running
+atext search forwords that might reveal any interesting tidbits of
+information. 
+Late onthenight thatheconned histarget intoinstalling theTrojan Horse
+software, Bobby threw thecellphone into aDumpster. Ofcourse hewas
+careful toclear thememory first andpullthebattery outbefore hetossed
+it-thelastthing hewanted was forsomebody tocallthecellphone's
+number by mistake and have the phone start ringing! 
+Analyzing the Con 
+The attacker spins a web to convince the target he has a problem that, in
+fact, doesn't really exist - or, as in this case, a problem that hasn't
+happened yet, but that the attacker knows will  happen because he's going
+to cause it. He then presents himself as the person who can provide the
+solution. 
+The setup in this kind of attack is particularly juicy for the attacker: 
+Because of the seed planted in advance, when the target discovers he has 
+a problem, he himself makes the phone call to plead for help. The attacker
+just sits and waits for the phone to ring, a tactic fondly known in the trade 
+as reverse social engineering . An attacker who can make the target call
+him 
+gains instant credibility: If I place a call to someone I think is on the help
+desk,
+I'm not going to start asking him to prove his identity. That's when the
+attacker has it made.
+LINGO
+REMOTE COMMAND SHELL: A non graphical interface that accepts
+text based commands to perform certain functions or run programs. An
+attacker who exploits technical vulnerabilities or is able to install a Trojan
+Horse program on the victims computer may be able to obtain remote
+access to a command shell
+REVERSE SOCIAL ENGINEERING: A social
+engineering attack in which the attacker sets up a
+situation where the victim encounters a problem and
+
+contacts the attacker for help. Another form of reverse
+social engineering turns the tables on the attacker. The
+target recognizes the attack, and uses psychological
+principles of influence to draw out as much information
+as possible from the attacker so that the business can
+safeguard targeted assets.
+
+MITNICK MESSAGE
+If a stranger does you a favor, then asks you for a favor,
+don't reciprocate without thinking carefully about what
+he's asking for. 
+Inaconlike thisone, thesocial engineer tries topick atarget who is
+likely tohave limited knowledge ofcomputers. The more heknows, the
+more likely thathe'll getsuspicious, orjustplain figure outthathe'sbeing
+manipulated. What Isometimes call thecomputer-challenged worker,
+who isless knowledgeable about technology and procedures, ismore
+likely tocomply. He's allthemore likely tofallforaruse like "Just
+download this little program," because hehasnoidea ofthepotential
+damage asoftware program can inflict. What's more, there's amuch
+smaller chance he'll understand thevalue oftheinformation onthe
+computer network that he's placing at risk. 
+A LITTLE HELP FOR THE NEW GAL 
+New employees arearipe target forattackers. They don't know many
+people yet,they don't know theprocedures orthedosanddon'ts ofthe
+company. And, inthename ofmaking agood first impression, they're
+eager show how cooperative and quick to respond they can be. 
+Helpful Andrea  
+"Human Resources, Andrea Calhoun." 
+"Andrea, hi, this is Alex, with Corporate Security." 
+"Yes?" 
+"How're you doing today?" 
+"Okay. What can I help you with?" 
+"Listen, we're developing a security seminar for new employees and we
+need to round up some people to try it out on. I want to get the name and
+phone number of all the new hires in the past month. Can you help me
+with that?" 
+"I won't be able to get to it 'til this afternoon. Is that okay? 
+"What's your extension?" 
+ 
+
+
+[Note: PDF has 577 pages, only first 100 pages extracted]

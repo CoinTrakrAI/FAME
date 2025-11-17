@@ -1,0 +1,89 @@
+groups:
+  - name: fame-trading-critical
+    interval: 30s
+    rules:
+      - alert: TradingServiceUnhealthy
+        expr: trading_health_status == 0
+        for: 2m
+        labels:
+          severity: critical
+          service: fame_trading
+        annotations:
+          summary: "FAME Trading service unhealthy"
+          description: "trading_health_status has reported unhealthy for more than 2 minutes. Investigate exporters and trading microservices."
+      - alert: TradingAPIErrorsHigh
+        expr: rate(trading_api_errors_total[5m]) / rate(trading_api_calls_total[5m]) > 0.2
+        for: 5m
+        labels:
+          severity: high
+          service: fame_trading
+        annotations:
+          summary: "High error ratio on trading APIs"
+          description: "More than 20% of trading API calls are failing. Check Finnhub/AlphaVantage connectivity."
+      - alert: TradingCircuitBreakerTrip
+        expr: increase(trading_circuit_breaker_trips_total[10m]) > 0
+        for: 0m
+        labels:
+          severity: high
+          service: fame_trading
+        annotations:
+          summary: "Circuit breaker fired"
+          description: "Trading circuit breaker triggered in the last 10 minutes. Inspect providers and retry logic."
+  - name: fame-trading-business
+    interval: 1m
+    rules:
+      - alert: TradingROIPlunge
+        expr: trading_projected_roi_avg < 0
+        for: 10m
+        labels:
+          severity: medium
+          service: fame_trading
+        annotations:
+          summary: "Projected ROI negative"
+          description: "Average projected ROI has fallen below zero for 10 minutes."
+      - alert: TradingSignalStall
+        expr: rate(trading_signals_generated_total[15m]) == 0
+        for: 15m
+        labels:
+          severity: medium
+          service: fame_trading
+        annotations:
+          summary: "No trading signals generated"
+          description: "Trading module has not produced any signals in the last 15 minutes."
+      - alert: TradingWinRateDrop
+        expr: rate(trading_win_trades_total[30m]) / clamp_min(rate(trading_loss_trades_total[30m]), 1) < 0.5
+        for: 30m
+        labels:
+          severity: low
+          service: fame_trading
+        annotations:
+          summary: "Trading win/loss ratio deteriorating"
+          description: "Win/loss ratio dropped below 0.5 in the last 30 minutes."
+      - alert: TradingExecutionLatencySpike
+        expr: rate(trading_execution_latency_ms_avg[5m]) > 300
+        for: 3m
+        labels:
+          severity: high
+          service: fame_trading
+        annotations:
+          summary: "Execution latency high"
+          description: "Average execution latency {{ $value }}ms exceeds 300ms threshold."
+      - alert: TradingExecutionSlippageHigh
+        expr: trading_execution_slippage_bps_avg > 15
+        for: 5m
+        labels:
+          severity: medium
+          service: fame_trading
+        annotations:
+          summary: "High execution slippage"
+          description: "Execution slippage {{ $value }} bps exceeds 15 bps threshold."
+      - alert: TradingExecutionRejection
+        expr: increase(trading_execution_orders_rejected[5m]) > 0
+        for: 0m
+        labels:
+          severity: critical
+          service: fame_trading
+        annotations:
+          summary: "Execution order rejected"
+          description: "At least one order was rejected in the last 5 minutes."
+

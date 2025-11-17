@@ -1,0 +1,101 @@
+apiVersion: 1
+providers:
+  - name: FAME Business KPIs
+    orgId: 1
+    folder: FAME Dashboards
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards/fame-business-kpi
+
+dashboard:
+  title: "FAME Business KPI Overview"
+  tags: ["FAME", "Business"]
+  timezone: browser
+  refresh: 30s
+  panels:
+    - title: "Projected ROI"
+      type: timeseries
+      gridPos: { h: 8, w: 12, x: 0, y: 0 }
+      targets:
+        - expr: trading_projected_roi_avg
+          legendFormat: "Projected ROI"
+      fieldConfig:
+        overrides: []
+        defaults:
+          unit: percent
+          thresholds:
+            mode: absolute
+            steps:
+              - color: green
+                value: 0
+              - color: red
+                value: -0.05
+
+    - title: "Win / Loss Ratio"
+      type: stat
+      gridPos: { h: 8, w: 6, x: 12, y: 0 }
+      targets:
+        - expr: rate(trading_win_trades_total[30m]) / clamp_min(rate(trading_loss_trades_total[30m]), 1)
+          legendFormat: "Win Ratio"
+      fieldConfig:
+        defaults:
+          unit: ratio
+          thresholds:
+            mode: absolute
+            steps:
+              - color: red
+                value: 0
+              - color: yellow
+                value: 0.5
+              - color: green
+                value: 0.7
+
+    - title: "Voice Success Rate"
+      type: timeseries
+      gridPos: { h: 8, w: 12, x: 0, y: 8 }
+      targets:
+        - expr: 1 - (increase(trading_voice_failed_requests[5m]) / clamp_min(increase(trading_voice_total_requests[5m]), 1))
+          legendFormat: "Voice Success"
+      fieldConfig:
+        defaults:
+          unit: percent
+          thresholds:
+            mode: absolute
+            steps:
+              - color: red
+                value: 0
+              - color: yellow
+                value: 0.6
+              - color: green
+                value: 0.8
+
+    - title: "Execution Metrics"
+      type: table
+      gridPos: { h: 10, w: 12, x: 12, y: 8 }
+      targets:
+        - expr: |
+            trading_execution_latency_ms_avg
+      transformations:
+        - id: labelsToFields
+      options:
+        showHeader: true
+
+    - title: "Conversation Training Cycles"
+      type: timeseries
+      gridPos: { h: 8, w: 24, x: 0, y: 16 }
+      targets:
+        - expr: rate(training_cycles_total{training_type="conversation"}[5m])
+          legendFormat: "Conversation Training Cycles"
+      fieldConfig:
+        defaults:
+          unit: ops
+          thresholds:
+            mode: absolute
+            steps:
+              - color: red
+                value: 0
+              - color: green
+                value: 1
+

@@ -1,0 +1,26 @@
+# Trading module optional dependencies
+
+# Core data processing
+pandas>=1.5.0
+numpy>=1.21.0
+httpx>=0.24.0
+aiofiles>=23.0.0
+
+# Configuration & validation
+python-dotenv>=1.0.0
+pydantic>=1.10.0
+
+# Technical analysis (platform specific)
+TA-Lib>=0.4.24; sys_platform != 'win32'
+ta-lib>=0.4.0; sys_platform == 'win32'
+
+# Resilience & retries
+circuitbreaker>=1.4.0
+tenacity>=8.2.0
+
+# Testing
+pytest>=7.0.0
+pytest-asyncio>=0.21.0
+pytest-mock>=3.10.0
+
+

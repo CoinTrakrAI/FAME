@@ -1,0 +1,62 @@
+{
+  "example_queries": [
+    {
+      "description": "Code generation - reverse string",
+      "query": {
+        "text": "Write a Python function to reverse a string",
+        "intent": "generate_code",
+        "user": "test_user"
+      },
+      "expected_plugins": ["universal_developer"],
+      "expected_fields": ["code", "test_report"]
+    },
+    {
+      "description": "Market analysis - BTC price",
+      "query": {
+        "text": "What is BTC price today?",
+        "intent": "market_analysis",
+        "user": "test_user"
+      },
+      "expected_plugins": ["advanced_investor_ai", "web_scraper"],
+      "expected_fields": ["price", "data"]
+    },
+    {
+      "description": "Architecture design",
+      "query": {
+        "text": "Design a reverse proxy architecture",
+        "intent": "architecture_design",
+        "user": "test_user"
+      },
+      "expected_plugins": ["universal_developer"],
+      "expected_fields": ["architecture", "recommendations"]
+    },
+    {
+      "description": "Evolution cycle request",
+      "query": {
+        "text": "Run evolution cycle to improve code generation",
+        "intent": "evolution",
+        "user": "test_user"
+      },
+      "expected_plugins": ["evolution_engine"],
+      "expected_fields": ["status", "level"]
+    },
+    {
+      "description": "Security testing (should be gated)",
+      "query": {
+        "text": "Test penetration of example.com",
+        "intent": "security_test",
+        "user": "test_user"
+      },
+      "expected_plugins": ["universal_hacker", "cyber_warfare"],
+      "expected_fields": ["error", "capability_disabled"],
+      "requires_admin": true
+    }
+  ],
+  "test_commands": {
+    "basic_query": "curl -X POST http://localhost:8000/query -H 'Content-Type: application/json' -d '{\"text\":\"reverse a string\",\"intent\":\"generate_code\"}'",
+    "health_check": "curl http://localhost:8000/health",
+    "list_plugins": "curl http://localhost:8000/plugins",
+    "audit_log": "curl http://localhost:8000/audit?limit=10"
+  }
+}
+

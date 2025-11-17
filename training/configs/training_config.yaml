@@ -1,0 +1,16 @@
+run_defaults:
+  feedback_sources:
+    - telemetry/feedback
+  feature_store_path: data/feature_store
+  policy_output_path: models/policies
+training:
+  batch_size: 512
+  learning_rate: 0.0001
+  epochs: 3
+evaluation:
+  min_samples: 100
+  drift_kl_threshold: 0.15
+online:
+  buffer_size: 500
+  grace_period_events: 200
+

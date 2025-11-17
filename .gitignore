@@ -1,6 +1,13 @@
+# ============================================
+# FAME Project .gitignore
+# ============================================
+
+# ============================================
+# Python
+# ============================================
 # Byte-compiled / optimized / DLL files
 __pycache__/
-*.py[codz]
+*.py[cod]
 *$py.class
 
 # C extensions
@@ -134,7 +141,9 @@ celerybeat.pid
 # SageMath parsed files
 *.sage.py
 
-# Environments
+# ============================================
+# Virtual Environments
+# ============================================
 .env
 .envrc
 .venv
@@ -143,6 +152,9 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+fame_env/
+virtualenv/
+*.virtualenv
 
 # Spyder project settings
 .spyderproject
@@ -205,3 +217,225 @@ cython_debug/
 marimo/_static/
 marimo/_lsp/
 __marimo__/
+
+# ============================================
+# IDE & Editors
+# ============================================
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+*.sublime-project
+*.sublime-workspace
+*.code-workspace
+
+# ============================================
+# Jupyter Notebooks
+# ============================================
+.ipynb_checkpoints
+*.ipynb
+
+# ============================================
+# Testing & Coverage
+# ============================================
+.pytest_cache/
+.coverage
+htmlcov/
+.tox/
+.nox/
+.hypothesis/
+*.cover
+*.log
+.cache
+nosetests.xml
+coverage.xml
+*.pytest_cache/
+
+# ============================================
+# Logs
+# ============================================
+logs/
+*.log
+log/
+*.log.*
+
+# ============================================
+# Environment Variables & Secrets
+# ============================================
+.env.local
+.env.*.local
+*.env
+config/.env
+config/env.local
+*.pem
+*.key
+*.p12
+*.pfx
+secrets/
+.secrets/
+
+# ============================================
+# Models & Data (Large Files)
+# ============================================
+models/*.pkl
+models/*.h5
+models/*.pt
+models/*.pth
+models/*.onnx
+models/*.pb
+models/trained/
+models/checkpoints/
+*.model
+*.weights
+
+# Vector databases
+vector_memory/*.index
+vector_memory/*.faiss
+*.faiss
+*.index
+
+# Data files (uncomment if you don't want to track data)
+# data/
+# *.csv
+# *.json
+# *.parquet
+# *.h5
+# *.hdf5
+
+# ============================================
+# Docker
+# ============================================
+.dockerignore
+docker-compose.override.yml
+*.dockerfile.local
+
+# ============================================
+# Build Artifacts
+# ============================================
+build/
+dist/
+*.spec.bak
+*.exe
+*.app
+*.dmg
+*.deb
+*.rpm
+*.msi
+*.whl
+
+# PyInstaller
+*.spec
+*.manifest
+
+# ============================================
+# OS Files
+# ============================================
+# Windows
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+$RECYCLE.BIN/
+*.lnk
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+._*
+.Spotlight-V100
+.Trashes
+
+# Linux
+*~
+.directory
+.Trash-*
+
+# ============================================
+# Temporary Files
+# ============================================
+*.tmp
+*.temp
+*.bak
+*.backup
+*.old
+*.orig
+*.save
+*.swp
+*.swo
+*~
+
+# ============================================
+# FAME-Specific
+# ============================================
+# Knowledge base caches
+knowledge_base/*.index
+knowledge_base/*.cache
+
+# Training data
+training/data/
+training/models/
+training/checkpoints/
+
+# Analytics & Telemetry
+analytics/*.db
+analytics/*.sqlite
+telemetry/*.db
+
+# Backups
+backups/
+*.backup
+*.bak
+
+# Cache directories
+cache/
+.cache/
+*.cache
+
+# LocalAI models (large files)
+LocalAI_Config/models/*.gguf
+LocalAI_Config/models/*.bin
+LocalAI_Config/models/*.safetensors
+LocalAI_Config/models/*.pt
+
+# Keep .gitkeep files
+!.gitkeep
+!LocalAI_Config/models/.gitkeep
+
+# ============================================
+# API Keys & Credentials (Extra Safety)
+# ============================================
+*_key.txt
+*_secret.txt
+*_token.txt
+*_password.txt
+credentials.json
+secrets.json
+api_keys.json
+config/secrets.yaml
+config/secrets.yml
+
+# ============================================
+# Documentation Build
+# ============================================
+docs/_build/
+docs/.doctrees/
+site/
+
+# ============================================
+# Misc
+# ============================================
+*.pid
+*.seed
+*.pid.lock
+node_modules/
+.npm
+.yarn/
+package-lock.json
+yarn.lock
+
+# Keep example files
+!config/env.example
+!*.example
+!*.example.*

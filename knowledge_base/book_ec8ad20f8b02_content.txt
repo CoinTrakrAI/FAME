@@ -1,0 +1,4563 @@
+HACKING
+An	unofficial	anonymous	guide
+Windows	and	Internet
+	
+	
+©	Copyright	Reserved	to	
+Jonathan	Jones
+_______________________________
+DISCLAIMER
+This	book	has	been	published	for	education	purpose	only.	It	does	not	in	deem	to	legitimize	certain	steps	that	may	be
+illegal	under	applicable	law	and	organization	policies	in	different	parts	of	the	world.	This	book	does	not	contain	any
+legal	permission	on	what	may	be	deemed	as	legal.	Readers	are	advised	to	examine	the	privacy	policy,	organization
+policies	and	the	laws	of	respective	countries	before	taking	their	own	decisions.	They	cannot	rely	on	the	present
+publication	as	a	defense	in	any	proceeding.	The	publisher	and	author	are	not	liable	for	any	steps	that	a	reader	may	take
+based	on	this	publication	and	are	not	responsible	for	any	steps	that	may	have	been	taken	after	reading	the	publication.
+Microsoft	Windows	and	any	other	marks	used	(Pictures,	Screen	Shots,	etc.)	have	been	used	descriptively	as	the	marks
+are	owned	by	third	parties.
+_______________________________
+Please	mention	your	valuable	ratings	and	review	on	Amazon
+________________________________________
+Contents
+Click	the	link	below	headings	for	fast	travel
+________________________________________
+CHAPTER	1	:	INTRODUCTION	TO	HACKING
+1.1														Hacking
+1.2														Hacker
+1.3														Classifications	of	Hacker
+1.4														Famous	Hackers	of	All	Time
+1.5														Types	of	hacking	attacks	and	techniques
+1.6														Password
+
+	
+	
+CHAPTER	2	:	WINDOWS	HACKING
+2.1														Introduction	to	Windows	Hacking
+2.2														Registry	Editor	Related	Hacking
+What	is	Windows	Registry?	(Registry	Editor)
+Back	up	the	registry
+Ultra-speed	Shutdown	of	Windows	7
+Change	the	log-on	screen	of	Windows	7
+Disable	or	Enable	USB	Ports/USB	drive/Pen-Drive	in	Windows	7
+How	to	Display	Legal	Notice	on	Start	up	of	your	Windows
+Faster	Thumbnail	Previews
+Disable	Right-Click
+How	to	Disable	or	Enable	Folder	Options	in	Windows	7
+Clean	up	the	“Open	With”	Menu	in	Explorer
+Add	Recycle	Bin	to	My	Computer	in	Windows	7
+Add	Control	Panel	to	My	Computer	in	Windows	7
+2.3														Local	Group	Policies	Related	Hacking
+Want	to	know:	What	happened	in	your	absences	on	your	PC?
+How	to	Disable	Shutdown,	Restart,	Sleep	and	Hibernate
+How	to	Disable	Access	to	the	Registry	in	Windows	7
+Prevent	access	to	the	command	prompt
+How	to	show	or	hide	Control	Panel	items	in	Windows	7
+How	to	Disable	Control	Panel	in	Windows	7
+Disable	Windows	Hotkeys
+2.4														Shortcuts	Related	Hacking
+One	Click	Shutdown	/	Restart	/		LogOff	/	Sleep	/	Hibernate	–	(Creating	a	Shortcut)
+How	to	pin	My	Computer	to	Windows	7	taskbar	directly
+Lock	your	computer	in	single	click
+Safety	Remove	Hardware	from	desktop
+2.5														Notepad	Related	Hacking
+Dancing	Keyboard	Led	Light	Trick
+Make	your	computer	talk	what	you	type!
+Pin	a	drive	to	the	taskbar
+Shut-down	the	computer	after	conveying	a	message
+Matrix	Falling	Code	Effect
+Make	Your	Keyboard	Type	(Any)	Message	Continuously
+Continuously	eject	CD/DVD	drives
+Notepad	trick	to	use	it	as	a	Diary
+
+World	Trade	Center	Notepad	Trick
+2.6														Miscellaneous	Related	Hacking
+Increase	Windows	Boot	Up	Speed
+Speed	up	the	Windows	7
+God	Mode	of	Windows	7
+Unlock	Hidden	Themes	in	Windows	7
+Create	Keyboard	Shortcuts	for	Programs
+Invisible	a	folder
+Open	any	folder	in	Command	Prompt	instantly
+Open	Command	Prompt	with	right	click
+Reset	Windows	7	password	with	Simple	Command
+Watch	Star	War	Episode	IV	in	Command	Prompt
+Set	your	Shutdown	Button	/	Power	button
+Use	Check	Boxes	in	Windows	Explorer
+Use	Pen	drive	to	fast	your	computer	(Boost	performance	with	ReadyBoost)
+Secure	USB	Drives	with	BitLocker
+Create	a	System	Recovery	Disc
+Rotate	Upside-Down	Desktop	Screen
+Disable	Error	Reporting	in	Windows	7
+Know	the	Exact	time	of	Last	Turn	on	the	Computer
+Make	a	Private	Folder	–	no-one	can	enter,	copy,	cut,	delete	Private	Folder
+How	to	Make	Your	PDF	Files	Speak	To	You
+Swap	Mouse	Right	&	Left	Click
+Enable	/	Disable	Automatic	Updates	in	Windows	7
+Change	Your	Computer	Name	in	Windows	7
+Steganography	–	Hide	a	text	behind	an	image
+Disable	delete	confirmation	dialog	box
+Minimize	quickly	with	shake
+Snap
+Aero	Peek
+Change	how	icons	appear	on	the	taskbar
+Pin	any	item	to	the	Windows	7	taskbar
+Pin	Control	Panel	to	the	Taskbar
+Windows	7	Taskbar	icons	appears	in	the	center	of	the	taskbar
+Access	Jump	Lists	with	the	Left	Mouse	Button
+Customize	Number	of	Items	in	Jump	Lists	&	Start	Menu
+Add	Any	Folder	to	Favorites
+Get	Exact	Colors	on	Your	Screen
+Adjust	Screen	Text	with	Clear	Type
+Shortcut	to	Run	Program	as	Administrator
+Run	commands	List
+Simple	Steps	to	Protecting	Your	Computer
+	
+
+	
+CHAPTER	3	:	INTERNET	HACKING
+3.1														Introduction	to	Internet	Hacking
+3.2														Block	and	unblock	any	website
+3.3														How	to	Increase	Internet	Speed
+3.4														Search	Internet	from	the	Start	Menu
+3.5														Know	any	website	IP	address	in	Command	Prompt
+3.6														View	Passwords	hidden	in	asterisks
+3.7														How	to	speedup	online	videos	and	performance	of	Firefox
+3.8														Sign-out	of	all	Gmail	sessions
+3.9														Sign-in	to	multiple	Google	accounts	in	the	same	browser
+3.10														Log	in	to	multiple	web	accounts	simultaneously	-	(Google,	Gmail,	Facebook,
+Twitter,	etc.)
+3.11														Save	any	web	article	to	PDF	for	free
+3.12														Free	online	Resume	builder
+3.13														Unlock	PDF	and	EXCEL	files	Online
+3.14														Free	online	file	converter
+3.15														Online	Edit	Photos
+3.16														Scan	your	files	for	malwares	online	for	free
+3.17														Online	trace	any	mobile	number	anywhere
+3.18														Search	pictures	of	people	in	3D	layout
+3.19														Disable	websites	from	resizing	your	Firefox	browser	window
+3.20														How	to	run	Firefox	inside	Firefox	inside	Firefox
+3.21														YouTube	SECRETS
+3.22														Add	Firefox’s	Spelling-Check	feature	to	forms
+3.23														Check	username	availability	on	multiple	sites	at	once
+3.24														You	don’t	need	the	“http://”	portion	of	a	web	page	on	Address	bar/Location
+bar
+3.25														Take	advantage	of	tabbed	browsing
+3.26														Quickly	move	between	the	fields	of	a	web	page
+3.27														Google	“I’m	Feeling	Lucky”	button	Magic	Tricks
+3.28														Google	Results	page	full	overview
+
+3.29														Google	Calculator
+3.30														Search	with	an	exact	phrase	in	Google
+3.31														Search	for	specific	file	types	in	Google
+3.32														Google	Measurement	Converter
+3.33														Currency	conversions	in	Google
+3.34														Exact	time	of	any	place	in	Google
+3.35														Check	the	weather	of	anywhere	in	Google
+3.36														Get	Sunset	and	Sunrise	time	of	anywhere	in	Google
+3.37														Get	definitions	of	everything	in	Google
+3.38														Trace	My	IP	Address
+3.39														Search	by	advanced	image	search	in	Google
+3.40														Get	movie	times	in	Google
+3.41														Get	the	list	of	all	films	of	any	Actor	and	Actress
+3.42														Google	URL	shortener
+3.43														Google	Earth
+3.44														Most	useful	Google	Operators
+3.45														Google	help	center
+3.46														Backup	all	your	facebook	data	like	photos,	videos,	and	text
+3.47														Facebook	shortcut	keys
+3.48														How	to	deactivate	or	permanently	delete	a	Facebook	account
+3.49														Post	blank	status	and	comment	on	facebook
+3.50														Insert	symbols	and	characters	in	Facebook	status	and	comments
+3.51							How	to	block	people/apps/events/pages	on	facebook
+3.52														View	Facebook	Photos	in	Full	Screen	Mode
+3.53														How	to	find	if	somebody	hacked	your	facebook	account
+3.54														How	to	Block	Facebook	Applications	Forever
+3.55														Who	can	look	me	up?	On	Facebook
+3.56														Facebook	Emoji
+3.57														Convert	Facebook	Profile	into	a	Page
+3.58														Verify	Facebook	Page	or	Profile
+3.59														Accept/Reject	all	Facebook	Requests	at	once
+
+3.60														Delete	all	Facebook	Messages	at	once
+3.61														Hide	last	seen	in	Facebook	chat
+3.62														Wayback	Machine
+3.63														WEB	proxy	server	or	HTTP	proxy	server
+3.64														Glype
+3.65														Hide-My-IP.Com
+3.66														JonDo	–	the	IP	changer
+3.67														VPN	(Virtual	Private	Network)	Services
+3.68														Useful	Extensions	and	Add-ons
+	
+	
+CHAPTER	4	:	USEFUL	HACKING	SOFTWARE	AND	TOOLS
+4.1														Password	cracker	software
+4.2														Wireless	hacking	tools
+4.3														Network	scanning	&	hacking	tools
+4.4														Packet	crafting	to	exploit	firewall	weaknesses
+4.5														Traffic	monitoring	for	network	related	hacking
+4.6														Packet	sniffers	to	analyze	traffic
+4.7														Rootkit	detectors	to	hack	file	system
+4.8														Fuzzers	to	search	vulnerabilities
+4.9														Forensics
+4.10														Debuggers	to	hack	running	programs
+4.11														Hacking	operating	systems
+4.12														Encryption	tools
+4.13														Intrusion	detection	system	and	the	ids	tools
+4.14														Hacking	vulnerability	exploitation	tools
+4.15														Vulnerability	scanners
+4.16														Web	vulnerability	scanners
+	
+	
+	
+
+_______________________________________
+CHAPTER	1
+INTRODUCTION	TO	HACKING
+_______________________________________
+1.1														Hacking
+The	most	fundamental	meaning	of	hacking	is	gaining	unauthorized	access	to	data	in	a
+system	or	computer.
+Hacking	is	exploiting	security	controls	either	in	a	technical,	physical	or	a	human-based
+element.
+		
+~	Kevin	Mitnick
+However,	the	word	“
+hacking
+”	has	two	definitions.	The	first	definition	refers	to	the
+hobby/profession	of	working	with	computers.	The	second	definition	refers	to	modifies
+computer	hardware	or	software	in	a	way	that	changes	the	creator’s	original	intent.
+It	is	the	art	of	exploiting	computers	to	get	access	to	otherwise	unauthorized	information.
+Now	that	the	world	is	using	IT	systems	to	gather,	store	and	manipulate	important
+information	there	is	also	a	need	to	make	sure	that	data	is	secure.	However,	no	system	is
+without	is	problems.	Holes	are	often	present	within	security	systems	which,	if	exploited,
+allow	hackers	to	gain	access	to	this	otherwise	restricted	information.
+	
+1.2														Hacker
+Computer	Hackers	have	been	around	for	so	many	years.	Since	the	Computer	and	Internet
+became	widely	used	in	the	World,	We	have	started	to	hear	more	and	more	about	hacking.
+As	the	word	‘Hacking’	has	two	meaning,	so	the	word	‘Hacker’	is	a	word	that	has	two
+meanings:
+Traditionally,	a	Hacker	is	someone	who	likes	to	play	with	Software	or	Electronic	Systems.
+Hackers	enjoy	Exploring	and	Learning	how	Computer	systems	operate.	They	love
+discovering	new	ways	to	work	electronically.
+Recently,	Hacker	has	taken	on	a	new	meaning	that	someone	who	finds	weaknesses	in	a
+computer	or	computer	network,	though	the	term	can	also	refer	to	someone	with	an
+advanced	understanding	of	computers	and	computer	networks.
+Normally,	Hackers	are	people	who	try	to	gain	unauthorized	access	to	your	computer.
+With	controversy,	the	term	hacker	is	reclaimed	by	computer	programmers	who	argue	that
+
+someone	breaking	into	computers	is	better	called	a	cracker,	not	making	a	difference
+between	computer	criminals	(black	hats)	and	computer	security	experts	(white	hats).	Some
+white	hat	hackers	claim	that	they	also	deserve	the	title	hacker,	and	that	only	black	hats
+should	be	called	crackers.
+If	hackers,	if	anyone	committing	a	criminal	act,	wants	to	reduce	their	risk,	they	obviously
+don’t	involve	anybody	else.	The	greater	the	circle	of	people	that	know	what	you’re	doing,
+the	higher	the	risk.
+	
+~	Kevin	Mitnick
+	
+1.3														Classifications	of	Hacker
+There	are	many	more	types	of	hackers	in	the	world	according	to	their	motive	and	type	of
+work.	The	following	list	forwards	one	mote	steps	to	better	knowing	hackers.
+White	hat	hacker
+The	term	“White	hat	hacker”	refers	to	an	ethical	hacker,	or	a	computer	security	expert,
+who	specializes	in	penetration	testing	and	in	other	testing	methodologies	to	ensure	the
+security	of	an	organization’s	information	systems.	Ethical	hacking	is	a	term	coined	by
+IBM	meant	to	imply	a	broader	category	than	just	penetration	testing.	White-hat	hackers
+are	also	called	penetration	tester,	sneakers,	red	teams,	or	tiger	teams.	Generally,	White	hat
+hackers	or	ethical	hackers	are	the	good	guy	in	the	world	of	hackers.
+Black	hat	hacker
+A	black	hat	hacker	is	an	individual	with	extensive	computer	knowledge	whose	purpose	is
+to	breach	or	bypass	internet	security.	Black	hat	hackers	are	also	known	as	crackers	or
+dark-side	hackers.	The	general	view	is	that,	while	hackers	build	things,	crackers	break
+things.	They	are	computer	security	hackers	that	break	into	computers	and	networks	or	also
+create	computer	viruses.	The	term	“black	hat”	comes	from	old	westerns	where	the	bad
+guys	usually	wore	black	hats.
+Black	hat	hackers	break	into	secure	networks	to	destroy	data	or	make	the	network
+unusable	for	those	who	are	authorized	to	use	the	network.
+They	choose	their	targets	using	a	two-pronged	process	known	as	the	“pre-hacking	stage”.
+Step	1:	Targeting
+Step	2:	Research	and	Information	Gathering
+Step	3:	Finishing	the	Attack
+Grey	hat	hacker
+A	grey	hat	hacker	is	a	combination	of	a	black	hat	and	a	white	hat	hacker.	It	may	relate	to
+whether	they	sometimes	arguably	act	illegally,	though	in	good	will,	or	to	show	how	they
+disclose	vulnerabilities.	They	usually	do	not	hack	for	personal	gain	or	have	malicious
+intentions,	but	may	be	prepared	to	technically	commit	crimes	during	the	course	of	their
+technological	exploits	in	order	to	achieve	better	security.
+
+Elite	hacker
+A	social	status	among	hackers,	elite	is	used	to	describe	the	most	skilled.	Newly	discovered
+activities	will	circulate	among	these	hackers.
+Script	kiddie
+A	script	kiddie	(or	skiddie)	is	a	non-expert	who	breaks	into	computer	systems	by	using
+pre-packaged	automated	tools	written	by	others,	usually	with	little	understanding	of	the
+underlying	concept	hence	the	term	script	(i.e.	a	prearranged	plan	or	set	of	activities)	kiddie
+(i.e.	kid,	child	an	individual	lacking	knowledge	and	experience,	immature).
+Neophyte
+A	neophyte,	“n00b”,	or	“newbie”	is	someone	who	is	new	to	hacking	or	phreaking	and	has
+almost	no	knowledge	or	experience	of	the	workings	of	technology,	and	hacking.
+Blue	hat
+A	blue	hat	hacker	is	someone	outside	computer	security	consulting	firms	who	is	used	to
+bug	test	a	system	prior	to	its	launch,	looking	for	exploits	so	they	can	be	closed.	Microsoft
+also	uses	the	term	BlueHat	to	represent	a	series	of	security	briefing	events.
+Hacktivist
+A	hacktivist	is	a	hacker	who	utilizes	technology	to	announce	a	social,	ideological,
+religious,	or	political	message.	In	general,	most	hacktivism	involves	website	defacement
+or	denial-of-service	attacks.
+Nation	state
+It	refers	to	Intelligence	agencies	and	cyber	warfare	operatives	of	nation	states.
+Organized	criminal	gangs
+Criminal	activity	carried	on	for	profit.
+Bots
+Automated	software	tools,	some	freeware,	available	for	the	use	of	any	type	of	hacker.
+What	does	it	take	to	become	a	hacker?
+Becoming	a	great	hacker	isn’t	easy	and	it	doesn’t	happen	quickly.	Being	creative	helps	a
+lot.	There	is	more	than	one	way	a	problem	can	be	solved,	and	as	a	hacker	you	encounter
+many	problems.	The	more	creative	you	are	the	bigger	chance	you	have	of	hacking	a
+system	without	being	detected.	Another	huge	quality	you	must	have	is	the	will	to	learn
+because	without	it,	you	will	get	nowhere.	Remember,	Knowledge	is	power.	Patience	is	also
+a	must	because	many	topics	can	be	difficult	to	grasp	and	only	over	time	will	you	master
+them.
+	
+1.4														Famous	Hackers	of	All	Time
+Kevin	Mitnick	:	a.k.a	
+The	Condor,	The	Darkside	Hacker
+
+Kevin	David	Mitnick
+	(born	August	6,	1963)	is	an	American	computer	security	consultant,
+author	and	hacker.
+He	was	once	the	most	wanted	cybercriminal	in	the	world.	He	had	an	obsession	with
+computers	that	escalated	into	a	two	and	half	year	hacking	spree	where	he	stole	millions	of
+dollars	of	corporate	secrets	from	IBM,	Motorola,	telecom	companies	and	even	the
+National	Defense	warning	system.
+At	age	15,	Mitnick	used	social	engineering	and	dumpster	diving	to	bypass	the	punch	card
+system	used	in	the	Los	Angeles	bus	system.	After	a	friendly	bus	driver	told	him	where	he
+could	buy	his	own	ticket	punch,	he	could	ride	any	bus	in	the	greater	LA	area	using	unused
+transfer	slips	he	found	in	the	trash.	Social	engineering	later	became	his	primary	method	of
+obtaining	information,	including	user-names	and	passwords	and	modem	phone	numbers.
+Mitnick	first	gained	unauthorized	access	to	a	computer	network	in	1979,	at	16,	when	a
+friend	gave	him	the	phone	number	for	the	Ark,	the	computer	system	Digital	Equipment
+Corporation	(DEC)	used	for	developing	their	RSTS/E	operating	system	software.	He
+broke	into	DEC’s	computer	network	and	copied	their	software,	a	crime	he	was	charged
+with	and	convicted	of	in	1988.	He	was	sentenced	to	12	months	in	prison	followed	by	three
+years	of	supervised	release.	Near	the	end	of	his	supervised	release,	Mitnick	hacked	into
+Pacific	Bell	voice	mail	computers.	After	a	warrant	was	issued	for	his	arrest,	Mitnick	fled,
+becoming	a	fugitive	for	two	and	a	half	years.
+According	to	the	U.S.	Department	of	Justice,	Mitnick	gained	unauthorized	access	to
+dozens	of	computer	networks	while	he	was	a	fugitive.	He	used	cloned	cellular	phones	to
+hide	his	location	and,	among	other	things,	copied	valuable	proprietary	software	from	some
+of	the	country’s	largest	cellular	telephone	and	computer	companies.	Mitnick	also
+intercepted	and	stole	computer	passwords,	altered	computer	networks,	and	broke	into	and
+read	private	e-mail.	Mitnick	was	apprehended	on	February	15,	1995,	in	Raleigh,	North
+Carolina.	He	was	found	with	cloned	cellular	phones,	more	than	100	clone	cellular	phone
+codes,	and	multiple	pieces	of	false	identification.
+In	1999,	he	was	convicted	of	various	computer	and	communications-related	crimes.	At	the
+time	of	his	arrest,	he	was	the	most-wanted	computer	criminal	in	the	United	States.
+
+Since	2000,	Mitnick	has	been	a	paid	security	consultant,	public	speaker	and	author.	He
+does	security	consulting	for	Fortune	500	companies,	performs	penetration	testing	services
+for	the	world’s	largest	companies	and	teaches	Social	Engineering	classes	to	dozens	of
+companies	and	government	agencies.
+	
+Vladimir	Levin	:	a.k.a	
+Vova
+First	internet	bank	robber
+He	is	a	Russian-born	Jewish	individual	famed	for	his	involvement	in	the	attempt	to
+fraudulently	transfer	USD	10.7	million	via	Citibank’s	computers.
+He	was	delivered	into	U.S.	custody	in	September	1997,	and	tried	in	the	United	States
+District	Court	for	the	Southern	District	of	New	York.	In	his	plea	agreement	he	admitted	to
+only	one	count	of	conspiracy	to	defraud	and	to	stealing	US$3.7	million.	In	February	1998
+he	was	convicted	and	sentenced	to	three	years	in	jail,	and	ordered	to	make	restitution	of
+US$240,015.	Citibank	claimed	that	all	but	US$400,000	of	the	stolen	US$10.7	million	had
+been	recovered.
+In	2005	an	alleged	member	of	the	former	St.	Petersburg	hacker	group,	claiming	to	be	one
+of	the	original	Citibank	penetrators,	published	under	the	name	ArkanoiD	a	memorandum
+on	popular	Provider.net.ru	website	dedicated	to	telecom	market.	According	to	him,	Levin
+was	not	actually	a	scientist	(mathematician,	biologist	or	the	like)	but	a	kind	of	ordinary
+system	administrator	who	managed	to	get	hands	on	the	ready	data	about	how	to	penetrate
+in	Citibank	machines	and	then	exploit	them.
+ArkanoiD	emphasized	all	the	communications	were	carried	over	X.25	network	and	the
+
+Internet	was	not	involved.	ArkanoiD’s	group	in	1994	found	out	Citibank	systems	were
+unprotected	and	it	spent	several	weeks	examining	the	structure	of	the	bank’s	USA-based
+networks	remotely.	Members	of	the	group	played	around	with	systems’	tools	(e.g.	were
+installing	and	running	games)	and	were	unnoticed	by	the	bank’s	staff.	Penetrators	did	not
+plan	to	conduct	a	robbery	for	their	personal	safety	and	stopped	their	activities	at	some
+time.	One	of	them	later	handed	over	the	crucial	access	data	to	Levin	(reportedly	for	the
+stated	$100).
+In	2005	an	anonymous	hacker	group	came	claiming	that	they	were	the	ones	truly
+responsible	for	the	theft	and	that	they	only	sold	Vladimir	the	data	needed	to	steal	the
+money.
+	
+Gary	Mckinnon	:	a.k.a	
+Solo
+He	was	known	by	his	Internet	handle,	“Solo.”	Using	that	name,	he	coordinated	what
+would	become	the	largest	military	computer	hack	of	all	time.	The	allegations	are	that	he,
+over	a	13-month	period	from	February	2001	to	March	2002,	illegally	gained	access	to	97
+computers	belonging	to	the	U.S.	Armed	Forces	and	NASA.
+He	claimed	that	he	was	only	searching	for	information	related	to	free	energy	suppression
+and	UFO	activity	cover-ups.	But	according	to	U.S.	authorities,	he	deleted	a	number	of
+critical	files,	rendering	over	300	computers	inoperable	and	resulting	in	over	$700,000	in
+damages.
+Being	of	Scottish	descent	and	operating	out	of	the	United	Kingdom,	he	was	able	to	dodge
+the	American	government	for	a	time.	As	of	today,	he	continues	to	fight	against	extradition
+to	the	United	States.
+	
+Mathew	Bevan	(a.k.a	
+Kuji
+)	and	Richard	Pryce	(a.k.a	
+Datastream	Cowboy
+)
+This	British	hacking	duo	took	the	U.S.	government	for	a	ride	when	they	attacked	the
+Pentagon’s	network	for	several	weeks	in	1994.	They	copied	battlefield	simulations	from
+Griffiss	Air	Force	Base	in	New	York,	intercepted	messages	from	U.S.	agents	in	North
+Korea,	and	got	access	into	a	Korean	nuclear	facility.	Pryce	was	a	16-year-old	then,	and
+Bevan	was	21	(he’s	thought	to	have	been	tutoring	Pryce).
+The	hacking	attacks	were	especially	troublesome	for	the	U.S.	government	because	they
+couldn’t	tell	if	the	duo	was	using	their	system	to	hack	into	a	South	or	North	Korea	-	if	it
+
+were	North	Korea,	the	attacks	could’ve	been	seen	as	an	act	of	war.	Luckily,	South	Korea
+was	the	hackers’	target,	and	after	an	international	investigation,	they	were	arrested	in	the
+following	year.
+	
+Michael	Calce	:	a.k.a	
+MafiaBoy
+He	was	a	high	school	student	from	West	Island,	Quebec,	who	launched	a	series	of	highly
+publicized	denial-of-service	attacks	in	February	2000	against	large	commercial	websites,
+including	Yahoo!,	Fifa.com,	Amazon.com,	Dell,	Inc.,	E*TRADE,	eBay,	and	CNN.	He	also
+launched	a	series	of	failed	simultaneous	attacks	against	9	of	the	13	root	name	servers.
+On	February	7,	2000,	Calce	targeted	Yahoo!	with	a	project	he	named	Rivolta,	meaning
+“riot”	in	Italian.	Rivolta	was	a	denial-of-service	attack	in	which	servers	become
+overloaded	with	different	types	of	communications	to	the	point	where	they	shut	down
+completely.	At	the	time,	Yahoo!	was	a	multibillion	dollar	web	company	and	the	top	search
+engine.	Mafiaboy’s	Rivolta	managed	to	shut	down	Yahoo!	for	almost	an	hour.	Calce’s	goal
+was,	according	to	him,	to	establish	dominance	for	himself	and	TNT,	his	cybergroup,	in	the
+cyberworld.	Buy.com	was	shut	down	in	response.	Calce	responded	to	this	in	turn	by
+bringing	down	Ebay,	CNN,	Amazon	and	Dell.com	via	DDoS	over	the	next	week.
+In	a	2011	interview,	Calce	tried	to	redeem	his	image	by	saying	that	the	attacks	had	been
+launched	unwittingly,	after	inputting	known	addresses	in	a	security	tool	he	had
+downloaded	from	a	repository	on	the	now	defunct	file-sharing	platform	Hotline,
+developed	by	Hotline	Communications.	Calce	would	then	have	left	for	school,	forgetting
+the	application	which	continued	the	attacks	during	most	of	the	day.	Upon	coming	home
+Calce	found	his	computer	crashed,	and	restarted	it	unaware	of	what	had	gone	on	during
+the	day.	Calce	claimed	when	he	overheard	the	news	and	recognized	the	companies
+mentioned	being	those	he	had	inputted	earlier	in	the	day	that	he	“started	to	understand
+what	might	have	happened”.
+	
+Adrian	Lamo	:	a.k.a
+	
+The	Homeless	hacker
+He	was	a	mobile	hacker	who	launched	his	work	from	the	confines	of	Internet	cafes,
+libraries	or	coffee	shops.	He	actually	did	it	just	as	a	challenge	and	for	fun,	as	he	would
+regularly	break	into	computer	systems	and	then	immediately	tell	the	owner	of	the	network
+
+about	its	vulnerability.	He	even	made	himself	an	expert	by	adding	his	name	to	the
+database	of	the	New	York	Times.
+Lamo	first	gained	media	attention	for	breaking	into	several	high-profile	computer
+networks,	including	those	of	The	New	York	Times,	Yahoo!,	and	Microsoft,	culminating	in
+his	2003	arrest.	In	2010,	Lamo	reported	U.S.	soldier	PFC	Bradley	Manning	(now	known
+as	Chelsea	Manning)	to	federal	authorities,	claiming	that	Manning	had	leaked	hundreds	of
+thousands	of	sensitive	U.S.	government	documents	to	WikiLeaks.	Manning	was	arrested
+and	incarcerated	in	the	U.S.	military	justice	system	and	later	sentenced	to	35	years	in
+confinement.
+	
+Jeanson	James	Ancheta	:	a.k.a	
+Resilient
+He	became	the	first	person	to	be	charged	for	controlling	large	numbers	of	hijacked
+computers	or	botnets	on	May	9,	2006.
+In	2004	he	started	to	work	with	botnets	rxbot,	a	computer	worm	that	can	spread	his	net	of
+infected	computers	which	gave	him	control	to	500,000	computers	including	US	military
+computers.
+In	November	2005	he	was	captured	in	an	elaborate	sting	operation	when	FBI	agents	lured
+him	to	their	local	office	on	the	pretext	of	collecting	computer	equipment.	The	arrest	was
+part	of	the	Operation	Bot	Roast.
+On	May	9,	2006	Ancheta	pleaded	guilty	to	four	felony	charges	of	violating	United	States
+Code	Section	1030,	Fraud	and	Related	Activity	in	Connection	with	Computers.	Ancheta
+must	serve	60	months	in	prison,	forfeit	a	1993	BMW	and	more	than	$58,000	in	profit.	He
+must	also	pay	restitution	of	$15,000	US	to	the	U.S.	federal	government	for	infecting	the
+military	computers.
+	
+Jonathan	James	:	a.k.a	
+c0mrade
+He	(December	12,	1983	–	May	18,	2008)	was	an	American	hacker	who	was	the	first
+juvenile	incarcerated	for	cybercrime	in	the	United	States.	The	South	Florida	native	was	15
+years	old	at	the	time	of	the	first	offense	and	16	years	old	on	the	date	of	his	sentencing.
+	
+
+
+What	is	his	ticket	to	fame?	He	was	convicted	and	sent	to	prison	for	hacking	in	the	United
+States–all	while	he	was	still	a	minor.	At	only	fifteen	years	of	age,	he	managed	to	hack	into
+a	number	of	networks,	including	those	belonging	to	Bell	South,	Miami-Dade,	the	U.S.
+Department	of	Defense,	and	NASA.
+Yes,	James	hacked	into	NASA’s	network	and	downloaded	enough	source	code	to	learn
+how	the	International	Space	Station	worked.	The	total	value	of	the	downloaded	assets
+equaled	$1.7	million.	To	add	insult	to	injury,	NASA	had	to	shut	down	their	network	for
+three	whole	weeks	while	they	investigated	the	breach,	which	cost	them	$41,000.
+The	story	of	James	has	a	tragic	ending,	however.	In	2007,	a	number	of	high	profile
+companies	fell	victim	to	a	massive	wave	of	malicious	network	attacks.	Even	though	James
+denied	any	involvement,	he	was	suspected	and	investigated.	In	2008,	James	committed
+suicide,	believing	he	would	be	convicted	of	crimes	that	he	did	not	commit.
+	
+Albert	Gonzalez
+He	paved	his	way	to	Internet	fame	when	he	collected	over	170	million	credit	card	and
+ATM	card	numbers	over	a	period	of	2	years.	Yep.	That’s	equal	to	a	little	over	half	the
+population	of	the	United	States.
+He	started	off	as	the	leader	of	a	hacker	group	known	as	ShadowCrew.	This	group	would
+go	on	to	steal	1.5	million	credit	card	numbers	and	sell	them	online	for	profit.	ShadowCrew
+also	fabricated	fraudulent	passports,	health	insurance	cards,	and	birth	certificates	for
+identity	theft	crimes	totaling	$4.3	million	stolen.
+The	big	bucks	wouldn’t	come	until	later,	when	Gonzalez	hacked	into	the	databases	of	TJX
+Companies	and	Heartland	Payment	Systems	for	their	stored	credit	card	numbers.	In	2010,
+Gonzalez	was	sentenced	to	prison	for	20	years	(2	sentences	of	20	years	to	be	served	out
+simultaneously).
+	
+Kevin	Poulsen	:	a.k.a	
+Dark	Dante
+He	gained	his	fifteen	minutes	of	fame	by	utilizing	his	intricate	knowledge	of	telephone
+systems.	At	one	point,	he	hacked	a	radio	station’s	phone	lines	and	fixed	himself	as	the
+
+winning	caller,	earning	him	a	brand	new	Porsche.	According	to	media,	he	was	called	the
+“Hannibal	Lecter	of	computer	crime.”
+He	then	earned	his	way	onto	the	FBI’s	wanted	list	when	he	hacked	into	federal	systems
+and	stole	wiretap	information.	Funny	enough,	he	was	later	captured	in	a	supermarket	and
+sentenced	to	51	months	in	prison,	as	well	paying	$56,000	in	restitution.
+Like	Kevin	Mitnick,	Poulsen	changed	his	ways	after	being	released	from	prison.	He	began
+working	as	a	journalist	and	is	now	a	senior	editor	for	Wired	News.	At	one	point,	he	even
+helped	law	enforcement	to	identify	744	sex	offenders	on	MySpace.
+	
+Anonymous
+The	concept	of	being	a	“digital	Robin	Hood”	was	far	from	being	conceived,	but	in	the
+computer	age,	it	is	very	likely	that	someone	somewhere	has	bagged	this	title.	A	“hacktivist
+group”	called	Anonymous	are	known	with	the	penname	of	being	the	“digital	Robin	Hood”
+amongst	its	supporters.	Identified	in	public	by	wearing	a	Guy	Fawkes	Masks,	Anons,	as
+they	are	widely	known,	have	publicized	themselves	by	attacking	the	government,	religious
+and	corporate	websites.	The	Vatican,	the	FBI,	the	CIA,	PayPal,	Sony,	Mastercard,	Visa,
+Chinese,	Israeli,	Tunisian,	and	Ugandan	governments	have	been	amongst	their	targets.
+Although,	Anons	have	been	arguing	whether	to	engage	in	a	serious	activism	or	a	mere
+entertainment,	many	of	the	group	members	have	clarified	their	intent	which	is	to	attack
+internet	censorship	and	control.
+Anonymous	originated	in	2003	on	the	imageboard	4chan,	representing	the	concept	of
+many	online	and	offline	community	users	simultaneously	existing	as	an	anarchic,	digitized
+global	brain.
+Beginning	with	2008’s	Project	Chanology—a	series	of	protests,	pranks,	and	hacks
+targeting	the	Church	of	Scientology—the	Anonymous	collective	became	increasingly
+associated	with	collaborative	hacktivism	on	a	number	of	issues	internationally.	Individuals
+claiming	to	align	themselves	with	Anonymous	undertook	protests	and	other	actions
+(including	direct	action)	in	retaliation	against	anti-digital	piracy	campaigns	by	motion
+picture	and	recording	industry	trade	associations.
+In	2012,	Time	called	Anonymous	one	of	the	“100	most	influential	people”	in	the	world.
+Anons	have	publicly	supported	WikiLeaks	and	the	Occupy	movement.	Related	groups
+LulzSec	and	Operation	AntiSec	carried	out	cyberattacks	on	US	government	agencies,
+media,	video	game	companies,	military	contractors,	military	personnel,	and	police
+officers,	resulting	in	the	attention	of	law	enforcement	to	the	groups’	activities.	It	has	been
+described	as	being	anti-Zionist,	and	has	threatened	to	erase	Israel	from	the	Internet	and
+engaged	in	the	“#OpIsrael”	cyber-attacks	of	Israeli	websites	on	Yom	HaShoah	(Holocaust
+
+Remembrance	Day)	in	2013.
+	
+LulzSec
+LulzSec	or	Lulz	Security,	a	high	profile,	Black	Hat	hacker	group,	gained	credentials	for
+hacking	into	Sony,	News	International,	CIA,	FBI,	Scotland	Yard,	and	several	noteworthy
+accounts.	So	notorious	was	the	group	that	when	it	hacked	into	News	Corporations
+account,	they	put	across	a	false	report	of	Rupert	Murdoch	having	passed	away.	While	the
+group	claims	to	have	retired	from	their	vile	duties,	the	motto	of	the	group,	“Laughing	at
+your	security	since	2011!”	stays	alive.	There	are	assertions	of	the	group	having	hacked
+into	the	websites	of	the	newspapers	like	The	Times	and	The	Sun	to	post	its	retirement
+news.	Many,	however,	claim	that	this	group	had	taken	it	upon	itself	to	create	awareness
+about	the	absence	of	efficient	security	against	hackers.
+One	of	the	founders	of	LulzSec	was	a	computer	security	specialist	who	used	the	online
+moniker	Sabu.	The	man	accused	of	being	Sabu	has	helped	law	enforcement	track	down
+other	members	of	the	organization	as	part	of	a	plea	deal.	At	least	four	associates	of
+LulzSec	were	arrested	in	March	2012	as	part	of	this	investigation.	British	authorities	had
+previously	announced	the	arrests	of	two	teenagers	they	allege	are	LulzSec	members	T-
+flow	and	Topiary.
+	
+Astra
+Astra,	a	Sanskrit	word	for	weapon	was	the	penname	of	a	hacker	who	dealt	in	the	weapon
+stealing	and	selling.	A	58-year-old	Greek	Mathematician	hacked	into	the	systems	of
+France’s	Dassault	Group,	stole	vulnerable	weapons	technology	data	and	sold	it	to	different
+countries	for	five	long	years.	While	the	real	identity	of	the	ASTRA	remains	untraced,
+officials	have	said	that	he	had	been	wanted	since	2002.	Astra	sold	the	data	to
+approximately	250	people	from	around	the	globe,	which	cost	Dassault	$360	millions	of
+damage.
+	
+1.5														Types	of	hacking	attacks	and	techniques
+A	typical	approach	in	a	hacking	attack	on	Internet-connected	system	is:
+Network	enumeration:
+	Discovering	information	about	the	intended	target.
+Vulnerability	analysis:
+	Identifying	potential	ways	of	attack.
+Exploitation:
+	Attempting	to	compromise	the	system	by	employing	the	vulnerabilities
+found	through	the	vulnerability	analysis.
+In	order	to	do	so,	there	are	several	recurring	tools	of	the	trade	and	techniques	used	by
+
+computer	criminals	and	security	experts.
+Security	exploits
+A	security	exploit	is	a	prepared	application	that	takes	advantage	of	a	known	weakness.
+Common	examples	of	security	exploits	are	SQL	injection,	Cross	Site	Scripting	and	Cross
+Site	Request	Forgery	which	abuse	security	holes	that	may	result	from	substandard
+programming	practice.	Other	exploits	would	be	able	to	be	used	through	FTP,	HTTP,	PHP,
+SSH,	Telnet	and	some	web-pages.	These	are	very	common	in	website/domain	hacking.
+Techniques	of	hacking
+Vulnerability	scanner
+A	vulnerability	scanner	is	a	tool	used	to	quickly	check	computers	on	a	network	for	known
+weaknesses.	Hackers	also	commonly	use	port	scanners.	These	check	to	see	which	ports	on
+a	specified	computer	are	“open”	or	available	to	access	the	computer,	and	sometimes	will
+detect	what	program	or	service	is	listening	on	that	port,	and	its	version	number.	(Note	that
+firewalls	defend	computers	from	intruders	by	limiting	access	to	ports/machines	both
+inbound	and	outbound,	but	can	still	be	circumvented.)
+Password	cracking
+Password	cracking	is	the	process	of	recovering	passwords	from	data	that	has	been	stored
+in	or	transmitted	by	a	computer	system.	A	common	approach	is	to	repeatedly	try	guesses
+for	the	password.
+Packet	sniffer
+A	packet	sniffer	is	an	application	that	captures	data	packets,	which	can	be	used	to	capture
+passwords	and	other	data	in	transit	over	the	network.
+Spoofing	attack	(Phishing)
+A	spoofing	attack	involves	one	program,	system,	or	website	successfully	masquerading	as
+another	by	falsifying	data	and	thereby	being	treated	as	a	trusted	system	by	a	user	or
+another	program.	The	purpose	of	this	is	usually	to	fool	programs,	systems,	or	users	into
+revealing	confidential	information,	such	as	user	names	and	passwords,	to	the	attacker.
+Rootkit
+A	rootkit	is	designed	to	conceal	the	compromise	of	a	computer’s	security,	and	can
+represent	any	of	a	set	of	programs	which	work	to	subvert	control	of	an	operating	system
+from	its	legitimate	operators.	Usually,	a	rootkit	will	obscure	its	installation	and	attempt	to
+prevent	its	removal	through	a	subversion	of	standard	system	security.	Rootkits	may
+
+include	replacements	for	system	binaries	so	that	it	becomes	impossible	for	the	legitimate
+user	to	detect	the	presence	of	the	intruder	on	the	system	by	looking	at	process	tables.
+Trojan	horses
+A	Trojan	horse	is	a	program	which	seems	to	be	doing	one	thing,	but	is	actually	doing
+another.	A	trojan	horse	can	be	used	to	set	up	a	back	door	in	a	computer	system	such	that
+the	intruder	can	gain	access	later.	(The	name	refers	to	the	horse	from	the	Trojan	War,	with
+conceptually	similar	function	of	deceiving	defenders	into	bringing	an	intruder	inside.)
+Viruses
+A	virus	is	a	self-replicating	program	that	spreads	by	inserting	copies	of	itself	into	other
+executable	code	or	documents.	Therefore,	a	computer	virus	behaves	in	a	way	similar	to	a
+biological	virus,	which	spreads	by	inserting	itself	into	living	cells.	While	some	are
+harmless	or	mere	hoaxes	most	computer	viruses	are	considered	malicious.
+Worms
+Like	a	virus,	a	worm	is	also	a	self-replicating	program.	A	worm	differs	from	a	virus	in	that
+it	propagates	through	computer	networks	without	user	intervention.	Unlike	a	virus,	it	does
+not	need	to	attach	itself	to	an	existing	program.	Many	people	conflate	the	terms	“virus”
+and	“worm”,	using	them	both	to	describe	any	self-propagating	program.
+Key	loggers
+A	key	logger	is	a	tool	designed	to	record	(‘log’)	every	keystroke	on	an	affected	machine
+for	later	retrieval.	Its	purpose	is	usually	to	allow	the	user	of	this	tool	to	gain	access	to
+confidential	information	typed	on	the	affected	machine,	such	as	a	user’s	password	or	other
+private	data.	Some	key	loggers	uses	virus,	trojan,	and	rootkit-like	methods	to	remain
+active	and	hidden.	However,	some	key	loggers	are	used	in	legitimate	ways	and	sometimes
+to	even	enhance	computer	security.	As	an	example,	a	business	might	have	a	key	logger	on
+a	computer	used	at	a	point	of	sale	and	data	collected	by	the	key	logger	could	be	used	for
+
+catching	employee	fraud.
+	
+1.6														Password
+A	password	is	a	secret	series	of	characters	that	enables	a	user	to	access	a	file,	computer,	or
+program.	On	multi-user	systems,	each	user	must	enter	his	or	her	password	before	the
+computer	will	respond	to	commands.	The	password	helps	ensure	that	unauthorized	users
+do	not	access	the	computer.	In	addition,	data	files	and	programs	may	require	a	password.
+Ideally,	the	password	should	be	something	that	nobody	could	guess.	In	practice,	most
+people	choose	a	password	that	is	easy	to	remember,	such	as	their	name	or	their	initials.
+This	is	one	reason	it	is	relatively	easy	to	break	into	most	computer	systems.
+Strong	Password
+Strong	Password	refers	to	a	password	that	is	difficult	to	detect	by	both	humans	and
+computer	programs,	effectively	protecting	data	from	unauthorized	access.	It	consists	of	at
+least	six	characters	(and	the	more	characters,	the	stronger	the	password)	that	are	a
+combination	of	letters,	numbers	and	symbols	(@,	#,	$,	%,	etc.)	if	allowed.	Passwords	are
+typically	case-sensitive,	so	a	strong	password	contains	letters	in	both	uppercase	and
+lowercase.	Strong	passwords	also	do	not	contain	words	that	can	be	found	in	a	dictionary
+or	parts	of	the	users	own	name.
+Weak	password
+A	weak	password	refers	to	a	password	that	is	easy	to	detect	both	by	humans	and	by
+computer.	Examples	of	a	weak	password	are	names,	birth	dates,	phone	numbers,	easy
+guessable	word,	etc.
+	
+____________________________________
+CHAPTER	2
+WINDOWS	HACKING
+____________________________________
+2.1														Introduction	to	Windows	Hacking
+Windows	hacking	is	the	practice	of	modifying	Windows	Operating	System	to	accomplish
+a	goal	outside	of	the	creator’s	original	purpose.	People	who	engage	in	hacking	activities
+are	often	called	hackers.	Since	the	word	“hack”	has	long	been	used	to	describe	someone
+who	is	incompetent	at	his/her	profession,	some	hackers	claim	this	term	is	offensive	and
+
+fails	to	give	appropriate	recognition	to	their	skills.	Windows	hacking	is	most	common
+among	teenagers	and	young	adults,	although	there	are	many	older	hackers	as	well.
+	
+2.2														Registry	Editor	Related	Hacking
+What	is	Windows	Registry?	(Registry	Editor)
+Windows	Registry	is	a	database	used	to	store	information	that	is	necessary	to	configure
+the	system	for	one	or	more	users,	applications	and	hardware	devices	and	it	keeps	record	of
+the	settings	of	all	the	Software	installed	in	Computer	including	Operating	System.
+To	open	Registry	Editor
+:	
+Start	>	All	Programs	>	Accessories	>	Run	>	regedit
+Registry	Editor	Window
+Windows	Registry	contains	
+Five	Hives
+	and	hives	contain	
+Keys
+	and	
+Sub	keys
+	and	their
+respective	Values.
+HKEY_CLASSES_ROOT:
+	The	information	that	is	stored	here	makes	sure	that	the
+correct	program	opens	when	you	open	a	file	by	using	Windows	Explorer.
+HKEY_CURRENT_USER:
+	Contains	the	configuration	information	for	the	user	who	is
+currently	logged	on.	The	user’s	folders,	screen	colors,	and	Control	Panel	settings	are
+stored	here.
+HKEY_LOCAL_MACHINE:
+	Contains	configuration	information	particular	to	the
+computer	(for	any	user).
+HKEY_USERS:
+	Contains	all	the	actively	loaded	user	profiles	on	the	computer.
+HKEY_CURRENT_USER	is	a	subkey	of	HKEY_USERS.
+HKEY_CURRENT_CONFIG:
+	Contains	information	about	the	hardware	profile	that	is
+used	by	the	local	computer	at	system	startup.
+Types	of	Keys
+Binary	Value	(REG_BINARY):
+	Raw	binary	data.	Most	hardware	component
+information	is	stored	as	binary	data	and	is	displayed	in	Registry	Editor	in	hexadecimal
+format
+DWORD	Value	(REG_DWORD):
+	Data	represented	by	a	number	that	is	4	bytes	long	(a
+32-bit	integer).	Can	also	contain	binary,	hexadecimal,	or	decimal	format
+
+Expandable	String	Value	(REG_EXPAND_SZ):
+	A	variable-length	data	string.	This	data
+type	includes	variables	that	are	resolved	when	a	program	or	service	uses	the	data
+String	Value	(REG_SZ):
+	A	fixed-length	text	string
+Multi-String	Value	(REG_MULTI_SZ):
+	Values	that	contain	lists	or	multiple	values	in	a
+form	that	people	can	read	are	generally	this	type.
+Disclaimer:
+	Modifying	the	registry	can	cause	serious	problems	that	may	require	you	to
+reinstall	your	operating	system.	We	cannot	guarantee	that	problems	resulting	from
+modifications	to	the	registry	can	be	solved.	Use	the	information	provided	at	your	own	risk.
+	
+Back	up	the	registry
+Before	you	make	changes	to	a	
+registry	key
+	or	
+subkey
+,	we	recommend	that	you	
+export
+,	or
+make	a	
+backup	copy
+,	of	the	key	or	sub	key.	You	can	save	the	backup	copy	to	a	location
+you	specify,	such	as	a	folder	on	your	hard	disk	or	a	removable	storage	device.	If	you	make
+changes	that	you	want	to	undo,	you	can	
+import
+	the	
+backupcopy
+.
+1
+.	
+Open	the	
+Registry	Editor
+	by	clicking	the	
+Start	button
+,	typing	
+regedit
+	into	the
+search	box,	and	then	pressing	
+Enter
+.​
+2
+.	
+Locate	and	click	the	
+key
+	or	
+subkey
+	that	you	want	to	back	up.
+3
+.	
+Click	the	
+File
+	menu,	and	then	click	
+Export
+.
+4
+.	
+In	the	
+Save	in	box
+,	select	the	location	where	you	want	to	save	the	backup	copy	to,
+and	then	type	a	name	for	the	backup	file	in	the	
+Filenamebox
+.
+5
+.	
+Click	
+Save
+.
+Tips:
+You	must	be	logged	on	as	an	administrator	to	perform	these	steps.	If	you	aren’t
+logged	in	as	an	administrator,	you	can	only	change	settings	that	apply	to	your	user
+account.
+Although	you	can	back	up	more	than	just	the	registry	key	or	subkey	that	you	are
+modifying,	doing	so	adds	to	the	size	of	the	backup	file.
+	
+Ultra-speed	Shutdown	of	Windows	7
+Follow	the	following	steps	to	shutdown	your	Computer	with	ultra-speed
+1
+.	
+Open	the	
+Registry	Editor
+	by	clicking	the	
+Start	button
+,	typing	
+regedit
+	into	the
+search	box,	and	then	pressing	
+Enter
+.​
+2
+.	
+In	left	pane	of	Registry	Editor,	go	to
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Control
+3
+.	
+In	the	right	pane,	right	click	on	
+WaitToKillServiceTimeout
+	and	click	on	
+Modify
+.
+
+4
+.	
+Type	in	a	number	between	
+2000-20000
+	(
+2-20	seconds
+)	and	click	on	
+OK
+.
+NOTE:	The	default	time	is	
+12000
+	(
+12	seconds
+).
+5
+.	
+Close	
+regedit
+.
+6
+.	
+After	rebooting	(restart)	Windows	the	new	settings	will	take	effect.	The	time	to	wait
+for	terminating	services	will	be	faster	and	shutdown	won’t	drag	on	forever.
+NOTE:	If	you	have	problems	with	programs	from	your	computer	shutting	down	too
+quickly,	then	repeat	the	above	steps	and	increase	the	time	(Step	5)	a	bit.
+	
+Change	the	log-on	screen	of	Windows	7
+1
+.	
+Press	
+Windows	Logo	key	+	R
+	to	open	
+Run
+,	type	
+regedit
+	and	press	
+Enter
+.
+2
+.	
+Go	to:
+HKEY_LOCAL_MACHINE\Software\Microsoft\Windows\CurrentVersion\Authentication\
+LogonUI\Background
+3
+.	
+Double-click	the	
+OEMBackground
+	DWORD	key	and	Set	value	of	the	key	to	
+1
+.
+4
+.	
+Select	a	background	image	for	logon	screen	with	size	less	than	256	KB	and	
+Rename
+that	image	as	
+BackgroundDefault
+.
+5
+.	
+Copy
+	that	image,	Open	
+My	Computer
+	and	go	to
+C:\Windows\system32\oobe\info\backgrounds	folder
+6
+.	
+Paste	it	and	select	
+Copy	and	Replace
+.
+Tips:
+	Cut	and	paste	the	original	log-on	Screen	image	in	a	folder	for	further	use.
+7
+.	
+Reboot
+,	and	now	your	logon	image	would	have	changed.
+	
+Disable	or	Enable	USB	Ports/USB	drive/Pen-Drive	in	Windows	7
+It’s	really	very	easy	to	enable	and	disable	a	USB	port	of	your	Laptop	and	desktop
+computer.	Many	companies	disabled	their	employee’s	laptop	to	prevent	data	threat.	Also
+many	schools,	colleges	and	universities	block	the	USB	ports	of	their	computer.	So,	here	is
+the	easy	way	to	enable	USB	ports,	access	it	and	disable	it	back.
+1
+.	
+Open	the	Registry	Editor	by	clicking	the	
+Start
+	button,	typing	
+regedit
+	into	the	search
+
+box,	and	then	pressing	
+Enter
+.
+2
+.	
+In	left	pane	of	Registry	Editor,	go	to
+HKEY_LOCAL_MACHINE\SYSTEM\CurrentControlSet\Services\USBSTOR
+3
+.	
+Right	Click	
+Start
+	and	Click	
+Modify
+	on	right	pane	of	Registry	Editor.
+4
+.	
+Do	one	of	the	following:
+To	
+enable
+	USB	ports:	change	the	value	from	4	to	3
+To	
+disable
+	USB	ports:	change	the	Value	from	3	to	4
+5
+.	
+After	
+rebooting
+	(
+restart
+)	Windows	the	new	settings	will	take	effect.	The	time	to
+wait	for	terminating	services	will	be	faster	and	shutdown	won’t	drag	on	forever.
+	
+How	to	Display	Legal	Notice	on	Start	up	of	your	Windows
+If	your	PC	has	multiple	users	then	you	can	display	legal	notice	to	every	user	before	they
+login	to	your	PC.	This	legal	notice	will	be	displayed	at	every	startup	just	before	the
+Desktop	is	loaded.	Using	this	you	can	tell	your	friends	about	the	do’s	and	don’ts	in	your
+computer	when	they	login	in	your	absence.	To	do	this:
+1
+.	
+Click	on	
+Start
+	button	and	type	
+regedit
+	and	press	
+Enter
+2
+.	
+Navigate	to	the	following	key	in	the	registry
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\policies\system
+3
+.	
+On	the	right	side	pane	look	for	
+legalnoticecaption
+,	double	click	on	it	and	enter	the
+desired	Legal	Notice	Caption.
+4
+.	
+Next	below	this	look	for	
+legalnoticetext
+	and	enter	the	desired	Legal	Notice	Text.
+The	legal	notice	text	can	be	up	to	a	page	in	its	size	so	that	it	can	include	a	set	of	do’s
+and	don’ts	for	your	computer.
+5
+.	
+After	you	does	this	just	restart	your	computer	and	upon	the	next	startup	you	can	see
+the	legal	notice	information	for	your	computer.
+	
+Faster	Thumbnail	Previews
+The	taskbar	shows	thumbnail	previews	of	opened	windows	when	you	hover	the	mouse
+
+over	the	program	icon.	By	default,	it	takes	a	little	time	for	the	preview	to	appear.	Make	the
+previews	appear	faster	with	this	registry	tweak:
+1
+.	
+Open	the	
+Registry	Editor
+	by	clicking	the	
+Start	button
+,	typing	
+regedit
+	into	the
+search	box,	and	then	pressing	
+Enter
+.​
+2
+.	
+Navigate	to	
+HKEY_CURRENT_USER\Control	Panel\Mouse
+.
+3
+.	
+On	the	right,	open	the	
+MouseHoverTime
+	key	and	reduce	its	value	from	the	default
+400
+	to	around	
+150
+.	(Be	careful,	as	decreasing	the	key	further	may	cause	problems.)
+4
+.	
+After	
+rebooting	(restart)
+	Windows	the	new	settings	will	take	effect.
+	
+Disable	Right-Click
+This	trick	removes	the	context	menu	that	would	normally	appear	when	the	user	right
+clicks	on	the	desktop	or	in	the	Explorer	right	results	pane.
+1
+.	
+Open	the	
+Registry	Editor
+	by	clicking	the	
+Start
+	button,	typing	
+regedit
+	into	the
+search	box,	and	then	pressing	
+Enter
+.
+2
+.	
+Browse	to	this	key	in	the	registry:
+HKEY_Current_User\Software\Microsoft\Windows\CurrentVersion\Policies\Explorer
+3
+.	
+Change	the	value	of	
+NoViewContextMenu
+	to	
+1
+.
+4
+.	
+Now	close	the	registry	editor	and	restart	your	computer	after	any	changes	to	go	into
+effect.
+Tips:	
+If	
+NoViewContextMenu
+doesn’t	exist	then	you	can	create	it.	Right	click	in	the	right-
+hand	pane;	select	New,	then	
+DWORD	(32-bit)	Value
+	for	32	bit	on	Windows	7.
+	
+How	to	Disable	or	Enable	Folder	Options	in	Windows	7
+Disable	Folder	Options	in	Windows	7
+1
+.	
+Click	the	
+Start
+	button,	and	type	
+regedit
+	in	the	search	box.
+2
+.	
+Browse	the	list	as
+HKEY_CURRENT_USER\Software\Microsoft\Windows\Current
+Version\Policies\Explorer
+
+3
+.	
+Create	a	new	32-bit	DWORD	value.
+4
+.	
+Name	it	
+NoFolderOptions
+.
+5
+.	
+Double	click	on	it	to	set	its	value	data	to	
+1
+.
+Enable	Folder	Options	in	Windows	7
+Double	click	on	the	value	named	
+NoFolderOptions
+	to	set	its	value	data	to	
+0
+.
+	
+Clean	up	the	“Open	With”	Menu	in	Explorer
+Have	you	ever	accidently	opened	an	mp3	with	Notepad,	or	a	zip	file	with	Word?		If	so,
+you’re	also	likely	irritated	that	these	programs	now	show	up	in	the	Open	with	menu	in
+
+Windows	Explorer	every	time	you	select	one	of	those	files.		Whenever	you	open	a	file
+type	with	a	particular	program,	Windows	will	add	an	entry	for	it	to	the	Open	with	menu.	
+Usually	this	is	helpful,	but	it	can	also	clutter	up	the	menu	with	wrong	entries.	On	our
+computer,	we	have	tried	to	open	a	PDF	file	with	Word	and	Notepad,	neither	which	can
+actually	view	the	PDF	itself.		Let’s	remove	these	entries.		To	do	this,	we	need	to	remove
+the	registry	entries	for	these	programs.	
+1
+.	
+Enter	
+regedit	
+in	your	
+Start
+	menu	search	or	in	the	
+Run
+	command	to	open	the
+Registry	editor
+.
+Tips:
+	Backup	your	registry	first	just	in	case,	so	you	can	roll-back	any	changes	you	make	if
+you	accidently	delete	the	wrong	value.
+2
+.	
+Now,	browse	to	the	following	key:
+HKEY_CURRENT_USER	\Software	\Microsoft	\Windows	\CurrentVersion	\
+Explorer	\FileExts\
+3
+.	
+Now,	you	will	see	a	list	of	all	the	file	extensions	that	are	registered	on	your	computer.
+4
+.	
+Browse	to	the	file	extension	you	wish	to	edit,	click	the	white	triangle	beside	it	to	see
+the	subfolders,	and	select	
+OpenWithList
+.		In	our	test,	we	want	to	change	the
+programs	associated	with	PDF	files,	so	we	select	the	
+OpenWithList
+	folder	under
+.pdf
+.
+5
+.	
+Notice	the	names	of	the	programs	under	the	
+Data
+	column	on	the	right.		
+Right-click
+the	value	for	the	program	you	don’t	want	to	see	in	the	Open	With	menu	and	select
+Delete
+.
+6
+.	
+Click	
+Yes
+	at	the	prompt	to	confirm	that	you	want	to	delete	this	value.
+7
+.	
+Repeat	these	steps	with	all	the	programs	you	want	to	remove	from	this	file	type’s
+Open	with	menu.		You	can	go	ahead	and	remove	entries	from	other	file	types	as	well
+if	you	wish.
+8
+.	
+Restart	the	computer	and	check	out	the	
+Open	with	
+menu	in	Explorer	again.		Now	it
+will	be	much	more	streamlined	and	will	only	show	the	programs	you	want	to	see.
+	
+Add	Recycle	Bin	to	My	Computer	in	Windows	7
+
+To	add	the	Recycle	Bin	on	My	Computer,	follow	the	steps:
+1
+.	
+Open	up	
+regedit.exe
+	through	the	start	menu	search	or	run	box
+2
+.	
+Go	to:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace
+3
+.	
+Now	right-click	and	create	a	
+New	Key
+4
+.	
+Name	the	key	with	the	following	text	as	shown	in	the	below	figure:
+{645FF040-5081-101B-9F08-00AA002F954E}
+5
+.	
+Close	the	
+Registry	Editor
+	and	Open	
+My	Computer
+.
+	
+Add	Control	Panel	to	My	Computer	in	Windows	7
+To	add	the	Control	Panel	on	My	Computer,	follow	the	steps:
+1
+.	
+Open	up	
+regedit.exe
+	through	the	start	menu	search	or	run	box
+2
+.	
+Go	to:
+HKEY_LOCAL_MACHINE\SOFTWARE\Microsoft\Windows\CurrentVersion\Explorer\MyComputer\NameSpace
+3
+.	
+Now	right-click	and	create	a	
+New	Key
+
+4
+.	
+Name	the	key	with	the	following	text	as	shown	in	the	below	figure
+{26EE0668-A00A-44D7-9371-BEB064C98683}
+Or
+{21EC2020-3AEA-1069-A2DD-08002B30309D}
+Tips:
+Category	View
+{26EE0668-A00A-44D7-9371-BEB064C98683}
+Icon	View
+{21EC2020-3AEA-1069-A2DD-08002B30309D}
+5
+.	
+Close	the	
+Registry	Editor	
+and	Open	
+My	Computer
+.
+	
+2.3														Local	Group	Policies	Related	Hacking
+Want	to	know:	What	happened	in	your	absences	on	your	PC?
+1
+.	
+Press	
+Windows	logo	key	+	R
+	to	open	
+Run
+2
+.	
+Type	
+eventvwr.msc
+	and	press	
+Enter
+.	Then	
+Event	Viewer
+	window	will	open.
+(Events	are	stored	in	three	log	files:	
+Application
+,	
+Security
+,	and	
+System
+.	These	logs
+can	be	reviewed	and	archived.	For	our	purposes	we	want	the	
+System	
+log.	)
+
+3
+.	
+Click	on	
+Windows	Log
+	and	then	double-click	on	
+System
+	in	the	left-hand	column	for
+a	list	of	events.
+4
+.	
+Look	for	a	date	and	time	when	you	weren’t	home	and	your	computer	should	have
+been	off.	
+Double	click
+	on	the	eg:	
+Information
+	and	it	will	show	u	the	detail.
+Tips:	
+You	can	also	use	this	log	to	see	how	long	someone	was	on	the	computer.	Just	look	at
+the	time	the	computer	was	turned	on	and	off	for	that	day.
+	
+How	to	Disable	Shutdown,	Restart,	Sleep	and	Hibernate
+Someday,	you	might	want	to	make	a	computer	could	not	be	turned	off	easily.	For	example
+because	you	are	running	a	program	that	needs	a	long	time	to	wait	(download	a	big	file,
+rendering	a	video,	etc.)	and	you	have	to	leave	the	room.	To	prevent	anyone	else	to	turn	off
+the	computer,	then	one	way	is	to	disable	the	function	of	Shutdown,	Restart,	Sleep	or
+Hibernate	menu.
+Follow	these	easy	steps	to	disable	Shutdown,	Restart,	Sleep	and	Hibernate:
+1
+.	
+Click	
+Start
+	button,	type	
+gpedit.msc
+	in	the	Start	menu’s	search	box	and	then	press
+Enter
+.	
+Local	Group	Policy	editor
+	window	will	open.
+2
+.	
+Go	to	
+User	Configuration	>	Administrative	Templates	>	Start	Menu	And
+Taskbar
+
+3
+.	
+In	the	right	pane,	find	the	
+Remove	and	Prevent	Access	to	the	shutdown,	Restart,
+Sleep,	and	Hibernate
+.	Then	double	click	on	it.
+4
+.	
+Select	
+Enable
+,	and	then	click	
+OK
+.
+Tips:
+To	make	it	back	in	to	the	normal	function,	just	follow	all	the	steps	above,	except	for
+the	last	one;	you	need	to	change	back	the	option	from	
+Enable
+	to	
+Disable
+.
+When	being	in	a	state	of	disable,	in	fact	we	can	still	shutdown	the	computer.	The	way
+is	by	typing	the	below	instructions	in	the	search	(Windows	7)	and	press	
+Enter
+.
+shutdown	/s	(for	shutdown)
+shutdown	/r	(to	restart)
+	
+How	to	Disable	Access	to	the	Registry	in	Windows	7
+If	you	don’t	know	what	you’re	doing	in	the	Registry,	you	can	mess	up	your	computer
+pretty	good.	This	trick	helps	you	to	prevent	users	from	accessing	the	Registry	and	making
+any	changes	to	it.
+To	do	this	using	
+Local	Group	Policy	Editor:
+Tips:
+	This	method	uses	Group	Policy	Editor	which	is	not	available	in	Home	versions	of
+Windows.
+1
+.	
+Type	
+gpedit.msc
+	into	the	Search	box	in	the	
+Start	
+menu
+2
+.	
+When	Group	Policy	Editor	opens,	navigate	to	
+User	Configuration	\	Administrative
+Templates
+	then	select	
+System
+.	Under	
+Setting
+	in	the	right	panel	double-click	on
+Prevent	access	to	registry	editing	tools
+.
+
+3
+.	
+Select	the	radio	button	next	to	
+Enabled
+,	click	
+OK
+,	then	close	out	of	Group	Policy
+Editor.
+4
+.	
+Now	if	a	user	tries	to	access	the	Registry,	Then	he	will	get	the	following	message
+advising	they	cannot	access	it.
+	
+Prevent	access	to	the	command	prompt
+This	trick	helps	you	to	prevent	users	from	accessing	the	Command	prompt.
+1
+.	
+Type	
+gpedit.msc
+	into	the	Search	box	in	the	
+Start
+	menu
+2
+.	
+When	
+Group	Policy	Editor
+	opens,	navigate	to	
+User	Configuration	\
+Administrative	Templates
+	then	select	
+System
+.	Under	
+Setting
+	in	the	right	panel
+double-click	on	
+Prevent	access	to	the	command	prompt
+.
+3
+.	
+Select	the	radio	button	next	to	
+Enabled
+,	click	
+OK
+,	and	then	close	out	of	
+Group
+Policy	Editor
+.
+	
+How	to	show	or	hide	Control	Panel	items	in	Windows	7
+One	of	the	common	lock	down’s	that	administrator	apply	to	Remote	Desktop	Services
+Servers	is	to	remove	all	but	the	essential	control	panel	items.	The	
+.cpl
+	(e.g.	timedate.cpl)
+file	name	of	the	control	panel	item	you	wanted	to	show	or	hide	however	this	has	changed
+
+in	Windows	7	and	you	now	need	to	use	the	Canonical	Name	when	hiding	or	showing
+specific	items.	Below	I	will	explain	the	new	way	of	configuring	control	panel	items	for
+Windows	7	and	show	you	the	affect	that	this	has	on	the	control	panel.
+Before	you	begin	I	recommend	that	you	take	a	look	at	the	below	table	which	lists	all	the
+Canonical	names	for	the	control	panel	items	for	Windows	7.	You	will	need	to	know	what
+Canonical	names	of	the	item	you	want	to	restrict	or	allow.
+Windows	7	Control	Panel	Canonical	Names
+The	following	canonical	names	are	defined	for	Control	Panel	items	in	Windows	7.	Not	all
+Control	Panel	items	are	available	on	all	varieties	of	Windows	and	some	Control	Panel
+items	might	appear	only	when	appropriate	hardware	is	detected.
+Control	Panel
+Item
+Canonical	name
+Action	Center
+Microsoft.ActionCenter
+Administrative
+Tools
+Microsoft.AdministrativeTools
+AutoPlay
+Microsoft.AutoPlay
+Backup	and
+Restore
+Microsoft.BackupAndRestore
+Biometric
+Devices
+Microsoft.BiometricDevices
+BitLocker	Drive
+Encryption
+Microsoft.BitLockerDriveEncryption
+Color
+Management
+Microsoft.ColorManagement
+Credential
+Manager
+Microsoft.CredentialManager
+Date	and	Time
+Microsoft.DateAndTime
+Default
+Location
+Microsoft.DefaultLocation
+Default
+Programs
+Microsoft.DefaultPrograms
+Desktop
+Gadgets
+Microsoft.DesktopGadgets
+Device
+Manager
+Microsoft.DeviceManager
+Devices	and
+Microsoft.DevicesAndPrinters
+
+Printers
+Display
+Microsoft.Display
+Ease	of	Access
+Center
+Microsoft.EaseOfAccessCenter
+Folder	Options
+Microsoft.FolderOptions
+Fonts
+Microsoft.Fonts
+Game
+Controllers
+Microsoft.GameControllers
+Get	Programs
+Microsoft.GetPrograms
+Getting	Started
+Microsoft.GettingStarted
+HomeGroup
+Microsoft.HomeGroup
+Indexing
+Options
+Microsoft.IndexingOptions
+Infrared
+Microsoft.Infrared
+Internet	Options
+Microsoft.InternetOptions
+iSCSI	Initiator
+Microsoft.iSCSIInitiator
+Keyboard
+Microsoft.Keyboard
+Location	and
+Other	Sensors
+Microsoft.LocationAndOtherSensors
+Mouse
+Microsoft.Mouse
+Network	and
+Sharing	Center
+Microsoft.NetworkAndSharingCenter
+Notification
+Area	Icons
+Microsoft.NotificationAreaIcons
+Offline	Files
+Microsoft.OfflineFiles
+Parental
+Controls
+Microsoft.ParentalControls
+Pen	and	Touch
+Microsoft.PenAndTouch
+People	Near	Me
+Microsoft.PeopleNearMe
+Performance
+Information	and
+Tools
+Microsoft.PerformanceInformationAndTools
+
+Personalization
+Microsoft.Personalization
+Phone	and
+Modem
+Microsoft.PhoneAndModem
+Power	Options
+Microsoft.PowerOptions
+Programs	and
+Features
+Microsoft.ProgramsAndFeatures
+Recovery
+Microsoft.Recovery
+Region	and
+Language
+Microsoft.RegionAndLanguage
+RemoteApp	and
+Desktop
+Connections
+Microsoft.RemoteAppAndDesktopConnections
+Scanners	and
+Cameras
+Microsoft.ScannersAndCameras
+Sound
+Microsoft.Sound
+Speech
+Recognition
+Microsoft.SpeechRecognition
+Sync	Center
+Microsoft.SyncCenter
+System
+Microsoft.System
+Tablet	PC
+Settings
+Microsoft.TabletPCSettings
+Taskbar	and
+Start	Menu
+Microsoft.TaskbarAndStartMenu
+Text	to	Speech
+Microsoft.TextToSpeech
+Troubleshooting
+Microsoft.Troubleshooting
+User	Accounts
+Microsoft.UserAccounts
+Windows
+Anytime
+Upgrade
+Microsoft.WindowsAnytimeUpgrade
+Windows
+CardSpace
+Microsoft.CardSpace
+Windows
+Defender
+Microsoft.WindowsDefender
+Windows
+Microsoft.WindowsFirewall
+
+Firewall
+Windows
+Mobility	Center
+Microsoft.MobilityCenter
+Windows
+SideShow
+Microsoft.WindowsSideShow
+Windows
+Update
+Microsoft.WindowsUpdate
+	
+To	hide	Control	Panel	items	in	Windows	7,	do	the	followings:
+1
+.	
+Type	
+gpedit.msc
+	into	the	Search	box	in	the	
+Start
+	menu
+2
+.	
+When	
+Group	Policy	Editor
+	opens,	navigate	to	
+User
+Configuration\Policies\Administrative	Templates\Control	Panel
+.	Under	
+Setting
+in	the	right	panel	double-click	on	
+Hide	specified	Control	Panel	items
+.
+3
+.	
+Select	the	radio	button	next	to	
+Enabled
+,	Click	
+Show
+	button.
+4
+.	
+Then	
+Show	Content
+	dialog-box	will	appear.	Type	the	required	
+Canonical	names
+and	click	
+OK
+.
+
+For	example:	If	i	want	to	hide	Action	Center,	then	I	will	type	
+Microsoft.ActionCenter
+	in
+the	
+Value
+	field.
+5
+.	
+Click
+	OK
+,	and	then	close	out	of	
+Group	Policy	Editor
+.
+Note:
+	In	this	example	we	are	only	going	to	hide	the	control	panel	items	we	want	to	see
+(white	list)	however	if	you	use	the	Show	specified	Control	Panel	items	policy	setting	you
+can	black	list	only	the	items	you	don’t	want	listed.
+	
+How	to	Disable	Control	Panel	in	Windows	7
+If	you	have	a	shared	computer	that	your	family	and	friends	can	access,	you	might	not	want
+them	to	mess	around	in	the	Control	Panel,	and	fortunately	with	a	simple	tweak	you	can
+disable	it.
+1
+.	
+Type	
+gpedit.msc
+	into	the	Search	box	in	the	
+Start
+	menu
+2
+.	
+When	
+Group	Policy	Editor
+	opens,	navigate	to	
+User	Configuration	\
+Administrative	Templates	
+then	select	
+Control	Panel	
+in	the	left	Column
+.	
+In	the
+right	column	double-click	on
+	Prohibit	access	to	the	Control	Panel.
+
+
+3
+.	
+Select	the	radio	button	next	to	
+Enabled
+,	click	
+OK
+,	and	then	close	out	of	
+Group
+Policy	Editor
+.
+4
+.	
+After	the	Control	Panel	is	disabled,	you’ll	notice	it’s	no	longer	listed	in	the	Start
+Menu.
+5
+.	
+If	the	user	tries	to	type	Control	Panel	into	the	Search	box	in	the	Start	menu,	they	will
+get	the	following	message	indicating	it’s	restricted.
+	
+Disable	Windows	Hotkeys
+1
+.	
+Click	
+Start
+	button,	type	
+gpedit.msc
+	in	the	Start	menu’s	search	box	and	then	press
+Enter
+.	
+Local	Group	Policy	editor
+	window	will	open.
+2
+.	
+Navigate	to	
+User	Configuration	>	Administrative	Templates	>	Windows
+Components	
+and	then	select	
+Windows	Explorer
+	in	the	left	column	of	the
+LocalGroup	Policy	editor.
+3
+.	
+Double-click	
+Turn	off	Windows+X	Hotkeys
+	in	the	Settings	section	of	the	Group
+Policy	editor.
+4
+.	
+Select	
+Enable
+	and	then	click	
+OK
+	to	save	the	changes.
+	
+2.4														Shortcuts	Related	Hacking
+One	Click	Shutdown	/	Restart	/	
+LogOff	/	Sleep	/	Hibernate	–	(Creating	a	Shortcut)
+
+Windows	operating	System	has	come	with	a	remote	shutdown	tool	to	shut	down	and
+restart	Windows.	You	can	control	this	tool	through	the	command	line,	but	a	much	faster
+alternative	is	to	create	a	shortcut.
+1
+.	
+Right-click	your	Windows	7	desktop	and	select	
+New
+>
+Shortcut
+2
+.	
+Type
+	shutdown.exe	-s	-t	00
+	in	the	location	field
+3
+.	
+Click	
+Next
+,	give	a	name	to	the	shortcut,	e.g.	
+Shut	Down	Computer
+,	and	click
+Finish
+.
+4
+.	
+Double-click
+	the	shortcut	to	instantly	shut	down	the	system.	(For	Single	Click
+Follow	the	below	tips)
+Tips:
+To	Customize	the	Shortcut	icon	–	Right-click	on	the	shortcut	>	Click	
+Properties	
+>
+Click	
+Change	Icon
+>	Choose	an	icon	>	Click	
+OK
+>	Click	
+OK
+You	can	pin	this	shortcut	from	the	desktop	to	the	taskbar	by	
+right-click
+	on	the
+shortcut	and	click	
+Pin	to	Taskbar
+.
+To
+Type	the	Following	code	in	the
+location	field	of	Create	Shortcut
+dialog-box
+Shutdown
+shutdown.exe	-s	-t	00
+Restart
+shutdown.exe	-r	-t	00
+Logoff
+shutdown.exe	-l
+Hibernate
+rundll32.exe
+PowrProf.dll,SetSuspendState
+Sleep
+rundll32.exe
+powrprof.dll,SetSuspendState	0,1,0
+	
+
+How	to	pin	My	Computer	to	Windows	7	taskbar	directly
+Windows	7	has	come	out	with	lots	of	new	and	exciting	features.	You	may	have	noticed
+that,	we	can’t	open	My	Computer	directly	from	Windows	7	Taskbar.	If	we	drag	&	drop
+My	computer
+	to	taskbar,	it	gets	pinned	to	windows	explorer	rather	than	creating	a	new
+place	for	itself.	Windows	explorer	opens	libraries	which	irritates	me	and	quite	a	lot	of
+users.	So,	let’s	pin	My	Computer	to	Windows	7	taskbar.
+1
+.	
+Right	click	on	
+Desktop
+,	and	select	
+New
+>
+Shortcut
+2
+.	
+In	location	of	the	item	enter	the	following	string	exactly	as	given	below:
+%SystemRoot%\explorer.exe	/E,::{20D04FE0-3AEA-1069-A2D8-08002B30309D}
+3
+.	
+Click	Next	and	give	a	name	to	shortcut.	For	example,	
+My	Computer.	
+Click
+	Finish.
+4
+.	
+A	new	shortcut	of	
+My	Computer
+	placed	on	desktop.	It	has	the	same	icon	like	that	of
+Windows	explorer.	You	can	change	its	icon	if	you	wish.
+After	change	the	icon	My	Computer
+5
+.	
+To	pin	the	shortcut	to	Windows	7	Taskbar,	just	right	click	on	it	and	select	
+Pin	to
+Taskbar
+.
+
+6
+.	
+Your	direct	shortcut	to	
+My	Computer
+	is	pinned	on	taskbar	now.
+	
+Lock	your	computer	in	single	click
+You	can	lock	your	computer	using	the	
+Windows	logo	key	+	L
+	keyboard	shortcut.		Here’s
+another	way	to	do	it	with	a	single	mouse	click.
+1
+.	
+Right-click
+	on	your	desktop	and	select	
+New
+>
+Shortcut
+.
+2
+.	
+In	
+Type	the	location	of	the	item
+	field,	type	
+rundll32.exe
+user32.dll,LockWorkStation
+.
+3
+.	
+Click	
+Next
+,	name	the	shortcut	
+Quick	Lock
+,	and	
+Finish
+.
+4
+.	
+If	you	wish,	you	can	make	it	look	pretty	by	giving	it	a	lock	or	keys	icon:	
+Right-click
+,
+select
+Properties
+,	click	
+ChangeIcon
+,	enter	
+shell32.dll
+,	and	select	any	icon	you	wish.
+Click	
+OK
+.
+5
+.	
+Drag	this	shortcut	and	pin	it	to	the	taskbar,	after	which	you	can	delete	the	desktop
+shortcut.
+	
+Safety	Remove	Hardware	from	desktop
+1
+.	
+Right	Click	
+on	your	desktop	and	Click	on	
+New
+	and	Click	on	
+Shortcut
+	from	the	list.
+2
+.	
+Type	the	below	code	in	the	location	field	as	shown	in	below	figure
+rundll32.exe	shell32.dll,Control_RunDLL	hotplug.dll
+
+3
+.	
+Now	click	on	
+Next
+4
+.	
+Now	give	a	desired	Name	for	your	Shortcut	and	Click	on	
+Finish
+.
+5
+.	
+Now	you	have	created	a	shortcut	for	Safety	Remove	Hardware	on	your	desktop!!!
+Now	whenever	you	want	to	eject	your	hardware	device	like	pen	drive,	and	then	just
+double	click	on	it	and	you	can	remove	your	Hardware	device	safely.
+	
+2.5														Notepad	Related	Hacking
+Dancing	Keyboard	Led	Light	Trick
+1
+.	
+Open	Notepad	and	type	below	codes	into	it.
+Set	wshShell	=wscript.CreateObject(“WScript.Shell”)
+do
+wscript.sleep	100
+wshshell.sendkeys	“{CAPSLOCK}”
+wshshell.sendkeys	“{NUMLOCK}”
+wshshell.sendkeys	“{SCROLLLOCK}”
+loop
+
+2
+.	
+Click	
+File
+	(from	the	
+Menu	bar
+)and	
+Save	as
+	the	notepad	file	as	
+anything.vbs
+	(.vbs	is
+must)
+3
+.	
+Open	your	save	file	and	see	your	keyboard	led	blinking	like	disco	lights.
+Tips:	How	to	stop	this?
+1
+.	
+First	open	Task	Manager	by	pressing	
+Ctrl	+Alt	+Delete
+2
+.	
+Then	go	to	
+Processes
+	tab.
+3
+.	
+Select	
+wscript.exe
+4
+.	
+Click	on	
+End	Process
+.
+	
+Make	your	computer	talk	what	you	type!
+This	is	very	good	and	interesting	javascript	trick	which	let	your	computer	speaks	whatever
+you	type.	There	is	no	requirement	of	any	software.	Just	follow	below	simple	steps.
+1
+.	
+Open	
+Notepad
+	and	type	below	codes	into	it.
+Dim	message,	sapi
+message=InputBox(“What	do	you	want	me	to	say?”,“TALKING	COMPUTER”)
+Set	sapi=CreateObject(“sapi.spvoice”)
+sapi.Speak	message
+2
+.	
+Click
+	File	
+(from	the	
+Menu	bar
+)and
+	Save	as
+	the	notepad	file	as	
+anything.vbs
+3
+.	
+Open
+	that	save	file.
+4
+.	
+Type
+	anything	and	click	ok	to	make	your	computer	talk	whatever	you	typed.
+	
+Pin	a	drive	to	the	taskbar
+1
+.	
+Open
+	Notepad,	and	click	on	
+File
+	(Menu	bar)	and	
+Saveas
+.
+Tips:
+	You	will	need	to	leave	notepad	blank.
+2
+.	
+Navigate	to	your	desktop.	Under	
+Save	as	type
+,	change	it	to	
+All	Files	(*.*),
+	type	in	a
+name	you	want	for	this	(ex:	
+Drive	C.exe
+)	with	the	
+.exe
+	file	extension	at	the	end,	and
+click	on	the	
+Save
+	button.
+
+
+3
+.	
+Close
+	Notepad.
+4
+.	
+Right	click
+	on	the	saved	.exe	file	on	your	desktop	(ex:	
+Drive	C.exe
+),	and	click	on
+Pin	to	Taskbar
+.
+5
+.	
+Right	click
+	on	the	pinned	.exe	icon	on	the	taskbar,	right	click	on	the	.exe	file	(ex:
+Drive	C.exe
+)	in	the	jump	list,	and	click	on	P
+roperties
+.
+6
+.	
+In	the	
+Start	in
+	field,	make	sure	it’s	blank.	In	the	
+Target	field
+,	change	it	to	be	the
+drive	letter	path	(ex:	
+C:\
+	)	that	you	want	the	pinned	icon	on	the	taskbar	to	open.	Click
+on	
+OK
+.	(Just	Looks	Like	the	below	image)
+7
+.	
+Log	off
+	and	
+log	on
+,	or	
+restart	
+the	computer	to	have	the	icon	on	the	taskbar	to	change
+to	the	correct	drive	icon	afterwards.
+8
+.	
+You	can	now	drag	the	drive	icon	anywhere	you	like	within	the	other	pinned	icons	on
+the	taskbar	if	you	like.
+9
+.	
+You	can	now	delete	the	
+.exe	file
+	on	your	desktop	(ex:	
+Drive	C.exe
+)	if	you	like.
+
+Tips:	
+To	Unpin	Drive	from	Taskbar:	
+Right	click
+	on	the	pinned	drive	icon	on	the	taskbar,
+and	click	on	
+Unpin	this	program	from	taskbar
+.
+	
+Shut-down	the	computer	after	conveying	a	message
+What	this	trick	does	is,	after	conveying	a	(any)	message	it	shuts	down	the	computer
+without	any	confirmation.	In	order	to	create	the	Shutdown	file,	follow	the	below
+mentioned	steps:
+1
+.	
+Open	
+Notepad
+.
+2
+.	
+Type	the	following	code	in	it:
+@echo	off
+msg	*	Shutting	Down.
+shutdown	-c	“Hello	the	computer	is	shutting	down!	Bye”	-s
+3
+.	
+Click	
+File
+	(from	
+Menu	bar
+)	and	Select	
+Save	as
+.
+4
+.	
+Choose	
+Desktop
+	to	save	the	file	on	desktop.
+5
+.	
+In	the	File	name	field	type	
+shutdownmsg.bat
+	and	click	
+Save
+.
+6
+.	
+Double	Click
+	the	batch	file	on	desktop	to	execute	the	batch	file.
+Tips:
+Make	sure	the	file	name	has	
+.bat
+	extension.
+Use	this	carefully.	The	Computer	shuts	down	the	computer	forcefully.
+	
+Matrix	Falling	Code	Effect
+Inspired	by	the	movie	Matrix,	this	falling	code	trick	is	extremely	popular	on	social
+networking	websites.	Type	the	code	given	below	in	Notepad	and	save	the	file	as
+“Matrix.bat”	or	anything.bat	(File	Extension	must	be	.bat).	Upon	running	the	bat	file,	you
+will	see	the	“Matrix	falling	code”	effect.
+
+@echo	off
+color	02
+:matrix	tricks
+echo
+%random%%random%%random%%random%%random%%random%%random%%random%
+goto	matrix	tricks
+	
+Make	Your	Keyboard	Type	(Any)	Message	Continuously
+This	VBS	trick	can	make	keyboard	type	any	message	continuously.	Open	
+Notepad
+,	type
+the	code	given	below	and	save	the	file	as	keyboard.vbs	or	anything.vbs	(File	Extension
+must	be	.vbs).
+Set	wshShell	=	wscript.CreateObject(“WScript.Shell”)
+do
+wscript.sleep	100
+wshshell.sendkeys	“This	is	a	Virus.	You	have	been	infected.”
+loop
+Tips:
+	If	you	will	open	the	VBS	file	then	you	might	need	to	restart	your	computer	to	stop
+this.
+	
+Continuously	eject	CD/DVD	drives
+This	VBS	trick	will	create	a	code	which	will	continuously	eject	all	your	connected	Optical
+drives.	If	you	put	them	back	in,	it	will	pop	them	out	again.	Type	the	code	given	below	in
+Notepad	as	eject.vbs	or	anything.vbs	(File	Extension	must	be	.vbs)
+Set	oWMP	=	CreateObject(“WMPlayer.OCX.7”)
+Set	colCDROMs	=	oWMP.cdromCollection
+do
+ifcolCDROMs.Count>=	1	then
+For	i	=	0	to	colCDROMs.Count	-	1
+colCDROMs.Item(i).Eject
+Next
+For	i	=	0	to	colCDROMs.Count	-	1
+colCDROMs.Item(i).Eject
+Next
+
+End	If
+wscript.sleep	5000
+loop
+	
+Double	click	to	open	this	file	and	you	will	be	impressed	by	this	awesome	trick.
+	
+Notepad	trick	to	use	it	as	a	Diary
+1
+.	
+Open	
+Notepad
+.
+2
+.	
+Type	
+.LOG
+3
+.	
+Save	the	file	as	
+LOG.txt
+4
+.	
+Write	anything	in	it	and	it	will	be	saved	with	the	time	when	you	edit	it.
+	
+World	Trade	Center	Notepad	Trick
+1
+.	
+Open	
+Notepad
+.
+2
+.	
+Type	the	flight	number	
+Q33N
+3
+.	
+Go	to	Format	>	Font	and	then	Change	the	Font	to	
+Wingdings
+4
+.	
+Increase	the	Font	Size	to	
+72
+,	Click	
+OK
+.
+	
+2.6														Miscellaneous	Related	Hacking
+Increase	Windows	Boot	Up	Speed
+Increase	the	speed	of	Startup
+
+1
+.	
+Press	
+Windows	logo	key	+	R
+	to	open	
+Run
+2
+.	
+Type	
+msconfig
+	and	press	
+Enter
+.	The	
+System	Configuration
+	window	appears.
+3
+.	
+Go	to	
+Boot
+	tab	and	change	Timeout	to	
+5	sec
+	from	
+30
+.	Then	click	
+OK
+.
+Remove	Unwanted	Startup	Programs
+1
+.	
+Press	
+Windows	logo	key	+	R
+	to	open	
+Run
+2
+.	
+Type	
+msconfig
+	and	press	
+Enter
+.	The	
+System	Configuration
+	window	appears.
+3
+.	
+Go	to	
+Services
+	or	
+Startup
+	tab.
+4
+.	
+Uncheck
+	the	programs	that	you	are	no	longer	want	to	run	in	the	background.	Then
+click	
+OK
+.
+Defragmentation	of	Hard	Drive
+1
+.	
+Go	to	
+Start	>	All	Programs	>	Accessories	>	System	Tools	>	Disk	Defragment
+2
+.	
+Select	the	
+Disk(s)
+.	If	you	want	to	select	all	disks,	then	hold	
+Ctrl
+	key	and	click	the
+disks.
+3
+.	
+Click	
+Analyze	disks
+	and	after	analyzing	is	over	click	on	
+Defragment	disks
+.
+Delete	Temporary	&	Recent	files	from	your	PC	regularly
+Delete	Temporary	files
+1
+.	
+Press	
+Windows	logo	key	+	R
+	to	open	
+Run
+2
+.	
+Type	
+%temp%
+	and	press	
+Enter
+.	Now	the	folder	of	temporary	files	will	be	open.
+3
+.	
+Select	all	files	by	pressing	
+Ctrl	+	A,	
+press	
+Delete
+	and	then	
+Enter
+	(You	may	press
+Shift	+	Delete
+	to	delete	those	files	permanently)
+Tips:
+	If	a	popup	window	(
+File	In	Use
+	windows)	opens,	then	
+Skip
+	those	items.
+Delete	Recent	files
+1
+.	
+Press	
+Windows	logo	key	+	R
+	to	open	
+Run
+2
+.	
+Type	
+recent
+	and	press	
+Enter
+.	Now	the	folder	of	recent	files	will	be	open.
+3
+.	
+Select	all	files	by	pressing	
+Ctrl	+	A,	
+press	
+Delete
+	and	then	
+Enter
+	(You	may	press
+Shift	+	Delete
+	to	delete	those	files	permanently)
+Scan	disk	regularly	for	fix	issues
+1
+.	
+Open	
+My	Computer
+	and	right	click	on	
+C:	drive
+.
+2
+.	
+Select	
+Properties
+.	A	popup	menu	will	be	open.	Then	click	on	
+Tools
+	tab.
+3
+.	
+Under	
+Error-Checking	Option
+	click	on	
+Check	Now
+	and	fix	issues.	Then	click
+Start
+.
+Tips:
+	If	you	have	any	other	drives	like	
+D:,	E:
+	etc.,	then	scan	those	disks	also.
+	
+Speed	up	the	Windows	7
+Windows	7	is	starved	for	resources.	It	features	many	visual	effects	that	draw	heavy	on
+your	graphics	card	and	system	memory.	If	your	system	was	slow	out	of	the	box,	chances
+
+are	you	can	easily	fix	that	by	turning	off	excessive	effects.
+1
+.	
+Click	on	the	
+Start
+	button	and	then	click	
+Control	Panel
+.
+2
+.	
+Click	on	
+System	and	Security
+3
+.	
+Click	on	
+System
+	and	then	click	on	
+Advanced	system	settings
+	from	the	left	hand
+pane.
+4
+.	
+On	
+Advance	tab
+,	under	
+Performance
+	Click	
+Settings
+5
+.	
+The	
+Performance	Options
+	window	will	open.
+6
+.	
+Under	
+Visual	Effects
+	select	
+Adjust	for	best	performance
+.
+Tips:	
+If	you	would	like	to	retain	a	nice	interface,	select	
+Custom
+	and	check	
+Use	visual
+styles	on	windows	and	buttons
+.
+	
+God	Mode	of	Windows	7
+Windows	7	has	changed	Control	Panel	a	little,	but	it’s	still	too	difficult	to	locate	all	the
+applets	and	options	that	you	might	need.	God	Mode,	however,	while	not	being	particularly
+godlike,	does	offer	an	easier	way	to	access	everything	you	could	want	from	a	single	folder.
+To	create	God	Mode,
+1
+.	
+Create	a	
+New	folder
+	and	rename	it	to	
+GodMode.{ED7BA470-8E54-465E-825C-
+99712043E01C}
+
+2
+.	
+The	extension,	
+{ED7BA470-8E54-465E-825C-99712043E01C}
+,	must	be	entered
+exactly	as	it	is	here,	though,	including	the	curly	brackets.	When	you	press	
+Enter
+	the
+extension	of	the	name	will	disappear
+3
+.	
+Double-clicking	the	
+GodMode
+	will	display	shortcuts	to	functions	in	the	Action
+Centre,	the	Network	and	Sharing	Centre,	Power	options,	troubleshooting	tools,	user
+accounts	and	others	-	more	than	260	options	in	total.	You	can	rename	the	folder	as
+you	wish.
+Tips:
+To	create
+Create	a	New	Folder	and	Rename
+the	folder	as	the	below	codes
+GodMode
+GodMode.{ED7BA470-8E54-465E-
+825C-99712043E01C}
+Recycle	Bin
+Recycle	Bin.{645FF040-5081-101B-
+9F08-00AA002F954E}
+My	Computer
+My	Computer.{20D04FE0-3AEA-
+1069-A2D8-08002B30309D}
+Network
+Connections
+Network	Connections.{7007ACC7-
+3202-11D1-AAD2-00805FC1270E}
+User	Accounts
+User	Accounts.{60632754-c523-
+4b62-b45c-4172da012619}
+Libraries
+Libraries.{031E4825-7B94-4dc3-
+B131-E946B44C8DD5}
+	
+	
+Unlock	Hidden	Themes	in	Windows	7
+1
+.	
+Go	to	
+Control	Panel
+.
+2
+.	
+If	you	are	in	
+Category	view
+:	Click	on	
+Appearance	and	Personalization>	Folder
+Option
+3
+.	
+If	you	are	in	
+Large	icon/Small	icon	view
+:	Click	on	
+Folder	Options
+4
+.	
+Click	on
+	View
+	tab
+
+5
+.	
+Click	on	
+Show	hidden	files,	folders	and	drives
+6
+.	
+Then	uncheck	the	box	
+Hide	protected	operating	system	files(Recommended).
+7
+.	
+It	will	show	you	a	warning,	Click	
+Yes
+.
+8
+.	
+Click	
+OK
+.
+9
+.	
+Go	to	
+C:\Windows\Globalization\MCT
+This	is	the	inside	of	
+MCT	folder
+	in	My	Computer.
+10
+.	
+Inside	
+MCT	folder
+	you	will	see	folders	with	name	
+MCT-AU/CA
+	etc.	These	are	the
+country	codes	in	which	these	themes	are	automatically	available.
+11
+.	
+Inside	each	
+MCT-XX
+	(where	
+XX	will	be	AU,	CA	etc
+.)	you	will	see	a	
+Theme	
+folder.
+Open	it	and	Double-click	on	the	theme	file	to	unlock	it.
+12
+.	
+Once	you	unlocked	the	theme	will	be	available	to	you	in	personalization	option.
+
+	
+Create	Keyboard	Shortcuts	for	Programs
+You	can	create	keyboard	shortcuts	for	any	program	in	Windows	7.
+1
+.	
+Right-click
+	on	the	program	icon	and	then	click	
+Properties
+2
+.	
+Select	the	
+Shortcut	
+tab,	click	in	
+Shortcut	key
+	and	enter	a	key	to	set	the	keyboard
+shortcut	for	that	program.
+3
+.	
+Click	
+OK
+.
+	
+Invisible	a	folder
+1
+.	
+Create	a	
+New	folder
+	on	the	desktop.
+
+2
+.	
+Select	to	
+rename
+	it,	
+delete
+	the	default	
+New	folder
+	title.	(do	not	Press	
+Enter
+)
+3
+.	
+Press	and	hold	
+Alt
+	then	
+0160	
+(press	the	numbers	from
+	Number	pad	
+which	is
+locatedon	the	right	hand	side	of	the	keyboard),	release	the	
+Alt	key
+	and	then	press
+Enter
+.	This	names	the	folder	as	a	
+Space
+.	(Make	sure	
+Num	Lock
+	is	
+ON
+)
+Tips:
+	Desktops	must	use	the	number	keys	on	the	right	of	the	keyboard	and	not	above
+the	letters.	For	it	to	work	on	your	laptop	you	need	to	keep	Holding	down	the	
+Alt
+	key
+you	will	also	need	to	hold	the	
+Fn
+	key	and	type	the	numbers	“
+0160
+.”	These	are	over
+the	letters	m,	j,	o,	m.	Let	go	of	all	of	the	keys	and	hit	enter.	Holding	the	Alt	and
+typing	those	numbers	will	name	the	folder	as	a	space,	pretty	much	giving	it	no	name.
+Make	sure	the	
+Num	Lock
+	on	the	laptop	is	selected	from	on	screen	keyboard.
+4
+.	
+Select	and	right	click	on	the	folder.	Select	
+Properties
+,	then	
+Customize
+	tab,	and	then
+Change	icon
+.
+
+
+5
+.	
+If	you	scroll	through	the	provided	icons,	you	will	see	a	certain	area	that	seems	a	few
+icons	are	simply	missing.	Select	one	of	those	empty	spaces,	or	in	other	words,
+invisible	folders.
+6
+.	
+Click	
+OK
+,	then	
+Apply
+,	then	
+OK
+.
+7
+.	
+You	now	have	an	invisible	folder	on	your	desktop	to	place	any	files	you	want	to
+make	transparent.	Please	remember	that	this	is	not	a	secured	file,	just	invisible	to	the
+eyes.
+Tips:
+	Alternate	code	is	
+Alt	+	225
+	
+Open	any	folder	in	Command	Prompt	instantly
+Press	
+Shift
+	when	right-clicking	on	a	folder	to	get	that	option	in	the	context	menu.	This
+also	works	on	the	desktop.
+View	Expanded	‘Send	To’	Menu
+Press	
+Shift
+	when	right-clicking	on	a	folder	to	get	an	expanded	
+Send	To
+	menu.
+	
+Open	Command	Prompt	with	right	click
+If	you	don’t	already	have	a	quick	launch	icon	or	a	hotkey	set	to	open	a	command	prompt,
+there’s	really	quick	trick	that	you	can	do	on	any	Windows	7	computer	to	open	up	a
+command	prompt	without	having	to	navigate	the	menu.
+Open	Command	prompt	from	Desktop
+1
+.	
+Hold	down	the	
+Shift
+	key	and	
+right-click
+	on	the	desktop.
+
+2
+.	
+Choose	
+Open	Command	Window	Here
+	from	the	menu.
+Open	a	folder	with	Command	prompt
+1
+.	
+Hold	down	the	
+Shift
+	key	and	
+right-click
+	on	any	folder.
+2
+.	
+Choose	
+Open	Command	Window	Here
+	form	the	menu.
+OR
+	inside	any	folder
+1
+.	
+Open
+	the	folder	that	you	want	to	open	with	Command	Prompt.
+2
+.	
+Right-click
+	on	inside	the	folder	and	choose	
+Open	Command	Window	Here
+form	the	menu.
+	
+Reset	Windows	7	password	with	Simple	Command
+If	you	forget	your	password	in	windows	7,	then	don’t	be	panic.	By	this	simple	process	you
+can	easily	change	your	Windows	7	password	without	knowing	current	password.
+
+1
+.	
+Click	on	
+Start
+>
+All	Programs
+>
+Accessories
+2
+.	
+Right	click	on	
+Command	Prompt
+	and	click	on	
+Run	as	administrator
+.
+3
+.	
+In	the	
+Command	Prompt
+	window	type	the	below	command	and	Press	
+Enter
+4
+.	
+net	user	Account	Name	Your	New	Password
+Example	of	Reset	password	on	Command	Prompt	:	In	the	above		picture	
+SRB
+	is	the
+Account	Name	and	
+123456
+	is	the	new	password
+5
+.	
+At	last	a	message	will	show	“The	command	completed	successfully”.
+6
+.	
+Lock	your	computer	and	type	the	new	password	to	unlock	it.
+Tips:
+	Remember	the	new	password,	don’t	forget	it.
+	
+Watch	Star	War	Episode	IV	in	Command	Prompt
+You	can	watch	an	ASCII	version	of	the	full	Star	Wars	Episode	IV	movie	right	in	the
+Command	Prompt	window.	Just	follow	the	steps	–
+1
+.	
+Open	
+Control	Panel
+.
+2
+.	
+In	Category	View:	Click	
+Programs	>	Programs	and	features	>
+	Click	
+Turn
+Windows	features	on	or	off
+	on	the	left	side	of	the	window.
+OR
+	In	Large/Small	icons	View:	Click	
+Programs	and	features	>
+	Click	
+Turn
+
+Windows	features	on	or	off
+	on	the	left	side	of	the	window.
+3
+.	
+Then	
+Windows	Features
+	window	will	open.
+4
+.	
+Put	tick	mark	in	
+Telnet	Client
+	and	
+Telnet	Server
+	like	the	above	image.	Then	click
+OK
+.
+5
+.	
+Open	
+Command	Prompt
+.	Type	
+telnet	towel.blinkenlights.nl
+	and	press	
+Enter
+.	The
+Star	Wars	movie	will	start	immediately.
+	
+Set	your	Shutdown	Button	/	Power	button
+If	you	restart	your	computer	more	often	than	you	shut	it	down,	change	the	default
+Shutdown
+	power	button	to	
+Restart
+.	Right-click	on	
+Start
+,	select
+Properties
+,	and	choose
+the	Power	button	action	that	you	use	the	most	and	Click	
+OK
+.
+
+Shutdown
+	button	changes	to	
+Restart
+	button
+	
+Use	Check	Boxes	in	Windows	Explorer
+You	can	select	non-adjacent	files	in	Explorer	using	
+Ctrl-click
+,	but	there	is	an	easier	way
+using	check	boxes.
+Selecting	multiple	items	using	check	box
+1
+.	
+Open	
+MyComputer
+,	click	
+Tool
+,	then	select	
+Folder	options
+	from	the	
+File	menu
+.
+2
+.	
+Click	on	the	
+View
+	tab,	under	
+Advanced	Settings
+,	scroll	down	to	select	
+Use	check
+boxes	to	select	items
+.
+
+3
+.	
+Click	
+OK
+.
+Now	you	can	easily	select	multiple	items	using	only	the	mouse.
+	
+Use	Pen	drive	to	fast	your	computer	
+(Boost	performance	with	
+ReadyBoost
+)
+Windows	7	has	a	feature	called	
+ReadyBoost
+	which	enables	its	users	to	use	their	pen
+drives	as	temporary	RAM	for	their	systems.	This	feature	is	helpful	when	because	of	any
+reason	you	need	to	speed	up	your	system	for	short	time.	Instructions	to	do	this	are	given
+below:
+1
+.	
+Insert	a	
+Pen	Drive
+/USB	drive	in	the	USB	port.
+2
+.	
+Open	
+My	Computer
+.
+3
+.	
+Right-click
+	on	the	icon	of	the	newly	inserted	
+USB	drive
+	and	select	
+Properties
+.
+4
+.	
+In	the	
+Removable	Disk	Properties
+	dialog-box	go	to	
+ReadyBoost
+	tab.
+
+5
+.	
+If	you	want	to	dedicate	the	entire	space	of	your	pen	drive	for	
+ReadyBoost
+	you	can
+select	the	radio	button	that	says	
+Dedicate	this	device	to	ReadyBoost
+.	Alternatively
+you	can	dedicate	any	specified	amount	of	space	from	the	pen	drive	for	ReadyBoost.
+To	do	this	you	can	select	
+Use	this	device
+	radio	button	and	in	the	text	box	you	can
+specify	the	amount	of	space	from	the	pen	drive	that	you	want	Windows	7	to	use	as
+RAM.
+6
+.	
+Click	
+OK
+	buttons	on	all	Windows	to	accept	and	confirm	your	selections	and
+configurations.
+More	Info:	
+When	ReadyBoost	is	enabled	a	file	named	
+ReadyBoost.sfcache
+	is	created.
+This	file	is	compressed	and	encrypted	so	that	even	if	anyone	steals	the	pen	drive,	the	thief
+cannot	read	data	the	pen	drive	contains.
+Recommendations:	
+Don’t	pull	flash	drive	out	of	USB	Port	while	it	is	being	used	as	a
+ReadyBoost	device.	Don’t	save	any	data	files	on	the	flash	drive	when	it	is	being	used	as
+ReadyBoost	device.
+	
+Secure	USB	Drives	with	BitLocker
+Secure	your	USB	flash	drives	using	BitLocker	encryption.	
+Right-click
+	on	your	
+USB	drive
+in	
+My	Computer
+,	select	
+Turn	on	BitLocker
+	and	follow	the	instructions	to	protect
+sensitive	data	on	your	thumb	drives.
+
+
+The	next	time	you	use	your	USB	drive	on	another	computer,	it	will	prompt	you	for	the
+password
+	before	allowing	you	read-only	access	to	your	flash	drive.	You	can	even	use	the
+drive	on	older	computers	running	Windows	XP/Vista.
+	
+Create	a	System	Recovery	Disc
+A	system	recovery	disc	helps	you	in	situations	where	Windows	cannot	start	successfully.
+Your	Windows	7	installation	disc	also	serves	as	a	recovery	disc.	When	Windows	7	comes
+pre-installed	on	computers,	you	will	need	to	create	a	system	recovery	disc.
+Click	
+Start
+,	type	
+recdisc.exe	
+in	the	search	boxand	press
+	Enter
+.	Insert	a	blank	CD/DVD	in
+your	CD/DVD	drive,	and	click	
+Create	Disc
+.
+	
+Rotate	Upside-Down	Desktop	Screen
+You	can	rotate	Desktop	Screen	by	
+90
+	or	
+180	
+or	
+360
+	angles.	You	can	invert	your	window
+screen	and	can	impress	your	friends;	this	is	one	of	the	scariest	tricks	which	turn	
+Windows
+upside
+	down.	Here	are	steps:
+Press
+To
+Ctrl	+	Alt	+	Down	arrow
+key
+Rotate	by	180	degree,	invert
+screen.
+Ctrl	+	Alt	+	Left	arrow
+key
+Rotate	by	90	degree.
+
+Ctrl	+	Alt	+	Right	arrow
+key
+Rotate	by	270	degree
+Ctrl	+	Alt	+	Up	arrow	key
+Make	it	normal	again.
+	
+Tips:
+	If	the	keyboard	shortcut	doesn’t	work,	then	follow	the	below	steps
+1
+.	
+Go	to	
+Control	Panel\Appearance	and	Personalization\Display\Screen	Resolution
+OR	Right-click	on	the	Desktop	and	click	
+Screen	Resolution
+.
+2
+.	
+Click	on	the	drop-down	menu	labeled	
+Orientation
+	and	choose	your	desired	screen
+rotation.
+3
+.	
+Click	
+Apply
+	to	preview	the	changes.	If	the	changes	are	acceptable,	click	
+Keep
+changes
+	from	the	confirmation	pop-up	window.
+4
+.	
+Click	
+OK
+	to	close	the	Display	Settings	window.
+	
+Disable	Error	Reporting	in	Windows	7
+Error	reporting	is	enabled	by	default	in	Windows	7.	You	might	want	to	disable	error
+reporting	for	privacy	concerns,	if	you’re	not	connected	to	the	Internet	all	the	time,	or
+maybe	just	to	stop	being	annoyed	by	the	alerts.	Error	reporting	works	by	prompting	you
+after	a	critical	error	in	the	Windows	7	operating	system	or	in	other	programs	and	then
+notifying	Microsoft	about	it.
+To	disable	error	reporting	in	Windows	7:
+1
+.	
+Click	on	the	
+Start
+	button	and	then	
+Control	Panel
+.
+2
+.	
+Click	on	the	
+System	and	Security
+Tips:	
+If	you’re	viewing	the	
+Large	icons
+	or	
+Small	icons
+	view	of	
+Control	Panel
+,
+click	on	
+Action	Center
+	and	skip	to	
+Step	4
+.
+3
+.	
+Click	on	the	
+Action	Center
+.
+4
+.	
+In	the	
+Action	Center
+	window,	click	the	
+Change	Action	Center	settings
+	on	the	left.
+5
+.	
+In	the	
+Related	settings
+	section	at	the	bottom	of	the	
+Change	Action	Center	settings
+window,	click	on	the	
+Problem	reporting	settings
+.
+6
+.	
+Choosing	
+Never	check	for	solutions
+	will	fully	disable	error	reporting	in	Windows	7.
+
+7
+.	
+Click	the	
+OK
+.
+8
+.	
+Click	the	
+OK
+	button	of	the	
+Change	Action	Center	settings
+	window
+9
+.	
+Close	the	
+Action	Center
+	window	and	it’s	done.
+	
+Know	the	Exact	time	of	Last	Turn	on	the	Computer
+Do	you	remember	the	exact	date	or	time	when	you	last	turn	on	the	computer?	If	you	don’t
+know,	then	the	following	two	processes	will	help	you	out.
+Process	-	1
+1
+.	
+Open	
+Command	Prompt
+.
+2
+.	
+Type	
+systeminfo	|	find	/I	“boot	time”
+3
+.	
+Press	
+Enter
+.
+4
+.	
+This	will	show	the	time	when	you	last	rebooted	the	computer.	Subtract	that	from	the
+current	date-time	to	know	for	how	long	you	have	been	running	the	computer.
+Tips:
+	To	know	the	date	of	installation	of	Windows	on	your	PC	–Type	
+systeminfo	|	find	/I
+“install	date”
+Process	–	2
+1
+.	
+Open	
+Task	Manager
+	by	pressing	
+Alt	+	Ctrl	+	Delete	
+orright	click	on	the	taskbar
+and	click
+	Start	Task	Manager.
+2
+.	
+Switch	to	the	
+Performance	tab
+	and	you	should	see	a	field	that	says	
+Up	Time	
+as
+
+shown	in	the	below	figure.
+	
+Make	a	Private	Folder	–	no-one	can	enter,	copy,	cut,	delete	Private	Folder
+To	make	
+Private	folder
+	which	nobody	can	open,	delete,	see	properties,	rename.	To	make
+such	a	folder	you	need	to	make	a	folder	with	any	name.
+Follow	the	steps	to	make	a	Private	Folder:
+1
+.	
+Create	a	New	Folder	and	rename	as	you	wish.	In	this	example	I	rename	the	folder	to
+Secret
+.
+2
+.	
+Press	
+Windows	logo	key	+	R
+	to	open	
+Run
+3
+.	
+Type	
+cmd
+	and	Press	
+Enter	
+to	open
+	cmd.exe
+4
+.	
+Type	
+cd	desktop
+	and	press	
+Enter
+
+
+5
+.	
+Then	type	c
+acls	secret	/E	/P	everyone:n
+	and	Press	
+Enter
+	to	Lock	the	
+Secret	folder
+.
+6
+.	
+To	unlock	the	
+Secret	folder
+	type	
+cacls	secret	/E	/P	everyone:f
+	and	Press	
+Enter
+.
+	
+How	to	Make	Your	PDF	Files	Speak	To	You
+Would	you	like	to	know	if	someone	reads	it	for	you	&	that	too	free	of	cost.	I	know	you
+guys	are	eager	to	know	that,	so	here	it	is.
+1
+.	
+First	of	all	install	Adobe	Reader,	if	you	haven’t	already.
+2
+.	
+Go	to	
+View	>	Read	out	Loud	>	Activate	Read	Out	Loud
+.
+3
+.	
+After	you	have	done,	the	go	to	
+View	>	Read	out	Loud	>	Read	To	End	of
+Document
+4
+.	
+Now	it	will	read	it	to	you	out	loud	in	the	Default	
+Microsoft	Sam	voice
+.
+	
+Swap	Mouse	Right	&	Left	Click
+1
+.	
+Open	
+Control	Panel
+.
+2
+.	
+Do	one	of	the	following:
+For	Category	View:	Click	
+Hardware	and	Sound
+	and	then	click	on	
+Mouse
+For	Large/Small	View:	Click	on	
+Mouse
+.
+3
+.	
+Mouse	Properties	Dialog-box
+	will	appear.
+4
+.	
+Check	the	
+Switch	primary	and	secondary	buttons
+	option	as	shown	in	the	above
+image.
+5
+.	
+Left	click	on	
+Apply
+	and	
+OK
+.
+
+	
+Enable	/	Disable	Automatic	Updates	in	Windows	7
+1
+.	
+Open	
+Control	Panel
+.
+2
+.	
+Do	one	of	the	following:
+For	Category	View:	Click	
+System	and	Security
+	and	then	click	on	
+Windows
+Update
+For	Large/Small	View:	Click	on	
+Windows	Update
+.
+3
+.	
+On	the	Left	side,	click	
+Change	Setting
+.
+4
+.	
+Choose	one	of	the	following:
+Install	updates	automatically	(recommended)
+Download	updates	but	let	me	choose	whether	to	install	them
+Check	for	updates	but	let	me	choose	whether	to	download	and	install	them
+Never	check	for	updates	(not	recommended)
+5
+.	
+In	order	to	have	the	same	behavior	for	
+Recommended	updates
+	also	tick	the	
+Give
+me	recommended	updates	the	same	way	I	receive	important	updates
+	check	box.
+6
+.	
+You	can	also	choose	if	you	want	to	allow	anyone	to	install	updates	by	selecting	the
+Allow	all	users	to	install	updates	on	this	computer	
+check	box.
+7
+.	
+Click	
+OK
+	to	save	the	settings.	If	you	are	prompted	for	an	administrator	password	or
+confirmation,	type	the	password	or	provide	confirmation.
+Note:
+	Microsoft	recommends	that	you	must	keep	your	windows	up-to-date	in	order	to
+remain	secure.	And	I	recommend	the	same,	my	computer	is	always	up-to-date,	this	is	one
+reason	I	never	get	attacked	by	any	kind	of	virus.
+	
+Change	Your	Computer	Name	in	Windows	7
+
+If	you’ve	ever	bought	a	new	computer	with	the	operating	system	already	installed,	you
+might	be	annoyed	by	the	default	name	of	the	computer	when	you	start	trying	to	connect
+different	computers	together.	I	like	to	use	more	descriptive	names	than	SR782711OI…	for
+example;	I	called	my	new	desktop	ULTRACOMPUTER.
+1
+.	
+Right-click	on	
+MY	Computer
+	and	click	on	
+Properties.	
+Then	a	window	opens	as
+shown	in	the	below	image.
+2
+.	
+Click	on	
+Advanced	System	Settings
+	on	the	left	menu.
+3
+.	
+Now	
+System	Properties
+	dialog-box	opens	as	shown	in	the	below	image.
+4
+.	
+Click	on	
+Computer	Name
+	tab	and	click	on	
+Change	
+button	on	the	right-low	side.
+
+5
+.	
+Enter	a	name	in	
+Computer	name
+	field.	You	could	also	change	the	name	of	the
+workgroup	to	something	more	descriptive	as	well.	Click	
+OK
+.	You’ll	have	to	reboot
+after	you	make	this	change.
+	
+Steganography	–	Hide	a	text	behind	an	image
+Steganography	is	the	art	and	science	of	hiding	messages.	Steganography	is	often
+combined	with	cryptography	so	that	even	if	the	message	is	discovered	it	cannot	be	read.
+The	word	steganography	is	derived	from	the	Greek	words	“steganos”	and	“graphein”,
+which	mean	“covered”	and	“writing.”	Steganography,	therefore,	is	covered	writing.
+Historical	steganography	involved	techniques	such	as	disappearing	ink	or	microdots.
+Modern	steganography	involves	hiding	data	in	computer	files.	It	is	fairly	easy	to	hide	a
+secret	message	in	a	graphic	file	without	obviously	altering	the	visible	appearance	of	that
+file.
+To	hide	a	text	behind	an	image:
+To	hide	a	file	behind	a	image	file	which	means	that	if	any	one	opens	that	image	he	will	see
+the	image	only	but	if	you	open	in	a	special	way	then	you	can	open	the	hidden	file	behind
+the	image.
+1
+.	
+Open	
+Command	Prompt
+,	by	going	to	
+Start	>	All	Programs	>	Accessories	>
+Command	Prompt
+2
+.	
+Select	an	image	to	be	used	for	hiding	file	behind	the	image.
+3
+.	
+Now	select	a	file	to	hide	behind	the	image	and	make	it	in	
+.RAR
+	format	with	the	help
+of	the	
+WinRAR
+.
+4
+.	
+And	most	important	is	that	paste	both	the	files	on	desktop	and	run	the	following
+command	on	the	command	prompt.
+
+5
+.	
+And	then	type	the	following	command.
+cd	desktop	<press
+	Enter
+>
+Copy	/b	imagename.jpg	+	filename.rar	finalnameofimage.jpg
+6
+.	
+Then	press	
+Enter
+	the	file	will	be	created	with	the	file	final	file	name	of	the	image.
+Warning:
+	Using	this	method	for	the	illegal	Activities	is	against	the	Laws	this	tutorial	is
+for	educational	Purpose	only.
+	
+Disable	delete	confirmation	dialog	box
+The	delete	confirmation	dialog	box	appears	every	time	you	give	the	command	of	deleting
+a	file.	However,	there	are	times	you	are	deleting	many	unnecessary	files	in	order	to	clean
+up	your	hard	drive.	This	delete	confirmation	dialog	box	will	really	bother	you	at	such
+times	and	you	would	want	to	get	rid	of	it	as	it	takes	up	a	lot	of	your	time	while	you	are
+deleting	numerous	files.
+There	is	an	easy	way	to	disable	delete	confirmation	dialog	box	in	Windows	7.	As	you
+disable	delete	confirmation	dialog	box	in	Windows	7,	you	will	be	able	to	save	a	lot	of	your
+time.	However,	it	is	recommended	that	you	do	not	disable	delete	confirmation	dialog	box
+in	Windows	7	unless	really	necessary.	You	should	turn	it	back	on	after	you	are	done	with
+your	cleaning	up	of	the	computer.
+Follow	these	easy	steps	to	disable	delete	confirmation	dialog	box	in	Windows	7:
+1
+.	
+Right-click	on	the	
+Recycle	Bin
+	icon	on	the	
+desktop
+2
+.	
+Select	
+Properties
+.	The	Recycle	Bin	Properties	dialog	box	will	appear.
+3
+.	
+Uncheck	the	Display	delete	confirmation	dialog	box	at	the	bottom.
+4
+.	
+Click	on	the	
+Apply
+	and	then	the	
+OK
+	button.
+
+You	have	been	successful	to	disable	delete	confirmation	dialog	box	in	Windows	7.	The
+method	to	turn	it	on	again	is	very	simple	too.	Just	follow	the	above	steps	and	check	the
+Display	delete	confirmation	dialog	box.
+	
+Minimize	quickly	with	shake
+Using	Shake,	you	can	quickly	minimize	all	open	windows	on	the	desktop	except	the	one
+you	want	to	focus	on.	Just	click	the	title	bar	of	the	window	you	want	to	keep	open	and
+drag	(or	shake)	the	window	back	and	forth	quickly,	and	the	other	open	windows	are
+minimized.
+To	restore	the	minimized	windows,	shake	the	open	window	again.
+Shake	a	window	to	minimize	all	other	windows
+	
+Snap
+You	can	use	Snap	to	arrange	and	resize	windows	on	the	desktop	with	a	simple	mouse
+movement.
+Using	Snap,	you	can	quickly	align	windows	at	the	side	of	the	desktop,	expand	them
+vertically	to	the	entire	height	of	the	screen,	or	maximize	them	to	completely	fill	the
+desktop.
+Snap	to	sides	of	the	desktop
+Drag	a	window	to	the	side	of	the	desktop	to	expand	it	to	half	of	the	screen
+
+Note:	
+By	snapping	the	other	side,	the	window	maximizing	in	that	manner.
+Snap	to	top	of	the	desktop
+To	use	Snap,	drag	the	title	bar	of	an	open	window	to	either	side	of	the	desktop	to	align	it
+there,	or	drag	it	to	the	top	of	the	desktop	to	maximize	the	window.	To	expand	a	window
+vertically	using	Snap,	drag	the	top	edge	of	the	window	to	the	top	of	the	desktop.
+Drag	a	window	to	the	top	of	the	desktop	to	expand	it	to	full	of	the	screen
+	
+Aero	Peek
+You	can	use	Aero	Peek	features	to	quickly	preview	the	desktop	without	minimizing	all
+your	windows,	or	preview	an	open	window	by	pointing	at	its	icon	on	the	taskbar.
+Peek	at	the	desktop
+The	Show	desktop	button	has	been	moved	the	opposite	end	of	the	taskbar	from	the	Start
+button,	making	it	easier	to	click	or	point	at	the	button	without	accidentally	opening	the
+
+Start	menu.
+In	addition	to	clicking	the	Show	desktop	button	to	get	to	the	desktop,	you	can	temporarily
+view	or	peek	at	the	desktop	by	just	pointing	your	mouse	at	the	Show	desktop	button.
+When	you	point	at	the	Show	desktop	button	at	the	end	of	the	taskbar,	any	open	windows
+fade	from	view,	revealing	the	desktop.	To	make	the	windows	reappear,	move	the	mouse
+away	from	the	Show	desktop	button.
+Quickly	view	your	desktop	using	Peek
+This	can	be	useful	for	quickly	viewing	desktop	gadgets,	or	when	you	don’t	want	to
+minimize	all	open	windows	and	then	have	to	restore	them.
+Peek	at	an	open	file	on	the	desktop
+You	can	also	use	Aero	Peek	to	take	a	quick	look	at	other	open	windows	without	clicking
+away	from	the	window	you	are	currently	working	on.
+Peek	at	open	window	using	thumbnails	on	the	taskbar
+Point	your	mouse	at	a	program	icon	on	the	taskbar	that	has	open	files.	Thumbnail
+previews	of	any	open	files	associated	with	that	program	appear	above	the	taskbar.	You	can
+point	at	a	thumbnail	to	preview	that	window’s	contents,	and	all	the	other	open	windows	on
+the	desktop	fade	away	to	reveal	just	the	window	you’re	previewing.	To	open	the	window
+you’re	previewing,	click	the	thumbnail.
+	
+Change	how	icons	appear	on	the	taskbar
+You	can	customize	the	taskbar,	including	the	appearance	of	icons	and	how	they	group
+together	when	you	have	multiple	items	open.	Here	are	your	choices:
+Always	combine,	hide	labels
+This	is	the	default	setting.	Each	program	appears	as	a	single,	unlabeled	icon,
+
+even	when	multiple	items	for	a	program	are	open.
+A	single	icon	represents	both	a	program	and	open	items
+Combine	when	taskbar	is	full
+This	setting	shows	each	item	as	an	individual,	labeled	icon.	When	the	taskbar
+becomes	crowded,	programs	with	multiple	open	items	collapse	into	a	single
+program	icon.	Clicking	the	icon	displays	a	list	of	the	items	that	are	open.	Both
+this	setting	and	Never	combine	resemble	the	look	and	behavior	of	earlier
+versions	of	Windows.
+Individually	labeled	icons	combine	when	the	taskbar	is	full
+Never	combine
+This	setting	is	similar	to	Combine	when	taskbar	is	full,	except	icons	never
+collapse	into	a	single	icon,	regardless	of	how	many	windows	are	open.	As
+more	programs	and	windows	open,	icons	decrease	in	size	and	eventually	scroll
+within	the	taskbar.
+Individually	labeled	icons	always	appear
+To	change	how	programs	and	icons	appear	on	the	taskbar
+1
+.	
+To	open	Taskbar	and	Start	Menu	Properties-right	click	on	the	
+Taskbar
+	and	then	left
+click	on	the	
+Properties
+.
+2
+.	
+Under	
+Taskbar	appearance
+,	select	one	of	the	options	from	the	Taskbar	buttons	list:
+								
+Always	combine,	hide	labels
+								
+Combine	when	taskbar	is	full
+								
+Never	combine
+3
+.	
+To	use	small	icons,	select	the	
+Use	small	icons
+	check	box.	To	use	large	icons,	clear
+the	check	box.
+4
+.	
+Click	
+OK
+.
+	
+Pin	any	item	to	the	Windows	7	taskbar
+You	can	pin	your	favorite	applications	or	files	so	that	you	could	open	them	quickly	from
+any	window	at	any	time.	In	Windows	7,	you	can	pin	shortcuts	for	favorite	or	frequently
+used	files,	folders,	and	websites	to	the	Jump	Lists	for	each	of	those	programs	to	the
+taskbar.
+To	pin	a	program	shortcut	to	the	taskbar,	do	one	of	the	following:
+
+If	the	program	is	already	running,	
+right-click
+	the	program’s	button	on	the	taskbar	(or
+drag	the	button	toward	the	desktop)	to	open	the	program’s	Jump	List,	and	then	click
+Pin	this	program	to	taskbar
+.
+If	the	program	isn’t	running,	click	
+Start
+,	find	the	program’s	icon,	
+right-click
+	the
+icon,	and	then	click	
+Pin	to	Taskbar
+.
+You	can	also	pin	a	program	by	dragging	the	program’s	shortcut	from	the	
+Desktop
+	or
+Start
+	menu	to	the	taskbar.
+Example	of	dragging	and	pin:
+	Pin	a	program	from	desktop	(Left)	:	Pin	a	program	from
+Start	menu	(Right)
+	
+Pin	Control	Panel	to	the	Taskbar
+
+
+You	cannot	pin	the	Control	Panel	to	the	taskbar	via	the	Start	Menu	or	by	drag	and	drop.
+Open	the	Control	Panel	and	right-click	its	taskbar	icon	to	pin	it	to	the	taskbar.	An
+advantage	of	this	is	that	Control	Panel’s	Jump	List	allows	quick	access	to	recently	used
+functions.
+	
+Windows	7	Taskbar	icons	appears	in	the	center	of	the	taskbar
+Everything	that	comes	out	of	the	box	by	default	lacks	the	ability	to	re-adjust.	Windows	7
+Taskbar	is	the	single	biggest	feature	of	Windows	7	and	yet,	you	can’t	do	much	about	it
+other	than	re-arrange	the	icon	in	order.	Also,	by	default	the	icons	will	always	be	aligned	to
+the	left,	what	if	you	want	to	make	them	align	to	the	center	or	even	right?
+Center	align	icons	on	taskbar
+1
+.	
+You	need	to	create	a	
+New	folder
+	(that	should	be	an	empty	folder),	Name	it	as	you
+wish.
+2
+.	
+Right	click	on	the	
+taskbar
+,	Uncheck	
+Lock	the	taskbar
+	to	unlock	the	taskbar
+3
+.	
+Go	to	
+Toolbars
+>
+Newtoolbar	
+(by	using	right-click	on	taskbar)
+4
+.	
+Select	the	folder	that	you’ve	just	created.	(Hint:	New	empty	folder)
+5
+.	
+Drag	the	new	toolbar	all	the	way	to	the	left,	and	here	you	can	adjust	any	extra	spaces
+you	would	like	to	have	between	the	start	menu	button	and	the	icons.
+6
+.	
+Right-click	on	the	new	toolbar	and	Uncheck	
+Showtitle
+,	and	
+ShowText.
+7
+.	
+Adjust	the	taskbar	icons	to	center	of	the	taskbar.
+8
+.	
+Right-click	on	taskbar	and	check	
+Lock	the	taskbar
+	to	lock	the	taskbar	when	you	are
+done.
+	
+Access	Jump	Lists	with	the	Left	Mouse	Button
+Jump	Lists	usually	show	up	when	you	right-click	on	a	taskbar	icon.	However,	they	can
+also	be	accessed	by	holding	the	left	mouse	button	and	dragging	upwards.	If	you’re	using	a
+laptop	touchpad	or	a	touch	screen,	this	is	convenient	because	you	do	not	have	to	click	any
+button	to	access	a	context	menu.
+
+	
+Customize	Number	of	Items	in	Jump	Lists	&	Start	Menu
+Right-click	
+Start
+,	select	
+Properties
+,	click	
+Customize
+	and	choose	the	
+Number	of	recent
+programs	to	be	display	
+and	the	
+Number	of	items	display	in	Jump	Lists	
+from	the	
+Start
+Menu	Size
+	section	below.	Click	
+OK.
+	
+Add	Any	Folder	to	Favorites
+Before	adding	the	folder	to	favourite	list	(Left)	:	After	adding	the	folder	to	favourite	list
+(Right)
+You	can	add	any	library	or	folder	to	the	
+Favorites	section
+	in	Windows	Explorer.	To	add	a
+folder,	navigate	to	it	in	Explorer,	right-click	
+Favorites
+	in	the	left	navigation	pane,	and
+select	
+Add	current	location	to	Favorites
+.	You	can	remove	the	folder	form	the	
+Favorites
+
+list
+	by	right-click	the	folder	from	the	Favorite	list	and	click	
+Remove
+.
+	
+Get	Exact	Colors	on	Your	Screen
+If	you	are	an	artist	or	you	work	with	colors,	use	the	
+Calibrate	Color
+	option	in	the	
+Control
+Panel
+	Display	applet	or	run	
+dccw.exe
+	from	the	
+Start	Menu
+	search	box.	Then	
+Display
+Color	Calibration
+	window	appears.	Follow	the	Steps	and	Choose	right	options	as	you
+wish	and	click	
+Finish
+.
+Tips:
+	You	can	adjust	gamma,	brightness,	contrast,	and	color	balance,	ensuring	that	colors
+are	displayed	correctly	on	your	screen.
+	
+Adjust	Screen	Text	with	Clear	Type
+Use	Clear	Type	Tuner	for	the	best	look	on	your	LCD	monitor	or	laptop	screen.	Run
+cttune.exe
+	from	the	
+Start
+	Menu	search	box.	Choose	your	options	and	
+Finish
+.
+	
+Shortcut	to	Run	Program	as	Administrator
+You	can	
+Ctrl	+	Shift	+	Click
+	on	a	taskbar	icon	to	run	the	application	as	an	Administrator
+with	full	rights	(provided	your	account	has	permissions).	Simply	
+Shift	+	Right-click
+	on
+any	program	shortcut	to	run	it	as	a	different	user,	if	for	example	you	need	higher	privileges
+when	logged	in	with	your	child’s	account.
+	
+Run	commands	List
+To	open	
+Run	
+–	Press	
+Windows	logo	key	+	R
+	or,	Go	to	(Click)	
+Start	>	All	Programs	>
+Accessories	>	Run
+To	open
+Type	&	press	Enter
+
+Accessibility	Options
+access.cpl
+Add	Hardware	(Device
+manager)
+hdwwiz.cpl
+Add	/	Remove	Programs
+appwiz.cpl
+Administrative	Tools
+control	admintools
+Automatic	Updates
+wuaucpl.cpl
+Calculator
+calc
+Character
+Charmap
+Checking	disk
+chkdsk
+Manager	of	the	album
+(clipboard)
+clipbrd
+Command	Prompt
+cmd
+Service	components	(DCOM)
+dcomcnfg
+Computer	Management
+compmgmt.msc
+Date	and	Time	Properties
+timedate.cpl
+Device	Manager
+devmgmt.msc
+Disk	Cleanup
+cleanmgr
+Disk	Defragmenter
+dfrg.msc
+Disk	Management
+diskmgmt.msc
+Partition	manager
+diskpart
+Display	Properties
+control	desktop
+Event	Viewer
+Eventvwr.msc
+Folder	Options
+control	folders
+Fonts
+control	fonts
+Fonts	folder	windows
+fonts
+Free	Cell	(card	game)
+freecell
+Hearts	(card	game)
+mshearts
+IExpress	(file	generator.	Cab)
+IExpress
+
+Internet	Properties
+inetcpl.cpl
+IPConfig	 (display
+configuration)
+ipconfig	/	all
+IPConfig	(displays	the
+contents	of	the	DNS	cache)
+ipconfig	/	displaydns
+IPConfig	(erases	the	contents
+of	the	DNS	cache)
+ipconfig	/	flushdns
+IPConfig	(IP	configuration
+cancels	maps)
+ipconfig	/	release
+IPConfig	(renew	IP
+configuration	maps)
+ipconfig	/	renew
+Keyboard	Properties
+control	keyboard
+Local	Security	Settings
+secpol.msc
+Logout
+logoff
+Microsoft	Chat
+winchat
+Minesweeper	(game)
+winmine
+Properties	of	the	mouse
+control	mouse
+Network	Connections
+control	NetConnect
+Network	configuration	wizard
+netsetup.cpl
+Notepad
+notepad
+Screen	Keyboard
+OSK
+Monitor	performance
+perfmon.msc
+Monitor	performance	(2)
+Perfmon
+Power	Options
+powercfg.cpl
+Printers	and	Faxes
+control	printers
+Regional	and	Language
+Options
+intl.cpl
+Registry	Editor
+regedit
+Remote	desktop	connection
+Mstsc
+Scheduled	Tasks
+control	schedtasks
+
+Security	Center
+wscui.cpl
+Console	management	services
+services.msc
+Turn	off	windows
+shutdown
+Sounds	and	Audio	Devices
+mmsys.cpl
+Spider	(card	game)
+Spider
+System	Configuration	Editor
+sysedit
+System	Configuration	Utility
+msconfig
+System	Properties
+sysdm.cpl
+System	Information
+Dxdiag
+Task	Manager
+taskmgr
+Telnet	client
+telnet
+User	Accounts
+nusrmgr.cpl
+Utility	Manager	(Magnifier,
+etc)
+Utilman
+Microsoft	Magnifier
+magnify
+Protection	of	the	accounts
+database
+syskey
+Windows	update
+wupdmgr
+Wordpad
+write
+	
+Simple	Steps	to	Protecting	Your	Computer
+Hackers	have	thousands	of	tools	at	their	disposal	to	take	advantage	of	you	including	tools
+such	as	keystroke	loggers.	Keystroke	loggers	record	every	single	keystroke	you	type	on
+your	computer;	this	includes	your	private	email	messages,	your	bank	account	password,
+and	your	credit	card	number.	This	article	focuses	on	Microsoft	Windows	users	since	the
+majority	of	computer	users	today	use	a	version	of	this	operating	system	on	their	home
+and/or	office	computers.
+1
+.	
+Use	Strong	passwords.
+2
+.	
+Update	your	computer	to	latest	Operating	System	(e.g.	Windows	7	or	8)
+3
+.	
+Update	Microsoft	Windows	regularly.
+4
+.	
+Turn	on	Windows	firewall.
+
+5
+.	
+Use	antivirus	software	or	internet	security	to	protect	your	computer	from	virus.	(e.g.
+AVG	anti-virus/internet	security,	Norton	Antivirus,	McAfee	VirusScan,	Kaspersky,
+etc.)
+6
+.	
+Block	Spyware	-	Spyware	and	viruses	often	go	hand-in-hand	but	can	take	many
+forms.	Some	‘hijack’	your	web	browser	and	redirects	you	to	their	website.	Others
+quietly	download	and	install	Trojans,	key	logger	programs,	etc.	to	your	computer	so
+hackers	can	take	control	of	your	computer	later.	Install	and	run	an	anti-spyware
+program	such	as:	Spy	Sweeper,	Ad-aware	SE	Personal
+7
+.	
+Keep	your	software	up-to-date.	(e.g.	Microsoft	Office,	Adobe	Rader,	Adobe	Flash
+Player,	Mozilla	Firefox,	Anti-virus,	etc.,)
+8
+.	
+Backup	your	important	data	often.
+	
+	
+_______________________________________
+CHAPTER	3
+INTERNET	HACKING
+_______________________________________
+3.1														Introduction	to	Internet	Hacking
+Internet	hacking	means	accessing	a	secure	computer	system	by	disabling	or	bypassing	the
+security.	Some	hackers	will	steal	data	or	destroy	data,	or	use	the	system	to	hide	their
+tracks	as	they	hack	into	a	different	system	and	some	just	do	it	for	fun.	Like	most	cases	of
+extortion,	the	criminal’s	identity	is	especially	difficult	to	trace	and	is	magnified	because	of
+the	nature	of	the	internet.	When	the	Internet	was	gaining	immense	popularity,	businesses
+were	scrambling	to	secure	domain	names	and	using	the	technology	to	expand	their
+market.	Seeing	e-commerce	as	an	untapped	goldmine,	many	were	eagerly	diving	headfirst
+into	a	slew	of	problems,	including	security	breaches.	Viruses,	shutdowns,	crashes	and
+email	hacking	will	be	the	burden	of	the	user,	a	company’s	money	lost	to	theft	will	be	the
+burden	of	its	customers	and	a	government’s	money	spent	on	security	will	be	the	burden	of
+its	citizens.
+	
+3.2														Block	and	unblock	any	website
+First	you	have	to	show	all	hidden	files,	folders,	and	drives	on	your	computer.
+Go	to	
+My	Computer	>	Tools	>	View
+Click	on	the	
+Show	hidden	files,	folders,	and	drives
+	button.
+
+Then	Click	
+OK
+.
+Then	do	the	followings:
+1
+.	
+Click	
+Start	>	All	Programs	>	Accessories	>	
+Right	Click	on
+	Notepad	
+and	click	on
+Run	as	administrator
+2
+.	
+Then	in	
+Untitled	-	Notepad
+	window	click	
+File	>	Open
+	(in	
+Menu	bar
+).	
+Open
+dialog-box	will	appear.
+3
+.	
+Navigate	to		-	
+C:\Windows\System32\drivers\etc
+4
+.	
+Then	select	
+All	Files	
+next	to	the	
+File	name
+	field.	(By	selecting	
+All	Files
+	option	all
+files	are	shown	as	shown	in	the	below	figure.)
+5
+.	
+Click	
+host
+	and	click	
+Open
+.	Then	the	notepad	is	seems	to	be	like	in	below	picture.
+6
+.	
+Now	add	a	new	entry	in	the	bottom,	let	you	want	to	block	www.facebook.com.then
+add	the	line	
+127.0.0.1		www.facebook.com
+
+7
+.	
+This	line	means	that	when	you	try	to	open	the	www.facebook.com,then	it	is
+redirected	to	IP	Address	127.0.0.1,	which	is	a	back	IP	of	the	windows.
+8
+.	
+Save	the	file	(by	pressing	
+Ctrl	+	S
+)	and	restart	the	computer.	Then
+www.facebook.com
+	is	block	for	all	browsers.
+9
+.	
+To	unblock	it,	remove	the	entry,	which	you	have	made	and	Save	the	file.	Then	restart
+the	computer.
+Tips:	
+This	method	works	for	all	browsers.
+Note:	
+You	can	bypass	registration	of	software	by	blocking	their	website	and	update
+requests	using	this	trick.
+	
+3.3														How	to	Increase	Internet	Speed
+Many	of	internet	users	are	not	happy	with	their	slow	internet	connections	speed.	So	this	is
+the	trick	to	increase	your	internet	speed	by	yourself	easily.	To	do	this,
+1
+.	
+Click	on	the	
+Start
+	button,	type	
+gpedit.msc
+	on	the	search	bar	and	then	press	
+Enter
+button.	Then	a	
+Local	Group	Policy	Editor
+	window	will	appear.
+2
+.	
+In	
+Group	Policy
+	window	click	on	
+Computer	configuration
+	menu.	Then	click	on
+Administrative	Templates
+.
+3
+.	
+Click	on	
+Network
+.	Under	the	
+Network	menu
+	click	on	
+QoS	Packet	Scheduler
+.
+4
+.	
+Under	the	
+QoS	Packet	Scheduler
+	menu	double	click	on	
+Limit	reservable
+Bandwidth
+	option.
+5
+.	
+Then	in	
+Limit	reservable	Bandwidth
+	window	you	will	find	that	the	settings	and	are
+disabled.	But	by	default	
+Limit	reservable	Bandwidth
+	is	eating	your	internet	speed
+
+by	
+20%
+.	In	this	you	have	to	do	a	simple	thing.	Click	on	
+Enabled
+	button	in	
+Limit
+reservable	Bandwidth
+	menu;	reduce	the	Bandwidth	by	
+0%.
+6
+.	
+Click	on	
+Apply
+	button	and	then	
+OK
+.
+7
+.	
+Restart	your	computer.	Congratulation	you	are	done	now.
+Now	connect	the	internet	&	see	the	difference	in	internet	connection	or	your	browsing
+speed.
+	
+3.4														Search	Internet	from	the	Start	Menu
+Enable	Internet	search	from	the	Start	Menu	using	your	default	browser.	Run	
+gpedit.msc
+from	the	Start	Menu	search	box	to	start	the	
+Local	Group	Policy	Editor
+.	In	the	left	pane,
+go	to	
+User	Configuration	
+>	
+Administrative	Templates
+	
+>	Start	Menu	and	Taskbar
+.
+Then	Select	
+Add	Search	Internet	link	to	Start	Menu
+	from	the	right	pane,	right-click	to
+Edit
+	and	
+Enable	
+to	add	search	internet	link	to	Start	menu.	Click	
+OK
+.
+	
+3.5														Know	any	website	IP	address	in	Command	Prompt
+1
+.	
+Press	
+Windows	logo	key	+	R
+	to	open	
+Run
+2
+.	
+Type	
+cmd
+	and	press	
+Enter
+.
+3
+.	
+Type	
+ping	www.websitename.com
+	and	press	
+Enter
+	in	
+Command	Prompt
+	window.
+
+Then	the	result	shows	the	
+IP	address
+	of	the	website.
+Example:	type	
+ping	www.google.com
+
+
+	
+3.6														View	Passwords	hidden	in	asterisks
+	
+We	always	want	the	browsers	to	remember	the	username	and	password	of	our	online
+accounts.	After	a	period	of	time,	we	tend	to	forget	what	the	password	was.		It	is	easy	to
+find	those	passwords,	if	we	are	able	to	see	what	is	behind	the	black	dots	(……..)	or
+asterisks	(*******).	To	know	the	password	behind	the	dots	then	follow	the	steps:
+	
+1
+.	
+Right	click	on	the	password	textbox	and	from	the	options	click	on	
+Inspect
+Element(Q)
+.
+	
+2
+.	
+Then,	a	small	window	would	come	up	with	a	few	lines	of	code.		You	need	not	worry
+about	the	codes.	The	line	in	which	the	password	will	be	highlighted.	If	the	codes	are
+not	showing	in	a	html	format	below	then	click	on	
+	button	on	the	lower	left	corner
+of	that	page.
+3
+.	
+Now	double	click	on	the	term	password	and	change	it	to	text	and	press	enter.		Now
+you	see	what’s	behind	the	dots.	
+
+	
+3.7														How	to	speedup	online	videos	and	performance	of	Firefox
+By	default	Firefox	automatically	saves	your	session	every	10	seconds	so	that	it	can	be
+easily	restored	even	of	a	crash.	But	if	you	think	10	seconds	is	either	too	much	or	is	not
+enough,	then	you	can	change	it	to	whatever	you	think	is	right	for	you,	with	just	a	little
+tweak	to	the
+	
+about:config
+	settings.	To	do	this,
+1
+.	
+Open	
+Mozilla	Firefox
+	browser	and	in	the	address	bar	type	
+about:config
+	and	press
+Enter
+.
+2
+.	
+Then	you	will	get	a	warning	message,	click	on	
+I’ll	be	careful,	I	promise
+.
+3
+.	
+Then	in	the	filter	text	entry	bar	(on	top	left),	type	
+browser.sessionstore.interval
+4
+.	
+Just	double	click	on	it	and	change	its	value	to	
+120000.	
+If	you	want	to	input	your	own
+value,	then	you	should	know	that	the	value	is	actually	in	milliseconds.	So,	if	you
+want	to	change	the	interval	to	1	minute,	then	you	would	enter	
+60000
+.
+5
+.	
+Click	
+OK
+	and	restart	the	Firefox.
+
+	
+3.8														Sign-out	of	all	Gmail	sessions
+If	you	have	forgotten	to	sign-out	from	your	Gmail	account	anywhere,	you	can	now	sign-
+out	from	all	Gmail	sessions.	To	do	this,
+1
+.	
+Open	your	
+Gmail	
+account	and	click	on	the	
+Details
+	link	in	the	bottom	right	of	your
+screen.
+2
+.	
+This	will	open	up	a	pop	up	window	where	you	can	see	recent	activity,	whether	your
+Gmail	account	is	open	in	any	other	location,	and	choose	to	
+Sign	out	of	all	other
+sessions
+.
+3
+.	
+Clicking	that	button	will	ensure	all	your	previous	Gmail	sessions	are	logged	out,
+leaving	you	logged	in	to	the	current	computer	only.
+
+3.9														Sign-in	to	multiple	Google	accounts	in	the	same	browser
+If	you	use	multiple	Google	accounts	say	one	for	Gmail	another	for	ad-sense	and	yet
+another	for	Reader,	you	would	know	that	you	can	sign	into	only	one	account	at	a	time	in	a
+browser.	Of	course	you	could	use	separate	browsers	for	each	of	the	account,	but	it	is
+hassle	to	do	so.	It	is	a	great	alternative	that	Google	has	an	advanced	feature	that	lets	you
+sign	into	multiple	Google	Accounts	simultaneously	in	the	same	browser.
+In	this	case	I	will	show	you	how	to	sing	in	multiple	Gmail	accounts.
+1
+.	
+Sign	in	to	your	
+Gmail	Account
+.
+2
+.	
+Then	at	the	top-left	corner	Click	on	your	profile	photo	and	click	
+Add	Account
+.
+3
+.	
+Then	another	tab	opens	in	your	web-browser.	Enter	another	
+Username
+	and
+Password
+.	Click	
+Sign	in
+.
+Now,	you	are	able	to	view	your	both	Gmail	Accounts	in	one	web-browser.
+
+	
+3.10														Log	in	to	multiple	web	accounts	simultaneously	-	(Google,	Gmail,
+Facebook,	Twitter,	etc.)
+Many	of	us	have	multiple	accounts	with	one	web	site.	Whether	it	be	several	Gmail
+accounts	or	two	separate	twitter	accounts	or	any	such	multiple	accounts.	But	it	is	always	a
+hassle	to	have	to	log	out	of	each	account	to	access	another.	Follow	the	steps	to	log	in	to
+multiple	web	accounts	simultaneously.
+In	Internet	Explorer	8	and	higher	version
+Open	Internet	Explorer,	Click	on	
+File
+	and	then	
+New	Session
+.	This	opens	up	a	new
+browser	window	that	will	allow	you	to	log	into	different	accounts	across	the	sessions.
+
+
+	
+3.11														Save	any	web	article	to	PDF	for	free
+Internet	is	a	very	huge	library	of	information.		It	has	millions	and	millions	of	pages	of
+information	about	virtually	anything.		Reading	each	and	every	article	may	not	be	possible
+due	to	many	reasons	mainly	due	to	time	limitation.	
+The	website	
+http://pdfmyurl.com/
+	
+helps	you	to	save	the	web-article	to	
+PDF
+	format	and
+you	can	read	it	at	anytime	you	want.	
+PDF	MY	URL	-	
+http://pdfmyurl.com/
+1
+.	
+Type	
+http://pdfmyurl.com/
+	
+on	your	browser’s	address	bar.
+2
+.	
+Enter	the	URL	(that	you	want	to	convert	into	pdf	format).	In	this	case	I	have	typed
+the	web	address	
+http://en.wikipedia.org/wiki/Windows_8
+3
+.	
+Click	
+	button	next	to	the	
+Enter	url	Location
+	field.
+4
+.	
+In	a	few	seconds,	this	website	allows	you	to	download	a	
+PDF
+	version	of	the
+requested	webpage.
+5
+.	
+Then	you	can	download	the	
+PDF
+	file	and	read	even	through	the	requested	
+URL
+	may
+be	blocked.
+Similarly,	there	is	another	website	
+http://joliprint.com/	
+helps	you	to	save	and	share	the
+pdf
+	format	of	web-article.		This	site	gives	you	various	options	for	saving	the	file.		You	can
+directly	download	it,	have	it	send	to	your	
+Email
+	address	or	even	can	be	shared	using
+Facebook
+	and	
+Twitter
+.	In	this	way	you	can	access	the	blocked	website	on	the	internet.
+JOLIPRINT	-	
+http://joliprint.com/
+1
+.	
+Type	
+http://www.joliprint.com
+	
+on	your	browser’s	address	bar.
+
+2
+.	
+Enter	the	URL	(that	you	want	to	convert	into	pdf	format).
+3
+.	
+Click	
+joliprint	it	!
+	button	next	to	the	
+Enter	URL	Location
+	field.
+4
+.	
+In	a	few	seconds,	this	website	allows	you	to	download	a	PDF	version	of	the
+requested	webpage.	You	can	save	the	PDF	file	to	
+Google	Docs,	Gmail
+	and	share
+with	
+Facebook
+	and	
+Twitter
+.
+
+
+	
+3.12														Free	online	Resume	builder
+A	resume	(also	called	CV:	Curriculum	Vitae)	is	a	document	used	by	persons	to	present
+their	backgrounds	and	skills.	Resumes	are	the	best	reflections	of	your	career.		It	can	be
+used	for	a	variety	of	reasons,	but	most	often	they	are	used	to	secure	new	employment.
+Majority	of	the	recruiters	agree	that	they	go	through	each	resume	only	for	a	few	seconds
+and	that	the	first	impression	they	get	is	from	them.		Hence,	the	resume	will	have	to	make
+the	first	big	punch	for	you.		Having	said	all	these,	the	below	
+List	of	Resume	builder
+websites
+	makes	superb	resumes	for	you.
+	
+List	of	Resume	builder
+websites
+www.resumebuilder.org
+www.cvmkr.com
+www.resumesimo.com
+www.instantonlinecv.co.in
+www.resumonk.com
+www.resumesimo.com
+www.gotresumebuilder.com
+www.freeresumebuilder.biz
+www.onlinecvgenerator.com
+www.mycvbuilder.com
+	
+3.13														Unlock	PDF	and	EXCEL	files	Online
+If	a	PDF	files	have	some	restrictions	(like	Copy	from	the	PDF	file	won’t	work,	etc.)	and
+password.	Then	the	website	
+http://www.pdfunlock.com/
+	
+helps	you	to	remove	passwords
+and	restrictions	from	secured	PDF	files.
+1
+.	
+Go	to	
+http://www.pdfunlock.com/
+
+2
+.	
+Browse
+	the	PDF	file	that	you	want	to	unlock.	Then	click	
+Unlock!
+.
+3
+.	
+Within	few	seconds,	you	will	able	to	download	the	unlocked	PDF	file.
+File	Type
+Website
+PDF
+www.pdfunlock.com
+www.unlock-pdf.com
+Excel
+www.unprotect-
+excel.com
+	
+
+3.14														Free	online	file	converter
+This	is	a	nice	online	converter	file	which	can	be	used	for	almost	all	type	of	files	at	anytime
+from	anywhere.	To	do	this,
+1
+.	
+Go	to	
+www.online-convert.com
+	
+and	select	the	tool	you	want	to	use.
+2
+.	
+Suppose	you	wish	to	convert	an	image	to	PNG	format.	Select	the	conversion	and
+click	on	
+Go
+.
+3
+.	
+Now	browse	the	file	or	enter	the	web	URL	of	the	image.	Select	the	quality	settings
+and	then	click	on	Convert.
+4
+.	
+After	the	conversion,	you	will	find	the	download	link	of	the	converted	file.
+Download	the	file.
+	
+3.15														Online	Edit	Photos
+Upload	your	picture	or	photo	or	enter	the	URL	of	an	image	on	the	Internet.	After
+uploading,	you	can	resize,	sharpen	and/or	rotate	your	photo.	Several	filters	and	effects	are
+available	to	enhance	your	photo:	Red	Eye	Removal,	Sepia,	Enhance,	Sharpen	and	Polaroid
+Effect.
+Some	popular	websites	are	:
+http://www.freeonlinephotoeditor.com/
+http://www.fotor.com/
+http://pixlr.com/editor/
+http://web.photocat.com/edit/
+http://www.befunky.com/
+http://www.pizap.com/pizap
+http://www.picmonkey.com/
+https://www.picmonkey.com/editor
+
+	
+3.16														Scan	your	files	for	malwares	online	for	free
+This	is	a	site	where	in	you	can	upload	your	suspected	files	and	get	them	scanned	for	free
+.An	email	from	anyone	can	also	have	a	virus	or	a	malware	which	might	have	got	attached
+to	the	mail	without	his	or	her	knowledge.	Antivirus	software	has	become	an	indispensable
+element	of	your	computer.	It	is	very	good	for	them	who	hate	anti-viruses.	Jotti’s	Malware
+scan	is	a	free	online	service	where	20	prominent	antivirus	software	scan	the	files	uploaded
+by	you	and	inform	whether	they	are	clean	or	not.	The	file	you	suspect	to	be	infected	can
+be	uploaded	and	the	result	is	almost	immediate.	To	do	this,
+1
+.	
+Type	the	
+http://virusscan.jotti.org/en
+	
+on	your	browser’s	address	bar.
+2
+.	
+Then	select	the	file	required	to	be	scanned.
+	
+	
+3.17														Online	trace	any	mobile	number	anywhere
+You	can	find	out	all	information	we	have	on	any	phone	number	in	the	world.	Simply	enter
+the	phone	number	in	international	format	for	correct	results.
+Phonetrace.Org
+http://www.phonetrace.org/
+How	does	it	work?
+Using	both	GPS	satellite	techniques	and	triangulation	based	on	phone	towers.
+Who	makes	use	of	this	technology?
+Cell	phones	are	giving	employers	new	ways	to	check	up	on	employees	in	the	field	and
+raising	fresh	workplace	privacy	concerns	as	a	result.	Law	enforcement	agencies	have
+found	this	technology	to	be	the	biggest	breakthrough	since	DNA	testing.	Also	PhoneTrace
+has	been	in	huge	demand	by	people	check	up	on	an	untrustworthy	spouse!
+Trace	…	Mobile	Number	-	Location	Tracking	with	details
+http://www.findandtrace.com/trace-mobile-number-location
+Phone	No	Tracker	|	Online	GPS	Mobile	Locator	Using	Cell	Phone	Number
+http://gpsphonetracker.org/
+GPS	Phone	Tracker	is	the	first	free	website	for	finding	any	phone	signals	only	with
+number.	Now	you	can	start	tracking	your	friends,	kids	or	spouse.	Phone	tracker	app	can
+locate	your	lost	or	stolen	cell	phone	in	less	than	20	seconds!	Try	out	gps	phone	tracker
+
+free	online	to	get	experience	about	how	to	track	someones	phone	without	them	knowing.
+Just	put	a	phone	number	which	you	want	to	lookup,	then	get	your	locations	for	Android,
+iPhone	or	Windows	mobile	devices.
+
+	
+3.18														Search	pictures	of	people	in	3D	layout
+The	website	
+www.facesaerch.com
+	
+is	a	free	website	which	helps	you	search	faces	of
+people.		This	website	has	a	very	simple	layout	and	all	you	need	to	do	is	to	enter	the
+person’s	name	in	the	search	box	and	click	on	search.	The	interface	gives	a	
+3D	layout
+	of
+pictures	with	matching	names.
+	
+	
+	
+
+3.19														Disable	websites	from	resizing	your	Firefox	browser	window
+Firefox	is	a	very	popular	browser.		Be	it	in	the	speed	which	it	displays	a	webpage,	it
+downloads	a	file	or	the	number	of	plug-in	available	for	further	making	the	browser	user-
+friendly,	Mozilla	Firefox	stands	ahead	of	other	browsers.	It	is	really	disturbing	to	see
+certain	websites	resizes	the	browser	window.		This	is	how	to	disable	them	doing	so	in
+Firefox.
+1
+.	
+Click	on	
+Tools
+	menu	and	select	
+Options
+.
+2
+.	
+Click	on	the	
+Content
+	tab.
+3
+.	
+Opposite	to	the	check	box	name	
+Enable
+	
+JavaScript
+,	you	can	find	a	button	named
+Advanced
+.		Click	on	it.
+4
+.	
+Uncheck	the	option	
+Move	or	resize	existing	windows.
+5
+.	
+Click
+	OK	
+twice
+.
+
+
+[Note: PDF has 190 pages, only first 100 pages extracted]

@@ -1,0 +1,172 @@
+apiVersion: 1
+
+providers:
+  - name: 'Trading AI'
+    orgId: 1
+    folder: 'Trading'
+    type: file
+    disableDeletion: false
+    editable: true
+    options:
+      path: /var/lib/grafana/dashboards
+
+dashboard:
+  id: trading-ai-overview
+  title: "Trading AI - Real-time Overview"
+  tags: ['trading', 'ai', 'monitoring']
+  timezone: browser
+  panels:
+    - title: "Training Performance"
+      type: "row"
+      gridPos: {h: 1, w: 24, x: 0, y: 0}
+    - title: "Average Training Reward"
+      type: "timeseries"
+      gridPos: {h: 8, w: 8, x: 0, y: 1}
+      targets:
+        - expr: 'training_reward_avg'
+          legendFormat: '{{agent_type}} ({{market_regime}})'
+      fieldConfig:
+        defaults:
+          unit: 'percentunit'
+          min: -1
+          max: 1
+    - title: "Training Loss"
+      type: "timeseries"
+      gridPos: {h: 8, w: 8, x: 8, y: 1}
+      targets:
+        - expr: 'training_loss'
+          legendFormat: '{{component}} ({{agent_type}})'
+    - title: "Training Cycles"
+      type: "stat"
+      gridPos: {h: 8, w: 8, x: 16, y: 1}
+      targets:
+        - expr: 'rate(training_cycles_total[5m])'
+          legendFormat: 'Cycles/min'
+    - title: "Risk Management"
+      type: "row"
+      gridPos: {h: 1, w: 24, x: 0, y: 9}
+    - title: "Portfolio Drawdown"
+      type: "gauge"
+      gridPos: {h: 8, w: 6, x: 0, y: 10}
+      targets:
+        - expr: 'risk_drawdown_latest'
+    - title: "Value at Risk (95%)"
+      type: "gauge"
+      gridPos: {h: 8, w: 6, x: 6, y: 10}
+      targets:
+        - expr: 'risk_var_95'
+    - title: "Conditional VaR (95%)"
+      type: "gauge"
+      gridPos: {h: 8, w: 6, x: 12, y: 10}
+      targets:
+        - expr: 'risk_cvar_95'
+    - title: "Portfolio Leverage"
+      type: "gauge"
+      gridPos: {h: 8, w: 6, x: 18, y: 10}
+      targets:
+        - expr: 'risk_leverage'
+    - title: "Advanced Risk Analytics"
+      type: "row"
+      gridPos: {h: 1, w: 24, x: 0, y: 18}
+    - title: "Value at Risk (99%)"
+      type: "gauge"
+      gridPos: {h: 8, w: 6, x: 0, y: 19}
+      targets:
+        - expr: 'risk_var_99'
+    - title: "Conditional VaR (99%)"
+      type: "gauge"
+      gridPos: {h: 8, w: 6, x: 6, y: 19}
+      targets:
+        - expr: 'risk_cvar_99'
+    - title: "Volatility"
+      type: "gauge"
+      gridPos: {h: 8, w: 6, x: 12, y: 19}
+      fieldConfig:
+        defaults:
+          unit: 'percentunit'
+      targets:
+        - expr: 'risk_volatility'
+    - title: "Sharpe Ratio"
+      type: "stat"
+      gridPos: {h: 8, w: 6, x: 18, y: 19}
+      targets:
+        - expr: 'risk_sharpe_ratio'
+    - title: "Concentration Metrics"
+      type: "row"
+      gridPos: {h: 1, w: 24, x: 0, y: 27}
+    - title: "Herfindahl Index"
+      type: "stat"
+      gridPos: {h: 8, w: 12, x: 0, y: 28}
+      targets:
+        - expr: 'risk_herfindahl_index'
+    - title: "Effective Positions"
+      type: "stat"
+      gridPos: {h: 8, w: 12, x: 12, y: 28}
+      targets:
+        - expr: 'risk_effective_positions'
+    - title: "Strategy Performance"
+      type: "row"
+      gridPos: {h: 1, w: 24, x: 0, y: 36}
+    - title: "Strategy Weights"
+      type: "bargauge"
+      gridPos: {h: 8, w: 12, x: 0, y: 37}
+      targets:
+        - expr: 'strategy_weight'
+          legendFormat: '{{strategy_name}}'
+    - title: "Strategy Performance"
+      type: "timeseries"
+      gridPos: {h: 8, w: 12, x: 12, y: 37}
+      targets:
+        - expr: 'strategy_performance'
+          legendFormat: '{{strategy_name}}'
+    - title: "Market Conditions"
+      type: "row"
+      gridPos: {h: 1, w: 24, x: 0, y: 45}
+    - title: "Market Regime"
+      type: "heatmap"
+      gridPos: {h: 8, w: 12, x: 0, y: 46}
+      targets:
+        - expr: 'market_regime'
+    - title: "Volatility Regime"
+      type: "heatmap"
+      gridPos: {h: 8, w: 12, x: 12, y: 46}
+      targets:
+        - expr: 'volatility_regime'
+    - title: "System Performance"
+      type: "row"
+      gridPos: {h: 1, w: 24, x: 0, y: 54}
+    - title: "Inference Latency"
+      type: "histogram"
+      gridPos: {h: 8, w: 8, x: 0, y: 55}
+      targets:
+        - expr: 'inference_latency_seconds'
+          legendFormat: '{{model_type}}'
+    - title: "Feature Engineering Time"
+      type: "histogram"
+      gridPos: {h: 8, w: 8, x: 8, y: 55}
+      targets:
+        - expr: 'feature_engineering_seconds'
+    - title: "Queue Depth"
+      type: "timeseries"
+      gridPos: {h: 8, w: 8, x: 16, y: 55}
+      targets:
+        - expr: 'queue_depth'
+          legendFormat: '{{queue_name}}'
+    - title: "Drift Detection"
+      type: "row"
+      gridPos: {h: 1, w: 24, x: 0, y: 63}
+    - title: "Feature Drift"
+      type: "timeseries"
+      gridPos: {h: 8, w: 12, x: 0, y: 64}
+      targets:
+        - expr: 'feature_drift'
+          legendFormat: '{{feature_name}}'
+    - title: "Model Drift"
+      type: "timeseries"
+      gridPos: {h: 8, w: 12, x: 12, y: 64}
+      targets:
+        - expr: 'model_drift'
+          legendFormat: '{{model_name}} ({{metric}})'
+  time:
+    from: "now-1h"
+    to: "now"

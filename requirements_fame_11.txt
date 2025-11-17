@@ -1,0 +1,56 @@
+# F.A.M.E 11.0 - Premium Cosmic Intelligence Requirements
+
+# Core dependencies
+numpy>=1.24.0
+asyncio>=3.4.3
+
+# UI Framework (Optional but recommended)
+customtkinter>=5.2.0
+pillow>=10.0.0
+
+# Voice Interface (Optional)
+speechrecognition>=3.10.0
+pyttsx3>=2.90
+pyaudio>=0.2.11
+
+# AI Frameworks (Optional - install based on needs)
+# PyTorch - Deep learning framework
+torch>=2.0.0
+torchvision>=0.15.0
+torchaudio>=2.0.0
+
+# Hugging Face Transformers - NLP and LLMs
+transformers>=4.30.0
+tokenizers>=0.13.0
+accelerate>=0.20.0
+
+# LangChain - Agent orchestration
+langchain>=0.0.200
+langchain-openai>=0.0.2
+
+# JAX - High-performance numerical computing (optional)
+# jax>=0.4.0
+# jaxlib>=0.4.0
+
+# ONNX Runtime - Model optimization (optional)
+# onnxruntime>=1.15.0
+
+# Visualization (Optional)
+matplotlib>=3.7.0
+
+# Cloud providers (Optional)
+boto3>=1.28.0
+azure-identity>=1.14.0
+google-cloud-core>=2.3.0
+
+# Docker support
+docker>=6.1.0
+
+# Network and web
+requests>=2.31.0
+aiohttp>=3.8.0
+
+# Data processing
+pandas>=2.0.0
+yfinance>=0.2.25
+

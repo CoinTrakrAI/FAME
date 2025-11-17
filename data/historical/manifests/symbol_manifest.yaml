@@ -1,0 +1,27 @@
+# Default manifest describing asset coverage for the market data collector.
+# Environments can supply an alternate manifest via CLI flag or config.
+---
+providers:
+  yahoo:
+    description: "Yahoo Finance daily candles for multi-asset coverage"
+    timeframes: ["1d"]
+    assets:
+      - class: "equity_us"
+        symbols: ["AAPL", "MSFT", "GOOGL"]
+      - class: "etf_sector"
+        symbols: ["XLF", "XLK", "XLV"]
+      - class: "crypto_spot"
+        symbols: ["BTC-USD", "ETH-USD", "SOL-USD"]
+  crypto_exchange:
+    description: "CCXT Binance spot data (daily)"
+    timeframes: ["1d"]
+    assets:
+      - class: "crypto_spot"
+        symbols: ["BTC/USDT", "ETH/USDT"]
+  macro:
+    description: "Macro series sourced from FRED/Yahoo"
+    timeframes: ["1d"]
+    assets:
+      - class: "macro_rates"
+        symbols: ["DGS10", "FEDFUNDS", "CPIAUCSL"]
+

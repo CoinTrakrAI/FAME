@@ -1,0 +1,63 @@
+version: "3.9"
+
+services:
+  fame:
+    build: .
+    image: fame-desktop:latest
+    ports:
+      - "8080:8080"
+    env_file:
+      - .env
+    environment:
+      - FAME_ENV=production
+version: '3.8'
+
+services:
+  # LocalAI for local model inference
+  localai:
+    image: localai/localai:latest-aio-cpu
+    container_name: local-ai
+    ports:
+      - "8080:8080"
+    environment:
+      - DEBUG=true
+      - MODELS_PATH=/models
+    volumes:
+      - ./LocalAI_Config/models:/models
+    restart: unless-stopped
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/ready"]
+      interval: 30s
+      timeout: 10s
+      retries: 3
+
+  # Training environment
+  training-environment:
+    image: pytorch/pytorch:latest
+    container_name: fame-training
+    ports:
+      - "8888:8888"  # Jupyter notebook
+      - "6006:6006"  # TensorBoard
+    volumes:
+      - ./training_data:/workspace/training_data
+      - ./models:/workspace/models
+      - ./Training_Interface:/workspace/Training_Interface
+    environment:
+      - JUPYTER_TOKEN=fame6.0
+    command: jupyter notebook --ip=0.0.0.0 --port=8888 --no-browser --allow-root --NotebookApp.token=fame6.0
+    restart: unless-stopped
+    profiles: ["training"]
+
+  # Redis for memory and caching
+  redis:
+    image: redis:alpine
+    container_name: fame-redis
+    ports:
+      - "6379:6379"
+    volumes:
+      - redis_data:/data
+    restart: unless-stopped
+
+volumes:
+  redis_data:
+

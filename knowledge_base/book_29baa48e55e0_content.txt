@@ -1,0 +1,5747 @@
+Contents
+1
+. 
+Introduction
+1
+. 
+Assessment Test
+2
+. 
+Chapter 1: Introduction to Networks
+1
+. 
+First Things First: What’s a Network?
+2
+. 
+Physical Network Topologies
+3
+. 
+Topology Selection, Backbones, and Segments
+4
+. 
+Summary
+5
+. 
+Exam Essentials
+6
+. 
+Written Lab
+7
+. 
+Review Questions
+3
+. 
+Chapter 2: The Open Systems Interconnection Specifications
+1
+. 
+Internetworking Models
+2
+. 
+The OSI Reference Model
+3
+. 
+Introduction to Encapsulation
+4
+. 
+Modulation Techniques
+5
+. 
+Summary
+6
+. 
+Exam Essentials
+7
+. 
+Written Lab
+8
+. 
+Review Questions
+4
+. 
+Chapter 3: Networking Topologies, Connectors, and Wiring Standards
+1
+. 
+Physical Media
+2
+. 
+Cable Properties
+3
+. 
+Wiring Standards
+4
+. 
+Installing Wiring Distributions
+5
+. 
+Summary
+6
+. 
+Exam Essentials
+7
+. 
+Written Lab
+
+8
+. 
+Review Questions
+5
+. 
+Chapter 4: The Current Ethernet Specifications
+1
+. 
+Network Basics
+2
+. 
+Ethernet Basics
+3
+. 
+Ethernet at the Data Link Layer
+4
+. 
+Ethernet at the Physical Layer
+5
+. 
+Ethernet over Other Standards (IEEE 1905.1-2013)
+6
+. 
+Summary
+7
+. 
+Exam Essentials
+8
+. 
+Written Lab
+9
+. 
+Review Questions
+6
+. 
+Chapter 5: Networking Devices
+1
+. 
+Common Network Connectivity Devices
+2
+. 
+Other Specialized Devices
+3
+. 
+Planning and Implementing a Basic SOHO Network Using
+Network Segmentation
+4
+. 
+Summary
+5
+. 
+Exam Essentials
+6
+. 
+Written Lab
+7
+. 
+Review Questions
+7
+. 
+Chapter 6: Introduction to the Internet Protocol
+1
+. 
+Introducing TCP/IP
+2
+. 
+Data Encapsulation
+3
+. 
+Summary
+4
+. 
+Exam Essentials
+5
+. 
+Written Lab
+6
+. 
+Review Questions
+8
+. 
+Chapter 7: IP Addressing
+1
+. 
+IP Terminology
+2
+. 
+The Hierarchical IP Addressing Scheme
+
+3
+. 
+IPv4 Address Types
+4
+. 
+Internet Protocol Version 6 (IPv6)
+5
+. 
+Summary
+6
+. 
+Exam Essentials
+7
+. 
+Written Labs
+8
+. 
+Written Lab 7.1
+9
+. 
+Written Lab 7.2
+10
+. 
+Written Lab 7.3
+11
+. 
+Review Questions
+9
+. 
+Chapter 8: IP Subnetting, Troubleshooting IP, and Introduction to NAT
+1
+. 
+Subnetting Basics
+2
+. 
+Troubleshooting IP Addressing
+3
+. 
+Introduction to Network Address Translation (NAT)
+4
+. 
+Summary
+5
+. 
+Exam Essentials
+6
+. 
+Written Lab
+7
+. 
+Review Questions
+10
+. 
+Chapter 9: Introduction to IP Routing
+1
+. 
+Routing Basics
+2
+. 
+The IP Routing Process
+3
+. 
+Testing Your IP Routing Understanding
+4
+. 
+Static and Dynamic Routing
+5
+. 
+Summary
+6
+. 
+Exam Essentials
+7
+. 
+Written Lab
+8
+. 
+Review Questions
+11
+. 
+Chapter 10: Routing Protocols
+1
+. 
+Routing Protocol Basics
+2
+. 
+Distance Vector Routing Protocols
+3
+. 
+Link State Routing Protocols
+
+4
+. 
+High Availability
+5
+. 
+Advanced IPv6 Concepts
+6
+. 
+IPv6 Routing Protocols
+7
+. 
+Summary
+8
+. 
+Exam Essentials
+9
+. 
+Written Lab
+10
+. 
+Review Questions
+12
+. 
+Chapter 11: Switching and Virtual LANs
+1
+. 
+Networking Before Layer 2 Switching
+2
+. 
+Switching Services
+3
+. 
+Spanning Tree Protocol
+4
+. 
+Virtual LANs
+5
+. 
+VLAN Trunking Protocol
+6
+. 
+Two Additional Advanced Features of Switches
+7
+. 
+Summary
+8
+. 
+Exam Essentials
+9
+. 
+Written Lab
+10
+. 
+Review Questions
+13
+. 
+Chapter 12: Wireless Networking
+1
+. 
+Introduction to Wireless Technology
+2
+. 
+The 802.11 Standards
+3
+. 
+Comparing 802.11 Standards
+4
+. 
+Wireless Network Components
+5
+. 
+Installing a Wireless Network
+6
+. 
+Site Survey
+7
+. 
+Wireless Security
+8
+. 
+Summary
+9
+. 
+Exam Essentials
+10
+. 
+Written Lab
+11
+. 
+Review Questions
+
+14
+. 
+Chapter 13: Authentication and Access Control
+1
+. 
+Security Filtering
+2
+. 
+Managing User Account and Password Security
+3
+. 
+User-Authentication Methods
+4
+. 
+Summary
+5
+. 
+Exam Essentials
+6
+. 
+Written Lab
+7
+. 
+Review Questions
+15
+. 
+Chapter 14: Network Threats and Mitigation
+1
+. 
+Recognizing Security Threats
+2
+. 
+Vulnerabilities
+3
+. 
+Understanding Mitigation Techniques
+4
+. 
+Policies and Procedures
+5
+. 
+Anti-malware Software
+6
+. 
+Summary
+7
+. 
+Exam Essentials
+8
+. 
+Written Lab
+9
+. 
+Review Questions
+16
+. 
+Chapter 15: Physical Security and Risk
+1
+. 
+Using Hardware and Software Security Devices
+2
+. 
+Defining Firewalls
+3
+. 
+Firewall Technologies
+4
+. 
+Firewalls at the Application Layer vs. the Network Layer
+5
+. 
+Scanning Services and Other Firewall Features
+6
+. 
+Intrusion Detection and Prevention Systems
+7
+. 
+VPN Concentrators
+8
+. 
+Understanding Problems Affecting Device Security
+9
+. 
+Summary
+10
+. 
+Exam Essentials
+11
+. 
+Written Lab
+
+12
+. 
+Review Questions
+17
+. 
+Chapter 16: Wide Area Networks
+1
+. 
+What’s a WAN?
+2
+. 
+T-Series Connections
+3
+. 
+Transmission Media
+4
+. 
+Broadband Services
+5
+. 
+Wireless WAN Technologies
+6
+. 
+WAN Protocols
+7
+. 
+WAN Troubleshooting
+8
+. 
+Summary
+9
+. 
+Exam Essentials
+10
+. 
+Written Lab
+11
+. 
+Review Questions
+18
+. 
+Chapter 17: Troubleshooting Tools
+1
+. 
+Protocol Analyzers
+2
+. 
+Throughput Testers
+3
+. 
+Connectivity Software
+4
+. 
+Using 
+traceroute
+5
+. 
+Using the 
+ping
+ Utility
+6
+. 
+Using the Address Resolution Protocol
+7
+. 
+Using the 
+nslookup
+ Utility
+8
+. 
+Resolving Names with the Hosts Table
+9
+. 
+Using the 
+Mtr
+ Command 
+(pathping)
+10
+. 
+Using the 
+route
+ Command
+11
+. 
+Using the 
+nbtstat
+ Utility
+12
+. 
+Using the 
+netstat
+ Utility
+13
+. 
+Using tcpdump
+14
+. 
+Using the File Transfer Protocol
+15
+. 
+Using the Telnet Utility
+16
+. 
+Summary
+
+17
+. 
+Exam Essentials
+18
+. 
+Written Lab
+19
+. 
+Review Questions
+19
+. 
+Chapter 18: Software and Hardware Tools
+1
+. 
+Understanding Network Scanners
+2
+. 
+Baseline
+3
+. 
+Network Monitoring and Logging
+4
+. 
+Identifying Hardware Tools
+5
+. 
+Summary
+6
+. 
+Exam Essentials
+7
+. 
+Written Lab
+8
+. 
+Review Questions
+20
+. 
+Chapter 19: Network Troubleshooting
+1
+. 
+Narrowing Down the Problem
+2
+. 
+Troubleshooting Steps
+3
+. 
+Troubleshooting Tips
+4
+. 
+Summary
+5
+. 
+Exam Essentials
+6
+. 
+Written Lab
+7
+. 
+Review Questions
+21
+. 
+Chapter 20: Management, Monitoring, and Optimization
+1
+. 
+Managing Network Documentation
+2
+. 
+Network Monitoring
+3
+. 
+Network Optimization
+4
+. 
+Summary
+5
+. 
+Exam Essentials
+6
+. 
+Written Lab
+7
+. 
+20.6
+8
+. 
+Review Questions
+22
+. 
+Appendix A: Answers to Written Labs
+
+23
+. 
+Appendix B: Answers to Review Questions
+24
+. 
+Appendix C: Subnetting Class A
+25
+. 
+Index
+26
+. 
+Advert
+27
+. 
+EULA
+
+List of Tables
+ 
+1
+. 
+Chapter 3
+1
+. 
+Table 3.1
+2
+. 
+Chapter 4
+1
+. 
+Table 4.1
+2
+. 
+Table 4.2
+3
+. 
+Table 4.3
+4
+. 
+Table 4.4
+3
+. 
+Chapter 5
+1
+. 
+Table 5.1
+4
+. 
+Chapter 6
+1
+. 
+Table 6.1
+2
+. 
+Table 6.2
+5
+. 
+Chapter 7
+1
+. 
+Table 7.1
+2
+. 
+Table 7.2
+3
+. 
+Table 7.3
+6
+. 
+Chapter 8
+1
+. 
+Table 8.1
+2
+. 
+Table 8.2
+3
+. 
+Table 8.3
+4
+. 
+Table 8.4
+7
+. 
+Chapter 10
+1
+. 
+Table 10.1
+2
+. 
+Table 10.2
+3
+. 
+Table 10.3
+
+8
+. 
+Chapter 12
+1
+. 
+Table 12.1
+2
+. 
+Table 12.2
+3
+. 
+Table 12.3
+9
+. 
+Chapter 15
+1
+. 
+Table 15.1
+10
+. 
+Chapter 16
+1
+. 
+Table 16.1
+2
+. 
+Table 16.2
+11
+. 
+Chapter 17
+1
+. 
+Table 17.1
+2
+. 
+Table 17.2
+3
+. 
+Table 17.3
+4
+. 
+Table 17.4
+5
+. 
+Table 17.5
+6
+. 
+Table 17.6
+7
+. 
+Table 17.7
+8
+. 
+Table 17.8
+12
+. 
+Chapter 18
+1
+. 
+Table 18.1
+13
+. 
+Chapter 20
+1
+. 
+Table 20.1
+2
+. 
+Table 20.2
+
+List of Illustrations
+ 
+1
+. 
+Chapter 1
+1
+. 
+Figure 1.1
+ A basic network
+2
+. 
+Figure 1.2
+ Two separate LANs (workgroups)
+3
+. 
+Figure 1.3
+ A router connects LANs.
+4
+. 
+Figure 1.4
+ A network populated with servers and workstations
+5
+. 
+Figure 1.5
+ An internetwork
+6
+. 
+Figure 1.6
+ Multiprotocol Label Switching layout
+7
+. 
+Figure 1.7
+ A peer-to-peer network
+8
+. 
+Figure 1.8
+ A client-server network
+9
+. 
+Figure 1.9
+ A typical bus network’s physical topology
+10
+. 
+Figure 1.10
+ Typical star topology with a hub
+11
+. 
+Figure 1.11
+ A typical ring topology
+12
+. 
+Figure 1.12
+ A typical mesh topology
+13
+. 
+Figure 1.13
+ Three point-to-point connections
+14
+. 
+Figure 1.14
+ A point-to-multipoint network, example 1
+15
+. 
+Figure 1.15
+ A point-to-multipoint network, example 2
+16
+. 
+Figure 1.16
+ A simple hybrid network
+17
+. 
+Figure 1.17
+ Backbone and segments on a network
+2
+. 
+Chapter 2
+1
+. 
+Figure 2.1
+ Layer functions
+2
+. 
+Figure 2.2
+ The upper layers
+3
+. 
+Figure 2.3
+ The lower layers
+4
+. 
+Figure 2.4
+ Establishing a connection-oriented session
+5
+. 
+Figure 2.5
+ Transmitting segments with flow control
+6
+. 
+Figure 2.6
+ Windowing
+
+7
+. 
+Figure 2.7
+ Transport layer reliable delivery
+8
+. 
+Figure 2.8
+ Routing table used in a router
+9
+. 
+Figure 2.9
+ A router in an internetwork
+10
+. 
+Figure 2.10
+ Data Link layer
+11
+. 
+Figure 2.11
+ Data encapsulation
+3
+. 
+Chapter 3
+1
+. 
+Figure 3.1
+ A stripped-back thinnet cable
+2
+. 
+Figure 3.2
+ Male and female BNC connectors
+3
+. 
+Figure 3.3
+ Cat 5e UTP cable
+4
+. 
+Figure 3.4
+ RJ-11 and RJ-45 connectors
+5
+. 
+Figure 3.5
+ The pin-outs in an RJ-45 Connector, T568B standard
+6
+. 
+Figure 3.6
+ UPC and APC connectors
+7
+. 
+Figure 3.7
+ An example of an ST connector
+8
+. 
+Figure 3.8
+ A sample SC connector
+9
+. 
+Figure 3.9
+ Bidirectional communication
+10
+. 
+Figure 3.10
+ A sample MT-RJ fiber-optic connector
+11
+. 
+Figure 3.11
+ A sample LC fiber-optic connector
+12
+. 
+Figure 3.12
+ Single-mode fiber to Ethernet
+13
+. 
+Figure 3.13
+ Multimode fiber to Ethernet
+14
+. 
+Figure 3.14
+ Fiber to coaxial
+15
+. 
+Figure 3.15
+ Single-mode to multimode fiber
+16
+. 
+Figure 3.16
+ RS-232 cable ends
+17
+. 
+Figure 3.17
+ A USB port
+18
+. 
+Figure 3.18
+ A USB plug
+19
+. 
+Figure 3.19
+ T568A wired standard
+20
+. 
+Figure 3.20
+ T568B wired standard
+21
+. 
+Figure 3.21
+ Straight-through Ethernet cable
+22
+. 
+Figure 3.22
+ Crossover Ethernet cable
+
+23
+. 
+Figure 3.23
+ An inexpensive cable tester
+24
+. 
+Figure 3.24
+ UTP gigabit crossover Ethernet cable
+25
+. 
+Figure 3.25
+ Rolled Ethernet cable
+26
+. 
+Figure 3.26
+ A T1 crossover cable
+27
+. 
+Figure 3.27
+ A 110 block
+4
+. 
+Chapter 4
+1
+. 
+Figure 4.1
+ The basic network
+2
+. 
+Figure 4.2
+ CSMA/CD
+3
+. 
+Figure 4.3
+ Shorter and longer wavelengths
+4
+. 
+Figure 4.4
+ Ethernet addressing using MAC addresses
+5
+. 
+Figure 4.5
+ 802.3 and Ethernet frame formats in bytes
+6
+. 
+Figure 4.6
+ Ethernet Physical layer specifications
+7
+. 
+Figure 4.7
+ Powerline adapter sets
+8
+. 
+Figure 4.8
+ Basic BPL installation
+9
+. 
+Figure 4.9
+ Ethernet over HDMI
+5
+. 
+Chapter 5
+1
+. 
+Figure 5.1
+ Network interface card
+2
+. 
+Figure 5.2
+ A typical hub
+3
+. 
+Figure 5.3
+ Bridges break up collision domains.
+4
+. 
+Figure 5.4
+ Typical Ethernet switch
+5
+. 
+Figure 5.5
+ Router connected to the Internet, providing access for
+hosts
+6
+. 
+Figure 5.6
+ Example of firewalls with a DMZ
+7
+. 
+Figure 5.7
+ Example of an AP in a network
+8
+. 
+Figure 5.8
+ DHCP client sends broadcasts looking for a DHCP
+server.
+9
+. 
+Figure 5.9
+ A Windows DHCP server's scope options
+10
+. 
+Figure 5.10
+ DHCP client request to a DHCP server
+
+11
+. 
+Figure 5.11
+ DHCP client parameter request list
+12
+. 
+Figure 5.12
+ DHCP server response
+13
+. 
+Figure 5.13
+ Configuring a DHCP relay
+14
+. 
+Figure 5.14
+ DNS resolution example
+15
+. 
+Figure 5.15
+ A Windows DNS server
+16
+. 
+Figure 5.16
+ A DNS query to www.lammle.com
+17
+. 
+Figure 5.17
+ The DNS answer to our query
+18
+. 
+Figure 5.18
+ Internal and external DNS
+19
+. 
+Figure 5.19
+ A proxy server
+20
+. 
+Figure 5.20
+ Encryption appliances
+21
+. 
+Figure 5.21
+ Content filtering appliance
+22
+. 
+Figure 5.22
+ Analog modem
+23
+. 
+Figure 5.23
+ Packet shaper
+24
+. 
+Figure 5.24
+ VPN concentrator
+25
+. 
+Figure 5.25
+ Media converter
+26
+. 
+Figure 5.26
+ A switch can replace the hub, breaking up collision
+domains.
+27
+. 
+Figure 5.27
+ Routers create an internetwork.
+28
+. 
+Figure 5.28
+ Internetworking devices
+29
+. 
+Figure 5.29
+ Switched networks creating an internetwork
+30
+. 
+Figure 5.30
+ A router in an internetwork
+31
+. 
+Figure 5.31
+ A switch in an internetwork
+32
+. 
+Figure 5.32
+ A hub in a network
+6
+. 
+Chapter 6
+1
+. 
+Figure 6.1
+ The DoD and OSI models
+2
+. 
+Figure 6.2
+ The TCP/IP protocol suite
+3
+. 
+Figure 6.3
+ DHCP client four-step process
+4
+. 
+Figure 6.4
+ TCP segment format
+
+5
+. 
+Figure 6.5
+ UDP segment
+6
+. 
+Figure 6.6
+ Port numbers for TCP and UDP
+7
+. 
+Figure 6.7
+ IPv4 header
+8
+. 
+Figure 6.8
+ ICMP error message is sent to the sending host from the
+remote router.
+9
+. 
+Figure 6.9
+ Local ARP broadcast
+10
+. 
+Figure 6.10
+ RARP broadcast example
+11
+. 
+Figure 6.11
+ Data encapsulation
+12
+. 
+Figure 6.12
+ PDU and layer addressing
+13
+. 
+Figure 6.13
+ Port numbers at the Transport layer
+7
+. 
+Chapter 7
+1
+. 
+Figure 7.1
+ Summary of the three classes of networks
+2
+. 
+Figure 7.2
+ IPv6 address example
+3
+. 
+Figure 7.3
+ EUI-64 interface ID assignment
+4
+. 
+Figure 7.4
+ A 6to4 tunnel
+8
+. 
+Chapter 8
+1
+. 
+Figure 8.1
+ Implementing a Class C /25 logical network
+2
+. 
+Figure 8.2
+ Implementing a Class C /26 logical network
+3
+. 
+Figure 8.3
+ Basic IP troubleshooting
+4
+. 
+Figure 8.4
+ IP address problem 1
+5
+. 
+Figure 8.5
+ IP address problem 2
+6
+. 
+Figure 8.6
+ Find the valid host.
+7
+. 
+Figure 8.7
+ Find the valid host #2.
+8
+. 
+Figure 8.8
+ Find the valid host address #3.
+9
+. 
+Figure 8.9
+ Find the valid subnet mask.
+10
+. 
+Figure 8.10
+ Where to configure NAT
+11
+. 
+Figure 8.11
+ Basic NAT translation
+12
+. 
+Figure 8.12
+ NAT overloading example (PAT)
+
+9
+. 
+Chapter 9
+1
+. 
+Figure 9.1
+ A simple routing example
+2
+. 
+Figure 9.2
+ IP routing example using two hosts and one router
+3
+. 
+Figure 9.3
+ Frame used from Host_A to the Lab_A router when
+Host_B is pinged
+4
+. 
+Figure 9.4
+ IP routing example 1
+5
+. 
+Figure 9.5
+ IP routing example 2
+6
+. 
+Figure 9.6
+ Routing options
+7
+. 
+Figure 9.7
+ Dynamic routing options
+8
+. 
+Figure 9.8
+ DV and LS routing protocols
+9
+. 
+Figure 9.9
+ Hybrid routing
+10
+. 
+Chapter 10
+1
+. 
+Figure 10.1
+ Routing flow tree
+2
+. 
+Figure 10.2
+ The internetwork with distance vector routing
+3
+. 
+Figure 10.3
+ Converged routing tables
+4
+. 
+Figure 10.4
+ Typical classful network
+5
+. 
+Figure 10.5
+ Classless network design
+6
+. 
+Figure 10.6
+ A discontiguous network
+7
+. 
+Figure 10.7
+ EIGRP tables
+8
+. 
+Figure 10.8
+ Border Gateway Protocol (BGP)
+9
+. 
+Figure 10.9
+ OSPF design example
+10
+. 
+Figure 10.10
+ IS-IS network terminology
+11
+. 
+Figure 10.11
+ FHRPs use a virtual router with a virtual IP address
+and virtual MAC address.
+12
+. 
+Figure 10.12
+ HSRP active and standby routers
+13
+. 
+Figure 10.13
+ Example of HSRP active and standby routers
+swapping interfaces
+14
+. 
+Figure 10.14
+ HSRP Hellos
+
+15
+. 
+Figure 10.15
+ First two steps to IPv6 auto-configuration
+16
+. 
+Figure 10.16
+ IPv6 auto-configuration example
+17
+. 
+Figure 10.17
+ IPv6 neighbor discovery: neighbor solicitation
+message
+11
+. 
+Chapter 11
+1
+. 
+Figure 11.1
+ A network before switching
+2
+. 
+Figure 11.2
+ The first switched LAN
+3
+. 
+Figure 11.3
+ The typical switched network design
+4
+. 
+Figure 11.4
+ Switches create private domains.
+5
+. 
+Figure 11.5
+ Empty forward/filter table on a switch
+6
+. 
+Figure 11.6
+ How switches learn hosts’ locations
+7
+. 
+Figure 11.7
+ Forward/filter table
+8
+. 
+Figure 11.8
+ Broadcast storm
+9
+. 
+Figure 11.9
+ Multiple frame copies
+10
+. 
+Figure 11.10
+ Distributed switching
+11
+. 
+Figure 11.11
+ A switched network with switching loops
+12
+. 
+Figure 11.12
+ An optimal hierarchical switch design
+13
+. 
+Figure 11.13
+ Flat network structure
+14
+. 
+Figure 11.14
+ The benefit of a switched network
+15
+. 
+Figure 11.15
+ Physical LANs connected to a router
+16
+. 
+Figure 11.16
+ Switches removing the physical boundary
+17
+. 
+Figure 11.17
+ Access and trunk links in a switched network
+18
+. 
+Figure 11.18
+ IEEE 802.1Q encapsulation with and without the
+802.1Q tag
+19
+. 
+Figure 11.19
+ VTP modes
+20
+. 
+Figure 11.20
+ Port security on a switch port restricts port access by
+MAC address.
+21
+. 
+Figure 11.21
+ MAC flooding attack
+
+22
+. 
+Figure 11.22
+ Before and after port channels
+23
+. 
+Figure 11.23
+ Switched Ethernet ports can provide power to
+devices.
+24
+. 
+Figure 11.24
+ An external power injector used for PoE
+25
+. 
+Figure 11.25
+ Wireless bridge power injector
+26
+. 
+Figure 11.26
+ Switches send frames out the destination port only.
+27
+. 
+Figure 11.27
+ Place a hub between two hosts to troubleshoot.
+28
+. 
+Figure 11.28
+ Port spanning/mirroring
+12
+. 
+Chapter 12
+1
+. 
+Figure 12.1
+ Unlicensed frequencies
+2
+. 
+Figure 12.2
+ Wireless LAN history
+3
+. 
+Figure 12.3
+ 802.11b CSMA/CA
+4
+. 
+Figure 12.4
+ ISM 2.4 GHz channels
+5
+. 
+Figure 12.5
+ U-NII 5 GHz band has 12 non-overlapping channels
+(US)
+6
+. 
+Figure 12.6
+ Standards for spectrums and speeds
+7
+. 
+Figure 12.7
+ Range comparisons of 802.11 standards
+8
+. 
+Figure 12.8
+ A wireless access point
+9
+. 
+Figure 12.9
+ A wireless NIC
+10
+. 
+Figure 12.10
+ A wireless network in ad hoc mode
+11
+. 
+Figure 12.11
+ A wireless network in infrastructure mode
+12
+. 
+Figure 12.12
+ Extended service set (ESS)
+13
+. 
+Figure 12.13
+ Stand-alone and controller-based wireless networks
+14
+. 
+Figure 12.14
+ LWAPP
+15
+. 
+Figure 12.15
+ Mobile hot spot
+16
+. 
+Figure 12.16
+ iPhone hot spot
+17
+. 
+Figure 12.17
+ Basic coverage
+18
+. 
+Figure 12.18
+ Enterprise design
+
+19
+. 
+Figure 12.19
+ A multifloor installation
+20
+. 
+Figure 12.20
+ A heat map of a building
+21
+. 
+Figure 12.21
+ RADIUS authentication server
+13
+. 
+Chapter 13
+1
+. 
+Figure 13.1
+ Two networks with an ACL-enabled router
+2
+. 
+Figure 13.2
+ A tunnel through the Internet
+3
+. 
+Figure 13.3
+ Example of using a VPN network
+4
+. 
+Figure 13.4
+ The SSL connection process
+5
+. 
+Figure 13.5
+ GRE encapsulation
+6
+. 
+Figure 13.6
+ TCP/IP packet in IPSec transport mode with AH
+7
+. 
+Figure 13.7
+ TCP/IP packet in IPSec tunnel mode with ESP
+8
+. 
+Figure 13.8
+ Public-key encryption
+9
+. 
+Figure 13.9
+ The PGP encryption system
+10
+. 
+Figure 13.10
+ A typical remote-access connection between a remote
+user and a server
+11
+. 
+Figure 13.11
+ ILO port
+12
+. 
+Figure 13.12
+ The certificate authority process
+13
+. 
+Figure 13.13
+ PKI in action
+14
+. 
+Figure 13.14
+ The Kerberos authentication process
+15
+. 
+Figure 13.15
+ TACACS+ login and logout sequence
+16
+. 
+Figure 13.16
+ CHAP authentication process
+14
+. 
+Chapter 14
+1
+. 
+Figure 14.1
+ Unreachable gateway
+2
+. 
+Figure 14.2
+ Botnet
+3
+. 
+Figure 14.3
+ Smurf attack in progress
+4
+. 
+Figure 14.4
+ A simple DoS/SYN flood attack
+5
+. 
+Figure 14.5
+ DNS amplification attack
+6
+. 
+Figure 14.6
+ IP4 packets tunneled in DNS
+
+7
+. 
+Figure 14.7
+ VLAN hopping
+8
+. 
+Figure 14.8
+ An email virus spreading rapidly
+9
+. 
+Figure 14.9
+ Multipartite virus
+10
+. 
+Figure 14.10
+ Wireshark
+11
+. 
+Figure 14.11
+ Man-in-the-middle attack
+12
+. 
+Figure 14.12
+ A common DMZ configuration
+13
+. 
+Figure 14.13
+ Automating Windows Update
+14
+. 
+Figure 14.14
+ Open case warning in the BIOS
+15
+. 
+Chapter 15
+1
+. 
+Figure 15.1
+ A typical secured network
+2
+. 
+Figure 15.2
+ Two networks with an ACL-enabled router
+3
+. 
+Figure 15.3
+ A firewall with a DMZ
+4
+. 
+Figure 15.4
+ Protocol switching with and without a dead zone
+5
+. 
+Figure 15.5
+ A hacker denied by a dynamic state list
+6
+. 
+Figure 15.6
+ A packet going to a proxy
+7
+. 
+Figure 15.7
+ Virtual wire
+8
+. 
+Figure 15.8
+ Internet Options Security tab
+9
+. 
+Figure 15.9
+ Adding a trusted site
+10
+. 
+Figure 15.10
+ Custom security settings
+11
+. 
+Figure 15.11
+ An MD-IDS system in action
+12
+. 
+Figure 15.12
+ An IDS connected to the network
+13
+. 
+Figure 15.13
+ Shutting down port 80 for 60 seconds to stop an
+attack
+14
+. 
+Figure 15.14
+ Deceiving an attacker with a honeypot
+15
+. 
+Figure 15.15
+ VPN concentrator in a network
+16
+. 
+Figure 15.16
+ A three-layer security model
+17
+. 
+Figure 15.17
+ Mantrap
+18
+. 
+Figure 15.18
+ Network perimeter defense
+
+19
+. 
+Figure 15.19
+ Network divided into security zones
+20
+. 
+Figure 15.20
+ Using routers to divide a network into security zones
+21
+. 
+Figure 15.21
+ RAID-0
+22
+. 
+Figure 15.22
+ RAID-1
+23
+. 
+Figure 15.23
+ RAID-5
+24
+. 
+Figure 15.24
+ Nessus
+16
+. 
+Chapter 16
+1
+. 
+Figure 16.1
+ A typical wide area network
+2
+. 
+Figure 16.2
+ WAN connection types
+3
+. 
+Figure 16.3
+ An example of a satellite point-to-multipoint
+4
+. 
+Figure 16.4
+ Broadband access using cable or DSL
+5
+. 
+Figure 16.5
+ Cable network
+6
+. 
+Figure 16.6
+ Before Frame Relay
+7
+. 
+Figure 16.7
+ After Frame Relay
+8
+. 
+Figure 16.8
+ Point-to-Point Protocol stack
+9
+. 
+Figure 16.9
+ PPP session establishment
+10
+. 
+Figure 16.10
+ DMVPN
+11
+. 
+Figure 16.11
+ SIP trunk
+12
+. 
+Figure 16.12
+ WAN troubleshooting spots
+17
+. 
+Chapter 17
+1
+. 
+Figure 17.1
+ DHCP capture
+2
+. 
+Figure 17.2
+ Throughput
+3
+. 
+Figure 17.3
+ LogMeIn
+4
+. 
+Figure 17.4
+ Elevating your command prompt
+5
+. 
+Figure 17.5
+ TCP flags
+6
+. 
+Figure 17.6
+ 
+route print
+ output
+7
+. 
+Figure 17.7
+ Sample output of the 
+nbtstat –a
+ command
+8
+. 
+Figure 17.8
+ Sample output of the 
+nbtstat –c
+ command
+
+9
+. 
+Figure 17.9
+ Sample output of the 
+nbtstat –n
+ command
+10
+. 
+Figure 17.10
+ Sample output of the 
+nbtstat –r
+ command
+11
+. 
+Figure 17.11
+ Sample output of the 
+nbtstat –S
+ command
+12
+. 
+Figure 17.12
+ Sample output of the 
+nbtstat –s
+ command
+13
+. 
+Figure 17.13
+ Sample output of the 
+netstat –a
+ command
+14
+. 
+Figure 17.14
+ The Telnet utility
+18
+. 
+Chapter 18
+1
+. 
+Figure 18.1
+ Output from a packet sniffer
+2
+. 
+Figure 18.2
+ A Cisco ASA
+3
+. 
+Figure 18.3
+ IDS/IPS placement in an internetwork
+4
+. 
+Figure 18.4
+ Nmap in action
+5
+. 
+Figure 18.5
+ Angry IP port scanning
+6
+. 
+Figure 18.6
+ Wireless analyzer
+7
+. 
+Figure 18.7
+ Wireless survey tool
+8
+. 
+Figure 18.8
+ SNMP GET and TRAP messages
+9
+. 
+Figure 18.9
+ Syslog server and client
+10
+. 
+Figure 18.10
+ Speakeasy Speed Test
+11
+. 
+Figure 18.11
+ Looking Glass site output
+12
+. 
+Figure 18.12
+ Windows Event Viewer system log
+13
+. 
+Figure 18.13
+ Mac Activity Monitor
+14
+. 
+Figure 18.14
+ Wireless channel utilization
+15
+. 
+Figure 18.15
+ An inexpensive cable tester
+16
+. 
+Figure 18.16
+ Ethernet loopback plug
+17
+. 
+Figure 18.17
+ Fiber loopback plug
+18
+. 
+Figure 18.18
+ Sample OTDR output
+19
+. 
+Figure 18.19
+ A multimeter
+20
+. 
+Figure 18.20
+ Spectrum analyzer output
+21
+. 
+Figure 18.21
+ A toner probe
+
+22
+. 
+Figure 18.22
+ A butt set
+23
+. 
+Figure 18.23
+ An example of a punch-down tool
+24
+. 
+Figure 18.24
+ Using a punch-down tool on a small keystone
+connector
+25
+. 
+Figure 18.25
+ A combination cable stripper, crimper, and snippers
+19
+. 
+Chapter 19
+1
+. 
+Figure 19.1
+ Cannot connect
+2
+. 
+Figure 19.2
+ Host could not be found.
+3
+. 
+Figure 19.3
+ Successful ping
+4
+. 
+Figure 19.4
+ Rogue DHCP
+5
+. 
+Figure 19.5
+ Certificate error
+6
+. 
+Figure 19.6
+ 
+Netstat -a
+7
+. 
+Figure 19.7
+ Service dependencies
+8
+. 
+Figure 19.8
+ 
+ipconfig/all
+9
+. 
+Figure 19.9
+ Manage Network Connections
+10
+. 
+Figure 19.10
+ Interface properties
+11
+. 
+Figure 19.11
+ IP properties
+12
+. 
+Figure 19.12
+ Obtain DNS Server Address Automatically
+13
+. 
+Figure 19.13
+ 
+ipconfig /all
+20
+. 
+Chapter 20
+1
+. 
+Figure 20.1
+ RJ-45 connector
+2
+. 
+Figure 20.2
+ Two ends of a crossover cable
+3
+. 
+Figure 20.3
+ Rack-mounted switches
+4
+. 
+Figure 20.4
+ Simple network physical diagram
+5
+. 
+Figure 20.5
+ Network diagram with firewalls from SmartDraw
+6
+. 
+Figure 20.6
+ Hardware-rack diagram from SmartDraw
+7
+. 
+Figure 20.7
+ Logical network diagram
+8
+. 
+Figure 20.8
+ Grounding methods
+
+9
+. 
+Figure 20.9
+ Hot and cold aisles
+10
+. 
+Figure 20.10
+ Backup types
+11
+. 
+Figure 20.11
+ Guests and hosts
+12
+. 
+Figure 20.12
+ Hypervisors
+13
+. 
+Figure 20.13
+ Virtualization
+14
+. 
+Figure 20.14
+ Classic SAN vs. iSCSI
+15
+. 
+Figure 20.15
+ NAS and SAN
+16
+. 
+Figure 20.16
+ MDF and IDFs
+17
+. 
+Figure 20.17
+ Cable trays
+18
+. 
+Figure 20.18
+ Two-post racks
+19
+. 
+Figure 20.19
+ Four-post rack
+20
+. 
+Figure 20.20
+ Freestanding rack
+
+CompTIA
+®
+Network+
+®
+Study Guide 
+Exam N10-007
+Fourth Edition
+Todd Lammle
+
+Senior Acquisitions Editor: Kenyon Brown
+Development Editor: Kim Wimpsett
+Technical Editors: Wynn D. Smith and Jon Buhagiar
+Senior Production Editor: Christine O’Connor
+Copy Editor: Judy Flynn
+Editorial Manager: Mary Beth Wakefield
+Production Manager: Kathleen Wisor
+Executive Editor: Jim Minatel
+Book Designers: Judy Fung and Bill Gibson
+Proofreader: Amy Schneider
+Indexer: Ted Laux
+Project Coordinator, Cover: Brent Savage
+Cover Designer: Wiley
+Cover Image: Getty Images Inc./Jeremy Woodhouse
+Copyright © 2018 by John Wiley & Sons, Inc., Indianapolis, Indiana
+Published simultaneously in Canada
+ISBN: 978-1-119-43225-8
+ISBN: 978-1-119-43222-7 (ebk.)
+ISBN: 978-1-119-43226-5 (ebk.)
+Manufactured in the United States of America
+No part of this publication may be reproduced, stored in a retrieval system or
+transmitted in any form or by any means, electronic, mechanical,
+photocopying, recording, scanning or otherwise, except as permitted under
+Sections 107 or 108 of the 1976 United States Copyright Act, without either
+the prior written permission of the Publisher, or authorization through
+payment of the appropriate per-copy fee to the Copyright Clearance Center,
+222 Rosewood Drive, Danvers, MA 01923, (978) 750-8400, fax (978) 646-
+8600. Requests to the Publisher for permission should be addressed to the
+Permissions Department, John Wiley & Sons, Inc., 111 River Street,
+Hoboken, NJ 07030, (201) 748-6011, fax (201) 748-6008, or online at
+http://www.wiley.com/go/permissions
+.
+Limit of Liability/Disclaimer of Warranty: The publisher and the author make
+no representations or warranties with respect to the accuracy or completeness
+
+of the contents of this work and specifically disclaim all warranties, including
+without limitation warranties of fitness for a particular purpose. No warranty
+may be created or extended by sales or promotional materials. The advice and
+strategies contained herein may not be suitable for every situation. This work
+is sold with the understanding that the publisher is not engaged in rendering
+legal, accounting, or other professional services. If professional assistance is
+required, the services of a competent professional person should be sought.
+Neither the publisher nor the author shall be liable for damages arising
+herefrom. The fact that an organization or Web site is referred to in this work
+as a citation and/or a potential source of further information does not mean
+that the author or the publisher endorses the information the organization or
+Web site may provide or recommendations it may make. Further, readers
+should be aware that Internet Web sites listed in this work may have changed
+or disappeared between when this work was written and when it is read.
+For general information on our other products and services or to obtain
+technical support, please contact our Customer Care Department within the
+U.S. at (877) 762-2974, outside the U.S. at (317) 572-3993 or fax (317) 572-
+4002.
+Wiley publishes in a variety of print and electronic formats and by print-on-
+demand. Some material included with standard print versions of this book
+may not be included in e-books or in print-on-demand. If this book refers to
+media such as a CD or DVD that is not included in the version you
+purchased, you may download this material at 
+http://booksupport.wiley.com
+.
+For more information about Wiley products, visit 
+www.wiley.com
+.
+Online e-book store:
+https://bookboom.shop/
+Library of Congress Control Number: 2018937836
+TRADEMARKS: Wiley, the Wiley logo, and the Sybex logo are trademarks
+or registered trademarks of John Wiley & Sons, Inc. and/or its affiliates, in
+the United States and other countries, and may not be used without written
+permission. CompTIA and Network+ are trademarks or registered trademarks
+of CompTIA Properties, LLC. All other trademarks are the property of their
+respective owners. John Wiley & Sons, Inc. is not associated with any
+product or vendor mentioned in this book.
+
+Acknowledgments
+Kim Wimpsett was the development editor of this Sybex CompTIA series.
+Thank you, Kim, for your patience and kindness, and working so hard on this
+book with me.
+Kenyon Brown was acquisitions editor for this book. Thank you, Kenyon, for
+making this book a reality!
+In addition, Christine O’Connor was an excellent production editor, and she
+worked really hard to get the book done as quickly as possible, without
+missing the small mistakes that are so easy to overlook. I am always very
+pleased when I hear that she will be working with me on a new project.
+Wynn D. Smith reviewed each topic in this guide, scrutinizing the material
+until we both agreed it was verifiably solid. Thank you, Wynn!
+Troy McMillan literally hashed and rehashed each topic in this guide with me
+at all hours of the day and night. Thank you, Troy, yet again!
+
+About the Author
+Todd Lammle
+, CompTIA Network+, CCSI, CCNA/CCNP, is the authority
+on network certification and internetworking. He is a world-renowned author,
+speaker, trainer, and consultant with more than 100 study guides in print.
+Todd has more than 30 years of experience working with LANs, WANs, and
+large licensed and unlicensed wireless networks and currently is working on a
+Cisco Security expert certification. He’s president and CEO of Todd Lammle,
+LLC, a network-integration and training firm based in Colorado, Texas, and
+San Francisco, California. You can reach Todd through his website at
+www.lammle.com/network±.
+
+Introduction
+If you’re like most of us in the networking community, you probably have
+one or more network certifications. If that’s you, you’re very wise in
+choosing a CompTIA Network+ (N10-007) certification to proudly add to
+your repertoire because that achievement will make you all the more valuable
+as an employee. In these challenging economic times, keeping ahead of the
+competition—even standing out among your present colleagues—could make
+a big difference in whether you gain a promotion or possibly keep your job
+instead of being the one who gets laid off! Or maybe this is your first attempt
+at certification because you’ve decided to venture into a new career in
+information technology (IT). You’ve realized that getting into the IT sector is
+a good way to go because as the information age marches on, the demand for
+knowledgeable professionals in this dynamic field will only intensify
+dramatically.
+Either way, certification is one of the best things you can do for your career if
+you are working in, or want to break into, the networking profession because
+it proves that you know what you’re talking about regarding the subjects in
+which you’re certified. It also powerfully endorses you as a professional in a
+way that’s very similar to a physician being board certified in a certain area
+of expertise.
+In this book, you’ll find out what the Network+ exam is all about because
+each chapter covers a part of the exam. I’ve included some great review
+questions at the end of each chapter to help crystallize the information you
+learned and solidly prepare you to ace the exam.
+A really cool thing about working in IT is that it’s constantly evolving, so
+there are always new things to learn and fresh challenges to master. Once you
+obtain your Network+ certification and discover that you’re interested in
+taking it further by getting into more complex networking (and making more
+money), the Cisco CCNA certification is definitely your next step; you can
+get the skinny on that and even more in-depth certifications on my blog at
+www.lammle.com
+.
+ 
+
+ 
+ 
+For Network+ training with Todd Lammle, both instructor-
+led and online, please see  
+www.lammle.com/network+
+.
+What Is the Network+ Certification?
+Network+ is a certification developed by the Computing Technology Industry
+Association (CompTIA) that exists to provide resources and education for the
+computer and technology community. This is the same body that developed
+the A+ exam for PC technicians.
+The Network+ exam was designed to test the skills of network technicians
+with 18 to 24 months of experience in the field. It tests areas of networking
+technologies such as the definition of a protocol, the Open Systems
+Interconnection (OSI) model and its layers, and the concepts of network
+design and implementation—the minimum knowledge required for working
+on a network and some integral prerequisites for network design and
+implementation.
+Why Become Network+ Certified?
+Because CompTIA is a well-respected developer of vendor-neutral industry
+certifications, becoming Network+ certified proves you’re competent in the
+specific areas covered by the Network+ objectives.
+Four major benefits are associated with becoming Network+ certified:
+Proof of Professional Achievement
+ Networking professionals are pretty
+competitive when it comes to collecting more certifications than their peers.
+And because the Network+ certification broadly covers the entire field of
+networking, technicians want this certification a lot more than just Microsoft
+certifications—Network+ is a lot more prestigious and valuable. Because it’s
+rare to gain something that’s worth a lot with little effort, I’ll be honest—
+preparing for the Network+ exam isn’t exactly a lazy day at the beach.
+(However, beaches do happen to be really high on my personal list of great
+places to study!) And people in IT know that it isn’t all that easy to pass the
+Network+ exam, so they’ll definitely respect you more and know that you’ve
+achieved a certain level of expertise about vendor-independent, networking-
+related subjects.
+
+Opportunity for Advancement
+ We all like to get ahead in our careers—
+advancement results in more responsibility and prestige, and it usually means
+a fatter paycheck, greater opportunities, and added options. In the IT sector, a
+great way to make sure all that good stuff happens is by earning a lot of
+technology certifications, including Network+.
+Fulfillment of Training Requirements
+ Network+, because of its wide-
+reaching industry support, is recognized as a baseline of networking
+information. Some companies actually specify the possession of a Network+
+certification as a job requirement before they’ll even consider hiring you, or it
+may be specified as a goal to be met before your next review.
+Customer Confidence
+ As companies discover the CompTIA advantage, they
+will undoubtedly require qualified staff to achieve these certifications. Many
+companies outsource their work to consulting firms with experience working
+with security. Firms that have certified staff have a definite advantage over
+firms that don’t.
+How to Become Network+ Certified
+As this book goes to press, Pearson VUE is the sole Network+ exam
+provider. The following is the necessary contact information and exam-
+specific details for registering. Exam pricing might vary by country or by
+CompTIA membership.
+ 
+Vendor 
+ 
+Website 
+ 
+Phone Number 
+ 
+Pearson
+VUE 
+ 
+ 
+www.pearsonvue.com/comptia
+ 
+US and Canada: 877-551-
+PLUS (7587) 
+When you schedule the exam, you’ll receive instructions regarding
+appointment and cancellation procedures, ID requirements, and information
+about the testing center location. In addition, you’ll receive a registration and
+payment confirmation letter. Exams can be scheduled up to six weeks out or
+as soon as the next day (or, in some cases, even the same day).
+ 
+ 
+ 
+ Exam prices and codes may vary based on the country in
+which the exam is administered. For detailed pricing and
+
+exam registration procedures, refer to CompTIA’s website at
+www.comptia.org
+.
+After you’ve successfully passed your Network+ exam, CompTIA will award
+you a certification. Within four to six weeks of passing the exam, you’ll
+receive your official CompTIA Network+ certificate and ID card. (If you
+don’t receive these within eight weeks of taking the test, contact CompTIA
+directly using the information found in your registration packet.)
+Tips for Taking the Network+ Exam
+Here are some general tips for taking your exam successfully:
+ 
+Bring two forms of ID with you. One must be a photo ID, such as a
+driver’s license. The other can be a major credit card or a passport. Both
+forms must include a signature.
+Arrive early at the exam center so you can relax and review your study
+materials, particularly tables and lists of exam-related information. After
+you are ready to enter the testing room, you will need to leave
+everything outside; you won’t be able to bring any materials into the
+testing area.
+Read the questions carefully. Don’t be tempted to jump to an early
+conclusion. Make sure you know exactly what each question is asking.
+Don’t leave any unanswered questions. Unanswered questions are
+scored against you. There will be questions with multiple correct
+responses. When there is more than one correct answer, a message at the
+bottom of the screen will prompt you to either “choose two” or “choose
+all that apply.” Be sure to read the messages displayed to know how
+many correct answers you must choose.
+When answering multiple-choice questions you’re not sure about, use a
+process of elimination to get rid of the obviously incorrect answers first.
+Doing so will improve your odds if you need to make an educated guess.
+On form-based tests (nonadaptive), because the hard questions will take
+the most time, save them for last. You can move forward and backward
+through the exam.
+
+Who Should Read This Book?
+You—if want to pass the Network+ exam, and pass it confidently! This book
+is chock-full of the exact information you need and directly maps to
+Network+ exam objectives, so if you use it to study for the exam, your odds
+of passing shoot way up.
+And in addition to including every bit of knowledge you need to learn to pass
+the exam, I’ve included some really great tips and solid wisdom to equip you
+even further to successfully work in the real IT world.
+What Does This Book Cover?
+This book covers everything you need to know to pass the CompTIA
+Network+ exam. But in addition to studying the book, it’s a good idea to
+practice on an actual network if you can.
+Here’s a list of the 20 chapters in this book:
+Chapter 1, “Introduction to Networks”
+ This chapter includes an
+introduction to what a network is and an overview of the most common
+physical network topologies you’ll find in today’s networks.
+Chapter 2, “The Open Systems Interconnection Specifications”
+ This
+chapter covers the OSI model, what it is, what happens at each of its layers,
+and how each layer works.
+Chapter 3, “Networking Topologies, Connectors, and Wiring Standards”
+This chapter covers the various networking media and topologies, plus the
+cable types and properties used in today’s networks.
+Chapter 4, “The Current Ethernet Specifications”
+ This chapter covers
+how a basic Ethernet LAN works and describes and categorizes the different
+Ethernet specifications.
+Chapter 5, “Networking Devices”
+ It’s important for you to understand all
+the various devices used in today’s networks, and this chapter will describe
+how hubs, routers, and switches and some other devices work within a
+network.
+Chapter 6, “Introduction to the Internet Protocol”
+ This is your
+introduction to the all-important IP protocol stack.
+Chapter 7, “IP Addressing”
+ This chapter will take up from where Chapter 6
+
+left off and move into IP addressing. It also contains information about public
+versus private addressing and DHCP.
+Chapter 8, “IP Subnetting, Troubleshooting IP, and Introduction to
+NAT”
+ Beginning where Chapter 7 ends, we’ll be tackling IP subnetting in
+this one. But no worries here—I’ve worked hard to make this not-so-popular-
+yet-vital topic as painless as possible.
+Chapter 9, “Introduction to IP Routing”
+ This is an introduction to routing
+that basically covers what routers do and how they do it. This chapter, along
+with Chapter 10 and Chapter 11, cover routing and switching in much more
+detail than what is necessary to meet the CompTIA Network+ objectives
+because this knowledge is so critical to grasp when working with today’s
+networks.
+Chapter 10, “Routing Protocols”
+ This chapter goes into detail describing
+the protocols that run on routers and that update routing tables to create a
+working map of the network.
+Chapter 11, “Switching and Virtual LANs”
+ This chapter covers Layer 2
+switching, the Spanning Tree Protocol (STP), and virtual LANs. I went
+deeper than needed for the exam with the routing chapters, and I’ll cover
+switching and virtual LANs (which are also vital in today’s corporate
+networks) more thoroughly as well.
+Chapter 12, “Wireless Networking”
+ Because wireless is so important for
+both home and business networks today, this chapter is loaded with all the
+information you need to be successful at wireless networking at home and
+work.
+Chapter 13, “Authentication and Access Control”
+ This is the first of three
+security chapters. There are tons of exam objectives about network security
+that are so important that I took three chapters to cover all of them. In this
+chapter, I’ll introduce security, security filtering, tunneling, and user
+authentication.
+Chapter 14, “Network Threats and Mitigation”
+ This is probably the most
+fun of the three security chapters because I’ll tell you all about security
+threats and how to stop them. The only way to get good at network security is
+to implement it, and this chapter shows you how.
+Chapter 15, “Physical Security and Risk”
+ This chapter’s focus is on
+
+explaining basic firewalls, security devices, and device security.
+Chapter 16, “Wide Area Networks”
+ In this chapter, you get to learn all
+about things like Frame Relay, E1/T1, DSL, cable modems, and more. All of
+the CompTIA Network+ WAN objectives are covered in this chapter.
+Chapter 17, “Troubleshooting Tools”
+ This is also a fun chapter because,
+again, you can follow along and run all the commands yourself. And I repeat,
+it’s a really good idea to run through all the commands in this chapter!
+Chapter 18, “Software and Hardware Tools”
+ This chapter introduces you
+to the network tools you will use to help you run your networks. Both
+software and hardware tools will be discussed.
+Chapter 19, “Network Troubleshooting”
+ In almost every chapter, I discuss
+how to verify and fix problems, but this chapter will really get into the nuts
+and bolts of detailed network troubleshooting and documentation.
+Chapter 20, “Management, Monitoring, and Optimization”
+ This last
+chapter will provide configuration-management documentation and covers
+wiring, logical diagrams, baselines, policies, and regulations.
+What’s Included in the Book
+I’ve included several study tools throughout the book:
+Assessment Test
+ At the end of this introduction is an assessment test that
+you can use to check your readiness for the exam. Take this test before you
+start reading the book; it will help you determine the areas you might need to
+brush up on. The answers to the assessment test questions appear on a
+separate page after the last question of the test. Each answer includes an
+explanation and a note telling you the chapter in which the material appears.
+Objective Map and Opening List of Objectives
+ On the inside front cover
+of this book is a detailed exam objective map showing you where each of the
+exam objectives is covered in this book. In addition, each chapter opens with
+a list of the exam objectives it covers. Use these to see exactly where each of
+the exam topics is covered.
+Exam Essentials
+ Each chapter, just after the summary, includes a number of
+exam essentials. These are the key topics you should take from the chapter in
+terms of areas to focus on when preparing for the exam.
+
+Written Lab
+ Each chapter includes a written lab. These are short exercises
+that map to the exam objectives. Answers to these can be found in Appendix
+A.
+Chapter Review Questions
+ To test your knowledge as you progress through
+the book, there are review questions at the end of each chapter. As you finish
+each chapter, answer the review questions and then check your answers—the
+correct answers and explanations are in Appendix B. You can go back to
+reread the section that deals with each question you got wrong to ensure that
+you answer correctly the next time you’re tested on the material.
+Interactive Online Learning Environment and Test
+Bank
+The interactive online learning environment that accompanies 
+CompTIA
+Network+ Study Guide: Exam N10-007
+ provides a test bank with study tools
+to help you prepare for the certification exam—and increase your chances of
+passing it the first time! The test bank includes the following tools:
+Sample Tests
+ All of the questions in this book are provided, including the
+assessment test, which you’ll find at the end of this introduction, and the
+chapter tests that include the review questions at the end of each chapter. In
+addition, there are two practice exams. Use these questions to test your
+knowledge of the study guide material. The online test bank runs on multiple
+devices.
+Flashcards
+ Approximately 100 questions are provided in digital flashcard
+format (a question followed by a single correct answer). You can use the
+flashcards to reinforce your learning and provide last-minute test prep before
+the exam.
+Other Study Tools
+ A glossary of key terms from this book and their
+definitions are available as a fully searchable PDF.
+ 
+ 
+ 
+Go to  
+http://www.wiley.com/go/netplustestprep
+ to register
+and gain access to this interactive online learning
+environment and test bank with study tools.
+
+How to Use This Book
+If you want a solid foundation for the serious effort of preparing for the
+Network+ exam, then look no further because I’ve spent countless hours
+putting together this book with the sole intention of helping you pass it!
+This book is loaded with valuable information, and you will get the most out
+of your study time if you understand how I put the book together. Here’s a
+list that describes how to approach studying:
+ 
+1
+. 
+Take the assessment test immediately following this introduction. (The
+answers are at the end of the test, but no peeking!) It’s okay if you don’t
+know any of the answers—that’s what this book is for. Carefully read
+over the explanations for any question you get wrong, and make note of
+the chapters where that material is covered.
+2
+. 
+Study each chapter carefully, making sure you fully understand the
+information and the exam objectives listed at the beginning of each one.
+Again, pay extra-close attention to any chapter that includes material
+covered in questions you missed on the assessment test.
+3
+. 
+Complete the written lab at the end of each chapter. Do 
+not
+ skip these
+written exercises because they directly map to the CompTIA objectives
+and what you’ve got to have nailed down to meet them.
+4
+. 
+Answer all the review questions related to each chapter. Specifically
+note any questions that confuse you, and study the corresponding
+sections of the book again. And don’t just skim these questions—make
+sure you understand each answer completely.
+5
+. 
+Try your hand at the practice exams. Before you take your test, be sure
+to visit my website for questions, videos, audios, and other useful
+information.
+6
+. 
+Test yourself using all the electronic flashcards. This is a brand-new and
+updated flashcard program to help you prepare for the latest CompTIA
+Network+ exam, and it is a really great study tool.
+I tell you no lies—learning every bit of the material in this book is going to
+require applying yourself with a good measure of discipline. So try to set
+aside the same time period every day to study, and select a comfortable and
+
+quiet place to do so. If you work hard, you will be surprised at how quickly
+you learn this material.
+If you follow the steps listed here and study with the review questions,
+practice exams, electronic flashcards, and all the written labs, you would
+almost have to try to fail the CompTIA Network+ exam. However, studying
+for the Network+ exam is like training for a marathon—if you don’t go for a
+good run every day, you’re not likely to finish very well.
+ 
+ 
+ 
+This book covers everything about CompTIA Network+. For
+up-to-date information about Todd Lammle CompTIA boot
+camps, audio training, and training videos, please see
+ 
+www.lammle.com/network+
+.
+
+Exam Objectives
+Speaking of objectives, you’re probably pretty curious about those, right?
+CompTIA asked groups of IT professionals to fill out a survey rating the
+skills they felt were important in their jobs, and the results were grouped into
+objectives for the exam and divided into five domains.
+This table gives you the extent by percentage that each domain is represented
+on the actual examination.
+ 
+Domain 
+ 
+% of Examination 
+ 
+ 1.0 Networking Concepts
+ 
+23% 
+ 
+2.0 Infrastructure 
+ 
+18% 
+ 
+3.0 Network Operations 
+ 
+17% 
+ 
+4.0 Network Security 
+ 
+20% 
+ 
+5.0 Network Troubleshooting and Tools 
+ 
+22% 
+ 
+Total 
+ 
+100% 
+
+N10-007 Exam Objectives
+ 
+Objective 
+ 
+Chapter 
+ 
+1.0 Networking Concepts 
+   
+ 
+1.1 Explain the purposes and uses of ports and
+protocols. 
+ 
+5, 6, 13 
+ Protocols and ports 
+ 6 
+  SSH 22 
+ 6, 13 
+  DNS 53 
+ 5, 6 
+  SMTP 25 
+ 6 
+  SFTP 22 
+ 6 
+  FTP 20, 21 
+ 6 
+  TFTP 69 
+ 6 
+  TELNET 23 
+ 6 
+  DHCP 67, 68 
+ 5, 6 
+  HTTP 80 
+ 6 
+  HTTPS 443 
+ 6 
+  SNMP 161 
+ 6 
+  RDP 3389 
+ 6, 13 
+ 
+ 
+ NTP 123
+ 6 
+  SIP 5060, 5061 
+ 6 
+  SMB 445 
+ 6 
+  POP 110 
+ 6 
+  IMAP 143 
+ 6 
+  LDAP 389 
+ 6 
+  LDAPS 636 
+ 6 
+  H.323 1720 
+ 6 
+ Protocol types 
+ 6 
+  ICMP 
+ 6 
+  UDP 
+ 6 
+  TCP 
+ 6 
+
+  IP 
+ 6 
+ Connection-oriented vs. connectionless 
+ 6 
+ 
+1.2 Explain devices, applications, protocols, and
+services at their appropriate OSI layers. 
+ 
+2, 5, 6 
+ Layer 1 – Physical 
+ 2, 5, 6 
+ Layer 2 – Data link 
+ 2, 5, 6 
+ Layer 3 – Network 
+ 2, 5, 6 
+ Layer 4 – Transport 
+ 2, 5, 6 
+ Layer 5 – Session 
+ 2, 5, 6 
+ Layer 6 – Presentation 
+ 2, 5, 6 
+ Layer 7 – Application 
+ 2, 5, 6 
+ 
+1.3 Explain the concepts and characteristics of
+routing and switching. 
+ 
+4, 5, 6, 7, 8, 9,
+10, 11, 12, 13, 15,
+16, 20 
+ Properties of network traffic 
+ 4, 5, 7, 11, 12 
+  Broadcast domains 
+ 4, 5, 7, 11 
+  CSMA/CD 
+ 4, 5 
+  CSMA/CA 
+ 5, 12 
+  Collision domains 
+ 4, 5, 11 
+  Protocol data units 
+ 6 
+  MTU 
+ 4 
+  Broadcast 
+ 5, 6, 7 
+  Multicast 
+ 5, 6, 7 
+  Unicast 
+ 5, 6, 7 
+ Segmentation and interface properties 
+ 11, 15 
+  VLANs 
+ 11, 15 
+  Trunking (802.1q) 
+ 11 
+  Tagging and untagging ports 
+ 11 
+  Port mirroring 
+ 11 
+  Switching loops/spanning tree 
+ 11 
+  PoE and PoE+ (802.3af, 802.3at) 
+ 11 
+  DMZ 
+ 15 
+
+ MAC address table 
+ 11 
+ ARP table 
+ 4 
+ 
+ 
+Routing
+ 9, 10 
+  Routing protocols (IPv4 and IPv6) 
+ 9, 10 
+  Distance-vector routing protocols 
+ 9, 10 
+  RIP 
+ 9, 10 
+  EIGRP 
+ 9, 10 
+  Link-state routing protocols 
+ 9, 10 
+  OSPF 
+ 9, 10 
+  Hybrid 
+ 9, 10 
+  BGP 
+ 9, 10 
+ Routing types 
+ 9 
+  Static 
+ 9 
+  Dynamic 
+ 9 
+  Default 
+ 9 
+ IPv6 concepts 
+ 10 
+  Addressing 
+ 7 
+  Tunneling 
+ 10 
+ Dual stack 
+ 10 
+ Router advertisement 
+ 10 
+ Neighbor discovery 
+ 10 
+ Performance concepts 
+ 5 
+  Traffic shaping 
+ 5 
+  QoS 
+ 20 
+  Diffserv 
+ 20 
+  CoS 
+ 20 
+ 
+ 
+NAT/PAT
+ 8 
+ Port forwarding 
+ 8 
+ Access control list 
+ 13, 15 
+ Distributed switching 
+ 11 
+ Packet-switched vs. circuit-switched network 
+ 16 
+
+ Software-defined networking 
+ 20 
+ 
+1.4 Given a scenario, configure the appropriate IP
+addressing components. 
+ 
+7, 8, 20 
+ Private vs. public 
+ 7 
+ Loopback and reserved 
+ 7 
+ Default gateway 
+ 7 
+ Virtual IP 
+ 7, 20 
+ Subnet mask 
+ 7 
+ Subnetting 
+ 8 
+  Default gateway 
+ 8 
+  Classful 
+ 7, 8 
+  Classes A, B, C, D, and E 
+ 7, 8 
+  Classless 
+ 8 
+  VLSM 
+ 8 
+  CIDR notation (IPv4 vs. IPv6) 
+ 8 
+ Address assignments 
+ 7 
+  DHCP 
+ 7 
+  DHCPv6 
+ 7 
+ 
+ 
+ Static
+ 7 
+  APIPA 
+ 7 
+  EUI64 
+ 7 
+  IP reservations 
+ 5 
+ 
+1.5 Compare and contrast the characteristics of
+network topologies, types, and technologies. 
+ 
+1, 12, 16 
+ Wired topologies 
+ 1 
+  Logical vs. physical 
+ 1 
+  Star 
+ 1 
+  Ring 
+ 1 
+  Mesh 
+ 1 
+  Bus 
+ 1 
+ Wireless topologies 
+ 12 
+
+  Mesh 
+ 12 
+  Ad hoc 
+ 12 
+  Infrastructure 
+ 12 
+ Types 
+ 12, 16 
+  LAN 
+ 16 
+  WLAN 
+ 12 
+  MAN 
+ 16 
+  WAN 
+ 16 
+  CAN 
+ 1 
+  SAN 
+ 1 
+  PAN 
+ 12 
+ 
+ 
+Technologies that facilitate the Internet of Things (IoT)
+ 12 
+  Z-Wave 
+ 12 
+  Ant+ 
+ 12 
+  Bluetooth 
+ 12 
+  NFC 
+ 12 
+  IR 
+ 12 
+  RFID 
+ 12 
+ 802.11 
+ 12 
+ 
+1.6 Given a scenario, implement the appropriate
+wireless technologies and configurations. 
+ 
+12 
+ 802.11 standards 
+ 12 
+  a 
+ 12 
+  b 
+ 12 
+  g 
+ 12 
+  n 
+ 12 
+  ac 
+ 12 
+ Cellular 
+ 12 
+  GSM 
+ 12 
+  TDMA 
+ 12 
+  CDMA 
+ 12 
+ Frequencies 
+ 12 
+
+  2.4 GHz 
+ 12 
+  5.0 GHz 
+ 12 
+ 
+ 
+Speed and distance requirements
+ 12 
+ Channel bandwidth 
+ 12 
+ Channel bonding 
+ 12 
+ MIMO/MU-MIMO 
+ 12 
+ Unidirectional/omnidirectional 
+ 12 
+ Site surveys 
+ 12 
+ 
+1.7 Summarize cloud concepts and their purposes. 
+ 
+20 
+ Types of services 
+ 20 
+  SaaS 
+ 20 
+  PaaS 
+ 20 
+  IaaS 
+ 20 
+ Cloud delivery models 
+ 20 
+  Private 
+ 20 
+  Public 
+ 20 
+  Hybrid 
+ 20 
+ Connectivity methods 
+ 20 
+ Security implications/considerations 
+ 20 
+ Relationship between local and cloud resources 
+ 20 
+ 
+1.8 Explain the functions of network services. 
+ 
+5 
+ DNS service 
+ 5 
+  Record types 
+ 5 
+  A, AAA 
+ 5 
+ 
+ 
+ TXT (SPF, DKIM)
+ 5 
+  SRV 
+ 5 
+  MX 
+ 5 
+  CNAME 
+ 5 
+  NS 
+ 5 
+  PTR 
+ 5 
+  Internal vs. external DNS 
+ 5 
+
+  Third-party/cloud-hosted DNS 
+ 5 
+  Hierarchy 
+ 5 
+  Forward vs. reverse zone 
+ 5 
+ DHCP service 
+ 5 
+  MAC reservations 
+ 5 
+  Pools 
+ 5 
+  IP exclusions 
+ 5 
+  Scope options 
+ 5 
+  Lease time 
+ 5 
+  TTL 
+ 5 
+  DHCP relay/IP helper 
+ 5 
+ NTP 
+ 6 
+ IPAM 
+ 5 
+ 
+2.0 Infrastructure 
+   
+ 
+2.1 Given a scenario, deploy the appropriate cabling
+solution. 
+ 
+3, 4 
+ Media types 
+ 3 
+  Copper 
+ 3 
+  UTP 
+ 3 
+  STP 
+ 3 
+  Coaxial 
+ 3 
+  Fiber 
+ 3 
+  Single-mode 
+ 3 
+  Multimode 
+ 3 
+ Plenum vs. PVC 
+ 3 
+ Connector types 
+ 3 
+  Copper 
+ 3 
+  RJ-45 
+ 3 
+  RJ-11 
+ 3 
+  BNC 
+ 3 
+  DB-9 
+ 3 
+  DB-25 
+ 3 
+
+  F-type 
+ 3 
+ Fiber 
+ 3 
+  LC 
+ 3 
+  ST 
+ 3 
+ 
+ 
+ SC
+ 3 
+  APC 
+ 3 
+  UPC 
+ 3 
+  MTRJ 
+ 3 
+ Transceivers 
+ 3 
+  SFP 
+ 3 
+  GBIC 
+ 3 
+  SFP+ 
+ 3 
+  QSFP 
+ 3 
+ Characteristics of fiber transceivers 
+ 3 
+  Bidirectional 
+ 3 
+  Duplex 
+ 3 
+ Termination points 
+ 3 
+  66 block 
+ 3 
+  110 block 
+ 3 
+  Patch panel 
+ 3 
+  Fiber distribution panel 
+ 3 
+ Copper cable standards 
+ 3 
+  Cat 3 
+ 3 
+  Cat 5 
+ 3 
+  Cat 5e 
+ 3 
+  Cat 6 
+ 3 
+  Cat 6a 
+ 3 
+ 
+ 
+ Cat 7
+ 3 
+  RG-6 
+ 3 
+  RG-59 
+ 3 
+ Copper termination standards 
+ 3 
+
+  TIA/EIA 568a 
+ 3 
+  TIA/EIA 568b 
+ 3 
+  Crossover 
+ 3 
+  Straight-through 
+ 3 
+ Ethernet deployment standards 
+ 4 
+  100BaseT 
+ 4 
+  1000BaseT 
+ 4 
+  1000BaseLX 
+ 4 
+  1000BaseSX 
+ 4 
+  10GBaseT 
+ 4 
+ 
+2.2 Given a scenario, determine the appropriate
+placement of networking devices on a network and
+install/configure them. 
+ 
+5, 10, 11, 12, 15 
+ Firewall 
+ 15 
+ Router 
+ 10 
+ Switch 
+ 11 
+ Hub 
+ 5 
+ Bridge 
+ 11 
+ Modems 
+ 5 
+ Wireless access point 
+ 12 
+ 
+ 
+Media converter
+ 5 
+ Wireless range extender 
+ 5 
+ VoIP endpoint 
+ 5 
+ 
+2.3 Explain the purposes and use cases for advanced
+networking devices. 
+ 
+5, 12, 13, 15 
+ Multilayer switch 
+ 5 
+ Wireless controller 
+ 12 
+ Load balancer 
+ 5 
+ IDS/IPS 
+ 5 
+ Proxy server 
+ 5 
+ VPN concentrator 
+ 5 
+ AAA/RADIUS server 
+ 13 
+
+ UTM appliance 
+ 15 
+ NGFW/Layer 7 firewall 
+ 5, 15 
+ VoIP PBX 
+ 5 
+ VoIP gateway 
+ 5 
+ Content filter 
+ 5 
+ 
+2.4 Explain the purposes of virtualization and
+network storage technologies. 
+ 
+20 
+ Virtual networking components 
+ 20 
+  Virtual switch 
+ 20 
+  Virtual firewall 
+ 20 
+  Virtual NIC 
+ 20 
+ 
+ 
+ Virtual router
+ 20 
+  Hypervisor 
+ 20 
+ Network storage types 
+ 20 
+  NAS 
+ 20 
+  SAN 
+ 20 
+ Connection type 
+ 20 
+  FCoE 
+ 20 
+  Fibre Channel 
+ 20 
+  iSCSI 
+ 20 
+  InfiniBand 
+ 20 
+ Jumbo frame 
+ 20 
+ 
+2.5 Compare and contrast WAN technologies. 
+ 
+16 
+ Service type 
+ 16 
+  ISDN 
+ 16 
+  T1/T3 
+ 16 
+  E1/E3 
+ 16 
+  OC-3 – OC-192 
+ 16 
+  DSL 
+ 16 
+  Metropolitan Ethernet 
+ 16 
+  Cable broadband 
+ 16 
+
+  Dial-up 
+ 16 
+  PRI 
+ 16 
+ 
+ 
+Transmission mediums
+ 16 
+  Satellite 
+ 16 
+  Copper 
+ 16 
+  Fiber 
+ 16 
+  Wireless 
+ 16 
+ Characteristics of service 
+ 16 
+  MPLS 
+ 16 
+  ATM 
+ 16 
+  Frame relay 
+ 16 
+  PPPoE 
+ 16 
+  PPP 
+ 16 
+  DMVPN 
+ 16 
+  SIP trunk 
+ 16 
+ Termination 
+ 16 
+  Demarcation point 
+ 16 
+  CSU/DSU 
+ 16 
+  Smart jack 
+ 16 
+ 3.0 Network Operations 
+   
+ 
+3.1 Given a scenario, use appropriate documentation
+and diagrams to manage the network. 
+ 
+18, 20 
+ Diagram symbols 
+ 20 
+ Standard operating procedures/work instructions 
+ 20 
+ 
+ 
+Logical vs. physical diagrams
+ 20 
+ Rack diagrams 
+ 20 
+ Change management documentation 
+ 20 
+ Wiring and port locations 
+ 20 
+ IDF/MDF documentation 
+ 20 
+ Labeling 
+ 20 
+ Network configuration and performance baselines 
+ 18, 20 
+ Inventory management 
+ 20 
+
+ 
+3.2 Compare and contrast business continuity and
+disaster recovery concepts. 
+ 
+11, 15, 19, 20 
+ Availability concepts 
+ 20 
+  Fault tolerance 
+ 20 
+  High availability 
+ 20 
+  Load balancing 
+ 20 
+  NIC teaming 
+ 19 
+  Port aggregation 
+ 11 
+  Clustering 
+ 20 
+ Power management 
+ 15 
+  Battery backups/UPS 
+ 15 
+  Power generators 
+ 15 
+  Dual power supplies 
+ 15 
+  Redundant circuits 
+ 15 
+ 
+ 
+Recovery
+ 15 
+  Cold sites 
+ 15 
+  Warm sites 
+ 15 
+  Hot sites 
+ 15 
+ Backups 
+ 20 
+  Full 
+ 20 
+  Differential 
+ 20 
+  Incremental 
+ 20 
+ Snapshots 
+ 15 
+ MTTR 
+ 15 
+ MTBF 
+ 15 
+ SLA requirements 
+ 15 
+ 
+3.3 Explain common scanning, monitoring, and
+patching processes and summarize their expected
+outputs. 
+ 
+14, 16, 18, 20 
+ Processes 
+ 18 
+  Log reviewing 
+ 18 
+  Port scanning 
+ 14, 18 
+
+  Vulnerability scanning 
+ 18 
+  Patch management 
+ 14, 18 
+  Rollback 
+ 14, 18 
+ Reviewing baselines 
+ 14, 18, 20 
+ Packet/traffic analysis 
+ 18 
+ 
+ 
+Event management
+ 18 
+  Notifications 
+ 18 
+  Alerts 
+ 18 
+  SIEM 
+ 18 
+ SNMP monitors 
+ 18 
+  MIB 
+ 18 
+ Metrics 
+ 16, 18 
+  Error rate 
+ 16, 18 
+  Utilization 
+ 16, 18 
+  Packet drops 
+ 16 
+ Bandwidth/throughput 
+ 16, 18 
+ 3.0 Network Operations 
+   
+ 
+3.4 Given a scenario, use remote access methods. 
+ 
+5, 6, 13, 14 
+ VPN 
+ 13 
+  IPSec 
+ 13 
+  SSL/TLS/DTLS 
+ 13 
+  Site-to-site 
+ 13 
+  Client-to-site 
+ 13 
+ RDP 
+ 13 
+ SSH 
+ 13 
+ VNC 
+ 13 
+ Telnet 
+ 6 
+ 
+ 
+HTTPS/management URL
+ 6 
+ Remote file access 
+ 6 
+  FTP/FTPS 
+ 6 
+  SFTP 
+ 6 
+
+  TFTP 
+ 6 
+ Out-of-band management 
+ 13 
+ Modem 
+ 5 
+ Console router 
+ 14 
+ 
+3.5 Identify policies and best practices. 
+ 
+13, 14, 20 
+ Privileged user agreement 
+ 20 
+ Password policy 
+ 20 
+ On-boarding/off-boarding procedures 
+ 20 
+ Licensing restrictions 
+ 14, 20 
+ International export controls 
+ 14, 20 
+ Data loss prevention 
+ 20 
+ Remote access policies 
+ 13, 20 
+ Incident response policies 
+ 14, 20 
+ BYOD 
+ 20 
+ AUP 
+ 20 
+ NDA 
+ 20 
+ System life cycle 
+ 14, 20 
+  Asset disposal 
+ 14, 20 
+ Safety procedures and policies 
+ 20 
+ 
+4.0 Network Security 
+   
+ 
+4.1 Summarize the purposes of physical security
+devices. 
+ 
+13, 14, 15 
+ Detection 
+ 14 
+  Motion detection 
+ 14 
+  Video surveillance 
+ 14 
+  Asset tracking tags 
+ 14 
+  Tamper detection 
+ 14 
+ Prevention 
+ 15 
+  Badges 
+ 15 
+  Biometrics 
+ 15 
+  Smart cards 
+ 13 
+
+  Key fob 
+ 15 
+  Locks 
+ 15 
+ 
+4.2 Explain authentication and access controls. 
+ 
+11, 13, 15, 18 
+ Authorization, authentication, and accounting 
+ 13 
+  RADIUS 
+ 13 
+  TACACS+ 
+ 13 
+  Kerberos 
+ 13 
+  Single sign-on 
+ 13 
+  Local authentication 
+ 13 
+  LDAP 
+ 13 
+  Certificates 
+ 13 
+ 
+ 
+Auditing and logging
+ 18 
+ Multifactor authentication 
+ 13, 15 
+  Something you know 
+ 13, 15 
+  Something you have 
+ 13, 15 
+  Something you are 
+ 13, 15 
+  Somewhere you are 
+ 13, 15 
+  Something you do 
+ 13, 15 
+ Access control 
+ 13, 15 
+  802.1x 
+ 13 
+  NAC 
+ 13 
+  Port security 
+ 11, 13 
+  MAC filtering 
+ 11, 13 
+  Captive portal 
+ 13 
+  Access control lists 
+ 13, 15 
+ 
+4.3 Given a scenario, secure a basic wireless network. 
+ 
+12, 14 
+ WPA 
+ 12, 14 
+ WPA2 
+ 12, 14 
+ TKIP-RC4 
+ 12 
+ CCMP-AES 
+ 12 
+ Authentication and authorization 
+ 12 
+
+  EAP 
+ 12 
+  PEAP 
+ 12 
+  EAP-FAST 
+ 12 
+ 
+ 
+ EAP-TLS
+ 12 
+  Shared or open 
+ 12 
+  Preshared key 
+ 12 
+  MAC filtering 
+ 12 
+ Geofencing 
+ 12 
+ 
+4.4 Summarize common networking attacks. 
+ 
+12, 14 
+ DoS 
+ 14 
+  Reflective 
+ 14 
+  Amplified 
+ 14 
+  Distributed 
+ 14 
+ Social engineering 
+ 14 
+ Insider threat 
+ 14 
+ Logic bomb 
+ 14 
+ Rogue access point 
+ 12, 14 
+ Evil twin 
+ 12, 14 
+ War-driving 
+ 12, 14 
+ Phishing 
+ 14 
+ Ransomware 
+ 14 
+ DNS poisoning 
+ 14 
+ ARP poisoning 
+ 14 
+ Spoofing 
+ 14 
+ Deauthentication 
+ 14 
+ Brute force 
+ 14 
+ 
+ 
+VLAN hopping
+ 14 
+ Man-in-the-middle 
+ 14 
+ Exploits vs. vulnerabilities 
+ 14 
+ 
+4.5 Given a scenario, implement network device
+hardening. 
+ 
+6, 14 
+
+ Changing default credentials 
+ 14 
+ Avoiding common passwords 
+ 14 
+ Upgrading firmware 
+ 14 
+ Patching and updates 
+ 14 
+ File hashing 
+ 14 
+ Disabling unnecessary services 
+ 14 
+ Using secure protocols 
+ 6, 14 
+ Generating new keys 
+ 14 
+ Disabling unused ports 
+ 14 
+  IP ports 
+ 14 
+  Device ports (physical and virtual) 
+ 14 
+ 
+4.6 Explain common mitigation techniques and their
+purposes. 
+ 
+11, 14, 15, 20 
+ Signature management 
+ 15 
+ Device hardening 
+ 11 
+ Change native VLAN 
+ 11 
+ Switch port protection 
+ 11 
+  Spanning tree 
+ 11 
+  Flood guard 
+ 11 
+ 
+ 
+ BPDU guard
+ 11 
+  Root guard 
+ 11 
+  DHCP snooping 
+ 11 
+ Network segmentation 
+ 11,15 
+  DMZ 
+ 15 
+  VLAN 
+ 11, 15 
+ Privileged user account 
+ 14 
+ File integrity monitoring 
+ 14 
+ Role separation 
+ 14 
+ Restricting access via ACLs 
+ 14, 15 
+ Honeypot/honeynet 
+ 15, 20 
+ Penetration testing 
+ 15 
+ 
+5.0 Network Troubleshooting and Tools 
+   
+
+ 
+5.1 Explain the network troubleshooting
+methodology. 
+ 
+19 
+ Identify the problem 
+ 19 
+  Gather information 
+ 19 
+  Duplicate the problem, if possible 
+ 19 
+  Question users 
+ 19 
+  Identify symptoms 
+ 19 
+  Determine if anything has changed 
+ 19 
+  Approach multiple problems individually 
+ 19 
+ 
+ 
+Establish a theory of probable cause
+ 19 
+  Question the obvious 
+ 19 
+  Consider multiple approaches 
+ 19 
+  Top-to-bottom/bottom-to-top 
+ 19 
+  OSI model 
+  
+  Divide and conquer 
+ 19 
+ Test the theory to determine the cause 
+ 19 
+  Once the theory is confirmed, determine the next steps
+to resolve the problem 
+ 19 
+  If the theory is not confirmed, reestablish a new theory
+or escalate 
+ 19 
+ Establish a plan of action to resolve the problem and
+identify potential effects 
+ 19 
+ Implement the solution or escalate as necessary 
+ 19 
+ Verify full system functionality and, if applicable,
+implement preventive measures 
+ 19 
+ Document findings, actions, and outcomes 
+ 19 
+ 
+5.2 Given a scenario, use the appropriate tool. 
+ 
+5, 17, 18 
+ Hardware tools 
+ 18 
+  Crimper 
+ 18 
+  Cable tester 
+ 18 
+  Punch-down tool 
+ 18 
+  OTDR 
+ 18 
+
+  Light meter 
+ 18 
+  Tone generator 
+ 18 
+ 
+ 
+ Loopback adapter
+ 18 
+  Multimeter 
+ 18 
+  Spectrum analyzer 
+ 18 
+ Software tools 
+ 17, 18 
+  Packet sniffer 
+ 18 
+  Port scanner 
+ 18 
+  Protocol analyzer 
+ 18 
+  WiFi analyzer 
+ 18 
+  Bandwidth speed tester 
+ 18 
+ Command line 
+ 17 
+  ping 
+ 17 
+  tracert, traceroute 
+ 17 
+  nslookup 
+ 17 
+  ipconfig 
+ 17 
+  ifconfig 
+ 17 
+  iptables 
+ 17 
+  netstat 
+ 17 
+  tcpdump 
+ 17 
+  pathping 
+ 17 
+  nmap 
+ 17 
+  route 
+ 17 
+  arp 
+ 17 
+  dig 
+ 17 
+ 
+5.3 Given a scenario, troubleshoot common wired
+connectivity and performance issues. 
+ 
+11, 19 
+ Attenuation 
+ 19 
+ Latency 
+ 19 
+ Jitter 
+ 19 
+ Crosstalk 
+ 19 
+ EMI 
+ 19 
+
+ Open/short 
+ 19 
+ Incorrect pin-out 
+ 19 
+ Incorrect cable type 
+ 19 
+ Bad port 
+ 19 
+ Transceiver mismatch 
+ 19 
+ TX/RX reverse 
+ 19 
+ Duplex/speed mismatch 
+ 11, 19 
+ Damaged cables 
+ 19 
+ Bent pins 
+ 19 
+ Bottlenecks 
+ 19 
+ VLAN mismatch 
+ 11, 19 
+ Network connection LED status indicators 
+ 19 
+ 
+5.4 Given a scenario, troubleshoot common wireless
+connectivity and performance issues. 
+ 
+12, 19 
+ Reflection 
+ 12, 19 
+ Refraction 
+ 12, 19 
+ 
+ 
+Absorption
+ 12, 19 
+ Latency 
+ 12, 19 
+ Jitter 
+ 12, 19 
+ Attenuation 
+ 12, 19 
+ Incorrect antenna type 
+ 12, 19 
+ Interference 
+ 12, 19 
+ Incorrect antenna placement 
+ 12, 19 
+ Channel overlap 
+ 12, 19 
+ Overcapacity 
+ 12, 19 
+ Distance limitations 
+ 12, 19 
+ Frequency mismatch 
+ 12, 19 
+ Wrong SSID 
+ 12, 19 
+ Wrong passphrase 
+ 12, 19 
+ Security type mismatch 
+ 12, 19 
+ Power levels 
+ 12, 19 
+ Signal-to-noise ratio 
+ 12, 19 
+
+ 
+5.5 Given a scenario, troubleshoot common network
+service issues. 
+ 
+19 
+ Names not resolving 
+ 19 
+ Incorrect gateway 
+ 19 
+ Incorrect netmask 
+ 19 
+ Duplicate IP addresses 
+ 19 
+ Duplicate MAC addresses 
+ 19 
+ 
+ 
+Expired IP address
+ 19 
+ Rogue DHCP server 
+ 19 
+ Untrusted SSL certificate 
+ 19 
+ Incorrect time 
+ 19 
+ Exhausted DHCP scope 
+ 19 
+ Blocked TCP/UDP ports 
+ 19 
+ Incorrect host-based firewall settings 
+ 19 
+ Incorrect ACL settings 
+ 19 
+ Unresponsive service 
+ 19 
+ Hardware failure 
+ 19 
+
+Assessment Test
+ 
+1
+. 
+What is the basic purpose of a local area network (LAN)?
+ 
+1
+. 
+To interconnect networks in several different buildings
+2
+. 
+To connect one or more computers together so they can share
+resources
+3
+. 
+To interconnect 2 to 10 routers
+4
+. 
+To make routers unnecessary
+2
+. 
+You need a topology that is easy to troubleshoot and scalable.
+Which would you use?
+ 
+1
+. 
+Bus
+2
+. 
+Star
+3
+. 
+Mesh
+4
+. 
+Ring
+3
+. 
+IP resides at which layer of the OSI model?
+ 
+1
+. 
+Application
+2
+. 
+Data Link
+3
+. 
+Network
+4
+. 
+Physical
+4
+. 
+Layer 2 of the OSI model is named .
+ 
+1
+. 
+Application layer
+2
+. 
+Network layer
+3
+. 
+Transport layer
+4
+. 
+Data Link layer
+5
+. 
+Which RG rating of coax is used for cable modems?
+ 
+1
+. 
+RG-59
+
+2
+. 
+RG-58
+3
+. 
+RG-6
+4
+. 
+RG-8
+6
+. 
+Which UTP wiring uses four twisted wire pairs (eight wires)
+and is rated for 250 MHz?
+ 
+1
+. 
+Category 3 UTP
+2
+. 
+Category 5 STP
+3
+. 
+Category 5 UTP
+4
+. 
+Category 6 UTP
+7
+. 
+If you are running half-duplex Internet, which of the following
+is true? (Choose all that apply.)
+ 
+1
+. 
+Your digital signal cannot transmit and receive data at the same
+time.
+2
+. 
+Hosts use the CSMA/CD protocol to detect collisions.
+3
+. 
+The physical connection consists of one wire pair.
+4
+. 
+None of the above.
+8
+. 
+You need to connect a hub to a switch. You don’t like this
+idea because you know that it will create congestion. What
+type of cable do you need to use to connect the hub to the
+switch?
+ 
+1
+. 
+EtherIP
+2
+. 
+Crossover
+3
+. 
+Straight-through
+4
+. 
+Cable Sense, Multiple Access
+9
+. 
+Your boss asks you why you just put in a requisition to buy a
+bunch of switches. He said he just bought you a bunch of hubs
+five years ago! Why did you buy the switches?
+ 
+1
+. 
+Because each switch port is its own collision domain.
+2
+. 
+The cable connecting devices to the hub wore out, and switches
+
+were cheaper than new cable.
+3
+. 
+There were too many broadcast domains, and a switch breaks up
+broadcast domains by default.
+4
+. 
+The hubs kept repeating signals but quit recognizing frames and
+data structures.
+10
+. 
+Which device would connect network segments together,
+creating separate collision domains for each segment but only
+a single broadcast domain?
+ 
+1
+. 
+Hub
+2
+. 
+Router
+3
+. 
+Switch
+4
+. 
+Modem
+11
+. 
+Most Application layer protocols use only UDP or TCP at the
+Transport layer. Which of the following could use both?
+ 
+1
+. 
+TCP
+2
+. 
+Microsoft Word
+3
+. 
+Telnet
+4
+. 
+DNS
+12
+. 
+HTTP, FTP, and Telnet work at which layer of the OSI
+model?
+ 
+1
+. 
+Application
+2
+. 
+Presentation
+3
+. 
+Session
+4
+. 
+Transport
+13
+. 
+IPv6 uses multiple types of addresses. Which of the following
+would describe an anycast address used by an IPv6 host?
+ 
+1
+. 
+Communications are routed to the most distant host that shares the
+same address.
+2
+. 
+Packets are delivered to all interfaces identified by the address.
+
+This is also called one-to-many addressing.
+3
+. 
+This address identifies multiple interfaces, and the anycast packet is
+only delivered to one address. This address can also be called one-
+to-one-of-many.
+4
+. 
+Anycast is a type of broadcast.
+14
+. 
+Which of the following IP addresses are not allowed on the
+Internet? (Choose all that apply.)
+ 
+1
+. 
+11.255.255.1
+2
+. 
+10.1.1.1
+3
+. 
+172.33.255.0
+4
+. 
+192.168.0.1
+15
+. 
+What is the subnetwork address for a host with the IP address
+200.10.5.168/28?
+ 
+1
+. 
+200.10.5.156
+2
+. 
+200.10.5.132
+3
+. 
+200.10.5.160
+4
+. 
+200.10.5.0
+5
+. 
+200.10.5.255
+16
+. 
+If you wanted to verify the local IP stack on your computer,
+what would you do?
+ 
+1
+. 
+Ping 127.0.0.0
+2
+. 
+Ping 127.0.0.1
+3
+. 
+Telnet 1.0.0.127
+4
+. 
+Ping 169.5.3.10
+5
+. 
+Telnet 255.255.255.255
+17
+. 
+The OSI model uses an encapsulation method to describe the
+data as it is encapsulated at each layer. What is the
+encapsulation named at the Data Link layer?
+ 
+
+1
+. 
+Bits
+2
+. 
+Packets
+3
+. 
+Frames
+4
+. 
+Data
+5
+. 
+Segments
+18
+. 
+Where does a Data Link layer frame have to carry a Network
+layer packet if the packet is destined for a remote network?
+ 
+1
+. 
+Router
+2
+. 
+Physical medium
+3
+. 
+Switch
+4
+. 
+Another host
+19
+. 
+Which of the following are not distance vector routing
+protocols? (Choose all that apply.)
+ 
+1
+. 
+OSPF
+2
+. 
+RIP
+3
+. 
+RIPv2
+4
+. 
+IS-IS
+20
+. 
+Which of the following uses both distance vector and link
+state properties?
+ 
+1
+. 
+IGRP
+2
+. 
+OSPF
+3
+. 
+RIPv1
+4
+. 
+EIGRP
+5
+. 
+IS-IS
+21
+. 
+You need to break up broadcast domains in a Layer 2 switched
+network. What strategy will you use?
+ 
+1
+. 
+Implement a loop-avoidance scheme.
+2
+. 
+Create a flatter network structure using switches.
+
+3
+. 
+Create a VLAN.
+4
+. 
+Disable the spanning tree on individual ports.
+22
+. 
+Why do most switches run the Spanning Tree Protocol by
+default?
+ 
+1
+. 
+It monitors how the network is functioning.
+2
+. 
+It stops data from forwarding until all devices are updated.
+3
+. 
+It prevents switching loops.
+4
+. 
+It manages the VLAN database.
+23
+. 
+Which of the following describes MIMO correctly?
+ 
+1
+. 
+A protocol that requires acknowledgment of each and every frame
+2
+. 
+A data-transmission technique in which several frames are sent by
+several antennas over several paths and are then recombined by
+another set of antennas
+3
+. 
+A modulation technique that allows more than one data rate
+4
+. 
+A technique that packs smaller packets into a single unit, which
+improves throughput
+24
+. 
+Which two practices help secure your wireless access points
+from unauthorized access? (Choose all that apply.)
+ 
+1
+. 
+Assigning a private IP address to the AP
+2
+. 
+Changing the default SSID value
+3
+. 
+Configuring a new administrator password
+4
+. 
+Changing the mixed-mode setting to single mode
+5
+. 
+Configuring traffic filtering
+25
+. 
+IPSec is defined at what layer of the OSI model?
+ 
+1
+. 
+Network
+2
+. 
+Physical
+3
+. 
+Layer 4
+4
+. 
+Layer 7
+
+26
+. 
+You want your users to log in and authenticate before they can
+get onto your network. Which of the following services would
+you use?
+ 
+1
+. 
+RADIUS
+2
+. 
+DNS
+3
+. 
+Virtual Network Computing
+4
+. 
+Remote Desktop Protocol
+27
+. 
+Someone calls you and asks for your bank account number
+because the bank is having problems with your account. You
+give them this information and later find out that you were
+scammed. What type of attack is this?
+ 
+1
+. 
+Phishing
+2
+. 
+Calling scam
+3
+. 
+Analog scam
+4
+. 
+Trust-exploration attack
+5
+. 
+Man-in-the-middle attack
+6
+. 
+Rogue access point
+28
+. 
+Which of the following are types of denial-of-service attacks?
+(Choose all that apply.)
+ 
+1
+. 
+Ping of Death
+2
+. 
+Stacheldraht
+3
+. 
+SYN flood
+4
+. 
+Virus FloodSyn
+29
+. 
+You want to stop a hacker in their tracks. Which of the
+following devices are proactive in providing this service?
+ 
+1
+. 
+Access control list (ACL)
+2
+. 
+Content filtering
+3
+. 
+Security zones
+
+4
+. 
+Intrusion prevention system (IPS)
+5
+. 
+Network Address Translation
+6
+. 
+Virtual LANs
+30
+. 
+You connected your company to the Internet, and security is a
+concern. What should you install?
+ 
+1
+. 
+Higher-quality cables
+2
+. 
+Firewall
+3
+. 
+DNS
+4
+. 
+Switches
+31
+. 
+Which of the following are WAN protocols or technologies?
+(Choose all that apply.)
+ 
+1
+. 
+ATM
+2
+. 
+ISDN
+3
+. 
+MPLS
+4
+. 
+RIP
+32
+. 
+The rate at which the Frame Relay switch agrees to transfer
+data is referred to as .
+ 
+1
+. 
+BE
+2
+. 
+FECN
+3
+. 
+CIR
+4
+. 
+BECN
+33
+. 
+Which two 
+arp
+ utility switches perform the same function?
+ 
+1
+. 
+–g
+2
+. 
+–Z
+3
+. 
+–d
+4
+. 
+–a
+5
+. 
+-h
+
+6
+. 
+-b
+34
+. 
+You need to purge and reload the remote NetBIOS name table
+cache. Which 
+nbtstat
+ utility switch will you use?
+ 
+1
+. 
+–r
+2
+. 
+–R
+3
+. 
+/r
+4
+. 
+/R
+5
+. 
+-a
+6
+. 
+-A
+35
+. 
+Which tool is used to attach ends to network cables?
+ 
+1
+. 
+Punch-down tool
+2
+. 
+Crimper
+3
+. 
+VLAN tool
+4
+. 
+Strippers
+5
+. 
+ARP tool
+36
+. 
+You are using a TDR. Which of the following actions can you
+do with this device? (Choose all that apply.)
+ 
+1
+. 
+Estimate cable lengths
+2
+. 
+Find splice and connector locations and their associated loss
+amounts
+3
+. 
+Display unused services
+4
+. 
+Define cable-impedance characteristics
+37
+. 
+Which of the following are considered cabling issues?
+(Choose all that apply.)
+ 
+1
+. 
+Crosstalk
+2
+. 
+Shorts
+3
+. 
+Open impedance mismatch
+4
+. 
+DNS configurations
+
+38
+. 
+You have just tested your theory of a problem to determine the
+cause. Based on the standard troubleshooting model, what is
+your next step?
+ 
+1
+. 
+Question the obvious.
+2
+. 
+Establish a theory of probable cause.
+3
+. 
+Establish a plan of action to resolve the problem and identify
+potential effects.
+4
+. 
+Verify full system functionality, and if applicable, implement
+preventative measures.
+39
+. 
+Which network performance optimization technique can delay
+packets that meet certain criteria to guarantee usable
+bandwidth for other applications?
+ 
+1
+. 
+Traffic shaping
+2
+. 
+Jitter control
+3
+. 
+Logical network mapping
+4
+. 
+Load balancing
+5
+. 
+Access lists
+40
+. 
+You need to optimize network traffic by spreading it across
+multiple connections. Which strategy should be used?
+ 
+1
+. 
+Load balancing
+2
+. 
+Traffic shaping
+3
+. 
+Adding VLANs
+4
+. 
+A 1 Gbps connection
+5
+. 
+Following the regulations
+
+Answers to Assessment Test
+ 
+1
+. 
+B. LANs generally have a geographic scope of a single
+building or smaller. They can be simple (two hosts) to
+complex (with thousands of hosts). See Chapter 1 for more
+information.
+2
+. 
+B. Star topologies are the easiest to troubleshoot and can
+easily scale to large sizes. See Chapter 1 for more information.
+3
+. 
+C. IP is a Network layer protocol. Internet Explorer is an
+example of an Application layer protocol, Ethernet is an
+example of a Data Link layer protocol, and T1 can be
+considered a Physical layer protocol. See Chapter 2 for more
+information.
+4
+. 
+D. Layer 2 of the OSI model is the Data Link layer, which
+provides the physical transmission of the data and handles
+error notification, network topology, and flow control. See
+Chapter 2 for more information.
+5
+. 
+C. Cable modems use RG-6 coax cables. See Chapter 3 for
+more information.
+6
+. 
+D. To get the high data-transfer speed, like 1 Gbps, you need
+to use a wire standard that is highly rated, such as Category 5e
+or Category 6. See Chapter 3 for more information.
+7
+. 
+A, B, C. With half duplex, you are using one wire pair with a
+digital signal either transmitting or receiving (but not both at
+once). Carrier Sense Multiple Access with Collision Detection
+(CSMA/CD) helps packets that are transmitted simultaneously
+from different hosts share bandwidth evenly. See Chapter 4
+for more information.
+8
+. 
+B. To connect two switches together or a hub to a switch, you
+need a crossover cable. See Chapter 4 for more information.
+9
+. 
+A. For the most part, switches are not cheap; however, one of
+the biggest benefits of using switches instead of hubs in your
+
+internetwork is that each switch port is actually its own
+collision domain. A hub creates one large collision domain.
+Switches still can’t break up broadcast domains (do you know
+which devices do?). Hubs do not recognize frames and data
+structures but switches do. See Chapter 5 for more
+information.
+10
+. 
+C. A switch creates separate collision domains for each port
+but does not break up broadcast domains by default. See
+Chapter 5 for more information.
+11
+. 
+D. DNS uses TCP for zone exchanges between servers and
+UDP when a client is trying to resolve a hostname to an IP
+address. See Chapter 6 for more information.
+12
+. 
+A. HTTP, FTP, and Telnet use TCP at the Transport layer;
+however, they are all Application layer protocols, so the
+Application layer is the best answer for this question. See
+Chapter 6 for more information.
+13
+. 
+C. Anycast is a new type of communication that replaces
+broadcasts in IPv4. Anycast addresses identify multiple
+interfaces, which is the same as multicast; however, the big
+difference is that the anycast packet is delivered to only one
+address: the first one it finds defined in terms of routing
+distance. This address can also be called one-to-one-of-many.
+See Chapter 7 for more information.
+14
+. 
+B, D. The addresses in the ranges 10.0.0.0 through
+10.255.255.255 and 172.16.0.0 through 172.31.255.255 as
+well as 192.168.0.0 through 192.168.255.255 are all
+considered private, based on RFC 1918. Use of these
+addresses on the Internet is prohibited so that they can be used
+simultaneously in different administrative domains without
+concern for conflict. See Chapter 7 for more detail on IP
+addressing and information on private IP addresses.
+15
+. 
+C. This is a pretty simple question. A /28 is 255.255.255.240,
+which means that our block size is 16 in the fourth octet. 0, 16,
+32, 48, 64, 80, 96, 112, 128, 144, 160, 176, and so on. The
+host is in the subnet 160. See Chapter 8 for more information.
+
+16
+. 
+B. To test the local stack on your host, ping the loopback
+interface of 127.0.0.1. See Chapter 8 for more information.
+17
+. 
+C. The Data Link layer is responsible for encapsulating IP
+packets into frames and for providing logical network
+addresses. See Chapter 9 for more information.
+18
+. 
+A. Packets specifically have to be carried to a router in order
+to be routed through a network. On your local computer, the
+IP address of this router is displayed as the gateway address.
+See Chapter 9 for more information.
+19
+. 
+A, D. RIP and RIPv2 are distance vector routing protocols.
+OSPF and IS-IS are link state. See Chapter 10 for more
+information.
+20
+. 
+D. EIGRP is called a hybrid routing protocol because it uses
+the characteristics of both distance vector and link state
+routing protocols. However, EIGRP can only be run on Cisco
+routers and is not vendor neutral. The new CompTIA
+objectives mention BGP as a hybrid routing protocol. See
+Chapter 10 for more information.
+21
+. 
+C. Virtual LANs break up broadcast domains in Layer 2
+switched internetworks. See Chapter 11 for more information.
+22
+. 
+C. The Spanning Tree Protocol (STP) was designed to stop
+Layer 2 loops. All enterprise model switches have STP by
+default. See Chapter 11 for more information.
+23
+. 
+B. Part of the 802.11n wireless standard, MIMO sends
+multiple frames by several antennas over several paths; they
+are then recombined by another set of antennas to optimize
+throughput and multipath resistance. This is called spatial
+multiplexing. See Chapter 12 for more information.
+24
+. 
+B, C. At a minimum, you need to change the default SSID
+value on each AP and configure new usernames and
+passwords on the AP. See Chapter 12 for more information.
+25
+. 
+A. IPSec works at the Network layer of the OSI model (Layer
+3) and secures all applications that operate above it (Layer 4
+and above). Additionally, because it was designed by the IETF
+
+and designed to work with IPv4 and IPv6, it has broad
+industry support and is quickly becoming the standard for
+VPNs on the Internet. See Chapter 13 for more information.
+26
+. 
+A. RADIUS combines user authentication and authorization
+into one profile. See Chapter 13 for more information.
+27
+. 
+A. Social engineering, or phishing, refers to the act of
+attempting to illegally obtain sensitive information by
+pretending to be a credible source. Phishing usually takes one
+of two forms: an email or a phone call. See Chapter 14 for
+more information.
+28
+. 
+A, B, C. A denial-of-service (DoS) attack prevents users from
+accessing the system. All of the options are possible denial-of-
+service attacks except Virus FloodSyn. See Chapter 14 for
+more information.
+29
+. 
+D. Changing network configurations, terminating sessions,
+and deceiving the attacker are all actions that can be taken by
+an intrusion prevention system (IPS) device. These are all
+proactive approaches to security. See Chapter 15 for more
+information.
+30
+. 
+B. Firewalls help provide perimeter network security by
+allowing or denying connections and types of traffic in or out
+of the network. See Chapter 15 for more information.
+31
+. 
+A, B, C. Routing Information Protocol (RIP) is not a WAN
+protocol but a routing protocol used in local area connections.
+See Chapter 16 for more information.
+32
+. 
+C. The committed information rate (CIR) is the rate, in bits per
+second, at which the Frame Relay switch agrees to transfer
+data. See Chapter 16 for more information.
+33
+. 
+A, D. The 
+arp
+ utility’s 
+–a
+ and 
+–g
+ switches perform the same
+function. They both show the current ARP cache. See Chapter
+17 for more information.
+34
+. 
+B. To purge and reload the remote NetBIOS name cache, you
+must use 
+nbtstat –R
+. Remember that the 
+R
+ must be
+uppercase, and it will not work correctly without the hyphen
+
+before it. See Chapter 17 for more information.
+35
+. 
+B. A wire crimper or crimper is used to attach ends onto
+different types of network cables. See Chapter 18 for more
+information.
+36
+. 
+A, B, D. Due to sensitivity to any variation and impedance to
+cabling, options A, B, and D are all reasons you’d use a time-
+domain reflectometer (TDR). See Chapter 18 for more
+information.
+37
+. 
+A, B, C. Because most of today’s networks still consist of
+large amounts of copper cable, they can continue to suffer
+from the physical issues (the options are not a complete list)
+that have plagued all networks since the very beginning of
+networking. See Chapter 19 for more information.
+38
+. 
+C. Based on the standard troubleshooting model, the next step
+would be to establish a plan of action to resolve the problem
+and identify potential effects. See Chapter 19 for more
+information.
+39
+. 
+A. Traffic shaping, also known as packet shaping, is another
+form of bandwidth optimization. See Chapter 20 for more
+information.
+40
+. 
+A. Load balancing refers to a technique used to spread work
+out to multiple computers, network links, or other devices.
+You can load-balance work on servers by clustering servers so
+that multiple machines all provide the same service. See
+Chapter 20 for more information.
+
+Chapter 1
+Introduction to Networks
+THE FOLLOWING COMPTIA NETWORK+ EXAM OBJECTIVES
+ARE COVERED IN THIS CHAPTER:
+✓
+ 1.5 Compare and contrast the characteristics of network topologies,
+types, and technologies
+ 
+Wired topologies
+ 
+Logical vs. physical
+Star
+Ring
+Mesh
+Bus CAN SAN
+You’d have to work pretty hard these days to find someone who would argue
+when we say that our computers have become invaluable to us personally and
+professionally. Our society has become highly dependent on the resources
+they offer and on sharing them with each other. The ability to communicate
+with others—whether they’re in the same building or in some faraway land—
+completely hinges on our capacity to create and maintain solid, dependable
+networks.
+And those vitally important networks come in all shapes and sizes—ranging
+from small and simple to humongous and super complicated. But whatever
+their flavor, they all need to be maintained properly, and to do that well, you
+have to understand networking basics. The various types of devices and
+technologies that are used to create networks, as well as how they work
+together, is what this book is about, and I’ll go through this critical
+information one step at a time with you. Understanding all of this will not
+only equip you with a rock-solid base to build on as you gain IT knowledge
+and grow in your career, it will also arm you with what you’ll need to ace the
+Network+ certification exam!
+
+ 
+ 
+ 
+To find Todd Lammle CompTIA videos and practice
+questions, please see  
+www.lammle.com/network+
+.
+
+First Things First: What’s a Network?
+The dictionary defines the word 
+network
+ as “a group or system of
+interconnected people or things.” Similarly, in the computer world, the term
+network
+ means two or more connected computers that can share resources
+such as data and applications, office machines, an Internet connection, or
+some combination of these, as shown in 
+Figure 1.1
+.
+Figure 1.1
+ A basic network
+Figure 1.1
+ shows a really basic network made up of only two host computers
+connected; they share resources such as files and even a printer hooked up to
+one of the hosts. These two hosts “talk” to each other using a computer
+language called 
+binary code
+, which consists of lots of 1s and 0s in a specific
+order that describes exactly what they want to “say.”
+Next, I’m going to tell you about local area networks, how they work, and
+even how we can connect LANs together. Then, later in this chapter, I’ll
+describe how to connect remote LANs together through something known as
+a wide area network.
+The Local Area Network
+Just as the name implies, a 
+local area network (LAN)
+ is usually restricted to
+spanning a particular geographic location such as an office building, a single
+department within a corporate office, or even a home office.
+Back in the day, you couldn’t put more than 30 workstations on a LAN, and
+you had to cope with strict limitations on how far those machines could
+
+actually be from each other. Because of technological advances, all that’s
+changed now, and we’re not nearly as restricted in regard to both a LAN’s
+size and the distance a LAN can span. Even so, it’s still best to split a big
+LAN into smaller logical zones known as 
+workgroups
+ to make administration
+easier.
+ 
+ 
+ 
+The meaning of the term  
+workgroup
+ in this context is
+slightly different than when the term is used in contrast to
+domains. In that context, a workgroup is a set of devices
+with no security association with one another (whereas in a
+domain they do have that association). In this context, we
+simply mean they physically are in the same network
+segment.
+In a typical business environment, it’s a good idea to arrange your LAN’s
+workgroups along department divisions; for instance, you would create a
+workgroup for Accounting, another one for Sales, and maybe another for
+Marketing—you get the idea. 
+Figure 1.2
+ shows two separate LANs, each as
+its own workgroup.
+Figure 1.2
+ Two separate LANs (workgroups)
+
+First, don’t stress about the devices labeled 
+hub
+ and 
+switch
+—these are just
+connectivity devices that allow hosts to physically connect to resources on an
+LAN. Trust me; I’ll describe them to you in much more detail in Chapter 5,
+“Networking Devices.”
+Anyway, back to the figure. Notice that there’s a Marketing workgroup and a
+Sales workgroup. These are LANs in their most basic form. Any device that
+connects to the Marketing LAN can access the resources of the Marketing
+LAN—in this case, the servers and printer.
+There are two problems with this:
+ 
+You must be physically connected to a workgroup’s LAN to get the
+resources from it.
+You can’t get from one LAN to the other LAN and use its server data
+and printing resources remotely.
+This is a typical network issue that’s easily resolved by using a cool device
+called a 
+router
+ to connect the two LANs, as shown in 
+Figure 1.3
+.
+Figure 1.3
+ A router connects LANs.
+
+Nice—problem solved! Even though you can use routers for more than just
+connecting LANs, the router shown in 
+Figure 1.3
+ is a great solution because
+the host computers from the Sales LAN can get to the resources (server data
+and printers) of the Marketing LAN, and vice versa.
+Now, you might be thinking that we really don’t need the router—that we
+could just physically connect the two workgroups with a type of cable that
+would allow the Marketing and Sales workgroups to hook up somehow.
+Well, we could do that, but if we did, we would have only one big,
+cumbersome workgroup instead of separate workgroups for Marketing and
+Sales, and that kind of arrangement just isn’t practical for today’s networks.
+This is because with smaller, individual-yet-connected groups, the users on
+each LAN enjoy much faster response times when accessing resources, and
+administrative tasks are a lot easier, too. Larger workgroups run more slowly
+because there’s a legion of hosts within them that are all trying to get to the
+same resources simultaneously. So the router shown in 
+Figure 1.3
+, which
+separates the workgroups while still allowing access between them, is a really
+great solution!
+ 
+ Don’t focus too much on the network connectivity devices
+
+ 
+ 
+like the hubs, routers, and switches I’ve mentioned so far in
+this chapter yet. We’ll thoroughly cover them all later, in
+Chapter 5. Right now, I really want you to prioritize your
+understanding of the concepts that I’m presenting here, so at
+this point, all you need to know is that hubs and switches are
+devices that connect other devices together into a network
+and routers connect networks together.
+So let me define the other terms I’ve used so far: 
+workstations
+, 
+servers
+, and
+hosts
+.
+Common Network Components
+There are a lot of different machines, devices, and media that make up our
+networks. Let’s talk about three of the most common:
+ 
+Workstations
+Servers
+Hosts
+Workstations
+Workstations
+ are often seriously powerful computers that run more than one
+central processing unit (CPU) and whose resources are available to other
+users on the network to access when needed. With this much power, you
+might think I am describing a server—not quite because there is an important
+difference between these devices that I’ll cover in the next section.
+Workstations are often employed as systems that end users use on a daily
+basis. Don’t confuse workstations with client machines, which can be
+workstations but not always. People often use the terms 
+workstation
+ and
+client
+ interchangeably. In colloquial terms, this isn’t a big deal; we all do it.
+But technically speaking, they are different. A 
+client machine
+ is any device
+on the network that can ask for access to resources like a printer or other
+hosts from a server or powerful workstation.
+ 
+ 
+ 
+The terms  
+workstation
+, 
+client
+, and 
+host
+ can sometimes be
+
+used interchangeably. Computers have become more and
+more powerful and the terms have become somewhat fuzzy
+because hosts can be clients, workstations, servers, and
+more! The term 
+host
+ is used to describe pretty much
+anything that takes an IP address.
+Servers
+Servers
+ are also powerful computers. They get their name because they truly
+are “at the service” of the network and run specialized software known as the
+network operating system to maintain and control the network.
+In a good design that optimizes the network’s performance, servers are highly
+specialized and are there to handle one important labor-intensive job. This is
+not to say that a single server can’t do many jobs, but more often than not,
+you’ll get better performance if you dedicate a server to a single task. Here’s
+a list of common dedicated servers:
+File Server
+ Stores and dispenses files
+Mail Server
+ The network’s post office; handles email functions
+Print Server
+ Manages printers on the network
+Web Server
+ Manages web-based activities by running Hypertext Transfer
+Protocol (HTTP) for storing web content and accessing web pages
+Fax Server
+ The “memo maker” that sends and receives paperless faxes over
+the network
+Application Server
+ Manages network applications
+Telephony Server
+ Handles the call center and call routing and can be
+thought of as a sophisticated network answering machine
+Proxy Server
+ Handles tasks in the place of other machines on the network,
+particularly an Internet connection.
+ 
+ 
+ 
+See how the name of each kind of server indicates what it
+actually does—how it serves the network? This is an
+excellent way to remember them. 
+
+As I said, servers are usually dedicated to doing one specific important thing
+within the network. Not always, though—sometimes they have more than
+one job. But whether servers are designated for one job or are network
+multitaskers, they can maintain the network’s data integrity by backing up the
+network’s software and providing redundant hardware (for fault tolerance).
+And no matter what, they all serve a number of client machines.
+Back in 
+Figure 1.2
+, I showed you an example of two really simple LAN
+networks. I want to make sure you know that servers must have considerably
+superior CPUs, hard-drive space, and memory—a lot more than a simple
+client’s capacity—because they serve many client machines and provide any
+resources they require. Because they’re so important, you should always put
+your servers in a very secure area. My company’s servers are in a locked
+server room because not only are they really pricey workhorses, they also
+store huge amounts of important and sensitive company data, so they need to
+be kept safe from any unauthorized access.
+In 
+Figure 1.4
+, you can see a network populated with both workstations and
+servers. Also notice that the hosts can access the servers across the network,
+which is pretty much the general idea of having a network in the first place!
+You probably picked up on the fact that there are more workstations here
+than servers, right? Think of why that is. If you answered that it’s because
+one server can provide resources to what can sometimes be a huge number of
+individual users at the same time but workstations don’t, you nailed it!
+Figure 1.4
+ A network populated with servers and workstations
+
+Hosts
+This can be kind of confusing because when people refer to hosts, they really
+can be referring to almost any type of networking devices—including
+workstations and servers. But if you dig a bit deeper, you’ll find that usually
+this term comes up when people are talking about resources and jobs that
+have to do with Transmission Control Protocol/Internet Protocol (TCP/IP).
+The scope of possible machines and devices is so broad because, in TCP/IP-
+speak, 
+host
+ means any network device with an IP address. Yes, you’ll hear IT
+professionals throw this term around pretty loosely; for the Network+ exam,
+stick to the definition being network devices, including workstations and
+servers, with IP addresses.
+Here’s a bit of background: The name 
+host
+ harks back to the Jurassic period
+of networking when those dinosaurs known as 
+mainframes
+ were the only
+
+intelligent devices able to roam the network. These were called 
+hosts
+ whether
+they had TCP/IP functionality or not. In that bygone age, everything else in
+the network-scape was referred to as 
+dumb terminals
+ because only
+mainframes—hosts—were given IP addresses. Another fossilized term from
+way back then is 
+gateways
+, which was used to talk about any Layer 3
+machines like routers. We still use these terms today, but they’ve evolved a
+bit to refer to the many intelligent devices populating our present-day
+networks, each of which has an IP address. This is exactly the reason you
+hear 
+host
+ used so broadly.
+Wide Area Network
+There are legions of people who, if asked to define a 
+wide area network
+(WAN)
+, just couldn’t do it. Yet most of them use the big dog of all WANs—
+the Internet—every day! With that in mind, you can imagine that WAN
+networks are what we use to span large geographic areas and truly go the
+distance. Like the Internet, WANs usually employ both routers and public
+links, so that’s generally the criteria used to define them.
+ 
+ 
+ 
+WANs are so important that I have dedicated an entire
+chapter to them: Chapter 16, “Wide Area Networks.” 
+Here’s a list of some of the important ways that WANs are different from
+LANs:
+ 
+WANs usually need a router port or ports.
+WANs span larger geographic areas and/or can link disparate locations.
+WANs are usually slower.
+We can choose when and how long we connect to a WAN. A LAN is all
+or nothing—our workstation is connected to it either permanently or not
+at all, although most of us have dedicated WAN links now.
+WANs can utilize either private or public data transport media such as
+phone lines.
+
+We get the word 
+Internet
+ from the term 
+internetwork
+. An internetwork is a
+type of LAN and/or WAN that connects a bunch of networks, or 
+intranets
+. In
+an internetwork, hosts still use hardware addresses to communicate with
+other hosts on the LAN. However, they use logical addresses (IP addresses)
+to communicate with hosts on a different LAN (other side of the router).
+And 
+routers
+ are the devices that make this possible. Each connection into a
+router is a different logical network. 
+Figure 1.5
+ demonstrates how routers are
+employed to create an internetwork and how they enable our LANs to access
+WAN resources.
+Figure 1.5
+ An internetwork
+The Internet is a prime example of what’s known as a 
+distributed WAN
+—an
+internetwork that’s made up of a lot of interconnected computers located in a
+
+lot of different places. There’s another kind of WAN, referred to as
+centralized
+, that’s composed of a main, centrally located computer or location
+that remote computers and devices can connect to. A good example is remote
+offices that connect to a main corporate office, as shown in 
+Figure 1.5
+.
+MPLS
+Multiprotocol Label Switching (MPLS) will be defined clearly in Chapter 16,
+but for the objectives of the CompTIA Network+ exam, this chapter will
+define the actual layout of what is one of the most popular WAN protocols in
+use today. MPLS has become one of the most innovative and flexible
+networking technologies on the market, and it has some key advantages over
+other WAN technologies:
+ 
+Physical layout flexibility
+Prioritizing of data
+Redundancy in case of link failure
+One-to-many connection
+MPLS is a switching mechanism that imposes labels (numbers) to data and
+then uses those labels to forward data when it arrives at the MPLS network,
+as shown in 
+Figure 1.6
+.
+Figure 1.6
+ Multiprotocol Label Switching layout
+
+The labels are assigned on the edge of the MPLS network, and forwarding
+inside the MPLS network (cloud) is done solely based on labels through
+virtual links instead of physical links. Prioritizing data is a huge advantage;
+for example, voice data could have priority over basic data based on the
+labels. And since there are multiple paths for the data to be forwarded
+through the MPLS cloud, there’s even some redundancy provided as well.
+Network Architecture: Peer-to-Peer or Client-Server?
+We’ve developed networking as a way to share resources and information,
+and how that’s achieved directly maps to the particular architecture of the
+network operating system software. There are two main network types you
+need to know about: peer-to-peer and client-server. And by the way, it’s
+really tough to tell the difference just by looking at a diagram or even by
+checking out live video of the network humming along. But the differences
+between peer-to-peer and client-server architectures are pretty major. They’re
+not just physical; they’re logical differences. You’ll see what I mean in a bit.
+Peer-to-Peer Networks
+Computers connected together in 
+peer-to-peer networks
+ do not have any
+central, or special, authority—they’re all 
+peers
+, meaning that when it comes
+to authority, they’re all equals. The authority to perform a security check for
+
+proper access rights lies with the computer that has the desired resource being
+requested from it.
+It also means that the computers coexisting in a peer-to-peer network can be
+client machines that access resources and server machines and provide those
+resources to other computers. This actually works pretty well as long as there
+isn’t a huge number of users on the network, if each user backs things up
+locally, and if your network doesn’t require much security.
+If your network is running Windows, Mac, or Unix in a local LAN
+workgroup, you have a peer-to-peer network. 
+Figure 1.7
+ gives you a snapshot
+of a typical peer-to-peer network. Keep in mind that peer-to-peer networks
+definitely present security-oriented challenges; for instance, just backing up
+company data can get pretty sketchy!
+Figure 1.7
+ A peer-to-peer network
+Since it should be clear by now that peer-to-peer networks aren’t all sunshine,
+backing up all your critical data may be tough, but it’s vital! Haven’t all of us
+forgotten where we’ve put an important file? And then there’s that glaring
+security issue to tangle with. Because security is not centrally governed, each
+and every user has to remember and maintain a list of users and passwords on
+each and every machine. Worse, some of those all-important passwords for
+the same users change on different machines—even for accessing different
+resources. What a mess!
+
+Client-Server Networks
+Client-server networks
+ are pretty much the polar opposite of peer-to-peer
+networks because in them, a single server uses a network operating system
+for managing the whole network. Here’s how it works: A client machine’s
+request for a resource goes to the main server, which responds by handling
+security and directing the client to the desired resource. This happens instead
+of the request going directly to the machine with the desired resource, and it
+has some serious advantages. First, because the network is much better
+organized and doesn’t depend on users remembering where needed resources
+are, it’s a whole lot easier to find the files you need because everything is
+stored in one spot—on that special server. Your security also gets a lot tighter
+because all usernames and passwords are on that specific server, which is
+never ever used as a workstation. You even gain scalability—client-server
+networks can have legions of workstations on them. And surprisingly, with
+all those demands, the network’s performance is actually optimized—nice!
+Check out 
+Figure 1.8
+, which shows a client-server network with a server that
+has a database of access rights, user accounts, and passwords.
+Figure 1.8
+ A client-server network
+Many of today’s networks are hopefully a healthy blend of peer-to-peer and
+client-server architectures, with carefully specified servers that permit the
+simultaneous sharing of resources from devices running workstation
+operating systems. Even though the supporting machines can’t handle as
+many inbound connections at a time, they still run the server service
+reasonably well. And if this type of mixed environment is designed well,
+
+most networks benefit greatly by having the capacity to take advantage of the
+positive aspects of both worlds.
+
+Physical Network Topologies
+Just as a topographical map is a type of map that shows the shape of the
+terrain, the 
+physical topology 
+of a network is also a type of map. It defines the
+specific characteristics of a network, such as where all the workstations and
+other devices are located and the precise arrangement of all the physical
+media such as cables. On the other hand, the 
+logical topologies
+ we covered
+earlier delineate exactly how data moves through the network. Now, even
+though these two topologies are usually a lot alike, a particular network can
+actually have physical and logical topologies that are very different.
+Basically, what you want to remember is that a network’s physical topology
+gives you the lay of the land and the logical topology shows how a digital
+signal or data navigates through that layout.
+Here’s a list of the topologies you’re most likely to run into these days:
+ 
+Bus
+Star
+Ring
+Mesh
+Point-to-point
+Point-to-multipoint
+Hybrid
+Bus Topology
+This type of topology is the most basic one of the bunch, and it really does
+sort of resemble a bus, but more like one that’s been in a wreck! Anyway, the
+bus topology
+ consists of two distinct and terminated ends, with each of its
+computers connecting to one unbroken cable running its entire length. Back
+in the day, we used to attach computers to that main cable with wire taps, but
+this didn’t work all that well so we began using drop cables in their place. If
+we were dealing with 10Base2 Ethernet, we would slip a “T” into the main
+cable anywhere we wanted to connect a device to it instead of using drop
+cables.
+
+Figure 1.9
+ depicts what a typical bus network’s physical topology looks like.
+Figure 1.9
+ A typical bus network’s physical topology
+Even though all the computers on this kind of network see all the data
+flowing through the cable, only the one computer, which the data is
+specifically addressed to, actually 
+gets
+ the data. Some of the benefits of using
+a bus topology are that it’s easy to install and it’s not very expensive, partly
+because it doesn’t require as much cable as the other types of physical
+topologies. But it also has some drawbacks: For instance, it’s hard to
+troubleshoot, change, or move, and it really doesn’t offer much in the way of
+fault tolerance because everything is connected to that single cable. This
+means that any fault in the cable would basically bring the whole network
+down!
+ 
+
+
+[Note: PDF has 1585 pages, only first 100 pages extracted]

@@ -1,0 +1,50 @@
+# FAME Security Configuration
+# Adjustable security boundaries for educational/research use
+# Use responsibly and in compliance with local laws
+
+# Security Level: "restricted" | "moderate" | "permissive" | "unrestricted"
+security_level: "moderate"
+
+# Access Control
+access_control:
+  file_system_access: true
+  process_management: true
+  network_scanning: true
+  system_commands: true
+  registry_access: false  # Set to true if needed
+  service_control: false  # Set to true if needed
+  code_execution: true
+  
+# Approval Gates (empty list = no approval required)
+approval_gates: []
+
+# Ethical Boundaries (adjust as needed)
+ethical_boundaries:
+  require_authorization: false  # Set to true to require explicit authorization
+  log_all_actions: true
+  warn_on_potential_issues: true
+  
+# Network Access
+network_access:
+  allow_external_connections: true
+  allow_tor_proxy: false  # Set to true if needed for research
+  allow_dark_web_access: false  # Set to true if needed for research
+  
+# System Access
+system_access:
+  allow_privileged_commands: false  # Set to true if needed
+  allow_registry_access: false
+  allow_service_management: false
+  
+# Disclaimers
+disclaimers:
+  user_responsibility: "User assumes all legal and ethical responsibility for system actions"
+  no_liability: "System operators are not liable for user actions"
+  local_jurisdiction: "User is responsible for complying with local laws"
+  educational_purpose: "This system is for educational and research purposes only"
+  
+# Warning Messages
+warnings:
+  show_on_startup: true
+  show_before_execution: false  # Set to true to show warnings before each action
+

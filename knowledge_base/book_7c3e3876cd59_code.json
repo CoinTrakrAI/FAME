@@ -1,0 +1,5 @@
+{
+  "examples": [
+    "import sys\n\nfrom Crypto.Cipher import AES\nfrom base64 import b64decode"
+  ]
+}

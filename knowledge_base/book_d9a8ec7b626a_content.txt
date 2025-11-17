@@ -1,0 +1,3285 @@
+CRYSTAL PANEK
+WILLIAM PANEK, MICROSOFT MVP EXAM 70-740, EXAM 70-741, EXAM 70-742, AND EXAM 70-743
+Provides 1,000 practice questions that include 3 practice exams 
+covering all sections of the MCSA Windows Server 2016 objective domains. 
+Complements the  MCSA Windows Server 2016 Complete Study Guide: 
+Exam 70-740, Exam 70-741, Exam 70-742, and upgrade Exam 70-743.MCSA
+WINDOWS SERVER® 2016 
+PRACTICE TESTS
+
+MCSA
+Windows Server  ® 2016 
+Practice Tests:
+Exams 70-740, 70-741, 70-742,  
+and 70-743
+William Panek  
+Crystal Panek
+
+Senior Acquisitions Editor: Kenyon Brown
+Development Editor: Kezia Endsley
+Technical Editor: Chris Crayton
+Senior Production Editor: Christine O’Connor 
+Content Enablement and Operations Manager: Pete Gaughan
+Executive Editor: Jim Minatel
+Production Manager: Kathleen Wisor
+Book Designers: Judy Fung and Bill Gibson
+Copy Editor: Elizabeth Welch
+Proofreader: Louise Watson, Word One New York
+Indexer: Jack Lewis 
+Project Coordinator, Cover: Brent Savage
+Cover Designer: Wiley
+Cover Image: Getty Images Inc./ Jeremy Woodhouse
+Copyright © 2019 by John Wiley & Sons, Inc., Indianapolis, Indiana
+Published simultaneously in Canada
+ISBN: 978-1-119-52528-8
+ISBN: 978-1-119-52530-1 (ebk.)
+ISBN: 978-1-119-52529-5 (ebk.)
+Manufactured in the United States of America
+No part of this publication may be reproduced, stored in a retrieval system or transmitted in any form or 
+by any means, electronic, mechanical, photocopying, recording, scanning or otherwise, except as permit-
+ted under Sections 107 or 108 of the 1976 United States Copyright Act, without either the prior written 
+permission of the Publisher, or authorization through payment of the appropriate per-copy fee to the 
+Copyright Clearance Center, 222 Rosewood Drive, Danvers, MA 01923, (978) 750-8400, fax (978)  
+646-8600. Requests to the Publisher for permission should be addressed to the Permissions Department, 
+John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, (201) 748-6011, fax (201) 748-6008, or 
+online at http://www.wiley.com/go/permissions .
+Limit of Liability/Disclaimer of Warranty: The publisher and the author make no representations or war-
+ranties with respect to the accuracy or completeness of the contents of this work and specifically disclaim 
+all warranties, including without limitation warranties of fitness for a particular purpose. No warranty 
+may be created or extended by sales or promotional materials. The advice and strategies contained herein 
+may not be suitable for every situation. This work is sold with the understanding that the publisher is not 
+engaged in rendering legal, accounting, or other professional services. If professional assistance is required, 
+the services of a competent professional person should be sought. Neither the publisher nor the author 
+shall be liable for damages arising herefrom. The fact that an organization or Web site is referred to in this 
+work as a citation and/or a potential source of further information does not mean that the author or the 
+publisher endorses the information the organization or Web site may provide or recommendations it may 
+make. Further, readers should be aware that Internet Web sites listed in this work may have changed or 
+disappeared between when this work was written and when it is read.
+For general information on our other products and services or to obtain technical support, please contact 
+our Customer Care Department within the U.S. at (877) 762-2974, outside the U.S. at (317) 572-3993 or 
+fax (317) 572-4002.
+Wiley publishes in a variety of print and electronic formats and by print-on-demand. Some material 
+included with standard print versions of this book may not be included in e-books or in print-on-demand. 
+If this book refers to media such as a CD or DVD that is not included in the version you purchased, 
+you may download this material at http://booksupport.wiley.com . For more information about Wiley 
+products, visit www.wiley.com .
+Library of Congress Control Number: 2018964332
+TRADEMARKS: Wiley, the Wiley logo, and the Sybex logo are trademarks or registered trademarks of 
+John Wiley & Sons, Inc. and/or its affiliates, in the United States and other countries, and may not be used 
+without written permission. Windows Server is a registered trademark of Microsoft Corporation. All other 
+trademarks are the property of their respective owners. John Wiley & Sons, Inc. is not associated with any 
+product or vendor mentioned in this book.
+10 9 8 7 6 5 4 3 2 1
+
+Acknowledgments
+I would like to thank my wife and best friend, Crystal. She is always the light at the end of 
+my tunnel. I want to thank my two daughters, Alexandria and Paige, for all of their love 
+and support during the writing of all my books. The three of them are my support system 
+and I couldn’t do any of this without them.
+I want to thank all of my family and friends who always help me when I’m writing my 
+books. I want to thank my brothers, Rick, Gary, and Rob. I want to thank my great friends 
+Shaun, Jeremy, and Gene.
+We want to thank everyone on our Sybex team, especially our development editor, Kezia 
+Endsley, who helped make this the best book possible, and Chris Crayton, our technical 
+editor. It’s always good to have the very best technical person backing you up. I also want 
+to thank Christine O’Connor, our production editor, and Elizabeth Welch, our copy editor.
+Special thanks to our acquisitions editor, Kenyon Brown, who was the lead for the entire 
+book. Finally, we want to thank everyone else behind the scenes who helped make this 
+book possible. It’s truly an amazing thing to have so many people work on my books to 
+help make them the very best. I can’t thank you all enough for your hard work.
+—Will Panek
+I would like to second Will’s sentiments and thank all the same individuals. I would like to 
+personally thank my husband and best friend, Will, because without him I would not be 
+where I am today—thank you! I would also like to express my love to my two daughters, 
+who have always shown nothing but love and support for everything we do.
+—Crystal PanekThis book is dedicated to Alexandria and Paige. We couldn’t ask for  
+better kids.
+
+About the Authors
+William Panek   holds the following certifications: MCP, MCP+ I, 
+MCSA, MCSA+ Security and Messaging, MCSE-NT (3.51 & 4.0), 
+MCSE 2000, 2003, 2012/2012 R2, 2016, MCSE+ Security and 
+Messaging, MCDBA, MCT, MCTS, MCITP, CCNA, CCDA, and 
+CHFI. Will is also a five-time Microsoft MVP winner.
+After many successful years in the computer industry, Will decided 
+that he could better use his talents and his personality as an instruc-
+tor. He began teaching for schools such as Boston University and the 
+University of Maryland, just to name a few. He has done consulting and training for some 
+of the biggest government and corporate companies in the world, including the United 
+States Secret Service, Cisco, the United States Air Force, and the United States Army.
+In 2015, Will became a Senior Microsoft Instructor for StormWind Studios  
+(www.stormwindstudios.com ). He currently lives in New Hampshire with his wife 
+and two daughters. Will was also a representative in the New Hampshire House of 
+Representatives from 2010 to 2012. In his spare time, he likes to do blacksmithing, 
+shooting (trap and skeet), golf, racquetball, and ride his Harley. Will is also a commer -
+cially rated helicopter pilot.
+Crystal Panek   holds the following certifications: MCP, MCP+ I, 
+MCSA, MCSA+ Security and Messaging, MCSE-NT (3.51 & 4.0), 
+MCSE 2000, 2003, 2012/2012 R2, 2016, MCSE+ Security and 
+Messaging, MCDBA, MCTS, and MCITP.
+For many years she trained as a contract instructor, teaching at such 
+places as MicroC, Stellacon Corporation, and the University of New 
+Hampshire. She then became the vice president for a large IT training 
+company, and for 15 years she developed training materials and course-
+ware to help thousands of students get through their certification exams. She currently 
+works on a contract basis, creating courseware for several large IT training facilities.
+Crystal resides in New Hampshire with her husband and two daughters. In her spare 
+time, she likes to camp, hike, shoot trap and skeet, golf, bowl, and snowmobile.
+
+
+About the Technical Editor
+Chris Crayton,   MCSE, CISSP, CASP, CySA+, A+, N+, and S+, is a technical consultant, 
+trainer, author, and industry leading technical editor. He has worked as a computer tech-
+nology and networking instructor, information security director, network administrator, 
+network engineer, and PC specialist. Chris has authored several print and online books 
+on PC repair, CompTIA A+, CompTIA Security+, and Microsoft Windows. He has also 
+served as technical editor and content contributor on numerous technical titles for several 
+of the leading publishing companies. He holds numerous industry certifications, has been 
+recognized with many professional and teaching awards, and has served as a state-level 
+SkillsUSA final competition judge.
+
+Contents at a Glance
+Introduction  xiii
+Chapter 1 I nstalling Windows Servers in Host and  
+Compute Environments  1
+Chapter 2 I mplement Storage Solutions  23
+Chapter 3 I mplement Hyper-V  45
+Chapter 4 I mplement Windows Containers  71
+Chapter 5 I mplement High Availability  89
+Chapter 6 I mplement Domain Name System (DNS)  113
+Chapter 7 I mplement Network Connectivity and  
+Remote Access Solutions  137
+Chapter 8 I mplement an Advanced Network Infrastructure  161
+Chapter 9 I nstall and Configure Active Directory Domain  
+Services (AD DS)  185
+Chapter 10 I mplement Identity Federation and Access  
+Solutions  211
+Chapter 11 P ractice Exam 70-740: Installation, Storage,  
+and Compute with Windows Server 2016  235
+Chapter 12 P ractice Exam 70-741: Networking with  
+Windows Server 2016  251
+Chapter 13 P ractice Exam 70-742: Identity with Windows  
+Server 2016  267
+Appendix   A nswers to Practice Tests  283
+Index  395
+
+Contents
+Introduction  xiii
+Chapter 1 I nstalling Windows Servers in Host and  
+Compute Environments  1
+Chapter 2 I mplement Storage Solutions  23
+Chapter 3 I mplement Hyper-V  45
+Chapter 4 I mplement Windows Containers  71
+Chapter 5 I mplement High Availability  89
+Chapter 6 I mplement Domain Name System (DNS)  113
+Chapter 7 I mplement Network Connectivity and  
+Remote Access Solutions  137
+Chapter 8 I mplement an Advanced Network Infrastructure  161
+Chapter 9 I nstall and Configure Active Directory Domain 
+Services (AD DS)  185
+Chapter 10 I mplement Identity Federation and Access  
+Solutions  211
+Chapter 11 Practice Exam 70-740: Installation, Storage,  
+and Compute with Windows Server 2016  235
+Chapter 12 Practice Exam 70-741: Networking with  
+Windows Server 2016  251
+Chapter 13 Practice Exam 70-742: Identity with Windows  
+Server 2016  267
+Appendix    Answers to Practice Tests  283
+Chapter 1:  Installing Windows Servers in Host  
+and Compute Environments  284
+Chapter 2:  Implement Storage Solutions  291
+Chapter 3:  Implement Hyper-V  299
+Chapter 4:  Implement Windows Containers  309
+
+xii Contents
+Chapter 5:  Implement High Availability  315
+Chapter 6:  Implement Domain Name System (DNS)  323
+Chapter 7:  Implement Network Connectivity and  
+Remote Access Solutions  333
+Chapter 8:  Implement an Advanced Network Infrastructure  343
+Chapter 9:  Install and Configure Active Directory  
+Domain Services (AD DS)  353
+Chapter 10:  Implement Identity Federation and Access Solutions  363
+Chapter 11:  Practice Exam 70-740: Installation, Storage,  
+and Compute with Windows Server 2016  375
+Chapter 12:  Practice Exam 70-741: Networking with  
+Windows Server 2016  381
+Chapter 13:  Practice Exam 70-742: Identity with  
+Windows Server 2016  387
+Index  395
+
+Introduction
+This book is drawn from more than 20 years of IT experience and Microsoft testing. We 
+have taken that experience and translated it into a Windows Server 2016 book that will 
+help you prepare for the MCSA: Windows Server 2016 exams.
+Microsoft Windows Server 2016 is the newest version of Microsoft’s server operating 
+system software. Microsoft has taken the best of Windows Server 2003, Windows Server 
+2008, and Windows Server 2012 and combined them into the latest creation, Windows 
+Server 2016.
+Windows Server 2016 eliminates many of the problems that plagued the previous ver-
+sions of Windows Server, and it includes a much faster boot time and shutdown. It is also 
+easier to install and configure, and it barely stops to ask the user any questions during 
+installation. In this book, we will show you what features are installed during the auto-
+mated installation and where you can make changes if you want to be more in charge of 
+your operating system and its features.
+The Microsoft Certification Program
+Since the inception of its certification program, Microsoft has certified more than two 
+million people. As the computer network industry continues to increase in both size 
+and complexity, this number is sure to grow—and the need for proven ability will also 
+increase. Certifications can help companies verify the skills of prospective employees and 
+contractors.
+The Microsoft certification tracks for Windows Server 2016 include the following:
+MCSA: Windows Server 2016   The MCSA is now the lowest-level certification you can 
+achieve with Microsoft in relation to Windows Server 2016. It requires passing three 
+exams: 70-740, 70-741, and 70-742.
+MCSE: Cloud Platform and Infrastructure   The MCSE certifications, in relation  
+to Windows Server 2016, require that you become an MCSA first and then pass two 
+additional exams. The additional exams will vary depending on which of the two  
+MCSE tracks you choose. For more information, visit Microsoft’s website at  
+www.microsoft.com/learning .
+How Do You Become Certified on Windows Server 2016?
+Attaining Microsoft certification has always been a challenge. In the past, students have 
+been able to acquire detailed exam information—even most of the exam questions—from 
+online “brain dumps” and third-party “cram” books or software products. For the new 
+generation of exams, this is simply not the case.
+
+xiv Introduction
+ Microsoft has taken strong steps to protect the security and integrity of its new certi-
+fi  cation tracks. Now prospective candidates must complete a course of study that devel-
+ops detailed knowledge about a wide range of topics. It supplies them with the true skills 
+needed, derived from working with the technology being tested. 
+ The new generations of Microsoft certifi  cation programs are heavily weighted toward 
+hands-on skills and experience. Microsoft recommends that candidates have troubleshoot-
+ing skills acquired through hands-on experience and working knowledge. 
+ Fortunately, if you are willing to dedicate the time and effort to learn Windows Server 
+2016, you can prepare yourself well for the exam by using the proper tools. By working 
+through this book, you can successfully meet the requirements to pass the Windows Server 
+2016 exams.   
+ MCSA Exam Requirements 
+ Candidates for MCSA certifi  cation on Windows Server 2016 must pass at least the follow-
+ing three Windows Server 2016 exams: 
+■ ■   70-740: Installation, Storage, and Compute with Windows Server 2016 
+■ ■   70-741: Networking with Windows Server 2016 
+■ ■   70-742: Identity with Windows Server 2016   
+        
+ Those who have a qualifying certification can take the Upgrading exam 
+“Upgrading Your Skills to MCSA: Windows Server 2016” 
+(Exam 70-743). The objectives for this exam span the three individual 
+exams. This book covers all of the objectives for the Upgrading exam. 
+For details about the exam, visit Microsoft’s website at  www.microsoft
+.com/learning  .   
+ Microsoft provides exam objectives to give you a general overview of possible areas of 
+coverage on the Microsoft exams. Keep in mind, however, that exam objectives are sub-
+ject to change at any time without prior notice and at Microsoft’s sole discretion. Visit the 
+Microsoft Learning website ( www.microsoft.com/learning  ) for the most current listing of 
+exam objectives. The published objectives and how they map to this book are listed later in 
+this introduction. 
+        
+ For a more detailed description of the Microsoft certification programs, 
+including a list of all the exams, visit the Microsoft Learning website at: 
+www.microsoft.com/learning  .     
+
+Introduction  xv
+Tips for Taking the Windows Server 2016 Exams
+Here are some general tips for achieving success on your certification exam:
+■ ■Arrive early at the exam center so that you can relax and review your study materials. Dur -
+ing this final review, you can look over tables and lists of exam-related information.
+■ ■Read the questions carefully. Do not be tempted to jump to an early conclusion. Make 
+sure you know exactly  what the question is asking.
+■ ■Answer all questions. If you are unsure about a question, mark it for review and come 
+back to it at a later time.
+■ ■On simulations, do not change settings that are not directly related to the question. 
+Also, assume the default settings if the question does not specify or imply which set-
+tings are used.
+■ ■For questions about which you’re unsure, use a process of elimination to get rid of 
+the obviously incorrect answers first. This improves your odds of selecting the correct 
+answer when you need to make an educated guess.
+Exam Registration
+As of December 31, 2014, Microsoft ended its relationship with Prometric, its old testing 
+centers, and all exams are now delivered through the more than 1,000 Authorized VUE 
+Testing Centers around the world. For the location of a testing center near you, go to VUE’s 
+website at www.vue.com . If you are outside of the United States and Canada, contact your 
+local VUE registration center.
+Find out the number of the exam that you want to take and then register with the VUE 
+registration center nearest to you. At this point, you will be asked for advance payment for 
+the exam. The exams are $165 each, and you must take them within one year of payment. 
+You can schedule exams up to six weeks in advance or as late as one working day prior to 
+the date of the exam. You can cancel or reschedule your exam if you contact the center at 
+least two working days prior to the exam. Same-day registration is available in some loca-
+tions, subject to space availability. Where same-day registration is available, you must regis-
+ter a minimum of two hours before test time.
+When you schedule the exam, you will be provided with instructions regarding appoint-
+ment and cancellation procedures, ID requirements, and information about the testing cen-
+ter location. In addition, you will receive a registration and payment confirmation letter.
+Microsoft requires certification candidates to accept the terms of a nondisclosure agree-
+ment before taking certification exams.
+Who Should Read This Book?
+This book is intended for individuals who want to earn their MCSA: Windows Server 2016 
+certification.
+
+xvi Introduction
+This book will not only help anyone who is looking to pass the Microsoft exams, it will 
+also help anyone who wants to learn the real ins and outs of the Windows Server 2016 
+operating system.
+What’s Inside?
+Here is a glance at what’s in each chapter:
+Chapter 1: Installing Windows Servers in Host and Compute Environments   In the first 
+chapter, we cover questions on how to install, upgrade, and migrate servers and work-
+loads, install and configure Nano Server, and create, manage, and maintain images for 
+deployment.
+Chapter 2: Implement Storage Solutions   This chapter asks questions on how to implement 
+server storage and implement data deduplication.
+Chapter 3: Implement Hyper-V   We take you through questions on how to install and con-
+figure Hyper-V, configure virtual machine (VM) settings, configure Hyper-V storage, and 
+configure Hyper-V networking.
+Chapter 4: Implement Windows Containers   This chapter asks questions on how to deploy 
+and manage Windows Containers.
+Chapter 5: Implement High Availability   This chapter takes you through questions on how 
+to implement high availability and disaster recovery options in Hyper-V, implement and 
+manage failover clustering, implement Storage Spaces Direct, and manage Virtual Machine 
+movement in clustered nodes.
+Chapter 6: Implement Domain Name System (DNS)   In this chapter, you will see different 
+questions that cover how to install and configure DNS servers and implement and maintain 
+IP Address Management (IPAM).
+Chapter 7: Implement Network Connectivity and Remote Access Solutions   In this chapter 
+we cover questions on how to implement virtual private network (VPN) and DirectAccess 
+solutions.
+Chapter 8: Implement an Advanced Network Infrastructure   This chapter includes ques-
+tions on how to implement high-performance network solutions and determine scenarios 
+and requirements for implementing Software Defined Networking (SDN).
+Chapter 9: Install and Configure Active Directory Domain Services (AD DS)   This chapter 
+shows you questions on how to install and configure domain controllers.
+Chapter 10: Implement Identity Federation and Access Solutions   In this chapter we cover 
+questions on how to install and configure Active Directory Federation Services (AD FS), 
+implement Web Application Proxy (WAP), and install and configure Active Directory 
+Rights.
+
+Introduction  xvii
+What’s Included with the Book
+This book includes many helpful items intended to prepare you for the MCSA: Windows 
+Server 2016 certification.
+Objectives   These questions are mapped directly with the exam objectives. This will help 
+you prepare for the different exam questions.
+Sybex Test Engine   Readers can access the Sybex Test Engine, which includes the assess-
+ment test and chapter review questions in electronic format. In addition, there are a total 
+of three practice exams included with the Sybex test engine: one each for Exams 70-740, 
+70-741, and 70-742.
+How to Contact Sybex or the Authors
+Sybex strives to keep you supplied with the latest tools and information you need for your 
+work. Please check the website at www.sybex.com/go/mcsawin2016 , where we’ll post addi-
+tional content and updates that supplement this book, should the need arise.
+You can contact Will by going to his website at www.willpanek.com . You can also 
+watch free videos on Microsoft networking at www.youtube.com/c/williampanek . If you 
+would like to follow information about Windows Server 2016 from Will Panek, please visit 
+Twitter @AuthorWillPanek.
+Good luck on the exam. We’re hoping this book helps you pass.
+
+Installing Windows 
+Servers in Host 
+and Compute 
+Environments
+TH E follo WIng MCSA W IndoWS SErvEr 
+2016 Ex AM TopICS ArE CovErEd In THIS  
+CHApTEr:
+✓ ✓1.1 I nstall, upgrade, and migrate servers and workloads
+✓■This objective may include but is not limited to: Determine 
+Windows Server 2016 installation requirements; determine 
+appropriate Windows Server 2016 editions per workloads; 
+install Windows Server 2016; install Windows Server 2016 
+features and roles; install and configure Windows Server 
+Core; manage Windows Server Core installations using 
+Windows PowerShell, command line, and remote manage-
+ment capabilities; implement Windows PowerShell Desired 
+State Configuration (DSC) to install and maintain integrity of 
+installed environments; perform upgrades and migrations 
+of servers and core workloads from Windows Server 2008 
+and Windows Server 2012 to Windows Server 2016; deter-
+mine the appropriate activation model for server installation, 
+such as Automatic Virtual Machine Activation (AVMA), Key 
+Management Service (KMS), and Active Directory-Based 
+Activation
+✓ ✓1.2 I nstall and configure Nano Server
+✓■This objective may include but is not limited to: Determine 
+appropriate usage scenarios and requirements for Nano 
+Server; install Nano Server; implement Roles and Features 
+on Nano Server; use Nano Server Image Builder; manage and 
+configure Nano Server; manage Nano Server remotely using 
+MMC, Windows PowerShell, and Server Management ToolsChapter 
+1
+
+✓ ✓1.3 Create, manage, and maintain images for deployment
+✓■This objective may include but is not limited to: Plan 
+for Windows Server virtualization; assess virtualization 
+workloads using the Microsoft Assessment and Planning 
+(MAP) Toolkit; determine considerations for deploying 
+workloads into virtualized environments; update images 
+with patches, hotfixes, last cumulative updates, and driv -
+ers; install roles and features in offline images; manage and 
+maintain Windows Server Core, Nano Server images, and 
+VHDs using Windows PowerShell
+
+Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments  3
+1. Y ou are the administrator for your company network and you are looking to install 
+Windows Server 2016. You need to decide which version would best fit your environment. 
+You maintain a small office that has only 10 users and about 20 devices. Which version of 
+Windows Server would fit your needs?
+A. Windows Server 2016 Datacenter
+B. Windows Server 2016 Essentials
+C. Windows Server 2016 Standard
+D. Windows Server 2016 Web Server Core
+2. You are the administrator for your company network and you need to figure out what 
+installation type of Windows Server 2016 you want to use. You are looking for a server 
+type that is designed for private clouds and datacenters that will allow you to remotely 
+administer the server operating system. What version should you install?
+A. Windows Server 2016 (Desktop Experience)
+B. Windows Server 2016 Server Core
+C. Windows Server 2016 Nano Server
+D. Windows Server 2016 Web Server Core
+3. You are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. You want to configure Server1 as a multitenant RAS Gateway. What 
+should you install on Server1?
+A. Network Policy and Access Services server role
+B. Remote Access server role
+C. Data Center Bridging feature
+D. Network Controller server role
+4. You are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. This server hosts a line-of-business application named App1. App1 
+has a memory leak that occasionally causes it to consume an excessive amount of memory. 
+You want to log the event in the Application event log whenever this application consumes 
+more than 4 GB of memory. What should you do?
+A. Create a system configuration information data collector.
+B. Create a performance counter data collector.
+C. Create a performance counter alert data collector.
+D. Create an event trace data collector.
+5. You are the administrator for your company network. You have just finished installing 
+Windows Server 2016 on a new server. Your colleague has informed you that it is essential 
+that you activate Windows Server. Which of the following command-line tools can be used 
+to activate Windows Server?
+A. Netdom C:\windows\system32\slmgr.vbs -ato
+B. Netsh C:\windows\system32\slmgr.vbs -ato
+C. Ocsetup C:\windows\system32\slmgr.vbs -ato
+D. Cscript C:\windows\system32\slmgr.vbs -ato
+
+4 Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments
+6. Y ou are the administrator for your company network. You and a colleague are discussing 
+Nano Server. You know that with Nano Server some packages are installed directly with 
+their own Windows PowerShell switches (such as -Compute ) whereas others are installed by 
+passing package names to the -Packages  parameter that can combine them in a comma-
+separated list. If you want to add IIS to your Nano Server, what command should you use?
+A. -Compute
+B. -Packages
+C. -Containers
+D. -Storage
+7. Y ou are the administrator for your company network. You have decided to install Windows 
+Server 2016 by choosing the Server Core Installation option. What tools would you use if 
+you want to install, configure, or uninstall server roles remotely?
+A. Windows PowerShell
+B. Server Manager
+C. Remote Server Administration Tools (RSAT)
+D. All of the above
+8. You are the administrator for your company network. Your network contains an Active 
+Directory domain called abc.com . You want to create a Nano Server image named Nano1 
+that will be used as a virtualization host. The Windows Server 2016 source files are located 
+in drive D. What Windows PowerShell cmdlet should you run?
+A. New-NanoServerImage –Edition Datacenter –DeploymentType Host –Defender 
+–EnableEMS –MediaPath 'D:\' –TargetPath C:\Nano1\Nano1.wim –ComputerName 
+Nano1 –DomainName abc.com
+B. New-NanoServerImage –Edition Datacenter –DeploymentType Host –Package 
+Microsoft-NanoServer-SCVMM-Package –MediaPath 'D:\' –TargetPath C:\
+Nano1\Nano1.wim –ComputerName Nano1 –DomainName abc.com
+C. New-NanoServerImage –Edition Datacenter –DeploymentType Host –Package 
+Microsoft-ServerCore-Compute-Package –MediaPath 'D:\' –TargetPath C:\
+Nano1\Nano1.wim –ComputerName Nano1 –DomainName ABC
+D. New-NanoServerImage –Edition Datacenter –DeploymentType Host –Compute 
+–MediaPath 'D:\' –TargetPath C:\Nano1\Nano1.wim –ComputerName  
+Nano1 –DomainName abc.com
+9. Y ou are the administrator for your company network. You have a physical Nano Server 
+machine that runs Windows Server 2016. You have not installed any packages on this 
+machine. You decide to attach a new disk and then initialize the disk as a GUID Partition 
+Table (GPT) disk. What should you do first if you need to create a ReFS-formatted volume 
+on the new disk?
+A. From the physical server, log on to the Nano Server Recovery Console.
+B. Install the Microsoft-NanoServer-Host-Package  package.
+C. Run the Format-Volume  cmdlet and specify the -FileSystem  switch.
+D. Install the Microsoft-NanoServer-Storage-Package  package.
+
+Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments  5
+10. Y ou are the administrator for your company network. You create a Nano Server image 
+named Nano1.vhdx  by using the New-NanoServerImage  cmdlet and attach it to a Genera-
+tion 1 virtual machine named Nano1. When you start Nano1, you get an error message that 
+states, “Boot failure. Reboot and select proper Boot device or Insert Boot Media in selected 
+Boot device.” What should you do to successfully start the Nano Server?
+A. Attach Nano1.vhdx  to a SCSI controller.
+B. Recreate Nano1 as a Generation 2 virtual machine.
+C. Increase the memory of Nano1 to 512 MB.
+D. Modify the BIOS settings of Nano1.
+11. You are the administrator for your company network. You have a Nano Server image 
+named Disk1.vhdx . You mount Disk1.vhdx . What tool or cmdlet should you use if you 
+need to add a folder that contains several files to the image?
+A. Copy-Item
+B. Add-WindowsImage
+C. Add-WindowsPackage
+D. Edit-NanoServerImage
+12. Y ou are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. You use the Basic template to create a new data collector set named 
+CollectorSet1 on this server. What should you do before you start CollectorSet1 if you need 
+to configure it to generate performance alerts?
+A. Modify the performance counter data collector of CollectorSet1.
+B. Add a new data collector to CollectorSet1.
+C. Modify the configuration data collector of CollectorSet1.
+D. Add a new task to CollectorSet1.
+13. You are the administrator for your company network. Your network contains an  
+Active Directory forest named ABC Company. The forest has a Distributed File System  
+(DFS) namespace named \\abccompany.com\namespace1 . The domain contains a file  
+server named FS1 that runs Windows Server 2016. You create a folder named  
+Folder1  on FS1. Which two cmdlets should you use? (Choose two.)
+A. New-DfsnFolderTarget
+B. Install-WindowsFeature
+C. Grant-DfsnAccess
+D. New-DfsnFolder
+E. New-SmbShare
+
+6 Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments
+14. Y ou are the administrator for your company network. You have two Windows Server 2016 
+servers named Server1 and Server2. There is a firewall between the two servers. Both serv-
+ers run Windows Server Update Services (WSUS). Server1 downloads updates from Micro-
+soft Update. What port should be open on the firewall if Server2 must synchronize updates 
+from Server1?
+A. 80
+B. 443
+C. 3389
+D. 8530
+15. You are the administrator for your company network. You administer a large network, 
+and a colleague installs a new machine with Windows Server 2016 Datacenter Server 
+Core. It is determined that it should have been Windows Server 2016 Datacenter (Desktop 
+Experience). What should you do?
+A. On the same machine, reinstall the Windows Server 2016 Datacenter Server Core.
+B. Install Windows Server 2016 Datacenter Server Core on a new machine.
+C. Convert the current Windows Server 2016 Datacenter Server Core to the Windows 
+Server 2016 Datacenter (Desktop Experience) version.
+D. Dual-boot the machine with both Windows Server 2016 Datacenter Server Core and 
+Windows Server 2016 Datacenter (Desktop Experience).
+16. You are the administrator for your company network. You are looking to upgrade Win-
+dows Server 2012 Standard with GUI to Windows Server 2016. If you want to maintain the 
+GUI interface, what version of Windows Server 2016 does Microsoft recommend?
+A. Windows Server 2016 Datacenter (Desktop Experience)
+B. Windows Server 2016 Standard (Desktop Experience)
+C. Windows Server 2016 Datacenter
+D. Windows Server 2016 Standard
+17. You are the administrator for your company network. You administer a network that has 
+a Nano Server named Nano1. You want to see if the DNS Server role is installed on this 
+machine. What cmdlet should you use?
+A. Find-NanoServerPackage
+B. Get-Package
+C. Find-Package
+D. Get-WindowsOptionalFeature
+18. Y ou are the administrator for your company network. Your network contains an Active 
+Directory domain. There is a company policy that indicates that new servers should run 
+Nano Server whenever possible. What server role can be deployed on Nano Server?
+A. Active Directory Domain Services
+B. DHCP Server
+C. Network Policy and Access Services
+D. Web Server (IIS)
+
+Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments  7
+19. Y ou are the administrator for your company network. You are planning on creating an 
+answer file. What should you name the answer file so that it will work with unattended 
+installations?
+A. Autounattend.txt
+B. Autounattend.xls
+C. Autounattend.xml
+D. Autounattend.docx
+20. Y ou are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. You create a Nano Server image named Disk1.vhdx . You need 
+to start Server1 by using Disk1.vhdx . What three actions should you perform? (Choose 
+three.)
+A. Restart Server1.
+B. Run the bcdboot.exe  command.
+C. Run the bootcfg.exe  command.
+D. Run the Edit-NanoServerImage  cmdlet.
+E. Mark a partition as active.
+F. Mount Disk1.vhdx .
+21. You are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. The server has an application named App1 that writes entries to the 
+Application event log when errors are encountered. The events have IDs of either 111 or 
+112. What should you do to restart the service whenever one of these events is logged?
+A. Run the Get-SMServerEvent  cmdlet and pipe the output to the Start-NetEvent  using 
+Windows PowerShell.
+B. Use create task to create one task that includes triggers for both event IDs from Task 
+Scheduler.
+C. Create a custom view that has a filter for the event IDs from Event Viewer.
+D. Run the Write-EventLog  cmdlet and specify the -EventID  parameter using Windows 
+PowerShell.
+22. You are the administrator for your company network. You have a server named Server1 
+that is an iSCSI target. You have a server named Server2 that runs Windows Server 2016. 
+Server2 has an iSCSI disk named Disk1. Disk1 contains one volume that is assigned a drive 
+letter of E:. What should you do if you need to increase the size of Disk1?
+A. Run the Resize-Partition  cmdlet and specify the -ComputerName  Server2 
+parameter.
+B. Run the Resize-IscsiVirtualDisk  cmdlet and specify the -ComputerName  Server2 
+parameter.
+C. Run the Resize-IscsiVirtualDisk  cmdlet and specify the -ComputerName  Server1 
+parameter.
+D. Run the Resize-Partition  cmdlet and specify the -ComputerName  Server1 parameter.
+
+8 Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments
+23. Y ou are the administrator for your company network. You are deciding on an upgrade 
+path. You are currently using Windows Server 2012 R2 Standard in your environment. 
+What is the recommended upgrade path you should choose? (Choose all that apply.)
+A. Windows Server 2016 Standard
+B. Windows Server 2016 Datacenter
+C. Windows Server 2016 Essentials
+D. Windows Storage Server 2016
+24. You are the administrator for your company network. You have a Windows Server 2016 
+server named Server1 that has Windows Defender enabled. Server1 runs an applica-
+tion named App1 that stores various types of files in Microsoft OneDrive and Microsoft 
+SharePoint Online. App1 also interacts with several local services. What should you do on 
+Server1 if you need to prevent Windows Defender from scanning any files opened by App1?
+A. In Windows Defender, modify the real-time protection settings.
+B. In Windows Defender, modify the cloud-based protection settings.
+C. Run the New-AppLockerPolicy  cmdlet.
+D. From the Windows Defender settings, configure a process exclusion.
+25. You are the administrator for your company network. You have a Windows Server 2016 server 
+named Server1. A Microsoft Azure Backup of Server1 is created automatically every day. What 
+cmdlet should you run if you need to view the items that are included in the backup?
+A. Get-OBPolicyState
+B. Get-OBJob
+C. Get-OBPolicy
+D. Get-WBSummary
+26. Y ou are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. A Microsoft Azure Backup of Server1 is created automatically every 
+day. You rename Server1 to Server2. You discover that backups are no longer being created 
+in Azure. You need to ensure that the server is backed up to Azure. What should you do?
+A. Upload the Server2 certificate as a management certificate from the Azure 
+Management Portal.
+B. Run the Start-OBRegistration  cmdlet on Server2.
+C. Run the Add-WBBackupTarget  cmdlet on Server2.
+D. Modify the configuration on the backup vault from the Azure Management Portal.
+27. You are the administrator for your company network and you are planning on upgrading 
+your Windows Server 2012 R2 Datacenter with GUI machine to Windows Server 2016. 
+The company is planning on virtualizing 25 servers. What version of Windows Server 2016 
+should you upgrade to while maintaining the GUI interface?
+A. Windows Server 2016 Datacenter (Desktop Experience)
+B. Windows Server 2016 Standard (Desktop Experience)
+C. Windows Server 2016 Datacenter
+D. Windows Server 2016 Standard
+
+Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments  9
+28. Y ou are the administrator for your company network. You and a colleague are discussing 
+Windows Server 2016 Server Core. Windows Server 2016 Server Core has many benefits. 
+Which of the following are some of the benefits of using Windows Server 2016 Server Core? 
+(Choose all that apply.)
+A. Reduced management
+B. Minimal maintenance
+C. Smaller footprint
+D. Tighter security
+29. You are the administrator for your company network and you are looking to save hard 
+drive space on the Windows Server 2016 Datacenter machine. What feature can you use to 
+help you save hard disk space?
+A. HDSaver.exe
+B. F eatures On Demand
+C. ADDS
+D. WinRM
+30. You are the administrator for your company network. If physical security is a concern in an 
+area, what type of domain controller should you install?
+A. Primary domain controller
+B. Backup domain controller
+C. Read-only domain controller
+D. Locked-down domain controller
+31. You are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. The Windows Server 2016 installation media is mounted as drive D. 
+You copy the NanoServerImageGenerator  folder from the D:\NanoServer  folder to the 
+C:\NanoServer  folder. You create a custom Nano Server image that includes the Hyper-
+V server role. What two commands should you run if you want this image to be used to 
+deploy Nano Servers to physical servers? (Choose two.)
+A. New-NanoServerImage –Edition Standard –DeploymentType Guest –MediaPath 
+D:\-TargetPath \NanoServerImage\NanoServer.wim -Compute
+B. Install-PackageProvider NanoServerPackage
+C. Import-PackageProvider NanoServerPackage
+D. New-NanoServerImage –Edition Standard –DeploymentType Host –MediaPath 
+D:\ -TargetPath \NanoServerImage\NanoServer.wim -Compute
+E. Import-Module C:\NanoServer\NanoServerImageGenerator
+
+10 Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments
+32. Y ou are the administrator for your company network. You are trying to decide if you’d 
+like to install a Windows Server 2016 Nano Server on the network. What are some good 
+options that Nano Server would be ideal for? (Choose all that apply.)
+A. A DNS server
+B. As a storage machine for file servers
+C. A do main controller
+D. Systems Center Data Protection Manager
+E. NIC Teaming
+F. An IIS server
+G. An application server for cloud-based applications
+33. You are the administrator for your company network. You have a Hyper-V host named 
+Server1 that runs Windows Server 2016. The installation source files for Windows Server 
+are located in D:\Source . You need to create a Nano Server image. Which cmdlets should 
+you run? (Choose all that apply.)
+A. Add-WindowsImage
+B. Import-Module
+C. Install-Module
+D. New-NanoServerImage
+E. New-WindowsCustomImage
+34. Y ou are the administrator for your company network. You have a Hyper-V host named 
+Server1 that runs Windows Server 2016. Server1 hosts a virtual machine named VM1. 
+What should you do first if you need to provide VM1 with direct access to a graphics pro-
+cessing unit (GPU) on Server1?
+A. On Server1, disable the display adapter device.
+B. Add a RemoteFX 3D Video Adapter in the settings of VM1.
+C. Install the Quality Windows Audio Video Experience (qWave) feature on VM1.
+D. On Server1, dismount the display adapter.
+35. You are the administrator for your company network. You are preparing an image of 
+Windows Server 2016. You notice that the image is missing the driver for a network 
+adapter. This is required in your environment. You need to ensure that the image contains 
+the network adapter driver. What three cmdlets should you use? (Choose three.)
+A. Mount-WindowsImage
+B. Add-WindowsDriver
+C. Get-WindowsImage
+D. Save-WindowsImage
+E. Add-WindowsFeature
+F. Dismount-WindowsImage
+G. Optimize-WindowsImage
+
+Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments  11
+36. Y ou are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. You plan to use Windows Server Backup to back up all of the data 
+on Server1. You create a new volume on Server1. You need to ensure that the new volume 
+can be used as a backup target. The backup target must support incremental backups. 
+Which of the following could you do? (Choose three.)
+A. Mount the volume to C:\Backup  and format the volume by using NTFS.
+B. Mount the volume to C:\Backup  and format the volume by using ReFS.
+C. Mount the volume to C:\Backup  and format the volume by using FAT32.
+D. Mount the volume to C:\Backup  and format the volume by using exFAT.
+37. You are the administrator for your company network. You have Hyper-V virtual 
+machines that run 50 web servers, 10 Microsoft SQL Server servers, 10 file servers, and 
+8 domain controllers. You need to implement a backup strategy that meets the following 
+requirements:
+✓■Backs up all servers
+✓■Centralizes application-level backups
+✓■Performs application-level backups
+✓■Provides the ability to perform bare metal recovery
+What should you use?
+A. Microsoft Azure VM Backup
+B. Microsoft Azure Backup Agent
+C. Windows Server Backup
+D. Microsoft Azure Backup Server
+38. You are the administrator for your company network. Your company has two main offices. 
+One of the offices is located in Boston and the other in New York. All servers at both loca-
+tions run Windows Server 2016. In the New York office, there is a Distributed File System 
+(DFS) server named DFS1. DFS1 has a folder named Folder1  that contains large Windows 
+image files. In the Boston office, you deploy a DFS server named DFS2, and you then rep-
+licate Folder1  to DFS2. After several days, you find out that the replication of certain files 
+failed to complete. What should you do if you need to ensure that all of the files in Folder1  
+can replicate to DFS2?
+A. On the drive that contains Folder1 , modify the disk quota.
+B. Run dfsutil /purgemupcache  from a command prompt.
+C. Using File Server Resource Manager (FSRM), create a quota for Folder1 .
+D. On Folder1 , modify the size of the staging area.
+
+12 Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments
+39. Y ou are the administrator for your company network. Your company has two main offices. 
+One of the offices is located in Boston and the other in New York. All servers at both loca -
+tions run Windows Server 2016. In the New York office, there is a Distributed File System 
+(DFS) server named DFS1. DFS1 has a folder named Folder1  that contains large Windows 
+image files. In the Boston office, you deploy a DFS server named DFS2, and you then rep -
+licate Folder1  to DFS2. Users in both offices frequently add files to Folder1 . You moni -
+tor DFS Replication and discover excessive replication over the WAN link during business 
+hours. You want to reduce the amount of bandwidth used for replication during business 
+hours. What should you do to ensure that the users can continue to save content to Folder1 ?
+A. On DFS2, modify the quota settings for Folder1 .
+B. Modify the properties of the replication group.
+C. On DFS2, configure the copy of Folder1  as read-only.
+D. On DFS1, modify the replicated folder properties of Folder1 .
+40. You are the administrator for your company network. You are looking to use the Windows 
+Server Migration Tools. Where must this feature be installed?
+A. On the source computer only
+B. On the destination computer only
+C. On both the source and destination computers
+D. On the main administrative server
+41. You deploy a Hyper-V server named Server1 in an isolated test environment. The test envi-
+ronment cannot access the Internet. Server1 runs Windows Server 2016 Datacenter edition. 
+You plan to deploy the following guest virtual machines on the server.
+Quantity Operating System Domain Member
+10 Windows Server 2012 R2 Yes
+4 Windows Server 2016 No
+5 Windows Server 2016 Yes
+For the virtual machines, which activation model should you use?
+A. Multiple Activation Key (MAK)
+B. Automatic Virtual Machine Activation (AVMA)
+C. Original Equipment Manufacturer (OEM) key
+D. Key Management Service (KMS)
+42. You are the administrator for your company network. You want to install a role that allows 
+you to build PKI and provide public key cryptography. What role do you install?
+A. Active Directory Certificate Services (AD CS)
+B. Active Directory Domain Services (AD DS)
+C. Active Directory Federation Services (AD FS)
+D. Active Directory Rights Management Services (AD RMS)
+
+Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments  13
+43. Y ou are the administrator for your company network. You want to install a role that 
+provides Internet-based clients with a secure identity access solution that works on both 
+Windows and non-Windows operating systems. What role do you install?
+A. Active Directory Certificate Services (AD CS)
+B. Active Directory Domain Services (AD DS)
+C. Active Directory Federation Services (AD FS)
+D. Active Directory Rights Management Services (AD RMS)
+44. You are the administrator for your company network. Your company purchases a laptop 
+for an employee who travels frequently. The company wants to use BitLocker to secure the 
+hard drive in case it is lost or stolen. While attempting to enable BitLocker, you receive an 
+error message that states, “This device can’t use a Trusted Platform Module. Your admin-
+istrator must set the Allow BitLocker Without a Compatible TPM option in the Require 
+Additional Authentication at Startup policy for OS volumes.” Which of the following state-
+ments is true?
+A. A nonsupported configuration for BitLocker is possible on this laptop.
+B. A supported configuration for BitLocker is possible on this laptop.
+C. A supported configuration for BitLocker is not possible on this laptop.
+D. A nonsupported configuration for BitLocker is not possible on this laptop.
+45. You are the administrator for your company network. You are planning on installing the 
+Windows Server Migration Tools using PowerShell on a Server Core installation of a Windows 
+Server 2016. What command should you use to install the Windows Server Migration Tools?
+A. New-MigrationTarget
+B. Install-WindowsFeature
+C. Grant-MigrationAccess
+D. New-MigrationFolder
+46. Y ou are the administrator for your company network. You are planning on setting up NIC 
+Teaming and you’d like to also set up fault protection. What is the minimum number of 
+Ethernet adapters you must have?
+A. One
+B. Two
+C. Three
+D. Four
+47. You are the administrator for your company network. Windows Server 2016 Nano Server 
+is a lot like Server Core, but the advantage is that it is an even smaller installation of the 
+operating system. Nano Server has no local logon or GUI capabilities, and it will allow 
+only -bit applications and utilities.
+A. 16
+B. 32
+C. 64
+D. 128
+
+14 Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments
+48. Y ou are the administrator for your company network and you are planning on installing 
+Nano Server. Nano Server is available for which two editions of Windows Server 2016? 
+(Choose two.)
+A. Windows Server 2016 Datacenter
+B. Windows Server 2016 Essentials
+C. Windows Server 2016 Standard
+D. Windows Server 2016 Web Server Core
+49. You are the administrator for your company network. You are trying to decide if install-
+ing a Nano Server will work for your organization. There are some disadvantages of using 
+Nano Server. Which of the following are some disadvantages? (Choose all that apply.)
+A. It cannot act as a domain controller.
+B. Group Policy Objects (GPOs) are not supported.
+C. It cannot be configured to use System Center Configuration Manager.
+D. It cannot be used as a proxy server.
+E. All of the above.
+50. You are the administrator for your company network. Your network contains a single 
+Active Directory domain that has a Key Management Service (KMS) host. You deploy 
+Windows Server 2016 to several laptops. You need to ensure that Windows Server 2016 is 
+activated on the laptops immediately. Which command should you run?
+A. ospp.vbs/act
+B. slmgr.vbs/dli
+C. slmgr.vbs/ato
+D. ospp.vbs/dstatus
+51. Y ou are the administrator for your company network. You are planning on using Windows 
+Deployment Services (WDS) to install a Windows operating system without using an instal-
+lation disk. What is the first step you need to do when preparing the WDS server?
+A. Configure and start WDS.
+B. Install WDS.
+C. Configure the WDS server to respond to client computers.
+D. Make sure that the server meets the requirements of running WDS.
+52. You are the administrator for your company network. You are planning on using Windows 
+Deployment Services (WDS) to install a Windows operating system without using an instal-
+lation disk. There are some requirements for using WDS. One of the requirements states 
+that at least one of the partitions must be formatted as what type of file system?
+A. FAT
+B. NTFS
+C. FAT32
+D. ReFS
+
+Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments  15
+53. Y ou are the administrator for your company network. You are planning on creating a Nano 
+Server virtual hard disk (VHD). What is one of the easiest ways to create a Nano Server VHD?
+A. Open the folder NanoServer  found on the physical media.
+B. Use Nano Server Image Builder.
+C. Use Windows PowerShell to install Nano Server.
+D. Choose Basic Installation as the deployment type.
+54. You are the administrator for your company network. You have a Key Management Service 
+(KMS) host and an administrative workstation named Computer1. From Computer1, you 
+need to validate the activation status on a computer named Computer2. What should you 
+run?
+A. Get-RDLicenseConfiguration Computer2
+B. slmgr.vbs computer2 /dlv
+C. winrs.exe -r:Computer2 netdom.exe
+D. ospp.vbs /tokact:computer2
+55. Y ou are the administrator for your company network. You need to create a script to verify 
+the activation status on 100 computers. What should you use in the script?
+A. The slmgr.vbs  script and the /dli  parameter
+B. The sfc.exe  command and the /scannow  parameter
+C. The slmgr.vbs  script and the /ipk  parameter
+D. The sfc.exe  command and the /verifyonly  parameter
+56. You are the administrator for your company network. You need to run slmgr.vbs  
+remotely. What else must you include in the script in order for it to run properly? (Choose 
+all that apply.)
+A. The computer name of the target computer
+B. The username of the account that has local administrator rights on the target computer
+C. The password for the account that has local administrator rights on the target 
+computer
+D. The username of the account that has local administrator rights on the source 
+computer
+57. You are the administrator for your company network. What tool can you use to activate 
+computers through the domain connection?
+A. Automatic Virtual Machine Activation (AVMA)
+B. Active Directory-Based Activation (ADBA)
+C. Key Management Service (KMS)
+D. Entering Licensing Keys
+
+16 Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments
+58. Y ou are the administrator for your company network. You are installing Windows Server 
+2016 Nano Server. What type of servicing is currently the only option available for Nano 
+Server?
+A. Long-Term Servicing Branch (LTSB)
+B. 5+5 servicing
+C. Current Branch for Business (CBB)
+D. Lifecycle Servicing Branch (LSB)
+59. You are the administrator for your company network. Your company needs to install a ver-
+sion of Windows Server 2016 that uses the Current Branch for Business servicing model. 
+What version would you install?
+A. Windows Server 2016 Nano Server
+B. Windows Server 2016 Standard
+C. Windows Server 2016 Essentials
+D. Windows Server 2016 Datacenter
+60. You are the administrator for your company network, and you are planning on using the 
+WSDUTIL command-line utility to configure your Windows Deployment Services (WDS) 
+server. What switch would you use if you wanted to initialize the configuration of the WDS 
+server?
+A. /enable
+B. /copy-image
+C. /uninitialized-server
+D. /initialize-server
+61. Y ou are the administrator for your company network. You are planning on using Windows 
+Deployment Services (WDS). What is one component that you must pay attention to when 
+using WDS?
+A. The boot firmware
+B. The Preboot Execution Environment (PXE) network devices
+C. How you create the image using the imgcrt tool
+D. The type of computer data storage
+62. You are the administrator for your company network. You are planning on using Windows 
+Deployment Services (WDS). What network services must be running on the WDS server or 
+be accessible to the WDS server from another network server? (Choose all that apply.)
+A. TCP/IP installed and configured
+B. A DHCP server
+C. A DNS server
+D. Active Directory
+
+Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments  17
+63. Y ou are the administrator for your company network. You are looking to install Windows 
+Server 2016, and you need to decide which version to install. You need to install a version 
+of Windows that is just for logon authentication and nothing else. You are looking for the 
+most secure option, and cost is not an issue. Which version should you install?
+A. Windows Server 2016 Datacenter (Desktop Experience)
+B. Windows Server 2016 Datacenter Server Core
+C. Windows Server 2016 Standard (Desktop Experience)
+D. Windows Server 2016 Web Server
+64. You are the administrator for your company network. You have been hired to help a small 
+organization set up their first Windows network. They have had the same small number 
+of employees during the short time they have been open. They currently have no plans for 
+expansion. What version of Windows Server 2016 should you recommend?
+A. Windows Server 2016 Datacenter (Desktop Experience)
+B. Windows Server 2016 Standard (Desktop Experience)
+C. Windows Server 2016 Datacenter
+D. Windows Server 2016 Essentials
+65. You are the administrator for your company network. Microsoft Windows Server 2016 offers 
+two types of containers. One of the container types provides application isolation through 
+process and namespace isolation technology. This container shares a kernel with the con -
+tainer host and all containers running on the host. What container type is being described?
+A. Hyper-V Container
+B. Windows Server Container
+C. Windows Full Container
+D. Windows Limited Container
+66. You are the administrator for your company network. You are looking at the Hyper-V role 
+for Windows Server 2016. What does the Hyper-V role allow?
+A. Network Load Balancing
+B. The creation of Virtual Private Networks (VPNs)
+C. Server virtualization
+D. Updating Windows Server 2016
+67. You are the administrator for your company network. You are looking at roles and fea-
+tures to implement for Windows Server 2016. What is described here provides the point of 
+automation needed for continual configuration, monitoring, and diagnostics of virtual net-
+works, physical networks, network services, network topology, address management, and 
+so on within a datacenter.
+A. Host Guardian Service
+B. Network Policy and Access Services
+C. MultiPoint Services
+D. Network Controller
+
+18 Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments
+68. Y ou are the network administrator for your company network. You have a reference 
+computer that runs Windows Server 2016. You need to create and deploy an image of the 
+Windows Server 2016 computer. You create an answer file and name it answer.xml . You 
+need to make sure that the installation applies the answer file after you deploy the image. 
+Which command should you run before you capture the image?
+A. ICD.exe /append answer.xml/check
+B. ICD.exe /mount answer.xml/verify
+C. Sysprep.exe/reboot/audit/unattend: answer.xml
+D. Sysprep.exe/generalize/oobe/unattend: answer.xml
+69. Y ou are the administrator for your company network. You have a Windows Server 2016 
+Windows Image (WIM) that is mounted. What should you do if you need to display infor-
+mation about the image?
+A. Run DISM and specify the /get-ImageInfo  parameter.
+B. Run Driverquery.exe  and use the /si parameter.
+C. From Device Manager, view all hidden drivers.
+D. From File Explorer, open the mount folder.
+70. You are a network administrator for your company network. You need to deploy Windows 
+Server 2016 to multiple computers. You want to automate the installation so that no user 
+interaction is required during the installation process. Which of the following utilities could 
+you use?
+A. Image Capture Wizard
+B. System Preparation Tool
+C. WDSUTIL
+D. Windows SIM
+71. You are the administrator for your company network. You need to start a new installation 
+of Windows Server 2016 using the command-line utility. You plan to accomplish this by 
+using the Setup.exe  command-line setup utility, and you will be using an answer file with 
+this command. What command-line option should you use?
+A. /unattend
+B. /apply
+C. /noreboot
+D. /generalize
+72. Y ou are the administrator for your company network. You are using Sysprep.exe  to pre -
+pare a system for imaging. What Sysprep option should you use if you want to restart the 
+computer?
+A. /generalize
+B. /start
+C. /restart
+D. /reboot
+
+Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments  19
+73. Y ou are the administrator for your company network. You are using Sysprep.exe  to 
+prepare a system for imaging. What Sysprep option should you use if you want to enable 
+end users to customize their Windows operating systems, create user accounts, name their 
+computers, and other tasks?
+A. /generalize
+B. /oobe
+C. /audit
+D. /unattend
+74. Y ou are the administrator for your company network. You are looking to start an unat-
+tended installation of Windows Server 2016. What command can be used to initiate the 
+unattended installation?
+A. setup.exe /answerfile:unattend
+B. answerfile:unattend setup.exe
+C. unattend: answerfile setup.exe
+D. setup.exe /unattend:answerfile
+75. Y ou are the administrator for your company network. You run a classroom that needs the 
+same software installed from scratch on the classroom computers each week. You decide to 
+use Image Capture Wizard to deploy disk images. What Windows Server 2016 utility can 
+you use along with Image Capture Wizard to create these disk images?
+A. UAF
+B. System Preparation Tool
+C. Answer Manager
+D. Setup Manager
+76. You are the administrator for your company network. You are trying to decide whether 
+you’d like to use WDS as a method of installing Windows Server 2016. Which of the fol-
+lowing options is not an advantage to using a WDS automated installation?
+A. Security is retained when you restart the computer.
+B. The installation media does not need to be deployed to each computer.
+C. Unique information is stripped out of the installation image so that it can be copied to 
+other computers.
+D. You can quickly recover the operating system in the event of a system failure.
+77. You are the administrator for your company network. You are planning on deploying a new 
+Windows Server 2016 image to a large number of client computers that are all similarly 
+configured. You plan on using the Windows SIM tool to create an answer file that will be 
+used to automate the installation. You want each computer to contain two partitions, one 
+for the system partition and one as a data partition. What component of the answer file do 
+you need to modify to support this configuration?
+A. Windows PE
+B. oobeSystem
+C. auditSystem
+D. specialize
+
+20 Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments
+78. Y ou are the administrator for your company network. You need to install a group of  
+25 computers by using disk images created in conjunction with the System Preparation 
+Tool. You want to create an image from a reference computer first and then copy the image 
+to the rest of the computers. What Sysprep.exe  command-line option should you use if 
+you do not want to create a SID on the destination computer when you use the image?
+A. /specialize
+B. /generalize
+C. /oobe
+D. /quiet
+79. Y ou are the administrator for your company network. You and a colleague are discussing 
+the Microsoft Assessment and Planning (MAP) Toolkit. MAP is a utility that will locate 
+computers on a network and then perform a thorough inventory of these computers. MAP 
+uses which of the following utilities to obtain this inventory? (Choose all that apply.)
+A. Windows Management Instrumentation (WMI)
+B. Remote Registry Service
+C. Active Directory Domain Services (AD DS)
+D. Simple Network Management Protocol (SNMP)
+80. You are the administrator for your company network. When the Microsoft Assessment and 
+Planning (MAP) Toolkit generates a report, what file format will the report be generated 
+in? (Choose all that apply.)
+A. A Microsoft Word document
+B. A Microsoft Excel document
+C. A Microsoft OneNote document
+D. A Microsoft PowerPoint document
+81. You are the administrator for your company network. You are planning on using the Sys-
+prep utility to create images. Where can you find the Sysprep.exe  file?
+A. \Windows\Setup\Sysprep
+B. \Windows\Boot\Sysprep
+C. \Windows\System\Sysprep
+D. \Windows\System32\Sysprep
+82. Y ou are the administrator for your company network and you have a computer named 
+Computer1 that has a virtual hard disk (VHD) named Disk1.vhdx . You are going to con-
+figure Computer1 for dual boot using Disk1.vhdx . You need to install Windows Server 
+2016 on Disk1.vhdx  by using dism.exe . What should you run before you install Windows 
+Server 2016?
+A. Add-Windows Image
+B. bcdboot.exe
+C. bcdedit.exe
+D. bootcfg.exe
+
+Chapter 1  ■ I nstalling Windows Servers in Host and Compute Environments  21
+E. bootim.exe
+F. bootsect.exe
+G. diskpart.exe
+H. Expand-Windows Image
+83. Y ou are the administrator for your company network. You are using the Deployment Image 
+Servicing and Management (DISM) tool to manipulate an image. What DISM option 
+should you use if you want to display information about images?
+A. /Capture-Image
+B. /List-Image
+C. /Get-ImageInfo
+D. /Apply-Image
+84. Y ou are the administrator for your company network. You are planning on performing an 
+unattended installation for a large number of computers. What are some of the advantages 
+of using an unattended installation? (Choose all that apply.)
+A. It saves time and money.
+B. It can be configured to provide automated responses.
+C. It can be used to install clean copies or upgrade existing operating systems.
+D. It can be expanded to include installation instructions.
+E. The physical media does not need to be distributed to all the computers.
+F. All of the above.
+85. You are the administrator for your company network. You are planning on using Sysprep to 
+set up images. You remember that the Windows activation clock starts to decrease as soon 
+as Windows starts for the first time, but you can restart the clock. How many times are you 
+allowed to restart the activation clock using Sysprep?
+A. One
+B. Two
+C. Three
+D. Four
+
+Implement Storage 
+Solutions
+The follow Ing MCSA wIndow S Server 
+2016 exAM TopICS Are Covered In ThIS 
+ChApTer:
+✓ ✓2.1 I mplement server storage
+✓■This objective may include but is not limited to: Configure 
+storage pools; implement simple, mirror, and parity storage 
+layout options for disks or enclosures; expand storage 
+pools; configure Tiered Storage; configure iSCSI target and 
+initiator; configure iSNS; configure Data Center Bridging 
+(DCB); configure Multipath I/O (MPIO); determine usage 
+scenarios for Storage Replica: implement Storage Replica 
+for server-to-server, cluster-to-cluster, and stretch cluster 
+scenarios
+✓ ✓2.2 I mplement Data Deduplication
+✓■This objective may include but is not limited to: Implement 
+and configure Deduplication; determine appropriate 
+usage scenarios for Deduplication; monitor Deduplication: 
+implement a backup and restore solution with DeduplicationChapter 
+2
+
+24 Chapter 2  ■ I mplement Storage Solutions
+1. Y ou are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. The server contains a storage pool named Pool1. Pool1 contains five 
+physical disks named Disk1, Disk2, Disk3, Disk4, and Disk5. A virtual disk named VD1 is 
+stored in Pool1. VD1 uses the parity storage layout. Which two commands should you run 
+if you need to remove Disk3 after it fails from Pool1? (Choose two.)
+A. Remove-PhysicalDisk-FriendlyName Disk3
+B. Update-StoragePool-FriendlyName Pool1
+C. Reset-PhysicalDisk-FriendlyName Disk3
+D. Set-PhysicalDisk-FriendlyName Disk3-Usage Retired
+E. Set-ResiliencySetting-StoragePool Pool1-PhysicalDiskRedundancyDefault 4
+2. Y ou are the administrator for your company network. You have been asked to configure 
+the company’s Windows Server 2016 domain controller. Company policy requires that all 
+new computer accounts be placed in the General OU whenever computers join the domain. 
+What command should you use to accomplish this?
+A. Dsmove
+B. Netdom
+C. Redircmp
+D. N one of these
+3. You are the administrator for your company network. You have two Windows Server 2016 
+servers named Server1 and Server2. Server1 contains a volume named Volume1. You decide 
+to implement a Storage Replica that replicates the contents of Volume1 from Server1 and 
+Server2. One day, Server1 fails. You need to ensure that you can access the contents of 
+Volume1. What command/cmdlet should you run from Server2?
+A. Set-SRPartnership
+B. Update-StoragePool
+C. vssadmin revert shadow
+D. Clear-FileStorageTier
+4. Y ou are the administrator for your company network. You and a colleague are discuss-
+ing Windows Server 2016 platforms. The Windows Server 2016 platform can support two 
+main filesystems. What are they? (Choose two.)
+A. File Allocation Table (FAT)
+B. File Allocation Table 32 (FAT32)
+C. Windows NT File System (NTFS)
+D. Resilient File System (ReFS)
+5. You are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. Server1 has four SCSI disks and a storage pool named Pool1 that 
+contains three disks. You create a virtual disk named VDisk1 that uses a mirrored layout. 
+
+Chapter 2  ■ I mplement Storage Solutions  25
+You create a partition named Partition1 that uses all of the available space on VDisk1. You 
+want to extend Partition1. What should you do first?
+A. Run the Expand-IscsiVirtualDisk  cmdlet from Windows PowerShell.
+B. Run the Resize-VirtualDisk  cmdlet from Windows PowerShell.
+C. Extend the volume from Disk Management.
+D. Modify the properties of Partition1 from Disk Management.
+6. You are the administrator for your company network. You have two Windows Server 
+2016 servers named Server1 and Server2. You plan to implement Storage Replica to rep-
+licate the contents of volumes on Server1 to Server2. What cmdlet should you run if you 
+need to ensure that the replication traffic between the servers is limited to a maximum of 
+100 Mbps?
+A. Set-NetUDPSetting
+B. New-StorageQosPolicy
+C. Set-SmbBandwidthLimit
+D. Set-NetTCPSetting
+7. Y ou are the administrator for your company network. You have a server and you want to 
+provision a new volume that will be used to create large, fixed-size VHDX files. You want 
+to minimize the amount of time required to create the VHDX files. What type of filesystem 
+should you use on the new volume?
+A. ReFS
+B. NTFS
+C. CVFS
+D. exFAT
+8. You are the administrator for your company network. The network contains an Active 
+Directory domain. The domain contains a new file server named Server1 that runs a Server 
+Core installation of Windows Server 2016. Server1 has an ReFS-formatted volume D: and 
+NTFS-formatted volume E:. The volumes do not contain any data. You install the Data 
+Deduplication role service on Server1. You want to implement Data Deduplication for vol-
+umes on D: and E:. What should you do?
+A. From Windows PowerShell, run Format-Volume D: -FileSystem EXFat and 
+Enable-DeDupVolume -Volume D:,E:
+B. F rom Windows PowerShell, run Format-Volume E: -FileSystem ReFS and 
+Enable-DeDupVolume -Volume D:,E:
+C. F rom Windows PowerShell, run Enable-DeDupVolume-Volume D:,E:
+D. F rom Windows PowerShell, run Enable-DeDupVolume-Volume E: D:
+
+26 Chapter 2  ■ I mplement Storage Solutions
+9. Y ou are the administrator for your company network. You are planning to install Active 
+Directory. What filesystem must you use in order to install Active Directory?
+A. ReFS
+B. exFAT
+C. FAT
+D. NTFS
+10. You are the administrator for your company network. The network contains an Active 
+Directory domain. The domain contains two servers named Server1 and Server2. Both serv-
+ers have the same hardware configuration. What should you do if you need to asynchro-
+nously replicate volume F: from Server1 to Server2?
+A. Run New-SRPartnership  and specify the –ReplicationMode  parameter.
+B. Install the Failover Clustering feature and create a new cluster resource group.
+C. Install the Failover Clustering feature and use Cluster Shared Volumes (CSV).
+D. Run Set-DfsrServiceConfiguration  and specify the –RPCPort  parameter.
+11. You are the administrator for your company network. You and a colleague are discussing 
+the Master Boot Record (MBR). On the disk drive, a MBR has a partition table that indi-
+cates where the partitions are located. How big are volumes that are supported by a MBR?
+A. 1 TB (1,024 GB)
+B. 2 TB (2,048 GB)
+C. 3 TB (3,072 GB)
+D. 4 TB (4,096 GB)
+12. You are the administrator for your company network and you have a Windows Server 2016 
+server. You install three additional physical disks named Disk1, Disk2, and Disk3. You 
+want to use these physical disks to store data. You plan to create a volume to store data. 
+What actions should you perform if you need to prevent data loss in the event of a single 
+disk failure? (Choose three.)
+A. Create a virtual disk.
+B. Create a storage pool.
+C. Create a new storage tier.
+D. Create a volume.
+E. Assign a single tier to a virtual disk.
+F. Create a virtual disk clone.
+13. You are the administrator for your company network. You have client computers that run 
+Windows Server 2016. Each computer has two hard drives. Which kind of dynamic volume 
+should you create if you need to create a dynamic volume on each computer that will maxi-
+mize write performance and provide data fault tolerance?
+A. Striped volume
+B. RAID-5 volume
+C. Spanned volume
+D. Mirrored volume
+
+Chapter 2  ■ I mplement Storage Solutions  27
+14. Y ou are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. The disks on Server1 are configured as shown in the following table:
+Volume Type Filesystem Capability
+C: Attached Locally NTFS 150 GB
+D: Attached Locally exFAT 100 GB
+E: Attached Locally NTFS 20 GB
+F: Attached Locally ReFS 1 TB
+G: iSCSI LUN NTFS 2 TB
+Windows Server 2016 is installed in C:\Windows . You want to enable data deduplication. 
+Which two volumes can you use for data deduplication? (Choose two.)
+A. C:
+B. D:
+C. E:
+D. F:
+E. G:
+15. You are the administrator for your company network. You and a colleague are discussing 
+using the convert  command. What does the command convert  d: /fs:ntfs  do?
+A. Formats drive D to FAT.
+B. Converts drive D from NTFS to FAT.
+C. Converts drive D from FAT to NTFS.
+D. Scans drive D for errors.
+16. You are the administrator for your company network. You want to remove the host from 
+the iSNS server. What command should you use?
+A. iscsicli addisnsserver < server_name >
+B. iscsicli removeisnsserver < server_name >
+C. iscsicli refreshisnsserver < server_name >
+D. iscsicli listisnsservers < server_name >
+17. Y ou are the administrator for your company network. You want to register the iSCSI initia-
+tor manually to an iSNS server. What command should you use?
+A. iscsicli addisnsserver < server_name >
+B. iscsicli removeisnsserver < server_name >
+C. iscsicli refreshisnsserver < server_name >
+D. iscsicli listisnsservers < server_name >
+
+28 Chapter 2  ■ I mplement Storage Solutions
+18. Y ou are the administrator for your company network. You are looking at using shared 
+folder permissions. Which of the following are true regarding shared folder permissions? 
+(Choose all that apply.)
+A. Apply to files
+B. Apply to folders
+C. Apply locally to the data
+D. Apply remotely to the data
+19. You are the administrator for your company network. You are trying to determine what the 
+default TCP port for iSCSI is. Which one is it?
+A. 21
+B. 1433
+C. 3260
+D. 3389
+20. You are the administrator for your company network. Matt is a member of both the 
+Human Resources and Marketing departments. There is a shared folder called Apps  that 
+everyone uses. Here are the current permissions on the Apps  shared folder:
+Group/User NTFS Shared
+Sales Read Deny
+Marketing Modify Full Control
+R&D Read Read
+HR Full Control Deny
+Admin Full Control Change
+What will Matt’s local and remote permissions be when he logs into the Apps  folder?
+A. Local = Full Control and Remote = Deny
+B. Local = Deny and Remote = Deny
+C. Local = Full Control and Remote = Change
+D. Local = Change and Remote = Read
+21. You are the administrator for your company network. You have a Windows Server 2016 
+computer that has a shared folder named C:\Sales . The shared folder is on an NTFS 
+volume. The current NTFS and share permissions are configured as follows: User1 is a 
+member of both the Everyone group and the Sales group. User1 must access C:\Sales  from 
+across the network. What permission should you set if you need to identify the effective 
+permissions of User1 to the C:\Sales  folder?
+A. Full Control
+B. Read and Execute
+C. Read
+D. Modify
+
+Chapter 2  ■ I mplement Storage Solutions  29
+22. Y ou are the administrator for your company network. You have a computer named Server1 
+that runs Windows Server 2016. You add a 1 TB hard drive and create a new volume that 
+has the drive letter D. You format the drive by using NTFS. You need to limit the amount 
+of space that each user can consume on D: to 200 GB. Members of the Administrators 
+group should have no limit. What actions should you perform? (Choose three.)
+A. Set a default quota limit.
+B. Run convert D: /FS:NTFS .
+C. Run fsutil quota violations D: .
+D. Enable the Deny disk space to users exceeding quota limit setting.
+E. Add a quota entry.
+23. You are the administrator for your company network. You have a computer that runs Win-
+dows Server 2016. You add three new 3 TB disks and you want to create a new 9 TB vol-
+ume. What two actions should you perform? (Choose two.)
+A. Create a new spanned volume using Disk Management.
+B. Convert all of the 3 TB disks to GPT using Disk Management.
+C. Run the New-VirtualDisk  cmdlet using PowerShell.
+D. Bring all the disks offline using Disk Management.
+E. Run the convert MBR  command using Diskpart.
+F. Run the Add-PhysicalDisk  cmdlet using PowerShell.
+24. You are the administrator for your company network. Your network contains a single 
+Active Directory domain. The domain contains two computers named Server1 and Server2. 
+A user named User1 is a member of the local Administrators group on Server1 and Server2. 
+User1 fails to remotely manage the devices on Server2 by using Device Manager on Server1. 
+User1 can connect to Server2 remotely by using Computer Management. What do you need 
+to do to ensure that User1 can disable a device on Server2 remotely?
+A. On Server2, modify the Windows Firewall settings.
+B. Enable Remote Desktop on Server2 and instruct User1 to use Remote Desktop.
+C. On Server2, start the Plug and Play and Remote Registry services.
+D. On Server2, enable the Allow remote access to the Plug and Play interface Group Policy 
+setting.
+25. You are the administrator for your company network. You have a computer that runs Win-
+dows Server 2016. You install a second hard disk drive on the computer and create a new 
+volume named E. What tool can you use to set up the new hard drive and volume?
+A. The wbadmin  command
+B. The Settings app
+C. Computer Management
+D. The Set-Volume  cmdlet
+
+30 Chapter 2  ■ I mplement Storage Solutions
+26. Y ou are the administrator for your company network. You have a computer named Com-
+puter1 that has a 1 TB volume named E. What tool should you use if you want to receive a 
+notification when volume F has less than 100 GB of free space?
+A. Performance Monitor
+B. Disk Cleanup
+C. System Configuration
+D. Resource Monitor
+E. Event Viewer
+27. You are the administrator for your company network. You have a computer named Com-
+puter1 that runs Windows Server 2016. Computer1 has two volumes named C and D. Vol-
+ume C is formatted NTFS and volume D is formatted exFAT. What should you use if you 
+need to ensure that you can recover files stored in D:\Data ?
+A. System Restore points
+B. File History
+C. wbadmin.exe
+D. B ackup and Restore
+28. You are the administrator for your company network. You have two computers named 
+Computer1 and Computer2 that run Windows Server 2016. You create a provisioning pack-
+age named Package1  on Computer1. What file must be applied to Computer2 if you plan to 
+apply the provisioning package to Computer2?
+A. Package1.icdproj.xml
+B. Customizations.xml
+C. Package1.ppkg
+D. Package1.cat
+29. Y ou are the administrator for your company network. You have a computer named 
+Computer1 that has a virtual hard disk (VHD) named Disk1.vhdx . You plan to configure 
+Computer1 for dual boot from Disk1.vhdx . You need to install Windows on Disk1.vhdx  
+by using dism.exe . What should you run before you install Windows Server 2016?
+A. Add-Windows Image
+B. bcdboot.exe
+C. bcdedit.exe
+D. bootcfg.exe
+E. bootim.exe
+F. bootsect.exe
+G. diskpart.exe
+H. Expand-Windows Image
+
+Chapter 2  ■ I mplement Storage Solutions  31
+30. Y ou are the administrator for your company network. You have a computer named 
+Computer1. Computer1 has a virtual hard disk (VHD) named Disk1.vhdx . Windows is 
+installed on Disk1.vhdx . In File Explorer, Disk1.vhdx  is visible as drive E. You need to 
+configure Computer1 to start from VHDX. Hardware virtualization must not be available 
+when Computer1 starts from VHDX. What should you run?
+A. Add-Windows Image
+B. bcdboot.exe
+C. bcdedit.exe
+D. bootcfg.exe
+E. bootim.exe
+F. bootsect.exe
+G. diskpart.exe
+H. Expand-Windows Image
+31. Y ou are the administrator for your company network. You have a computer that runs Win-
+dows Server 2012 R2. You create a system image backup on the computer and then you 
+upgrade to Windows Server 2016. You need to access a file from the backup. The solution 
+must use the least amount of administrative effort. What should you do?
+A. Add a drive from the Backup section of the Settings app.
+B. Add a drive from the File History section of the Settings app.
+C. Attach a VHD from the Computer Management console.
+D. Restore the personal files from the File History Control Panel item.
+32. You are the administrator for your company network. You are looking at the NTFS filesys-
+tem. What are some of the advantages to using NTFS?
+A. Compression
+B. Encryption
+C. Quotas
+D. Security
+E. All of the above
+33. You are the administrator for your company network. You want to turn your FAT32 parti-
+tion into an NTFS partition. What command-line utility should you use?
+A. upgrade
+B. convert
+C. change part
+D. Ntfsutil
+
+32 Chapter 2  ■ I mplement Storage Solutions
+34. Y ou are the administrator for your company network. You have a virtual machine named 
+VM1. VM1 uses a fixed size virtual hard disk (VHD) named Disk1.vhd . Disk1.vhd  is 
+200 GB. You shut down VM1. What action should you use from the Edit Virtual Hard 
+Disk Wizard if you need to reduce the size of Disk1.vhd ?
+A. Merge
+B. Compact
+C. Shrink
+D. Convert
+35. You are the administrator for your company network. You create a new virtual disk in a 
+storage pool by using the New Virtual Disk Wizard. You discover that the new virtual disk 
+has a write-back cache of 1 GB. What should you do if you need to ensure that the virtual 
+disk has a write-back cache of 5 GB?
+A. Detach the virtual disk and then run the Resize-VirtualDisk  cmdlet.
+B. Detach the virtual disk and then run the Set-VirtualDisk  cmdlet.
+C. Delete the virtual disk and then run the New-StorageSubSystemVirtualDisk  cmdlet.
+D. Delete the virtual disk and then run the New-VirtualDisk  cmdlet.
+36. You are the administrator for your company network. You decide to purchase a new desk-
+top computer that has four external USB hard drives. You want to create a single volume by 
+using the four USB drives. You want the volume to be expandable, portable, and resilient in 
+the event of failure of an individual USB hard drive. What should you do so you can create 
+the required volume?
+A. Create a new Storage Space across the four USB hard drives. Set the resiliency type to a 
+three-way mirror.
+B. Create a new spanned volume.
+C. Create a new Storage Space across the four USB hard drives. Set the resiliency type to 
+parity.
+D. Create a new striped volume.
+37. You are the administrator of your company network. The network contains three servers 
+named ServerA, ServerB, and ServerC. All servers run Windows Server 2016. What should 
+you do on ServerA so that it can provide iSCSI storage for the other two servers?
+A. Start the Microsoft iSCSI Initiator Service and configure the iSCSI Initiator Properties.
+B. Install the iSNS Server service feature and create a discovery domain.
+C. Install the Multipath I/O (MPIO) feature and configure the MPIO Properties.
+D. Install the iSCSI Target Server role service and configure iSCSI targets.
+38. You are the administrator for your company network. You are trying to determine the 
+default TCP port for RDP. Which one is it?
+A. 21
+B. 1433
+C. 3260
+D. 3389
+
+Chapter 2  ■ I mplement Storage Solutions  33
+39. Y ou are the administrator for your company network. Lisa is a member of both the Sales 
+and R&D departments. There is a shared folder called Apps  that everyone uses. Here are 
+the current permissions on the Apps  shared folder:
+Group/User NTFS Shared
+Sales Read Deny
+Marketing Modify Full Control
+R&D Read Read
+HR Full Control Deny
+Admin Full Control Change
+What will Lisa’s local and remote permissions be when she logs into the Apps  folder?
+A. Local = Read and Remote = Read
+B. Local = Read and Remote = Deny
+C. Local = Deny and Remote = Read
+D. Local = Deny and Remote = Deny
+40. You are the administrator for your company network. You are debating the benefits of the 
+various filesystems available. Which filesystem was designed specifically with the issues of 
+scalability and performance in mind?
+A. FAT
+B. exFAT
+C. NTFS
+D. ReFS
+41. You are the administrator for your company network. You are debating the benefits of the 
+NTFS filesystem. You are thinking about establishing disk quotas. By default, Windows 
+Server 2016 supports disk quota restrictions. At which level is the default?
+A. Folder level
+B. Drive level
+C. Volume level
+D. Partition level
+42. You are the administrator for your company network. You are discussing the benefits of 
+using the NTFS filesystem with a colleague. One of the benefits allows you to move infre-
+quently used files to external hard drives. What benefit are you discussing?
+A. Mounted drives
+B. Self-healing NTFS
+C. Dynamic volumes
+D. Remote storage
+
+34 Chapter 2  ■ I mplement Storage Solutions
+43. Y ou are the administrator for your company network. You are planning on installing Active 
+Directory. You remember that the NTFS filesystem is required. But you also know that a 
+mandatory number of partition(s) are needed to run Active Directory. How many partitions 
+are required to run Active Directory?
+A. One
+B. Two
+C. Three
+D. Four
+44. You are the administrator for your company network. You and a colleague are discussing 
+disk configurations. Microsoft Windows Server 2016 supports two types of disk configura-
+tions. What are they? (Choose two.)
+A. Basic
+B. Primary
+C. Dynamic
+D. Effective
+45. You are the administrator for your company network. Your network contains an Active 
+Directory domain that contains two Windows Server 2016 servers named Server1 and 
+Server2. Each server has an operating system disk and four data disks. All of the disks are 
+locally attached SATA disks. Each disk is a basic disk, is initialized as a MBR disk, and 
+has a single NTFS volume. You plan to implement Redundant Array of Independent Disks 
+(RAID) by using the data disks on Server1 and Server2. What should you do if you need to 
+prepare the data disks for the implementation?
+A. Initialize the data disks as GPT disks and create a ReFS volume on each disk.
+B. Format the volumes on the data disks as exFAT.
+C. Delete the volumes from the data disks.
+D. Convert the data disks to dynamic disks.
+46. You are the network administrator for your company network. You are discussing managing 
+volumes with a colleague. When talking about volume sets, you are discussing a volume set 
+that is a simple volume that spans multiple disks. What type of volume are you discussing?
+A. Simple volume
+B. Spanned volume
+C. Striped volume
+D. Mirrored volume
+E. RAID-5 volume
+
+Chapter 2  ■ I mplement Storage Solutions  35
+47. Y ou are the network administrator for your company network. You are discussing manag-
+ing volumes with a colleague. When talking about volume sets, you are discussing a volume 
+set that duplicates data across two disks. What type of volume are you discussing?
+A. Simple volume
+B. Spanned volume
+C. Striped volume
+D. Mirrored volume
+E. RAID-5 volume
+48. You are the network administrator for your company network. You are discussing manag-
+ing volumes with a colleague. When talking about volume sets, you are discussing a volume 
+set that stores data in stripes across three or more disks. What type of volume are you 
+discussing?
+A. Simple volume
+B. Spanned volume
+C. Striped volume
+D. Mirrored volume
+E. RAID-5 volume
+49. You are the network administrator for your company network. You are discussing Redun-
+dant Array of Independent Disks (RAID) with a colleague. Microsoft Windows Server 2016 
+supports three types of RAID. What are they? (Choose three.)
+A. RAID-0
+B. RAID-1
+C. RAID-2
+D. RAID-3
+E. RAID-4
+F. RAID-5
+50. You are the network administrator for your company network. You are discussing Redun-
+dant Array of Independent Disks (RAID) with a colleague. Of the three types of RAID sup-
+ported by Windows Server 2016, one is not fault tolerant. Which one is it?
+A. RAID-0
+B. RAID-1
+C. RAID-2
+D. RAID-3
+E. RAID-4
+F. RAID-5
+
+36 Chapter 2  ■ I mplement Storage Solutions
+51. Y ou are the network administrator for your company network. You are discussing Redun-
+dant Array of Independent Disks (RAID) with a colleague. You are discussing the minimum 
+number of disks needed to set up a RAID-1 (Disk Mirroring) volume set. What is the mini-
+mum number of disks needed?
+A. 1
+B. 2
+C. 3
+D. 4
+52. You are the network administrator for your company network. With the ever-increasing 
+demands of storage,  are used to surpass the limitation of 26 drive 
+letters and to join two volumes into a folder on a separate physical disk drive. What is being 
+discussed? (Fill in the blank.)
+A. Data points
+B. Dive points
+C. Mount points
+D. Volume points
+53. You are the network administrator for your company network. You are discussing Micro-
+soft Multipath I/O (MPIO) with a colleague. Of all the supported load balancing policies 
+that Windows Server 2016 supports, which one provides no load balancing?
+A. Failover
+B. Failback
+C. Round robin
+D. Round robin with a subset of paths
+E. Dynamic least queue depth
+F. Weighted path
+54. You are the network administrator for your company network. You are discussing Micro-
+soft Multipath I/O (MPIO) with a colleague. Of all the supported load balancing policies 
+that Windows Server 2016 supports, which one provides that all available paths will be 
+active and will be used to distribute I/O in a balanced fashion?
+A. Failover
+B. Failback
+C. Round robin
+D. Round robin with a subset of paths
+E. Dynamic least queue depth
+F. Weighted path
+
+Chapter 2  ■ I mplement Storage Solutions  37
+55. Y ou are the network administrator for your company network. You are discussing Micro-
+soft Multipath I/O (MPIO) with a colleague. Of all the supported load balancing policies 
+that Windows Server 2016 supports, which one provides a configuration in which the I/O 
+will route to the path with the least number of outstanding requests?
+A. Failover
+B. Failback
+C. Round robin
+D. Round robin with a subset of paths
+E. Dynamic least queue depth
+F. Weighted path
+56. You are the network administrator for your company network. You are discussing 
+, which was developed to allow block-level access to a storage device over a 
+network. What are you discussing? (Fill in the blank.)
+A. Internet Small Computer System Interface (iSCSI)
+B. Network Attached Storage (NAS)
+C. Common Internet File System (CIFS)
+D. Network File System (NFS)
+57. You are the network administrator for your company network. You are discussing with a 
+colleague concepts of a storage solution that is a low-cost device for storing data and serv-
+ing files through the use of an Ethernet LAN connection. What are you discussing?
+A. Fibre Channel
+B. Network Attached Storage (NAS)
+C. Virtual Disk Service (VDS)
+D. Data Center Bridging (DCB)
+58. You are the administrator for your company network. You and a colleague are discussing 
+Virtual Disk Service (VDS). Windows Server 2016 uses VDS, which was created to ease 
+the administration involved in managing various types of storage devices. Windows Server 
+2016 supports which of the following storage management applications that use VDS? 
+(Choose three.)
+A. Disk Management snap-in
+B. Partition Management snap-in
+C. Diskpart
+D. DiskRAID
+
+38 Chapter 2  ■ I mplement Storage Solutions
+59. Y ou are the network administrator for your company network. You are using the Diskpart 
+command-line utility. You want to use the switch that will allow you to reduce the physical 
+size of the file. What switch command do you use?
+A. Diskpart /assign
+B. Diskpart /compact
+C. Diskpart /convert
+D. Diskpart /reduce
+60. Y ou are the administrator for your company network. You are planning on installing Data 
+Center Bridging (DCB). DCB can be installed using Server Manager or using PowerShell. 
+You have opted for using PowerShell. What command must you run to install DCB?
+A. Install-WindowsFeature -name data-center-bridging
+B. Install-WindowsFeature -name dcb
+C. Install-WindowsFeature -name data center bridging
+D. Install-WindowsFeature -name DCB
+61. Y ou are the administrator for your company network. You are working with Windows 
+PowerShell and Server Message Block (SMB), which is a network-sharing protocol that 
+allows Windows machines that are running applications to read and write data to files. 
+What PowerShell command would you use if you wanted to retrieve the connections estab-
+lished from the SMB client to the SMB servers?
+A. Get-SmbDelegation
+B. Get-SmbServerConfiguration
+C. Get-SmbSharedAccess
+D. Get-SmbConnection
+62. Y ou are the administrator for your company network. You are working with Windows 
+PowerShell and Server Message Block (SMB), which is a network-sharing protocol that 
+allows Windows machines that are running applications to read and write data to files. 
+What PowerShell command would you use if you wanted to modify the properties of the 
+SMB share?
+A. Set-SmbClientConfiguration
+B. Set-SmbShare
+C. Set-SmbServerConfiguration
+D. Set-SmbShareAccess
+63. Y ou are the administrator for your company network. You and a colleague are discussing 
+Server Message Block (SMB). SMB is a network-sharing protocol that allows Windows 
+machines (either client- or server-based operating systems) that are running applications to 
+read and write data to files. It also allows systems to request services or resources that are 
+running on remote servers. What is one advantage to using SMB?
+A. SMB allows for the use of any network protocol, running on top of the protocol being 
+used.
+B. SMB allows for the use of any network protocol, running underneath the protocol 
+being used.
+
+Chapter 2  ■ I mplement Storage Solutions  39
+C. S MB does not allow for the use of any network protocol, running on top of the proto-
+col being used.
+D. SMB does not allow for the use of any network protocol, running underneath the pro-
+tocol being used.
+64. You are the administrator for your company network. An employee leaves unexpectedly 
+and has encrypted files using EFS. There are two ways for you to unencrypt the files. What 
+are two ways that an administrator can unencrypt the files? (Choose two.)
+A. Log in using the user’s account and unencrypt the files.
+B. Become a recovery agent and manually unencrypt the files.
+C. Become a restore agent and manually unencrypt the files.
+D. Log in as the administrator and unencrypt the files.
+65. You are the administrator for your company network. You have decided to take advantage 
+of the security provided by the NTFS filesystem. The default security permissions for Users 
+is  on new folders and shares. (Fill in the blank.)
+A. Read
+B. Write
+C. Full Control
+D. Change
+66. You are the administrator for your company network. Matt is a member of both the Sales 
+and R&D departments. There is a shared folder called Apps  that everyone uses. Here are 
+the current permissions on the Apps  shared folder:
+Group/User NTFS Shared
+Sales Full Control Read
+Marketing Modify Full Control
+R&D Modify Change
+HR Full Control Deny
+IT Full Control Read
+Matt is trying to make changes to a document in the Apps  folder. He cannot make the 
+changes necessary. What permission will need to change in order for him to make the nec-
+essary changes?
+A. Sales  folder shared permission needs to be changed to Change.
+B. Sales  folder shared permission needs to be changed to Modify.
+C. R&D folder NTFS permission needs to be changed to Change.
+D. Nothing. The Sales  folder shared permission meets his requirements.
+
+40 Chapter 2  ■ I mplement Storage Solutions
+67. Y ou are the administrator for your company network. Matt is a member of the Sales, R&D, 
+and HR departments. There is a folder called Apps  on the server. Here are the current per-
+missions on the Apps  folder:
+Group/User NTFS
+Sales Read
+Marketing Modify
+R&D Modify
+HR Full Control
+IT Full Control
+What is Matt’s effective NTFS permission?
+A. Read
+B. Modify
+C. Full Control
+D. Deny
+68. You are the administrator for your company network. Lisa is a member of the Sales, R&D, 
+and HR departments. There is a folder called Apps  on the server. Here are the current per-
+missions on the Apps  folder:
+Group/User NTFS
+Sales Read
+Marketing Modify
+R&D Modify
+HR Deny
+IT Full Control
+What is Lisa’s effective NTFS permission?
+A. Read
+B. Modify
+C. Full Control
+D. Deny
+
+Chapter 2  ■ I mplement Storage Solutions  41
+69. Y ou are the administrator for your company network. You have decided to take advantage 
+of the security provided by shared permissions. The default shared permission for Adminis-
+trators is  on new folders. (Fill in the blank).
+A. Read
+B. Write
+C. Full Control
+D. Change
+70. You are the administrator for your company network. Company policy states that you must 
+set up disk quotas to limit how much storage space a user can use on the hard drive. What 
+filesystem must you use in order to take advantage of disk quotas?
+A. FAT
+B. FAT32
+C. NTFS
+D. exFAT
+71. You are the administrator for your company network. You are discussing disk quotas with 
+a colleague. You know that there are a few options available when setting up disk quotas. 
+Which of the following types of quota is a predefined way to set up quotas?
+A. Quotas by volume
+B. Quotas by user
+C. Specifying quota entries
+D. Quota templates
+72. You are the administrator for your company network. You are discussing storage options 
+with a colleague. You are discussing a feature in Windows Server 2016 that gives admin-
+istrators the ability to use both solid-state drives (SSDs) and conventional hard disk drives 
+(HDDs) within the same storage pool. What type of storage is being discussed?
+A. Tiered storage
+B. Basic storage
+C. Storage spaces direct
+D. Local storage
+73. You are the administrator for your company network. You are discussing the Boot Configu-
+ration Data (BCD) store with a colleague. What utility do you use to edit the boot options 
+in the BCD store?
+A. bcdboot utility
+B. bcdedit utility
+C. bootcfg utility
+D. bootsect utility
+
+42 Chapter 2  ■ I mplement Storage Solutions
+74. Y ou are the administrator for your company network. You and a colleague are discussing a 
+way of finding and removing duplicate data within the company network without compro-
+mising the integrity. What should you use?
+A. Data chunking
+B. Data redundancy
+C. Data deduplication
+D. Data replication
+75. You are the administrator for your company network. You are thinking of enabling data 
+deduplication. Where do you enable deduplication?
+A. On files
+B. On folders
+C. On volumes
+D. On partitions
+76. You are the administrator for your company network. You have enabled data deduplica-
+tion. Once you have enabled deduplication, the volume will contain which of the following? 
+(Choose all that apply.)
+A. Optimized files
+B. Unoptimized files
+C. Chunk store
+D. Free space
+77. You are the network administrator for your company network. You have a computer that 
+runs Windows Server 2016 and is used by 10 users. The computer is joined to an Active 
+Directory domain. All of the users are members of the Administrators group. Each user has 
+an Active Directory account. You have a Microsoft Word document that contains confi-
+dential information. What should you configure if you need to ensure that you are the only 
+user who can open the document?
+A. Account policies
+B. NTFS permissions
+C. Share permissions
+D. Encrypting File System (EFS) settings
+78. You are the administrator for your company network. You are trying to determine what the 
+default TCP port for FTP is. Which one is it?
+A. 21
+B. 1433
+C. 3260
+D. 3389
+
+Chapter 2  ■ I mplement Storage Solutions  43
+79. Y ou are the administrator for your company network. Matt is a member of both the R&D 
+and Marketing departments. There is a shared folder called Apps  that everyone uses. Here 
+are the current permissions on the Apps  shared folder:
+Group/User NTFS Shared
+Sales Read Deny
+Marketing Modify Full Control
+R&D Read Read
+HR Full Control Deny
+Admin Full Control Change
+What will Matt’s local and remote permissions be when he logs into the Apps  folder?
+A. Local = Full Control and Remote = Deny
+B. Local = Read and Remote = Deny
+C. Local = Modify and Remote = Full Control
+D. Local = Read and Remote = Change
+80. You are the network administrator for your company network. You are discussing manag-
+ing volumes with a colleague. When talking about volume sets, you are discussing a volume 
+set that uses only one disk or a portion of a disk. What type of volume are you discussing?
+A. Simple volume
+B. Spanned volume
+C. Striped volume
+D. Mirrored volume
+E. RAID-5 volume
+81. You are the administrator of your company network. You are discussing Microsoft 
+Multipath I/O (MPIO) with a colleague. Of all the supported load balancing policies that 
+Windows Server 2016 supports, which one designates a preferred path that will handle 
+all process requests until it fails, after which the standby path will become active until the 
+primary reestablishes a connection and automatically regains control?
+A. Failover
+B. Failback
+C. Round robin
+D. Round robin with a subset of paths
+E. Dynamic least queue depth
+F. Weighted path
+
+44 Chapter 2  ■ I mplement Storage Solutions
+82. Y ou are the administrator of your company network. You are discussing the benefits of 
+NTFS with a colleague. One of the benefits allows an administrator to map a local disk 
+drive to an NTFS directory name. What is being discussed?
+A. Dynamic volumes
+B. Remote storage
+C. Mounted drives
+D. Disk quotas
+83. You are the administrator of your company network. You want to see the logical and 
+physical disks that are currently configured on your system. What tool should you use?
+A. Disk Management
+B. Device Manager
+C. Task Manager
+D. File Explorer
+84. You are the administrator of your company network. You are discussing adding disk drives 
+to a server partition. Once you have physically installed the disk drive, it must be initial-
+ized. There are two different types of partition styles that are used to initialize disks. What 
+are they? (Choose two.)
+A. Master Boot Record (MBR)
+B. Hard Disk Drive (HDD)
+C. Solid State Drive (SSD)
+D. GUID Partition Table (GPT)
+85. You are the administrator of your company network. You are talking to a colleague about 
+establishing a RAID-5 volume. What type of disk configuration should you use if you want 
+to implement RAID?
+A. Basic
+B. Standard
+C. Dynamic
+D. Duplex
+
+Implement Hyper-V
+THe f ollow Ing MCSA wIndow S SerVer 
+2016 exAM TopICS Are CoVered In THIS  
+CHApTer:
+✓ ✓3.1 I nstall and configure Hyper-V
+✓■This objective may include but is not limited to: Determine 
+hardware and compatibility requirements for installing 
+Hyper-V; install Hyper-V; install management tools: upgrade 
+from existing versions of Hyper-V; delegate virtual machine 
+management; perform remote management of Hyper-V 
+hosts; use Windows PowerShell Direct; implement nested 
+virtualization
+✓ ✓3.2 C onfigure virtual machine (VM) settings
+✓■This objective may include but is not limited to: Add or 
+remove memory in a running VM; configure dynamic  
+memory; configure Non-Uniform Memory Access (NUMA) 
+support; configure smart paging; configure Resource  
+Metering; manage Integration Services; create and configure  
+Generation 1 and 2 VMs and determine appropriate usage 
+scenarios; implement enhanced session mode; create Linux 
+and FreeBSD VMs; install and configure Linux Integration 
+Services (LIS); install and configure FreeBSD Integration 
+Services (BIS); implement Secure Boot for Windows and 
+Linux environments; move and convert VMs from previ -
+ous versions of Hyper-V to Windows Server 2016 Hyper-V; 
+export and import VMs; implement Discrete Device  
+Assignment (DDA); troubleshoot VM configuration versions
+✓ ✓3.3 C onfigure Hyper-V storage
+✓■This objective may include but is not limited to: Create VHDs 
+and VHDX files using Hyper-V Manager; create shared VHDX 
+files; configure differencing disks; modify virtual hard disks; 
+configure pass-through disks; resize a virtual hard disk; 
+manage checkpoints; implement production checkpoints; 
+implement a virtual Fibre Channel adapter; configure storage 
+Quality of Service (QoS)Chapter 
+3
+
+✓ ✓3.4 Configure Hyper-V networking
+✓■This objective may include but is not limited to: Add and 
+remove virtual network interface cards (vNICs); configure 
+Hyper-V virtual switches; optimize network performance; 
+configure MAC addresses; configure network isolation; con -
+figure synthetic and legacy virtual network adapter; configure 
+NIC teaming in VMs; configure virtual machine queue (VMQ); 
+enable Remote Direct Memory Access (RDMA) on network 
+adapters bound to a Hyper-V virtual switch using Switch 
+Embedded Teaming (SET); configure Bandwidth Management
+
+Chapter 3  ■ I mplement Hyper-V  47
+1. Y ou are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 has a dynamically expanding virtual hard disk (VHD) 
+file that is 950 GB. The VHD currently contains about 450 GB of free space. What command/
+cmdlet should you use if you want to reduce the amount of disk space used by the VHD?
+A. Mount-VHD  cmdlet
+B. DiskPart  command
+C. Set-VHD  cmdlet
+D. Optimize-VHD  cmdlet
+2. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 contains a virtual machine named VM1. What should 
+you run on Server1 if you need to make sure that you can use nested virtualization on VM1?
+A. Mount-VHD  cmdlet
+B. DiskPart  command
+C. Set-VMProcessor  cmdlet
+D. Set-VM  cmdlet
+3. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 contains two virtual machines named VM1 and 
+VM2. You need to ensure that VM1 and VM2 can communicate with each other only. 
+What cmdlet should you use to prevent VM1 and VM2 from communicating with Server1?
+A. Set-NetNeighbor
+B. Remove-VMSwitchTeamMember
+C. Set-VMSwitch
+D. Enable-VMSwitchExtension
+4. Y ou are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 contains a virtual machine named VM1. You want 
+to deploy several shielded virtual machines on VM1. You deploy a Host Guardian on a 
+new server. What should you run if you want to view the process of the shielded virtual 
+machines installation?
+A. Get-ShieldedVMProvisioningStatus  cmdlet
+B. Diskpart  command
+C. Set-VHD  cmdlet
+D. Set-VM  cmdlet
+5. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. The host contains a virtual machine named VM1. VM1 has 
+resource metering enabled. What cmdlet should you run if you need to use resource meter-
+ing to track the amount of network traffic that VM1 sends to the 10.10.16.0/20 network?
+A. Add-VMNetworkAdapter
+B. Set-VMNetworkAdapter
+C. New-VMResourcePool
+D. Set-VMNetworkAdapterRoutingDomainMapping
+
+48 Chapter 3  ■ I mplement Hyper-V
+6. Y ou are the administrator for your company network. You have a Windows Server 2016 
+server named Server1, which has the Hyper-V Server role installed. You want to create a 
+virtual machine named VM1 on Server1. You need to make sure that you can start VM1 
+from the network. What are two possible ways to do this? (Choose two.)
+A. Create a Generation 2 virtual machine.
+B. Create a Generation 1 virtual machine and run the Enable-NetAdapterPackageDirect  
+cmdlet.
+C. Create a Generation 1 virtual machine that has a legacy network adapter.
+D. Create a Generation 1 virtual machine and configure a Single Root I/O Virtualization 
+(SR-IOV) interface for the network adapter.
+7. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 contains a virtual machine named VM1. What 
+should you run on Server1 if you need to ensure that you can use nested virtualization on 
+VM1?
+A. Mount-VHD  cmdlet
+B. Diskpart  command
+C. Set-VHD  cmdlet
+D. Set-VM  cmdlet
+E. Set-VMHost  cmdlet
+F. Set-VMProcessor  cmdlet
+G. Install-WindowsFeature  cmdlet
+H. Optimize-VHD  cmdlet
+8. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. You plan to deploy several shielded virtual machines on 
+Server1 and deploy a Host Guardian on the server. What should you run first if you need to 
+ensure that Server1 can host shielded virtual machines?
+A. Mount-VHD  cmdlet
+B. Diskpart  command
+C. Set-VHD  cmdlet
+D. Set-VM  cmdlet
+E. Set-VMHost  cmdlet
+F. Set-VMProcessor  cmdlet
+G. Install-WindowsFeature  cmdlet
+H. Optimize-VHD  cmdlet
+
+Chapter 3  ■ I mplement Hyper-V  49
+9. Y ou are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 has a virtual machine that uses a VHD named 
+Disk1.vhdx . You receive a warning message from Event Viewer stating that “One or more 
+virtual hard disks have a physical sector size that is smaller than the physical sector size of 
+the storage on which the virtual hard disk file is located.” What should you run if you need 
+to resolve the problem that causes the warning message?
+A. Mount-VHD  cmdlet
+B. Diskpart  command
+C. Set-VHD  cmdlet
+D. Set-VM  cmdlet
+E. Set-VMHost  cmdlet
+F. Set-VMProcessor  cmdlet
+G. Install-WindowsFeature  cmdlet
+H. Optimize-VHD  cmdlet
+10. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 has a virtual machine named VM1 that uses a single 
+VHDX file. VM1 is configured as shown in the following table.
+Configuration Details
+Virtual Machine Generation V2
+Operating System Windows 8
+Filesystem NTFS
+Number of Partitions 1
+Disk Type Basic
+Unallocated Disk Space 100 GB
+You plan to use VM1 as a virtual machine template to deploy shielded virtual machines. 
+What should you run if you need to ensure that VM1 can be used to deploy shielded virtual 
+machines?
+A. Mount-VHD  cmdlet
+B. Diskpart  command
+C. Set-VHD  cmdlet
+D. Set-VM  cmdlet
+E. Set-VMHost  cmdlet
+F. Set-VMProcessor  cmdlet
+G. Install-WindowsFeature  cmdlet
+H. Optimize-VHD  cmdlet
+
+50 Chapter 3  ■ I mplement Hyper-V
+11. Y ou are the administrator for your company network. Your network contains an Active Direc -
+tory forest. You install Windows Server 2016 on 10 virtual machines. You need to deploy the 
+Web Server (IIS) server role identically to the virtual machines. What should you do?
+A. Use PowerShell Desired State Configuration (DSC) to create a default configuration 
+and then apply the configuration to the virtual machines.
+B. Create a software installation package and then publish the package to the virtual 
+machines by using a Group Policy Object (GPO).
+C. From a Group Policy Object (GPO), create an application control policy and then apply 
+the policy to the virtual machines.
+D. From Windows System Image Manager, create an answer file, copy the file to  
+C: \ Sysprep  on each virtual machine, and then run the Apply-Image  cmdlet.
+12. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 contains four virtual machines. VM1 is a shielded 
+virtual machine that runs Windows Server 2012 R2. VM2 is a shielded virtual machine 
+that runs Windows Server 2016. VM3 is a virtual machine that runs Windows Server 2012 
+R2 and has Secure Boot enabled. VM4 is a virtual machine that runs Windows Server 2016 
+and has all of its drives protected by using BitLocker Drive Encryption (BitLocker). Using 
+the Virtual Machine Connection tool from Hyper-V Manager, what machine or machines 
+can you connect to?
+A. VM1, VM2, VM3, and VM4
+B. VM4 only
+C. VM1 and VM2 only
+D. VM3 and VM4 only
+E. VM2 only
+13. You are the administrator for your company network. You have decided to delete a virtual 
+machine using Hyper-V Manager. What else must you do?
+A. The only way you can do this is by using PowerShell.
+B. Manually delete any virtual disks that were part of the virtual machine to free up disk 
+space after the virtual machine has been deleted using Hyper-V Manager.
+C. You must first delete the virtual machine’s files on the hard drive before deleting the 
+virtual machine using Hyper-V Manager.
+D. Nothing; everything will be deleted when you use Hyper-V Manager.
+14. You are the administrator for your company network. You are planning on deploying vir-
+tual machines. Which of the following statements is true regarding virtual machines?
+A. Virtual machines each run in their own child partitions. Child partitions have direct 
+access to hardware resources.
+B. Virtual machines each run in their own child partitions. Child partitions do not have 
+direct access to hardware resources.
+C. Virtual machines run in another server’s child partitions. Child partitions have direct 
+access to hardware resources.
+D. Virtual machines run in another server’s child partitions. Child partitions do not have 
+direct access to hardware resources.
+
+Chapter 3  ■ I mplement Hyper-V  51
+15. Y ou are the network administrator for your company network. You are looking at the 
+different types of hard disks available with Hyper-V. One type of disk starts with a small 
+VHD file and expands it on demand once an installation takes place. What type of hard 
+disk is being described?
+A. Dynamically expanding
+B. Fixed size
+C. Differencing
+D. Physical (or pass-through) disk
+16. You are the network administrator for your company network. You have a Windows Server 
+2016 Hyper-V host named Server1 and a two-node scale-out file server cluster named Clus-
+ter1. A virtual machine named VM1 runs on Server1. What tool should you use if you need 
+to migrate the storage on VM1 to Cluster1?
+A. The clussvc.exe  command
+B. The cluster.exe  command
+C. The Computer Management console
+D. The configurehyperv.exe  command
+E. The Disk Management console
+F. The Failover Cluster Manager console
+G. The Hyper-V Manager console
+H. Server Manager
+17. You are the network administrator for your company network. You have three Windows 
+Server 2016 servers named Server1, Server2, and Server3. Server1 and Server2 have the 
+Hyper-V server role installed. Server3 has the iSCSI Target Server role installed. What tool 
+should you use first if you need to create a Hyper-V cluster?
+A. The clussvc.exe  command
+B. The cluster.exe  command
+C. The Computer Management console
+D. The configurehyperv.exe  command
+E. The Disk Management console
+F. The Failover Cluster Manager console
+G. The Hyper-V Manager console
+H. Server Manager
+
+52 Chapter 3  ■ I mplement Hyper-V
+18. Y ou are the administrator for your company network. You are planning the configuration of a 
+virtual network switch for your Hyper-V network. It will contain the following Hyper-V hosts. 
+Server1 will have 10 virtual machines that must be able to communicate with each other. The 
+virtual machines must be prevented from communicating with Server1 and all other servers on 
+the corporate network. The Hyper-V network will also have a two-node failover cluster named 
+Cluster1 that will have 20 virtual machines. The virtual machines will run on both nodes. 
+Hyper-V hosts on the corporate network must be able to connect to the virtual machines. 
+What type of virtual switch should you select for the 10 virtual machines on Server1?
+A. External
+B. Internal
+C. Private
+D. Public
+19. You are the administrator for your company network. You are planning the configuration of a 
+virtual network switch for your Hyper-V network. It will contain the following Hyper-V hosts. 
+Server1 will have 10 virtual machines that must be able to communicate with each other. The 
+virtual machines must be prevented from communicating with Server1 and all other servers on 
+the corporate network. The Hyper-V network will also have a two-node failover cluster named 
+Cluster1 that will have 20 virtual machines. The virtual machines will run on both nodes. 
+Hyper-V hosts on the corporate network must be able to connect to the virtual machines. 
+What type of virtual switch should you select for the 20 virtual machines on Cluster1?
+A. External
+B. Internal
+C. Private
+D. Public
+20. You are the administrator for your company network. You have an application named 
+App1. App1 is distributed to multiple Hyper-V virtual machines in a multitenant environ-
+ment. What should you include in the environment if you need to ensure that the traffic is 
+distributed evenly among the virtual machines that host App1?
+A. A network controller and Windows Server Network Load Balancing (NLB) nodes
+B. A network controller and Windows Server Software Load Balancing (SLB) nodes
+C. A RAS Gateway and Windows Server Network Load Balancing (NLB) nodes
+D. A RAS Gateway and Windows Server Software Load Balancing (SLB) nodes
+21. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. What counter should you use from Performance Monitor if 
+you need to identify the amount of processor resources consumed by Hyper-V and virtual 
+machines?
+A. \Hyper-V Hypervisor\Logical Processors
+B. \Hyper-V Hypervisor Virtual Processor(_Total)\% Hypervisor Run Time
+C. \Hyper-V Hypervisor Logical Processor(_Total)\% Total Run Time
+D. \Hyper-V Hypervisor Root Virtual Processor(_Total)\% Guest Run Time
+
+Chapter 3  ■ I mplement Hyper-V  53
+22. Y ou are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. Server1 also has the Hyper-V role installed. Virtual machines on 
+Server1 are connected to an external switch named Switch1. You create a virtual machine 
+named VM1 on Server1 by running the following cmdlets:
+Add-VM VM1
+Add-VMHardDiskDrive –VMName VM1 –ControllerType IDE –Path C:\VMs\Disk1.
+vhd
+Add-VMNetworkAdapter –VMName VM1
+What should you do if you need to ensure that you can install the operating system on VM1 
+by using Windows Deployment Services?
+A. Add a SCSI controller to VM1.
+B. Modify the DefaultFlowMinimumBandwidthWeight  parameter of Switch1.
+C. Modify the SwitchType  parameter of Switch1.
+D. Add a legacy network adapter to VM1.
+23. You are the administrator for your company network. You have a four-node Hyper-V clus-
+ter named Cluster1. A virtual machine named VM1 runs on Cluster1. VM1 has a network 
+adapter that connects to a virtual machine named Network1. What command should you 
+run if you need to prevent a network disconnection on VM1 from causing VM1 to move to 
+another cluster node?
+A. Remove-ClusterVMMonitoredItem –VirtualMachine VM1
+B. Set-VM –VMName VM1
+C. Set-VMNetworkAdapter –VMName VM1
+D. Set-VMSwitch –Name Network1
+24. Y ou are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 hosts a virtual machine named VM1. You install 
+the Hyper-V server role on VM1. What should you do if you need to ensure that the 
+virtual machines hosted on VM1 can communicate with the virtual machines hosted on 
+Server1?
+A. Run the Set-VMNetworkAdapterIsolation  cmdlet and specify the  
+MultiTenantStack Off  parameter on Server1.
+B. Run the Set-VMNetworkAdapter  cmdlet and specify the MacAddressSpoofing Off  
+parameter on VM1.
+C. Run the Set-VMNetworkAdapterIsolation  cmdlet and specify the  
+MultiTenant Stack On  parameter on VM1.
+D. Run the Set-VMNetworkAdapter  cmdlet and specify the MacAddressSpoofing On  
+parameter on Server1.
+
+54 Chapter 3  ■ I mplement Hyper-V
+25. Y ou are the administrator for your company network. You have two Windows Server 2016 
+Hyper-V hosts named Server1 and Server2. Server1 and Server2 are connected on the same 
+network. You create an external network switch named Switch1 on Server1 and Server2. 
+You have the virtual machines shown in the following table.
+Virtual Machine Name IP Address Subnet Mask Hyper-V Host
+VM1 192.168.1.16 255.255.255.0 Server1
+VM2 192.168.1.32 255.255.255.0 Server2
+VM3 192.168.1.48 255.255.255.0 Server2
+All three virtual machines are connected to Switch1. You need to prevent applications in 
+VM3 from being able to capture network traffic from VM1 or VM2. What should you do 
+to ensure that VM1 retains network connectivity?
+A. Configure network virtualization for VM1 and VM2.
+B. Modify the subnet mask of VM1 and VM2.
+C. Configure the VLAN ID setting of Switch1 on Server2.
+D. Create an external switch and connect VM3 to the switch on Server2.
+26. You are the administrator for your company network. Your network contains an Active 
+Directory domain. The domain contains a Windows Server 2016 Hyper-V host named 
+Server1. Server1 hosts four machines that are members of the domain. The virtual machines 
+are configured as shown:
+Virtual Machine 
+NameOperating System Virtual Machine 
+GenerationType of VHD File
+VM1 Windows 10 2 VHD
+VM2 Windows Server 
+20162 VHD
+VM3 Windows Server 
+2012 R22 VHDX
+VM4 Windows Server 
+20161 VHDX
+What virtual machines can you manage by using PowerShell Direct?
+A. Only VM2
+B. VM1, VM2, and VM4
+C. Only VM4
+D. VM1, VM2, and VM3
+
+Chapter 3  ■ I mplement Hyper-V  55
+27. Y ou are the administrator for your company network. You need to implement network vir-
+tualization. On what item should you configure the Virtual Subnet ID?
+A. Virtual switch
+B. Hyper-V Server
+C. Virtual machine
+D. Virtual network adapter
+28. You are the administrator for your company network. You have a Windows Server 2016 
+virtual machine named VM1. VM1 hosts a service that requires high network throughput. 
+VM1 has a virtual network adapter that connects to a Hyper-V switch named Switch1, 
+which has one network adapter. The network adapter supports Remote Direct Memory 
+Access (RDMA), the Single Root I/O Virtualization (SR-IOV) interface, Quality of Service 
+(QoS), and Receive Side Scaling (RSS). You need to ensure that the traffic from VM1 can be 
+processed by multiple networking processors. What PowerShell command should you run 
+on the host of VM1?
+A. Set-NetAdapterRss
+B. Set-NetAdapterRdma
+C. Set-NetAdapterQos
+D. Set-NetAdapterSriov
+29. Y ou are the administrator for your company network. The network contains one Active 
+Directory domain. The domain contains two Windows Server 2016 Hyper-V hosts named 
+Host1 and Host2. Host1 contains a virtual machine named VM1. You plan to move VM1 
+to Host2. What cmdlet should you use if you need to generate a report that lists any con-
+figuration issues on Host2 that will prevent VM1 from being moved successfully?
+A. Move-VM
+B. Test-VHD
+C. Debug-VM
+D. Compare-VM
+30. Y ou are the administrator for your company network. You have a Windows Server 2016 
+server named Host1. You configure Host1 as a virtualization host and create 20 new vir-
+tual machines on Host1. You need to ensure that all of the virtual machines can connect to 
+the Internet through Host1. What three actions should you perform? (Choose three.)
+A. Install the Remote Access server role on a virtual machine.
+B. Enable virtual LAN identification from the properties of each virtual machine.
+C. Connect to the virtual machine switch from the properties of each virtual machine.
+D. Configure the network address translation (NAT) network on Host1.
+E. Create an internal virtual machine switch and specify an IP address for the switch on 
+Host1.
+
+56 Chapter 3  ■ I mplement Hyper-V
+31. Y ou are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. The network adapters on Server1 have Single Root I/O 
+Virtualization (SR-IOV) enabled. Server1 hosts a Windows Server 2016 virtual machine 
+named VM1. What should you do if you need to identify whether SR-IOV is used by 
+VM1?
+A. Open Hyper-V Manager and view the Integration Services settings of VM1 on Server1.
+B. Open Device Manager and view the properties of the network adapters.
+C. Sign in to VM1. View the properties of the network connections.
+D. Open Hyper-V Manager and view the properties of the network adapters.
+32. You are the administrator for your company network. You want to capture the state, data, 
+and hardware configuration of a running virtual machine. What checkpoint can be useful 
+if you need to recreate a specific state or condition of a running virtual machine so that you 
+can troubleshoot a problem?
+A. Production
+B. Standard
+C. Fabrication
+D. Customary
+33. You are the administrator for your company network. You know that Virtual Network 
+Manager offers three types of virtual networks that you can use to define various network-
+ing topologies for virtual machines and the virtualization server. Which type of virtual net-
+work is isolated from all external network traffic on the virtualization server, as well as any 
+network traffic between the management operating system and the external network?
+A. Private virtual network
+B. Internal virtual network
+C. Public virtual network
+D. External virtual network
+34. You are the administrator for your company network. Your company has a Windows Server 
+2016 Hyper-V environment configured as shown:
+Hyper-V Host Name Configuration Virtual Switch Name
+Host1 Uses an Intel processor
+Is a member of a SAN named 
+SAN1Switch1
+Host2 Uses an AMD processor
+Has local storage onlySwitch2
+
+Chapter 3  ■ I mplement Hyper-V  57
+Hyper-V Host Name Configuration Virtual Switch Name
+Host3 Uses an Intel processor
+Is a member of a SAN named 
+SAN1Switch1
+Host4 Uses an Intel processor
+Has local storage onlySwitch2
+All of the virtual switches are the external type. What should you do if you need to ensure 
+that you can move virtual machines between the hosts without causing the virtual machines 
+to disconnect from the network?
+A. Implement a Hyper-V replica between Host2 and Host4.
+B. Implement Live Migration by using Host3 and Host4.
+C. Implement Live Migration by using Host1 and Host2.
+D. Implement Live Migration by using Host1 and Host3.
+35. You are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. Server1 is a Hyper-V host that hosts a virtual machine named VM1. 
+Server1 has three network adapter cards that are connected to virtual switches named 
+vSwitch1, vSwitch2, and vSwitch3. You configure NIC Teaming on VM1. The team name 
+is VM1 NIC Team. Added to the team are Ethernet2 (10 Gbps) and Ethernet3 (10 Gbps). 
+The teaming mode is Switch Independent. What should you do if you need to ensure that 
+VM1 will retain access to the network if a physical adapter card fails on Server1?
+A. Run the Set-VMNetworkAdapterTeamMapping  cmdlet using PowerShell on VM1.
+B. Modify the settings on VM1 from Hyper-V Manager on Server1.
+C. Run the Set-VMNetworkAdapterFailoverConfiguration  cmdlet from PowerShell on 
+Server1.
+D. Add the adapter named Ethernet to the NIC Team from the properties of the NIC 
+Team on VM1.
+36. You are the administrator for your company network. You have two Windows Server 2016 
+Hyper-V hosts named Server1 and Server2. Server1 and Server2 are connected to the same 
+network. You create an external network switch named Switch1 on Server1 and Server2. 
+You have the virtual machines shown in the following table:
+Virtual Machine 
+NameIP Address Subnet Mask Hyper-V Host
+VM1 192.168.1.16 255.255.255.0 Server1
+VM2 192.168.1.32 255.255.255.0 Server2
+VM3 192.168.1.48 255.255.255.0 Server2
+
+58 Chapter 3  ■ I mplement Hyper-V
+All three virtual machines are connected to Switch1. On VM3, you need to prevent appli-
+cations from being able to capture network traffic from VM1 or VM2. The solution must 
+ensure that VM1 retains network connectivity. What should you do?
+A. Configure the VLAN ID setting of Switch1 on Server2.
+B. Create an external switch and connect VM3 to the switch on Server2.
+C. Modify the subnet mask of VM1 and VM2.
+D. Configure network virtualization for VM1 and VM2.
+37. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 has a virtual disk file named Disk1.vhdx  that  
+contains an installation to Windows Server 2016. You create a virtual disk file named 
+Disk2.vhdx  that is configured as shown:
+PS c:\ Get-VHD Path C:\folder1\Disk2.vhdx
+ComputerName  :  SERVER1
+Path :  c:\folder1\disk2.vhdx
+VHDFormat  :  VHDX
+What command should you run if you want to move Disk1.vhdx  to a new folder called  
+C: \ Folder2  and be able to use Disk2.vhdx  only after you run this command?
+A. Merge-VHD
+B. Optimize-VHD
+C. Optimize-VHDSet
+D. Set-VHD
+E. Test-VHD
+38. Y ou are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 has a virtual disk file named Disk1.vhdx  that  
+contains an installation to Windows Server 2016. You create a virtual disk file named  
+Disk2.vhdx  that is configured as shown:
+PS c:\ Get-VHD Path C:\folder1\Disk2.vhdx
+ComputerName  :  SERVER1
+Path :  c:\folder1\disk2.vhdx
+VHDFormat  :  VHDX
+What command should you run before you can copy the files directly into Disk2.vhdx ?
+A. Merge-VHD
+B. Optimize-VHD
+C. Optimize-VHDSet
+D. Set-VHD
+E. Test-VHD
+
+Chapter 3  ■ I mplement Hyper-V  59
+39. Y ou are the administrator for your company network. You are working on creating an 
+internal virtual network. You know that communication between the virtual machine 
+and the local host computer is not configured automatically. Once you install the virtual 
+machine, you need to make sure that the TCP/IP settings are defined in the virtual network 
+card. What is a way to check to see if your settings are working?
+A. Run ping  from the host machine.
+B. Run tracert  from the host machine.
+C. Run ping  from the target machine.
+D. Run tracert  from the target machine.
+40. You are the administrator for your company network. You administer a Windows Server 
+2016 server that runs Hyper-V. The computer hosts a virtual machine with multiple 
+checkpoints. The virtual machine uses one virtual CPU and 512 MB of RAM. You 
+discover that the virtual machine pauses automatically and displays the state as Paused-
+Critical. What component should you use if you need to identify the component that is 
+causing the error?
+A. There is no virtual switch defined.
+B. There is insufficient memory.
+C. There is insufficient hard disk space.
+D. There are an insufficient number of virtual processors.
+41. You are the administrator for your company network. You have a Windows Server 2016 
+computer named Server1 that has the Hyper-V feature installed. Server1 hosts a virtual 
+machine named VM1. VM1 runs Windows Server 2016. VM1 connects to a private virtual 
+network switch. What should you do from Server1 if you need to remotely execute Power-
+Shell cmdlets on VM1?
+A. Run the winrm.exe  command and specify the -s parameter.
+B. Run the Powershell.exe  command and specify the -Command  parameter.
+C. Run the Receive-PSSession  cmdlet and specify the -Name  parameter.
+D. Run the Invoke-Command  cmdlet and specify the -VMName  parameter.
+42. You are the administrator for your company network. You have a computer that runs 
+Windows Server 2012. You create a system image backup on the computer and then you 
+upgrade to Windows Server 2016. You need to access a file from the backup. What should 
+you do if you want to complete this task using the least amount of administrative effort?
+A. Add a drive from the Backup section of the Settings app.
+B. Add a drive from the File History section of the Settings app.
+C. Attach a VHD from the Computer Management console.
+D. Restore the personal files from the File History Control Panel item.
+
+60 Chapter 3  ■ I mplement Hyper-V
+43. Y ou are the administrator for your company network. You have to set up a new wireless 
+network for one of your clients. What should you do if the client wants to ensure that only 
+certain designated wireless laptops can connect to the new network to prevent misuse?
+A. Use Media Access Control (MAC) address control.
+B. Use IPv4 address control.
+C. Use Wired Equivalent Privacy (WEP).
+D. Use Wi-Fi Protected Access (WPA).
+44. You are the administrator for your company network. You are talking to a colleague regard -
+ing the Hyper-V hypervisor. What statement about the Hyper-V hypervisor is correct?
+A. The hypervisor runs in the parent partition and makes sure that the operating system 
+can host guest operating systems.
+B. The hypervisor runs in the child partition and makes sure that the operating system 
+can host guest operating systems.
+C. The hypervisor runs directly on the hardware and makes sure that guest operating sys-
+tems can be virtualized.
+D. The hypervisor runs below the hardware and makes sure that guest operating systems 
+can be virtualized.
+45. You are the administrator for your company network. You deploy a Hyper-V server in an 
+isolated test environment, which is prevented from accessing the Internet. The new server 
+runs the Datacenter edition of Windows Server 2016. You plan to deploy the following 
+guest virtual machines on the server.
+Quantity Operating System Domain Member
+10 Windows Server 2012 R2 Yes
+4 Windows Server 2016 No
+5 Windows Server 2016 Yes
+For the virtual machines, what activation model should you use?
+A. Multiple Activation Key (MAK)
+B. Automatic Virtual Machine Activation (AVMA)
+C. Original Equipment Manufacturer (OEM) key
+D. Key Management Service (KMS)
+46. You are the network administrator for your company network. You are looking at the dif-
+ferent types of hard disks available with Hyper-V. For one type of hard disk, the size of the 
+VHD file is fixed to the size specified when the disk is created. What type of hard disk is 
+being described?
+A. Dynamically expanding
+B. Fixed size
+C. Differencing
+D. Physical (or pass-through) disk
+
+Chapter 3  ■ I mplement Hyper-V  61
+47. Y ou are the administrator for your company network. You have a computer named Com-
+puter1 that has the Hyper-V feature enabled. You have two virtual machines named VM1 
+and VM2 hosted on Computer1. VM1 can communicate with VM2 and Computer1. VM1 
+fails to connect to the Internet; however, Computer1 can still connect to the Internet. What 
+should you do if you need to ensure that VM1 can connect to the Internet?
+A. On Computer1, modify the network settings.
+B. Enable port mirroring on VM1.
+C. Create an external virtual switch and configure VM1 to use the switch.
+D. On VM1, select Enable Virtual LAN Identification.
+48. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host that contains a virtual machine named VM1 that has Resource Metering 
+enabled. What cmdlet should you run if you need to use Resource Metering to track the 
+amount of network traffic that VM1 sends to the 10.0.0.0/8 network?
+A. Add-VMNetworkAdapter
+B. Set-VMNetworkAdapter
+C. New-VMResourcePool
+D. Set-VMNetworkAdapterRoutingDomainMapping
+49. Y ou are the administrator for your company network. What statement is true when you use 
+Hyper-V Manager to delete a virtual machine?
+A. You will delete the virtual machine configuration file and all related virtual disks.
+B. You will delete the virtual machine configuration file and the primary virtual disk.
+C. You will delete only the virtual machine configuration file.
+D. The virtual machine will only be removed from the Hyper-V Manager; the virtual 
+machine configuration file will still exist in the filesystem.
+50. You are the administrator for your company network. What are the minimum CPU require-
+ments in order to run Hyper-V on a machine? (Choose all that apply.)
+A. Hardware Data Execution Prevention (DEP), specifically Intel XD bit (execute disable 
+bit) or AMD NX bit (no execute bit), must be available and enabled.
+B. An x64-compatible processor with Intel VT or AMD-V technology must be enabled.
+C. Hardware Data Execution Protection (DEP) must be disabled.
+D. You must have a minimum of 1.4 GHz.
+51. You are the administrator for your company network. How do you move one virtual 
+machine from one Hyper-V server to another machine?
+A. You move the virtual machine configuration file and all related files like virtual disks 
+to the other machine and use the Import function on the target machine.
+B. You use the Export function in Hyper-V Manager, then make the export path available 
+on the target machine and use Import on the target machine.
+C. You use the Export function in Hyper-V Manager, then make the export path available 
+on the target machine and use Open Virtual Machine on the target machine.
+D. You move the virtual machine configuration file and all related files like virtual disks 
+to the other machine and use Open Virtual Machine on the target machine.
+
+62 Chapter 3  ■ I mplement Hyper-V
+52. Y ou are the administrator for your company network. You plan to utilize Hyper-V. Hyper-
+V allows your organization to do which of the following?
+A. Hyper-V gives a small company the ability to run a single server on multiple boxes and 
+compete with a company of any size.
+B. Hyper-V gives a small company the ability to run multiple servers on a single box and 
+compete with a company of any size.
+C. Hyper-V gives a small company the ability to run a single server on a single box and 
+compete with a company of any size.
+D. Hyper-V gives a small company the ability to run multiple servers on multiple boxes 
+and compete with a company of any size.
+53. You are the administrator for your company network. You are looking at the benefits of 
+using Hyper-V. Different forms of virtualization are available. Name the type of virtualiza-
+tion being described here: applications run on a different computer, and only the screen 
+information is transferred to your computer.
+A. Server virtualization
+B. Presentation virtualization
+C. Desktop virtualization
+D. Application virtualization
+54. You are the administrator for your company network. You are looking at the benefits of 
+using Hyper-V. Different forms of virtualization are available. Name the type of virtualiza-
+tion being described here: enables multiple servers to run on the same physical server and is 
+a tool that allows you to move physical machines to virtual machines and manage them on 
+a few physical servers.
+A. Server virtualization
+B. Presentation virtualization
+C. Desktop virtualization
+D. Application virtualization
+55. You are the administrator of your company network. You are planning on running Hyper-
+V, but you are not sure what guest operating system versions (32- or 64-bit) it supports. 
+What guest operating system versions can Hyper-V run?
+A. 32-bit only
+B. 64-bit only
+C. 128-bit only
+D. Both 32-bit and 64-bit
+
+Chapter 3  ■ I mplement Hyper-V  63
+56. Y ou are the administrator of your company network. You are planning on running Hyper-
+V Server. You know that Hyper-V allows for support for symmetric multiprocessors. What 
+is the maximum number of processors that Hyper-V Server can use in a virtual machine 
+environment?
+A. 28
+B. 36
+C. 64
+D. 128
+57. You are the administrator for your company network. You are planning on installing 
+Hyper-V, and one of its key features allows you to install virtual machines on a properly 
+activated Windows Server 2016 system without the need to manage individual product keys 
+for each virtual machine. What key feature is being described?
+A. Automatic Virtual Machine Activation (AVMA)
+B. Discrete Device Assignment (DDA)
+C. Virtual Machine Queue (VMQ)
+D. Non-Uniform Memory Access (NUMA)
+58. You are the administrator for your company network. You are planning on installing 
+Hyper-V. You understand that certain hardware requirements must be met. What is  
+Microsoft’s recommended minimum amount of RAM needed to run Hyper-V?
+A. 2 GB
+B. 4 GB
+C. 6 GB
+D. 8 GB
+59. You are the administrator for your company network. You are planning on installing 
+Hyper-V. You understand that certain software requirements must be met. There are three 
+editions of Windows Server that Hyper-V can run on. What are they? (Choose three.)
+A. Windows Server 2016 Standard Edition
+B. Windows Server 2016 Datacenter Edition
+C. Windows Server 2016 Nano Server Edition
+D. Microsoft Hyper-V Server 2012 R2 Edition
+60. You are the administrator for your company network. You are managing your virtual net-
+works using Virtual Switch Manager, which allows you to create, manage, and delete vir-
+tual switches. Virtual Switch Manager allows you to define the type of network. Name the 
+network type described here: this option allows virtual machines to communicate with each 
+other and with the host system, but not with the physical network.
+A. External
+B. Private
+C. Internal
+D. Public
+
+64 Chapter 3  ■ I mplement Hyper-V
+61. Y ou are the administrator for your company network. You know that Hyper-V offers vari-
+ous types of hard disks to use. Name the one described here: this type of disk is associated 
+in a parent-child relationship with another disk.
+A. Dynamically expanding
+B. Fixed size
+C. Differencing
+D. Physical (pass-through)
+62. You are the administrator for your company network. You know that Hyper-V offers vari-
+ous types of hard disks to use. Name the one described here: this type provides the highest 
+performance of all disk types and thus should be used for production servers where perfor-
+mance is the top priority.
+A. Dynamically expanding
+B. Fixed size
+C. Differencing
+D. Physical (pass-through)
+63. You are the administrator for your company network. You want to boot a Linux operating 
+system with the Secure Boot option enabled in a virtual machine. What must you do if this 
+will be the first time you boot the OS?
+A. Set -BootOrder  to HardDiskDrive .
+B. Configure the virtual machine to use the Microsoft UEFI Certificate Authority.
+C. You can’t enable Secure Boot with Linux.
+D. Set -EnableSecureBoot  without specifying a template.
+64. You are the administrator for your company network. You are creating a Nano server 
+image named Nano1.vhdx  by using the New-NanoServerImage  cmdlet. You attach 
+Nano1.vhdx  to a Generation 1 virtual machine named Nano1. When you start Nano1, 
+you get the following error message: “Boot failure. Reboot and select proper Boot device 
+or Insert Boot Media in selected Boot device.” What should you do if you need to  
+successfully start Nano server?
+A. Attach Nano1.vhdx  to a SCSI controller.
+B. Recreate Nano1 as a Generation 2 virtual machine.
+C. Increase the memory of Nano1 to 512 MB.
+D. Modify the BIOS settings of Nano1.
+65. You are the administrator for your company network. You plan on using NIC Teaming 
+when setting up your virtualization as a way to have load balancing with Hyper-V. What is 
+the maximum number of network adapters that you can include in a NIC Team?
+A. 16
+B. 32
+C. 64
+D. 128
+
+Chapter 3  ■ I mplement Hyper-V  65
+66. Y ou are the administrator for your company network. You plan on using NIC Teaming. As 
+an administrator, you can configure NIC Teaming in different configuration models. Those 
+models include which of the following? (Choose all that apply.)
+A. Switch Separated
+B. Switch Subordinate
+C. Switch Independent
+D. Switch Dependent
+67. You are the administrator for your company network. You plan on setting up Storage 
+Quality of Service (QoS). You can use Storage QoS in Windows Server 2016 to accomplish 
+which of the following? (Choose all that apply.)
+A. Relieve problem neighbor issues.
+B. Monitor end-to-end storage performance.
+C. Manage Storage I/O per workload needs.
+D. Allow the guest operating system to communicate with host devices.
+68. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 hosts a virtual machine named VM1. VM1 is in a 
+workgroup. VM1 is currently in a running state. You need to create 10 copies of VM1 on 
+Server1 in the least amount of time possible. What cmdlets should you use?
+A. Stop-VM  and then Import-VM
+B. Export-VM  and then Import-VM
+C. Checkpoint-VM  and then New-VM
+D. Copy-VMFile  and then New-VM
+69. Y ou are the administrator for your company network. Your network contains two Hyper-
+V servers named Server1 and Server2. Server1 has Windows Server 2012 R2 installed and 
+Server2 has Windows Server 2016 installed. You perform a live migration of a virtual 
+machine named VM1 from Server1 to Server2. What three PowerShell cmdlets should you 
+run if you need to create a production checkpoint for VM1 on Server2? (Choose three.)
+A. Set-VM
+B. Update-VMVersion
+C. Checkpoint-VM
+D. Set-VMHost
+E. Stop-VM
+70. Y ou are the administrator for your company network. You would like to use PowerShell to 
+configure features of the virtual network adapter in a virtual machine or the management 
+operating system. What PowerShell cmdlet should you use?
+A. Set-VMNetworkAdapter
+B. New-VMNetworkAdapter
+C. Get-VMNetworkAdapter
+D. Add-VMNetworkAdapter
+
+66 Chapter 3  ■ I mplement Hyper-V
+71. Y ou are the administrator for your company network. You are planning on using Switch 
+Embedded Teaming (SET). SET allows an administrator to combine a group of physical 
+adapters into software-based virtual adapters. What is the maximum number of adapters 
+that can be part of a SET?
+A. 4
+B. 8
+C. 12
+D. 16
+72. You are the administrator for your company network. You are planning on using Switch 
+Embedded Teaming (SET). Which of the following is true when setting up SET?
+A. All network adapters that are members of the SET group can be different adapters.
+B. All network adapters that are members of the SET group must be from different  
+manufacturers.
+C. There are no requirements when it comes to the adapter types.
+D. All network adapters that are members of the SET group must be identical adapters.
+73. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. You have two network adapter cards on Server1 that are 
+Remote Direct Memory Access (RDMA)-capable. You need to combine the bandwidth  
+of the network adapter cards for a virtual machine on Server1. You must ensure that the 
+virtual machine can use the RDMA capabilities of the network adapter cards. What  
+PowerShell command should you run first?
+A. Add-NetLbfoTeamNic
+B. Add-VMNetworkAdapter
+C. New-NetLbfoTeam
+D. New-VMSwitch
+74. Y ou are the administrator for your company network. You have a Hyper-V server that is 
+running a Generation 1 Windows Server 2016 virtual machine. You need to add another 
+hard drive to the virtual machine. The Hyper-V server has 1 TB of available free space for 
+another hard drive. When you try to add the hard drive to the virtual machine, the options 
+are grayed out. What do you need to do to add the hard drive to the virtual machine?
+A. Go to the virtual machine settings and use the New Hard Drive Wizard.
+B. On the Hyper-V host, add the hard drive to the virtual machine by using Disk  
+Management.
+C. Shut down the virtual machine, then go into the virtual machine settings and use the 
+New Hard Drive Wizard to add the drive.
+D. You cannot add another hard drive to an existing virtual machine.
+
+Chapter 3  ■ I mplement Hyper-V  67
+75. Y ou are the administrator for your company network. You manage a computer that runs 
+Windows Server 2016 and has Hyper-V enabled. You create two virtual machines that can 
+communicate with each other and with the host operating system. The virtual machines are 
+not able to connect to the Internet. What should you do if you need to ensure that the vir-
+tual machines can connect to the Internet?
+A. Create an external virtual switch.
+B. Configure the MAC Address Range.
+C. Configure NUMA Spanning.
+D. Configure Enhanced Session Mode.
+76. You are the administrator for your company network. You are planning on installing Hyper-V, 
+and one of the key features allows a processor to access its local memory more quickly than 
+memory located on another processor. It allows a system to access memory quickly by provid -
+ing separate memory on each processor. What key feature is being described?
+A. Automatic Virtual Machine Activation (AVMA)
+B. Discrete Device Assignment (DDA)
+C. Virtual Machine Queue (VMQ)
+D. Non-Uniform Memory Access (NUMA)
+77. You are the administrator for your company network. You are planning on installing 
+Hyper-V. You know that Hyper-V provides a virtualization layer that runs directly on the 
+system hardware. What is this layer of the microkernel architecture called?
+A. Hypervisor
+B. Hyper Virtual Machine Assistant
+C. Hyper Virtual Assistant
+D. Virtual Assistant
+78. You are the administrator for your company network. You are planning on installing 
+Hyper-V, and one of the key features is Enhanced Session Mode, which enhances the inter-
+active session of the Virtual Machine Connection for Hyper-V administrators who want to 
+connect to their virtual machines. Enhanced Session Mode gives administrators benefits for 
+ . (Fill in the blank.)
+A. Remote resource redirection
+B. Remote device redirection
+C. Local resource redirection
+D. Local device redirection
+79. You are the administrator for your company network. You are planning on installing  
+Hyper-V, and you have heard of a new feature of Hyper-V in Windows Server 2016 that allows 
+you to run a virtual machine within a virtual machine. What is this new feature called?
+A. Virtual machine queue
+B. Hyper-V nesting
+C. Network isolation
+D. Shared virtual hard disk
+
+68 Chapter 3  ■ I mplement Hyper-V
+80. Y ou are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 connects to your corporate network. The corporate 
+network uses the 10.10.0.0/16 address space. Server1 hosts a virtual machine named VM1; 
+VM1 is configured to have an IP address of 172.16.1.54/16. You need to ensure that VM1 
+can access the resources on the corporate network. What should you connect VM1 to?
+A. An external virtual switch
+B. An internal virtual switch
+C. A private virtual switch
+D. A public virtual switch
+81. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 connects to your corporate network. The corporate 
+network uses the 10.10.0.0/16 address space. Server1 hosts a virtual machine named VM1, 
+which is configured to have an IP address of 172.16.1.54/16. You need to ensure that VM1 
+can access the resources on the corporate network. What should you run on Server1?
+A. Add-VMNetworkAdapterRoutingDomainMapping
+B. Get-VMNetworkAdapterRoutingDomainMapping
+C. Netsh.exe
+D. Route.exe
+82. Y ou are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server 1 hosts a virtual machine named VM1 that runs 
+Windows Server 2016. Server1 has a USB 3.0 device attached to a PCI Express (PCIe) bus. 
+What three actions should you perform if you need to provide VM1 with pass-through 
+access to the USB 3.0 device? (Choose three.)
+A. Run the Dismount-VMHostAssignableDevice  cmdlet on Server1.
+B. Run the Add-VMAssignableDevice  cmdlet on Server1.
+C. Run the Disable-PnPDevice  cmdlet on Server1.
+D. Run the Enable-PnPDevice  cmdlet on VM1.
+E. Run the Mount-VMHostAssignableDevice  cmdlet on VM1.
+83. You are the administrator for your company network. You have two Windows Server 2016 
+Hyper-V hosts named Server1 and Server2. Server1 hosts a virtual machine named VM1 
+that is in a Running state. On Server1, you export VM1 and then you import VM1 on 
+Server2. On Server2, what is the current state of VM1?
+A. Off
+B. Saved
+C. Running
+D. Paused
+
+Chapter 3  ■ I mplement Hyper-V  69
+84. Y ou are the administrator for your company network. Hyper-V provides two tools that 
+allow you to manage virtual hard disks. These tools can be found on the Action pane in 
+Hyper-V Manager. What are these two tools? (Choose two.)
+A. Examine Disk
+B. Inspect Disk
+C. Edit Disk
+D. Manage Disk
+85. You are the administrator for your company network. Windows Server 2016 Hyper-V has 
+a feature that is used to bridge the memory gap between minimum memory and startup 
+memory. This allows your virtual machines to restart properly. What is the name of this 
+feature?
+A. Smart Paging
+B. Checkpoints
+C. Memory
+D. Integration Services
+
+Chapter 
+4Implement Windows 
+Containers
+The follo WIng MCSA W IndoWS Server 
+2016 exAM TopICS Are Covered In ThIS 
+ChApTer:
+✓ ✓4.1 D eploy Windows containers
+✓■This objective may include but is not limited to: Determine 
+installation requirements and appropriate scenarios for 
+Windows Containers; install and configure Windows Server 
+container host in physical or virtualized environments; install 
+and configure Windows Server container host to Windows 
+Server Core or Nano Server in a physical or virtualized 
+environment; install Docker on Windows Server and Nano 
+Server; configure Docker startup options; install PowerShell 
+for Docker; install a base container image; tag an image; 
+remove a container; create Windows Server containers; 
+create Hyper-V Containers
+✓ ✓4.2 M anage Windows containers
+✓■This objective may include but is not limited to: Manage 
+Windows containers by using Docker CLI and PowerShell for 
+Docker; manage container networking; manage container 
+data volumes; manage Resource Control; create new 
+container images using Dockerfile; manage container images 
+using Docker Hub repository for public and private scenarios; 
+manage container images using Microsoft Azure
+
+72 Chapter 4  ■ I mplement Windows Containers
+1. Y ou are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V server named Server1. Server1 has an IP address of 192.168.1.78 and has a 
+container named Container1 that hosts a web application on port 84. Container1 has 
+an IP address of 172.16.5.6 and a port mapping from port 80 on Server1 to port 84 on 
+Container1. You have a server named Server2 that has an IP address of 192.168.1.79. To 
+what IP address and port should you connect if you need to connect to the web application 
+from Server2?
+A. 192.168.1.78:84
+B. 192.168.1.78:80
+C. 172.16.5.6:80
+D. 172.16.5.6:84
+2. You are the administrator for your company network. You have a Windows Server 2016 
+Hyper-V host named Server1. Server1 has a virtual machine named VM1 that is configured 
+to run the Docker daemon. On VM1 you have a container network that uses transparent 
+mode. What should you do if you need to ensure that containers that run on VM1 can 
+obtain IP addresses from DHCP?
+A. Run docker network connect  on Server1.
+B. Run docker network connect  on VM1.
+C. Run Get-VMNetworkAdapter-VMName VM1| Set-VMNetworkAdapter- 
+MacAddressSpoofing On  on VM1.
+D. Run Get-VMNetworkAdapter-VMName VM1| Set-VMNetworkAdapter- 
+MacAddressSpoofing On  on Server1.
+3. You are the administrator for your company network. You have a Windows Server 2016 
+server named Server1 and you install the Docker daemon. What should you do if you need 
+to configure the Docker daemon to accept connections only on TCP port 64500?
+A. Edit the daemon.json  file.
+B. Edit the configuration JSON file.
+C. Run the New-NetFirewallRule  cmdlet.
+D. Run the Set-Service  cmdlet.
+4. You are the administrator for your company network. You have a Windows Server 2016 
+server named Server1. You plan to deploy Internet Information Services (IIS) in a Windows 
+container. What three actions should you perform if you need to prepare Server1 for the 
+planned deployment? (Choose three.)
+A. Install the Hyper-V Server role.
+B. Install the Base Container images.
+C. Install the Container feature.
+D. Install the Web Server role.
+E. Install Docker.
+
+Chapter 4  ■ I mplement Windows Containers  73
+5. Y ou are the administrator for your company network. You are discussing container types 
+with a colleague. Which container type provides application isolation through process 
+and namespace isolation technology and shares a kernel with the container host and all 
+containers running on the host?
+A. Hyper-V Container
+B. Windows Server Container
+C. Docker Container
+D. Docker Daemon Container
+6. You are the administrator for your company network. You have a Windows Server 2016 server 
+named Server1 that runs the Docker daemon. What should you do if you need to ensure that 
+members of a security group named Docker Administrators can administer Docker?
+A. Run the sc privs  command.
+B. Edit the daemon.json  file.
+C. Add Docker Administrators to the local Administrators group.
+D. Edit the configuration.json  file.
+7. You are the administrator for your company network. You have a Windows Server 2016 
+container host named Server1. What parameter should you use with the docker run  
+command if you need to start a Hyper-V Container on Server1?
+A. ––entrypoint
+B. ––expose
+C. ––runtime
+D. ––isolation
+E. ––privileged
+8. Y ou are the administrator for your company network. You have a Windows Server 2016 
+container host named Server1. On Server1, you create a container named Container1. What 
+should you run if you need to mount C:\ContainerFiles  from Server1 to Container1?
+A. dockerd ––storage-opt dm.mountopt=ContainerFiles Container1
+B. docker run -it -vC:\ContainerFiles:c:\ContainerFiles Container1
+C. dockerd ––storage-opt dm.datadev=/c/ContainerFiles Container1
+D. docker run -it -v c:\ContainerFiles Container1
+9. Y ou are the administrator for your company network. You have a Windows Server 2016 
+server named Server1 that has the Containers feature installed. You create a text file that 
+contains the commands that will be used to automate the creation of new containers. What 
+should you name the file if you need to ensure that the commands in the text file are used 
+when you create new containers?
+A. Bootstrap.ini
+B. Config.ini
+C. Dockerfile
+D. Unattend.txt
+
+74 Chapter 4  ■ I mplement Windows Containers
+10. Y ou are the administrator for your company network. You have a Windows Server 2016 
+Nano Server named Nano1. You deploy several containers to Nano1 that use an image 
+named Image1. What should you run if you need to deploy a new container to Nano1 that 
+uses Image1?
+A. The docker run  command
+B. The docker load  command
+C. Install-NanoServerPackage  cmdlet
+D. Install-WindowsFeature  cmdlet
+11. You are the administrator for your company network. You are having a discussion with a 
+colleague regarding the use of Docker and Windows Containers. Which of the following 
+statements is true?
+A. The Docker application does not need to be installed to work with Windows 
+Containers.
+B. The Docker application does need to be installed to work with Windows Containers.
+C. Neither needs to be installed; they are both already installed by default.
+D. Each operates separately and they do not work together.
+12. You are the administrator for your company network. You are discussing the Docker 
+Restart Policy with a colleague. What is the default setting for a container when working 
+with the Docker Restart Policy?
+A. always
+B. on-failure[:max-retries]
+C. no
+D. unless-stopped
+13. Y ou are the administrator for your company network. One of the advantages of using 
+Docker is that you can go to Docker’s website to look at the different images that are avail-
+able. There are images for operating systems, applications, and software. But what happens 
+if you can’t find an image that meets your needs?
+A. You must find the image template that best matches your needs.
+B. Just create your own Dockerfile.
+C. Just pick the image template that most closely resembles what you are looking for.
+D. There is nothing you can do.
+14. You are the administrator for your company network. You and a colleague are discussing 
+how Windows Containers differ from Hyper-V Containers. Which statement is true?
+A. There are no differences.
+B. Windows Containers utilize their own instance of the Windows kernel and Hyper-V 
+Containers share the system’s kernel between all containers and the host.
+C. Windows Containers utilize their own instance of the Windows kernel and Hyper-V 
+Containers utilize the system’s kernel on just the host.
+D. Windows Containers share the system’s kernel between all containers and the host and 
+Hyper-V Containers utilize their own instance of the Windows kernel.
+
+Chapter 4  ■ I mplement Windows Containers  75
+15. Y ou are the administrator for your company network. You have just installed Docker. 
+When you install Docker, how many networks are created automatically?
+A. 1
+B. 2
+C. 3
+D. 4
+16. You are the administrator for your company network. You and a colleague are discussing 
+the Azure Container Service and what it can be used for. Which statement is true?
+A. The Azure Container Service uses proprietary scheduling and management tools.
+B. The Azure Container Service uses open source scheduling and management tools.
+C. The Azure Container Service uses commercial scheduling and management tools.
+D. The Azure Container Service uses registered scheduling and management tools.
+17. You are the administrator for your company network. You want to view the information 
+about containers. What PowerShell cmdlet will allow you to view that information?
+A. Get-ContainerHost
+B. Get-ContainerNetworkAdapter
+C. Get-ContainerImage
+D. Get-Container
+18. Y ou are the administrator for your company network. You are discussing Dockerfile 
+commands with a colleague. What Dockerfile command allows you to create a mount point 
+and externally mounted volumes from host systems or other containers?
+A. Volume
+B. Onbuild
+C. Expose
+D. Run
+19. Y ou are the network administrator for your company network. The company has decided to start 
+using containers. What command would you use to create a new container?
+A. docker build container
+B. docker create
+C. docker new
+D. docker build
+20. Y ou are the network administrator for your company network. The company has decided 
+to start using containers. You have created some images. Now you’d like to see the images 
+you created. What command allows you to see your images?
+A. docker see
+B. docker images
+C. docker info
+D. docker view
+
+76 Chapter 4  ■ I mplement Windows Containers
+21. Y ou are the network administrator for your company network. The company has decided 
+to start using containers. You need to build and use a Dockerfile. What command would 
+you use if you need to compile and create an image using the Dockerfile?
+A. docker build
+B. docker run
+C. docker compile
+D. docker rm
+22. Y ou are the network administrator for your company network. The company has decided 
+to start using containers. You need to build and use a Dockerfile. What command would 
+you use if you need to execute commands within the Dockerfile?
+A. docker build
+B. docker run
+C. docker compile
+D. docker rm
+23. Y ou are the network administrator for your company network. The company has decided 
+to start using containers. You need to build and use a Dockerfile. What command would 
+you use if you need to delete a container?
+A. docker delete
+B. docker kill container
+C. delete-docker-Container
+D. remove-container
+24. Y ou are the network administrator for your company network. The company has decided 
+to start using containers. You need to build a new image using Windows Server Core. What 
+command would you use to get a Windows Server Core image?
+A. docker get microsoft/windowsservercore
+B. docker run microsoft/windowsservercore
+C. docker pull microsoft/windowsservercore
+D. docker build microsoft/windowsservercore
+25. Y ou are the administrator for your company network. The company has decided to start 
+using containers. Your supervisor wants to know which client operating systems can host 
+containers. Which of the following client operating systems do you tell him? (Choose all 
+that apply.)
+A. Windows 7 Professional
+B. Windows 8.1 Enterprise
+C. Windows 10 Home
+D. Windows 10 Enterprise (Anniversary Update)
+E. Windows Server 2016
+
+Chapter 4  ■ I mplement Windows Containers  77
+26. Y ou are the administrator for your company network. The network contains an Active 
+Directory domain. The domain contains a Windows Server 2016 server named Server1. 
+Server1 allows inbound connectivity from all computers in the domain. Server1 has an IP 
+address of 192.168.0.10 and hosts a Windows container named Container1. Container1 
+hosts a website that is accessible on port 80. You need to ensure that you can use the 
+Docker client to manage Container1 from any computer in the domain. What four cmdlets 
+should you run? (Choose four.)
+A. Restart-Service docker
+B. New-ContainerNetwork- Name nat1 -Mode NAT-SubnetPrefix 192.168.0.0/24 
+-GatewayAddress 192.168.0.10
+C. Add-Content 'c:\programdata\docker\config\daemon.json' '{"hosts": 
+["tcp://127.0.0.1:80", "npipe://"]}'
+D. Add-Content 'c"\programdata\docker\config\daemon.json' '{"hosts": 
+[tcp://0.0.0.0:2375", npipe://" ] }']
+E. New-Item-Type File c:\programData\docker\config\daemon.json
+27. Y ou are the administrator for your company network. The network has a main office and 
+three branch offices and consists of an Active Directory domain. The main office contains 
+three domain controllers and each branch office has one domain controller. You discover 
+that the new settings in the Default Domain Policy are not applied in one of the branch 
+offices, but all other Group Policy Objects (GPOs) are applied. What should you do from 
+a domain controller in the main office if you need to check the replication of the Default 
+Domain Policy for the branch office?
+A. From Group Policy Management, click Default Domain Policy and then open the 
+Details tab.
+B. From Group Policy Management, click Default Domain Policy and then open the  
+Scope tab.
+C. Run repadmin.exe  from a command prompt.
+D. Run dcdiag.exe  from a command prompt.
+28. You are the administrator for your company network. You and a colleague are discussing 
+Windows Containers. Which of the following statements is true regarding Windows Containers?
+A. They are independent and isolated environments that run an operating system.
+B. They are independent and isolated environments that support user Home Folders.
+C. They are dependent and non-isolated environments that run an operating system.
+D. They are dependent and non-isolated environments that support user Home Folders.
+29. You are the administrator for your company network. You are discussing container types 
+with a colleague. Which container type runs within a virtual machine, and the container 
+host’s kernel is not shared between the other containers?
+A. Hyper-V Container
+B. Windows Server Container
+C. Docker Container
+D. Docker Daemon Container
+
+78 Chapter 4  ■ I mplement Windows Containers
+30. Y ou are the administrator for your company network. You are discussing Container 
+components with a colleague. Which component can be on a physical or virtual machine, 
+and is configured with the Windows Container feature?
+A. Container Image
+B. Container Host
+C. Container OS Image
+D. Container Registry
+31. You are the administrator for your company network. You are discussing Container 
+components with a colleague. Which component contains all of the layers of the container?
+A. Container Image
+B. Container Host
+C. Container OS Image
+D. Container Registry
+32. You are the administrator for your company network. You are discussing Container 
+components with a colleague. Your colleague is telling you about the component that runs 
+the Docker application. What is this component called?
+A. Container Registry
+B. Docker daemon
+C. Dockerfile
+D. Docker Hub repositories
+33. You are the administrator of your company network. You are planning on using containers 
+on a virtualized network. You currently have the Hyper-V role installed on the system 
+and have the Windows Server 2016 operating system installed. You are concerned that 
+you might not have enough RAM. What is the minimum amount of RAM required to run 
+containers in a virtualized network?
+A. 2 GB
+B. 4 GB
+C. 6 GB
+D. 8 GB
+34. You are the administrator for your company network. The company has decided to start 
+using containers. You want to see what version of Windows you have installed because you 
+know that the operating system on the host machine must match the operating system of 
+the Windows Container. What is one tool can you use to see what version of Windows is 
+currently installed on the host machine?
+A. repadmin.exe
+B. dcdiag.exe
+C. regedit.exe
+D. perfmon.exe
+
+Chapter 4  ■ I mplement Windows Containers  79
+35. Y ou are the administrator for your company network. The company has decided to install 
+Docker. Which of the following statements regarding Docker are true? (Choose all that 
+apply.)
+A. It is a software package that allows you to create and manipulate containers and images.
+B. It is a hardware package that allows you to create and manipulate containers and images.
+C. It is a third-party application that Microsoft uses for containers.
+D. It consists of a Docker engine and a Docker client (Docker daemon).
+36. You are the administrator for your company network. The company has decided to 
+start using containers. You need to find out which version of Windows is installed on 
+the host machine. What registry key should you search for to see the version currently 
+installed?
+A. HKEY_LOCAL_MACHINE\Software\Microsoft\Windows 10\CurrentVersion
+B. HKEY_LOCAL_MACHINE\Software\Microsoft\Windows 2016\CurrentVersion
+C. HKEY_LOCAL_MACHINE\Software\Microsoft\Windows \CurrentVersion
+D. HKEY_LOCAL_MACHINE\Software\Microsoft\Windows NT\CurrentVersion
+37. Y ou are the administrator for your company network. You have installed Docker. There are 
+some Docker switches that can be used. The Docker switches can be run in PowerShell or 
+at an elevated command prompt. Which command allows an administrator to debug and 
+build a new image?
+A. docker attack
+B. docker build
+C. docker commit
+D. docker deploy
+38. Y ou are the administrator for your company network. You have installed Docker. There are 
+some Docker switches that can be used. The Docker switches can be run in PowerShell or at 
+an elevated command prompt. Administrators use which command to create and modify a 
+stack?
+A. docker attack
+B. docker build
+C. docker commit
+D. docker deploy
+39. Y ou are the administrator for your company network. You have installed Docker. You 
+plan on using the Docker command that allows you to copy files and folders between the 
+container and the local computer system. What command do you use?
+A. docker copy
+B. docker cp
+C. docker create
+D. docker replicate
+
+80 Chapter 4  ■ I mplement Windows Containers
+40. Y ou are the administrator for your company network. You have installed Docker. You 
+plan on using the Docker command that allows you to view all of the containers. What 
+command do you use?
+A. docker ps
+B. docker examine
+C. docker containers
+D. docker replicate
+41. Y ou are the administrator for your company network. You are discussing the Docker 
+Restart Policy with a colleague. What Docker Restart Policy setting will try to restart the 
+container indefinitely as well as always start on daemon startup?
+A. always
+B. on-failure[:max-retries]
+C. no
+D. unless-stopped
+42. Y ou are the network administrator for your company network. The company has decided 
+to start using containers. You want to look to see if any containers are currently running. 
+What command will allow you to see which containers are running?
+A. docker see
+B. docker images
+C. docker info
+D. docker view
+43. Y ou are the administrator for your company network. You have installed Docker. You 
+plan on using the Docker command that allows you to pull an image from a registry. What 
+command do you use?
+A. docker pull
+B. docker push
+C. docker ps
+D. docker run
+44. Y ou are the network administrator for your company network. The company has decided 
+to start using containers. You have decided to delete an image from a container. What 
+command would you use to delete an image from a container?
+A. docker remove
+B. docker delete
+C. docker rmv
+D. docker rm
+
+
+[Note: PDF has 434 pages, only first 100 pages extracted]

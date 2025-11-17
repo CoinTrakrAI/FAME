@@ -1,0 +1,2010 @@
+Wireshark
+®
+ 101
+Essential Skills for Network Analysis
+1
+st
+ Edition
+Always ensure you have proper authorization before you listen to and capture network traffic.
+Protocol Analysis Institute, Inc
+5339 Prospect Road, # 343
+San Jose, CA 95129 USA
+www.packet-level.com
+Chappell University
+info@chappellU.com
+www.chappellU.com
+Copyright 2013, Protocol Analysis Institute, Inc., dba Chappell University. All rights reserved. No
+part of this Student Manual, or related materials, including interior design, cover design, and contents
+of the book web site, 
+www.wiresharkbook.com
+, may be reproduced or transmitted in any form, by any
+means (electronic, photocopying, recording, or otherwise) without the prior written permission of the
+publisher.
+To arrange bulk purchase discounts for sales promotions, events, training courses, or other purposes,
+please contact Chappell University via email (
+info@wiresharkbook.com
+), phone (1-408-378-7841), or
+mail (5339 Prospect Road, #343, San Jose, CA 95129).
+Book URL
+: 
+www.wiresharkbook.com
+13-digit ISBN
+: 978-1-893939-73-8
+10-digit ISBN
+: 1-893939-73-1
+(Version 1.0a)
+Distributed worldwide for Chappell University through Protocol Analysis Institute, Inc. Protocol
+Analysis Institute, Inc. is the exclusive educational materials developer for Chappell University.
+For general information on Chappell University or Protocol Analysis Institute, Inc., including
+information on corporate licenses, updates, future titles, or courses, contact the Protocol Analysis
+Institute, Inc., at 408/378-7841 or send email to 
+info@wiresharkbook.com
+.
+For authorization to photocopy items for corporate, personal, or educational use, contact Protocol
+Analysis Institute, Inc., at 
+info@wiresharkbook.com
+.
+Trademarks.
+ All brand names and product names used in this book or mentioned in this course are
+trade names, service marks, trademarks, or registered trademarks of their respective owners.
+Wireshark and the "fin" logo are registered trademarks of the Wireshark Foundation.
+
+Limit of Liability/Disclaimer of Warranty
+. The author and publisher have used their best efforts in
+preparing this book and the related materials used in this book. Protocol Analysis Institute, Inc.,
+Chappell University, and the author(s) make no representations or warranties of merchantability of
+fitness for a particular purpose. Protocol Analysis Institute, Inc., and Chappell University assume no
+liability for any damages caused by following the instructions or using the techniques or tools listed in
+this book or related materials used in this book. Protocol Analysis Institute, Inc., Chappell University,
+and the author(s) make no representations or warranties that extend beyond the descriptions contained
+in this paragraph. No warranty may be created or extended by sales representatives or written sales
+materials. The accuracy or completeness of the information provided herein and the opinions stated
+herein are not guaranteed or warranted to produce any particular result and the advice and strategies
+contained herein may not be suitable for every individual. Protocol Analysis Institute, Inc., Chappell
+University, and author(s) shall not be liable for any loss of profit or any other damages, including
+without limitation, special, incidental, consequential, or other damages.
+Copy Protection
+. In all cases, reselling or duplication of this book and related materials used in this
+training course without explicit written authorization is expressly forbidden. We will find you, ya
+know. So don't steal or plagiarize this book.
+
+Acknowledgments
+There are many people who were directly and indirectly involved in building the concept of this lab-
+based book, hashing out the Table of Contents, reviewing the chapters, and testing the labs. Your time
+and patience (through never-ending revisions and updates) is truly appreciated.
+Lanell Allen
+Jim Aragon
+Brenda Cardinal
+Tobias Clary
+Gerald Combs
+Joy DeManty
+John Gonder
+Jennifer Keels
+Kayla Smith
+John Wright
+I would especially like to thank Jim Aragon for his meticulous technical and grammatical expertise.
+Jim, you are my "style guru!" <grin>
+Special thanks to the following individuals who offered encouraging quotes for readers beginning
+their Wireshark journey or honing their skills with this book.
+Lanell Allen, Wireshark Certified Network Analyst
+™
+Richard Bejtlich, Chief Security Officer, Mandiant
+Sake Blok, Wireshark Core Developer and SYN-bit Founder
+Anders Broman, Wireshark Core Developer and System Tester at Ericsson
+Loris Degioanni, Creator of WinPcap and Cascade Pilot
+®
+Betty DuBois, Chief Detective of Network Detectives and Certified Wireshark University
+Instructor
+Tony Fortunato, Senior Network Performance Specialist, The Technology Firm
+Lionel Gentil, iTunes Software Reliability Engineer, Apple, Inc.
+John Gonder, Cisco Academy Director, Las Positas College
+Jennifer Keels, CNP-S, CEH, Network Engineer
+Gordon "Fyodor" Lyon, Founder of the open source Nmap Security Scanner project
+Steven McCanne, CTO and Executive Vice President, Riverbed
+As always, my sincere thanks to the 
+Wireshark Core Developers
+ who have built Wireshark into an
+indispensable tool. The current list of core developers can be found at 
+wiki.wireshark.org/Developers
+.
+If I've missed anyone in this acknowledgments section, I apologize sincerely.
+
+Dedication
+This book is dedicated to Ginny and Scott. Thanks for keeping me laughing!
+Oh... and special thanks to my Mom (who just asked "Am I in the new book?"). Here you are, Mom.
+Jeez... subtle <grin>.
+Now that I've mentioned my Mom, I'd better keep the peace in the family by thanking my Dad (likely
+the topic of another book someday).
+
+About this Book
+
+Who is this Book For?
+This book is written for beginner analysts. This book provides an ideal starting point whether you are
+interested in analyzing traffic to learn how an application works, you need to troubleshoot slow
+network performance, or determine whether a machine is infected with malware.
+Learning to capture and analyze communications with Wireshark will help you really understand how
+TCP/IP networks function. As the most popular network analyzer tool in the world, the time you spend
+honing your skills with Wireshark will pay off when you read technical specs, marketing materials,
+security briefings, and more.
+This book can also be used by current analysts who need to practice the skills contained in this book.
+In essence, this book is for anyone who really wants to know what's happening on their network.  
+
+What Prerequisite Knowledge do I Need?
+Before you delve into this book (or network analysis in general), you should have a solid
+understanding of basic network concepts and TCP/IP fundamentals. For example, you should know the
+purpose of a switch, a router, and a firewall. You should be familiar with the concepts of Ethernet
+networking, basic wireless networking, and be comfortable with IP network addressing, as well.
+There are a few spots in this book where you will need to access the command prompt to set a path to
+an application directory or to run basic command-line tools such as 
+ipconfig/ifconfig
+, 
+ping
+, or 
+trace
+route
+. If you are unfamiliar with these tools, there are plenty of resources on the Internet to show you
+how they work on various platforms.
+You will find a 
+Network Analyst's Glossary
+ at the back of the book. This glossary covers many of the
+terms and technology mentioned in the book. For example, if you aren't familiar with WinPcap when
+it's discussed in the book, just flip to the 
+Network Analyst's Glossary
+ to learn more.
+
+What Version of Wireshark does this Book Cover?
+This book was written using several Wireshark 1.8.x versions and the development version of
+Wireshark 1.9.x (which is the development version leading to Wireshark 1.10). Several key features
+were added during the development of Wireshark 1.9.x including new name resolution configuration
+options and packet comment exporting. These features are documented in this book where appropriate.
+
+Where Can I Get the Book Trace Files?
+Probably your first step should be to download the book trace files and other supplemental files from
+www.wiresharkbook.com
+. Click the Wireshark 101 book link and download the entire set of
+supplemental files. You should follow along with each of the labs to practice the skills covered in each
+section.
+If you have questions regarding the book or the book web site, please send them to
+info@wiresharkbook.com
+.
+
+Where Can I Learn More about Wireshark and Network
+Analysis?
+Download or watch Laura's free four-part Wireshark 101 course online at the All Access Pass portal
+(
+www.lcuportal2.com
+).
+At the end of this book, we've included a $100 discount code for a one-year All Access Pass training
+subscription. The All Access Pass offers live and recorded online training on Wireshark, TCP/IP
+communications, troubleshooting, security and more.  
+For more information on the All Access Pass and other training options, visit Chappell University at
+www.chappellU.com
+.
+
+Foreword by Gerald Combs
+Gerald Combs
+What's happening on the network?
+This is one of those small questions with large answers. For many people it's an important question,
+particularly when network problems impact lives and livelihoods.
+The first time I saw someone analyze a network they used an oscilloscope. It was the 1980s and
+network analysis tools were scarce. I blame hair bands.
+The oscilloscope was all we had on hand in our university lab and it showed us the square–ish
+electrical pulses that bounced up and down and made up the Ethernet frames flying around our
+network. It was a very narrow, limited view of the network, but it was fascinating.
+A few years later at a different university I had to troubleshoot the network for our IT department. By
+then we had better tools such as tcpdump and a Sniffer which gave us packets instead of pulses. It was
+still daunting at first because our network was a zoo of different technologies: Ethernet, FDDI, token
+ring, IPX, DECnet, IP, AppleTalk, and more.
+It didn't make much sense at first, but it was still fascinating. You could see what was in each message
+going across the network along with all the clever methods that people had devised to let computers
+talk to each other. That fascination turned into a passion which is still going strong.
+Later on I had to answer the question, "
+What's happening on the network?
+" at an ISP. The nice tools to
+which I had grown accustomed were unavailable and I felt blind.
+I started writing a protocol analyzer and released it as an open source application. Thanks to
+contributions from an amazingly talented team of developers and users, it grew into the world's most
+popular protocol analyzer.
+I think everyone should have a fundamental understanding of computer networks. They are a vital part
+of modern society, and as such it's important to know how they work.
+It's also important to know that Wireshark won't give you this understanding by itself—no tool will.
+Fortunately Wireshark has a vibrant ecosystem that surrounds it, from the development team, to the
+user community, to companies that offer Wireshark-related products and services (including my
+employer), and to instructors like Laura. The ecosystem is an amazing collection of people who are
+keenly interested in protocol analysis and equally interested in helping each other. It is an honor to be
+part of it.
+Networks may not make a lot of sense at first (they didn't for me), but that's OK. Laura can help you
+understand how they work (and how they often don't). She can give you the understanding you need to
+
+get the most out of Wireshark.
+What's happening on 
+your
+ network?
+Gerald Combs
+Creator of Wireshark
+®
+ (formerly 
+Ethereal
+)
+
+Table of Contents
+Acknowledgments
+Dedication
+About this Book
+Who is this Book For?
+What Prerequisite Knowledge do I Need?
+What Version of Wireshark does this Book Cover?
+Where Can I Get the Book Trace Files?
+Where Can I Learn More about Wireshark and Network Analysis?
+Foreword by Gerald Combs
+
+Chapter 0 Skills: Explore Key Wireshark Elements and Traffic
+Flows
+Quick Reference: Key Wireshark Graphical Interface Elements
+0.1 
+Understand Wireshark's Capabilities
+General Analysis Tasks
+Troubleshooting Tasks
+Security Analysis (Network Forensics) Tasks
+Application Analysis Tasks
+0.2 Get the Right Wireshark Version
+0.3 Learn how Wireshark Captures Traffic
+The Capture Process Relies on Special Link-Layer Drivers
+The Dumpcap Capture Engine Defines Stop Conditions
+The Core Engine is the Goldmine
+The Graphical Toolkit Provides the User Interface
+The Wiretap Library is Used to Open Saved Trace Files
+0.4 Understand a Typical Wireshark Analysis Session
+0.5 Differentiate a Packet from a Frame
+Recognize a Frame
+Recognize a Packet
+Recognize a Segment
+0.6 Follow an HTTP Packet through a Network
+Point 1: What Would You See at the Client?
+Point 2: What Would You See on the Other Side of the First Switch?
+Point 3: What Would You See on the Other Side of the Router?
+Point 4: What Would You See on the Other Side of the Router/NAT Device?
+Point 5: What Would You See at the Server?
+Where You Capture Traffic Matters
+Beware of Default Switch Forwarding
+0.7 Access Wireshark Resources
+Use the Wireshark Wiki Protocol Pages
+Get Your Questions Answered at 
+ask.wireshark.org
+0.8 Analyze Traffic Using the Main Wireshark View
+Open a Trace File (Using the Main Toolbar, Please)
+Know When You Must Use the Main Menu
+Learn to Use the Main Toolbar Whenever Possible
+Master the Filter Toolbar
+Summarize the Traffic Using the Packet List Pane
+Dig Deeper in the Packet Details Pane
+Get Geeky in the Packet Bytes Pane
+Pay Attention to the Status Bar
+ Lab 1: Use Packets to Build a Picture of a Network
+0.9 Analyze Typical Network Traffic
+Analyze Web Browsing Traffic
+Analyze Sample Background Traffic
+ Lab 2: Capture and Classify Your Own Background Traffic
+0.10 Open Trace Files Captured with Other Tools
+
+ Lab 3: Open a Network Monitor .cap File
+Chapter 0 Challenge
+
+Chapter 1 Skills: Customize Wireshark Views and Settings
+Quick Reference: Overview of wireshark.org
+1.1 Add Columns to the Packet List Pane
+Right-Click | Apply as Column (the "easy way")
+Edit | Preferences | Columns (the "hard way")
+Hide, Remove, Rearrange, Realign, and Edit Columns
+Sort Column Contents
+Export Column Data
+ Lab 4: Add the HTTP Host Field as a Column
+1.2 Dissect the Wireshark Dissectors
+The Frame Dissector
+The Ethernet Dissector Takes Over
+The IPv4 Dissector Takes Over
+The TCP Dissector Takes Over
+The HTTP Dissector Takes Over
+1.3 Analyze Traffic that Uses Non-Standard Port Numbers
+When the Port Number is Assigned to Another Application
+Manually Force a Dissector on the Traffic
+When the Port Number is not Recognized
+How Heuristic Dissectors Work
+Adjust Dissections with the Application Preference Settings (if possible)
+ Lab 5: Configure Wireshark to Dissect Port 81 Traffic as HTTP
+1.4 Change how Wireshark Displays Certain Traffic Types
+Set User Interface Settings
+Set Name Resolution Settings
+Define Filter Expression Buttons
+Set Protocol and Application Settings
+ Lab 6: Set Key Wireshark Preferences (IMPORTANT LAB)
+1.5 Customize Wireshark for Different Tasks (Profiles)
+The Basics of Profiles
+Create a New Profile
+ Lab 7: Create a New Profile Based on the 
+Default
+ Profile
+1.6 Locate Key Wireshark Configuration Files
+Your Global Configuration Directory
+Your Personal Configuration (and 
+profiles
+) Directory
+ Lab 8: Import a DNS/HTTP Errors Profile
+1.7 Configure Time Columns to Spot Latency Problems
+The Indications and Causes of Path Latency
+The Indications and Causes of Client Latency
+The Indications and Causes of Server Latency
+Detect Latency Problems by Changing the Time Column Setting
+Detect Latency Problems with a New TCP Delta Column
+Don't Get Fooled—Some Delays are Normal
+ Lab 9: Spot Path and Server Latency Problems
+Chapter 1 Challenge
+
+Chapter 2 Skills: Determine the Best Capture Method and
+Apply Capture Filters
+Quick Reference: Capture Options
+2.1 Identify the Best Capture Location to Troubleshoot Slow Browsing or File Downloads
+The Ideal Starting Point
+Move if Necessary
+2.2 Capture Traffic on Your Ethernet Network
+2.3 Capture Traffic on Your Wireless Network
+What can Your Native WLAN Adapter See?
+Use an AirPcap Adapter for Full WLAN Visibility
+2.4 Identify Active Interfaces
+Determine Which Adapter Sees Traffic
+Consider Using Multi-Adapter Capture
+2.5 Deal with TONS of Traffic
+Why are You Seeing So Much Traffic?
+This is the Best Reason to Use Capture Filters
+Capture to a File Set
+Open and Move around in File Sets
+Consider a Different Solution—Cascade Pilot
+®
+ Lab 10: Capture to File Sets
+2.6 Use Special Capture Techniques to Spot Sporadic Problems
+Use File Sets and the Ring Buffer
+Stop When Complaints Arise
+ Lab 11: Use a Ring Buffer to Conserve Drive Space
+2.7 Reduce the Amount of Traffic You have to Work With
+Detect When Wireshark Can't Keep Up
+Detect when a Spanned Switch Can't Keep Up
+Apply a Capture Filter in the Capture Options Window
+2.8 Capture Traffic based on Addresses (MAC/IP)
+Capture Traffic to or from a Specific IP Address
+Capture Traffic to or from a Range of IP Addresses
+Capture Traffic to Broadcast or Multicast Addresses
+Capture Traffic based on a MAC Address
+ Lab 12: Capture Only Traffic to or from Your IP Address
+ Lab 13: Capture Only Traffic to or from Everyone Else's MAC Address
+2.9 Capture Traffic for a Specific Application
+It's all About the Port Numbers
+Combine Port-based Capture Filters
+2.10 Capture Specific ICMP Traffic
+ Lab 14: Create, Save and Apply a DNS Capture Filter
+Chapter 2 Challenge
+
+Chapter 3 Skills: Apply Display Filters to Focus on Specific
+Traffic
+Quick Reference: Display Filter Area
+3.1 Use Proper Display Filter Syntax
+The Syntax of the Simplest Display Filters
+Use the Display Filter Error Detection Mechanism
+Learn the Field Names
+Use Auto-Complete to Build Display Filters
+Display Filter Comparison Operators
+Use Expressions to Build Display Filters
+ Lab 15: Use Auto-Complete to Find Traffic to a Specific HTTP Server
+3.2 Edit and Use the Default Display Filters
+ Lab 16: Use a Default Filter as a "Seed" for a New Filter
+3.3 Filter Properly on HTTP Traffic
+Test an Application Filter Based on a TCP Port Number
+Be Cautious Using a TCP-based Application Name Filter
+ Lab 17: Filter on HTTP Traffic the Right Way
+3.4 Determine Why Your dhcp Display Filter Doesn't Work
+3.5 Apply Display Filters based on an IP Address, Range of Addresses, or Subnet
+Filter on Traffic to or from a Single IP Address or Host
+Filter on Traffic to or from a Range of Addresses
+Filter on Traffic to or from an IP Subnet
+ Lab 18: Filter on Traffic to or from Online Backup Subnets
+3.6 Quickly Filter on a Field in a Packet
+Work Quickly—Use Right-Click | Apply as Filter
+Be Creative with Right-Click | Prepare a Filter
+Right-Click Again to use the "..." Filter Enhancements
+ Lab 19: Filter on DNS Name Errors or HTTP 404 Responses
+3.7 Filter on a Single TCP or UDP Conversation
+Use Right-Click to Filter on a Conversation
+Use Right-Click to Follow a Stream
+Filter on a Conversation from Wireshark Statistics
+Filter on a TCP Conversation Based on the Stream Index Field
+ Lab 20: Detect Background File Transfers on Startup
+3.8 Expand Display Filters with Multiple Include and Exclude Conditions
+Use Logical Operators
+Why didn't my 
+ip.addr != 
+filter work?
+Why didn't my 
+!tcp.flags.syn==1
+ filter work?
+3.9 Use Parentheses to Change Filter Meaning
+ Lab 21: Locate TCP Connection Attempts to a Client
+3.10 Determine Why Your Display Filter Area is Yellow
+Red Background: Syntax Check Failed
+Green Background: Syntax Check Passed
+Yellow Background: Syntax Check Passed with a Warning (
+!=
+)
+3.11 Filter on a Keyword in a Trace File
+Use 
+contains
+ in a Simple Keyword Filter through an Entire Frame
+
+Use 
+contains
+ in a Simple Keyword Filter based on a Field
+Use 
+matches
+ and 
+(?i)
+ in a Keyword Filter for Upper Case or Lower Case Strings
+Use 
+matches
+ for a Multiple-Word Search
+ Lab 22: Filter to Locate a Set of Key Words in a Trace File
+3.12 Use Wildcards in Your Display Filters
+Use Regex with "."
+Setting a Variable Length Repeating Wildcard Character Search
+ Lab 23: Filter with Wildcards between Words
+3.13 Use Filters to Spot Communication Delays
+Filter on Large Delta Times (
+frame.time_delta
+)
+Filter on Large TCP Delta Times (
+tcp.time_delta
+)
+ Lab 24: Import Display Filters into a Profile
+3.14 Turn Your Key Display Filters into Buttons
+Create a Filter Expression Button
+Edit, Reorder, Delete, and Disable Filter Expression Buttons
+Edit the Filter Expression Area in Your 
+preferences
+ File
+ Lab 25: Create and Import HTTP Filter Expression Buttons
+Chapter 3 Challenge
+
+Chapter 4 Skills: Color and Export Interesting Packets
+Quick Reference: Coloring Rules Interface
+4.1 Identify Applied Coloring Rules
+ Lab 26: Add a Column to Display Coloring Rules in Use
+4.2 Turn Off the Checksum Error Coloring Rule
+Disable Individual Coloring Rules
+Disable All Packet Coloring
+4.3 Build a Coloring Rule to Highlight Delays
+Create a Coloring Rule from Scratch
+Use the Right-Click Method to Create a Coloring Rule
+ Lab 27: Build a Coloring Rule to Highlight FTP User Names, Passwords, and More
+4.4 Quickly Colorize a Single Conversation
+Right-Click to Temporarily Colorize a Conversation
+Remove Temporary Coloring
+ Lab 28: Create Temporary Conversation Coloring Rules
+4.5 Export Packets that Interest You
+ Lab 29: Export a Single TCP Conversation
+4.6 Export Packet Details
+Export Packet Dissections
+Define What should be Exported
+Sample Text Output
+Sample CSV Output
+ Lab 30: Export a List of HTTP Host Field Values from a Trace File
+Chapter 4 Challenge8
+
+Chapter 5 Skills: Build and Interpret Tables and Graphs
+Quick Reference: IO Graph Interface
+5.1 Find Out Who's Talking to Whom on the Network
+Check Out Network Conversations
+Quickly Filter on Conversations
+5.2 Locate the Top Talkers
+Sort to Find the Most Active Conversation
+Sort to Find the Most Active Host
+ Lab 31: Filter on the Most Active TCP Conversation
+ Lab 32: Set up GeoIP to Map Targets Globally
+5.3 List Applications Seen on the Network
+View the Protocol Hierarchy
+Right-Click Filter or Colorize any Listed Protocol or Application
+Look for Suspicious Protocols, Applications or "Data"
+Decipher the Protocol Hierarchy Percentages
+ Lab 33: Detect Suspicious Protocols or Applications
+5.4 Graph Application and Host Bandwidth Usage
+Export the Application or Host Traffic before Graphing
+Apply 
+ip.addr
+ Display Filters to the IO Graph
+Apply 
+ip.src
+ Display Filters to the IO Graph
+Apply 
+tcp.port
+ or 
+udp.port
+ Display Filters to the IO Graph
+ Lab 34: Compare Traffic to/from a Subnet to Other Traffic
+5.5 Identify TCP Errors on the Network
+Use the Expert Infos Button on the Status Bar
+Deal with "Unreassembled" Indications in the Expert
+Filter on TCP Analysis Flag Packets232
+5.6 Understand what those Expert Infos Errors Mean
+Packet Loss, Recovery, and Faulty Trace Files
+Asynchronous or Multiple Path Indications
+Keep-Alive Indication
+Receive Buffer Congestion Indications
+TCP Connection Port Reuse Indication
+Possible Router Problem Indication
+Misconfiguration or ARP Poisoning Indication
+ Lab 35: Identify an Overloaded Client
+5.7 Graph Various Network Errors
+Graph all TCP Analysis Flag Packets (Except Window Updates)
+Graph Separate Types of TCP Analysis Flag Packets
+ Lab 36: Detect and Graph File Transfer Problems
+Chapter 5 Challenge
+
+Chapter 6 Skills: Reassemble Traffic for Faster Analysis
+Quick Reference: File and Object Reassembly Options
+6.1 Reassemble Web Browsing Sessions
+Use Follow TCP Stream
+Use Find, Save, and Filter on a Stream
+ Lab 37: Use Reassembly to Find a Web Site's Hidden HTTP Message
+6.2 Reassemble a File Transferred via FTP
+ Lab 38: Extract a File from an FTP File Transfer
+6.3 Export HTTP Objects Transferred in a Web Browsing Session
+Check Your TCP Preference Settings First!
+View all HTTP Objects in the Trace File
+ Lab 39: Carve Out an HTTP Object from a Web Browsing Session
+Chapter 6 Challenge
+
+Chapter 7 Skills: Add Comments to Your Trace Files and
+Packets
+Quick Reference: File and Packet Annotation Options
+7.1 Add Your Comments to Trace Files
+7.2 Add Your Comments to Individual Packets
+Use the .pcapng Format for Annotations
+Add a Comment Column for Faster Viewing
+ Lab 40: Read Analysis Notes in a Malicious Redirection Trace File
+7.3 Export Packet Comments for a Report
+First, Filter on Packets that Contain Comments
+Next, Export Packet Dissections as Plain Text
+ Lab 41: Export Malicious Redirection Packet Comments
+Chapter 7 Challenge
+
+Chapter 8 Skills: Use Command-Line Tools to Capture, Split,
+and Merge Traffic
+Quick Reference: Command-Line Tools Key Options
+8.1 Split a Large Trace File into a File Set
+Add the Wireshark Program Directory to Your Path
+Use Capinfos to Get the File Size and Packet Count
+Split a File Based on Packets per Trace File
+Split a File Based on Seconds per Trace File
+Open and Work with File Sets in Wireshark
+ Lab 42: Split a File and Work with Filtered File Sets
+8.2 Merge Multiple Trace Files
+Ensure the Wireshark Program Directory is in Your Path
+Run Mergecap with the –w Parameter
+ Lab 43: Merge a Set of Files using a Wildcard
+8.3 Capture Traffic at Command Line
+Dumpcap or Tshark?
+Capture at the Command Line with Dumpcap
+Capture at the Command Line with Tshark
+Save Host Information and Work with Existing Trace Files
+ Lab 44: Use Tshark to Capture to File Sets with an Autostop Condition
+8.4 Use Capture Filters during Command-Line Capture
+8.5 Use Display Filters during Command-Line Capture
+ Lab 45: Use Tshark to Extract HTTP GET Requests
+8.6 Use Tshark to Export Specific Field Values and Statistics from a Trace File
+Export Field Values
+Export Traffic Statistics
+Export HTTP Host Field Values
+ Lab 46: Use Tshark to Extract HTTP Host Names and IP Addresses
+8.7 Continue Learning about Wireshark and Network Analysis
+Chapter 8 Challenge
+
+Appendix A: Challenge Answers
+Chapter 0 Challenge Answers
+Chapter 1 Challenge Answers
+Chapter 2 Challenge Answers
+Chapter 3 Challenge Answers
+Chapter 4 Challenge Answers
+Chapter 5 Challenge Answers
+Chapter 6 Challenge Answers
+Chapter 7 Challenge Answers
+Chapter 8 Challenge Answers
+
+Appendix B:  Trace File Descriptions
+Network Analyst's Glossary
+Online Training Offer
+
+Chapter 0 Skills: Explore Key Wireshark
+Elements and Traffic Flows
+"There has been one constant in the network traffic aspect of my career, which started in 1998: packet
+analysis with Ethereal, later renamed to Wireshark. The Air Force Computer Emergency Response
+Team (AFCERT), where I learned the trade, was an early adopter of the first versions of the tool.
+Today, I couldn't imagine doing protocol inspection without Wireshark, and the project has only
+improved over time."
+Richard Bejtlich
+Chief Security Officer, Mandiant Corporation
+
+Quick Reference: Key Wireshark Graphical Interface
+Elements
+1
+. 
+Title bar
+ — trace file name, capture device name, or Wireshark version number
+2
+. 
+Main menu
+ — standard menu
+3
+. 
+Main toolbar
+ — learn to use this set of icon buttons!
+4
+. 
+Display filter area
+ — reduce the amount of traffic you see
+5
+. 
+Packet List pane
+ — summary of each frame
+6
+. 
+Packet Details pane
+ — dissected frames
+7
+. 
+Packet Bytes pane
+ — hex and ASCII details
+8
+. 
+Status Bar
+ — access to the Expert, annotations, packet counts, and profiles
+
+0.1. Understand Wireshark's Capabilities
+Knowing what Wireshark can do will help you determine if it is the right tool for the job.
+Wireshark is the world's most popular network analysis tool with an average of over 500,000
+downloads per month. Wireshark is also ranked #1 in the world as a security tool
+[1]
+. Named one of the
+"Most Important Open-Source Apps of All Time"
+[2]
+, Wireshark runs on Windows, Mac OS X, and
+*NIX. Wireshark can even be run as a Portable App
+[3]
+.
+Wireshark is a free open source software program available at 
+wireshark.org
+. When run on a host that
+can see a wired or wireless network, Wireshark captures and decodes the network frames, offering an
+ideal tool for network troubleshooting, optimization, security (network forensics), and application
+analysis. Captured traffic can be saved in numerous trace file formats (defaulting to the new .pcapng
+format).
+Wireshark's decoding process uses dissectors that can identify and display the various fields and
+values in network frames. In many instances, Wireshark's dissectors offer an interpretation of frame
+contents as well—a feature that significantly reduces the time required to locate the cause of poor
+network performance or to validate security concerns.
+The open source development community has created thousands of dissectors to interpret the most
+commonly seen applications and protocols on networks. A core set of Wireshark developers is led by
+Gerald Combs, the original creator of Ethereal (Wireshark's development name prior to May 2006).
+As an open source project, Wireshark's source code is open to anyone for review or enhancement.
+Wireshark can be used to easily determine who the top talkers are on the network, what applications
+are currently in use, which protocols are supported on a network, whether requests are receiving error
+responses, and whether packets are being dropped or delayed along a path. In addition, numerous
+filters can be applied to target a specific address (or address range), application, response code,
+conversation, keyword, etc.
+The Wireshark installation package includes numerous tools used to capture packets at the command
+line, merge trace files, split trace files, and more.
+Based on SLOCCount (Source Lines of Code Count), created by David A. Wheeler, Wireshark has
+over 2.4 million total lines of code (SLOC)
+[4]
+ and the total estimated cost to develop Wireshark is
+over $94 million.
+The following is a quick list of some tasks that can be performed using Wireshark.
+
+General Analysis Tasks
+Find the top talkers on the network
+See network communications in "clear text"
+See which hosts use which applications
+Baseline normal network communications
+Verify proper network operations
+Learn who's trying to connect to your wireless network
+Capture on multiple networks simultaneously
+Perform unattended traffic capture
+Capture and analyze traffic to/from a specific host or subnet
+View and reassemble files transferred via FTP or HTTP
+Import trace files from other capture tools
+Capture traffic using minimal resources
+
+Troubleshooting Tasks
+Create a custom analysis environment for troubleshooting
+Identify path, client, and server delays
+Identify TCP problems
+Detect HTTP proxy problems
+Detect application error responses
+Graph IO rates and correlate drops to network problems
+Identify overloaded buffers
+Compare slow communications to a baseline of normal communications
+Find duplicate IP addresses
+Identify DHCP server or relay agent problems on a network
+Identify WLAN signal strength problems
+Detect WLAN retries
+Capture traffic leading up to (and possibly the cause of) problems
+Detect various network misconfigurations
+Identify applications that are overloading a network segment
+Identify the most common causes of poorly performing applications
+
+Security Analysis (Network Forensics) Tasks
+Create a custom analysis environment for network forensics
+Detect applications that are using non-standard ports
+Identify traffic to/from suspicious hosts
+See which hosts are trying to obtain an IP address
+Identify "phone home" traffic
+Identify network reconnaissance processes
+Locate and globally map remote target addresses
+Detect questionable traffic redirections
+Examine a single TCP or UDP conversation between a client and server
+Detect maliciously malformed frames
+Locate known keyword attack signatures in your network traffic
+
+Application Analysis Tasks
+Learn how applications and protocols work
+Graph bandwidth usage of an application
+Determine if a link will support an application
+Examine application performance after update/upgrade
+Detect error responses from a newly installed application
+Identify which users are running a particular application
+Examine how an application uses transport protocols such as TCP or UDP
+WARNING
+Before you capture your first packet, ensure you have permission to listen to the network traffic. If you
+are an IT staff member, obtain written permission to listen in to network traffic for troubleshooting,
+optimization, security, and application analysis. Consult a legal specialist to understand your local
+and national laws regarding packet capture on wired and wireless networks.
+
+0.2. Get the Right Wireshark Version
+Since you may move from one location to another, from one computer to another, and from one
+operating system to another, it's best to know on what systems you can install Wireshark.
+Wireshark runs on most of the commonly used operating systems, including Windows, Mac OS X, and
+*NIX systems.
+All OS versions of Wireshark can be obtained from 
+www.wireshark.org
+. Click the 
+Download
+Wireshark
+ button and the site will recognize the operating system you are running and highlight the
+version of Wireshark that is most appropriate for your OS.
+If you are really new to Wireshark, consider downloading, installing, and using the Windows
+version—the Windows installation process is the simplest process since it only requires
+running a single executable installation file.
+Currently, the Windows and Mac OS X installation processes are quite simple since these versions of
+Wireshark are available with an installer program (binary package). In the case of Mac OS X you may
+be prompted to install XQuartz (graphical interface requirement). The installer program will walk you
+through the process to locate XQuartz, if necessary.
+In the case of *NIX, however, you must obtain the source and build Wireshark for the operating
+system you are using. This process is a bit more complex than just downloading the binary package
+and clicking "install." You will need to obtain GTK+ (graphical interface requirement) and libpcap
+(packet capture requirement) before you begin to build Wireshark on your system. Since this book is
+focused on the functionality of Wireshark, and not the installation process, we refer you to
+www.wireshark.org/docs/wsug_html_chunked/ChapterBuildInstall.html
+[5]
+ for step-by-step
+installation instructions.
+Wireshark also comes preinstalled on a number of forensic tool distributions, such as BackTrack
+(
+www.backtrack-linux.org
+), although it may not be the latest version.
+The complete list of operating system requirements is available at
+www.wireshark.org/docs/wsug_html_chunked/ChIntroPlatforms.html
+.
+Sign up for the 
+Wireshark-announce
+ mailing list at 
+www.wireshark.org/lists/
+ to be notified
+when new Wireshark releases are available. You typically want to be up-to-date with
+Wireshark as new releases often include bug and security fixes.
+
+0.3. Learn how Wireshark Captures Traffic
+Understanding how Wireshark captures traffic will affect how you use Wireshark's features. In this
+section we refer to the elements depicted in Figure 1.
+Figure
+ 1. How Wireshark handles traffic from a live capture or from a saved trace file.
+
+The Capture Process Relies on Special Link-Layer Drivers
+When your computer connects to a network, it relies on a network interface card (such as an Ethernet
+card) and link-layer driver (such as an Atheros PCI-E Ethernet driver) to send and receive packets.
+Wireshark also relies on network interface cards and link-layer drivers to pass up traffic for capture
+and analysis. Although the network interface cards are the same in both situations, when you use
+Wireshark, two special link-layer drivers are commonly used: WinPcap and libpcap. These special
+drivers provide access to raw data on the network.
+WinPcap is the special link-layer driver used on a Windows host. Libpcap is the special link-layer
+driver used on *NIX hosts and OS X.
+When you start capturing traffic with Wireshark, a tool called dumpcap is launched to do the actual
+capturing. Frames are passed up from the network, through one of these special link-layer drivers
+directly into Wireshark's Capture Engine. If you applied a capture filter (only capturing broadcast
+traffic for example), the frames that pass through the capture filter are passed up to the Capture
+Engine. Capture filters use Berkeley Packet Filtering (BPF) syntax.
+For more information on filtering out (excluding) or filtering in (passing on to Wireshark) specific
+traffic types, refer to 
+Reduce the Amount of Traffic You have to Work With
+.
+
+The Dumpcap Capture Engine Defines Stop Conditions
+The Dumpcap capture engine defines how the capture process runs and the stop conditions. For
+example, you can set up a capture to save frames to a set of 50 MB files and automatically stop after 6
+files have been written. We refer to these files as trace files.
+The current default trace file format is .pcapng (packet capture, next generation).
+The new .pcapng format offers the ability to save metadata with a file. In essence, you can
+now save annotations (comments) inside your trace file. We will look into this process in
+Chapter 7.
+
+The Core Engine is the Goldmine
+The Capture Engine passes frames up to the Core Engine. This is where Wireshark's power becomes
+evident. Wireshark supports thousands of dissectors that translate the incoming bytes into human-
+readable format frames. The dissectors break apart the fields in the frames and often perform analysis
+on the content of those fields.
+For more information on how Wireshark dissectors work, see 
+Dissect the Wireshark Dissectors
+.
+
+The Graphical Toolkit Provides the User Interface
+The GIMP (GNU Image Manipulation Program) graphical toolkit provides the cross-platform
+interface for Wireshark. With very few exceptions, you can move seamlessly from a Wireshark
+system running on one platform to a Wireshark system running on another platform with no problems.
+The basic interface elements are the same.
+
+The Wiretap Library is Used to Open Saved Trace Files
+The Wiretap Library is used for the input/output functions for saved trace files. When you open a trace
+file (whether captured with Wireshark or another analysis tool), the Wiretap Library delivers the
+frames to the Core Engine.
+For more information on the Wiretap Library, see 
+Open Trace Files Captured with Other Tools
+.
+
+0.4. Understand a Typical Wireshark
+Analysis Session
+Although each analysis session is a bit different, there are some basic steps that you should perform
+during each analysis session.
+The following is a checklist of the most common tasks performed during an analysis session. Consider
+using this basic task checklist when you open a trace file.
+Determine who is talking in the trace file
+See 
+Find Out Who's Talking to Whom on the Network
+Determine what applications are in use
+See 
+List Applications Seen on the Network
+Filter on the conversation of interest
+See 
+Filter on a Single TCP or UDP Conversation
+Graph the IO to look for drops in throughput
+See 
+Graph Application and Host Bandwidth
+Open the Expert to look for problems
+See 
+Identify TCP Errors
+Determine the round trip time to identify path latency
+See 
+Use Filters to Spot Communication Delays
+Each of these tasks is covered in this book.
+Now is the time to start your own checklist of tasks. As you go through the labs in this book,
+note the tasks that you'd like to repeat each time a trace file comes in. As with many skills,
+practice will pay off.
+
+0.5. Differentiate a Packet from a Frame
+You will see both terms used in the world of protocol analysis. The term "packet" is often used as a
+blanket term to describe anything sent across a network, but there is a definite difference between
+these two terms.
+
+Recognize a Frame
+The term "frame" is used when referring to the communication from the Media Access Control
+(MAC) layer header (such as an Ethernet header) through the MAC trailer. All communications
+between devices use frames. We don't spend a lot of time troubleshooting or analyzing Ethernet
+frames, however. There's not a lot to analyze in an Ethernet header or trailer and Ethernet technology
+is fairly well implemented and not often the problem. In the world of wireless technology, however,
+there is a lot going on in the WLAN header—enough to focus on during a troubleshooting session.
+You will not always see the Ethernet trailer when analyzing traffic. Some operating systems do not
+support capturing the trailers on Ethernet networks.
+Just to make this more confusing, Wireshark adds a "Frame" section to provide extra information
+about all actual frames. When you look inside the Packet Details pane, you will see this Frame section
+at the top. If you expand that section, you will see time, coloring and other information added to the
+actual frame by Wireshark.
+The actual frame begins with the second line, labeled "Ethernet II." Wireshark's Frame section only
+contains information about the frame (metadata). It does not contain any of the actual contents of the
+frame.
+Figure 2 indicates the beginning and ending of the actual frame as well as the Frame section that
+contains the metadata.
+
+Recognize a Packet
+A packet is the stuff that sits inside a MAC frame. In TCP/IP communications, a packet begins at the
+IP header and ends just before the MAC trailer. People often refer to network analysis as "packet
+analysis"—this naming is due to the fact that the majority of analysis tasks begin at the IP header.
+Figure 2 indicates the beginning and ending of the packet.
+
+Recognize a Segment
+A segment is the stuff that follows a TCP header. That may include an HTTP header or just data.
+During establishment of a TCP connection, each TCP peer shares its Maximum Segment Size (MSS)
+value. Figure 2 indicates the beginning and ending of the TCP segment.
+Figure 2. How will these devices affect the format of the frame along the path?
+In this book, we use the term "frame" when focusing on the MAC header in communications, or when
+referring to a value in the 
+No.
+ (number) column (frame number) in the Packet List pane.
+Since Wireshark often refers to frames as packets in various menus, we will use Wireshark's
+terminology in those cases. For example, the File menu contains an option to "Export Specified
+Packets" even though it is exporting frames.
+
+0.6. Follow an HTTP Packet through a
+Network
+To be a good analyst, you must know TCP/IP very well. Also key to communications analysis is a
+solid understanding of how packets travel through a network and how the traffic is affected by various
+network devices.
+Let's look at a network path that includes a client, two switches, one standard router, a router that
+performs Network Address Translation (NAT) and a server.
+Figure
+ 3. How will these devices affect the format of the frame along the path?
+In Figure 3, our client sends an HTTP GET request for the main page on the HTTP server. We've used
+simple letters to represent the MAC addresses (aka hardware addresses) of the devices.
+To know how devices affect the contents of the frame, we will look at how this frame is altered as it
+travels through switches, routers, and even a router/NAT device.
+There are many times when you will need to capture at more than one location. For example,
+when you want to know how a device affects the contents of a frame, you need to capture the
+frame both before and after it travels through the device. You may also want to capture traffic
+at two locations to determine which internetworking device is dropping packets.
+Because capturing at multiple locations is a common analysis task, you should have
+Wireshark (or at least dumpcap) loaded on more than one laptop or be prepared to capture
+using port spanning or a full-duplex tap. We will cover these capture options in Chapter 2.
+
+Point 1: What Would You See at the Client?
+All devices can only send to the hardware address of local machines in MAC headers. This MAC
+header will be stripped off by the first router along the path—these MAC headers are only temporary
+and are used to get the packet to the next hop along a path. In the IP header example above, the packet
+is addressed from 10.1.0.1 (client) to 74.125.224.143 (server).
+Analyst View
+: At this point, the Ethernet header of our client's GET request is addressed to the local
+router's MAC address (B).
+
+Point 2: What Would You See on the Other Side of the First
+Switch?
+True switches
+[6]
+ do not affect the contents of the frame. Switch 1 would simply look at the destination
+MAC address (MAC address B) to determine if that host is connected to one of the switch ports.
+When the switch finds the switch port associated with MAC address B, the switch forwards the frame
+out the appropriate switch port.
+Analyst View
+: We would see a frame that matches the frame we saw at point 1.
+
+Point 3: What Would You See on the Other Side of the Router?
+Upon receipt of the frame, after checking to make sure the frame isn't corrupt and that the frame is
+addressed to the router's MAC address, the router strips off the Ethernet header.
+The router examines the destination IP address in the packet (it is now considered a packet, not a
+frame) and consults its routing tables to see if it knows what to do with the packet. If the router does
+not know how to get to the destination IP address (and it doesn't have a default gateway to send the
+packet to), the router will drop the packet and send a message back to the originator indicating there is
+a routing problem. We can capture these error messages with Wireshark and detect which router is
+unable to forward our packets to the destination.
+If the router has the information required to forward the packet, it decrements the IP header Time to
+Live (hop count) field value by 1 and applies a new Ethernet header to the packet before sending it on
+to the router/NAT device.
+Analyst View
+: We would see a new Ethernet header (from C to D) and an IP header Time to Live value
+that has been decreased by 1.
+
+Point 4: What Would You See on the Other Side of the
+Router/NAT Device?
+The router/NAT device goes through the same routing process as the previous router before
+forwarding the packet. Additionally, the router/NAT device changes the source IP address (network
+address translation) and source port number while making note of the original source IP address and
+source port number. The router/NAT device associates this information with the newly assigned
+outbound IP address and port number.
+Analyst View
+: We would see a new Ethernet header (from E to F) and an IP header Time to Live value
+that has been decreased by 1. In addition, we would see that the source IP address and source port
+number has changed.
+
+Point 5: What Would You See at the Server?
+At this point we should see the same frame that we saw at Point 4. Remember, switches should not
+alter the contents of a frame.
+
+Where You Capture Traffic Matters
+If you capture at Point 1, 2, or 3, you cannot determine the MAC address of the server. Likewise, if
+you capture at Point 3, 4, or 5, you cannot determine the MAC address of the client. If you capture at
+point 5, you cannot tell the actual IP address of the client, either.
+
+Beware of Default Switch Forwarding
+Remember, switches forward frames based on MAC address. If you'd connected a Wireshark system
+to either of the switches in Figure 3, you would not have seen any of the traffic between our HTTP
+client and HTTP server. The switches would only forward broadcast, multicasts, and traffic destined to
+your Wireshark system's MAC address down your port
+[7]
+.
+Switches do not alter the MAC addresses or the IP addresses of the traffic, but they can be a major
+roadblock in network analysis.
+Consider the example shown in Figure 4. We loaded Wireshark on the machine connected to switch
+port 1. We have a problem if we want to listen to the traffic between the two other devices on the
+network. The switch is not going to forward this down our port—it's not addressed to our MAC
+address.
+Figure
+ 4. Switches can affect the amount of traffic you see.
+It is this limitation that causes us to figure out other methods for listening in on network traffic. We
+will look at our options in 
+Identify the Best Capture Location to Troubleshoot Slow Browsing or File
+Downloads
+.
+Plan and test your capture methods in advance. It's not a fun process to start testing capture
+methods when all hell breaks loose on the network and users, their managers, your manager,
+and the CEO are pounding on your office door or encroaching in your cubicle air space. Be
+prepared–be practiced.
+
+0.7. Access Wireshark Resources
+Eventually you will hit a problem that you just can't solve. Whether it is a problem in Wireshark
+functionality or packet structures, you can find assistance in several key places on the Internet.
+
+Use the Wireshark Wiki Protocol Pages
+Wireshark offers support through a series of Wiki protocol pages.
+Visit 
+wiki.wireshark.org
+ to see all the Wiki information related to Wireshark. You can also add the
+protocol or application name to the URL for assistance on a protocol. For example, you can type
+wiki.wireshark.org/Ethernet
+[8]
+.
+You can also get to these pages by right-clicking on any protocol displayed inside a frame, as shown
+in Figure 5. Wireshark detects the protocol selected and launches the related Wiki page.
+Figure
+ 5. Right-click on any protocol shown in the Packet Details pane to launch the related Wiki protocol page. [http-
+google101.pcapng]
+
+Get Your Questions Answered at 
+ask.wireshark.org
+Gerald Combs, creator of Wireshark, opened a Q&A forum for Wireshark users (shown in Figure 6).
+Visit 
+ask.wireshark.org
+ to pose your questions to the Wireshark community. You must register for a
+free account to post a question here.
+Figure
+ 6. Use the Search function (7) to look for key words related to your question at ask.wireshark.org.
+The following lists the key areas on 
+ask.wireshark.org
+.  
+1
+. 
+Questions tab
+—Click to return to the All Questions page (shown above).
+2
+. 
+Tags tab
+—Click to see the list of tags related to questions—click on tags related to your topic of
+interest to see if there is helpful information there.
+3
+. 
+Users tab
+—Click to see the users who participate in the Q&A forum—this area also includes
+their status in badge colors, counts, and administrative status (diamonds).
+4
+. 
+Badges tab
+—Click to see how many contributors have achieved recognition for their
+participation in the Q&A forum.
+5
+. 
+Unanswered tab
+—Click to see questions that are still considered unanswered. Unfortunately,
+many Q&A participants do not mark questions "answered" even though they have been.
+6
+. 
+Ask a Question tab
+—Click to ask your question. If you don't have a free account here yet, your
+question will be saved as you create an account and login with your new credentials.
+7
+. 
+Search area and button
+—Search for the topic you are interested in first. This is a great place to
+start.
+8
+. 
+Vote count
+—Forum users can vote on (like/unlike) questions.
+9
+. 
+Answer count
+—This number indicates how many answers have been submitted to a question.
+10
+. 
+View count
+—This number indicates how many times a question has been viewed. This is a great
+indicator to determine how "hot" a topic is.
+11
+. 
+Question title (hyperlink) and tags
+—Click on the question title to jump to the question page.
+The tags indicate the topic(s) covered in the question.
+12
+. 
+Jump to buttons
+—Click on any of these buttons to jump to the list of active questions, newest
+questions, or questions that have the most votes.
+13
+. 
+Question activity age and contributor information
+—This area indicates how old a question is
+
+(based on last activity such as answer, comment, or even just posting the question), who
+contributed to the question most recently, and information about that last contributor. The
+contributor information includes the Karma level (level of acquired trust in the forum) and their
+administrative levels.
+For more information on the Q&A forum, visit 
+ask.wireshark.org/faq/
+.
+Note
+: During the outlining stages of this book, we pulled up the most active questions and the hottest
+topics on the Q&A Forum. That list, along with years of experience teaching Wireshark techniques
+and analyzing network traffic, led to the skills included in this book.
+
+0.8. Analyze Traffic Using the Main
+Wireshark View
+You don't always need to do a deep dive into the traffic to understand what's going on. A quick look at
+the main Wireshark window may be all you need to find the cause or culprit.
+
+Open a Trace File (Using the Main Toolbar, Please)
+When launched, Wireshark displays a Start Page. Although there are many functions available on the
+Start Page, the fastest way to navigate in Wireshark is though the main menu and main toolbar. Click
+the 
+File Open
+ button on the main toolbar (circled in Figure 7). Open 
+http-google101.pcapng
+(available at 
+www.wiresharkbook.com
+.
+Figure
+ 7. The Start Page appears when you launch Wireshark. Instead, use the main toolbar to navigate in Wireshark.
+This trace file contains the traffic between a client and the 
+www.google.com
+ server when someone
+opens the main web site page. If you capture your own traffic to 
+www.google.com
+, it may look quite
+different. Your traffic will contain different MAC and IP addresses and you may have some elements
+of the Google site cached (on disk). In the case of cached content, you will load portions of the web
+site page from disk—you will not see the cached content being sent from the server in the trace file.
+We will work with this trace file as we explore the various elements of the Wireshark main view.
+
+Know When You Must Use the Main Menu
+We all know how to use menus. The key is 
+when
+ to use the main menu (Figure 8) and 
+where
+ to find
+what you're looking for. Many of Wireshark's functions are available through the right-click method
+or the main toolbar (also referred to as the icon toolbar).
+Figure
+ 8. All functions in the Go and Capture menu items can be done faster using the main toolbar.
+The following list highlights the reasons you may need to use the main menu instead of the main
+toolbar.
+File
+—open file sets, save subsets of packets, export HTTP objects
+Edit
+—clear all marked packets, ignored packets, and time references
+View
+—view/hide toolbars and panes, edit the 
+Time
+ column setting, reset coloring
+Analyze
+—create display filter macros, see enabled protocols, save forced decodes
+Statistics
+—build graphs and open statistics windows for various protocols
+Telephony
+—perform all telephony-related functions (graphs, charts, playback)
+Tools
+—build firewall rules from packet contents, access the Lua scripting tool
+Internals
+—view the dissector tables and a list of supported protocols
+Help
+—learn where Wireshark stores global and personal configuration files
+Again, this list focuses on things you need in the main menu. Become an efficient analyst by finding
+the fastest ways to perform tasks.
+
+Learn to Use the Main Toolbar Whenever Possible
+You can work very efficiently by clicking on the buttons on the main toolbar to open files and access
+filters, coloring rules, and preferences. In this book we use most of the key functions on the main
+toolbar. These functions are listed in Figure 9.
+Figure
+ 9. Become familiar with the main toolbar functions—this is the fastest way to work in Wireshark.
+
+Master the Filter Toolbar
+We use display filters to pull the "needle out of the haystack." When you have thousands or hundreds
+of thousands of packets to look through, use display filters to see traffic that is related to the task at
+hand. For example, if you are troubleshooting someone's web browsing session, you can use a display
+filter to remove email sessions or virus update traffic from view.
+Figure 10 highlights the purpose of each section of the filter toolbar.
+Figure
+ 10. Learn to use the display filter toolbar to save time analyzing traffic.
+
+Summarize the Traffic Using the Packet List Pane
+Wireshark has three panes (windows)—the Packet List pane, the Packet Details pane, and the Packet
+Bytes pane.
+The Packet List pane is the top pane, as shown in Figure 11.
+Figure
+ 11. When you select a frame in the Packet List pane, the Packet Details pane and Packet Bytes pane provide additional
+information on the selected packet. [http–google101.pcapng]
+Scroll through the Packet List pane to see which hosts are communicating, the protocols or
+applications in use, and general information about the frames. Wireshark colors the frames based on a
+set of coloring rules. For more information on coloring rules, see 
+Identify Applied Coloring Rules
+.
+You can add columns to the Packet List pane and sort on any column. This sorting ability can help you
+find similar packets or large delays in the trace file. By default, the Packet List pane is sorted by the
+frame number column ("
+No.
+" column on the far left side).
+Figure 12 shows the Packet List pane of 
+http-google101.pcapng
+. Each packet in the trace file contains
+information in the default columns listed below.
+Number ("No.") column
+—Each frame is assigned a number. By default, traffic is sorted on the
+No.
+ column from low to high. You can sort the Packet List pane by clicking on the desired
+column heading. If you change the sort order and want to return to the default look of the Packet
+List pane, sort on this column.
+Time column
+—By default, Wireshark shows when each frame arrived compared to the first
+frame in the 
+Time
+ column. We will use this column to find delays in 
+Detect Latency Problems by
+Changing the Time Column Setting
+.
+Source and Destination columns
+—The 
+Source
+ and 
+Destination
+ columns show the highest layer
+address available in each frame. Some frames only have a MAC address (ARP packets, for
+example) so those MAC addresses will be displayed in the 
+Source
+ and 
+Destination
+ columns. In
+Figure 12, we see that all of our frames have IP addresses shown in the Source and Destination
+
+columns.
+Protocol column
+—Wireshark displays the last dissector applied to the frame. This is a great
+place to look if you're trying to figure out what applications are in use. In Figure 12, we see DNS,
+TCP, and HTTP listed in this column.
+Length column
+—This column indicates the total length of each frame. We can easily detect if an
+application uses itty bitty stinkin' packet sizes by looking at this column.
+Info column
+—This column provides basic information about the frame. Look at this column as
+you scroll through this trace file. You will see many DNS queries and responses, many HTTP
+GET requests, and data packets as the user loads the main Google page.
+Figure
+ 12. The seven default columns of the Packet List pane. [http-google101.pcapng]
+Sort Columns in the Packet List Pane
+As mentioned earlier, you can sort the Packet List pane by clicking on the desired column heading.
+For example, if you click on the 
+Protocol
+ column heading when viewing 
+http–google101.pcapng
+,
+Wireshark reorders the frames as DNS, HTTP, and TCP (ascending alphabetically), as shown in Figure
+13.
+Click the Number ("
+No.
+") column heading once to reorder the Packet List pane in its original order
+(from low to high).
+Figure
+ 13. Click once on any column heading to sort from low to high—click again to sort from high to low. [http–
+google101.pcapng]
+
+Reorder the Columns
+You can change the location of columns by clicking and dragging on a column heading to move it left
+or right. In Figure 14 we moved the 
+Time
+ column to the right.
+Figure
+ 14. Just click and drag column headings left or right to reorder columns. [http–google101.pcapng]
+Right-Click on Column Headings to Hide, Display, Rename, and Remove
+Columns
+Right-click on any column heading to view your options in a drop-down menu. Select 
+Hide Column
+to remove the column from view, as shown in Figure 15. To view the column again, right-click on any
+column heading, select 
+Displayed Columns
+, and select the column name
+[9]
+.
+Figure
+ 15. Right-click on any column heading to view the column options menu. When you do not want to see a column, select
+Hide Column
+. [http-google101.pcapng]
+Right-Click in the Packet List Pane to View Available Options
+Many of Wireshark's windows and views support right-click functions. Right-click on any packet in
+the Packet List pane to see what's available, as shown in Figure 16.
+In this book, we use this right-click functionality to apply filters, colorize traffic, reassemble traffic
+(follow streams), force Wireshark to dissect something in a different way, and more.
+
+Figure
+ 16. Right-click on any packet in the Packet List pane to see the available functions. [http–google101.pcapng]
+Use Packet Coloring to Your Advantage
+Wireshark contains 20 default coloring rules to help you identify the traffic types and spot network
+problems faster. You can easily change these coloring rules and create additional coloring rules to
+alert you to unusual traffic. We will work with coloring rules in 
+Identify Applied Coloring Rules
+.
+
+Dig Deeper in the Packet Details Pane
+When you click on a packet in the Packet List pane, Wireshark shows the details for that packet in the
+Packet Details pane (the middle pane). The Packet Details pane shows the power of Wireshark's
+dissectors.
+As mentioned earlier, the Frame section is not part of a packet as it travels through a network—
+Wireshark adds the Frame section for additional information about the frame, such as when the frame
+arrived, what coloring rule is applied to the frame, the frame number, and frame length, as seen in
+Figure 17.
+As you move through the Packet Details pane, click on the 
++
+ indicators to expand sections of the
+frames. Alternately you can use right-click to expand en entire frame (
+Expand All
+) or expand just one
+collapsed section (
+Expand Subtrees
+).
+Figure
+ 17. The Frame section includes metadata such as arrival timestamp, frame number, and dissectors applied to the frame.
+[http–google101.pcapng]
+
+Get Geeky in the Packet Bytes Pane
+This is the "geek pane." The Packet Bytes pane shows the contents of the frame in hex and
+ASCII formats, as shown in Figure 18. If the frame doesn't have any readable strings, the ASCII
+portion will look like a bunch of junk. We may look at this pane when Wireshark sees "data" in a
+frame.
+When you highlight a field in the Packet Details pane, Wireshark also highlights the location of that
+field and the bytes contained in that field in the Packet Bytes pane.
+If you don't want to see the Packet Bytes pane, select 
+View | Packet Bytes
+ to toggle it off. Perform the
+same steps to turn it on again.
+Figure
+ 18. The packet bytes pane shows ASCII strings contained in the packet. [http–google101.pcapng]
+
+Pay Attention to the Status Bar
+The Status Bar consists of two buttons and three columns. These columns can be resized as necessary.
+Figure
+ 19. The Status Bar content changes depending on what you click on in the Packet List pane or Packet Details pane. [http-
+google101.pcapng]
+Find Problems with the Expert Infos Button 
+The first button is the 
+Expert Infos
+ button. This button is colored to show you the highest level of
+information contained in the Expert Infos window. The Expert Infos window can alert you to
+numerous network concerns seen in the trace file as well as packet comments. We will work with the
+Expert Infos window in 
+Use the Expert Infos Button on the Status Bar
+.
+Add Notes to a Trace File with the Annotation Button 
+The second button is the trace file 
+Annotation
+ button. Click this button to add, edit, or view a trace
+file comment. This feature can only be used if the trace file has been saved in .
+pcapng
+ format.
+First Column: Get Field, Capture, or Trace File Information
+The information shown in the first column (to the right of the 
+Annotation
+ button) changes depending
+on what is highlighted in the panes above it or if you are running a live trace file. In Figure 19, we can
+see the file name and size in this column. If you click on a field in the Packet Bytes pane, this column
+displays the field name
+[10]
+. Click around inside the Packet Details pane to see the contents of this first
+column change.
+Second Column: Get Packet Counts (Total and Displayed)
+When you open a saved trace file, the second column indicates the total number of packets in the file,
+the number of packets currently displayed (in case we applied a display filter), the number of marked
+packets (packets we marked as "of interest"), and the amount of time required to load the trace file.
+During a live capture, this column displays the number of packets captured, displayed, and marked.
+In Figure 19, we can see that 
+http-google101.pcapng
+ contains 374 packets and we haven't filtered any
+of them from view.
+Third Column: Determine the Current Profile
+The third column indicates your current profile. Figure 19 indicates that we are working in the 
+Default
+profile. Profiles are created so you can customize your Wireshark environment.
+For more information on profiles, refer to 
+Customize Wireshark for Different Tasks (Profiles)
+.
+There are two things you can do to improve efficiency using Wireshark.
+First, try right-clicking on various packets, fields, and windows in Wireshark to determine if
+right-click functionality is available. Many tasks are 
+only
+ available when you right-click. Other
+can just be performed faster using the right-click method.
+
+Second, get to know Wireshark's main toolbar and use that whenever possible.
+Although Wireshark launches with the Start Page, once you leave the Start Page, you don't
+return to it unless you close a trace file or restart Wireshark. Use the main toolbar and the
+right-click method to work with trace files instead of returning to the Start Page.
+ 
+
+ Lab 1: Use Packets to Build a Picture of a Network
+When you are analyzing traffic, try to get a feel for the network layout from what you can learn in the
+packets. Who is sending the packets? Who are the targets? What are their MAC and IP addresses? If
+multiple hosts talk through a device, it is likely a router. Switches are transparent, but you must
+assume that clients go through switches to reach a router.
+In this lab you will examine the MAC and IP addresses to build a picture of a portion of a network. In
+addition, you will look at the 
+Protocol
+ column to determine what applications are running on various
+hosts. Red text (visible in eBook versions only) indicates that we just learned this information from
+the current frame.
+Frame 1
+Launch 
+Wireshark
+, click the 
+File Open
+ button 
+ on the main tool bar and double-click on
+general101.pcapng
+ to open this file.
+Examine the Packet List pane. Frame 1 uses IPv6. Look in the Ethernet and IP headers for this frame
+in the Packet Details pane (shown below). This appears to be an IPv6 multicast (note the 
+IPv6mcast
+designation in the destination Ethernet address field).
+Frame 2
+Frame 2 is an ARP packet. Look inside the Ethernet header then inside the ARP portion of the packet.
+This ARP request is sent to locate the MAC address of the Target IP Address.
+
+Frame 3
+Frame 3 is a TCP handshake packet to the HTTP port. Again, look in the Ethernet header and IP
+header to build your picture of the network. Since the target has not responded, we really can't say the
+target is there. We will mark it with a question mark until we see it talk on the network.
+Frame 4
+Frame 4 is the reply to frame 3. We can now draw in the new HTTP server in our diagram. Look at the
+source MAC address in frame 4. It comes from the router, not the source server.
+
+Remember that routers strip off the received MAC header and apply a new MAC header. The new
+MAC header contains the address of the router's interface on this network as the new source MAC
+address and the address of the destination device as the new destination MAC address. This is how a
+router forwards a packet. On your local network, you may see traffic from many different IP addresses
+come from the MAC address of the local router.
+Frame 5 finishes the TCP 3-way handshake.
+Frame 6
+Frame 6 is a Dropbox LAN Sync Discovery Protocol (DB-LSB-DISC) packet from our client. This
+packet is sent to the broadcast address.
+Frame 7
+
+Frame 7 is another TCP handshake packet, but we have a new source and destination. We can now
+draw in a new source MAC and IP address and a new destination IP address. We must wait for the
+target to send a packet before we say it is definitely there.
+Frame 8
+Frame 8 is the answer from the HTTP server (199.59.150.9). We now know that this server is talking
+on the wire. Frame 9 is the final piece of the TCP handshake.
+Frame 10
+
+Frame 10 indicates that the other local host is trying to connect to another server. This time the target
+is port 443, the HTTPS port.
+Frame 11
+Frame 11 is a response from the target. We can now assume the target is running. Frame 12 finishes
+the TCP handshake and our drawing of the network we discovered just by looking at these first few
+packets in the trace file.
+As you can see, lots of different conversations are occurring simultaneously. We can build a picture of
+the network based on the packets we see. Building an image of a network based on traffic is a common
+
+task used in analysis.
+
+0.9. Analyze Typical Network Traffic
+What is "typical network traffic?" That is a loaded question. Every network is different. They may
+support different applications and have different network designs. There are, however, some common
+packets that you'll see during most login procedures and web browsing sessions. There are also some
+basic TCP/IP resolutions that take place and can usually be seen on the network.
+Let's just take a look at what you might see in a typical web browsing process and discuss the types of
+background traffic that can be seen as well.
+
+Analyze Web Browsing Traffic
+Open 
+http-google101.pcapng
+[11]
+ and follow along as we look at the traffic generated when someone
+visits 
+www.google.com
+[12]
+.
+In a typical web browsing session, your trace file will probably include a DNS request to resolve a
+host name to an IP address (referred to as an "A" record) [frame 1]. Hopefully a DNS reply will be
+sent back with at least one IP address associated with that host name [frame 2].
+If the client supports both IPv4 and IPv6, you'll see a request to find an IPv6 address (referred to as an
+"AAAA" record) next [frame 3]. The DNS server will respond with either an IPv6 address or
+miscellaneous information [frame 4].
+Next we see the TCP three-way handshake between the client and the web server [frames 5, 6, and 7]
+and then the client's request to GET the main page ("/") [frame 8]. The server acknowledges receipt of
+the request [frame 9] and sends the OK response [frame 10]
+[13]
+. Now the server begins sending the
+main page to the client [frame 11].
+Periodically, the client requests another element of the 
+www.google.com
+ page [frame 36] from the
+same server.
+In addition, when there is a link on 
+www.google.com
+ to another web site, the client will make a DNS
+query for that next site (as in frames 231, 232, 233, for example). These DNS queries are triggered
+when the JavaScript menu bar is loaded.
+
+
+You can likely see the relationship between the DNS queries and the menu, shown below.
+Continue to look through the trace file to get a feel for the traffic that crosses the network when
+someone opens the main Google page.
+
+Analyze Sample Background Traffic
+You will surely see some "background traffic" on your network. Background traffic is generated when
+automated processes run—no user interaction is required. Background traffic can be seen when Java
+looks for updates, your virus detection tool looks for updates, Dropbox checks in, IPv6 tries to
+discover IPv6 routers, and more.
+Become familiar with your background traffic so you can recognize it when you are
+troubleshooting problems. You don't want to waste time troubleshooting a background process that
+has nothing to do with the problem at hand.
+Open 
+mybackground101.pcapng
+ to look at the background traffic seen from one of our lab machines.
+Here is a breakdown of the background traffic on our lab host.
+Starting at frame 1, we see traffic to/from 67.217.65.244 (use an IP address lookup site such as
+DomainTools.com to check the address and you'll see this is Citrix)—sure enough, this lab host is
+running GoToAssist, GoToMeeting, and GoToMyPC applets which are all owned by Citrix.
+In frame 25, we see ICMPv6 Neighbor Notifications generated by the IPv6 stack, which is
+enabled on the lab host (it is a Windows 7 host).
+In frame 27, we see a Local Master Announcement. If we expand the Packet Details pane, we
+learn that the lab host is called VID02.
+Starting at frame 28, we can see some DNS queries for 
+javadl-esd-secure.oracle.com
+. It looks
+like our host is updating Java from an Akamai host (we expanded the Packet Details pane to look
+inside the DNS response for that tidbit).
+Frame 33 tells us that there is an IPv6 router on the network—we see ICMPv6
+Router Advertisement packets.
+Frame 83 is a DHCP ACK broadcast onto the network—it indicates the domain is 
+comcast.net
+—
+yup, that's the ISP serving the lab network.
+Frame 95 is an SNMP get-request to 192. 168.1.105—we don't see an answer anywhere in the
+trace file. This is an interesting one. It seems the lab host is configured to look for a network
+printer by that address, but no such printer exists. (Guess we need to clean off that machine a bit,
+eh?).
+Starting at frame 96, we learn that our lab host is also running Dropbox—we see some Dropbox
+LAN Sync Discovery Protocol traffic in there.
+Starting at frame 118, we learn the lab host also runs Memeo for backup—we see some HTTP
+traffic going to 
+www.memeo.info
+ (frame 121 in the expanded HTTP part of the Packet Details)
+and 
+api.memeo.info
+ (frame 134 in the expanded HTTP part of the Packet Details).
+This is what a background traffic analysis session feels like—looking through the traffic to define
+what is "normal." Once we know what is normal, we can look past that to detect what is abnormal.
+For example, frame 411 doesn't match the regular traffic we expect to see in a background trace file.
+In Figure 20, we see an incoming TCP connection attempt (SYN) which is not expected—this is a
+client, not a server. In the Packet Details pane, we see the packet is sent to the Secure Shell port (22)
+—that's a bit of a concern. We also see that Wireshark indicates that something is wrong with the TCP
+header—there is an illegal value in the Acknowledgment Number field.
+
+Figure
+ 20. Finding the needle in the haystack isn't difficult if you know the haystack well and can just move it aside.
+[mybackground101.pcapng]
+So who is this 183.63.31.122 host?
+Doing a bit of research on the source IP address, we gather the following information:
+inetnum: 
+183.0.0.0-183.63.255.255
+netname: CHINANET Guangdong province network
+descr: Data Communication Division
+descr: China Telecom
+country: CN
+status: ALLOCATED PORTABLE
+remarks: service provider
+And, of course, this address popped up at the Internet Storm Center
+[14]
+ with over 293,000 reports of
+folks being scanned on port 22 from this host.
+Networks can be pretty noisy with various background processes running, but if you can spend some
+time getting familiar with the "normal" ones, it shouldn't take you long to find the real stinkers.
+In this book you will learn a lot about filtering. Once you learn what is "normal," consider
+building a filter to remove this normal traffic from view. What is left after filtering out the good
+traffic may be one or more shiny needles.
+
+ Lab 2: Capture and Classify Your Own Background Traffic
+Take a moment and capture your own background as we did in this section. When you complete your
+capture, perform some research on the resulting trace file to see if you can characterize all the traffic
+to/from your machine when you are not touching the keyboard.
+Step 1
+: Close all applications except for Wireshark and any normal background applications that run
+on your machine.
+Step 2:
+ Click the 
+Capture Interfaces
+ 
+ button on the main toolbar.
+Step 3
+: Select the checkbox in front of the interface that sees active traffic. If you don't see any
+increases in the packet counts, be patient or toggle out to the command prompt to ping another host.
+You might recognize your active interface or only have one interface to select from.
+Step 4
+: Click 
+Start
+. Let the capture run for at least five minutes (longer if you can wait).
+Step 5
+: Click the 
+Stop Capture
+ button 
+ on the main toolbar.
+Spend some time going through the trace file to identify the applications that run in the background on
+your machine. Focus on the 
+Protocol
+ column and the 
+Info
+ column.
+If you don't recognize the application, perform some research on the IP addresses that your system
+communicates with. Most likely you will also see broadcast or multicast traffic from other hosts on
+your network.
+Step 5
+: To save this file, click the 
+Save
+ button on the main toolbar, navigate to the target directory,
+and name your file 
+background1.pcapng
+.
+Recognizing your own background traffic will help you remove this from consideration when looking
+for unusual communications. Consider saving trace files of your "normal" traffic to refer to when
+troubleshooting.
+
+0.10. Open Trace Files Captured with Other
+Tools
+Although Wireshark is considered the de facto standard in packet capture and analysis tools, there are
+numerous other tools available. It is important to know which tools can interoperate with Wireshark.
+When someone hands you a trace file, you can use 
+File | Open
+ to examine the traffic in Wireshark.
+Wireshark uses its Wiretap Library to convert the file into a format that Wireshark can display. For
+example, if you receive a trace file captured using Sun Snoop (with the .snoop file extension),
+Wireshark uses the Wiretap Library to perform the input/output function—handing the frames up to
+Wireshark for analysis.
+Select 
+File | Open
+ (or the 
+File Open
+ button on the main toolbar) and click on the arrow next to the
+Files of Type
+ area. Wireshark lists all the file types recognized, as shown in Figure 21.
+Figure
+ 21. Click the arrow next to 
+Files of type
+ to see all the trace file formats that Wireshark recognizes.
+If someone sends you a trace file and Wireshark doesn't recognize the format, first just
+change the file extension to .pcap (the old default trace file format) and try to open it in
+Wireshark. If that doesn't work, ask them what #*$&@! tool they used to capture the traffic!
+Wireshark understands so many formats. It is very unusual to receive a trace file in an
+unrecognized format.
+
+ Lab 3: Open a Network Monitor .cap File
+In this lab you will use Wireshark's Wiretap Library to open a file captured with Microsoft's Network
+Monitor.
+Step 1
+: Click the 
+File Open
+ button 
+ on the main toolbar.
+Step 2
+: Navigate to your trace file directory and click on 
+http-winpcap101.cap
+. Wireshark looks
+inside the trace file to identify what tool was used to capture the traffic, as shown below. Although
+this file was captured with Microsoft's Network Monitor (NetMon) v3.4, Wireshark marks it as
+NetMon v2 because that is the format v3.4 saves in.
+Step 3
+: Click 
+Open
+. Once the file is open, select 
+File | Save As
+ and click the drop down menu arrow
+next to Files of Type. Select 
+Wireshark – pcapng (*pcapng;*.pcapng.gz;*.ntar;*.ntar.gz)
+ and name
+the file 
+http–winpcap101.pcapng
+.
+Wireshark can recognize and open trace files created with most other industry tools. Once open, the
+fact that this trace file was captured with Network Monitor is transparent to you.
+
+Chapter 0 Challenge
+Open 
+challenge101-0.pcapng
+ and use the techniques covered in this chapter to answer these Challenge
+questions. The answer key is located in 
+Appendix A
+.
+We will focus on what you can learn about communications based on the main Wireshark view.
+Question 0-1.
+How many packets are in this trace file?
+Question 0-2.
+What IP hosts are making a TCP connection in frames 1, 2, and 3?
+Question 0-3.
+What HTTP command is sent in frame 4?
+Question 0-4.
+What is the length of the largest frame in this trace file?
+Question 0-5.
+What protocols are seen in the 
+Protocol
+ column?
+Question 0-6.
+What responses are sent by the HTTP server?
+Question 0-7.
+Is there any IPv6 traffic in this trace file?
+
+Chapter 1 Skills: Customize Wireshark
+Views and Settings
+"To me, analyzing networks is a bit like practicing a sport like skiing or golf. When you start, it's
+tough and a bit frustrating, but practice and persistence will make you accomplish amazing things.
+Remember that becoming a master is a matter of improving your skills, but also of getting the best
+from your tools. Don't get discouraged if things seem a bit overwhelming at the beginning—you'll
+improve fast and it's going to be a ton of fun!"
+Loris Degioanni
+Creator of WinPcap and Cascade Pilot
+®
+
+Quick Reference: Overview of wireshark.org
+1
+. 
+Wireshark—About Wireshark, author list, feature set, awards
+2
+. 
+Get Help—Q&A Forum, FAQ, docs, mailing lists, tools, Wiki page, Bug Tracker
+3
+. 
+Develop—Developers' Guide, browse the code, latest development builds
+4
+. 
+Link to WinPcap site
+5
+. 
+Indication of the protocol used to access the site (IPv4 or IPv6 )
+6
+. 
+Main link to the download page (auto-detects your incoming OS)
+7
+. 
+Link to training, docs, videos, mirror instructions, export regulations
+8
+. 
+Link to Riverbed, owner of the Wireshark trademark
+9
+. 
+General news and events list
+10
+. 
+Gerald Combs' Wireshark blog
+
+1.1. Add Columns to the Packet List Pane
+Wireshark contains a default set of columns that provide basic information. If you are focused on a
+particular issue, however, adding columns can help you quickly detect behavior patterns.
+There are two ways to add columns to the Packet List pane—the easy way and the hard way. You
+should know both methods because sometimes columns can't be created using the easier method.
+
+Right-Click | Apply as Column (the "easy way")
+The Packet Details pane displays the fields and values contained in the frames. Open a trace file and
+right-click on the Internet Protocol section in the Packet Details pane. Select 
+Expand All
+ to see all the
+fields in the entire frame.
+To add any field as a column, right-click on the field and select 
+Apply as Column,
+ as shown in Figure
+22. In this example, we quickly created an IP 
+Time to Live
+ (TTL) column.
+Figure
+ 22. Right-click on any frame field and select 
+Apply as Column
+. [http-espn101.pcapng]
+
+Edit | Preferences | Columns (the "hard way")
+If you don't have a packet that contains the desired field for the right-click method, you'll need to use
+the hard way to build columns. Select 
+Edit | Preferences | Columns
+ to see the existing columns,
+change the order of the columns, and add columns. Click on the arrow to the right of the 
+Field type
+area to see a list of available predefined columns.
+If the column you want to create isn't listed, you must click the 
+Add
+ button and select 
+Custom
+ as the
+field type, as shown in Figure 23. Finally, you must enter the field name (
+ip.ttl
+) and which occurrence
+of the field you want displayed in the column (if the field occurs more than once in a packet). Leave
+the occurrence number at 0 to view all occurrences of a field. Click on the 
+Title
+ column entry to type
+in the new column heading.
+It is much easier to just right-click on an IP TTL field and select 
+Apply as Column
+.
+Figure 23. You can add, edit, and rearrange columns in the Preferences window. We clicked and dragged the 
+Time to Live
+column to place it above the 
+Source
+ column.
+
+Hide, Remove, Rearrange, Realign, and Edit Columns
+You can use the Preferences window to perform functions on your columns, but this is not the fastest
+way to work with columns. Close the Preferences window and right-click on a column heading in the
+Packet List pane to specify alignment, edit the column title, temporarily hide (or display) a column, or
+even delete a column. Click and drag windows left or right to reorder them.
+For example, in Figure 24, we are working with 
+http-espn101.pcapng
+. We right-clicked on our new
+Time to live
+ column to view the available column options. If we do not want to use this column again,
+we can select 
+Remove Column
+.
+Adding columns to the Packet List pane can save a lot of time when you're comparing traffic
+characteristics. Be careful of going column-crazy, however. Wireshark will process all
+displayed 
+and
+ hidden columns when it opens a trace file or applies a display filter. If you
+create and hide 30 different columns, Wireshark is going to be much slower than if you just
+remove and recreate the columns as you need them.
+Figure
+ 24. Right-click on a column heading to perform basic column functions. [http–espn101.pcapng]
+
+Sort Column Contents
+Columns make the analysis process faster, but there are two other great reasons to create columns:
+columns can be sorted and column data can be exported.
+Click on a column heading once to sort from low to high and click again to sort from high to low. If
+you have added a column showing the delays between packets, you can sort this column to quickly
+find the largest delays in the trace file. We will use this technique in 
+Configure Time Columns to Spot
+Latency Problems
+.
+For example, in Figure 25 we opened 
+http-espn101.pcapng
+ and right-clicked once on the 
+Time to live
+column heading to sort the column from low to high. Scrolling to the top of the trace file, we
+determined that the lowest TTL value in the trace file is 44.
+Figure
+ 25. We sorted the Time to live field to find the lowest TTL value in the trace file. [http–espn101.pcapng]
+
+Export Column Data
+Another great reason to add columns to the Packet List pane is to export those columns for analysis
+with another tool. For example, if you added a 
+Time to Live
+ column, you can select 
+File | Export
+Packet Dissections
+ and choose 
+CSV
+ (comma-separated value) format. Choose to export only the
+Summary information and you'll end up with a CSV file containing your new column data. You can
+now open this CSV file in a spreadsheet to manipulate the data further. You will get a chance to
+practice exporting to CSV format in Lab 30 and Lab 41.
+
+ Lab 4: Add the HTTP Host Field as a Column
+During a browsing session, an HTTP client sends requests for HTTP objects to one or more HTTP
+servers. In each of the requests, the client specifies the name or the IP address of the target HTTP
+server. This can be very revealing.
+Note
+: All frames from 24.6.173.220 will appear with a black background and red foreground if
+Wireshark is set to validate IP header checksums. You will disable this feature in Lab 6.
+Step 1
+: Click the 
+File Open
+ button 
+ on the main toolbar and open 
+http–disney101.pcapng
+.
+Step 2
+: Scroll down in the Packet List pane and select 
+frame 15
+.
+Step 3
+: The Packet Details pane shows the contents of frame 15. Click the 
++
+ in front of Hypertext
+Transfer Protocol to expand this section of the frame.
+Step 4
+: Right-click on the 
+Host
+ line (which contains www.disney.com\r\n) and select 
+Apply as
+Column
+. Your new 
+Host
+ column appears to the left of the 
+Info
+ column. You can click and drag the
+column edges to widen the column.
+Step 5
+: Click on the 
+Host
+ column twice to sort from high to low.
+Step 6
+: Click the 
+Go to First
+ button 
+ to jump to the top of the sorted trace file. You can now easily
+see all the hosts to which the client sent requests, as shown below.
+Step 7
+: Lab Clean-up  Right-click on your new 
+Host
+ column heading and select 
+Hide Column
+. If you
+want to view this column again, right-click any column heading and select 
+Displayed Columns | Host
+(http.host)
+.
+Adding and sorting columns are two key tasks that can shorten your analysis time significantly. Why
+go searching through thousands of packets when you can have Wireshark quickly gather and display
+the information you need?
+
+1.2. Dissect the Wireshark Dissectors
+Packet dissection is one of the most powerful features of Wireshark. The dissection process converts
+streams of bytes into understandable requests, replies, refusals, retransmissions, and more.
+Frames are handed up from either the Capture Engine or Wiretap Library to the 
+Core Engine
+. The
+Core Engine is referred to as the "glue code that holds the other blocks together." This is where the
+real work begins. Wireshark understands the format used by thousands of protocols and applications.
+Wireshark calls on various dissectors to break apart fields and display their meanings in readable
+format.
+For example, consider a host on an Ethernet network that issues an HTTP GET request to a web site.
+This packet will be handled by five dissectors.
+
+The Frame Dissector
+The Frame dissector (seen in Figure 26) examines and displays the trace file basic information, such
+as the timestamp set on each of the frames. Then the Frame dissector hands the frame off to the
+Ethernet dissector.
+Figure
+ 26. The Frame dissector displays metadata (extra information) about the frame. [http–chappellu101.pcapng]
+Every once in a while a dissector bug surfaces. They typically appear as "exception occurred"
+in the 
+Info
+ column of the Packet List pane. If you want to validate the bug, you can search for
+the protocol as a keyword on the Wireshark Bug Database at 
+bugs.wireshark.org/bugzilla/
+.
+
+The Ethernet Dissector Takes Over
+The Ethernet dissector decodes and displays the fields of the Ethernet II header and, based on the
+contents of the Type field, hands the packet off to the next dissector. In Figure 27, the Type field value
+0x0800 indicates that an IPv4 header will follow. Notice that at this point, when we remove the
+Ethernet frame from the dissection, we are using the term "packet."
+Figure
+ 27. The Ethernet dissector looks at the Type field to determine the next required dissector. [http–chappellu101.pcapng]
+
+The IPv4 Dissector Takes Over
+The IPv4 dissector decodes the fields of the IPv4 header and, based on the contents of the Protocol
+field, hands the packet off to the next dissector. In Figure 28, the Protocol field value 6 indicates that
+TCP will follow.
+Figure
+ 28. The IPv4 dissector looks at the Protocol field to determine the next required dissector. [http–chappellu101.pcapng]
+
+The TCP Dissector Takes Over
+The TCP dissector decodes the fields of the TCP header and, based on the contents of the Port fields,
+hands the packet off to the next dissector. In Figure 29, the destination port value 80 indicates that
+HTTP will follow. We will see how Wireshark handles traffic running over non-standard port numbers
+in the next section.
+Figure
+ 29. The TCP dissector looks at the port fields to determine the next required dissector. [http–chappellu101.pcapng]
+
+
+[Note: PDF has 437 pages, only first 100 pages extracted]

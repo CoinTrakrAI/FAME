@@ -1,0 +1,7 @@
+{
+  "examples": [
+    "$ openssl asn1parse -in example.cer\n    0:d=0  hl=4 l= 539 cons: SEQUENCE\n    4:d=1  hl=4 l= 388 cons: SEQUENCE\n    8:d=2  hl=2 l=   3 cons: cont [ 0 ]",
+    "def calc_chksum(unk2, data):\n    chksum = unk2\n    for i in range(len(data)):\n        chksum += ord(data[i:i+1])\n    return chksum",
+    "class PackageClass {\n    PackageClass() {\n    }\n    PackageClass(String arg) {\n    }\n    @Override\n    public String toString() {\n        return \"In Package\";\n    }"
+  ]
+}

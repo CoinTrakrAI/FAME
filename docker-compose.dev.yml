@@ -1,0 +1,20 @@
+version: "3.9"
+
+services:
+  fame:
+    build: .
+    image: fame-desktop:dev
+    ports:
+      - "8080:8080"
+      - "9090:9090"
+      - "3000:3000"
+    env_file:
+      - .env
+    environment:
+      - FAME_ENV=development
+      - FAME_LOG_AGGREGATION=${FAME_LOG_AGGREGATION:-1}
+    volumes:
+      - ./models:/app/models
+      - ./data:/app/data
+    restart: unless-stopped
+

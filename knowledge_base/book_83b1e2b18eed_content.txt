@@ -1,0 +1,3381 @@
+www.allitebooks.com
+
+
+www.allitebooks.com
+
+
+CompTIA® A+®
+Complete Study Guide
+Fourth Edition
+www.allitebooks.com
+
+
+www.allitebooks.com
+
+
+CompTIA® A+®
+Complete Study Guide
+Exam 220-1001 and Exam 220-1002
+Fourth Edition
+Quentin Docter  
+Jon Buhagiar
+www.allitebooks.com
+
+
+Senior Acquisitions Editor: Kenyon Brown 
+Development Editor: Tom Cirtin
+Technical Editor: Chris Crayton
+Senior Production Editor: Christine O’Connor
+Copy Editor: John Sleeva
+Editorial Manager: Pete Gaughan 
+Production Manager: Kathleen Wisor
+Associate Publisher: Jim Minatel
+Book Designers: Judy Fung and Bill Gibson
+Proofreader: Nancy Carrasco
+Indexer: Ted Laux
+Project Coordinator, Cover: Brent Savage
+Cover Designer: Wiley
+Cover Image: Jeremy Woodhouse, Getty Images 
+Copyright © 2019 by John Wiley & Sons, Inc., Indianapolis, Indiana
+Published simultaneously in Canada
+ISBN: 978-1-119-51593-7  
+ISBN: 978-1-119-51595-1 (ebk.)  
+ISBN: 978-1-119-51600-2 (ebk.)
+Manufactured in the United States of America 
+No part of this publication may be reproduced, stored in a retrieval system or transmitted in any form or 
+by any means, electronic, mechanical, photocopying, recording, scanning or otherwise, except as permit-
+ted under Sections 107 or 108 of the 1976 United States Copyright Act, without either the prior written 
+permission of the Publisher, or authorization through payment of the appropriate per-copy fee to the 
+Copyright Clearance Center, 222 Rosewood Drive, Danvers, MA 01923, (978) 750-8400, fax (978)  
+646-8600. Requests to the Publisher for permission should be addressed to the Permissions Department, 
+John Wiley & Sons, Inc., 111 River Street, Hoboken, NJ 07030, (201) 748-6011, fax (201) 748-6008, or 
+online at http://www.wiley.com/go/permissions .
+Limit of Liability/Disclaimer of Warranty: The publisher and the author make no representations or war-
+ranties with respect to the accuracy or completeness of the contents of this work and specifically disclaim 
+all warranties, including without limitation warranties of fitness for a particular purpose. No warranty 
+may be created or extended by sales or promotional materials. The advice and strategies contained herein 
+may not be suitable for every situation. This work is sold with the understanding that the publisher is not 
+engaged in rendering legal, accounting, or other professional services. If professional assistance is required, 
+the services of a competent professional person should be sought. Neither the publisher nor the author 
+shall be liable for damages arising herefrom. The fact that an organization or Web site is referred to in this 
+work as a citation and/or a potential source of further information does not mean that the author or the 
+publisher endorses the information the organization or Web site may provide or recommendations it may 
+make. Further, readers should be aware that Internet Web sites listed in this work may have changed or 
+disappeared between when this work was written and when it is read.
+For general information on our other products and services or to obtain technical support, please contact 
+our Customer Care Department within the U.S. at (877) 762-2974, outside the U.S. at (317) 572-3993 or 
+fax (317) 572-4002.
+Wiley publishes in a variety of print and electronic formats and by print-on-demand. Some material 
+included with standard print versions of this book may not be included in e-books or in print-on-demand. 
+If this book refers to media such as a CD or DVD that is not included in the version you purchased, 
+you may download this material at http://booksupport.wiley.com . For more information about Wiley 
+products, visit www.wiley.com .
+Library of Congress Control Number: 2019936841
+TRADEMARKS: Wiley, the Wiley logo, and the Sybex logo are trademarks or registered trademarks of 
+John Wiley & Sons, Inc. and/or its affiliates, in the United States and other countries, and may not be 
+used without written permission. CompTIA and A+ are registered trademarks of CompTIA, Inc. All other 
+trademarks are the property of their respective owners. John Wiley & Sons, Inc. is not associated with any 
+product or vendor mentioned in this book.
+10 9 8 7 6 5 4 3 2 1
+
+For my girls. 
+—Quentin Docter
+For my wife and son. 
+—Jon Buhagiar
+
+Acknowledgments
+As we were putting together this book, I was reminded of the proverb that begins “It takes 
+a small village….” That beginning definitely holds true to create a book of this scope and 
+size. From beginning to end, scores of dedicated professionals have focused on delivering 
+the best book possible to you, the readers.
+First, I need to thank my coauthor Jon Buhagiar. I appreciate him diving in and dedicat-
+ing himself to helping to produce an excellent book. I also need to give special thanks to 
+our technical editor, Chris Crayton. He was meticulous and thorough, and challenged me 
+to always find new and better ways to communicate complex concepts. His entire focus was 
+on providing the best training material possible, and I doubt there’s better in the business. 
+Now, on to the rest of the team.
+Kenyon Brown and Tom Cirtin kept us on track and moving forward, which was a chal-
+lenge at times. Christine O’Connor had the fun job of keeping us organized, which is akin 
+to herding cats. Copyeditor John Sleeva reminded me yet again that I am no master of the 
+English language and saved me from butchering it (too badly). Many thanks also go out to 
+proofreader, Nancy Carrasco and our indexer, Ted Laux. Without their great contribu-
+tions, this book would not have made it into your hands.
+On a personal note, I need to thank my family. My girls are all incredibly supportive. 
+Unfortunately, writing a book as my slash while holding down a full-time job takes up a lot 
+of time. I end up hiding in my office a lot, but they’re always there for me, and I couldn’t do 
+it without them. Another huge thanks goes to my late grandpa, Joe, who got me into com-
+puters and taught me so many lessons I will never be able to repay. Finally, thanks to my 
+friends who keep me relatively sane—Sean, Kurtis, Tim, John, and others—and laugh at 
+me when I tell them I spent my weekend writing about the laser printer imaging process.
+—Quentin Docter
+I would like to first thank my coauthor Quentin Docter. Throughout the writing of this 
+book, he helped me with his insight and his expertise in writing technical books. Without 
+his words of wisdom and guidance, this book would not be the product it stands to be. I 
+would also like to give special thanks to our technical editor, Chris Crayton. His thorough 
+review of the material helped to identify many areas to elaborate on and polish.
+I would also like to take the time to thank the many people who made this book pos-
+sible: Kenyon Brown, at Wiley Publishing, for giving me the opportunity to write this book 
+and work with this wonderful team; Tom Cirtin, for keeping us on track during the writing 
+process; Christine O’Connor, who also kept us on track and organized during the publish-
+ing process; and our copyeditor, John Sleeva, for helping me realize my use of IT slang at 
+times and proper English. I’d also like to thank the many other people I’ve never met but 
+who worked behind the scenes to make this book a success.
+During the writing of this book, many others in my life supported me, and I’d like to 
+take this opportunity to thank them, as well. First and foremost, thanks to my wife and 
+son for their support during the many evenings and weekends spent in my office at the com-
+puter. Finally, thanks to my friend and co-worker, Bill, for encouraging me daily with his 
+insight and jokes, as well as to all of my other co-workers and friends. Thank you.
+—Jon Buhagiar
+
+About the Authors
+Quentin Docter   (A+, Network+, IT Fundamentals+, MCSE, CCNA, SCSA) is an IT con-
+sultant who started in the industry in 1994. Since then, he’s worked as a tech and network 
+support specialist, trainer, consultant, and webmaster. He has written several books for 
+Sybex, including books on A+, IT Fundamentals+, Server+, Windows, and Solaris 9 certifi-
+cations, as well as PC hardware and maintenance.
+Jon Buhagiar   (Network+, A+, CCNA, MCSA, MCSE, BS/ITM ) is an information tech-
+nology professional with two decades of experience in higher education. During the past 
+19 years he has been responsible for Network Operations at Pittsburgh Technical College 
+and lead several projects, such as virtualization (server and desktop), VoIP, Office 365, and 
+many other projects supporting the quality of education at the college. He has achieved  
+several certifications from Cisco, CompTIA, and Microsoft, and has taught many of 
+the certification paths. He is the author of several books, including Sybex’s CompTIA 
+Network+ Review Guide  2018 and Network+ Exam Review Course  2018.
+
+Contents at a Glance
+Introduction  xxxiii
+Assessment Test for Exam 220-1001  lxxvi
+Assessment Test for Exam 220-1002  lxxxvii
+Part I 220-1001  1
+Chapter 1 Motherboards, Processors, and Memory  3
+Chapter 2 I nternal Expansion, Storage Devices, and Power Supplies  75
+Chapter 3 P eripherals and Connectors  131
+Chapter 4 C ustom PC Configurations  203
+Chapter 5 I nstalling and Configuring Printers  235
+Chapter 6 N etworking Fundamentals  309
+Chapter 7 I ntroduction to TCP/IP  363
+Chapter 8 I nstalling Wireless and SOHO Networks  403
+Chapter 9 N etwork Services, Virtualization, and Cloud Computing  485
+Chapter 10 U nderstanding Laptops  541
+Chapter 11 U nderstanding Mobile Devices  601
+Chapter 12 M obile Device Connectivity and Synchronization  641
+Chapter 13 T roubleshooting Methodology and Resolving Core  
+Hardware Problems  707
+Chapter 14 H ardware and Network Troubleshooting  743
+PART II 220-1002  827
+Chapter 15 O perating System Basics  829
+Chapter 16 O perating System Administration  875
+Chapter 17 W orking with Windows 10  951
+Chapter 18 W orking with Windows 8/8.1  1017
+Chapter 19 W orking with Windows 7  1041
+Chapter 20 W orking with macOS and Linux  1095
+Chapter 21 S cripting and Remote Access  1127
+Chapter 22 S ecurity Concepts  1157
+
+xiv Contents at a Glance
+Chapter 23 Securing Operating Systems  1231
+Chapter 24 T roubleshooting Operating Systems and Security  1281
+Chapter 25 D ocumentation and Professionalism  1367
+Chapter 26 S afety and Environmental Concerns  1413
+Appendix  A A nswers to Review Questions  1471
+Appendix  B A nswers to Performance-Based Questions  1525
+Index  1553
+
+Contents
+Introduction  xxxiii
+Assessment Test for Exam 220-1001  lxxvi
+Assessment Test for Exam 220-1002  lxxxvii
+Part I 220-1001  1
+Chapter 1 Motherboards, Processors, and Memory  3
+Understanding Motherboards  5
+System Board Form Factors  6
+System Board Components  9
+Understanding Processors  38
+Understanding Memory  44
+Important Memory Terms  45
+Types of Memory  48
+Memory Packaging  55
+Understanding Cooling Systems  59
+Fans 59
+Memory Cooling  62
+Hard Drive Cooling  63
+Chipset Cooling  63
+CPU Cooling  63
+Summary  68
+Exam Essentials  68
+Review Questions  70
+Performance-Based Question 1  74
+Performance-Based Question 2  74
+Chapter 2 I nternal Expansion, Storage Devices, and Power 
+Supplies  75
+Installing and Configuring Expansion Cards  77
+Video  78
+Multimedia  79
+Communications  80
+Input/Output  82
+Adapter Configuration  83
+Understanding Storage Devices  84
+Hard Disk Drive Systems  84
+Solid-State Drives  92
+Optical Storage Drives  97
+RAID  103
+Removable Storage and Media  105
+Installing, Removing, and Configuring Storage Devices  110
+
+xvi Contents
+Understanding Power Supplies  113
+Dual-Rail Architecture  115
+Power and Voltage Ratings  115
+Power Connectors  116
+Replacing Power Supplies  122
+AC Adapters as Power Supplies  123
+Summary  124
+Exam Essentials  124
+Review Questions  126
+Performance-Based Question  130
+Chapter 3 Peripherals and Connectors  131
+Understanding Cables and Connectors  133
+Video Cables and Connectors  133
+Hard Drive Cables and Connectors  141
+Multipurpose Cables and Connectors  148
+Other Peripheral Cables and Connectors  156
+Understanding Uses of Peripheral Devices  161
+Video Devices  162
+Audio Devices  179
+Input and Output Devices  181
+Storage Devices  193
+Summary  194
+Exam Essentials  195
+Review Questions  197
+Performance-Based Question  201
+Chapter 4 Custom PC Configurations  203
+Exploring Custom Configurations  205
+Standard Thick Clients  206
+Graphic and CAD/CAM Design Workstations  207
+Audio/Video Editing Workstations  210
+Virtualization Workstations  214
+Gaming PCs  217
+Thin Clients  221
+Network-Attached Storage Devices  221
+Summary  228
+Exam Essentials  229
+Review Questions  230
+Performance-Based Question  234
+Chapter 5 I nstalling and Configuring Printers  235
+Understanding Print Technologies and Imaging Processes  237
+Impact Printers  238
+Inkjet Printers  240
+
+Contents  xvii
+Laser Printers  249
+Thermal Printers  260
+Virtual Printers  261
+3D Printers  263
+Installing and Maintaining Printers  267
+Printer Interface Components  267
+Installing and Sharing Local Printers  272
+Installing and Sharing Networked Printers  283
+Performing Printer Maintenance  292
+Installing Printer Upgrades  298
+Summary  303
+Exam Essentials  303
+Review Questions  305
+Performance-Based Question  308
+Chapter 6 Networking Fundamentals  309
+Understanding Networking Principles  311
+Understanding Networking Fundamentals  312
+Identifying Common Network Hardware  333
+Network Interface Cards  333
+Cables and Connectors  337
+Networking Components  350
+Summary  357
+Exam Essentials  357
+Review Questions  359
+Performance-Based Question  362
+Chapter 7 I ntroduction to TCP/IP  363
+Understanding TCP/IP  365
+TCP/IP Structure  366
+Understanding IP Addressing  376
+Understanding Virtual Networks  392
+Summary  395
+Exam Essentials  396
+Review Questions  398
+Performance-Based Question  402
+Chapter 8 I nstalling Wireless and SOHO Networks  403
+Understanding Wireless Networking Technologies  406
+802.11 Networking Standards  407
+Bluetooth Networking  415
+Cellular Networking Standards  418
+Home Automation Standards  421
+Radio Frequency Networking Standards  423
+
+xviii Contents
+Installing and Configuring SOHO Networks  426
+Choosing an Internet Connection  427
+Choosing Internal Network Connections  441
+Keys to Planning a Network  445
+Network Installation  446
+Configuring Wireless Routers and Access Points  457
+Configuring End-User Devices  473
+Summary  478
+Exam Essentials  478
+Review Questions  480
+Performance-Based Question  484
+Chapter 9 Network Services, Virtualization, and Cloud 
+Computing  485
+Understanding Network Services  487
+Server Roles  488
+Internet Appliances  506
+Legacy and Embedded Systems  509
+Understanding Virtualization and Cloud Computing  511
+Concepts of Cloud Computing  511
+Concepts of Virtualization  521
+Summary  533
+Exam Essentials  534
+Review Questions  536
+Performance-Based Question  539
+Chapter 10 Understanding Laptops  541
+Working with Laptops  543
+Laptops vs. Desktops  544
+Disassembling and Reassembling Laptops  545
+Laptop Case  549
+Motherboards and Processors  553
+Memory  558
+Storage  561
+Input Devices  566
+Keyboards  566
+Pointing Devices  570
+Internal Expansion  575
+Mini PCIe  575
+M.2 575
+Power Systems  576
+Batteries  576
+Power Adapters  578
+
+Contents  xix
+Laptop Displays  580
+Video Card  580
+Backlight  581
+Inverter  581
+Screen  582
+Digitizer  583
+Webcam and Microphone  583
+Wi-Fi Antenna  584
+Replacing Components Within a Laptop Display  584
+Other Internal Components  586
+External Peripherals  591
+Cable Locks  591
+Docking Stations and Port Replicators  592
+USB Ports  593
+Summary  595
+Exam Essentials  595
+Review Questions  597
+Performance-Based Question  600
+Chapter 11 Understanding Mobile Devices  601
+Understanding Mobile Devices  603
+Characteristics of Mobile Devices  604
+Tablets  607
+Smartphones  610
+E-readers  616
+GPS 617
+Wearable Technology Devices  622
+Connection Types  626
+Mobile Device Accessories  632
+Summary  635
+Exam Essentials  635
+Review Questions  637
+Performance-Based Question  640
+Chapter 12 Mobile Device Connectivity and Synchronization  641
+Understanding Network Connectivity and Email  643
+Using Cellular Data Connections  645
+Establishing Wi-Fi Connectivity  654
+Establishing Bluetooth Connectivity  666
+Configuring Email Accounts  675
+Configuring Mobile Device Synchronization  687
+Syncing Apple iOS Devices  688
+Syncing Android Devices  694
+Syncing to an Automobile  696
+Software Installation Requirements  696
+
+xx Contents
+Summary  699
+Exam Essentials  700
+Review Questions  702
+Performance-Based Question  706
+Chapter 13 Troubleshooting Methodology and Resolving 
+Core Hardware Problems  707
+Using the Troubleshooting Best Practice Methodology  710
+Identify the Problem  710
+Establish a Theory  715
+Test the Theory  716
+Establish a Plan of Action  718
+Verify Functionality  720
+Document Findings  720
+Troubleshooting Core Hardware Issues  721
+Troubleshooting Motherboards, CPUs, RAM, and  
+Power Problems  722
+POST Routines  727
+Identifying BIOS/UEFI Issues  728
+Identifying Motherboard and CPU Problems  729
+Identifying Memory Issues  731
+Identifying Power Supply Problems  732
+Identifying Cooling Issues  733
+Summary  735
+Exam Essentials  736
+Review Questions  737
+Performance-Based Question  741
+Chapter 14 Hardware and Network Troubleshooting  743
+Troubleshooting Storage and Video Problems  748
+Troubleshooting Storage Device Problems  749
+Troubleshooting Video Issues  756
+Troubleshooting Common Mobile Device Issues  758
+Power Issues  759
+Video Difficulties  761
+Input Problems  762
+Networking Troubles  764
+Responsiveness Issues  768
+Troubleshooting Printer Problems  772
+Impact Printer Problems  773
+Inkjet Printer Problems  776
+Laser Printer Problems  779
+Managing Print Jobs  793
+
+Contents  xxi
+Troubleshooting Networking Problems  797
+Resolving Connectivity Issues  798
+Using Network Troubleshooting Tools  803
+Summary  819
+Exam Essentials  820
+Review Questions  823
+Performance-Based Question  826
+PART II 220-1002  827
+Chapter 15 Operating System Basics  829
+Understanding Operating Systems  831
+Operating System Terms and Concepts  833
+Operating Systems  835
+Minimum System Requirements  838
+The Windows Interface  842
+What’s in a Window?  856
+Updating Windows  859
+Creating Restore Points  860
+File Management  861
+Preparing for the Exam  866
+Summary  869
+Exam Essentials  869
+Review Questions  871
+Performance-Based Question  874
+Chapter 16 Operating System Administration  875
+Interacting with Operating Systems  877
+Control Panel  877
+Command-Line Tools  901
+The Windows Registry  912
+Virtual Memory  915
+Administrative Tools  917
+Task Manager  917
+Microsoft Management Console  921
+Windows Memory Diagnostics Tool  929
+Local Security Policy  929
+User Account Management  930
+Windows System Configuration Tools  931
+Power Management  937
+Disk Management  938
+Getting Disks Ready to Store Files and Programs  938
+Checking the Health of Hard Disks and Optimizing  
+Their Performance  944
+
+xxii Contents
+Summary  945
+Exam Essentials  945
+Review Questions  947
+Performance-Based Question  950
+Chapter 17 Working with Windows 10  951
+Introduction to Windows 10  953
+Windows 10 Features  956
+Windows Updates  965
+Windows 10 Versions  966
+Installing Windows 10  968
+Windows Installation Options  970
+The Installation Process  971
+Upgrading to Windows 10  987
+Repair Installation  993
+Side-by-Side Upgrading Windows 10  993
+Upgrading Editions of Windows 10  994
+Installation/Upgrade Boot Options  994
+Booting the Windows 10 Operating System  995
+Multiboot Installations  995
+Windows 10 Boot Process  997
+Windows Applications  999
+Application Requirements  999
+Application Installation  1001
+Security Considerations  1003
+Networking in Windows 10  1003
+Networking Models  1003
+User Authentication  1007
+Accessing Resources  1009
+Summary  1011
+Exam Essentials  1012
+Review Questions  1013
+Performance-Based Question  1016
+Chapter 18 Working with Windows 8/8.1  1017
+Windows Editions  1018
+Installing Windows 8  1025
+DVD Installation  1028
+Unattended Installation/Image Deployment  1028
+Remote Network Installation  1029
+Multiboot Installation  1029
+Repair Installation/Refresh/Restore  1030
+Recovery Partition  1031
+
+Contents  xxiii
+Windows 8 Boot Methods  1032
+Internal Hard Drive (Partition)  1032
+External/Hot-Swappable Drive  1033
+Flash Drives  1033
+Solid-State Drives  1034
+Netboot  1034
+Summary  1035
+Exam Essentials  1035
+Review Questions  1036
+Performance-Based Question  1040
+Chapter 19 Working with Windows 7  1041
+Windows 7 Editions  1043
+Installing Windows 7  1050
+Upgrading to Windows 7  1051
+Upgrading Editions of Windows 7  1055
+Installation/Upgrade Boot Options  1055
+Booting the Windows 7 Operating System  1056
+Multiboot Installations  1057
+Key Boot Files  1058
+Windows 7 Features  1059
+System Restore  1059
+Windows Defender  1060
+Windows Firewall  1060
+Action Center  1064
+Windows 7 Administrative Tools  1066
+Local Users and Groups  1066
+Local Security Policy  1067
+System Configuration  1069
+Component Services  1070
+Data Sources  1071
+Print Management  1071
+Windows Memory Diagnostic  1072
+Windows 7 Control Panel Utilities  1073
+HomeGroup  1073
+RemoteApp and Desktop Connections  1075
+Troubleshooting  1076
+Windows 7 User Account Control  1078
+Networking and Windows 7  1081
+Proxy Settings  1083
+Configuring an Alternative IP Address in Windows  1084
+Network Card Properties  1086
+Summary  1090
+
+xxiv Contents
+Exam Essentials  1090
+Review Questions  1091
+Performance-Based Question  1094
+Chapter 20 Working with macOS and Linux  1095
+Best Practices  1096
+Scheduled Backups  1096
+Scheduled Disk Maintenance  1099
+System Updates/App Store  1099
+Patch Management  1100
+Driver/Firmware Updates  1101
+Antivirus/Anti-Malware Updates  1102
+Tools  1102
+Features  1104
+Basic Linux Commands  1109
+Understanding the Syntax of Shell Commands  1110
+Discovering and Using Linux Commands  1112
+Becoming root (Superuser)  1113
+Managing Processes  1114
+Directory Navigation  1115
+Directory Listings  1116
+Changing Permissions and Ownership  1117
+Working with Files  1118
+Working with Directories  1119
+Networking Utilities  1120
+Summary  1120
+Exam Essentials  1121
+Review Questions  1122
+Performance-Based Question  1126
+Chapter 21 Scripting and Remote Access  1127
+Scripting  1128
+Scripting Basics  1130
+Scripting Languages  1134
+Remote Access  1146
+Remote Desktop Protocol  1146
+Virtual Network Computing  1147
+Telnet  1147
+Secure Shell  1148
+Remote Access Tools  1149
+Security Considerations  1151
+Summary  1151
+Exam Essentials  1151
+Review Questions  1152
+Performance-Based Question  1155
+
+Contents  xxv
+Chapter 22 Security Concepts  1157
+Physical Security Concepts  1161
+Authentication Factors  1161
+Multifactor Authentication  1162
+Layered Approach to Physical Security  1162
+Security Guards  1163
+Door Locks  1164
+Tailgating  1164
+Mantraps  1165
+Biometrics  1165
+Badges  1166
+Key Fobs  1167
+Hardware Tokens  1167
+Smart Cards and RFID Badges  1168
+Information Security  1169
+Logical Security  1171
+Antivirus and Anti-Malware Software  1171
+Firewalls  1172
+Email Filtering  1176
+Data Loss Prevention  1176
+Virtual Private Networks  1177
+User Authentication/Strong Passwords  1177
+Certificates  1178
+Directory Permissions  1179
+Active Directory  1180
+Network Policies  1185
+Acceptable Use Policies  1185
+Trusted/Untrusted Software Sources  1186
+Mobile Device Management  1186
+Principle of Least Privilege  1186
+Common Security Threats  1187
+Social Engineering Attacks  1187
+Denial-of-Service Attacks  1190
+Exploits vs. Vulnerabilities  1192
+Zero-Day Attacks  1193
+Man-in-the-Middle Attacks  1193
+Password Attacks  1194
+Spoofing Attacks  1195
+Non-Complaint Systems  1196
+Zombie  1196
+Common Software Threats  1196
+Ransomware  1197
+Trojans  1197
+Keyloggers  1198
+
+xxvi Contents
+Rootkits  1198
+Viruses  1198
+Botnets  1203
+Worms  1203
+Spyware  1203
+Mitigating Software Threats  1203
+Antivirus  1203
+Anti-Malware  1204
+Recovery Console  1205
+Backup/Restore  1207
+End-User Education  1208
+Software Firewalls  1209
+FilteredDNS  1211
+Destruction and Disposal Methods  1212
+Recycling or Repurposing Best Practices  1212
+Physical Destruction  1214
+Securing a SOHO Network (Wireless)  1216
+Changing Default Usernames and Passwords  1216
+Changing the SSID  1217
+Setting Encryption  1217
+Disabling SSID Broadcast  1218
+Wireless MAC Filtering  1218
+Antenna and Access Point Placement  1218
+Radio Power Levels  1219
+Assign Static IP Addresses  1219
+WPS  1219
+Authentication  1220
+Securing a SOHO Network (Wired)  1221
+Changing Default Usernames and Passwords  1221
+Assigning Static IP Addresses  1222
+Disabling Ports  1222
+Physical Security  1222
+Wired and Wireless Security  1223
+Summary  1225
+Exam Essentials  1225
+Review Questions  1227
+Performance-Based Question  1230
+Chapter 23 Securing Operating Systems  1231
+Workstation Security Best Practices  1233
+Setting Strong Passwords  1233
+Requiring Passwords  1234
+Password Expiration  1235
+Account Management  1236
+
+Contents  xxvii
+Active Directory  1241
+Disable Autorun  1245
+Data Encryption  1245
+Patch/Update Management  1246
+Working with Windows OS Security Settings  1247
+Users and Groups  1247
+NTFS vs. Share Permissions  1248
+Shared Files and Folders  1256
+System Files and Folders  1259
+User Authentication  1260
+BitLocker  1263
+EFS 1264
+Mobile Device Security  1265
+Screen Locks  1266
+Remote Wipes and Locator Applications  1267
+Remote Backup  1270
+Failed Login Attempts Restrictions  1270
+Viruses and Malware on Mobile Devices  1271
+Operating System Updates  1271
+Full Device Encryption  1272
+Multifactor Authentication  1272
+Authenticator Applications  1272
+Firewalls  1273
+Policies and Procedures  1273
+Summary  1274
+Exam Essentials  1275
+Review Questions  1276
+Performance-Based Question  1280
+Chapter 24 Troubleshooting Operating Systems and Security  1281
+Troubleshooting Microsoft Windows OS Problems  1283
+Common Symptoms  1284
+Common Solutions  1308
+Troubleshooting Security Issues  1329
+Pop-Ups  1331
+Browser Redirection  1331
+Security Alerts  1332
+Slow Performance  1333
+Internet Connectivity Issues  1333
+PC/OS Lock Up  1333
+Application Crash  1334
+OS Update Failures  1335
+Rogue Antivirus  1335
+Spam  1336
+
+xxviii Contents
+Renamed System Files/Disappearing Files/Permission  
+Changes/Access Denied  1336
+Hijacked Email  1337
+Invalid Certificate  1337
+Event Viewer Log Errors  1338
+Best Practices for Malware Removal  1339
+1. Identify and Research Malware Symptoms.  1340
+2. Quarantine Infected Systems.  1341
+3. Disable System Restore (in Windows).  1341
+4. Remediate the Infected Systems.  1342
+5. Schedule Scans and Run Updates.  1345
+6. Enable System Restore and Create a Restore Point  
+(in Windows).  1346
+7. Educate the End User.  1346
+Troubleshooting Mobile Issues  1346
+Dim Display  1347
+Intermittent Wireless  1347
+No Wireless Connectivity  1347
+No Bluetooth Connectivity  1348
+Cannot Broadcast to an External Monitor  1349
+Touch Screen Non-Responsive  1349
+Apps Not Loading  1350
+Slow Performance  1350
+Unable to Decrypt Email  1351
+Extremely Short Battery Life  1351
+Overheating  1352
+Frozen System  1352
+No Sound from Speakers  1353
+Inaccurate Touch Screen Response  1354
+System Lockout  1354
+Troubleshooting Mobile Security Issues  1355
+Signal Drop/Weak Signal  1356
+Power Drain  1356
+Slow Data Speeds  1356
+Unintended Wi-Fi Connection  1357
+Unintended Bluetooth Pairing  1358
+Leaked Personal Files/Data  1358
+Data Transmission Over Limit  1358
+Unauthorized Account Access  1359
+Unauthorized Location Tracking  1359
+Unauthorized Camera/Microphone Activation  1359
+High Resource Utilization  1360
+Summary  1360
+Exam Essentials  1360
+
+Contents  xxix
+Review Questions  1362
+Performance-Based Question  1366
+Chapter 25 Documentation and Professionalism  1367
+Documentation and Change Management  1370
+Network Topology Diagrams  1371
+Knowledge Base/Articles  1374
+Incident Documentation  1375
+Regulatory and Compliance Policy  1376
+Acceptable Use Policy  1378
+Password Policy  1378
+Inventory Management  1379
+Change Management Documentation  1379
+Disaster Prevention and Recovery  1384
+Data Backups  1384
+Battery Backup/UPS  1390
+Power Generators  1391
+Surge Protection  1392
+Account Recovery Options  1393
+Demonstrating Professionalism  1395
+Communicating with Customers  1396
+Using Appropriate Behavior  1400
+Putting It All in Perspective  1406
+Summary  1408
+Exam Essentials  1408
+Review Questions  1409
+Performance-Based Question  1412
+Chapter 26 Safety and Environmental Concerns  1413
+Understanding Safety Procedures  1416
+Identifying Potential Safety Hazards  1416
+Creating a Safe Workplace  1427
+Understanding Environmental Controls  1437
+Managing the Physical Environment  1438
+Handling and Disposing of Computer Equipment  1444
+Understanding Policies, Licensing, and Privacy  1453
+Dealing with Prohibited Content/Activity  1453
+Incident Response  1454
+Managing Software Licenses  1458
+Managing Sensitive Information  1461
+Policies and Security Best Practices  1463
+Summary  1464
+Exam Essentials  1464
+Review Questions  1466
+Performance-Based Question  1470
+
+xxx Contents
+Appendix  A A nswers to Review Questions  1471
+Chapter 1: Motherboards, Processors, and Memory  1472
+Chapter 2: Internal Expansion, Storage Devices, and Power  
+Supplies  1474
+Chapter 3: Peripherals and Connectors   1476
+Chapter 4: Custom PC Configurations   1478
+Chapter 5: Installing and Configuring Printers   1480
+Chapter 6: Networking Fundamentals   1481
+Chapter 7: Introduction to TCP/IP   1483
+Chapter 8: Installing Wireless and SOHO Networks   1484
+Chapter 9: Network Services, Virtualization, and Cloud  
+Computing   1486
+Chapter 10: Understanding Laptops   1488
+Chapter 11: Understanding Mobile Devices   1490
+Chapter 12: Mobile Device Connectivity and Synchronization   1492
+Chapter 13: Troubleshooting Methodology and Resolving  
+Core Hardware Problems   1494
+Chapter 14: Hardware and Network Troubleshooting   1496
+Chapter 15: Operating System Basics   1498
+Chapter 16: Operating System Administration   1499
+Chapter 17: Working with Windows 10   1501
+Chapter 18: Working with Windows 8/8.1   1503
+Chapter 19: Working with Windows 7   1505
+Chapter 20: Working with macOS and Linux   1507
+Chapter 21: Scripting and Remote Access   1509
+Chapter 22: Security Concepts   1511
+Chapter 23: Securing Operating Systems   1514
+Chapter 24: Troubleshooting Operating Systems and Security   1516
+Chapter 25: Documentation and Professionalism   1518
+Chapter 26: Safety and Environmental Concerns   1521
+Appendix  B A nswers to Performance-Based Questions  1525
+Chapter 1: Motherboards, Processors, and Memory  1526
+Answer to Performance-Based Question 1  1526
+Answer to Performance-Based Question 2  1526
+Chapter 2: Internal Expansion, Storage Devices, and  
+Power Supplies  1527
+Chapter 3: Peripherals and Connectors  1527
+Chapter 4: Custom PC Configurations  1528
+Chapter 5: Installing and Configuring Printers  1529
+Chapter 6: Networking Fundamentals  1529
+Chapter 7: Introduction to TCP/IP  1531
+Chapter 8: Installing Wireless and SOHO Networks  1532
+
+Contents  xxxi
+Chapter 9: Network Services, Virtualization, and Cloud  
+Computing  1532
+Chapter 10: Understanding Laptops  1533
+Chapter 11: Understanding Mobile Devices  1533
+Chapter 12: Mobile Device Connectivity and Synchronization  1534
+Chapter 13: Troubleshooting Methodology and Resolving  
+Core Hardware Problems  1534
+Chapter 14: Hardware and Network Troubleshooting  1535
+Chapter 15: Operating System Basics  1535
+Chapter 16: Operating System Administration  1537
+Chapter 17: Working with Windows 10  1538
+Chapter 18: Working with Windows 8/8.1  1541
+Chapter 19: Working with Windows 7  1543
+Chapter 20: Working with macOS and Linux  1546
+Chapter 21: Scripting and Remote Access  1548
+Chapter 22: Security Concepts  1548
+Chapter 23: Securing Operating Systems  1549
+Chapter 24: Troubleshooting Operating Systems and Security  1549
+Chapter 25: Documentation and Professionalism  1550
+Chapter 26: Safety and Environmental Concerns  1551
+Index  1553
+
+Introduction
+Welcome to the CompTIA A+ Complete Study Guide . This is the fourth edition of our 
+best-selling study guide for the A+ certification sponsored by CompTIA (Computing 
+Technology Industry Association).
+This book is written at an intermediate technical level; we assume that you already 
+know how to use a personal computer and its basic peripherals, such as USB devices and 
+printers, but we also recognize that you may be learning how to service  some of that com-
+puter equipment for the first time. The exams cover basic computer service topics as well 
+as some more advanced issues, and they cover some topics that anyone already working 
+as a technician, whether with computers or not, should be familiar with. The exams are 
+designed to test you on these topics in order to certify that you have enough knowledge to 
+fix and upgrade some of the most widely used types of personal computers.
+We’ve included review questions at the end of each chapter to give you a taste of what 
+it’s like to take the exams. If you’re already working as a technical service or support 
+technician, we recommend that you check out these questions first to gauge your level of 
+knowledge. (You can also take the assessment test at the end of this introduction, which is 
+designed to see how much you already know.)
+Don’t just study the questions and answers—the questions on the actual exams will be 
+different from the practice ones included with this book. The exams are designed to test 
+your knowledge of a concept or objective, so use this book to learn the objective behind the 
+question. This book covers more than just the exams, however. We believe in providing our 
+students with a foundation of IT knowledge that will prepare them for real jobs, not just 
+to pass a test. After all, life is not a multiple-choice test with the answers clearly laid out in 
+front of you!
+You can mainly use the book to fill in the gaps in your current computer service knowl-
+edge. You may find, as many PC technicians have, that being well versed in all the technical 
+aspects of the equipment is not enough to provide a satisfactory level of support—you must 
+also have customer-relations skills. We include helpful hints to get the customers to help 
+you help them.
+What Is A+ Certification?
+The A+ certification program was developed by the Computing Technology Industry 
+Association (CompTIA) to provide an industry-wide means of certifying the competency 
+of computer service technicians. The A+ certification is granted to those who have attained 
+the level of knowledge and troubleshooting skills that are needed to provide capable sup-
+port in the field of personal computers. It is similar to other certifications in the computer 
+industry, such as the Cisco Certified Entry Network Technician (CCENT) program and 
+the Microsoft Technology Associate (MTA) certification program. The theory behind these 
+certifications is that if you need to have service performed on any of their products, you 
+
+xxxiv Introduction
+would sooner call a technician who has been certified in one of the appropriate certification 
+programs than just call the first “expert” in the phone book.
+The A+ certification program was created to offer a wide-ranging certification, in the 
+sense that it is intended to certify competence with personal computers and mobile devices 
+from many different makers/vendors. You must pass two tests to become A+ certified:
+ ■The A+ 220-1001 exam, which covers basic computer concepts, PC hardware, basic 
+networking, mobile devices, and hardware troubleshooting
+ ■The A+ 220-1002 exam, which covers operating systems, security, software trouble-
+shooting, and operational procedures
+You don’t have to take the 220-1001 and the 220-1002 exams at the same time. 
+However, the A+ certification is not awarded until you’ve passed both tests.
+Why Become A+ Certified?
+There are several good reasons to get your A+ certification. The CompTIA Candidate’s 
+Information packet lists five major benefits:
+ ■It demonstrates proof of professional achievement.
+ ■It increases your marketability.
+ ■It provides greater opportunity for advancement in your field.
+ ■It is increasingly a requirement for some types of advanced training.
+ ■It raises customer confidence in you and your company’s services.
+Provides Proof of Professional Achievement
+The A+ certification is a status symbol in the computer service industry. Organizations that 
+include members of the computer service industry recognize the benefits of A+ certification 
+and push for their members to become certified. And more people every day are putting the 
+“A+ Certified Technician” emblem on their business cards.
+Increases Your Marketability
+A+ certification makes individuals more marketable to potential employers. A+ certified 
+employees also may receive a higher base salary because employers won’t have to spend as 
+much money on vendor-specific training.
+Provides Opportunity for Advancement
+Most raises and advancements are based on performance. A+ certified employees work 
+faster and more efficiently and are thus more productive. The more productive employees 
+are, the more money they make for their company. And, of course, the more money they 
+make for the company, the more valuable they are to the company. So, if an employee is A+ 
+certified, their chances of being promoted are greater.
+
+Introduction  xxxv
+ Fulfills Training Requirements 
+ Most major computer hardware vendors recognize A+ certifi  cation. Some of these vendors 
+apply A+ certifi  cation toward prerequisites in their own respective certifi  cation programs, 
+which has the side benefi  t of reducing training costs for employers.   
+ Raises Customer Confidence 
+ As the A+ Certifi  ed Technician moniker becomes better known among computer owners, 
+more of them will realize that the A+ technician is more qualifi  ed to work on their com-
+puter equipment than a noncertifi  ed technician.    
+ How to Become A+ Certified 
+ A+ certifi  cation is available to anyone who passes the tests. You don’t have to work for any 
+particular company. It’s not a secret society. It is, however, an elite group. To become A+ 
+certifi  ed, you must do two things: 
+ ■   Pass the A+ 220-1001 exam 
+ ■   Pass the A+ 220-1002 exam   
+ The exams can be taken at any Pearson VUE testing center. If you pass both exams, you 
+will get a certifi  cate in the mail from CompTIA saying that you have passed, and you will 
+also receive a lapel pin and business card. 
+ To register for the tests, call Pearson VUE at (877) 551-PLUS (7587) or go to 
+www.pearsonvue.com/comptia  . You’ll be asked for your name, Social Security number 
+(an optional number may be assigned if you don’t wish to provide your Social Security 
+number), mailing address, phone number, employer, when and where you want to take the 
+test, and your credit card number. (Payment arrangements must be made at the time of 
+registration.) 
+        
+ Although you can save money by arranging to take more than one test at 
+the same seating, there are no other discounts. If you have to repeat a test 
+to get a passing grade, you must pay for each retake.     
+ Tips for Taking the A+ Exam 
+ Here are some general tips for taking your exam successfully: 
+ ■   Bring two forms of ID with you. One must be a photo ID, such as a driver’s license. 
+The other can be a major credit card or a passport. Both forms must include a 
+signature. 
+ ■   Arrive early at the exam center so that you can relax and review your study materials, 
+particularly tables and lists of exam-related information. When you enter the testing 
+
+xxxvi Introduction
+room, you will need to leave everything outside; you won’t be able to bring any materi-
+als into the testing area.
+ ■Read the questions carefully. Don’t be tempted to jump to an early conclusion. Make 
+sure that you know exactly what each question is asking.
+ ■Don’t leave any unanswered questions. Unanswered questions are scored against you. 
+Some questions will have multiple correct responses. When a question has more than 
+one correct answer, a message at the bottom of the screen will prompt you to, for 
+example, choose two. Be sure to read the messages displayed to know how many cor-
+rect answers you must choose.
+ ■When answering multiple-choice questions that you’re not sure about, use a process of 
+elimination to get rid of the obviously incorrect answers first. Doing so will improve 
+your odds if you need to make an educated guess.
+ ■On form-based tests (nonadaptive), because the hard questions will take the most time, 
+save them for last. You can move forward and backward through the exam.
+ ■For the latest pricing on the exams and updates to the registration procedures, visit 
+CompTIA’s website at www.comptia.org .
+Who Should Read This Book?
+If you are one of the many people who want to pass the A+ exams, and pass them confi-
+dently, then you should buy this book and use it to study for the exams.
+This book was written to prepare you for the challenges of the real IT world, not just 
+to pass the A+ exams. This study guide will do that by describing in detail the concepts on 
+which you’ll be tested.
+What Does This Book Cover?
+This book covers everything you need to know to pass the CompTIA A+ exams.
+Part I of the book starts at Chapter 1 and concludes after Chapter 14. It covers all the 
+topics on which you will be tested for Exam 220-1001:
+Chapter 1: Motherboards, Processors, and Memory   Chapter 1 details the characteristics 
+of motherboards and their built-in components. The CPU, RAM, and BIOS, which are 
+attached to the motherboard, are also presented in Chapter 1.
+Chapter 2: Internal Expansion, Storage Devices, and Power Supplies   Chapter 2 presents 
+internal expansion options and popular forms of storage devices in use today, including 
+traditional hard drives, solid-state drives, flash drives, and memory cards. Capacities, form 
+factors, and the makeup of these components are also discussed. Finally, this chapter looks 
+at providing power to computer components.
+
+Introduction  xxxvii
+Chapter 3: Peripherals and Connectors   Chapter 3 covers installation and characteristics 
+of external peripheral devices, the ports they use, and the connectors used to attach them. 
+Required cabling and its characteristics are also included.
+Chapter 4: Custom PC Configurations   Chapter 4 presents information based on outlining 
+the specialized systems that we see more and more of in the field today. Examples include 
+gaming PCs, graphic design and audio/video editing workstations, virtualization worksta-
+tions, and network-attached storage devices.
+Chapter 5: Installing and Configuring Printers   Chapter 5 starts by discussing different 
+printing technologies, such as impact, inkjet, laser, virtual, and 3D printers. It then moves 
+on to cover installing printers and performing printer maintenance.
+Chapter 6: Networking Fundamentals   Chapter 6 covers characteristics of cable types and 
+connectors, network devices, networking tools, and network topologies.
+Chapter 7: Introduction to TCP/IP   Chapter 7 details the most common network protocol 
+in use today. It covers TCP/IP structure, addressing (including IPv6), and common proto-
+cols in the suite.
+Chapter 8: Installing Wireless and SOHO Networks   Chapter 8 contains two main sec-
+tions. The first is on wireless networking standards and security, and the second discusses 
+setting up a small office, home office (SOHO) network and choosing an Internet connection 
+type. Within setting up a SOHO wireless network, we also look at configuring Internet of 
+Things (IoT) devices.
+Chapter 9: Network Services, Virtualization, and Cloud Computing   Chapter 9 focuses 
+on the newest technologies related to networking, with an emphasis on virtualization and 
+cloud computing.
+Chapter 10: Understanding Laptops   Chapter 10 covers topics such as laptop-specific 
+hardware, components within a laptop display, and laptop features.
+Chapter 11: Understanding Mobile Devices   Chapter 11 covers topics related to mobile 
+devices, such as tablets, smartphones, e-readers, and wearable technology.
+Chapter 12: Mobile Device Connectivity and Synchronization   Chapter 12 details the 
+specific features of mobile devices that are unique to their formats. This chapter provides 
+extensive hands-on steps for configuring a variety of connectivity options and synchroniza-
+tion on these devices.
+Chapter 13: Troubleshooting Methodology and Resolving Core Hardware 
+Problems   Chapter 13 introduces the best practice framework for resolving computer prob -
+lems, which every technician should know. It also covers troubleshooting core hardware 
+issues related to the motherboard, CPU, RAM, and power.
+Chapter 14: Hardware and Network Troubleshooting   Chapter 14 finishes the trouble-
+shooting side of hardware, including storage devices, video issues, mobile device issues, 
+printers, and networking, including network troubleshooting tools.
+
+xxxviii Introduction
+Part II of the book, Chapters 15–26, covers all the topics on which you will be tested for 
+Exam 220-1002:
+Chapter 15: Operating System Basics   Chapter 15 starts the examination of Microsoft 
+Windows operating systems. CompTIA expects you to know how to administer three of 
+them—Windows 10, Windows 8/8.1, and Windows 7. In addition, you will need to know 
+about many of the various editions of each version.
+Chapter 16: Operating System Administration   Chapter 16 continues the discussion begun 
+in Chapter 15, looking at utilities and features that exist in each of the three versions of 
+Windows operating systems that you need to know for the exam.
+Chapter 17: Working with Windows 10   Chapter 17 covers unique features and capabili-
+ties of Windows 10, the newest of the three versions of Windows operating systems tested 
+on the 220-1002 exam.
+Chapter 18: Working with Windows 8/8.1   Chapter 18 focuses only on Windows 8/8.1. It 
+represents a fairly major step-change from Windows 7, and its features are covered here.
+Chapter 19: Working with Windows 7   Chapter 19 focuses only on Windows 7. This 
+chapter looks at features unique to the Windows 7 Starter, Windows 7 Home Premium, 
+Windows 7 Professional, Windows 7 Ultimate, and Windows 7 Enterprise.
+Chapter 20: Working with macOS and Linux   Chapter 20 focuses on popular end-user 
+desktop and laptop operating systems other than Microsoft Windows. It looks at macOS 
+and Linux.
+Chapter 21: Scripting and Remote Access   Network administrators and technicians need 
+to know how to access systems remotely in order to use or troubleshoot them. Chapter 21 
+shows you technologies used to do just that. Scripting is also included.
+Chapter 22: Security Concepts   Just when you think this book couldn’t get any better, 
+we toss in a chapter devoted to security. This chapter introduces key security concepts you 
+need to know for the exam, including information on physical security, social engineering, 
+wireless networks, best practices, and data destruction methods.
+Chapter 23: Securing Operating Systems   This chapter follows up on Chapter 22, which 
+introduced security concepts, by providing specifics on how to secure Microsoft and mobile 
+operating systems, prevent and remove malware, and configure network security on wired 
+and wireless networks.
+Chapter 24: Troubleshooting Operating Systems and Security   Troubleshooting is a major 
+part of almost every technician’s job. In Chapter 24, we talk about troubleshooting com-
+mon operating system issues as well as security challenges you may encounter.
+Chapter 25: Documentation and Professionalism   This chapter covers the “softer” side of 
+working with computers. Specifically, you learn to practice proper communication, show 
+professionalism, and implement best practices associated with documentation and change 
+management.
+
+Introduction  xxxix
+Chapter 26: Safety and Environmental Concerns   The final chapter discusses the impacts 
+computers can have on people as well as the environment. You learn how to avoid dam-
+aging a computer as well as having it damage you, how to perform backups and disaster 
+recovery, and how to properly dispose of computer components that are no longer needed.
+What’s Included in the Book
+We’ve included several learning tools throughout the book:
+Assessment Tests   At the end of this introduction are two assessment tests—one for each 
+exam—that you can use to check your readiness for the exams. Take these tests before you 
+start reading the book; they will help you determine the areas on which you might need to 
+brush up. The answers to the assessment test questions appear on a separate page after the 
+last question of the test. Each answer includes an explanation and the chapter the material 
+appears in.
+Objective Map and Opening List of Objectives   At the beginning of the book, we have 
+included a detailed exam objective map that shows you where each exam objective is cov-
+ered. In addition, each chapter opens with a list of the exam objectives it covers. Use these 
+resources to see exactly where each exam topic is covered.
+Exam Essentials   Each chapter, just before the summary, includes a number of “exam 
+essentials.” These are the key topics that you should focus on when preparing for the exam.
+Chapter Review Questions   To test your knowledge as you progress through the book, 
+each chapter ends with review questions. As you finish each chapter, answer the review 
+questions and then check your answers—the correct answers and explanations are in 
+Appendix A. You can go back to reread the section that deals with each question you got 
+wrong to ensure that you answer correctly the next time that you’re tested on the material.
+Performance-Based Questions   The A+ exams may ask you to perform tasks to correctly 
+answer a question. This may mean dragging and dropping items into the correct order or 
+clicking the correct area of an image or screenshot. While it’s hard to simulate those in a 
+paper book, the end of each chapter features a performance-based question. These ques-
+tions will have you think through a topic presented in the chapter, and then perform a task.
+Interactive Online Learning Environment and Test Bank
+The interactive online learning environment that accompanies CompTIA A+ Complete 
+Study Guide: Exam 220-1001 and Exam 220-1002  provides a test bank with study tools 
+to help you prepare for the certification exams and increase your chances of passing them 
+the first time! The test bank includes the following elements:
+Sample Tests   All the questions and answers in this book are provided,  including the assess-
+ment tests, which you’ll find at the end of this introduction, and the review questions at the 
+end of each chapter. In addition, there are four practice exams. Use these questions to test 
+your knowledge of the study guide material. The online test bank runs on multiple devices.
+
+xl Introduction
+Flashcards   Two sets of questions are provided in digital fl  ashcard format (a question fol-
+lowed by a single correct answer). You can use the fl  ashcards to reinforce your learning and 
+provide last-minute test prep before the exam. 
+Glossary   The key terms from this book and their defi  nitions are available as a fully 
+searchable PDF. 
+        
+ Go to  http://www.wiley.com/go/sybextestprep   to register and gain 
+access to this interactive online learning environment and test bank with 
+study tools.     
+ How to Use This Book 
+ If you want a solid foundation for preparing for the A+ exams, this is the book for you. 
+We’ve spent countless hours putting together this book with the intention of helping you 
+prepare for the exams. 
+ This book is loaded with valuable information, and you will get the most out of your 
+study time if you understand how we put the book together. Here’s a list that describes how 
+to approach studying: 
+  1.  Take the assessment tests immediately following this introduction. It’s okay if you don’t 
+know any of the answers—that’s what this book is for. Carefully read over the expla-
+nations for any questions you get wrong, and make note of the chapters where that 
+material is covered. 
+  2.  Study each chapter carefully, making sure you fully understand the information and 
+the exam objectives listed at the beginning of the chapter. Again, pay extra-close 
+attention to any chapter that includes material covered in questions you missed on the 
+assessment test. 
+  3.  Read over the Summary and Exam Essentials. These will highlight the sections from the 
+chapter you need to be familiar with before sitting for the exam. 
+  4.  Answer all the review questions at the end of each chapter. Specifically note any ques-
+tions that confuse you, and study the corresponding sections of the book again. Don’t 
+just skim these questions. Make sure that you understand each answer completely. 
+  5.  Go over the electronic flashcards. These help you to prepare for the latest A+ exams, 
+and they’re really great study tools. 
+  6.  Take the practice exams.   
+      Performance-Based Questions  
+ CompTIA includes performance-based questions on the A+ exams. These are not the tra-
+ditional multiple-choice questions with which you’re probably familiar. These questions 
+require the candidate to know how to perform a specifi  c task or series of tasks. The can-
+didate will be presented with a scenario and will be asked to complete a task. They will be 
+
+Introduction  xli
+taken to a simulated environment where they will have to perform a series of steps and 
+will be graded on how well they complete the task.
+The Sybex test engine does not include performance-based questions. However, at the 
+end of most chapters, we have included a section called “Performance-Based Question,” 
+which is designed to measure how well you understood the chapter’s topics. Some sim-
+ply ask you to complete a task for which there is only one correct response. Others are 
+more subjective, with multiple ways to complete the task. We provide the most logical 
+or practical solution in Appendix B. Note that these questions may cover topic areas not 
+covered in the actual A+ performance-based questions. However, we feel that being able 
+to think logically is a great way to learn.
+The CompTIA A+ Exam Objectives
+The A+ exams consist of the 220-1001 exam and the 220-1002 exam. Following are the 
+detailed exam objectives for each test.
+Exam objectives are subject to change at any time without prior notice and at 
+CompTIA’s sole discretion. Please visit the A+ Certification page of CompTIA’s website 
+(https://certification.comptia.org/certifications/a ) for the most current listing of 
+exam objectives.
+A+ Certification Exam Objectives:  
+220-1001
+The following table lists the domains measured by this examination and the extent to 
+which they are represented on the exam:
+Domain Percentage of Exam
+1.0 Mobile Devices 14%
+2.0 Networking 20%
+3.0 Hardware 27%
+4.0 Virtualization and Cloud Computing 12%
+5.0 Hardware and Network Troubleshooting 27%
+Total 100%
+
+xlii Introduction
+Objective Chapter
+1.0 Mobile Devices
+1.1 Given a scenario, install and configure laptop hardware and components. 10
+ ■Hardware/device replacement
+ ■Keyboard
+ ■Hard drive
+ ■SSD vs. hybrid vs. magnetic disk
+ ■1.8in vs. 2.5in
+ ■Memory
+ ■Smart card reader
+ ■Optical drive
+ ■Wireless card/Bluetooth module
+ ■Cellular card
+ ■Video card
+ ■Mini PCIe
+ ■Screen
+ ■DC jack
+ ■Battery
+ ■Touchpad
+ ■Plastics/frames
+ ■Speaker
+ ■System board
+ ■CPU10
+1.2 Given a scenario, install components within the display of a laptop. 10
+ ■Types
+ ■LCD
+ ■OLED
+ ■WiFi antenna connector/placement
+ ■Webcam
+ ■Microphone
+ ■Inverter
+ ■Digitizer/touchscreen10
+
+Introduction  xliii
+1.3 Given a scenario, use appropriate laptop features. 10
+ ■Special function keys
+ ■Dual displays
+ ■Wireless (on/off)
+ ■Cellular (on/off)
+ ■Volume settings
+ ■Screen brightness
+ ■Bluetooth (on/off)
+ ■Keyboard backlight
+ ■Touchpad (on/off)
+ ■Screen orientation
+ ■Media options (fast forward/rewind)
+ ■GPS (on/off)
+ ■Airplane mode
+ ■Docking station
+ ■Port replicator
+ ■Physical laptop lock and cable lock
+ ■Rotating/removable screens10
+1.4 Compare and contrast characteristics of various types of other mobile 
+devices.11
+ ■Tablets
+ ■Smartphones
+ ■Wearable technology devices
+ ■Smart watches
+ ■Fitness monitors
+ ■VR/AR headsets
+ ■E-readers
+ ■GPS11
+1.5 Given a scenario, connect and configure accessories and ports of other 
+mobile devices.11
+ ■Connection types
+ ■Wired
+ ■Micro-USB/Mini-USB/USB-C
+ ■Lightning
+ ■Tethering
+ ■Proprietary vendor-specific ports (communication/power)11
+
+xliv Introduction
+ ■Wireless
+ ■NFC
+ ■Bluetooth
+ ■IR
+ ■Hotspot
+ ■Accessories
+ ■Headsets
+ ■Speakers
+ ■Game pads
+ ■Extra battery packs/battery chargers
+ ■Protective covers/waterproofing
+ ■Credit card readers
+ ■Memory/MicroSD
+1.6 Given a scenario, configure basic mobile device network connectivity and 
+application support.12
+ ■Wireless/cellular data network (enable/disable)
+ ■Hotspot
+ ■Tethering
+ ■Airplane mode
+ ■Bluetooth
+ ■Enable Bluetooth
+ ■Enable pairing
+ ■Find a device for pairing
+ ■Enter the appropriate pin code
+ ■Test connectivity
+ ■Corporate and ISP email configuration
+ ■POP3
+ ■IMAP
+ ■Port and SSL settings
+ ■S/MIME
+ ■Integrated commercial provider email configuration
+ ■iCloud
+ ■Google/Inbox
+ ■Exchange Online
+ ■Yahoo
+ ■PRI updates/PRL updates/baseband updates
+ ■Radio firmware
+ ■IMEI vs. IMSI
+ ■VPN12
+
+Introduction  xlv
+1.7 Given a scenario, use methods to perform mobile device synchronization. 12
+ ■Synchronization methods
+ ■Synchronize to the cloud
+ ■Synchronize to the desktop
+ ■Synchronize to the automobile
+ ■Types of data to synchronize
+ ■Contacts
+ ■Applications
+ ■Email
+ ■Pictures
+ ■Music
+ ■Videos
+ ■Calendar
+ ■Bookmarks
+ ■Documents
+ ■Location data
+ ■Social media data
+ ■E-books
+ ■Passwords
+ ■Mutual authentication for multiple services (SSO)
+ ■Software requirements to install the application on the PC
+ ■Connection types to enable synchronization12
+2.0 Networking
+2.1 Compare and contrast TCP and UDP ports, protocols, and their purposes. 7
+ ■Ports and protocols
+ ■21 – FTP
+ ■22 – SSH
+ ■23 – Telnet
+ ■25 – SMTP
+ ■53 – DNS
+ ■80 – HTTP
+ ■110 – POP3
+ ■143 – IMAP
+ ■443 – HTTPS
+ ■3389 – RDP
+ ■137-139 – NetBIOS/NetBT7
+
+xlvi Introduction
+ ■445 – SMB/CIFS
+ ■427 – SLP
+ ■548 – AFP
+ ■67/68 – DHCP
+ ■389 – LDAP
+ ■161/162 – SNMP
+ ■TCP vs. UDP
+2.2 Compare and contrast common networking hardware devices. 6
+ ■Routers
+ ■Switches
+ ■Managed
+ ■Unmanaged
+ ■Access points
+ ■Cloud-based network controller
+ ■Firewall
+ ■Network interface card
+ ■Repeater
+ ■Hub
+ ■Cable/DSL modem
+ ■Bridge
+ ■Patch panel
+ ■Power over Ethernet (PoE)
+ ■Injectors
+ ■Switch
+ ■Ethernet over Power6
+2.3 Given a scenario, install and configure a basic wired/wireless SOHO 
+network.8
+ ■Router/switch functionality
+ ■Access point settings
+ ■IP addressing
+ ■NIC configuration
+ ■Wired
+ ■Wireless
+ ■End-user device configuration8
+
+Introduction  xlvii
+ ■IoT device configuration
+ ■Thermostat
+ ■Light switches
+ ■Security cameras
+ ■Door locks
+ ■Voice-enabled, smart speaker/digital assistant
+ ■Cable/DSL modem configuration
+ ■Firewall settings
+ ■DMZ
+ ■Port forwarding
+ ■NAT
+ ■UPnP
+ ■Whitelist/blacklist
+ ■MAC filtering
+ ■QoS
+ ■Wireless settings
+ ■Encryption
+ ■Channels
+ ■QoS
+2.4 Compare and contrast wireless networking protocols. 8
+ ■802.11a
+ ■802.11b
+ ■802.11g
+ ■802.11n
+ ■802.11ac
+ ■Frequencies
+ ■2.4Ghz
+ ■5Ghz
+ ■Channels
+ ■1–11
+ ■Bluetooth
+ ■NFC
+ ■RFID
+ ■Zigbee
+ ■Z-Wave
+ ■3G
+ ■4G
+ ■5G
+ ■LTE8
+
+xlviii Introduction
+2.5 Summarize the properties and purposes of services provided by 
+networked hosts.9
+ ■Server roles
+ ■Web server
+ ■File server
+ ■Print server
+ ■DHCP server
+ ■DNS server
+ ■Proxy server
+ ■Mail server
+ ■Authentication server
+ ■syslog
+ ■Internet appliance
+ ■UTM
+ ■IDS
+ ■IPS
+ ■End-point management server
+ ■Legacy/embedded systems9
+2.6 Explain common network configuration concepts. 7
+ ■IP addressing
+ ■Static
+ ■Dynamic
+ ■APIPA
+ ■Link local
+ ■DNS
+ ■DHCP
+ ■Reservations
+ ■IPv4 vs. IPv6
+ ■Subnet mask
+ ■Gateway
+ ■VPN
+ ■VLAN
+ ■NAT7
+
+Introduction  xlix
+2.7 Compare and contrast Internet connection types, network types, and 
+their features.6, 8
+ ■Internet connection types
+ ■Cable
+ ■DSL
+ ■Dial-up
+ ■Fiber
+ ■Satellite
+ ■ISDN
+ ■Cellular
+ ■Tethering
+ ■Mobile hotspot
+ ■Line-of-sight wireless Internet service
+ ■Network types
+ ■LAN
+ ■WAN
+ ■PAN
+ ■MAN
+ ■WMN8
+6
+2.8 Given a scenario, use appropriate networking tools. 14
+ ■Crimper
+ ■Cable stripper
+ ■Multimeter
+ ■Tone generator and probe
+ ■Cable tester
+ ■Loopback plug
+ ■Punchdown tool
+ ■WiFi analyzer14
+
+l Introduction
+3.0 Hardware
+3.1 Explain basic cable types, features, and their purposes. 3, 6
+ ■Network cables
+ ■Ethernet
+ ■Cat 5
+ ■Cat 5e
+ ■Cat 6
+ ■Plenum
+ ■Shielded twisted pair
+ ■Unshielded twisted pair
+ ■568A/B
+ ■Fiber
+ ■Coaxial
+ ■Speed and transmission limitations
+ ■Video cables
+ ■VGA
+ ■HDMI
+ ■Mini-HDMI
+ ■DisplayPort
+ ■DVI
+ ■DVI (DVI-D/DVI-I)
+ ■Multipurpose cables
+ ■Lightning
+ ■Thunderbolt
+ ■USB
+ ■USB-C
+ ■USB 2.0
+ ■USB 3.0
+ ■Peripheral cables
+ ■Serial
+ ■Hard drive cables
+ ■SATA
+ ■IDE
+ ■SCSI
+ ■Adapters
+ ■DVI to HDMI
+ ■USB to Ethernet
+ ■DVI to VGA3, 6
+3
+
+Introduction  li
+3.2 Identify common connector types. 3, 6
+ ■RJ-11
+ ■RJ-45
+ ■RS-232
+ ■BNC
+ ■RG-59
+ ■RG-6
+ ■USB
+ ■Micro-USB
+ ■Mini-USB
+ ■USB-C
+ ■DB-9
+ ■Lightning
+ ■SCSI
+ ■eSATA
+ ■Molex6
+3
+3.3 Given a scenario, install RAM types. 1
+ ■RAM types
+ ■SODIMM
+ ■DDR2
+ ■DDR3
+ ■DDR4
+ ■Single channel
+ ■Dual channel
+ ■Triple channel
+ ■Error correcting
+ ■Parity vs. non-parity1
+3.4 Given a scenario, select, install and configure storage devices. 2
+ ■Optical drives
+ ■CD-ROM/CD-RW
+ ■DVD-ROM/DVD-RW/DVD-RW DL
+ ■Blu-ray
+ ■BD-R
+ ■BD-RE2
+
+lii Introduction
+ ■Solid-state drives
+ ■M2 drives
+ ■NVME
+ ■SATA 2.5
+ ■Magnetic hard drives
+ ■5,400rpm
+ ■7,200rpm
+ ■10,000rpm
+ ■15,000rpm
+ ■Sizes:
+ ■2.5
+ ■3.5
+ ■Hybrid drives
+ ■Flash
+ ■SD card
+ ■CompactFlash
+ ■Micro-SD card
+ ■Mini-SD card
+ ■xD
+ ■Configurations
+ ■RAID 0, 1, 5, 10
+ ■Hot swappable
+3.5 Given a scenario, install and configure motherboards, CPUs, and  
+add-on cards.1, 2
+ ■Motherboard form factor
+ ■ATX
+ ■mATX
+ ■ITX
+ ■mITX
+ ■Motherboard connectors types
+ ■PCI
+ ■PCIe
+ ■Riser card
+ ■Socket types
+ ■SATA
+ ■IDE
+ ■Front panel connector
+ ■Internal USB connector1
+
+Introduction  liii
+ ■BIOS/UEFI settings
+ ■Boot options
+ ■Firmware updates
+ ■Security settings
+ ■Interface configurations
+ ■Security
+ ■Passwords
+ ■Drive encryption
+ ■TPM
+ ■LoJack
+ ■Secure boot
+ ■CMOS battery
+ ■CPU features
+ ■Single-core
+ ■Multicore
+ ■Virtual technology
+ ■Hyperthreading
+ ■Speeds
+ ■Overclocking
+ ■Integrated GPU
+ ■Compatibility
+ ■AMD
+ ■Intel
+ ■Cooling mechanism
+ ■Fans
+ ■Heat sink
+ ■Liquid
+ ■Thermal paste
+ ■Expansion cards
+ ■Video cards
+ ■Onboard
+ ■Add-on card
+ ■Sound cards
+ ■Network interface card
+ ■USB expansion card
+ ■eSATA card2
+
+liv Introduction
+3.6 Explain the purposes and uses of various peripheral types. 3
+ ■Printer
+ ■ADF/flatbed scanner
+ ■Barcode scanner/QR scanner
+ ■Monitors
+ ■VR headset
+ ■Optical
+ ■DVD drive
+ ■Mouse
+ ■Keyboard
+ ■Touchpad
+ ■Signature pad
+ ■Game controllers
+ ■Camera/webcam
+ ■Microphone
+ ■Speakers
+ ■Headset
+ ■Projector
+ ■Lumens/brightness
+ ■External storage drives
+ ■KVM
+ ■Magnetic reader/chip reader
+ ■NFC/tap pay device
+ ■Smart card reader3
+3.7 Summarize power supply types and features. 2
+ ■Input 115V vs. 220V
+ ■Output 5.5V vs. 12V
+ ■24-pin motherboard adapter
+ ■Wattage rating
+ ■Number of devices/types of devices to be powered2
+3.8 Given a scenario, select and configure appropriate components for a 
+custom PC configuration to meet customer specifications or needs.4
+ ■Graphic/CAD/CAM design workstation
+ ■SSD
+ ■High-end video
+ ■Maximum RAM4
+
+Introduction  lv
+ ■Audio/video editing workstation
+ ■Specialized audio and video card
+ ■Large, fast hard drive
+ ■Dual monitors
+ ■Virtualization workstation
+ ■Maximum RAM and CPU cores
+ ■Gaming PC
+ ■SSD
+ ■High-end video/specialized GPU
+ ■High-definition sound card
+ ■High-end cooling
+ ■Standard thick client
+ ■Desktop applications
+ ■Meets recommended requirements for selected OS
+ ■Thin client
+ ■Basic applications
+ ■Meets minimum requirements for selected OS
+ ■Network connectivity
+ ■Network attached storage device
+ ■Media streaming
+ ■File sharing
+ ■Gigabit NIC
+ ■RAID array
+ ■Hard drive
+3.9 Given a scenario, install and configure common devices. 4, 10, 12
+ ■Desktop
+ ■Thin client
+ ■Thick client
+ ■Account setup/settings
+ ■Laptop/common mobile devices
+ ■Touchpad configuration
+ ■Touchscreen configuration
+ ■Application installations/configurations
+ ■Synchronization settings
+ ■Account setup/settings
+ ■Wireless settings4
+4
+4
+4
+10
+10
+10
+10
+12
+10
+10
+
+lvi Introduction
+3.10 Given a scenario, configure SOHO multifunction devices/printers  
+and settings.5
+ ■Use appropriate drivers for a given operating system
+ ■Configuration settings
+ ■Duplex
+ ■Collate
+ ■Orientation
+ ■Quality
+ ■Device sharing
+ ■Wired
+ ■USB
+ ■Serial
+ ■Ethernet
+ ■Wireless
+ ■Bluetooth
+ ■802.11(a, b, g, n, ac)
+ ■Infrastructure vs. ad hoc
+ ■Integrated print server (hardware)
+ ■Cloud printing/remote printing
+ ■Public/shared devices
+ ■Sharing local/networked device via operating system settings
+ ■TCP/Bonjour/AirPrint
+ ■Data privacy
+ ■User authentication on the device
+ ■Hard drive caching5
+3.11 Given a scenario, install and maintain various print technologies. 5
+ ■Laser
+ ■Imaging drum, fuser assembly, transfer belt, transfer roller, pickup 
+rollers, separate pads, duplexing assembly
+ ■Imaging process: processing, charging, exposing, developing, 
+transferring, fusing, and cleaning
+ ■Maintenance: Replace toner, apply maintenance kit, calibrate, clean
+ ■Inkjet
+ ■Ink cartridge, print head, roller, feeder, duplexing assembly, carriage, 
+and belt
+ ■Calibrate
+ ■Maintenance: Clean heads, replace cartridges, calibrate, clear jams5
+
+Introduction  lvii
+ ■Thermal
+ ■Feed assembly, heating element
+ ■Special thermal paper
+ ■Maintenance: Replace paper, clean heating element, remove debris
+ ■Impact
+ ■Print head, ribbon, tractor feed
+ ■Impact paper
+ ■Maintenance: Replace ribbon, replace print head, replace paper
+ ■Virtual
+ ■Print to file
+ ■Print to PDF
+ ■Print to XPS
+ ■Print to image
+ ■3D printers
+ ■Plastic filament
+4.0 Virtualization and Cloud Computing
+4.1 Compare and contrast cloud computing concepts. 9
+ ■Common cloud models
+ ■IaaS
+ ■SaaS
+ ■PaaS
+ ■Public vs. private vs. hybrid vs. community
+ ■Shared resources
+ ■Internal vs. external
+ ■Rapid elasticity
+ ■On-demand
+ ■Resource pooling
+ ■Measured service
+ ■Metered
+ ■Off-site email applications
+ ■Cloud file storage services
+ ■Synchronization apps
+ ■Virtual application streaming/cloud-based applications
+ ■Applications for cell phones/tablets
+ ■Applications for laptops/desktops
+ ■Virtual desktop
+ ■Virtual NIC9
+
+lviii Introduction
+4.2 Given a scenario, set up and configure client-side virtualization. 9
+ ■Purpose of virtual machines
+ ■Resource requirements
+ ■Emulator requirements
+ ■Security requirements
+ ■Network requirements
+ ■Hypervisor9
+5.0 Hardware and Network Troubleshooting
+5.1 Given a scenario, use the best practice methodology to resolve problems. 13
+ ■Always consider corporate policies, procedures, and impacts before 
+implementing changes
+1. Identify the problem
+ −Question the user and identify user changes to computer and perform 
+backups before making changes
+ −Inquire regarding environmental or infrastructure changes
+ −Review system and application logs
+2. Establish a theory of probable cause (question the obvious)
+ −If necessary, conduct external or internal research based on symptoms
+3. Test the theory to determine cause
+ −Once the theory is confirmed, determine the next steps to resolve problem
+ −If theory is not confirmed reestablish new theory or escalate
+4. Establish a plan of action to resolve the problem and implement the solution
+5. Verify full system functionality and, if applicable, implement preventive 
+measures
+6. Document findings, actions, and outcomes13
+5.2. Given a scenario, troubleshoot common problems related to 
+motherboards, RAM, CPUs, and power.13
+ ■Common symptoms: unexpected shutdowns; system lockups; POST code 
+beeps; blank screen on bootup; BIOS time and setting resets; attempts to 
+boot to incorrect device; continuous reboots; no power; overheating; loud 
+noise; intermittent device failure; fans spin—no power to other devices; 
+indicator lights; smoke; burning smell; proprietary crash screens (BSOD/
+pin wheel); distended capacitors; log entries and error messages13
+
+Introduction  lix
+5.3. Given a scenario, troubleshoot hard drives and RAID arrays. 14
+ ■Common symptoms: read/write failure; slow performance; loud clicking 
+noise; failure to boot; drive not recognized; OS not found; RAID not 
+found; RAID stops working; proprietary crash screens (BSOD/pin wheel); 
+S.M.A.R.T. errors14
+5.4. Given a scenario, troubleshoot video, projector, and display issues. 14
+ ■Common symptoms: VGA mode; no image on screen; overheat shutdown; 
+dead pixels; artifacts; incorrect color patterns; dim image; flickering 
+image; distorted image; distorted geometry; burn-in; oversized images 
+and icons14
+5.5. Given a scenario, troubleshoot common mobile device issues while 
+adhering to the appropriate procedures.14
+ ■Common symptoms: no display; dim display; flickering display; sticking 
+keys; intermittent wireless; battery not charging; ghost cursor/pointer 
+drift; no power; num lock indicator lights; no wireless connectivity; no 
+Bluetooth connectivity; cannot display to external monitor; touchscreen 
+non-responsive; apps not loading; slow performance; unable to decrypt 
+email; extremely short battery life; overheating; frozen system; no sound 
+from speakers; GPS not functioning; swollen battery
+ ■Disassembling processes for proper re-assembly: document and 
+label cable and screw locations; organize parts; refer to manufacturer 
+resources; use appropriate hand tools14
+5.6. Given a scenario, troubleshoot printers. 14
+ ■Common symptoms: streaks; faded prints; ghost images; toner not fused 
+to the paper; creased paper; paper not feeding; paper jam; no connectiv-
+ity; garbled characters on paper; vertical lines on page; backed up print 
+queue; low memory errors; access denied; printer will not print; color 
+prints in wrong print color; unable to install printer; error codes; printing 
+blank pages; no image on printer display; multiple failed jobs in logs14
+5.7. Given a scenario, troubleshoot common wired and wireless network 
+problems.14
+ ■Common symptoms: limited connectivity; unavailable resources: Internet, 
+local resources: shares, printers, email; no connectivity; APIPA/link local 
+address; intermittent connectivity; IP conflict; slow transfer speeds; low 
+RF signal; SSID not found14
+
+lx Introduction
+A+ Certification Exam Objectives: 220-1002
+The following table lists the domains measured by this examination and the extent to 
+which they are represented on the exam.
+Domain Percentage of Exam
+1.0 Operating Systems 27%
+2.0 Security 24%
+3.0 Software Troubleshooting 26%
+4.0 Operational Procedures 23%
+Total 100%
+Objective Chapter
+1.0 Operating Systems
+1.1 Compare and contrast common operating system types and their 
+purposes.15
+ ■32-bit vs. 64-bit
+ ■RAM limitations
+ ■Software compatibility
+ ■Workstation operating systems
+ ■Microsoft Windows
+ ■Apple Macintosh OS
+ ■Linux
+ ■Cell phone/tablet operating systems
+ ■Microsoft Windows
+ ■Android
+ ■iOS
+ ■Chrome OS
+ ■Vendor-specific limitations
+ ■End-of-life
+ ■Update limitations
+ ■Compatibility concerns between operating systems15
+
+Introduction  lxi
+1.2 Compare and contrast features of Microsoft Windows versions. 15, 17, 18, 19
+ ■Compare features: Windows 7, Windows 8, Windows 8.1, Windows 10
+ ■Windows 7
+ ■Windows 8
+ ■Windows 8.1
+ ■Windows 10
+ ■Corporate vs. personal needs
+ ■Domain access
+ ■BitLocker
+ ■Media center
+ ■BranchCache
+ ■EFS
+ ■Desktop styles/user interface15, 17, 18, 19
+1.3. Summarize general OS installation considerations and upgrade 
+methods.15, 16, 17, 
+18, 19
+ ■Boot methods: Optical disc (CD-ROM, DVD, Blu-ray); External drive/flash 
+drive (USB/eSATA); Network boot (PXE); Internal fixed disk (HDD/SSD); 
+Internal hard drive (partition)
+ ■Type of installations: unattended installations; in-place upgrade; clean 
+install; repair installation; multiboot; remote network installation; image 
+deployment; recovery partition; refresh/restore
+ ■Partitioning: dynamic; basic; primary; extended; logical; GPT
+ ■File system types/formatting: ExFAT; FAT32; NTFS; CDFS; NFS; ext3, ext4; 
+HFS; swap partition; quick format vs. full format
+ ■Load alternate third-party drivers when necessary
+ ■Workgroup vs. Domain setup
+ ■Time/date/region/language settings
+ ■Driver installation, software, and Windows updates
+ ■Factory recovery partition
+ ■Properly formatted boot drive with the correct partition/format
+ ■Prerequisites/hardware compatibility
+ ■OS compatibility/upgrade path15, 16, 17, 
+18, 19
+1.4. Given a scenario, use appropriate Microsoft command-line tools. 16
+ ■Navigation
+ ■dir
+ ■cd
+ ■..16
+
+lxii Introduction
+ ■ipconfig
+ ■ping
+ ■tracert
+ ■netstat
+ ■nslookup
+ ■shutdown
+ ■dism
+ ■sfc
+ ■chkdsk
+ ■diskpart
+ ■taskkill
+ ■gpupdate
+ ■gpresult
+ ■format
+ ■copy
+ ■xcopy
+ ■robocopy
+ ■net use
+ ■net user
+ ■[command name] /?
+ ■Commands available with standard privileges vs. administrative 
+privileges
+1.5. Given a scenario, use Microsoft operating system features and tools. 15, 16, 17, 19
+ ■Administrative: Computer Management; Device Manager; Local Users 
+and Groups; Local Security Policy; Performance Monitor; Services; 
+System Configuration; Task Scheduler; Component Services; Data 
+Sources; print management; Windows Memory Diagnostics; Windows 
+Firewall; Advanced Security; Event Viewer; User Account Management
+ ■MSC O NFIG : General; Boot; Services; Startup; Tools
+ ■Task Manager: Applications; Processes; Performance; Networking; Users
+ ■Disk Management: Drive Status; Mounting; Initializing; Extending 
+partitions; Splitting partitions; Shrink partitions; Assigning/changing  
+drive letters; Adding drives; Adding arrays; Storage spaces
+ ■System utilities: Regedit; Command; Services.msc; MMC; MSTSC; 
+Notepad; Explorer; Msinfo32; DxDiag; Disk Defragmenter; System 
+Restore; Windows Update15, 16, 17, 19
+
+Introduction  lxiii
+1.6. Given a scenario, use Microsoft Windows Control Panel utilities. 16, 19
+ ■Internet options: Connections; Security; General; Privacy; Programs; 
+Advanced
+ ■Display/Display Settings: Resolution; Color depth; Refresh rate
+ ■User Accounts
+ ■Folder Options: View hidden files; Hide extensions; General options; View 
+options
+ ■System: Performance (virtual memory); Remote settings; System 
+protection
+ ■Windows Firewall
+ ■Power Options: Hibernate; power plans; Sleep/suspend; Standby
+ ■Credential Manager
+ ■Programs and features
+ ■HomeGroup
+ ■Devices and Printers
+ ■Sound
+ ■Troubleshooting
+ ■Network and Sharing Center
+ ■Device Manager
+ ■BitLocker
+ ■Sync Center16, 19
+1.7. Summarize application installation and configuration concepts. 17
+ ■System requirements
+ ■Drive space
+ ■RAM
+ ■OS requirements
+ ■Compatibility
+ ■Methods of installation and deployment
+ ■Local (CD/USB)
+ ■Network-based
+ ■Local user permissions
+ ■Folder/file access for installation
+ ■Security considerations
+ ■Impact to device
+ ■Impact to network17
+
+lxiv Introduction
+1.8. Given a scenario, configure Microsoft Windows networking on a  
+client/desktop.19
+ ■HomeGroup vs. Workgroup
+ ■Domain setup
+ ■Network shares/administrative shares/mapping drives
+ ■Printer sharing vs. network printer mapping
+ ■Establish networking connections: VPN; dialups; wireless; wired; WWAN 
+(cellular)
+ ■Proxy settings
+ ■Remote Desktop Connection
+ ■Remote Assistance
+ ■Home vs. Work vs. Public network settings
+ ■Firewall settings: exceptions; configuration; enabling/disabling Windows 
+Firewall
+ ■Configuring an alternative IP address in Windows: IP addressing; subnet 
+mask; DNS; Gateway
+ ■Network card properties: Half duplex/full duplex/auto; speed; Wake-on-
+LAN; QoS; BIOS (on-board NIC)19
+17
+17
+1.9. Given a scenario, use features and tools of the mac OS and Linux client/
+desktop operating systems.20
+ ■Best practices
+ ■Scheduled backups
+ ■Scheduled disk maintenance
+ ■System updates/App Store
+ ■Patch management
+ ■Driver/firmware updates
+ ■Antivirus/Anti-malware updates
+ ■Tools
+ ■Backup/Time Machine
+ ■Restore/Snapshot
+ ■Image recovery
+ ■Disk maintenance utilities
+ ■Shell/Terminal
+ ■Screen sharing
+ ■Force Quit20
+
+Introduction  lxv
+ ■Features
+ ■Multiple desktops/Mission Control
+ ■Key Chain
+ ■Spotlight
+ ■iCloud
+ ■Gestures
+ ■Finder
+ ■Remote Disc
+ ■Dock
+ ■Boot Camp
+ ■Basic Linux commands
+ ■ls
+ ■grep
+ ■cd
+ ■shutdown
+ ■pwd vs. passwd
+ ■mv
+ ■cp
+ ■rm
+ ■chmod
+ ■chown
+ ■iwconfig/ifconfig
+ ■ps
+ ■su/sudo
+ ■apt-get
+ ■vi
+ ■dd
+ ■kill
+2.0 Security
+2.1. Summarize the importance of physical security measures. 22
+ ■Mantrap
+ ■Badge reader
+ ■Smart card
+ ■Security guard
+ ■Door lock
+ ■Biometric locks
+ ■Hardware tokens
+
+lxvi Introduction
+ ■Cable locks
+ ■Server locks
+ ■USB locks
+ ■Privacy screen
+ ■Key fobs
+ ■Entry control roster
+2.2. Explain logical security concepts. 22
+ ■Active Directory
+ ■Login script
+ ■Domain
+ ■Group Policy/Updates
+ ■Organizational Units
+ ■Home Folder
+ ■Folder redirection
+ ■Software tokens
+ ■MDM policies
+ ■Port security
+ ■MAC address filtering
+ ■Certificates
+ ■Antivirus/Anti-malware
+ ■Firewalls
+ ■User authentication/strong passwords
+ ■Multifactor authentication
+ ■Directory permissions
+ ■VPN
+ ■DLP
+ ■Access control lists
+ ■Smart card
+ ■Email filtering
+ ■Trusted/untrusted software sources
+ ■Principle of least privilege22
+
+Introduction  lxvii
+2.3. Compare and contrast wireless security protocols and authentication 
+methods.22
+ ■Protocols and encryption
+ ■WEP
+ ■WPA
+ ■WPA2
+ ■TKIP
+ ■AES
+ ■Authentication
+ ■Single-factor
+ ■Multifactor
+ ■RADIUS
+ ■TACACS22
+2.4. Given a scenario, detect, remove, and prevent malware using 
+appropriate tools and methods.22
+ ■Malware
+ ■Ransomware
+ ■Trojan
+ ■Keylogger
+ ■Rootkit
+ ■Virus
+ ■Botnet
+ ■Worm
+ ■Spyware
+ ■Tools and methods
+ ■Antivirus
+ ■Anti-malware
+ ■Recovery console
+ ■Backup/restore
+ ■End-user education
+ ■Software firewalls
+ ■DNS configuration22
+
+lxviii Introduction
+2.5. Compare and contrast social engineering, threats, and vulnerabilities. 22
+ ■Social engineering
+ ■Phishing
+ ■Spear phishing
+ ■Impersonation
+ ■Shoulder surfing
+ ■Tailgating
+ ■Dumpster diving
+ ■DDoS
+ ■DoS
+ ■Zero-day
+ ■Man-in-the-middle
+ ■Brute force
+ ■Dictionary
+ ■Rainbow table
+ ■Spoofing
+ ■Non-compliant systems
+ ■Zombie22
+2.6. Compare and contrast the differences of basic Microsoft Windows OS 
+security settings.23
+ ■User and groups
+ ■Administrator
+ ■Power user
+ ■Guest
+ ■Standard user
+ ■NTFS vs. share permissions
+ ■Allow vs. deny
+ ■Moving vs. copying folders and files
+ ■File attributes
+ ■Shared files and folders
+ ■Administrative shares vs. local shares
+ ■Permission propagation
+ ■Inheritance
+ ■System files and folders
+ ■User authentication
+ ■Single sign-on
+ ■Run as administrator vs. standard user
+ ■BitLocker
+ ■BitLocker To Go
+ ■EFS23
+
+Introduction  lxix
+2.7. Given a scenario, implement security best practices to secure a 
+workstation.23
+ ■Password best practices
+ ■Setting strong passwords
+ ■Password expiration
+ ■Screensaver required password
+ ■BIOS/UEFI passwords
+ ■Requiring passwords
+ ■Account management
+ ■Restricting user permissions
+ ■Logon time restrictions
+ ■Disabling guest account
+ ■Failed attempts lockout
+ ■Timeout/screen lock
+ ■Change default admin user account/password
+ ■Basic Active Directory functions
+ ■Account creation
+ ■Account deletion
+ ■Password reset/unlock account
+ ■Disable account
+ ■Disable autorun
+ ■Data encryption
+ ■Patch/update management23
+2.8. Given a scenario, implement methods for securing mobile devices. 23
+ ■Screen locks
+ ■Fingerprint lock
+ ■Face lock
+ ■Swipe lock
+ ■Passcode lock
+ ■Remote wipes
+ ■Locator applications
+ ■Remote backup applications
+ ■Failed login attempts restrictions
+ ■Antivirus/Anti-malware
+ ■Patching/OS updates
+ ■Biometric authentication
+ ■Full device encryption23
+
+lxx Introduction
+ ■Multifactor authentication
+ ■Authenticator applications
+ ■Trusted sources vs. untrusted sources
+ ■Firewalls
+ ■Policies and procedures
+ ■BYOD vs. corporate-owned
+ ■Profile security requirements
+2.9. Given a scenario, implement appropriate data destruction and disposal 
+methods.22
+ ■Physical destruction
+ ■Shredder
+ ■Drill/hammer
+ ■Electromagnetic (Degaussing)
+ ■Incineration
+ ■Certificate of destruction
+ ■Recycling or repurposing best practices
+ ■Low-level format vs. standard format
+ ■Overwrite
+ ■Drive wipe22
+2.10. Given a scenario, configure security on SOHO wireless and wired 
+networks.22
+ ■Wireless-specific
+ ■Changing default SSID
+ ■Setting encryption
+ ■Disabling SSID broadcast
+ ■Antenna and access point placement
+ ■Radio power levels
+ ■WPS
+ ■Change default usernames and passwords.
+ ■Enable MAC filtering.
+ ■Assign static IP addresses.
+ ■Firewall settings
+ ■Port forwarding/mapping
+ ■Disabling ports
+ ■Content filtering/parental controls
+ ■Update firmware
+ ■Physical security22
+
+Introduction  lxxi
+3.0 Software Troubleshooting
+3.1. Given a scenario, troubleshoot Microsoft Windows OS problems. 24
+ ■Common symptoms
+ ■Slow performance
+ ■Limited connectivity
+ ■Failure to boot
+ ■No OS found
+ ■Application crashes
+ ■Blue screens
+ ■Black screens
+ ■Printing issues
+ ■Services fail to start
+ ■Slow bootup
+ ■Slow profile load
+ ■Common solutions
+ ■Defragment the hard drive
+ ■Reboot
+ ■Kill tasks
+ ■Restart services
+ ■Update network settings
+ ■Reimage/reload OS
+ ■Roll back updates
+ ■Roll back devices drivers
+ ■Apply updates
+ ■Repair application
+ ■Update boot order
+ ■Disable Windows services/applications
+ ■Disable application startup
+ ■Safe boot
+ ■Rebuild Windows profiles24
+3.2. Given a scenario, troubleshoot and resolve PC security issues. 24
+ ■Common symptoms: pop-ups; browser redirection; security alerts; slow 
+performance; Internet connectivity issues; PC/OS lockup; application 
+crash; OS updates failures; rogue antivirus; spam; renamed system files; 
+disappearing files; file permission changes; hijacked email (responses 
+from users regarding email; automated replies from unknown sent email); 
+access denied; invalid certificate (trusted root CA); system/application 
+log errors24
+
+lxxii Introduction
+3.3. Given a scenario, use best practice procedures for malware removal. 24
+1. Identify and research malware symptoms.
+2. Quarantine the infected systems.
+3. Disable System Restore (in Windows).
+4. Remediate the infected systems.
+a. Update the anti-malware software.
+b. Scan and use removal techniques (safe mode, pre-installation  
+environment).
+5. Schedule scans and run updates.
+6. Enable System Restore and create a restore point (in Windows).
+7. Educate the end user.24
+3.4. Given a scenario, troubleshoot mobile OS and application issues. 24
+ ■Common symptoms: dim display; intermittent wireless; no wireless 
+connectivity; no Bluetooth connectivity; cannot broadcast to external 
+monitor; touch screen non-responsive; apps not loading; slow 
+performance; unable to decrypt email; extremely short battery life; 
+overheating; frozen system; no sound from speakers; inaccurate touch 
+screen response; system lockout; app log errors24
+3.5. Given a scenario, troubleshoot mobile OS and application security 
+issues.24
+ ■Common symptoms: signal drop/weak signal; power drain; slow data 
+speeds; unintended WiFi connection; unintended Bluetooth pairing; 
+leaked personal files/data; data transmission over limit; unauthorized 
+account access; unauthorized location tracking; unauthorized camera/
+microphone activation; high resource utilization24
+4.0 Operational Procedures
+4.1. Compare and contrast best practices associated with types of 
+documentation.25
+ ■Network topology diagrams
+ ■Knowledge base/articles
+ ■Incident documentation
+ ■Regulatory and compliance policy
+ ■Acceptable use policy
+ ■Password policy
+ ■Inventory management
+ ■Asset tags
+ ■Barcodes25
+
+Introduction  lxxiii
+4.2. Given a scenario, implement basic change management best practices. 25
+ ■Documented business processes
+ ■Purpose of the change
+ ■Scope the change.
+ ■Risk analysis
+ ■Plan for change.
+ ■End-user acceptance
+ ■Change board
+ ■Approvals
+ ■Backout plan
+ ■Document changes.25
+4.3. Given a scenario, implement basic disaster prevention and recovery 
+methods.25
+ ■Backup and recovery
+ ■Image level
+ ■File level
+ ■Critical applications
+ ■Backup testing
+ ■UPS
+ ■Surge protector
+ ■Cloud storage vs. local storage backups
+ ■Account recovery options25
+4.4. Explain common safety procedures. 26
+ ■Equipment grounding
+ ■Proper component handling and storage: antistatic bags; ESD straps; ESD 
+mats; Self-grounding
+ ■Toxic waste handling: batteries; toner; CRT, Cell phones, Tablets
+ ■Personal safety: disconnect power before repairing PC; remove jewelry; 
+lifting techniques; weight limitations; electrical fire safety, cable 
+management; safety goggles; air filter mask
+ ■Compliance with local government regulations26
+
+lxxiv Introduction
+4.5. Explain environmental impacts and appropriate controls. 26
+ ■MSDS documentation for handling and disposal
+ ■Temperature, humidity level awareness, and proper ventilation
+ ■Power surges, brownouts, and blackouts: battery backup; surge 
+suppressor
+ ■Protection from airborne particles: enclosures; air filters/mask
+ ■Dust and debris: compressed air; vacuums
+ ■Compliance to local government regulations26
+4.6. Explain the process for addressing prohibited content/activity, and 
+privacy, licensing, and policy concepts.26
+ ■Incident response: First response (identify; report through proper 
+channels; data/device preservation); Use of documentation/
+documentation changes; Chain of custody (tracking of evidence/
+documenting process)
+ ■Licensing/DRM/EULA: open-source vs. commercial license; personal 
+license vs. enterprise licenses
+ ■Regulated data: PII; PCI; GDPR; PHI
+ ■Follow all policies and security best practices26
+4.7. Given a scenario, use proper communication techniques and 
+professionalism.25
+ ■Use proper language and avoid jargon, acronyms, slang, when applicable.
+ ■Maintain a positive attitude/Project confidence.
+ ■Actively listen (taking notes) and avoid interrupting the customer.
+ ■Be culturally sensitive: use appropriate professional titles, when 
+applicable.
+ ■Be on time (if late, contact the customer).
+ ■Avoid distractions: personal calls; texting/social media sites; talking to 
+coworkers while interacting with customers; personal interruptions.
+ ■Dealing with difficult customers or situations: Do not argue with customers 
+and/or be defensive; avoid dismissing customer problems; avoid being 
+judgmental; clarify customer statements (ask open ended questions to 
+narrow the scope of the problem, restate the issue, or question to verify 
+understanding); do not disclose experiences via social media outlets.
+ ■Set and meet expectations/timeline and communicate status with the 
+customer: Offer different repair/replacement options, if applicable; 
+provide proper documentation on the services provided; follow up with 
+customer/user at a later date to verify satisfaction.
+ ■Deal appropriately with customers’ confidential and private materials: 
+located on a computer, desktop, printer, etc.25
+
+Introduction  lxxv
+4.8. Identify the basics of scripting. 21
+ ■    Script file types 
+ ■   .bat 
+ ■   .ps1 
+ ■   .vbs 
+ ■   .sh 
+ ■   .py 
+ ■   .js   
+ ■   Environment variables 
+ ■   Comment syntax 
+ ■   Basic script constructs 
+ ■   Basic loops 
+ ■   Variables   
+ ■   Basic data types 
+ ■   Integers 
+ ■   Strings    21
+4.9. Given a scenario, use remote access technologies. 21
+ ■    RDP 
+ ■   Telnet 
+ ■   SSH 
+ ■   Third-party tools 
+ ■   Screen share feature 
+ ■   File share   
+ ■   Security considerations of each access method  21
+        
+ Exam objectives are subject to change at any time without prior 
+notice at CompTIA’s sole discretion. Please visit CompTIA’s website 
+( www.comptia.org  ) for the most current listing of exam objectives.      
+
+Assessment Test for Exam 220-1001
+1. W hich of the following is not considered a system component that can be found inside a 
+computer?
+A. CPU
+B. RAM
+C. PCIe graphics adapter
+D. Motherboard
+2. Which of the following is a physical memory format installed directly in today’s desktop 
+computer systems?
+A. DIMM
+B. HDD
+C. SSD
+D. RAM
+3. Which of the following are components that can commonly be found on a motherboard? 
+(Choose all that apply.)
+A. Slots
+B. Fan connectors
+C. Gyroscope
+D. Scanner
+E. HDD
+4. You are buying optical discs and need to ensure that they have a large capacity. What 
+suffix indicates that the capacity of an optical disc is roughly twice that of its standard 
+counterpart?
+A. DL
+B. R
+C. RW
+D. RE
+5. You are replacing a power supply with a new one. What is the name of the standard power 
+connector that has been used with larger hard drives since the first IBM personal computers 
+were introduced?
+A. AT system connector
+B. Berg
+C. Molex
+D. ATX system connector
+
+Assessment Test for Exam 220-1001  lxxvii
+6. A u ser has asked you to install a RAID array. Except in the case of RAID 0, which two 
+things do all types of RAID offer? (Choose two.)
+A. Faster read speeds
+B. Faster write speeds
+C. Redundancy
+D. Fault tolerance
+E. Ability to restore automatically from tape after a drive failure
+7. The  is the measurement of the number of pixels an LCD monitor can 
+display without the image appearing distorted.
+A. Native resolution
+B. Contrast ratio
+C. Maximum resolution
+D. Aspect ratio
+8. Which of the following video connectors has an analog variety and a digital variety?
+A. VGA
+B. HDMI
+C. DisplayPort
+D. DVI
+9. Which of the following connectors will you not find on the end of a USB cable?  
+(Choose two.)
+A. Lightning
+B. USB-C
+C. Molex
+D. DB-9
+E. eSATA
+10. Which of the following is a standard computer that can access resources locally as well as 
+from servers but requires no specialized enhancements?
+A. Gam ing PC
+B. Network-attached storage
+C. Thin client
+D. Thick client
+11. Which of the following is a requirement for virtualization workstations?
+A. Enhanced video
+B. Enhanced audio
+C. Maximum RAM and CPU cores
+D. A RAID array
+
+lxxviii Assessment Test for Exam 220-1001
+12. W hich of the following is not a requirement for a NAS?
+A. Dual monitors
+B. File sharing services
+C. Gigabit NIC
+D. RAID array
+13. What is the function of the laser in a laser printer?
+A. It heats up the toner so that it adheres to the page.
+B. It charges the paper so that it will attract toner.
+C. It creates an image of the page on the drum.
+D. It cleans the drum before a page is printed.
+14. What is the component called that stores the material that ends up printed to the page by a 
+laser printer?
+A. Toner cartridge
+B. Ink cartridge
+C. Laser module
+D. Laser cartridge
+15. Which service was created by Apple to allow iPhones and iPads to print without installing 
+printer drivers?
+A. TCP printing
+B. Bonjour
+C. AirPrint
+D. iPrint
+16. Which network connectivity device stops broadcasts from being sent to computers on a 
+different network segment?
+A. Hub
+B. Switch
+C. Router
+D. Firewall
+17. Which of the following cable types is made with a plastic coating that does not produce 
+toxic fumes when it burns?
+A. Plenum
+B. Fiber
+C. Coaxial
+D. Unshielded twisted-pair
+
+Assessment Test for Exam 220-1001  lxxix
+18. W hich of the following are standards used by coaxial cable? (Choose two.)
+A. RG-6
+B. RG-59
+C. RJ-11
+D. RJ-45
+19. On which port does FTP run by default?
+A. 21
+B. 25
+C. 53
+D. 80
+20. Which of the following protocols can be used by a client to access email on a server?
+A. DNS
+B. FTP
+C. SMTP
+D. IMAP
+21. Which of the following protocols provide secure network transmissions? (Choose two.)
+A. SMTP
+B. SNMP
+C. SSH
+D. HTTPS
+22. Which of the following is a company that provides direct access to the Internet for home 
+and business computer users?
+A. ASP
+B. ISP
+C. DNS
+D. DNP
+23. What is the data throughput provided by one ISDN bearer channel?
+A. 16 Kbps
+B. 56 Kbps
+C. 64 Kbps
+D. 128 Kbps
+24. Which of the following technologies was developed for the IoT and communicates 
+exclusively in the 800 MHz to 900 MHz range?
+A. Bluetooth
+B. 5G LTE
+C. Zigbee
+D. Z-Wave
+
+lxxx Assessment Test for Exam 220-1001
+25. O ne of your network users was recently caught at work browsing pornographic websites. 
+Which of the following servers could be installed to prohibit this activity?
+A. Web
+B. Security
+C. Proxy
+D. DNS
+26. Google Docs is an example of which type of cloud service?
+A. SaaS
+B. IaaS
+C. PaaS
+D. GaaS
+27. Which type of software is required to run client-side virtualization on your home network?
+A. Terminal emulation
+B. Process replication
+C. Hyperthreading
+D. Hypervisor
+28. You are installing a new display for a laptop. Which LCD component is responsible for 
+providing brightness?
+A. Backlight
+B. Inverter
+C. Screen
+D. Digitizer
+29. Your laptop has 4 GB of installed memory and uses shared video memory. If the video card 
+is using 512 MB, how much is left for the rest of the system?
+A. 4 GB
+B. 3.5 GB
+C. 512 MB
+D. Cannot determine
+30. A user says that their keyboard backlight was working but now it’s not. What’s the easiest 
+way to try to get it working again?
+A. Change the BIOS setting.
+B. Use Windows Control Panel.
+C. Replace the backlight.
+D. Use the keyboard function key.
+
+Assessment Test for Exam 220-1001  lxxxi
+31. W hen using a capacitive touch screen on a mobile device, what is the most common tool 
+used to input data?
+A. Keyboard
+B. Trackball
+C. Stylus
+D. Finger
+32. Which technology used by e-readers gives them longer battery life than tablets?
+A. Lithium-polymer battery
+B. Low-power backlight
+C. Electrophoretic ink
+D. Capacitive touch screen
+33. When setting up two NFC devices, what is the name of the mode that allows the two 
+devices to transmit data to each other?
+A. Emulation mode
+B. Peer-to-peer mode
+C. Reader/writer mode
+D. Ad hoc mode
+34. Which of the following protocols can be used in close range to transfer data between a 
+mobile device and a computer system or to allow media to stream from the mobile device to 
+an audio system?
+A. SMTP
+B. Bluetooth
+C. NFC
+D. Pegasus
+35. Which term refers to copying data between a mobile device and a computer system to 
+mirror such things as contacts, programs, pictures, and music?
+A. Calibration
+B. Remote wipe
+C. Pairing
+D. Synchronization
+36. You want to create and send encrypted emails from your smartphone. What do you need  
+to use?
+A. POP3
+B. SMTP
+C. S/MIME
+D. VPN
+
+lxxxii Assessment Test for Exam 220-1001
+37. A u ser calls to report that his laptop is not booting up. What is the first step you should 
+take?
+A. Quarantine the system.
+B. Identify the problem.
+C. Establish a theory of probable cause.
+D. Establish a plan of action to resolve the problem.
+38. You are troubleshooting a network issue. What feature do switches most likely have to help 
+troubleshoot connectivity issues?
+A. Port toggles
+B. Beep codes
+C. Indicator lights
+D. Log entries
+39. Your laser printer has recently starting printing vertical white lines on documents it prints. 
+What is the most likely cause of the problem?
+A. The printer driver is faulty.
+B. The fuser is not heating properly.
+C. There is toner on the transfer corona wire.
+D. There is a scratch on the EP drum.
+40. A Desktop computer has recently started exhibiting slow performance, particularly when 
+opening and saving files to the hard drive. What should you try first?
+A. Replace the hard drive.
+B. Remove old files and applications to free up disk space.
+C. Delete and reinstall the OS.
+D. Defragment the hard drive.
+41. A network cable has not been working properly. Another technician suggests testing the 
+resistance on the cable. Which tools may be capable of doing this? (Choose two.)
+A. Loopback plug
+B. Multimeter
+C. Cable tester
+D. Tone generator and probe
+
+Answers to Assessment Test 220-1001
+1. C .  S ystem components are essential for the basic functionality of a computer system. Many 
+of the landmarks found on the motherboard can be considered system components, even 
+expansion slots, to a degree. What you plug into those slots, however, must be considered 
+peripheral to the basic operation of the system. See Chapter 1 for more information.
+2. A. DIMMs are a type of memory module. HDD is a hard drive, and SSD is a solid-state 
+drive—both are for permanent long-term storage. RAM is what memory is called, but it is 
+not a physical memory format. See Chapter 1 for more information.
+3. A, B. Motherboards commonly have RAM slots and expansion slots. Older motherboards 
+even had CPU slots. Modern motherboards have connectors for powering cooling fans. 
+Gyroscopes are most commonly found in mobile devices. Scanners are external devices. 
+Although there might be one or more types of HDD interfaces built into the motherboard, 
+the HDD itself is not. See Chapter 1 for more information.
+4. A. DL stands for double (or dual) layer. With DVDs, the capacity almost doubles, but with 
+Blu-ray Discs, it actually does. R means recordable, and RW and RE are used to designate 
+re-writeable or re-recordable, respectively. See Chapter 2 for more information.
+5. C. The standard peripheral power connector, or Molex connector, is commonly used on 
+larger drives because it allows more current to flow to the drive than smaller peripheral 
+connectors. AT and ATX system connectors are used to connect the power supply to the 
+motherboard. A Berg connector was used for floppy disk drives. See Chapter 2 for more 
+information.
+6. C, D. Except for RAID 0, all implementations of RAID offer a way to recover from 
+the failure of at least one drive, which is an example of fault tolerance, through the 
+implementation of some mechanism that stores redundant information for that purpose. 
+Some RAID types offer faster read and/or write performance. RAID 1, for instance, does 
+not guarantee either. See Chapter 2 for more information.
+7. A. The native resolution refers to how many pixels an LCD screen can display (across and 
+down) without distortion. The native resolution is based on the placement of the actual 
+transistors that create the image by twisting the liquid crystals. The contrast ratio is the 
+measurement between the darkest color and the lightest color that an LCD screen can 
+display. Monitors do not measure contrast ratio. Aspect ratio measures the width of the 
+image versus its height. See Chapter 3 for more information.
+8. D. DVI comes in both analog (DVI-A) and digital (DVI-D) varieties. VGA is always analog, 
+HDMI and DisplayPort are always digital. See Chapter 3 for more information.
+9. C, D. USB cables are multipurpose cables that connect many types of peripherals. 
+Connectors include USB-C, Lightning, and eSATA. Molex connectors provide power to 
+PATA hard drives and optical drives. A DB-9 connector is found on the end of a serial 
+cable. See Chapter 3 for more information.
+
+lxxxiv Answers to Assessment Test 220-1001
+10. D .  A t hick client is any computer system with a standard configuration. The gaming PC 
+has enhancements over thick clients to their CPU, video, audio, and cooling. The NAS 
+(network-attached storage) must have specialized capabilities and services along with a 
+faster NIC than the thick client and a RAID array. The thin client is a lesser device in 
+comparison to the thick client, but that cost-saving feature is its enhancement. These less 
+expensive computers can connect over the network to servers for their operating system 
+images and applications. See Chapter 4 for more information.
+11. C. Virtualization workstations require more RAM than standard systems and need to be 
+equipped with as many multicore processors as possible. Video and audio are not resources 
+that need to be enhanced for such workstations. Although a RAID array is a wise addition 
+whenever a NAS with valuable information is involved, a virtualization workstation does 
+not require one. See Chapter 4 for more information.
+12. A. Dual monitors are not required for a network-attached storage (NAS) device; it might 
+not even use a monitor. A NAS will use file sharing and benefit from a Gigabit NIC and 
+RAID array. See Chapter 4 for more information.
+13. C. The laser creates an image on the photosensitive drum that is then transferred to the 
+paper by the transfer corona. The fuser heats up the toner so that it adheres to the page. 
+The transfer corona charges the page, and the eraser lamp cleans the drum before a page is 
+printed. A rubber blade is also used to remove toner physically from the drum. See Chapter 
+5 for more information.
+14. A. Laser printers use toner, which they melt to the page in the image of the text and 
+graphics being printed. A toner cartridge holds the fine toner dust until it is used in the 
+printing process. See Chapter 5 for more information.
+15. C. AirPrint was created by Apple to let iPhones and iPads print without installing a printer 
+driver. See Chapter 5 for more information.
+16. C. A router does not pass along broadcasts to computers on other segments. Hubs and 
+switches send broadcasts along because they do not segment traffic at the logical network 
+address level. See Chapter 6 for more information.
+17. A. The plenum is an air space within buildings used to circulate breathable air for 
+occupants of a building. Fiber, coaxial, and UTP cables are normally enclosed with a 
+PVC plastic coating, which produces toxic fumes when burned. For air ventilation spaces, 
+plenum-grade cable is required. All cable types have plenum-rated versions. See Chapter 6 
+for more information.
+18. A, B. RG-6 and RG-59 are coaxial cable standards. RJ-11 and RJ-45 are connectors used 
+with twisted-pair cabling. See Chapter 6 for more information.
+19. A. FTP operates on ports 20 and 21. Port 25 is used by SMTP, port 53 by DNS, and port 
+80 by HTTP. See Chapter 7 for more information.
+20. D. The IMAP and POP3 protocols can be used to retrieve email from mail servers. DNS 
+is used to resolve host names to IP addresses. FTP is for file transfers, and SMTP is used to 
+send email. See Chapter 7 for more information.
+
+Answers to Assessment Test 220-1001  lxxxv
+21. C , D.  Secure Shell (SSH) and Hypertext Transfer Protocol Secure (HTTPS) are both secure 
+transport protocols. Simple Network Management Protocol (SNMP) and Simple Mail 
+Transfer Protocol (SMTP) are not inherently secure. See Chapter 7 for more information.
+22. B. An Internet service provider (ISP) provides direct access to the Internet. ASP is a 
+programming language. DNS resolves host names to IP addresses. DNP is not a computer 
+networking acronym. See Chapter 8 for more information.
+23. C. An ISDN B (bearer) channel provides 64 Kbps data throughput. A home-based BRI 
+ISDN provides two B channels. See Chapter 8 for more information.
+24. D. Zigbee and Z-Wave were developed specifically for the Internet of Things (IoT). Zigbee 
+can communicate in the 2.4 GHz range as well as the 800 MHz to 900 MHz range. 
+Z-Wave can communicate only in the 800 MHz to 900 MHz range. See Chapter 8 for more 
+information.
+25. C. A proxy server can be configured to block access to websites containing potentially 
+objectionable material. Web servers host websites. There is no specific security server, 
+although there are authentication servers, which provide security. A DNS server resolves 
+host names to IP addresses. See Chapter 9 for more information.
+26. A. Google Docs is software, so it is an example of Software as a Service (SaaS). IaaS is 
+Infrastructure as a Service. PaaS is Platform as a Service. GaaS is neither a test objective nor 
+currently a cloud service type. See Chapter 9 for more information.
+27. D. The hypervisor is the key piece of software needed for virtualization. Terminal 
+emulation, process replication, and hyperthreading are not related to client-side 
+virtualization. See Chapter 9 for more information.
+28. A. The backlight provides light to the LCD screen. The inverter provides power to the 
+backlight, and the screen displays the picture. Digitizers take physical input (such as touch) 
+and turn it into electronic data. See Chapter 10 for more information.
+29. B. If the laptop is using shared video memory, then the system memory is shared with the 
+video card. If the video card is using 512 MB (half a gigabyte), then there is 3.5 GB left for 
+the system. See Chapter 10 for more information.
+30. D. Most systems with a keyboard backlight have a keyboard function key to turn the 
+backlight on or off—try that first. If not, there is likely a setting in Windows Control Panel, 
+or possibly the BIOS. Replacing the backlight is the last resort. See Chapter 10 for more 
+information.
+31. D. Capacitive touch screens react to slight changes in electrical charges. The human finger is 
+used as an input device for capacitive touch screens. For more information, see Chapter 11.
+32. C. E-readers use electrophoretic ink, also known as E Ink. E Ink uses less energy than 
+other LCD displays, prolonging battery life. For more information, see Chapter 11.
+33. B. Card emulation mode, reader/writer mode, and peer-to-peer mode are the three valid 
+NFC communication modes. For two devices to transmit to each other, they will use peer-
+to-peer mode. For more information, see Chapter 11.
+
+lxxxvi Answers to Assessment Test 220-1001
+34. B .  B luetooth allows you to pair a mobile device to a computer or to a device such as 
+an automotive sound system or headset. Data can be transferred between devices, and 
+media can be streamed from the mobile device. SMTP is an email protocol. NFC is 
+for short-distance data transfers, but not media streaming. Pegasus is not a computer 
+communications protocol. For more information, see Chapter 12.
+35. D. Synchronizing a mobile device with a computer system allows you to mirror personal 
+data between the devices, regardless of which one contains the most current data. 
+Calibration refers to matching the device’s and user’s perceptions of where the user is 
+touching the screen. Remote wipes allow you to remove personal data from a lost or stolen 
+device. Pairing is what must be done in Bluetooth for two Bluetooth devices to connect and 
+communicate. For more information, see Chapter 12.
+36. C. The Secure/Multipurpose Internet Mail Extensions (S/MIME) standard for public key 
+encryption is used to create and read encrypted emails. POP3 and SMTP are standard email 
+protocols. VPNs create a private network over a public network, but they do not encrypt 
+email content. For more information, see Chapter 12.
+37. B. In the best practice methodology to resolve problems, the first step is to identify the 
+problem. Quarantining the system is not necessary. Establishing a theory of probable cause 
+is the second step, and establishing a plan of action is the fourth step. See Chapter 13 for 
+more information.
+38. C. Switches and other connectivity devices have indicator lights to help indicate when 
+things are working normally and when something isn’t working right. There are no port 
+toggles, and switches don’t use beep codes. A switch might make a log entry into an 
+event logger, but this is less likely than it having indicator lights. See Chapter 13 for more 
+information.
+39. C. White streaks on printouts are most likely caused by toner on the transfer corona wire. 
+Vertical black lines are caused by a scratch or a groove in the EP drum. If the fuser were not 
+heating properly, toner would not bond to the paper, and you would have smearing. Faulty 
+printer drivers will cause garbage to print, or there will be no printing at all. See Chapter 14 
+for more information.
+40. B. Hard drive performance can slow down if the drive gets short on space, particularly 
+under 10 percent of free space. First, try removing old files and applications to free up disk 
+space. If that doesn’t resolve it, then defragment. If neither of those work, you could have a 
+failing hard drive. See Chapter 14 for more information.
+41. B, C. A multimeter is specifically designed to test for electrical characteristics, so it would 
+be the best tool to choose. Cable testers are for verifying that a cable works properly; some 
+are capable of testing resistance. A loopback plug is for testing the ability of a network 
+adapter to send and receive. A tone generator and probe is used to trace a cable from one 
+location to another. See Chapter 14 for more information.
+
+Assessment Test for Exam 220-1002
+1. W hich of the following will accomplish a specific task for the user?
+A. Driver
+B. Application
+C. Operating system
+D. Filesystem
+2. Which operating system is a cloud-based operating system?
+A. Linux
+B. Android
+C. Windows 10
+D. Chrome OS
+3. Which edition of Microsoft Windows 10 does not include Cortana?
+A. Home
+B. Pro
+C. Education
+D. Enterprise
+4. You need to change a computer’s name and join it to a domain. Which tool should you use?
+A. Device Manager
+B. User Accounts
+C. System Properties
+D. Credential Manager
+5. You need to manage a remote Windows operating system. Which tool can you use to 
+perform this task?
+A. msinfo32
+B. mstsc
+C. msconfig
+D. telnet
+6. W hich RAID system requires three or more disks to provide fault tolerance?
+A. Mirroring
+B. Striping
+C. RAID-1
+D. Striping with parity
+
+lxxxviii Assessment Test for Exam 220-1002
+7. W hich Windows 10 feature replaces Internet Explorer?
+A. Spotlight
+B. Edge
+C. Cortana
+D. UWP
+8. Which Windows Update branch will allow you to install preview releases of updates for 
+Windows 10?
+A. Semi-Annual Channel
+B. Semi-Annual Channel (Targeted)
+C. Long-Term Servicing Channel
+D. Insider Program
+9. You need to check the status of your User Account Control (UAC) and Windows Activation 
+on Windows 8/8.1. Which tool will display both of these?
+A. User Settings
+B. Action Center
+C. Firewall with Advanced Security
+D. Windows Update
+10. Which tool will allow you to ready the operating system for imaging?
+A. Microsoft Deployment Toolkit
+B. Windows Assessment and Deployment Kit
+C. sysprep.exe
+D. W indows Imaging
+11. Which element of the boot process holds the information that instructs the operating 
+system to load from a specific partition?
+A. winload.exe
+B. Bootmgr
+C. winresume.exe
+D. BCD
+12. Which feature allows you to create a simple local network, secured by a single password, to 
+share files and printers with other Windows 7 clients?
+A. Domain
+B. Workgroup
+C. Libraries
+D. HomeGroup
+
+Assessment Test for Exam 220-1002  lxxxix
+13. Y ou need to configure an IP address for Windows 7 to use in the event that the DHCP 
+server is down. Which of the following will allow you to perform this task?
+A. The Configuration tab for the network adapter properties
+B. The Alternate Configuration tab of the IPv4 Properties dialog box
+C. The Set Up a New Connection or Network wizard
+D. The Remote tab of the System Properties dialog box
+14. Which network feature allows a computer to resume operation when it receives a special 
+network signal?
+A. WoL
+B. PoE
+C. QoS
+D. DNS
+15. Which filesystem performs on-the-fly defragmentation?
+A. FAT
+B. NTFS
+C. ext4
+D. FAT32
+16. Where can you find updates for Apple operating systems?
+A. iTunes
+B. App Store
+C. Keychain
+D. Mission Control
+17. Which macOS feature is similar to Windows File Explorer?
+A. Keychain
+B. iCloud
+C. Spotlight
+D. Finder
+18. Which network protocol and port does RDP operate on?
+A. TCP port 3389
+B. TCP port 22
+C. TCP port 23
+D. TCP port 443
+
+xc Assessment Test for Exam 220-1002
+19. W hich line would be used to comment Windows batch script code?
+A. //comment
+B. 'comment
+C. REM comment
+D. # comment
+20. Y our system log files report an ongoing attempt to gain access to a single account. This 
+attempt has been unsuccessful to this point. What type of attack are you most likely  
+experiencing?
+A. Dictionary password attack
+B. Rootkit attack
+C. Worm attack
+D. TCP/IP hijacking
+21. A server in your network has stopped responding to legitimate requests from users due to a 
+malicious influence. Which type of attack has occurred?
+A. DoS
+B. Keylogger
+C. Botnet
+D. Social engineering
+22. You have found that several employees are using the organization’s email system to solicit 
+personal business. What policy would define the abuse of this system?
+A. Acceptable use policy (AUP)
+B. Mobile device management (MDM)
+C. Data loss prevention (DLP)
+D. Email filtering
+23. A user wants to ensure that all contacts from her mobile device are copied onto her 
+computer before migrating to a new device. Which of the following processes can 
+accomplish this?
+A. Mirroring
+B. Synchronization
+C. Calling each contact
+D. Attaching the contacts to an email
+24. Which mobile operating system is typically associated with the .ipa  extension?
+A. Android
+B. iOS
+C. Windows Phone
+D. BlackBerry OS
+
+Assessment Test for Exam 220-1002  xci
+25. A t echnician is configuring a new Windows computer for a home office. Which of the 
+following steps should the technician take to secure the workstation?
+A. Rename default accounts.
+B. Configure single sign-on.
+C. Disable Windows Update.
+D. Disable Action Center pop-ups.
+26. Which critical system generally requires third-party tools to troubleshoot performance 
+problems?
+A. RAM
+B. CPU
+C. Graphics
+D. Network
+27. What is the last step that should be performed when removing malware?
+A. Identify the malware.
+B. Enable System Protection.
+C. Educate the end user.
+D. Schedule a scan.
+28. Your mobile device is suffering from an intermittent wireless connection. What is 
+recommended to alleviate signal drops?
+A. Shorten the SSID.
+B. Use the 5 GHz band.
+C. Reduce power on the WAP.
+D. Use the 2.4 GHz band.
+29. While working on a user’s system, you discover a sticky note attached to the bottom of the 
+keyboard that has their username and password written on it. The user is not around, and 
+you need to verify that the network connection is working. What should you do?
+A. Log in, verify access, and then log out.
+B. Log in and stay logged in when you are finished.
+C. Text the user.
+D. Log in and change the user’s password.
+30. While installing a new network card, you accidentally broke a component off of the card. 
+What should you do?
+A. Explain that the card was broken out of the box.
+B. Install the card anyway.
+C. Inform the customer of the situation.
+D. Leave everything as-is until you can locate a new card.
+
+xcii Assessment Test for Exam 220-1002
+31. W hich regulation is enforced by Health & Human Services (HHS) to regulate the privacy 
+of patient information related to health services?
+A. SOX
+B. FERPA
+C. HIPAA
+D. GLBA
+32. Which of the following are good measures to take to help to prevent ESD? (Choose two.)
+A. Decrease the humidity.
+B. Tie back long hair.
+C. Take off your shoes.
+D. Perform self-grounding.
+33. Which of the following screwdrivers has a splined head?
+A. Flat-tipped
+B. Phillips
+C. Axial
+D. Torx
+34. Which type of software licensing agreement usually provides free trial software, with the 
+expectation that you will pay for it if you decide to keep it?
+A. Freeware
+B. Shareware
+C. Open-source
+D. Single-user
+
+Answers to Assessment Test 220-1002
+1. B .  A n application is written to perform a specific task for the user, such as word processing 
+and data analysis. Drivers allow for the operating system to communicate with the 
+hardware. The operating system and the filesystem assist in running applications. See 
+Chapter 15 for more information.
+2. D. The Google Chrome OS is a true cloud-based operating system, because all the data is 
+stored in the cloud. Cloud-based operating systems require an Internet connection to access 
+information. Android and Windows 10 use cloud storage but are not considered cloud-
+based operating systems. Linux is strictly a workstation operating system. See Chapter 15 
+for more information.
+3. C. For privacy issues, Windows 10 Education does not include Cortana, since this edition 
+is used for academic organizations. Windows 10 Home, Pro, and Enterprise all contain 
+Cortana. See Chapter 15 for more information.
+4. C. The System Properties applet ( sysdm.cpl ) allows you to change a computer’s name 
+and join the system to a domain. Device Manager is used to manage hardware resources. 
+The User Accounts applet is used to manage user accounts. Credential Manager is used to 
+manage stored credentials. See Chapter 16 for more information.
+5. B. The Microsoft Terminal Services Client ( mstsc ) is used to allow remote connections 
+to Window operating systems. Msinfo32  is used to collect information from the Windows 
+operating system. Msconfig  is used to configure startup and services. Telnet  is not used 
+to connect to Windows; it is normally used with Linux/UNIX. See Chapter 16 for more 
+information.
+6. D. Striping with parity, also known as RAID-5, requires three or more disks and provides 
+fault tolerance. Mirroring, also known as RAID-1, requires only two disks. Striping, also 
+known as RAID-0, provides no fault tolerance. See Chapter 16 for more information.
+7. B. Although Internet Explorer is still installed in Windows 10, the Edge browser has 
+largely replaced it’s functionality in Windows 10. The Spotlight feature will display a 
+random wallpaper on the login screen from Bing.com. Cortana is a digital person assistant. 
+The Universal Windows Platform (UWP) is a development platform. See Chapter 17 for 
+more information.
+8. D. The Insider Program allows for the installation of brand new features before they are 
+publically released. The Semi-Annual Channel is normally delayed by three to four months. 
+The Semi-Annual Channel (Targeted) branch will install updates as they are released to the 
+general public. The Long-Term Servicing Channel never installs new features during the life 
+of the version of Windows. See Chapter 17 for more information.
+9. B. The Action Center will allow you to see the status of both the UAC and Windows 
+Activation. User Settings will show only the UAC status. Firewall with Advanced Security 
+and Windows Update will not show either of these. See Chapter 18 for more information.
+
+xciv Answers to Assessment Test 220-1002
+10. C .  The sysprep.exe  utility will allow you to ready the operating system for imaging, by 
+resetting specific information, such as the computer name. The Microsoft Deployment 
+Toolkit can assist in creating the steps, but it calls on the sysprep tool. The Windows 
+Assessment and Deployment Kit allows you to customize the Windows operating system for 
+imaging, but it does not ready the operating system for imaging. Windows Imaging (WIM) 
+is a file format to contain the image. See Chapter 18 for more information.
+11. D. The Boot Configuration Data (BCD) holds the information that instructs the  
+Windows Boot Manager (bootmgr) to load the operating system from a specific partition. 
+Winload.exe  loads the operating system kernel. Bootmgr is the initial bootstrap program 
+that reads the BCD. Winresume.exe  is used when resuming a previous session that has 
+been suspended. See Chapter 18 for more information.
+12. D. HomeGroup allows sharing of files and printers with other Windows 7 clients, secured 
+with a single password. Domains require domain controllers and individual accounts. 
+Workgroups require user accounts to be set up on each workstation in the network. 
+Libraries are components of the Windows 7 operating system and HomeGroups that allow 
+for the logical grouping of files. See Chapter 19 for more information.
+13. B. You can use the Alternate Configuration tab of the IPv4 Properties dialog box to 
+configure an IP address for Windows 7 to use in the event the DHCP server is down. The 
+Configuration tab for the network adapter properties will allow you change the driver and 
+settings for the adapter itself. The Set Up a New Connection or Network wizard is used for 
+the initial setup of the network. The Remote tab of the System Properties dialog box allows 
+you to select Remote Assistance and Remote Desktop settings. See Chapter 19 for more 
+information.
+14. A. Wake-on-LAN (WoL) allows a computer to awake from sleep when it receives a special 
+WoL packet over the network. Power over Ethernet (PoE) is a standard of running power 
+for a device over the network connection. Quality of Service (QoS) is a mechanism used by 
+network protocols to give certain network protocols priority through the network. Domain 
+Name System (DNS) is a naming system used by the Internet and Microsoft that translates 
+domain names to IP addresses. See Chapter 19 for more information.
+15. C. The ext4 filesystem does not suffer from fragmentation, because it performs on-the-
+fly defragmentation. FAT is a 16-bit filesystem that suffers from fragmentation. NTFS is 
+a journaled filesystem that suffers from fragmentation. FAT32 is a 32-bit filesystem that 
+suffers from fragmentation. See Chapter 20 for more information.
+16. B. The App Store is where you can find updates for the Apple operating system. iTunes is 
+used to purchase and download music, videos, and other content. The Keychain is used 
+to store credentials on behalf of the user. Mission Control is used to view all the currently 
+running applications. See Chapter 20 for more information.
+17. D. The macOS Finder is the equivalent to Windows File Explorer. The Keychain is a 
+password-management system for the operating system. iCloud is a cloud-based storage 
+and backup service. Spotlight helps you find applications, documents, and other files. See 
+Chapter 20 for more information.
+
+Answers to Assessment Test 220-1002  xcv
+18. A .  T he Remote Desktop Protocol (RDP) operates on TCP port 3389. The SSH protocol 
+operates on TCP port 22. The Telnet service operates on TCP port 23, and HTTPS operates 
+on TCP port 443. See Chapter 21 for more information.
+19. C. The line REM comment  is used to comment Windows batch script code. The line  
+//comment  is used to comment JavaScript code. The line 'comment  is used to comment 
+VBScript code. The line # comment  is used to comment Bash script code and PowerShell 
+code. See Chapter 21 for more information.
+20. A. A dictionary password attack occurs when a user account is repeatedly attacked using a 
+variety of passwords. A rootkit attack would not be immediately seen and would not show 
+as an ongoing effort. A worm attack would not be visible as an ongoing attempt to gain 
+access. TCP/IP hijacking is a form of a man-in-the-middle attack. See Chapter 22 for more 
+information.
+21. A. A denial-of-service (DoS) attack is used to disrupt legitimate requests from being 
+answered. A keylogger is used to steal credentials by recording keystrokes. A botnet is a 
+group of computers that are under the control of a threat agent. Social engineering is a 
+process in which an attacker attempts to acquire information about your network and 
+system by social means, such as talking to people in the organization. See Chapter 22 for 
+more information.
+22. A. The acceptable use policy (AUP) defines the appropriate use of email and other 
+organizational systems and resources. Mobile device management (MDM) helps an 
+administrator control mobile devices so that data is not exposed. Data loss prevention 
+(DLP) is used to prevent personal and confidential information from being emailed  
+outside of the organization. Email filtering filters email coming into the organization. 
+See Chapter 22 for more information.
+23. B. Synchronization can copy all contacts, programs, email messages, pictures, music, 
+and videos between a mobile device and a computer. Mirroring is a term reserved for 
+when devices replicate themselves to similar devices. Calling the contacts won’t achieve 
+the desired result, and emailing contacts is inefficient and does not immediately result in 
+placing the contacts on the computer. See Chapter 23 for more information.
+24. B. The .ipa  file extension is for iOS App Store package files. Android apps have an 
+extension of .apk . The Windows Phone OS is typically associated with the .xap  extension. 
+Blackberry OS uses .jad . The latter of the two phone types were not discussed in detail in 
+this book. See Chapter 23 for more information.
+25. A. Renaming the default accounts on a new Windows computer is the easiest way to 
+secure the operating system. Configuring single sign-on should only be performed if  
+a resource is required that only uses SSO as authentication. Disabling Windows Update 
+will do the opposite of securing the operating system. Disabling Action Center pop-
+ups will also do the opposite of securing the operating system. See Chapter 23 for 
+more information.
+26. C. Graphics cards usually require third-party tools to diagnosis performance problems. 
+RAM problems, CPU problems, and network problems can be diagnosed inside the 
+operating system from Task Manager. See Chapter 24 for more information.
+
+xcvi Answers to Assessment Test 220-1002
+27. C .  T he last step in the malware-removal process is the education of the end user to prevent 
+future occurrences of infection. Identifying the malware is the first step in the malware-
+removal process. Enabling System Protection is one of the last steps, but it is not the last 
+step. Scheduling a scan should be performed after you have remediated the malware. See 
+Chapter 24 for more information.
+28. B. By using the 5 GHz wireless band, you can limit the amount of interference from 
+external devices, such as microwave ovens and Bluetooth devices. Shortening the SSID 
+will have no effect on intermittent signal drops, nor will reducing power on the WAP. 
+Using the 2.4 GHz band will probably make signal drops worse. See Chapter 24 for more 
+information.
+29. C. You should text the user and let them know that you need to verify their network 
+connection. You should not log in as another person, with their username and password. 
+You should not log in and stay logged in when you are finished. You should definitely not 
+log in and change the user’s password. See Chapter 25 for more information.
+30. C. You should be honest and inform the customer of the situation. Explaining that the 
+card was broken out of the box is untruthful and deceptive. Installing the card anyway will 
+cause new problems. Leaving everything as-is until you can locate a new card does not help 
+the customer, since you’ve created a new dilemma. See Chapter 25 for more information.
+31. C. The Health Insurance Portability and Accountability Act (HIPAA) affects health-
+care providers and providers that process health records. The Sarbanes-Oxley Act (SOX) 
+is enforced by the Securities and Exchange Commission (SEC) and regulates sensitive 
+financial information and financial records. The Family Educational Rights and Privacy 
+Act (FERPA) affects education providers and organizations that process student records. 
+The Gramm-Leach-Bliley Act (GLBA) affects providers of financial services and safeguards 
+customer information. See Chapter 25 for more information.
+32. B, D. Long hair or neckties can very easily hold a static charge and damage computer parts. 
+In addition, if you don’t have an ESD strap or mat, you should perform self-grounding 
+before you touch sensitive computer equipment. Lower humidity actually increases the risk 
+of ESD. Taking off your shoes will not limit ESD. See Chapter 26 for more information.
+33. D. A Torx screwdriver has a splined head, which is used for greater gripping of the screw. 
+A flat-tipped screwdriver, as the name suggests, has a flat tip. A Phillips screwdriver has 
+a cross, which is used for better gripping over a normal flat-tip screwdriver. An axial 
+screwdriver is not a type of screwdriver. See Chapter 26 for more information.
+34. B. Shareware often provides a free trial of a program, with the expectation that you will 
+pay for it if you keep it. Freeware and open-source applications are generally totally free, 
+although the developers may ask for donations. Single-user software is licensed for one 
+user. See Chapter 26 for more information.
+
+220-1001 PART 
+I
+
+Motherboards, 
+Processors, and 
+Memory
+The following Co MPTiA A+ 220-1001 
+obje CTives Are Covered in This ChAPTer: 
+ ✓3.3 Given a scenario, install RAM types.
+ ■RAM types
+ ■SODIMM
+ ■DDR2
+ ■DDR3
+ ■DDR4
+ ■Single channel
+ ■Dual channel
+ ■Triple channel
+ ■Error correcting
+ ■Parity vs. non-parity
+ ✓3.5 Given a scenario, install and configure motherboards, 
+CPUs, and add-on cards.
+ ■Motherboard form factor
+ ■ATX
+ ■mATX
+ ■ITX
+ ■mITX
+ ■Motherboard connectors types
+ ■PCI
+ ■PCIe
+ ■Riser card
+ ■Socket typesChapter 
+1$PNQ5*"¡"¡$PNQMFUF4UVEZ(VJEF 'PVSUI&EJUJPO
+By 2VFOUJO%PDUFSBOE+PO#VIBHJBS
+$PQZSJHIU¥CZ+PIO8JMFZ4POT*OD
+
+ ■SATA
+ ■IDE
+ ■Front panel connector
+ ■Internal USB connector
+ ■BIOS/UEFI settings
+ ■Boot options
+ ■Firmware upgrades
+ ■Security settings
+ ■Interface configurations
+ ■Security
+ ■Passwords
+ ■Drive encryption
+ ■TPM
+ ■LoJack
+ ■Secure boot
+ ■CMOS battery
+ ■CPU features
+ ■Single-core
+ ■Multicore
+ ■Virtual technology
+ ■Hyperthreading
+ ■Speeds
+ ■Overclocking
+ ■Integrated GPU
+ ■Compatibility
+ ■AMD
+ ■Intel
+ ■Cooling mechanism
+ ■Fans
+ ■Heat sink
+ ■Liquid
+ ■Thermal paste
+
+
+[Note: PDF has 1696 pages, only first 100 pages extracted]

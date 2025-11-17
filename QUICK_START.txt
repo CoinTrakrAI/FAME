@@ -1,0 +1,44 @@
+F.A.M.E 8.0 - Quick Start Guide
+================================
+
+🚀 OPTION 1: RUN DIRECTLY (Python)
+-----------------------------------
+Just run this command:
+    python fame_launcher.py
+
+This will open the GUI launcher immediately.
+
+
+🔨 OPTION 2: BUILD EXECUTABLE (.exe)
+--------------------------------------
+Step 1: Install PyInstaller (if not already installed)
+    pip install pyinstaller
+
+Step 2: Run the build script
+    python build_fame.py
+
+Step 3: Find your .exe file
+    Location: dist\FAME_GodMode_v8.0.exe
+
+The executable will be self-contained - users don't need Python installed!
+
+
+📋 WHAT YOU NEED
+----------------
+- Python 3.8+ (already have this)
+- Internet connection (for market data)
+- Docker Desktop (optional, for LocalAI features)
+- Required Python libraries (install with: pip install -r requirements_desktop.txt)
+
+
+🎯 WHAT HAPPENS WHEN YOU RUN IT
+--------------------------------
+1. Launcher opens showing system status
+2. Checks internet, Docker, and libraries
+3. Click "ACTIVATE F.A.M.E."
+4. AI begins learning markets autonomously
+
+
+💡 TIP: If voice doesn't work, run:
+    python voice_setup_fix.py
+

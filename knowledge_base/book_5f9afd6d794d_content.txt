@@ -1,0 +1,1659 @@
+Infrastructure security with Red T eam and Blue T eam 
+tacticsCybersecurity - Attack and Defense StrategiesYuri Diogenes, Erdal Ozkaya
+
+Cybersecurity ` Attack and
+Defense Strategies
+*OGSBTUSVDUVSFTFDVSJUZXJUI3FE5FBNBOE#MVF5FBNUBDUJDT
+Yuri DiogenesErdal Ozkaya
+BIRMINGHAM - MUMBAI
+
+Cybersecurity ` Attack and Defense
+Strategies
+Copyright a 2018 Packt Publishing
+All rights reserved. No part of this book may be reproduced, stored in a retrieval system, or transmitted in any form
+or by any means, without the prior written permission of the publisher, except in the case of brief quotationsembedded in critical articles or reviews.
+Every effort has been made in the preparation of this book to ensure the accuracy of the information presented.
+However, the information contained in this book is sold without warranty, either express or implied. Neither theauthors nor Packt Publishing or its dealers and distributors will be held liable for any damages caused or alleged tohave been caused directly or indirectly by this book.
+Packt Publishing has endeavored to provide trademark information about all of the companies and products
+mentioned in this book by the appropriate use of capitals. However, Packt Publishing cannot guarantee the accuracyof this information.
+Commissioning Editor:  Vijin Boricha
+Acquisition Editor:  Namrata Patil
+Content Development Editor:  Amrita Noronha
+Technical Editor:  Sneha Hanchate
+Copy Editor:  Safis Editing
+Project Coordinator:  Shweta Birwatkar
+Proofreader:  Safis Editing
+Indexers:  Pratik Shirodkar
+Graphics:  Tania Dutta
+Production Coordinator:  Shantanu Zagade
+First published: January 2018
+Production reference: 1230118Published by Packt Publishing Ltd.
+Livery Place35 Livery StreetBirminghamB3 2PB, UK.
+ISBN 978-1-78847-529-7
+XXXQBDLUQVCDPN
+
+NBQUJP
+Mapt is an online digital library that gives you full access to over 5,000 books and videos, as
+well as industry leading tools to help you plan your personal development and advanceyour career. For more information, please visit our website.
+Why subscribe?
+Spend less time learning and more time coding with practical eBooks and Videos
+from over 4,000 industry professionals
+Improve your learning with Skill Plans built especially for you
+Get a free eBook or video every month
+Mapt is fully searchable
+Copy and paste, print, and bookmark content
+PacktPub.com
+Did you know that Packt offers eBook versions of every book published, with PDF and
+ePub files available? You can upgrade to the eBook version at XXX1BDLU1VCDPN  and as a
+print book customer, you are entitled to a discount on the eBook copy. Get in touch with us
+at TFSWJDF!QBDLUQVCDPN  for more details.
+At XXX1BDLU1VCDPN , you can also read a collection of free technical articles, sign up for a
+range of free newsletters, and receive exclusive discounts and offers on Packt books and
+eBooks.
+
+Contributors
+About the authors
+Yuri Diogenes  is a professor at EC-Council University for their master's degree in
+cybersecurity program. Yuri has a master of science degree in cybersecurity from UTICA
+College, and MBA from FGV Brazil. Yuri currently holds the following certifications CISSP,CyberSec First Responder, CompTIA CSA+, E|CEH, E|CSA, E|CHFI, E|CND, CyberSecFirst Responder, CompTIA, Security+, CompTIA Cloud Essentials, Network+, Mobility+,CASP, CSA+, MCSE, MCTS, and Microsoft Specialist - Azure.
+First and foremost, I would like to thank God for enabling me to write another book. I also
+would like to thank my wife, Alexsandra, and my daughters, Yanne and Ysis, for theirunconditional support. To my coauthor and friend, Erdal Ozkaya, for the greatpartnership. To Amrita Noronha for her amazing support throughout this project.
+Erdal Ozkaya  is a doctor of philosophy in Cybersecurity, master of information systems
+security, master of computing research CEI, MCT, MCSE, E|CEH, E|CSA, E|CISO, CFR,
+and CISSP. He works for Microsoft as a cybersecurity architect and security advisor and isalso a part-time lecturer at Australian Charles Sturt University. He has coauthored manysecurity certification coursewares for different vendors and speaks in worldwideconferences. He has won many awards in his field and works hard to make the Cyber-World safe.
+I would like to thank my wife, Arzu, and my kids, Jemre and Azra, for all their support and
+love. I would like to give special thanks to my parents and brothers who have helped mebecome who I am. I would also like to thank my supervisor, Dr. Rafiqul Islam, for his helpand feedback whenever I have needed it.
+
+About the reviewers
+Vijay Kumar Velu  is a passionate information security practitioner, author, speaker, and
+blogger, currently based in Malaysia. He has more than 11 years of IT industry experience.
+He is a licensed penetration tester and has specialized in providing technical solutions to a
+variety of cyber problems. He is the author of Mastering Kali Linux for Advanced Penetration
+Testing, Second Edition  and Mobile Application Penetration Testing .
+Pascal Ackerman  is a seasoned industrial security professional with a degree in electrical
+engineering with over 15 years of experience in designing, troubleshooting, and securing
+large-scale industrial control systems and the various types of network technologies theyutilize. After more than a decade of hands-on, in-the-field experience, he joined RockwellAutomation in 2015. He is currently employed as a senior consultant of industrialcybersecurity with the Network and Security Services Group. He recently became a digitalnomad and now travels the world with his family while fighting cyber adversaries.
+Packt is searching for authors like you
+If you're interested in becoming an author for Packt, please visit BVUIPSTQBDLUQVCDPN  and
+apply today. We have worked with thousands of developers and tech professionals, just
+like you, to help them share their insight with the global tech community. You can make ageneral application, apply for a specific hot topic that we are recruiting an author for, orsubmit your own idea.
+
+Table of Contents
+Preface 1
+Chapter 1: Security Posture 6
+The current threat landscape 6
+The credentials – authentication and authorization 10
+Apps 11
+Data 13
+Cybersecurity challenges 14
+Old techniques and broader results 14
+The shift in the threat landscape 15
+Enhancing your security posture 16
+The Red and Blue Team 18
+Assume breach 21
+References 22
+Summary 24
+Chapter 2: Incident Response Process 25
+Incident response process 25
+Reasons to have an IR process in place 26
+Creating an incident response process 28
+Incident response team 31
+Incident life cycle 32
+Handling an incident 33
+Best practices to optimize incident handling 36
+Post-incident activity 36
+Real-world scenario 36
+Lessons learned 38
+Incident response in the cloud 39
+Updating your IR process to include cloud 40
+References 40
+Summary 41
+Chapter 3: Understanding the Cybersecurity Kill Chain 42
+External reconnaissance 42
+Scanning 44
+NMap 44
+
+Table of Contents
+[ ii ]Metasploit 46
+John the Ripper 47THC Hydra 48
+Wireshark 49
+Aircrack-ng 50
+Nikto 52
+Kismet 53
+Cain and Abel 54
+Access and privilege escalation 55
+Vertical privilege escalation 55
+Horizontal privilege escalation 56
+Exfiltration 56
+Sustainment 57
+Assault 58
+Obfuscation 59
+Threat life cycle management 60
+References 63
+Summary 65
+Chapter 4: Reconnaissance 66
+External reconnaissance 67
+Dumpster diving 67
+Social media 68
+Social engineering 69
+Pretexting 70
+Diversion theft 70
+Phishing 71
+Phone phishing (vishing) 72Spear phishing 73
+Water holing 74
+Baiting 74
+Quid pro quo 75
+Tailgating 75
+Internal reconnaissance 76
+Sniffing and scanning 76
+Prismdump 77
+tcpdump 78
+NMap 78
+Wireshark 80
+Scanrand 81
+Cain and Abel 82
+Nessus 82
+Metasploit 83
+Aircrack-ng 85
+
+Table of Contents
+[ iii ]Wardriving 86
+Conclusion of the reconnaissance chapter 86
+References 87
+Summary 89
+Chapter 5: Compromising the System 90
+Analyzing current trends 91
+Extortion attacks 91
+Data manipulation attacks 92
+IoT device attacks 94
+Backdoors 94
+Mobile device attacks 95
+Hacking everyday devices 95
+Hacking the cloud 97
+Phishing 98
+Exploiting a vulnerability 101
+Zero-day 101
+Fuzzing 102
+Source code analysis 102
+Types of zero-day exploits 103
+Buffer overflows 104
+Structured exception handler overwrites 104
+Performing the steps to compromise a system 105
+Deploying payloads 105
+Installing and using a vulnerability scanner 105Using Metasploit 106
+Compromising operating systems 108
+Compromising systems using Kon-Boot or Hiren's BootCD 108Compromising systems using a Linux Live CD 110Compromising systems using preinstalled applications 111Compromising systems using Ophcrack 112
+Compromising a remote system 113
+Compromising web-based systems 114
+SQL injection 114Cross-site scripting 115Broken authentication 115DDoS attacks 116
+References 117
+Summary 119
+Chapter 6: Chasing a User's Identity 120
+Identity is the new perimeter 120
+
+Table of Contents
+[ iv ]Strategies for compromising a user's identity 123
+Gaining access to the network 125
+Harvesting credentials 125
+Hacking a user's identity 127
+Brute force 128
+Social engineering 129
+Pass the hash 137
+Other methods to hack identity 139
+References 139
+Summary 140
+Chapter 7: Lateral Movement 141
+Infiltration 142
+Network mapping 142
+Avoiding alerts 144
+Performing lateral movement 145
+Port scans 145
+Sysinternals 146
+File shares 149
+Remote Desktop 150
+PowerShell 151
+Windows Management Instrumentation 152
+Scheduled tasks 154
+Token stealing 154
+Pass-the-hash 155
+Active Directory 155
+Remote Registry 156
+Breached host analysis 157
+Central administrator consoles 157
+Email pillaging 158
+References 158
+Summary 159
+Chapter 8: Privilege Escalation 160
+Infiltration 161
+Horizontal privilege escalation 161
+Vertical privilege escalation 162
+Avoiding alerts 162
+Performing privilege escalation 163
+Exploiting unpatched operating systems 164
+
+Table of Contents
+[ v ]Access token manipulation 165
+Exploiting accessibility features 166
+Application shimming 167
+Bypassing user account control 172
+DLL injection 173
+DLL search order hijacking 174
+Dylib hijacking 175
+Exploration of vulnerabilities 176
+Launch daemon 177
+Hands-on example of privilege escalation on a Windows 8 target 177
+Conclusion and lessons learned 179
+References 179
+Summary 180
+Chapter 9: Security Policy 181
+Reviewing your security policy 181
+Educating the end user 183
+Social media security guidelines for users 184
+Security awareness training 185
+Policy enforcement 185
+Application whitelisting 188
+Hardening 189
+Monitoring for compliance 194
+References 198
+Summary 198
+Chapter 10: Network Segmentation 200
+Defense in depth approach 200
+Infrastructure and services 202
+Documents in transit 202
+Endpoints 205
+Physical network segmentation 205
+Discovering your network 208
+Securing remote access to the network 210
+Site-to-site VPN 212
+Virtual network segmentation 213
+Hybrid cloud network security 215
+References 218
+Summary 218
+Chapter 11: Active Sensors 219
+
+Table of Contents
+[ vi ]Detection capabilities 220
+Indicators of compromise 221
+Intrusion detection systems 224
+Intrusion prevention system 226
+Rule-based detection 227
+Anomaly-based detection 228
+Behavior analytics on-premises 228
+Device placement 232
+Behavior analytics in a hybrid cloud 232
+Azure Security Center 233
+References 238
+Summary 239
+Chapter 12: Threat Intelligence 240
+Introduction to threat intelligence 240
+Open source tools for threat intelligence 244
+Microsoft threat intelligence 249
+Azure Security Center 250
+Leveraging threat intelligence to investigate suspicious activity 252
+References 256
+Summary 257
+Chapter 13: Investigating an Incident 258
+Scoping the issue 258
+Key artifacts 259
+Investigating a compromised system on-premises 265
+Investigating a compromised system in a hybrid cloud 270
+Search and you shall find it 278
+Lessons learned 279
+References 279
+Summary 280
+Chapter 14: Recovery Process 281
+Disaster recovery plan 282
+The disaster recovery planning process 282
+Forming a disaster recovery team 283Performing risk assessment 284Prioritizing processes and operations 284Determining recovery strategies 284Collecting data 285Creating the disaster recovery plan 285Testing the plan 285
+
+Table of Contents
+[ vii ]Obtaining approval 285
+Maintaining the plan 286
+Challenges 286
+Live recovery 287
+Contingency planning 288
+IT contingency planning process 289
+Development of the contingency planning policy 290Conducting business impact analysis 290
+Identifying the critical IT resources 291Identifying disruption impacts 291Developing recovery priorities 291
+Identifying the preventive controls 292Developing recovery strategies 292
+Backups 292
+Alternative sites 293Equipment replacement 295Plan testing, training, and exercising 295
+Plan maintenance 296
+Best practices for recovery 296
+References 296
+Summary 297
+Chapter 15: Vulnerability Management 298
+Creating a vulnerability management strategy 299
+Asset inventory 299
+Information management 300
+Risk assessment 301
+Scope 301
+Collecting data 302Analysis of policies and procedures 302Vulnerability analysis 302Threat analysis 303Analysis of acceptable risks 303
+Vulnerability assessment 304
+Reporting and remediation tracking 305
+Response planning 306
+Vulnerability management tools 307
+Asset inventory tools 307
+Peregrine tools 308LANDesk Management Suite 308StillSecure 309Foundstone's Enterprise 309
+Information management tools 310Risk assessment tools 311
+
+Table of Contents
+[ viii ]Vulnerability assessment tools 312
+Reporting and remediation tracking tools 313Response planning tools 313
+Implementation of vulnerability management 314
+Best practices for vulnerability management 316
+Implementing vulnerability management with Nessus 318
+Flexera (Secunia) Personal Software Inspector 328
+Conclusion 331
+References 331
+Summary 332
+Chapter 16: Log Analysis 333
+Data correlation 333
+Operating system logs 335
+Windows logs 335
+Linux logs 338
+Firewall logs 339
+Web server logs 341
+References 342
+Summary 342
+Other Books You May Enjoy 344
+Index 347
+
+Preface
+With a threat landscape that it is in constant motion, it becomes imperative to have a strong
+security posture, which in reality means enhancing the protection, detection, and response.Throughout this book, you will learn the attack methods and patterns to recognizeabnormal behavior within your organization with Blue Team tactics. You will also learntechniques to gather exploitation intelligence, identify risks, and demonstrate impact onRed and Blue team strategies. 
+Who this book is for
+This book is for information security professionals and IT professionals who want to knowmore about Cybersecurity.
+What this book covers
+$IBQUFS , Security Posture , defines what constitute a secure posture and how it helps in
+understanding the importance of having a good defense and attack strategy.
+$IBQUFS , Incident Response Process , introduces the incident response process and the
+importance to have one. It goes over different industry standards and best practices for
+handling the incident response.
+$IBQUFS , Understanding the Cybersecurity Kill Chain , prepares the reader to understand the
+mindset of an attacker, the different stages of the attack, and what usually takes place in
+each one of those phases.
+$IBQUFS , Reconnaissance , speaks about the different strategies to perform reconnaissance
+and how data is gathered to obtain information about the target for planning the attack.
+
+Preface
+[ 2 ]$IBQUFS  Compromising the System , shows current trends in strategies to compromise the
+system and explains how to compromise a system.
+$IBQUFS , Chasing a User's Identity , explains the importance of protecting the user's identity
+to avoid credential theft and goes through the process of hacking the user's identity.
+$IBQUFS , Lateral Movement , describes how attackers perform lateral movement once they
+compromise one system.
+$IBQUFS , Privilege Escalation , shows how attackers can escalate privileges in order to gain
+administrative access to the network system.
+$IBQUFS , Security Policy , focuses on the different aspects of the initial defense strategy,
+which starts with the importance of a well-created security policy and goes over the best
+practices for security policies, standards, security awareness training, and core securitycontrols.
+$IBQUFS , Network Segmentation , looks into different aspects of defense in depth, covering
+physical network segmentation as well as the virtual and hybrid cloud.
+$IBQUFS , Active Sensors , details different types of network sensors that help the
+organizations to detect attacks.
+$IBQUFS , Threat Intelligence , speaks about the different aspects of threat intelligence from
+the community as well as from the major vendors.
+
+Preface
+[ 3 ]$IBQUFS , Investigating an Incident , goes over two case studies, for an on-premises
+compromised system and for a cloud-based compromised system, and shows all the steps
+involved in a security investigation.
+$IBQUFS , Recovery Process , focuses on the recovery process of a compromised system and
+explains how crucial it is to know what all options are available since live recovery of a
+system is not possible during certain circumstances.  
+$IBQUFS , Vulnerability Management , describes the importance of vulnerability
+management to mitigate vulnerability exploitation. It covers the current threat landscape
+and the growing number of ransomware  that exploits known vulnerabilities.
+$IBQUFS , Log Analysis , goes over the different techniques for manual log analysis since it
+is critical for the reader to gain knowledge on how to deeply analyze different types of logs
+to hunt suspicious security activities.
+To get the most out of this book
+We assume that the readers of this book know the basic information security1.
+concepts, Windows, and Linux operating systems.
+Some of the demonstrations from this book can also be done in a lab2.
+environment; therefore, we recommend you to have a virtual lab with thefollowing VMs: Windows Server 2012, Windows 10, and Kali Linux.
+
+Preface
+[ 4 ]Download the color images
+We also provide a PDF file that has color images of the screenshots/diagrams used in this
+book. You can download it here:
+IUUQXXXQBDLUQVCDPNTJUFTEFGBVMUGJMFTEPXOMPBET$ZCFSTFDV SJUZ"UUBDLBOE%FG
+FOTF4USBUFHJFT@$PMPS*NBHFTQEG .
+Conventions used
+There are a number of text conventions used throughout this book.
+$PEF*O5FYU : Indicates code words in text, database table names, folder names, filenames,
+file extensions, pathnames, dummy URLs, user input, and Twitter handles. Here is an
+example: "Mount the downloaded 8FC4UPSNENH  disk image file as another disk in
+your system."
+Bold : Indicates a new term, an important word, or words that you see onscreen. For
+example, words in menus or dialog boxes appear in the text like this. Here is an example:
+"Select System info  from the Administration  panel."
+Warnings or important notes appear like this.
+Tips and tricks appear like this.
+Get in touch
+Feedback from our readers is always welcome.
+General feedback : Email GFFECBDL!QBDLUQVCDPN  and mention the book title in the
+subject of your message. If you have questions about any aspect of this book, please email
+us at RVFTUJPOT!QBDLUQVCDPN .
+
+Preface
+[ 5 ]Errata : Although we have taken every care to ensure the accuracy of our content, mistakes
+do happen. If you have found a mistake in this book, we would be grateful if you would
+report this to us. Please visit XXXQBDLUQVCDPNTVCNJUFSSBUB , selecting your book,
+clicking on the Errata Submission Form link, and entering the details.
+Piracy : If you come across any illegal copies of our works in any form on the Internet, we
+would be grateful if you would provide us with the location address or website name.
+Please contact us at DPQZSJHIU!QBDLUQVCDPN  with a link to the material.
+If you are interested in becoming an author : If there is a topic that you have expertise in
+and you are interested in either writing or contributing to a book, please visit
+BVUIPSTQBDLUQVCDPN .
+Reviews
+Please leave a review. Once you have read and used this book, why not leave a review on
+the site that you purchased it from? Potential readers can then see and use your unbiasedopinion to make purchase decisions, we at Packt can understand what you think about ourproducts, and our authors can see your feedback on their book. Thank you!
+For more information about Packt, please visit 
+QBDLUQVCDPN .
+
+11
+Security Posture
+Over the years, the investments in security moved from nice to have  to must have , and now
+organizations around the globe are realizing how important it is to continually invest insecurity. This investment will ensure that the company stays competitive in the market.Failure to properly secure their assets could lead to irrepairable damage, and in somecircumstances could lead to bankruptcy. Due to the current threat landscape, investing onlyin protection isn't enough. Organizations must enhance their overall security posture. Thismeans that the investments in protection, detection, and response must be aligned.
+In this chapter, we'll be covering the following topics:
+The current threat landscape
+The challenges in the cybersecurity space
+How to enhance your security posture
+Understanding the roles of the Blue Team and Red Team in your organization
+The current threat landscape
+With the prevalence of always-on connectivity and advancements in technology that are
+available today, the threats are evolving rapidly to exploit different aspects of thesetechnologies. Any device is vulnerable to attack, and with Internet of Things  (IoT) this
+became a reality. In October 2016, a series of Distributed Denial of Service  (DDoS ) attacks
+were launched against DNS servers, which caused some major web services to stop
+working, such as GitHub, Paypal, Spotify, Twitter, and others (1).
+
+Security Posture Chapter 1
+[ 7 ]This was possible due to the amount of insecure IoT devices around the world. While the
+use of IoT to launch a massive cyber attack is something new, the vulnerabilities in thosedevices are not. As a matter of fact, they've been there for quite a while. In 2014, ESETreported 73,000 unprotected security cameras with default passwords (2). In April 2017,IOActive found 7,000 vulnerable Linksys routers in use, although they said that it could beup to 100,000 additional routers exposed to this vulnerability (3).
+The Chief Executive Officer  (CEO ) may even ask: what do the vulnerabilities in a home
+device have to do with our company? That's when the Chief Information Security Officer
+(CISO ) should be ready to give an answer. Because the CISO should have a better
+understanding of the threat landscape and how home user devices may impact the overall
+security that this company needs to mitigate. The answer comes in two simple scenarios,remote access and Bring your Own Device  (BYOD ).
+While remote access is not something new, the number of remote workers are growing
+exponentially. Forty-three percent of employed Americans are already working remotelyaccording to Gallup (4), which means they are using their own infrastructure to accesscompany's resources. Compounding this issue, we have a growth in the number ofcompanies allowing BYOD in the workplace. Keep in mind that there are ways toimplement BYOD securely, but most of the failures in the BYOD scenario usually happenbecause of poor planning and network architecture, which lead to an insecureimplementation (5).
+What is the commonality among all technologies that were previously mentioned? To
+operate them, you need a user and the user is still the greatest target for attack. Humans arethe weakest link in the security chain. For this reason, old threats such as phishing emailsare still on the rise, because it deals with the psychological aspects of the user by enticingthe user to click on something, such as a file attachment or malicious link. Usually, once theuser performs one of these actions, their device becomes compromised by either malicioussoftware (malware) or is remotely accessed by a hacker.
+A spear phish campaign could start with a phishing email, which will basically be the entry
+point for the attacker, and from there other threats will be leveraged to exploitvulnerabilities in the system.
+One example of a growing threat that uses phishing emails as the entry point for the attack
+is ransomware. Only during the first three months of 2016, the FBI reported that $209million in ransomware payments were made (6). According to Trend Micro, ransomwaregrowth will plateau in 2017; however, the attack methods and targets will diversify (7).
+
+Security Posture Chapter 1
+[ 8 ]The following diagram highlights the correlation between these attacks and the end user:
+This diagram shows four entry points for the end user. All of these entry points must have
+their risks identified and treated with proper controls. The scenarios are listed as follows:
+Connectivity between on-premises and cloud ( 1)
+Connectivity between BYOD devices and cloud ( 2)
+Connectivity between corporate-owned devices and on-premises ( 3)
+Connectivity between personal devices and cloud ( 4)
+Notice that these are different scenarios, but all correlated by one single entity-the end user.
+The common element in all scenarios is usually the preferred target for cybercriminals,which appears in the preceding diagram accessing cloud resources.
+
+Security Posture Chapter 1
+[ 9 ]In all scenarios, there is also another important element that appears constantly, which is
+cloud computing resources. The reality is that nowadays you can't ignore the fact that manycompanies are adopting cloud computing. The vast majority will start in a hybrid scenario,where Infrastructure as a Service  (IaaS)  is their main cloud service. Some other companies 
+might opt to use Software as a Service  (SaaS ) for some solutions. For example, Mobile
+Device Management  (MDM ), as shown in scenario (2). You may argue that highly secure
+organizations, such as the military may have zero cloud connectivity. That's certainly
+possible, but commercially speaking, cloud adoption is growing and will slowly dominatemost of the deployment scenarios.
+On-premise security is critical, because it is the core of the company, and that's where the
+majority of the users will be accessing resources. When an organization decides to extendtheir on-premise infrastructure with a cloud provider to use IaaS (1), the company needs to
+evaluate the threats for this connection and the countermeasure for these threats through a
+risk assessment.
+The last scenario (4) might be intriguing for some skeptical analysts, mainly because they
+might not immediately see how this scenario has any correlation with the company's
+resources. Yes, this is a personal device with no direct connectivity with on-premiseresources. However, if this device is compromised, the user could potentially compromisethe company's data in the following situations:
+Opening a corporate email from this device
+Accessing corporate SaaS applications from this device
+If the user uses the same password (8) for his/her personal email and his
+corporate account, this could lead to account compromise through brute force or
+password guessing
+Having technical security controls in place could help mitigate some of these threats against
+the end user. However, the main protection is continuous use of education via securityawareness training.
+The user is going to use their credentials  to interact with applications  in order to either
+consume data  or write data to servers located in the cloud or on-premise. Everything in
+bold has a unique threat landscape that must be identified and treated. We will cover these
+areas in the sections that follow.
+
+Security Posture Chapter 1
+[ 10 ]The credentials ` authentication and
+authorization
+According to Verizon's 2017 Data Breach Investigations Report (9), the association between
+threat actor (or just actor), their motives and their modus operandi vary according to theindustry. However, the report states that stolen credentials is the preferred attack vector forfinancial motivation or organized crime. This data is very important, because it shows thatthreat actors are going after user's credentials, which leads to the conclusion that companiesmust focus specifically on authentication and authorization of users and their access rights.
+The industry agreed that a user's identity is the new perimeter. This requires security
+controls specifically designed to authenticate and authorize individuals based on their joband need for specific data within the network. Credential theft could be just the first step toenable cybercriminals to have access to your system. Having a valid user account in thenetwork will enable them to move laterally (pivot), and at some point find the rightopportunity to escalate privilege to a domain administrator account. For this reason,applying the old concept of defense in depth is still a good strategy to protect a user'sidentity, as shown in the following diagram:
+
+
+Security Posture Chapter 1
+[ 11 ]Here, there are multiple layers of protection, starting with the regular security policy
+enforcement for accounts, which follow industry best practices such as strong passwordrequirements, a policy requiring frequent password changes, and password strength.Another growing trend to protect user identities is to enforce MFA. One method that ishaving increased adoption is the callback feature, where the user initially authenticatesusing his/her credentials (username and password), and receives a call to enter their pin. Ifboth authentication factors succeed, they are authorized to access the system or network.
+We are going to explore this topic in greater detail in 
+$IBQUFS , Chasing User's Identity .
+Apps
+Applications (we will call them apps from now on), are the entry point for the user to
+consume data and to transmit, process, or store information onto the system. Apps areevolving rapidly and the adoption of SaaS-based apps is on the rise. However, there areinherited problems with this amalgamation of apps. Here are two key examples:
+Security : How secure are these apps that are being developed in-house and the
+ones that you are paying for as a service?
+Company-owned versus personal apps : Users will have their own set of apps on
+their own devices (BYOD scenario). How do these apps jeopardize the company's
+security posture and can they lead to a potential data breach?
+If you have a team of developers that are building apps in-house, measures should be taken
+to ensure that they are using a secure framework throughout the software developmentlifecycle, such as the Microsoft Security Development Lifecycle  (SDL ) (10). If you are
+going to use a SaaS app, such as Office 365, you need to make sure you read the vendor's
+security and compliance policy (11). The intent here is to see if the vendor and the SaaS appare able to meet your company's security and compliance requirements.
+Another security challenge facing apps is how the company's data is handled among
+different apps, the ones used and approved by the company and the ones used by the enduser (personal apps). This problem becomes even more critical with SaaS, where users areconsuming many apps that may not be secure. The traditional network security approach tosupport apps is not designed to protect data in SaaS apps, and worse. They don't give IT thevisibility they need to know how employees are using them. This scenario is also calledShadow IT, and according to a survey conducted by Cloud Security Alliance  (CSA ) (12),
+only 8 percent of companies know the scope of shadow IT within their organizations. You
+can't protect something you don't know you have, and this is a dangerous place to be.
+
+Security Posture Chapter 1
+[ 12 ]According to Kaspersky Global IT Risk Report 2016 (13), 54 percent of businesses perceive
+that the main IT security threats are related to inappropriate sharing of data via mobiledevices. It is necessary for IT to gain control of the apps and enforce security policies acrossdevices (company-owned and BYOD). One of the key scenarios that you want to mitigate isthe one described in the following diagram:
+In this scenario, we have the user's personal tablet that has approved applications as well aspersonal apps. Without a platform that can integrate device management with applicationmanagement, this company is exposed to a potential data leakage scenario. In this case, ifthe user downloads the excel spreadsheet onto his/her device and uploads it to a personalDropbox cloud storage and the spreadsheet contains the company's confidentialinformation, the user has now created a data leak without the company's knowledge or theability to secure it.
+
+Security Posture Chapter 1
+[ 13 ]Data
+As we finished the previous section talking about data, we should ensure that data is
+always protected regardless of its current state ( in transit  or at rest ). There will be different
+threats according to the data's state. The following are some examples of potential threatsand countermeasures:
+State Description Threats CountermeasuresSecurity triad
+affected
+Data at rest
+on theuser'sdevice.The data is
+currentlylocated on theuser's device.The unauthorized or
+malicious processcould read ormodify the data.Data encryption at
+rest. It could be file-level encryption ordisk encryption.Confidentiality
+and integrity.
+Data in
+transit.The data is
+currentlybeingtransferredfrom one hostto another.A man-in-the-
+middle attack couldread, modify, orhijack the data.SSL/TLS could be
+used to encrypt thedata in transit.Confidentiality
+and integrity.
+Data at rest
+on-premise(server) orcloud.The data is
+located at resteither on theserver's harddrive locatedon-premise orin the cloud(storage pool).Unauthorized or
+malicious processescould read ormodify the data.Data encryption at
+rest. It could be file-level encryption ordisk encryption.Confidentiality
+and integrity.
+These are only some examples of potential threats and suggested countermeasures. Adeeper analysis must be performed to fully understand the data path according to thecustomer's needs. Each customer will have their own particularities regarding data path,compliance, rules, and regulations. It is critical to understand these requirements evenbefore the project is started.
+
+Security Posture Chapter 1
+[ 14 ]Cybersecurity challenges
+To analyze the cybersecurity challenges faced by companies nowadays, it is necessary to
+obtain tangible data, and evidence of what's currently happening in the market. Not allindustries will have the same type of cybersecurity challenges, and for this reason we willenumerate the threats that are still the most prevelant across different industries. This seemsto be the most appropriate approach for cybersecurity analysts that are not specialized incertain industries, but at some point in their career they might need to deal with a certainindustry that they are not so familiar with.
+Old techniques and broader results
+According to Kaspersky Global IT Risk Report 2016 (14), the top causes for the most costlydata breaches are based on old attacks that are evolving over time, which are in thefollowing order:
+Viruses, malware, and trojans
+Lack of diligence and untrained employees
+Phishing and social engineering
+Targeted attack
+Crypto and ransomware
+Although the top three in this list are old suspects and very well-known attacks in the
+cybersecurity community, they are still succeeding, and for this reason they are still part ofthe current cybersecurity challenges. The real problem with the top three is that they areusually correlated to human error. As explained before, everything may start with aphishing email that uses social engineering to lead the employee to click on a link that maydownload a virus, malware, or Trojan. In the last sentence, we covered all three in a singlescenario.
+The term targeted attack  (or advanced persistent threat) sometimes is not too clear for some
+individuals, but there are some key attributes that can help you identify when this type ofattack is taking place. The first and most important attribute is that the attacker has aspecific target in mind when he/she starts to create a plan of attack. During this initialphase, the attacker will spend a lot of time and resources to perform public reconnaissanceto obtain the necessary information to carry out the attack. The motivation behind thisattack is usually data exfiltration, in other words, stealing data. Another attribute for thistype of attack is the longevity, or the amount of time that they maintain persistent access tothe target's network. The intent is to continue moving laterally across the network,compromising different systems until the goal is reached.
+
+Security Posture Chapter 1
+[ 15 ]One of the greatest challenges in this area is to identify the attacker once they are already
+inside the network. The traditional detection systems such as Intrusion Detection Systems
+(IDS) may not be sufficient to alert on suspicious activity taking place, especially when the
+traffic is encrypted. Many researchers already pointed out that it can take up to 229 days
+between the infiltration and detection (15). Reducing this gap is definitely one of thegreatest challenges for cybersecurity professionals.
+Crypto and ransomware are emerging and growing threats that are creating a whole new
+level of challenge for organizations and cybersecurity professionals. In May 2017, the worldwas shocked by the biggest ransomware attack in history, called Wannacry. Thisransomware exploited a known Windows SMBv1 vulnerability that had a patch released inMarch 2017 (59 days prior to the attack) via MS17-010 (16) bulletin. The attackers used anexploit called EternalBlue that was released in April 2017, by a hacking group calledShadow Brokers. According to MalwareTech (18), this ransomware infected more than400,000 machines across the globe, which is a gigantic number, never seen before in thistype of attack. One lesson learned from this attack was that companies across the world arestill failing to implement an effective vulnerability management program, which is
+something we will cover in more detail in 
+$IBQUFS , Vulnerability Management .
+It is very important to mention that phishing emails are still the number one delivery
+vehicle for ransomware, which means that we are going back to the same cycle again,educate the user to reduce the likelihood of successful exploitation of human factor viasocial engineering, and have tight technical security controls in place to protect and detect.
+The shift in the threat landscape
+In 2016, a new wave of attacks also gained mainstream visibility, when CrowdStrikereported that it had identified two separate Russian intelligence-affiliated adversariespresent in the United States Democratic National Committee  (DNC ) network (19).
+According to their report, they found evidence that two Russian hacking groups were in the
+DNC network: Cozy Bear (also classified as APT29) and Fancy Bear (APT28). Cozy Bearwas not a new actor in this type of attack, since evidence has shown that in 2015 (20) theywere behind the attack against the Pentagon email system via spear phishing attacks.
+This type of scenario is called Government-sponsored cyber attacks, but some specialists
+prefer to be more general and call it data as a weapon , since the intent is to steal information
+that can be used against the hacked party. The private sector should not ignore these signs.
+
+Security Posture Chapter 1
+[ 16 ]Nowadays, continuous security monitoring must leverage at least the three methods shown
+in the following diagram:
+This is just one of the reasons that it is becoming primordial that organizations start toinvest more in threat intelligence, machine learning, and analytics to protect their assets. We
+will cover this in more detail in 
+$IBQUFS , Threat Intelligence .
+Enhancing your security posture
+If you carefully read this entire chapter, it should be very clear that you can't use the old
+approach to security facing today's challenges and threats. For this reason, it is important toensure that your security posture is prepared to deal with these challenges. To accomplishthis, you must solidify your current protection system across different devices regardless ofthe form factor.
+It is also important to enable IT and security operations to quickly identify an attack, by
+enhancing the detection system. Last but certainly not least, it is necessary to reduce thetime between infection and containment by rapidly responding to an attack by enhancingthe effectiveness of the response process.
+
+Security Posture Chapter 1
+[ 17 ]Based on this, we can safely say that the security posture is composed of three foundational
+pillars as shown in the following diagram:
+These pillars must be solidified and if in the past, the majority of the budget was put intoprotection, now it's even more imperative to spread that investment and level of effortacross the other pillars. These investments are not exclusively in technical security controls,they must also be done in the other spheres of the business, which includes administrativecontrols.
+It is recommended to perform a self-assessment to identify the gaps within each pillar from
+the tool perspective. Many companies evolved over time and never really updated theirsecurity tools to accommodate the new threat landscape and how attackers are exploitingvulnerabilities.
+
+Security Posture Chapter 1
+[ 18 ]A company with an enhanced security posture shouldn't be part of the statistics that were
+previously mentioned (229 days between the infiltration and detection). This gap should bedrastically reduced and the response should be immediate. To accomplish this, a betterincident response process must be in place, with modern tools that can help security
+engineers to investigate security-related issues. 
+$IBQUFS , Incident Response Process  will
+cover incident response in more detail and $IBQUFS , Investigating an Incident , will cover
+some case studies related to actual security investigations.
+The Red and Blue Team
+The Red/Blue Team exercise is not something new. The original concept was introduced a
+long time ago during World War I and like many terms used in information security,originated in the military. The general idea was to demonstrate the effectiveness of an attack through simulations.
+For example, in 1932 Rear Admiral Harry E. Yarnell demonstrated the efficacy of an attack
+on Pearl Harbor. Nine years later, when the Japanese attacked Pearl Harbor, it was possibleto compare and see how similar tactics were used (22).
+The effectiveness of simulations based on real tactics that might be used by the adversary
+are well known and used in the military. The University of Foreign Military and CulturalStudies has specialized courses just to prepare Red Team participants and leaders (23).Although the concept of read eaming in the military is broader, the intelligence support viathreat emulation is similar to what a cybersecurity Red Team is trying to accomplish. TheHomeland Security Exercise and Evaluation Program  (HSEEP ) (24) also uses red teaming
+in the preventions exercise to track how adversaries move and create countermeasures
+based on the outcome of these exercises.
+In the cybersecurity field, the adoption of the Red Team approach also helped organizations
+to keep their assets more secure. The Red Team must be composed of highly trainedindividuals, with different skill sets and they must be fully aware of the current threatlandscape for the organization's industry. The Red Team must be aware of trends andunderstand how current attacks are taking place. In some circumstances and depending onthe organization's requirements, members of the Red Team must have coding skills tocreate their own exploit and customize it to better exploit relevant vulnerabilities that couldaffect the organization.
+
+Security Posture Chapter 1
+[ 19 ]The core Red Team  workflow takes place using the following approach:
+The Red Team  will perform an attack and penetrate the environment by trying to
+breakthrough the current security controls, also known as penetration testing. The intent of
+the mission is to find vulnerabilities and exploit them in order to gain access to thecompany's assets. The attack and penetration phase usually follows the Lockheed Martin
+approach, published in the paper, Intelligence-Driven Computer Network Defense Informed by
+Analysis of Adversary Campaigns and Intrusion Kill Chains  (25). We will discuss the kill chain
+in more detail in 
+$IBQUFS , Understanding the Cybersecurity Kill Chain .
+The Red Team is also accountable to register their core metrics, which are very important
+for the business. The main metrics are as follows:
+Mean Time to Compromise (MTTC) : This starts counting from the minute that
+the Red Team initiated the attack to the moment that they were able to
+successfully compromise the target
+Mean Time to Privilege Escalation (MTTP) : This starts at the same point as the
+previous metric, but goes all the way to full compromise, which is the moment
+that the Red Team has administrative privilege on the target
+So far, we've discussed the capacity of the Red Team, but the exercise is not completed
+without the counter partner, the Blue Team. The Blue Team needs to ensure that the assetsare secure and in case the Red Team finds a vulnerability and exploits it, they need torapidly remediate and document it as part of the lessons learned.
+
+Security Posture Chapter 1
+[ 20 ]The following are some examples of tasks done by the Blue Team when an adversary (in
+this case the Red Team) is able to breach the system:
+Save evidence : It is imperative to save evidence during these incidents to ensure
+you have tangible information to analyze, rationalize, and take action to mitigate
+in the future.
+Validate the evidence : Not every single alert, or in this case evidence, will lead
+you to a valid attempt to breach the system. But if it does, it needs to be cataloged
+as an Indication of Compromise  (IOC ).
+Engage whoever is necessary to engage : At this point, the Blue Team must know
+what to do with this IOC, and which team should be aware of this compromise.
+Engage all relevant teams, which may vary according to the organization.
+Triage the incident : Sometimes the Blue Team may need to engage law
+enforcement, or they may need a warrant in order to perform the further
+investigation, a proper triage will help on this process.
+Scope the breach : At this point, the Blue Team has enough information to scope
+the breach.
+Create a remediation plan : The Blue Team should put together a remediation
+plan to either isolate or evict the adversary.
+Execute the plan : Once the plan is finished, the Blue Team needs to execute it and
+recover from the breach.
+The Blue Team members should also have a wide variety of skill sets and should be
+composed of professionals from different departments. Keep in mind that some companiesdo have a dedicated Red/Blue Team, while others do not. Companies put these teamstogether only during exercises. Just like the Red Team, the Blue Team also hasaccountability for some security metrics, which in this case is not 100% precise. The reasonthe metrics are not precise is that the true reality is that the Blue Team might not knowprecisely what time the Red Team was able to compromise the system. Having said that, theestimation is already good enough for this type of exercise. These estimations are self-explanatory as you can see in the following list:
+Estimated Time to Detection  (ETTD )
+Estimated Time to Recovery  (ETTR )
+
+Security Posture Chapter 1
+[ 21 ]The Blue Team and the Red Team's work doesn't finish when the Red Team is able to
+compromise the system. There is a lot more to do at this point, which will require fullcollaboration among these teams. A final report must be created to highlight the detailsregarding how the breach occurred, provide a documented timeline of the attack, the detailsof the vulnerabilities that were exploited in order to gain access and to elevate privileges (ifapplicable), and the business impact to the company.
+Assume breach
+Due to the emerging threats and cyber security challenges, it was necessary to change themethodology from prevent breach to assume breach. The traditional prevent breachapproach by itself does not promote the ongoing testing, and to deal with modern threatsyou must always be refining your protection. For this reason, the adoption of this model tothe cybersecurity field was a natural move.
+When the former director of the CIA and National Security Agency Retired Gen. Michael
+Hayden said in 2012(26):
+"Fundamentally, if somebody wants to get in, they're getting in. Alright, good. Accept
+that."
+During an interview, many people didn't quite understand what he really meant, but this
+sentence is the core of the assume breach approach. Assume breach validates the protection,detection, and response to ensure they are implemented correctly. But to operationalize this,it becomes vital that you leverage Red/Blue Team exercises to simulate attacks against itsown infrastructure and test the company's security controls, sensors, and incident-responseprocess.
+In the following diagram, you have an example of the interaction between phases in the
+Red Team /Blue Team  exercise:
+
+Security Posture Chapter 1
+[ 22 ]
+It will be during the post breach phase that the Red and Blue Team will work together to
+produce the final report. It is important to emphasize that this should not be a one offexercise, instead, must be a continuous process that will be refined and improved with bestpractices over time.
+References
+You can refer to the following articles:
+Refer to IUUQXXXEBSLSFBEJOHDPNBUUBDLTCSFBDIFTOFXJPUCPUOFU 1.
+EJTDPWFSFELJQDBNFSBTBUSJTLPGBUUBDLEEJE
+Refer to IUUQTXXXXFMJWFTFDVSJUZDPNXFCTJUFSFWFBMT 2.
+VOQSPUFDUFETFDVSJUZDBNFSBTEFGBVMUQBTTXPSET
+Refer to IUUQTUISFBUQPTUDPNMJOLTZTSPVUFSNPEFMTWVMOFSBCMFUP 3.
+BUUBDL
+Refer to IUUQTXXXOZUJNFTDPNVTSFNPUFXPSLFSTXPSLGSPN 4.
+IPNFIUNM
+Read the vendor-agnostic guidelines to adopt BYOD published at the ISSA5.
+Journal IUUQTCMPHTUFDIOFUNJDSPTPGUDPNZVSJEJPHFOFT
+CZPEBSUJDMFQVCMJTIFEBUJTTBKPVSOBM
+
+Security Posture Chapter 1
+[ 23 ]Refer6.
+to IUUQXXXDTPPOMJOFDPNBSUJDMFTFDVSJUZSBOTPNXBSFUP PLJO
+CJMMJPOJOJNQSPWFEEFGFOTFTNBZOPUCFFOPVHIUPTUFN UIF
+UJEFIUNM
+Refer to IUUQCMPHUSFOENJDSPDPNSBOTPNXBSFHSPXUIXJMMQMBUFBVJO 7.
+CVUBUUBDLNFUIPETBOEUBSHFUTXJMMEJWFSTJGZ
+Read this article for more information about the dangerous aspects of using the8.
+same password for different accounts IUUQXXXUFMFHSBQIDPVLGJOBODF
+QFSTPOBMGJOBODFCBOLBDDPVOUT6TFUIFTBNFQBTTXPSEGP S
+FWFSZUIJOH:PVSFGVFMMJOHBTVSHFJODVSSFOUBDDPVOUGSBVEIUNM
+Download the report from IUUQXXXWFSJ[POFOUFSQSJTFDPNSFTPVSDFT 9.
+SFQPSUTSQ@%#*3@@3FQPSU@FO@YHQEG
+Read more information about SDL at IUUQTXXXNJDSPTPGUDPNTEM 10.
+Microsoft Office 365 Security and Compliance can be found at IUUQTTVQQPSU 11.
+PGGJDFDPNFOVTBSUJDMF0GGJDF4FDVSJUZ$PNQMJBODF$FOUFS
+FBCCBBGDDCCC
+Read the entire study at IUUQTEPXOMPBETDMPVETFDVSJUZBMMJBODFPSH 12.
+JOJUJBUJWFTTVSWFZTDBQQ$MPVE@"EPQUJPO@1SBDUJDFT@1SJPSJUJFT@4V SWFZ@
+'JOBMQEG
+Read the full report at IUUQXXXLBTQFSTLZSFQPSUDPNHDMJE$/@ 13.
+/CU2$'2:VB2PE"2P.:2
+You can download the report at IUUQXXXLBTQFSTLZSFQPSUDPNHDMJE$/@ 14.
+/CU2$'2:VB2PE"2P.:2
+Refer to IUUQTJOGPNJDSPTPGUDPN.&"[VSF8#/3':+VO 15.
+.JDSPTPGU4FDVSJUZ#SJFGJOH&WFOU4FSJFTIUNMMT4PDJBM
+Read the Microsoft bulletin for more information IUUQTUFDIOFUNJDSPTPGU 16.
+DPNFOVTMJCSBSZTFDVSJUZNTBTQY
+Read this article for more information about this group IUUQTXXXTZNBOUFD 17.
+DPNDPOOFDUCMPHTFRVBUJPOIBTTFDSFUJWFDZCFSFTQJPOBHFHSPVQC FFO
+CSFBDIFE
+
+Security Posture Chapter 1
+[ 24 ]Refer to IUUQTUXJUUFSDPN.BMXBSF5FDI#MPHTUBUVT 18.
+Refer to IUUQTXXXDSPXETUSJLFDPNCMPHCFBSTNJETUJOUSVTJPO 19.
+EFNPDSBUJDOBUJPOBMDPNNJUUFF
+Refer to IUUQXXXDOCDDPNSVTTJBIBDLTQFOUBHPODPNQVUFST 20.
+OCDDJUJOHTPVSDFTIUNM
+Refer to IUUQTXXXUIFWFSHFDPNXBOOBDSZWBSJBOUT 21.
+CJUDPJONPOFSPBEZMLV[[DSZQUPDVSSFODZNJOJOH
+Refer to IUUQTXXXRVPSBDPN$PVMEUIFBUUBDLPO1FBSM)BSCPSIBWF 22.
+CFFOQSFWFOUFE8IBUBDUJPOTDPVMEUIF64IBWFUBLFOBIFBEPGUJ NFUP
+EFUFSEJTTVBEF+BQBOGSPNBUUBDLJOHO
+You can download the Red Team handbook at IUUQVTBDBDBSNZNJMTJUFT 23.
+EFGBVMUGJMFTEPDVNFOUTVGNDT5IF@"QQMJFE@$SJUJDBM@5IJOLJOH@)BO ECPPL@
+WQEG
+Refer to IUUQTXXXGFNBHPWNFEJBMJCSBSZEBUB 24.
+ITFFQ@BQS@QEG
+Download the paper from IUUQTXXXMPDLIFFENBSUJODPNDPOUFOUEBN 25.
+MPDLIFFEEBUBDPSQPSBUFEPDVNFOUT-.8IJUF1BQFS*OUFM%SJWFO% FGFOTF
+QEG
+Refer to IUUQXXXDCTOFXTDPNOFXTGCJGJHIUJOHUXPGSPOUXBSPO 26.
+HSPXJOHFOFNZDZCFSFTQJPOBHF
+Summary
+In this chapter, you learned more about the current threat landscape and how these newthreats are used to compromise credentials, apps, and data. In many scenarios, old hackingtechniques are used, such as phishing emails. However, with a more sophisticatedapproach. You also learned the current reality regarding the nationwide type of threat, andgovernment-targeted attacks. In order to protect your organization against these newthreats, you learned about key factors that can help you to enhance your security posture. Itis essential that part of this enhancement shifts the attention from protection only to includedetection and response. For that, the use of Red and Blue Team becomes imperative. Thesame concept applies to the assume breach methodology.
+In the next chapter, you will continue to learn about the enhancement of your security
+posture. However, the chapter will focus on the incident response process. The incidentresponse process is primordial for companies that need a better detection and responseagainst cyber threats.
+
+22
+Incident Response Process
+In the last chapter, you learned about the three pillars that sustained your security posture,
+and two of them (detection and response) are directly correlated with the Incident
+Response  (IR) process. To enhance the foundation of your security posture, you need to
+have a solid incident response process. This process will dictate how to handle security
+incidents and rapidly respond to them. Many companies do have an incident responseprocess in place, but they fail to constantly review it to incorporate lessons learned fromprevious incidents, and on top of that, many are not prepared to handle security incidentsin a cloud environment.
+In this chapter, we're going to be covering the following topics:
+The incident response process
+Handling an incident
+Post-incident activity
+Incident response process
+There are many industry standards, recommendations, and best practices that can help you
+to create your own incident response. You can still use those as a reference to make sureyou cover all the relevant phases for your type of business. The one that we are going to useas a reference in this book is the Computer Security Incident Response
+(CSIR )bpublication 800-61R2 from NIST(1).
+
+Incident Response Process Chapter 2
+[ 26 ]Reasons to have an IR process in place
+Before we dive into more details about the process itself, it is important to be aware of some
+of the terminology that is used, and also what the final goal is when using IR as part ofenhancing your security posture. Why is it important? Let's use a fictitious company toillustrate why this is important.
+The following diagram has a timeline of events(2) that leads the help desk to escalate the
+issue and start the incident response process:
+The following table has some considerations about each step in this scenario:
+Step Description Security considerations
+1While the diagram says that the system is
+working properly, it is important to learnfrom this event.What is considered normal? Do you
+have a baseline that can give youevidence that the system was runningproperly? Are you sure there is noevidence of compromise before theemail?
+2Phishing emails are still one of the most
+common methods used by cybercriminalsto entice users to click on a link that leadsto a malicious/compromised site.While technical security controls must
+be in place to detect and filter thesetypes of attack, the users must betaught how to identify a phishingemail.
+
+Incident Response Process Chapter 2
+[ 27 ]3Many of the traditional sensors (IDS/IPS)
+used nowadays are not able to identifyinfiltration and lateral movement.To enhance your security posture, you
+will need to improve your technicalsecurity controls and reduce the gapbetween infection and detection.
+4This is already part of the collateral
+damage done by this attack. Credentialswere compromised, and the user washaving trouble authenticating.There should be technical security
+controls in place that enable IT to resetthe user's password and at the sametime enforce multifactor authentication.
+5Not every single incident is security
+related; therefore, it is important for thehelp desk to perform their initialtroubleshoot to isolate the issue.If the technical security controls in
+place (step 3) were able to identify the
+attack, or at least provide someevidence of suspicious activity, the helpdesk wouldn't have to troubleshoot theissuebit could just directly follow the
+incident response process.
+6At this point in time, the help desk is
+doing what it is supposed to do, collectingevidence that the system wascompromised and escalating the issue.The help desk should obtain as much
+information as possible about thesuspicious activity to justify the reasonwhy they believe that this is a security-related incident.
+7At this point the IR process takes over and
+follows its own path, which may varyaccording to the company, industrysegment, and standard.It is important to document every
+single step of the process and, after theincident is resolved, incorporate thelessons learned with the aim ofenhancing the overall security posture.
+While there is much room for improvement in the previous scenario, there is something thatexists in this fictitious company that many other companies around the world are missing:the incident response itself. If it were not for the incident response process in place, supportprofessionals would exhaust their troubleshooting efforts by focusing on infrastructure-related issues. Companies that have a good security posture would have an incidentresponse process in place.
+
+Incident Response Process Chapter 2
+[ 28 ]They would also ensure that the following guidelines are adhered to:
+All IT personnel should be trained to know how to handle a security incident.
+All users should be trained to know the core fundamentals about security in
+order to perform their job more safely, which will help avoid getting infected.
+There should be integration between their help desk system and the incident
+response team for data sharing.This scenario could have some variations that could introduce different
+challenges to overcome. One variation would be if no indication of compromise
+(IoC) was found in step 6. In this case, the help desk would easily keep
+troubleshooting the issue. What if at some point things started to work normally
+again? Is this even possible? Yes, it is!
+When an attacker infiltrates the network, they usually wants to stay invisible,
+moving laterally from one host to another, compromising multiple systems and
+trying to escalate privileges by compromising an account with administrative-level privileges. That's the reason it is so important to have good sensors not onlyin the network, but also in the host itself. With good sensors in place, you wouldbe able to not only detect the attack quickly, but also identify potential scenariosthat could lead to an imminent threat of violation (3).
+In addition to all the factors that were just mentioned, some companies will soon
+realize that they must have an incident response process in place to be compliant
+with regulations that are applicable to the industry in which they belong. Forexample, FISMA requires federal agencies to have procedures in place to detect,report, and respond to a security incident.
+Creating an incident response process
+Although the incident response process will vary according to the company and its needs,there are some fundamental aspects of it that will be the same across different industries.
+
+Incident Response Process Chapter 2
+[ 29 ]The following diagram shows the foundational areas of the incident response process:
+The first step to create your incident response process is to establish the objective bin other
+words, to answer the question: What's the purpose of this process? While this might look
+redundant, as the name seems to be self-explanatory, it is important that you are very clearas to the purpose of the process so that everyone is aware of what this process is trying toaccomplish.
+Once you have the objective defined, you need to work on the scope. Again, you start this
+by answering a question, which in this case is: To whom does this process apply?
+Although the incident response process usually has a company-wide scope, it can also have
+a departmental scope in some scenarios. For this reason, it is important that you definewhether this is a company-wide process or not.
+Each company may have a different perception of a security incident; therefore, it is
+imperative that you define what constitutes a security incident, and give examples.
+Along with the definition, companies must create their own glossary with definitions of the
+terminology used. Different industries will have different sets of terminologies, and if theseterminologies are relevant to a security incident, they must be documented.
+In an incident response process, the roles and responsibilities are critical. Without the
+proper level of authority, the entire process is at risk.
+
+Incident Response Process Chapter 2
+[ 30 ]The importance of the level of authority in an incident response is evident when you
+consider the question: Who has the authority to confiscate a computer in order to performfurther investigation? By defining the users or groups that have this level of authority, youare ensuring that the entire company is aware of this, and if an incident occurs, they will notquestion the group that is enforcing the policy.
+What defines a critical incident? How are you going to distribute your manpower when an
+incident occurs? Should you allocate more resources to incident "A" versus incident "B"?Why? These are only some examples of questions that should be answered to define thepriorities and severity level.
+To determine the priority and severity level, you will need to also take into consideration
+the following aspects of the business:
+Functional impact of the incident in the business : The importance of the
+affected system for the business will have a direct effect on the incident's priority.
+All stakeholders for the affected system should be aware of the issue, and willhave their input in the determination of priorities.
+Type of information affected by the incident : Every time you deal with PII, your
+incident will have high priority; therefore, this is one of the first elements to
+verify during an incident.
+Recoverability : After the initial assessment, it is possible to give an estimate of
+how long it will take to recover from an incident. Depending on the amount of
+time to recover, combined with the criticality of the system, this could drive thepriority of the incident to high severity.
+In addition to these fundamental areas, an incident response process also needs to define
+how it will interact with third parties, partners, and customers.
+For example, if an incident occurs and throughout the investigation process it was
+identified that a customer's personal identifiable information  (PII) was leaked, how will
+the company communicate this to the media? In the incident response process,
+communication with the media should be aligned with the company's security policy fordata disclosure. The legal department should also be involved prior to the press release toensure that there is no legal issue with the statement. Procedures to engage lawenforcement must also be documented in the incident response process. Whendocumenting this, take into consideration the physical location bwhere the incident took
+place, where the server is located (if appropriate), and the state. By collecting this
+information, it will be easier to identify the jurisdiction and avoid conflicts.
+
+Incident Response Process Chapter 2
+[ 31 ]Incident response team
+Now that you have the fundamental areas covered, you need to put the incident response
+team together. The format of the team will vary according to the company size, budget, andpurpose. A large company may want to use a distributed model, where there are multipleincident response teams with each one having specific attributes and responsibilities. Thismodel can be very useful for organizations that are geodispersed, with computing resourceslocated in multiple areas. Other companies may want to centralize the entire incidentresponse team in a single entity. This team will handle incidents regardless of the location.
+After choosing the model that will be used, the company will start recruiting employees to
+be part of the team.
+The incident response process requires personnel with technically broad knowledge while
+also requiring deep knowledge in some other areas. The challenge is to find people withdepth and breadth in this area, which sometimes leads to the conclusion that you need tohire external people to fulfill some positions, or even outsource part of the incidentresponse team to a different company.
+The budget for the incident response team must also cover continuous improvement via
+education, the acquisition of proper tools (software), and hardware. As new threats arise,security professionals working with incident response must be ready, and trained torespond well. Many companies fail to keep their workforce up to date, which is not goodpractice. When outsourcing the incident response process, make sure the company that youare hiring is accountable for constantly training their employees in this field.
+If you plan to outsource your incident response operations, make sure you have a well-
+defined service-level agreement  (SLA ) that meets the severity levels that were established
+previously. During this phase, you should also define the team coverage, assuming the
+need for 24-hour operations.
+Here, you will define:
+Shifts : How many shifts will be available for 24-hour coverage?
+Team allocation : Based on this shift, who is going to work on each shift,
+including full-time employees and contractors?
+On-call process : It is recommended that you have on-call rotation for technical
+and management roles in case the issue needs to be escalated.
+
+Incident Response Process Chapter 2
+[ 32 ]Incident life cycle
+Every incident that starts must have an end, and what happens in between the beginning
+and the end are different phases that will determine the outcome of the response process.This is an ongoing process that we call the incident life cycle. What we have described untilnow can be considered the preparation phase. However, this phase is broader than that bit
+also has the partial implementation of security controls that were created based on the
+initial risk assessment (this was supposedly done even before creating the incident responseprocess).
+Also included in the preparation phase is the implementation of other security controls,
+such as:
+Endpoint protection
+Malware protection
+Network security
+The preparation phase is not static, and you can see in the following diagram that this phase
+will receive input from post-incident activity.
+The other phases of the life cycle and how they interact are also shown in this diagram:
+
+
+Incident Response Process Chapter 2
+[ 33 ]The DETECTION  and CONTAINMENT  phase could have multiple interactions within the
+same incident. Once the loop is over, you will move on to the post-incident activity phase.
+The sections that follow will cover these last three phases in more detail.
+Handling an incident
+Handling an incident in the context of the IR life cycle includes the detection andcontainment phases. In order to detect a threat, your detection system must be aware of theattack vectors, and since the threat landscape changes so rapidly, the detection system mustbe able to dynamically learn more about new threats and new behaviors, and trigger analert if a suspicious activity is encountered.
+While many attacks will be automatically detected by the detection system, the end user has
+an important role in identifying and reporting the issue in case they find a suspiciousactivity.
+For this reason, the end user should also be aware of the different types of attack and learn
+how to manually create an incident ticket to address such behavior. This is something thatshould be part of the security awareness training.
+Even with users being diligent by closely watching for suspicious activities, and with
+sensors configured to send alerts when an attempt to compromise is detected, the mostchallenging part of an IR process is still the accuracy of detecting what is truly a securityincident.
+Oftentimes, you will need to manually gather information from different sources to see if
+the alert that you received really reflects an attempt to exploit a vulnerability in the system.Keep in mind that data gathering must be done in compliance with the company's policy. Inscenarios where you need to bring the data to a court of law, you need to guarantee thedata's integrity.
+
+Incident Response Process Chapter 2
+[ 34 ]The following diagram shows an example where the combination and correlation of
+multiple logs is necessary in order to identify the attacker's final mission:
+In this example, we have many IoCs, and when we put all the pieces together we canvalidate the attack.
+The following table explains the diagram in more detail:
+Step Log Attack/Operation
+1Endpoint protection and operating system
+logs can help determine the IoCPhishing email
+2Endpoint protection and operating system
+logs can help determine the IoCLateral movement followed by
+privilege escalation
+3Server logs and network captures can help
+determine the IoCUnauthorized or malicious process
+could read or modify the data
+4Assuming there is a firewall in between the
+cloud and on-premises resources, the firewalllog and the network capture can helpdetermine the IoCData extraction and submission to
+command and control
+
+Incident Response Process Chapter 2
+[ 35 ]As you can see, there are many security controls in place that can help to determine the
+indication of compromise. However, putting them all together in an attack timeline andcrossing the data can be even more powerful.
+This brings back a topic that we discussed in the previous chapter, that detection is
+becoming one of the most important security controls for a company. Sensors that arelocated across the network (on-premises and cloud) will play a big role in identifyingsuspicious activity and raising alerts. A growing trend in cybersecurity is the leveraging ofsecurity intelligence and advanced analytics to detect threats more quickly and reduce falsepositives. This can save time and enhance the overall accuracy.
+Ideally, the monitoring system will be integrated with the sensors to allow you to visualize
+all events in a single dashboard. This might not be the case if you are using differentplatforms that don't allow interaction between one another.
+In a scenario similar to the one we looked at previously, the integration between the
+detection and monitoring system can help to connect the dots of multiple malicious actionsthat were performed in order to achieve the final mission bdata extraction and submission
+to command and control.
+Once the incident is detected and confirmed as a true positive, you need to either collect
+more data or analyze what you already have. If this is an ongoing issue, where the attack istaking place at that exact moment, you need to obtain live data from the attack and rapidlyprovide a remediation to stop the attack.
+For this reason, detection and analysis are sometimes done almost in parallel to save time,
+and this time is then used to rapidly respond. Having said that, it is important to mentionthat there is a separate phase for containment eradication and recovery, which is somethingthat is going to be covered in the next section of this chapter.
+The biggest problem happens when you don't have enough evidence that there is a security
+incident taking place, and you need to keep capturing data in order to validate the veracity.Sometimes the incident is not detected by the detection system. Perhaps it is reported by anend user, but he can't reproduce the issue at that exact moment. There is no tangible data toanalyze, and the issue is not happening at the time you arrive. In scenarios like this, youwill need to set up the environment to capture data and instruct the user to contact supportwhen the issue is currently happening.
+
+Incident Response Process Chapter 2
+[ 36 ]Best practices to optimize incident handling
+You can't determine what's abnormal if you don't know what's normal. In other words, if a
+user opens a new incident saying that the server's performance is slow, you must know allthe variables before you jump to a conclusion. To know if the server is slow, you must firstknow what's considered to be a normal speed. This also applies to networks, appliances,and other devices. To mitigate scenarios like this, make sure you have the following inplace:
+System profile
+Network profile/baseline
+Log-retention policy
+Clock synchronization across all systems
+Based on this, you will be able to establish what's normal across all systems and networks.
+This will be very useful when an incident occurs and you need to determine what's normalbefore starting to troubleshoot the issue from a security perspective.
+Post-incident activity
+The incident priority may dictate the containment strategy bfor example, if you are dealing
+with a DDoS attack that was opened as a high-priority incident, the containment strategy
+must be treated with the same level of criticality. It is rare that the situations where theincident is opened as high severity are prescribed medium-priority containment measures,unless the issue was somehow resolved in between phases.
+Real-world scenario
+Let's use the WannaCry outbreak as a real-world example, using the fictitious companyDiogenes & Ozkaya Inc. to demonstrate the end-to-end incident response process.
+
+Incident Response Process Chapter 2
+[ 37 ]On May 12, 2017, some users called the help desk saying that they were receiving the
+following screen:
+After an initial assessment and confirmation of the issue (detection phase), the security teamwas engaged and an incident was created. Since many systems were experiencing the sameissue, they raised the severity of this incident to high. They used their threat intelligence torapidly identify that this was a ransomware outbreak, and to prevent other systems fromgetting infected, they had to apply the MS17-00(3) patch.
+At this point, the incident response team was working on three different fronts: one to try to
+break the ransomware encryption, another to try to identify other systems that werevulnerable to this type of attack, and another one working to communicate the issue to thepress.
+
+Incident Response Process Chapter 2
+[ 38 ]They consulted their vulnerability management system and identified many other systems
+that were missing this update. They started the change management process and raised thepriority of this change to critical. The management system team deployed this patch to theremaining systems.
+The incident response team worked with their antimalware vendor to break the encryption
+and gain access to the data again. At this point, all other systems were patched and runningwithout any problems. This concluded the containment eradication and recovery phase.
+Lessons learned
+After reading this scenario, you can see examples of many areas that were coveredthroughout this chapter and that will come together during an incident. But an incident isnot finished when the issue is resolved. In fact, this is just the beginning of a whole differentlevel of work that needs to be done for every single incident bdocument the lessons
+learned.
+One of the most valuable pieces of information that you have in the post-incident activity
+phase is the lessons learned. This will help you to keep refining the process through theidentification of gaps in the process and areas of improvement. When an incident is fullyclosed, it will be documented, and this documentation must be very detailed, with the fulltimeline of the incident, the steps that were taken to resolve the problem, what happenedduring each step, and how the issue was finally resolved outlined in depth.
+This documentation will be used as a base to answer the following questions:
+Who identified the security issue? A user or the detection system?
+Was the incident opened with the right priority?
+Did the security operations team perform the initial assessment correctly?
+Is there anything that could be improved at this point?
+Was the data analysis done correctly?
+Was the containment done correctly?
+Is there anything that could be improved at this point?
+How long did it take to resolve this incident?
+The answers to these questions will help refine the incident response process and also
+enrich the incident database. The incident management system should have all incidentsfully documented and searchable. The goal is to create a knowledge base that can be usedfor future incidents. Oftentimes, an incident can be resolved using the same steps that wereused in the previous incident.
+
+Incident Response Process Chapter 2
+[ 39 ]Another important point to cover is evidence retention. All the artifacts that were captured
+during the incident should be stored according to the company's retention policy, unlessthere are specific guidelines evidence retention. Keep in mind that if the attacker needs to beprosecuted, the evidence must be kept intact until legal actions are completely settled.
+Incident response in the cloud
+When we speak about cloud computing, we are talking about a shared responsibility (4)between the cloud provider and the company that is contracting the service. The level ofresponsibility will vary according to the service model, as shown in the following diagram:
+For Software as a Service  (SaaS ), most of the responsibility is on the Cloud Provider ; in
+fact, the customer's responsibility is basically to keep his or her infrastructure on premises
+protected (including the endpoint that is accessing the cloud resource). For Infrastructure
+as a Service  (IaaS ), most of the responsibility lies on the customer's side, including
+vulnerability and patch management.
+Understanding the responsibilities is important in order to understand the data gathering
+boundaries for incident response purposes. In an IaaS environment, you have full control ofthe virtual machine and have complete access to all logs provided by the operating system.The only missing information in this model is the underlying network infrastructure andhypervisor logs. Each cloud provider (5) will have its own policy regarding data gatheringfor incident response purposes, so make sure that you review the cloud provider policybefore requesting any data.
+
+Incident Response Process Chapter 2
+[ 40 ]For the SaaS model, the vast majority of the information relevant to an incident response is
+in possession of the cloud provider. If suspicious activities are identified in a SaaS service,you should contact the cloud provider directly, or open an incident via a portal (6). Makesure that you review your SLA to better understand the rules of engagement in an incidentresponse scenario.
+Updating your IR process to include cloud
+Ideally, you should have one single incident response process that covers both majorscenarios bon-premises and cloud. This means you will need to update your current
+process to include all relevant information related to the cloud.
+Make sure that you review the entire IR life cycle to include cloud-computing-related
+aspects. For example, during the preparation, you need to update the contact list to includethe cloud provider contact information, on-call process, and so on. The same applies toother phases:
+Detection : Depending on the cloud model that you are using, you want to
+include the cloud provider solution for detection in order to assist you during the
+investigation (7).
+Containment : Revisit the cloud provider capabilities to isolate an incident in case
+it occurs, which will also vary according to the cloud model that you are using.
+For example, if you have a compromised VM in the cloud, you may want toisolate this VM from others in a different virtual network and temporarily blockaccess from outside.
+For more information about incident response in the cloud, we recommend that you read
+Domain 9  of the Cloud Security Alliance Guidance  (8).
+References
+You can download this publication at IUUQOWMQVCTOJTUHPWOJTUQVCT 1.
+4QFDJBM1VCMJDBUJPOT/*4541SQEG
+According to Computer Security Incident Response (CSIR) bPublication 2.
+800-61R2 from NIST, an event is "any observable occurrence in a system or
+network". More information at IUUQOWMQVCTOJTUHPWOJTUQVCT
+4QFDJBM1VCMJDBUJPOT/*4541SQEG
+
+Incident Response Process Chapter 2
+[ 41 ]More information about this patch at IUUQTUFDIOFUNJDSPTPGUDPNFOVT 3.
+MJCSBSZTFDVSJUZNTBTQY
+More information about this subject at IUUQTCMPHDMPVETFDVSJUZBMMJBODF 4.
+PSHTIBSFESFTQPOTJCJMJUJFTGPSTFDVSJUZJOUIFDMPV EQBSU
+
+For Microsoft Azure, read this paper for more information about incident5.
+response in the cloud IUUQTHBMMFSZUFDIOFUNJDSPTPGUDPN"[VSF
+4FDVSJUZ3FTQPOTFJOEED
+For Microsoft Online Service you can use this form IUUQTDFSUNJDSPTPGU 6.
+DPNSFQPSUBTQY
+Watch the author Yuri Diogenes demonstrating how to use Azure Security7.
+Center to investigate a cloud incident IUUQTDIBOOFMNTEODPN#MPHT
+"[VSF4FDVSJUZ7JEFPT"[VSF4FDVSJUZ$FOUFSJO*ODJEFOU3FTQPOT F
+You can download this document from IUUQTDMPVETFDVSJUZBMMJBODFPSH 8.
+EPDVNFOUJODJEFOUSFTQPOTF
+Summary
+In this chapter, you learned about the incident response process, and how this fits into the
+overall purpose of enhancing your security posture. You also learned about the importanceof having an incident response in place to rapidly identify and respond to securityincidents. By planning each phase of the incident response life cycle, you create a cohesiveprocess that can be applied to the entire organization. The foundation of the incidentresponse plan is the same for different industries, and on top of this foundation you caninclude the customized areas that are relevant to your own business. You also came acrossthe key aspects of handling an incident, and the importance of post-incidentactivitybwhich includes a full documentation of lessons learned band using this
+information as input to improve the overall process. Lastly, you learned the basics of
+incident response in the cloud and how this can affect your current process.
+In the next chapter, you will understand the mindset of an attacker, the different stages of
+an attack, and what usually takes place in each one of these phases. This is an importantconcept for the rest of the book, considering that the attack and defense exercises will beusing the cybersecurity kill chain as a foundation.
+
+33
+Understanding the
+Cybersecurity Kill Chain
+The last chapter, you learned about the incident response process and how it fits into theoverall enhancement of a company's security posture. Now it is time to start thinking as anattacker and understand the rationale, the motivation, and the steps of performing anattack. We call this the cybersecurity kill chain, which is something that we briefly covered
+in 
+$IBQUFS , Secure Posture . Today, the most advanced cyber-attacks are reported to
+involve intrusions inside a target's network that last a long time before doing damage or
+being discovered. This reveals a unique characteristic of today's attackers: they have anastounding ability to remain undetected until the time is right. This means that they operateon well-structured and scheduled plans. The precision of their attacks has been under studyand has revealed that most cyber attackers use a series of similar phases to pull offsuccessful attacks.
+To enhance your security posture, you need to ensure that all phases of the cybersecurity
+kill chain are covered from a protection and detection perspective. But the only way to dothat is to ensure that you understand how each phase works, the mindset of an attacker,and the tolls that are taken on each phase.
+In this chapter, we're going to be covering the following topics:
+External reconnaissance
+Compromising the system
+Lateral movement
+Privilege escalation
+Concluding the mission
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 43 ]External reconnaissance
+In this phase, an attacker is simply looking for a vulnerable target to attack. The motive is to
+harvest as much information as possible from outside the target's network and systems.This may be information about the target's supply chain, obsolete device disposal, andemployee social media activities. This will enable the attacker to decide on the exploitationtechniques that are suitable for each vulnerability identified about a particular target. Thelist of targets might be endless, but attackers have a particular taste for na cve users that hold
+certain privileges in systems. However, anyone in an organization can be targeted,
+including suppliers and customers. All that is needed is a weak point for the attackers to getan entrance into an organization's network.
+There are two commonly used techniques in this stage-phishing and social engineering.Phishing is done through emails where attackers send the target some carefully crafted
+emails to cause them to reveal secret information or open a network to attacks. It is commonfor attackers to attach malware to their emails that infect a target's computer after theinfected attachment is opened. At other times, phishing emails will claim to be fromreputable institutions, thereby inducing unsuspicious targets into divulging some sensitiveinformation. Social engineering works in a similar fashion where attackers closely followtargets, collecting information about them which they, later on, use to get some privateinformation. Social engineering happens mostly through social media where an attackerwill follow a target through his/her various favorite social networks.
+The attacker will find the target's likes, dislikes, and in between, their weaknesses.Once either of these or another technique is used, the attacker will find a point of entrance.
+This might be through stolen passwords or malware infection of a computer within thetarget organization's network. Stolen passwords will give the attacker direct access tocomputers, servers, or devices within the internal network of an organization. Malware, onthe other hand, can be used to infect even more computers or servers, thus bringing themunder the command of the hacker.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 44 ]Scanning
+In this subphase of reconaissance, an attacker will critically examine weak points identified
+in the reconnaissance phase. It involves the use of various scanning tools to find loopholesthat can be exploited to stage an attack. Attackers take a considerable amount of time in thisstage as they know that it determines a significant percentage of their success.
+From the numerous available scanning tools, the ones presented in the sections that follow
+are the most commonly used ones.
+NMap
+NMap is a free and open source network mapping tool that is available for Windows,Linux, and macOS. Network admins have appreciated the immense power that this freetool has. The tool works using raw IP packets that are sent throughout a network. This toolcan do an inventory of the devices connected to a target network, identify the open portsthat could be exploited, and monitor the uptime of hosts in the network.
+This tool is also able to tell the services running on a network's hosts to fingerprint the
+operating systems used by the hosts and to identify the firewall rules being enforced in thenetwork. NMap has a command-line interface, but there is a similar tool that has a graphicaluser interface called Zenmap. Zenmap is a tool for beginners that is simpler to use, and thatcomes with all the functionalities of NMap. The functionalities are, however, listed inmenus, and thus, users do not have to remember commands, as is the case for NMap.Zenmap was created by the same developers of NMap just to serve the users that wished tohave a GUI on their scanning tools for viewing results in a simplified way.
+NMap works mainly through commands supplied by a user on a command-line interface.
+Users begin by scanning a system or network for vulnerabilities. A common way of doingthis is by typing one of the following commands:
+#nmap www.targetsite.com
+#nmap 255.250.123.189
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 45 ]For the preceding commands, the target site is the one you wish to have NMap scan. It
+works with either the site's URL or IP address. This basic command is mostly used incombination with other commands, such as TCP SYN Scan and Connect, UDP Scan, and
+FIN Scan. All of these have their equivalent command phrases. Figure 1  shows a screenshot
+of the NMap scanning two IP addresses. In the screenshot, the IP addresses being scannedare 205.217.153.62  and 192.168.12.3 . Note how NMap shows the results for the scans, giving
+the open or closed ports and the services they allow to run:
+(KIWTG#UETGGPUJQVQHVJG0/CRKPVGTHCEG
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 46 ]Metasploit
+This is a Linux-based hacking framework that has been used countless times by hackers.
+This is because Metasploit is made up of numerous hacking tools and frameworks that havebeen made to effect different types of attacks on a target. The tool has received attentionfrom cybersecurity professionals and is today used to teach ethical hacking. The frameworkprovides its users with vital information about multiple vulnerabilities and exploitationtechniques. As well as being used by hackers, the framework is also used for penetrationtesting to assure organizations that they are protected from penetration techniques thatattackers commonly use.
+The Metasploit is run from a Linux terminal, which gives a command-line interface console
+from which exploits can be launched. The framework will tell the user the number ofexploits and payloads that can be used. The user has to search for an exploit to use based onthe target or what is to be scanned on a target's network. Normally, when one selects anexploit, he or she is given the payloads that can be used under that exploit.
+The following figure shows screenshots of the Metasploit interface. This screenshot shows
+the exploit being set to target the host on IP address 192.168.1.71 :
+(KIWTG#UETGGPUJQVQH/GVCURNQKV
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 47 ]This screenshot shows the compatible payloads that can be deployed on the target:
+John the Ripper
+This a powerful password-cracking tool available on Linux and Windows operating
+systems that is used by hackers to perform dictionary attacks. The tool is used to retrievethe actual user passwords from encrypted databases of desktop or web-based systems andapplications. The tool works by sampling commonly used passwords and then encryptingthem with the same algorithm and key used by a given system. The tool does a comparisonbetween its results and those that have been stored in the database to see if there arematches.
+The tool cracks passwords in only two steps. First, it identifies the encryption type of a
+password. It could be RC4, SHA, or MD5, among other common encryption algorithms. Italso looks at whether the encryption is salted.
+Salted means that extra characters have been added to the encryption to
+make it more difficult to go back to the original password.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 48 ]In the second step, the tool attempts to retrieve the original password by comparing the
+hashed password with many other hashes stored in its database. Figure 4  shows a
+screenshot of John the Ripper recovering a password from an encrypted hash:
+(KIWTG5ETGGPUJQVQH,QJPVJG4KRRGTTGEQXGTKPICPGPET[RVGF RCUUYQTF
+THC Hydra
+It is similar to the previously discussed tool, the only difference being that Hydra works
+online while John the Ripper works offline. Hydra is, however, more powerful and thusmore popular among hackers. It is available for Windows, Linux, and macOSX. The tool iscommonly used for fast network login hacking. It uses both dictionary and brute-forceattacks to attack login pages.
+Brute-force attacks may raise alarms on the target's side if there are some security tools put
+in place, and thus hackers are extremely careful with the use of the tool.
+Hydra has been found to be effective against databases, LDAP, SMB, VNC, and SSH.The workings of Hydra are quite simple. The attacker gives the tool the login page to any of
+the target's online systems. The tool then tries all possible combinations for the usernameand password fields. Hydra stores its combinations offline, making it faster to do thematching process.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 49 ]The following diagram ( Figure 5 ) shows a screenshot of the installation of Hydra. The
+installation is being done on a Linux machine, but the process is the same for Windows andMac. The user is required to type make install during the installation. The setup handles therest until completion of the installation:
+(KIWTG#UETGGPUJQVUJQYKPI6*%*[FTC
+Wireshark
+This is a very popular tool among both hackers and pen testers. Wireshark is famous forscanning networks. The tool captures data packets in a target network and displays them ina verbose format, which is human readable. The tool allows hackers or pen testers to deeplyanalyze network traffic to the level of inspecting individual packets.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 50 ]Wireshark works in two modes. The first one is the network-capturing mode. It can be left
+running on a victim's website for a long time while capturing all the network traffic. In thesecond mode, the network capturing has to be stopped in order to enable deep analysis.From here, a user of the tool can see the network traffic and start mining for insecurelyexchanged passwords or to determine the different devices on the network. It is the mostimportant functionality of the program. Wireshark has a Conversations  feature under the
+Statistics  menu that allows a user to view communication between computers.
+Figure 6  shows a Wireshark interface with its separate sections and the type of information
+that they contain:
+(KIWTG5ETGGPUJQVUJQYKPIVJG9KTGUJCTMKPVGTHCEG
+Aircrack-ng
+Aircrack-ng is a dangerous suite of tools that is used for wireless hacking, and has becomelegendary in today's cyberspace. The tools are available for both Linux and Windowsoperating systems. It is important to note that Aircrack-ng relies on other tools to first getsome information about its targets. Mostly, these programs discover the potential targetsthat can be hacked. Airodump-ng is the commonly used tool to do this, but other tools, suchas Kismet, are reliable alternatives. Airodump-ng detects wireless access points and theclients connected to them. This information is used by Aircrack-ng to hack the access points.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 51 ]Today, most organizations and public places have Wi-Fi, and this makes them ideal hunting
+grounds for hackers in possession of this suite of tools. Aircrack-ng can be used to recoverthe keys of secured Wi-Fi networks, provided that it captures a certain threshold of datapackets in its monitoring mode. The tool is being adopted by white hats that are focused onwireless networks. The suite includes attacks such as FMS, KoreK, and PTW, which makesits capabilities incredible.
+The FMS attack is used to attack keys that have been encrypted using RC4. KoreK is used to
+attack Wi-Fi networks that are secured with WEP-encrypted passwords. Lastly, PTW isused to hack through WEP- and WPA-secured Wi-Fi networks.
+Aircrack-ng works in a number of ways. It could be used to monitor the traffic in a Wi-Fi
+network by capturing packets to be exported in formats that can be read by other scanningtools. It can also attack a network by creating fake access points or injecting its own packetsinto a network to get more information about the users and devices in a network.
+Finally, it can recover passwords for Wi-Fi networks using the aforementioned attacks to try
+different combinations.
+(KIWTG#KTETCEMPIKPVGTHCEG
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 52 ]Nikto
+Nikto is a Linux-based website vulnerability scanner that hackers use to identify any
+exploitable loopholes in organizational websites. The tool scans the web servers for over6,800 commonly exploited vulnerabilities. It also scans for unpatched versions of servers onover 250 platforms. The tool also checks for errors in the configurations of files in webservers. The tool is, however, not very good at masking its tracks, and thus almost alwaysgets picked up by any intrusion detection and prevention system.
+Nikto works through a set of command-line interface commands. Users first give it the IP
+address of the website that they wish to scan. The tool will do an initial scan and give backdetails about the web server.
+From there, users can issue more commands to test for different vulnerabilities on the web
+server. Figure 8  shows a screenshot of the Nikto tool scanning a web server for
+vulnerabilities. The command issued to give this output is:
+Nikto -host 8.26.65.101
+(KIWTG5ETGGPUJQVQHVJG0KMVQVQQNNQQMKPIHQTXWNPGTCDKNKV KGUKPC/KETQUQHV++5YGDUGTXGT
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 53 ]Kismet
+Kismet is also a wireless network sniffer and intrusion detection system. It normally sniffs
+through 802.11 layer 2 traffic, which includes 802.11b, 802.11a, and 802.11g. The tool workswith any wireless card available on the machine that it runs on in order to sniff.
+Unlike other tools that use a command-line interface, Kismet is operated using a graphical
+user interface that pops up after a user opens the program. The interface has three sectionsthat users use to make requests or view the status of an attack. When the tool scans a Wi-Finetwork, it will detect whether it is secured or unsecured. If it is secured, it detects whetherthe encryption used is weak. Using a number of commands, the user can instruct the tools
+to crack into the identified Wi-Fi networks. Figure 9  shows a screenshot of the Kismet GUI.
+The graphical user interface is well laid and a user interacts with the program using well-defined menus, as shown in the screenshot:
+(KIWTG5ETGGPUJQVQH-KUOGV
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 54 ]Cain and Abel
+Cain and Abel is a Windows-based password cracking tool that is effective against
+Microsoft operating systems. Hackers with this tool can simply recover the passwords fortheir target machines. They create a network adapter that is used to listen in to routers, andfrom here they can get a number of passwords from hosts sending out traffic through theaffected router. The tool cracks passwords using dictionary, brute-force, and cryptanalysis.It can also record conversations that take place through VOIP, unscramble passwords,uncover cached passwords, and analyze the routing protocols of an internal network. Thetool is surprisingly effective in its attacks to a point where it is choosy and ignores easilyfixable bugs.
+To use the tool, one has to turn off the Windows firewall. From there, the tool can be used to
+create a packet-listening adapter.
+After this, the IP address of a router is entered. The tool will be able to listen to all packets
+sent to the router by hosts in the network. Passwords travelling from the hosts through therouter can then be sniffed by the attacker. The following figure shows a screenshot of theinterface of the Cain and Abel tool. The usernames that have *empty*  in the NT Password
+field have no passwords while the rest have some password protection. The <8 field
+displays an asterisk ( *) if the password is less than eight characters. The password can be
+hacked via dictionary, brute-force, and cryptanalysis attacks, as shown in the Context
+menu:
+(KIWTG+PVGTHCEGQH%CKPCPF#DGN
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 55 ]Access and privilege escalation
+This phase comes after an attacker has already identified a target, and scanned and
+exploited its vulnerabilities using the previously discussed tools and scanning tools. Themain focus of the attacker in this phase is to maintain access and move around in thenetwork while remaining undetected. In order to achieve this freedom of movementwithout being detected, an attacker needs to perform privilege escalation. This is an attackthat will grant the attacker an elevated level of access to a network, its connected systems,and devices.
+Privilege escalation can be done in two ways: vertical, and horizontal:
+Vertical privilege escalation Horizontal privilege escalation
+Attacker moves from one account to another
+that has a higher level of authorityAttacker uses the same account, but
+elevates its privileges
+Tools used to escalate privileges User account used to escalate privileges
+6CDNG#EQORCTKUQPQHJQTK\QPVCNCPFXGTVKECNRTKXKNGIGGUEC NCVKQP
+Vertical privilege escalation
+Vertical privilege escalation is where the attacker has to grant the higher privileges to
+himself/herself. It is a complex procedure since the user has to perform some kernel-leveloperations to elevate their access rights.
+Once the operations are done, the attacker is left with access rights and privileges that
+allows them to run any unauthorized code. The rights acquired using this method are thoseof a super user that has higher rights than an administrator.
+Due to these privileges, an attacker can perform various harmful actions that not even an
+administrator can stop. In Windows, vertical escalation is used to cause buffer overflowsthat attackers use to execute arbitrary code. This type of privilege escalation has alreadybeen witnessed in an attack that happened in May 2017 called WannaCry. WannaCry, aransomware, caused devastation by encrypting computers in over 150 countries in theworld and demanding a ransom of $300 to decrypt that would double after the secondweek. The interesting thing about it is that it was using a vulnerability called EternalBlueallegedly stolen from the NSA.
+EternalBlue allowed the malware to escalate its privileges and run any arbitrary code on
+Windows computers.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 56 ]In Linux, vertical privilege escalation is used to allow attackers to run or modify programs
+on a target machine with root user privileges.
+Horizontal privilege escalation
+Horizontal privilege escalation, on the other hand, is simpler since it allows a user to use thesame privileges gained from the initial access.
+A good example is where an attacker has been able to steal the login credentials of an
+administrator of a network. The administrator account already has high privileges that theattacker assumes immediately after accessing it.
+Horizontal privilege also occurs when an attacker is able to access protected resources using
+a normal user account. A good example is where a normal user is erroneously able to accessthe account of another user. This is normally done through session and cookie theft, cross-site scripting, guessing weak passwords, and logging keystrokes.
+At the end of this phase, the attacker normally has well-established remote access entry
+points into a target system. The attacker might also have access to the accounts of severalusers. The attacker also knows how to avoid detection from security tools that the targetmight have. This leads to the next phase, called exfiltration.
+Exfiltration
+This is the phase where the main attack starts. Once an attack has reached this phase, it isconsidered successful. The attacker normally has unobstructed freedom to move around avictim's network and access all its systems and sensitive data. The attacker will startextracting sensitive data from an organization. This could include trade secrets, usernames,passwords, personally identifiable data, top-secret documents, and other types of data.Attackers normally steal huge chunks of data in this stage. This data can either be sold off towilling buyers or leaked to the public. There have been some ugly incidents facing bigcompanies whose data has been stolen.
+In 2015, a hacker group breached and stole 9.7 GB of data from a site called Ashley
+Madison, which offered spouse-cheating services. The hackers told Avid Life Media, thecompany that owned the website, to take it down or they would release some user data. Themother company rubbished the claims, but the hackers soon dumped the data on the darkweb. The data included real names, addresses, phone numbers, email addresses, and logincredentials of millions of users. The hackers encouraged the people affected by the leak tosue the company and claim damages.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 57 ]In 2016, Yahoo came out and said that data belonging to over a billion user accounts had
+been stolen by hackers back in 2013. The company said that this was a separate incidentfrom the one where user data of half a million accounts had been stolen by hackers in 2014.Yahoo said that in the 2013 incident, hackers were able to exfiltrate names, email addresses,dates of birth, and security questions and answers, as well as hashed passwords.
+The hackers allegedly used forged cookies that allowed them to gain access to the
+company's systems without a password. In 2016, LinkedIn, was hacked and the user data ofover 160 million accounts was stolen.
+The hackers soon put the data on sale for any interested buyers. The data was said to
+contain the email and encrypted passwords of the accounts. These three incidents showhow serious an attack becomes after the attacker is able to get to this stage. The victimorganizations' reputations suffer, and they have to pay huge sums of money as fines for notsecuring user data.
+The attackers at times do more than just exfiltration of the data. They could erase or modify
+the files stored in the compromised computers, systems, and servers. In March 2017,hackers demanded ransom from Apple and threatened to wipe the data belonging to 300million iPhones on iCloud accounts. Although this was soon rubbished as a scam, it showsthat it is possible. In this case, a big company such as Apple was put in the spotlight whenthe hackers tried to extort money from it. It is possible that another company wouldhurriedly pay the hackers in order to prevent the data of its users from being wiped out.
+All of these incidents that faced Apple, Ashley Madison, LinkedIn and Yahoo show the
+significance of this stage. Hackers that manage to reach this stage are virtually in control.The victim might still not be in the know that data has already been stolen. The hackers maydecide to remain silent for a while. When this happens, the attack enters a new phase calledsustainment.
+Sustainment
+Sustainment happens when the attackers are already freely roaming in the network andcopying all data that they think is valuable. They enter this stage when they want to remainundetected. There is an option to end the attack in the previous stage when data has alreadybeen stolen and can either be publicized or sold. Highly motivated attackers that want tocompletely finish off a target choose to continue with the attack, though. Attackers installmalware, such as rootkit viruses, that assure them of access to the victim's computers andsystems whenever they want.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 58 ]The main aim of entering this stage is to buy time to perform another and even more
+harmful attack than exfiltration. The attacker is motivated to move past data and softwareand attack the hardware of an organization. The victim's security tools are at this pointineffective at either detecting or stopping the attack from proceeding. The attacker normallyhas multiple access points to the victims, such that even if one access point is closed, theiraccess is not compromised.
+Assault
+Assault is the most feared stage of any cyber-attack. It is where the attacker does damageexceeding the data and software. An attacker might disable or alter the functioning of thevictim's hardware permanently. The attacker focuses on destroying hardware controlled bythe compromised systems and computing devices.
+A good example of an attack that got to this phase is the Stuxnet attack on Iran's nuclear
+station. It was the first recorded digital weapon to be used to wreak havoc on physicalresources. Just like any other attack, Stuxnet had followed the previously explained phasesand had been residing in the facility's network for a year. Initially, Stuxnet is used tomanipulate valves in the nuclear facility, causing the pressure to build up and damage afew devices in the plant. The malware was then modified to attack a larger target, thecentrifuges. This was achieved in three stages.
+The malware was transmitted to the target computers through USB thumb drives, since
+they were not connected to the internet. Once it infected one of the target computers, themalware replicated itself and spread to the other computers. The malware proceeded to thenext stage where it infected some software by Siemens called Step7 that was used to controlthe programming of logic controllers. Once this software was compromised, the malwarefinally gained access to the program logic controllers. This allowed the attackers to directlyoperate various machinery in the nuclear plant. The attackers caused the fast-spinningcentrifuges to spin out of control and tear apart on their own.
+The Stuxnet malware shows the heights that this phase can reach. The Iranian nuclear
+facility stood no chance of protecting itself as the attackers had already gained access,escalated their privileges, and stayed out of sight from security tools. The plant operatorssaid that they were receiving many identical errors on the computers, but all virus scansshowed that they had not been infected. It is clear that the attackers did a few test runs ofthe worm within the compromised facility with the valves. They found out that it waseffective, and decided to scale up to attack the centrifuges and crash Iran's nuclearweaponry prospects.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 59 ]Obfuscation
+This is the last stage of the attack which some attackers may choose to ignore. The main aim
+here is for the attackers to cover their tracks for various reasons. If the attackers do not wantto be known, they use various techniques to confuse, deter, or divert the forensicinvestigation process that follows a cyber-attack. Some attackers may, however, opt to leavetheir trails unmasked if they operated anonymously or want to boast of their exploits.
+Obfuscation is done in a number of ways. One of the ways that attackers prevent their
+adversaries from catching up with them is by obfuscating their origins. There are a numberof ways through which this can be achieved. Hackers at times attack outdated servers insmall businesses and then laterally move to attack other servers or targets. Therefore, theorigins of the attacks will be tracked down to the servers of the innocent small business thatdoes not regularly perform updates.
+This type of obfuscation was recently witnessed in a university where the IoT lights were
+hacked into and used to attack the university's servers. When forensic analysts came toinvestigate the DDoS attack on the servers, they were surprised to see that it originatedfrom the university's 5,000 IoT lights.
+Another origin obfuscation technique is the use of public school servers. Hackers have
+repeatedly used this technique where they hack into vulnerable web applications of publicschools and move laterally into the schools' networks, installing backdoors and rootkitviruses to the servers. These servers are then used to launch attacks on bigger targets sinceforensic investigations will identify the public schools as the origin.
+Lastly, social clubs are also used to mask the origins of attacks by hackers. Social clubs offer
+their members free Wi-Fi, but it is not always highly protected. This provides hackers withan ideal ground for infecting devices that they can later use to execute attacks without theknowledge of the owners.
+Another obfuscation technique that hackers commonly use is the stripping out of metadata.
+Metadata can be used by law enforcement agencies to catch up with perpetrators of somecrimes.
+In 2012, a hacker by the name Ochoa was charged for hacking the FBI database and
+releasing the private details of police officers.
+Ochoa, who used the name "wormer" in his hacks, was caught after he forgot to strip
+metadata from a picture that he placed on the FBI site after hacking it. The metadatashowed the FBI the exact location of the place where the photo was taken and this led to hisarrest. Hackers have learned from that incident that it is irresponsible to leave any metadatain their hacking activities as it could be their downfall, just as it was for Ochoa.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 60 ]It is also common for hackers to cover their trails using dynamic code obfuscation. This
+involves the generation of different malicious codes to attack targets, but prevents detectionfrom signature-based antivirus and firewall programs.
+The pieces of code can be generated using randomizing functions or by changing some
+function parameters. Therefore, hackers make it significantly harder for any signature-based security tool to protect systems against their malicious codes. This also makes itdifficult for forensic investigators to identify the attacker as most of the hacking is done byrandom code.
+At times, hackers will use dynamic code generators to add meaningless codes to their
+original code. This makes a hack appear very sophisticated to investigators, and it slowsdown their progress in analyzing the malicious code. A few lines of code could be made tobe thousands or millions of meaningless lines. This might discourage forensic investigatorsfrom analyzing code deeper to identify some unique elements or hunt for any leads towardsthe original coder.
+Threat life cycle management
+An investment in threat life cycle management can enable an organization to stop attacksjust as they happen. It is a worthy investment for any company today since statistics showthat the cyber breaches being witnessed are not slowing down. There was a 760% increasein cyber-attacks from 2014 to 2016. Cybercrimes are increasing because of three things. Tobegin with, there are more motivated threat actors. Cybercrime has become a low-risk,high-return business for some people. Despite the increase in the number of breaches, therehas been a very low conviction rate, which shows that very few cyber criminals get caught.
+At the same time, organizations are losing billions to these motivated attackers. Another
+reason for the increase in the number of breaches is the maturity of the cybercrime economyand supply chain. Cyber criminals are today able to access numerous exploits and malwarethat are for sale, provided that they can pay commensurate amounts of money. Cybercrimehas become a business that has sufficient suppliers and willing buyers. The buyers aremultiplying with the advent of hacktivism and cyberterrorism. This is, therefore, leading toan unprecedented increase in the number of breaches.
+Lastly, breaches are on the rise because of the expansion of attack surfaces by organizations.
+New technologies have been adopted, bringing new vulnerabilities and therefore wideningthe surface area that cybercriminals can attack.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 61 ]The Internet of Things  (IoT), one of the latest additions to organizational technologies, has
+already caused a number of companies to be hacked. The future is dull if organizations do
+not take the required precautions to protect themselves.
+The best investment that they can make now is in threat life cycle management to allow
+them to respond appropriately to attacks based on the phase that they are in. In 2015, aninvestigation report by Verizon claimed that, out of all attacks, 84% left evidence in the logdata. This means that with the appropriate tools and mindset, these attacks could have beenmitigated early enough to prevent any damage. There are six phases to threat life cyclemanagement.
+The first phase is forensic data collection. Prior to the detection of a full blown threat, some
+evidence is observable in the IT environment. Threats can come through any of the sevendomains of IT. Therefore, the more of the IT infrastructure the organization can see, themore threats it can detect.
+There are three applicable things at this phase. To start off, organizations should collect
+security event and alarm data. Today, organizations use countless security tools to helpthem nab attackers and prevent their attacks from being successful. Some of these tools onlygive warnings and, therefore, simply generate events and alarms. Some powerful tools maynot sound alarms for small-level detections, but they will generate security events.However, tens of thousands of events may be generated daily, thus confusing anorganization on which ones to focus on. Another applicable thing in this phase is thecollection of log and machine data. This type of data can provide a deeper visibility of whatactually goes on in an organizational network on a per-user or per-application basis. Thelast applicable thing in this stage is the collection of forensic sensor data. Forensic sensors,such as network and endpoint forensic sensors, are even more in depth, and they come inhandy when logs are not available.
+The next phase in threat life cycle management is the discovery phase. This comes after the
+organization has established visibility and thus can detect attacks early enough. This phasecan be achieved in two ways.
+The first of these is search analytics. This is where IT employees in the organization carry
+out software-aided analytics. They are able to review reports and identify any known orreported exceptions from network and antivirus security tools. This process is laborintensive and therefore should not be the sole analytics method that a whole organizationshould rely on.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 62 ]The second way of achieving this phase is by using machine analytics. This is analytics that
+is purely done by machines/software. The software normally has machine learningcapabilities and, therefore, artificial intelligence, enabling them to autonomously scan largeamounts of data and give brief and simplified results to people to further analyze. It isestimated that over a quarter of all security tools will have machine learning capabilities bythe beginning of 2018. Machine learning simplifies the threat discovery process since it isautomated and continually learns new threats on its own.
+Next is the qualification phase, where the threats discovered in the previous phase are
+assessed to find out their potential impact, urgency of resolution, and how they can bemitigated. The phase is time sensitive, as an identified attack may mature faster thanexpected.
+To make matters worse, it is not simple, and consumes a lot of manual labor and time. In
+this phase, false positives are a big challenge, and they must be identified to prevent theorganization from using resources against nonexistent threats. Inefficient qualification maylead to true positives being missed and false positives being included. Legitimate threatscould, therefore, go unnoticed and unattended. As you can see, this is, a sensitive phase inthe threat management process.
+The next phase is the investigation phase where threats categorized as true positives are
+fully investigated to determine whether or not they have caused a security incident.
+This phase requires continuous access to forensic data and intelligence about very many
+threats. It is mostly automated, and this simplifies the lookup process for a threat amongmillions of known threats. This phase also looks at any potential damage a threat mighthave done in the organization before it was identified by the security tools. Based oninformation gathered from this phase, the IT team of an organization can proceedaccordingly against a threat.
+Next comes the neutralization phase. Here, mitigations are applied to eliminate or reduce
+the impact of an identified threat to an organization. Organizations strive to get to this stageas quickly as possible since threats involving ransomware or privileged user accounts mightdo irreversible damage in a short period of time.
+Therefore, every second counts when eliminating identified threats. This process is also
+automated to ensure a higher throughput of deleting threats, and to also ease informationsharing and collaboration between several departments in an organization.
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 63 ]The last phase is recovery, which only comes after an organization is sure that its identified
+threats have been neutralized and that any risks that it faced are put under control. The aimof this phase is to restore the organization to a position it enjoyed prior to being attacked bythreats. Recovery is less time critical, and it highly depends on the type of software orservice being made available again. This process, however, requires care to be taken;changes that might have been made during an attack incident or during the response needto be backtracked. These two processes may cause undesired configurations or actions tohave been taken to either compromise a system or prevent it from sustaining furtherdamage. It is essential that systems are brought back to the exact state that they were inbefore being attacked. There are automated recovery tools that can return systemsautomatically to a backed-up state. Due diligence must, however, be carried out to ensurethat no backdoors are introduced or are left behind.
+References
+M. Clayton, Clues about who's behind recent cyber attacks on US banks , The Christian 1.
+Science Monitor, pp. 11, 2012. Available: IUUQTTFBSDIQSPRVFTUDPN
+EPDWJFX .
+B. Harrison, E. Svetieva, and A. Vishwanath, Individual processing of phishing 2.
+emails , Online Information Review, vol. 40, (2), pp. 265-281, 2016. Available:
+IUUQTTFBSDIQSPRVFTUDPNEPDWJFX .
+M. Andress, Network vulnerability assessment management: Eight network scanning 3.
+tools offer beefed-up management and remediation , Network World, vol. 21, (45), pp.
+48-48,50,52, 2004. Available: IUUQTTFBSDIQSPRVFTUDPNEPDWJFX .
+Nmap: the Network Mapper - Free Security Scanner , Nmap.org , 2017. [Online]. 4.
+Available: IUUQTONBQPSH . [Accessed: 20- Jul- 2017].
+Metasploit Unleashed , Offensive-security.com, 2017. [Online]. Available: IUUQT 5.
+XXXPGGFOTJWFTFDVSJUZDPNNFUBTQMPJUVOMFBTIFENTGWFOPN . [Accessed: 21-
+Jul- 2017].
+Free Download John the Ripper password cracker  |, Hacking Tools, 2017. [Online]. 6.
+Available: IUUQXXXIBDLJOHUPPMTJOGSFFEPXOMPBEKPIOUIFSJQQFS
+QBTTXPSEDSBDLFS . [Accessed: 21- Jul- 2017].
+R. Upadhyay, THC-Hydra Windows Install Guide Using Cygwi n, HACKING LIKE A 7.
+PRO , 2017. [Online]. Available: IUUQTIBDLJOHMJLFBQSPCMPHTQPUDPLF
+UIDIZESBXJOEPXTJOTUBMMHVJEFVTJOHIUNM . [Accessed: 21- Jul-
+2017].
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 64 ]S. Wilbanks and S. Wilbanks, WireShark , Digitalized Warfare, 2017. [Online]. 8.
+Available: IUUQEJHJUBMJ[FEXBSGBSFDPNLFFQDBMNBOEVTF
+XJSFTIBSL . [Accessed: 21- Jul- 2017].
+Packet Collection and WEP Encryption, Attack & Defend Against Wireless Networks - 4 , 9.
+Ferruh.mavituna.com , 2017. [Online]. Available: IUUQGFSSVINBWJUVOBDPN
+QBLFUUPQMBNBWFXFQTJGSFTJOJLJSNBLBCMPTV[BHMBSBTBMEJSJEF GBOT
+PLV . [Accessed: 21- Jul- 2017].
+Hack Like a Pro: How to Find Vulnerabilities for Any Website Using Nikto , 10.
+WonderHowTo , 2017. [Online]. Available: IUUQTOVMMCZUFXPOEFSIPXUPDPN
+IPXUPIBDLMJLFQSPGJOEWVMOFSBCJMJUJFTGPSBOZXFCTJUFVTJOH OJLUP
+ . [Accessed: 21- Jul- 2017].
+Kismet , Tools.kali.org , 2017. [Online]. Available: IUUQTUPPMTLBMJPSH 11.
+XJSFMFTTBUUBDLTLJTNFU . [Accessed: 21- Jul- 2017].
+A. Iswara, How to Sniff People's Password? (A hacking guide with Cain & Abel - ARP 12.
+POISONING METHOD) , Hxr99.blogspot.com, 2017. [Online]. Available: IUUQ
+IYSCMPHTQPUDPNIPXUPTOJGGQFPQMFTQBTTXPSEIBDLJO HIUNM .
+[Accessed: 21- Jul- 2017].
+A. Gouglidis, I. Mavridis, and V. C. Hu, Security policy verification for multi- 13.
+domains in cloud systems , International Journal of Information Security, vol. 13, (2),
+pp. 97-111, 2014. Available: IUUQTTFBSDIQSPRVFTUDPNEPDWJFX
+DOI: IUUQEYEPJPSHTY .
+R. Oliver, Cyber insurance market expected to grow after WannaCry attack ,FT.Com, 14.
+2017. Available: IUUQTTFBSDIQSPRVFTUDPNEPDWJFX .
+N. Lomas. (Aug 19). Full Ashley Madison Hacked Data Apparently Dumped On15.
+Tor. Available: IUUQTTFBSDIQSPRVFTUDPNEPDWJFX .
+D. FitzGerald, Hackers Used Yahoo's Own Software Against It in Data Breach; 'Forged 16.
+cookies' allowed access to accounts without password , Wall Street Journal (Online),
+2016. Available: IUUQTTFBSDIQSPRVFTUDPNEPDWJFX .
+R. Sinha, Compromised! Over 32 mn Twitter passwords reportedly hacked Panache] , 17.
+The Economic Times (Online), 2016. Available: IUUQTTFBSDIQSPRVFTUDPN
+EPDWJFX .
+T. Bradshaw, Apple's internal systems hacked , FT.Com, 2013. Available: IUUQT 18.
+TFBSDIQSPRVFTUDPNEPDWJFX .
+M. Clayton, Stuxnet malware is 'weapon' out to destroy Iran's Bushehr nuclear 19.
+plant? , The Christian Science Monitor, 2010. Available: IUUQTTFBSDI
+QSPRVFTUDPNEPDWJFX .
+
+Understanding the Cybersecurity Kill Chain Chapter 3
+[ 65 ]D. Palmer, How IoT hackers turned a university's network against itself , ZDNet, 2017. 20.
+[Online]. Available: IUUQXXX[EOFUDPNBSUJDMFIPXJPUIBDLFSTUVSOFE
+BVOJWFSTJUZTOFUXPSLBHBJOTUJUTFMG . [Accessed: 04- Jul- 2017].
+S. Zhang, The life of an exhacker who is now banned from using the internet , 21.
+Gizmodo.com, 2017. [Online]. Available: IUUQHJ[NPEPDPNUIFMJGFPGBO
+FYIBDLFSXIPJTOPXCBOOFEGSPNVTJOHU . [Accessed: 04- Jul-
+2017].
+Busted! FBI led to Anonymous hacker after he posts picture of girlfriend's breasts online , 22.
+Mail Online , 2017. [Online]. Available: IUUQXXXEBJMZNBJMDPVLOFXT
+BSUJDMF)JHJOJP00DIPB***'#*MFE"OPOZNPVTIBDLFS
+HJSMGSJFOEQPTUTQJDUVSFCSFBTUTPOMJOFIUNM . [Accessed: 28- Nov- 2017].
+Summary
+This chapter gave an overall picture of the phases commonly involved in cyber-attacks. It
+exposed the mindset of an attacker. It showed how an attacker gets details about a targetusing simple methods and advanced intrusion tools to later on use this information toattack users. It has discussed the two main ways through which attackers escalate theirprivileges when they attack systems. It has explained how cyberattackers exfiltrate datafrom systems that they have access to. It has also looked at scenarios where attackersproceed to attack the hardware of a victim to cause more damage. It has then discussedways through which attackers maintain anonymity. Lastly, the chapter has highlightedways through which users can interrupt the threat life cycle and thwart attacks.
+The next chapter will take an in-depth look at reconnaissance to fully understand how
+attackers collect information about users and systems using social media, compromisedwebsites, emails, and scanning tools.
+
+44
+Reconnaissance
+The previous chapter gave you an overall view of all the stages of the cyber-attack life cycle.
+This chapter will go into the first phase of the life cycle in depth breconnaissance.
+Reconnaissance is one of the most important stages of a threat life cycle, where attackers
+search for vulnerabilities that they can use to attack targets. An attacker will be interested inlocating and gathering data, and identifying any loopholes in a target's network, its users,or its computing systems. Reconnaissance is done both passively and actively, borrowingtactics that have been used by the military. It can be compared to the sending of spies intoan enemy's territory to gather data about where and when to strike. When reconnaissance isdone in the right way, the target should not be able to know that it is being done. Thiscritical attack life cycle phase can be actualized in a number of ways, which are broadlyclassified as external and internal reconnaissance.
+This chapter is going to discuss the following topics:
+External reconnaissance:
+Dumpster diving
+The use of social media to obtain information about the target
+Social engineering
+Tools used to perform internal reconnaissance
+
+Reconnaissance Chapter 4
+[ 67 ]External reconnaissance
+External reconnaissance is done outside of the organization's network and systems. It is
+normally targeted by exploiting the carelessness of users of an organization. There areseveral ways in which this can be done.
+Dumpster diving
+Organizations dispose of obsolete devices in a number of ways, such as through bidding,sending to recyclers, or dumping them in storage. There are serious implications for thesemethods of disposal. Google is one of the companies that are thorough in the way theydispose of devices that may have contained user data. The company destroys its old harddrives from its data centers to prevent the data that they contained from being accessed bymalicious people. The hard drives are put into a crusher that pushes steel pistons up thecenter of the disks, rendering them unreadable. This process continues until the machinespits out tiny pieces of the hard drive, which are then sent to a recycling center. This is arigorous and fail-proof exercise. Some other companies are not able to do this and thereforeopt to delete the data contained in old hard disks by using military-grade deletion software.This ensures that data cannot be recovered from old hard drives when they are disposed of.
+However, most organizations are not thorough enough when handling old external storage
+devices or obsolete computers. Some do not even bother to delete the contained data. Sincethese obsolete devices may be disposed of by sometimes careless means, attackers are ableto easily obtain them from their points of disposal. The obsolete storage devices may giveattackers a lot of information about the internal setup of an organization. It may also allowthem to access openly-stored passwords on browsers, find out the privileges and details ofdifferent users, and may even give them access to some bespoke systems used in thenetwork.
+
+Reconnaissance Chapter 4
+[ 68 ]Social media
+Social media has opened up another hunting ground for hackers. The easiest way to find
+out a lot of information about people today is by going through their social media accounts.Hackers have found social media to be the best place to mine data concerning specifictargets, as people are likely to share information on such platforms. Of particularimportance today is data related to the companies users work for. Other key pieces ofinformation that can be obtained from social media accounts include details about familymembers, relatives, friends, and residence and contact information. As well as this,attackers have learned a new way of using social media to execute even more nefarious pre-attacks.
+A recent incident involving a Russian hacker and a Pentagon official showed how
+sophisticated hackers have become. The Pentagon official is said to have clicked on a postput up by a robot account about a holiday package. This is because Pentagon officials hadbeen trained by cyber security experts to avoid clicking or opening attachments sent bymail. The official had clicked on a link that is said to have compromised his computer.Cyber security experts classified this as a spear phishing threat; however, instead of usingemails, it used a social media post. Hackers are looking for this type of unpredictable, andsometimes unnoticeable, pre-attack. The attacker is said to have been able to access a wealthof sensitive information about the official through this attack.
+Another way that hackers exploit social media users is by going through their account posts
+to obtain information that can be used in passwords or as answers to secret questions usedto reset some accounts. This is information such as a user's date of birth, their parent'smaiden name, names of the street that they grew up in, pet names, school names, and othertypes of random information. Users are known to use weak passwords due to laziness orlack of knowledge about the threats that they face. It is, therefore, possible that some usersuse their birth dates as their work email passwords. Work emails are easy to guess sincethey use a person's official name and end in an organization's domain name. Armed withtheir official name from their social media accounts, as well as viable passwords, an attackeris able to plan how to get into a network and perform an attack.
+
+Reconnaissance Chapter 4
+[ 69 ]Another danger looming in social media is identity theft. It is surprisingly easy to create a
+fake account bearing the identity of another person. All that is needed is access to somepictures and up-to-date details of the identity theft victim. This is all in the playbook ofhackers. They track information about organizations' users and their bosses. They can thencreate accounts with the names and details of the bosses. This will allow them to get favorsor issue orders to oblivious users, even through the likes of social media. A confident hackercould even request network information and statistics from the IT department using theidentity of a high-ranking employee. The hacker will continue to get information about thenetwork's security, which will then enable him to find a way to hack into it successfully inthe near future.
+Social engineering
+This is one of the most feared reconnaissance acts due to the nature of the target. Acompany can shield itself from many types of attack with security tools, but it cannotcompletely protect itself from this type of threat. Social engineering has been perfectlydeveloped to exploit human nature bsomething beyond the protection of security tools.
+Hackers are aware that there exist very strong and powerful tools to prevent them from
+getting any type of information from organizational networks. Scanning and spoofing toolsare easily identified by intrusion detection devices and firewalls. Therefore, it is somewhatdifficult to beat today's level of security with the usual threats since their signatures areknown and can easily be thwarted. The human component, on the other hand, is still opento attacks through manipulation. Humans are sympathetic, trusting of friends, show-offs,and obedient to higher authorities; they are easy to convince provided that one can bringthem around to a certain way of thinking.
+There are six levers that social engineers use to get victims to talk. One of these is
+reciprocation, where a victim does something for a social media user who in turn feels theneed to reciprocate the favor. It is part of human nature to feel obligated to return a favor toa person, and attackers have come to know and exploit this. Another lever is scarcity, wherea social engineer will get compliance from a target by threatening a short supply ofsomething that the target is in need of. It could be a trip, a mega sale, or a new release ofproducts. A lot of work is done to find out a target's likes in order to enable social engineersto pull this lever. The next lever is consistency, whereby humans tend to honor promises orget used to the usual flow of events. When an organization always orders and receives ITconsumables from a certain vendor, it is very easy for attackers to clone the vendor anddeliver malware-infected electronics.
+
+Reconnaissance Chapter 4
+[ 70 ]Another lever is liking, whereby humans are more likely to comply with the requests of
+people they like or those that appear attractive. Social engineers are experts at makingthemselves sound and appear attractive to easily win the compliance of targets. Acommonly used lever that has a high success rate is authority. Generally, humans areobedient to the authority of those that are ranked above them; they can therefore easilybend the rules for them and grant their wishes even if they seem malicious. Many users willgive their login credentials if a high-ranking IT employee requests them. In addition, manyusers will not think twice if their manager or director asks them to send some sensitive dataover unsecured channels. It is easy to use this lever and many people can easily fall victim.The last lever is social validation: humans will readily comply and do something if otherpeople are doing the same, as they do not want to appear the odd one out. All a hackerneeds to do is make something appear normal and then request an unsuspicious user to dothe same.
+All the social engineering levers can be used in different types of social engineering attacks.
+The following are some popular types of social engineering attacks.
+Pretexting
+This is a method of indirectly putting pressure on targets to get them to divulge someinformation or perform unusual actions. It involves the construction of an elaborate lie thathas been well-researched so as to appear legitimate to the target. This technique has beenable to get accountants to release huge amounts of money to imaginary bosses who issue anorder for payment into a certain account. It is therefore very easy for a hacker to use thistechnique to steal login credentials of users, or to get access to some sensitive files.Pretexting can be used to mediate an even bigger social engineering attack that will use thelegitimate information to construe another lie. Social engineers that use pretexting havehoned the art of impersonating other trusted individuals in society, such as police officers,debt collectors, tax officials, clergy, or investigators.
+Diversion theft
+This is a con game, whereby attackers persuade delivery and transport companies that theirdeliveries and services are requested elsewhere. There are some advantages of getting theconsignments of a certain company bthe attackers can physically dress as the legitimate
+delivery agent and proceed to deliver already-flawed products. They might have installed
+rootkits or some spying hardware that will go undetected in the delivered products.
+
+Reconnaissance Chapter 4
+[ 71 ]Phishing
+This is one of the oldest tricks that hackers have used over the years, but its success rate is
+still surprisingly high. Phishing is mainly a technique that is used to obtain sensitiveinformation about a company or a specific person in a fraudulent way. The normalexecution of this attack involves a hacker sending emails to a target, pretending to be alegitimate third-party organization requesting information for verification purposes. Theattacker normally attaches dire consequences to the lack of provision of the requestedinformation. A link leading to a malicious or fraudulent website is also attached and theusers are advised to use it to access a certain legitimate website. The attackers will havemade a replica website, complete with logos and usual content, as well as a form to fill inwith sensitive information. The idea is to capture the details of a target that will enable theattacker to commit a bigger crime. Targeted information includes login credentials, socialsecurity numbers, and bank details. Attackers are still using this technique to capturesensitive information from users of a certain company so that they can use it to access itsnetworks and systems in future attacks.
+Some terrible attacks have been carried out through phishing. Some time back, hackers
+were sending phishing emails claiming to be from a certain court and ordering therecipients to appear before the court at a certain date. The email came with a link thatenabled recipients to view more details about the court notice. However, upon clicking thelink, the recipients installed malware on their computers that was used for other maliciouspurposes, such as key logging and the collection of stored login credentials in browsers.
+Another famous phishing attack was the IRS refund. Cyber attackers took advantage of the
+month of April, when many people were anxiously waiting for possible refunds from theIRS, and sent emails claiming to be from the IRS, attaching ransomware through a Wordfile. When recipients opened the Word document, the ransomware would encrypt the user'sfiles in the hard disk and any connected external storage device.
+A more sophisticated phishing attack was used against multiple targets through a famous
+job board company called CareerBuilder. Here, hackers pretended to be normal jobapplicants, but instead of attaching resumes they uploaded malicious files. CareerBuilderthen forwarded these CVs to multiple companies that were hiring. It was the ultimate hack,which saw malware transferred to many organizations. There have also been multiplepolice departments that have fallen prey to ransomware. In New Hampshire, a policeofficer clicked on an email that appeared legitimate and the computer that he was usingwas infected with ransomware. This has happened to many other police departments acrossthe world, which shows the amount of power that phishing still has.
+
+Reconnaissance Chapter 4
+[ 72 ]The following figure shows an example of a phishing email sent to a Yahoo user:
+1IPOFQIJTIJOH
+WJTIJOH
+This is a unique type of phishing where the attacker uses phone calls instead of emails. It is
+an advanced level of a phishing attack whereby the attacker will use an illegitimateinteractive voice response system that sounds exactly like the ones used by banks, serviceproviders, and so on. This attack is mostly used as an extension of the email phishing attackto make a target reveal secret information. A toll-free number is normally provided, whichwhen called leads the target to the rogue interactive voice response system. The target willbe prompted by the system to give out some verification information. It is normal for thesystem to reject input that a target gives so as to ensure that several PINs are disclosed. Thisis enough for the attackers to proceed and steal money from a target, be it a person or anorganization. In extreme cases, a target will be forwarded to a fake customer care agent toassist with failed login attempts. The fake agent will continue questioning the target,gaining even more sensitive information.
+
+Reconnaissance Chapter 4
+[ 73 ]The following diagram shows a scenario in which a hacker uses phishing to obtain the login
+credentials of a user:
+4QFBSQIJTIJOH
+This is also related to a normal phishing attack, but it does not send out high volumes ofemails in a random manner. Spear phishing is specifically targeted to obtain informationfrom particular end users in an organization. Spear phishing is more strenuous since itrequires the attackers to perform a number of background checks on targets in order toidentify a victim that they can pursue. Attackers will then carefully craft an email thataddresses something of interest to the target, coercing him or her to open it. Statistically,normal phishing has a 3% success rate, whereas spear phishing has a 70% success rate. It isalso said that only 5% of people who open phishing emails click links or download anyattachments, while almost half of all people who open spear phishing emails click on theirlinks and download attachments.
+
+Reconnaissance Chapter 4
+[ 74 ]A good example of a spear phishing attack would be one whereby attackers are targeting a
+staff member in the HR department. These are employees that have to be in constantcontact with the world when seeking new talent. A spear phisher might craft an emailaccusing the department of corruption or nepotism, providing a link to a website wheredisgruntled band fictional bpotential employees have been complaining. HR staff members
+are not necessarily very knowledgeable about IT-related issues, and therefore might easily
+click on such links, and as a result get infected. From one single infection, malware caneasily spread inside an organization by making its way through to the HR server, whichalmost every organization has.
+Water holing
+This is a social engineering attack that takes advantage of the amount of trust that usersgive to websites they regularly visit, such as interactive chat forums and exchange boards.Users on these websites are more likely to act in abnormally careless manners. Even themost careful people, who avoid clicking links in emails, will not hesitate to click on linksprovided on these types of website. These websites are referred to as watering holesbecause hackers trap their victims there just as predators wait to catch their prey atwatering holes. Here, hackers exploit any vulnerabilities on the website, attack them, takecharge, and then inject code that infects visitors with malware or that leads clicks tomalicious pages. Due to the nature of the planning done by the attackers that choose thismethod, these attacks are normally tailored to a specific target and specific devices,operating systems, or applications that they use. It is used against some of the most IT-knowledgeable people, such as system administrators. An example of water holing is theexploitation of vulnerabilities in a site such as StackOverflow.com, which is oftenfrequented by IT personnel. If the site is bugged, a hacker could inject malware into thecomputers of the visiting IT staff.
+Baiting
+This preys upon the greed or curiosity of a certain target. It is one of the simplest socialengineering techniques since all that it involves is an external storage device (1). An attackerwill leave a malware-infected external storage device in a place where other people caneasily find it. It could be in the washroom of an organization, in the elevator, at thereception desk, on the pavement, or even in the parking lot. Greedy or curious users in anorganization will then retrieve the object and hurriedly plug it into their machines.Attackers are normally crafty and will leave files in the flash drive that a victim will betempted to open. For example, a file labeled "the executive summary of salaries andupcoming promotions" is likely to get the attention of many.
+
+Reconnaissance Chapter 4
+[ 75 ]If this does not work, an attacker might replicate the design of corporate thumb drives and
+then drop a few around the organization where they can be picked up by some of its staff.Eventually, they will end up being plugged into a computer and files will be opened.Attackers will have planted malware to infect the computers the flash drive is plugged into.Computers configured to auto-run devices once plugged in are in greater danger, since nouser action is required to initiate the malware infection process.
+In more serious cases, attackers might install rootkit viruses in the thumb drive that infect
+computers when they boot, while an infected secondary storage media is then connected tothem. This will give attackers a higher level of access to the computer and the ability tomove undetected. Baiting has a high success rate because it is human nature to either begreedy or curious and open and read files that are above their level of access. This is whyattackers will choose to label storage media or files with tempting titles such as"confidential" or "executive" since internal employees are always interested in such things.
+Quid pro quo
+This is a common social engineering attack that is commonly carried out by low-levelattackers. These attackers do not have any advanced tools at their disposal and do not doresearch about the targets. These attackers will keep calling random numbers claiming to befrom technical support, and will offer some sort of assistance. Once in a while, they findpeople with legitimate technical problems and will then "help" them to solve thoseproblems. They guide them through the necessary steps, which then gives the attackersaccess to the victims' computers or the ability to launch malware. This is a tedious methodthat has a very low success rate.
+Tailgating
+This is the least common social engineering attack and is not as technically advanced as theones we've discussed previously. However, it does have a significant success rate. Attackersuse this method to gain entry into restricted premises or parts of buildings. Mostorganizational premises have electronic access control and users normally require biometricor RFID cards to be allowed in. An attacker will walk behind an employee that haslegitimate access and enter behind them. At times, the attacker may ask an employee toborrow their RFID card, or may gain entry by using a fake card under the guise ofaccessibility problems.
+
+Reconnaissance Chapter 4
+[ 76 ]Internal reconnaissance
+Unlike external reconnaissance attacks, internal reconnaissance is done on-site. This means
+that the attacks are carried out within an organization's network, systems, and premises.Mostly, this process is aided by software tools. An attacker interacts with the actual targetsystems in order to find out information about its vulnerabilities. This is the main differencebetween internal and external reconnaissance techniques.
+External reconnaissance is done without interacting with the system, but by instead finding
+entry points through humans that work in the organization. That is why most externalreconnaissance attempts involve hackers trying to reach users through social media, emails,and phone calls. Internal reconnaissance is still a passive attack since the aim is to findinformation that can be used in future for an even more serious attack.
+The main target of internal reconnaissance is the internal network of an organization, where
+hackers are sure to find the data servers and the IP addresses of hosts they can infect. It isknown that data in a network can be read by anyone in the same network with the righttools and skill set. Attackers use networks to discover and analyze potential targets to attackin the future. Internal reconnaissance is used to determine the security mechanisms in placethat ward off hacking attempts. There are many cyber security tools that have been made tomitigate software used to perform reconnaissance attacks. However, most organizationsnever install enough security tools and hackers keep on finding ways to hack through thealready-installed ones. There are a number of tools that hackers have tested and have foundto be effective at studying their targets' networks. Most of them can be classified as sniffingtools.
+Sniffing and scanning
+These are terms used in networking that generally refer to the act of eavesdropping ontraffic in a network. They enable both attackers and defenders to know exactly what ishappening in a network. Sniffing tools are designed to capture the packets beingtransmitted over a network and to perform analysis on them, which is then presented in ahuman-readable format. In order to perform internal reconnaissance, packet analysis ismore than essential. It gives attackers a lot of information about the network to a levelwhere it can be compared to reading the logical layout of the network  on paper.
+
+Reconnaissance Chapter 4
+[ 77 ]Some sniffing tools go to the extent of revealing confidential information, such as
+passwords from WEP-protected Wi-Fi networks. Other tools enable users to set them up tocapture traffic over a long period of time on wired and wireless networks, after which theusers can analyze at their own convenience. There are a number of sniffing tools availabletoday that hackers commonly use.
+Prismdump
+Designed only for Linux, this tool allows hackers to sniff with Prism2 chipset-based cards.This technology is only meant to capture packets, and therefore leaves analysis to beperformed by other tools; this is the reason why it dumps the captured packets in a 
+QDBQ
+format, which is widely used by other sniffing tools. Most open source sniffing tools use
+QDBQ  as the standard packet capture format. Since this tool is only specialized to capture
+data, it is reliable and can be used for long reconnaissance missions. The following diagram
+is a screenshot of the QSJTNEVNQ  tool:
+
+
+Reconnaissance Chapter 4
+[ 78 ]tcpdump
+This is an open-source sniffing tool that is used for packet capture and analysis. UDQEVNQ
+runs using a command line interface. UDQEVNQ  has also been custom-designed for packet
+capturing as it does not have a GUI that enables the analysis and display of data. It is a tool
+with one of the most powerful packet-filtering capabilities and can even selectively capturepackets. This differentiates it from most other sniffing tools that have no means of filteringpackets during capture. Following is a screenshot of the 
+UDQEVNQ  tool. In the screenshot, it
+is listening to the QJOH  commands being sent to its host:
+NMap
+This is an open source network sniffing tool that is commonly used to map networks. The
+tool records IP packets entering and leaving a network. It also maps out fine details about anetwork, such as the devices connected to it and also any open and closed ports. The toolcan go as far as identifying the operating systems of the devices that are connected to thenetwork, as well as the configurations of firewalls. It uses a simple text-based interface, butthere is an advanced version of it called Zenmap that also has a GUI. Following is ascreenshot of the nmap  interface. The command being executed is:
+#nmap 192.168.12.3
+
+Reconnaissance Chapter 4
+[ 79 ]This command is executed to scan the ports of the computer on the IP address
+ :
+
+
+Reconnaissance Chapter 4
+[ 80 ]Wireshark
+This is one of the most revered tools used for network scanning and sniffing. The tool is so
+powerful that it can steal authentication details from the traffic sent out of a network (1).This is surprisingly easy to do, such that one can effortlessly become a hacker by merelyfollowing a few steps. On Linux, Windows, and Mac, you need to make sure that a device,preferably a laptop, installed with Wireshark is connected to a network. Wireshark needs tobe started so that it can capture packets. After a given period of time, one can stop Wireshark and proceed to perform the analysis. To get passwords, one needs to filter thedata captured to show only the POST data. This is because most websites use the POST totransfer authentication information to their servers. It will list all the POST data actions thatwere made. One will then right-click on any of these and select the option to follow the TCPstream. Wireshark will open a window showing a username and password. At times, thecaptured password is hashed, and this is common with websites. One can easily crack thehash value and recover the original password using other tools.
+Wireshark can also be used for other functions, such as recovering Wi-Fi passwords. Since it
+is open source, the community continually updates its capabilities and therefore willcontinue to add new features. Its current basic features include capturing packets,importing 
+QDBQ  files, displaying protocol information about packets, exporting captured
+packets in multiple formats, colorizing packets based on filters, giving statistics about a
+network, and the ability to search through captured packets. The file has advancedcapabilities, and these make it ideal for hacking. The open source community, however,uses it for white hacking, which discovers vulnerabilities in networks before black hats do.
+
+Reconnaissance Chapter 4
+[ 81 ]Following is a screenshot of Wireshark capturing network packets:
+Scanrand
+This is a scanning tool that has been specifically made to be extremely quick but effective. It
+tops most other scanning tools with its fast speeds, which it achieves in two ways. The toolcontains a process that sends multiple queries at once and another process that receives theresponses and integrates them. The two processes do not consult and therefore thereceiving process never knows what to expect bjust that there will be response packets.
+There is, however, a clever hash-based way that is integrated into the tool that allows you to
+see the valid responses that it receives from scanning. The tool is totally different from oldscanning tools such as NMap, and its advancements enable it to be quicker and moreeffective at capturing packets.
+
+Reconnaissance Chapter 4
+[ 82 ]Cain and Abel
+This is one of the most effective tools for cracking passwords made specifically for the
+Windows platform. The tool recovers passwords by cracking them using dictionary, bruteforce, and cryptanalysis attacks. It also sniffs from the network by listening in to voice-overIP conversations and uncovering cached passwords. The tool has been optimized to workonly with Microsoft operating systems. Following is a screenshot of the Cain and Abel tool:
+Nessus
+This is a free scanning tool made and distributed by Tenable Network Security. It is amongthe best network scanners and has bagged several awards for being the best vulnerabilityscanner for white hats. Nessus has several functionalities that may come in handy for anattacker doing internal reconnaissance. The tool can scan a network and show connecteddevices that have misconfigurations and missing patches. The tool also shows the devicesthat are using their default passwords, weak passwords, or have no passwords at all.
+
+Reconnaissance Chapter 4
+[ 83 ]The tool can recover passwords from some devices by launching an external tool to help it
+with dictionary attacks against targets in the network. Lastly, the tool is able to showabnormal traffic in the network, which can be used to monitor DDoS attacks. Nessus has theability to call to external tools to help it achieve extra functionality. When it begins scanninga network, it can call to NMap to help it scan for open ports and will automatically integratethe data that NMap collects. Nessus is then able to use this type of data to continuescanning and finding out more information about a network using commands scripted in itsown language. The following diagram shows a screenshot of Nessus displaying a scanreport:
+Metasploit
+This is a legendary framework made up of a number of tools that are used for scanning andexploiting networks. Due to the far-reaching capabilities of this tool, most white hat trainersuse it to pass knowledge to their students. It is also a penetration tester that is the softwareof choice in a number of organizations. So far, the framework has over 1,500 exploits thatcan be used against browsers, Android, Microsoft, Linux and Solaris operating systems, andvaried other exploits applicable to any platform. The tool deploys its payloads using acommand shell, the meterpreter, or dynamic payloads.
+
+Reconnaissance Chapter 4
+[ 84 ]The advantage of Metasploit is that it has mechanisms that detect and evade security
+programs that can be present inside a network. The framework has several commands thatcan be used to sniff information from networks. It also has complementary tools that can beused for exploitation after information about vulnerabilities in a network has been collected.
+Following are screenshots of Metasploit:
+
+
+Reconnaissance Chapter 4
+[ 85 ]Aircrack-ng
+Another tool for scanning wireless networks is Aircrack-ng. This is specifically used to
+crack the passwords of secured wireless networks. The tool is advanced and has algorithmsthat can crack WEP, WPA, and WPA2 secured wireless networks (1). It has simplecommands and even a newbie can easily crack a WEP secured network. The potential of thetool comes from its combination of FMS, Korek, and PTW attacks. These attacks are highlysuccessful against algorithms used for encrypting passwords.
+FMS is normally used against RC4 encrypted passwords. WEP is attacked using Korek.
+WPA, WPA2, and WEP are attacked using the PTW attack15. The tool is thorough andalmost always guarantees entry into networks that use weak passwords.
+Following is a screenshot of Aircrack-ng:
+
+
+Reconnaissance Chapter 4
+[ 86 ]Wardriving
+This is an internal reconnaissance technique used specifically for surveying wireless
+networks and is commonly done from an automobile. It is targeted mostly at unsecured Wi-Fi networks. There are a few tools that have been made for the purpose of wardriving, andthe two most common are network stumbler and mini stumbler. Network stumbler isWindows-based and it records SSIDs of unsecured wireless networks before using GPSsatellites to record the exact location of the wireless network. The data is used to create amap used by other wardrivers to find unsecured or inadequately-secured wirelessnetworks. They can then exploit the network and its devices since entrance is free.
+Mini stumbler is a related tool, but has been designed to run on tablets and smartphones.
+This makes wardrivers look less suspicious when identifying or exploiting a network. Thefunctionality of the tool will simply find an unsecured network and record it in an onlinedatabase. Wardrivers can then come later on to exploit the network using a simplified mapof all the identified networks. As for Linux, there is a tool called Kismet that can be used forwardriving.
+The tool is said to be very powerful as it lists unsecured networks and details of the clients
+on networks such as BSSIDs, signal levels, and IP addresses. It can also list the identifiednetworks on maps, allowing attackers to come back and attack the network using theknown information. Primarily, the tool sniffs the 802.11 layer 2 traffic of a Wi-Fi networkand uses any Wi-Fi adapter on the machine it has been installed in (1).
+Conclusion of the reconnaissance chapter
+At the end of both stages of reconnaissance, attackers will have enough information toproceed or cancel a cyber-attack. From an external reconnaissance, they will know thebehavior of users and use it to an organization's disadvantage. The aim is only to find someform of weakness that attackers can then use to gain entry to the networks or systems of anorganization. Internal reconnaissance, on the other hand, will enable attackers to learn moreabout the network in question. Some of the discussed tools are extremely powerful and giveso much information that it could be thought of as being leaked by the network designersthemselves. The attackers become knowledgeable about the vulnerabilities they can exploitwithin a network or system of an organization. At the end of this stage, attackers are thenable to engage an organization on two fronts: either from the users' side or internally fromthe network's vulnerabilities.
+
+
+[Note: PDF has 368 pages, only first 100 pages extracted]

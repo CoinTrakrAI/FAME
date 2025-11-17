@@ -1,0 +1,47 @@
+# GUI and Desktop
+# tkinter comes with Python (usually)
+Pillow>=10.0.0
+
+# Matplotlib for training visualization
+matplotlib>=3.7.0
+numpy>=1.24.0
+
+# Voice Processing
+speechrecognition>=3.10.0
+pyttsx3>=2.90
+# pyaudio - Install separately based on OS:
+# Windows: pip install pipwin && pipwin install pyaudio
+# Linux: sudo apt-get install portaudio19-dev && pip install pyaudio
+# Mac: brew install portaudio && pip install pyaudio
+
+# Docker Integration
+docker>=6.1.0
+python-dotenv>=1.0.0
+
+# AI/ML (optional - for advanced training)
+# torch>=2.0.0  # Uncomment if needed
+# transformers>=4.30.0  # Uncomment if needed
+pandas>=2.0.0
+scikit-learn>=1.3.0
+
+# Web & APIs
+requests>=2.31.0
+aiohttp>=3.9.0
+# websockets>=11.0  # Uncomment if needed
+# flask>=2.3.0  # Uncomment if needed
+
+# Financial Data & Analysis
+yfinance>=0.2.28  # Stock and market data
+pandas>=2.0.0  # Already included, but ensuring it's here for financial analysis
+numpy>=1.24.0  # Already included, but ensuring it's here for calculations
+vaderSentiment>=3.3.2  # Sentiment analysis for financial news
+
+# Optional: Advanced backtesting (uncomment if needed)
+# backtrader>=1.9.78.123  # Advanced backtesting framework
+# zipline-reloaded>=2.4.1  # Alternative backtesting
+
+# Utilities
+psutil>=5.9.0
+# gpustat>=1.1.0  # Uncomment if GPU monitoring needed
+# py-cpuinfo>=9.0.0  # Uncomment if detailed CPU info needed
+

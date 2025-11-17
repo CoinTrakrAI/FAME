@@ -1,0 +1,23 @@
+✅ SERPAPI KEYS CONFIGURED
+
+Primary Key: Configured
+Backup Key: Configured
+
+FAME now has real-time web search capabilities!
+
+To use:
+- Double-click: talk_to_fame_with_search.bat
+- This will start FAME with web search enabled
+
+FAME will automatically:
+- Search the web for current information
+- Use backup key if primary fails
+- Provide real-time answers to your questions
+
+Example queries:
+- "who is the current US president?"
+- "what's happening in the stock market?"
+- "latest news on AI stocks"
+
+The keys are set in the batch file for easy use.
+

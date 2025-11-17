@@ -1,0 +1,3803 @@
+CompTIA
+®
+Security+
+®
+	Study	Guide
+Exam	SY0-501
+Seventh	Edition
+Emmett	Dulaney
+Chuck	Easttom
+
+Senior	Acquisitions	Editor:	Kenyon	Brown	Development	Editor:	Gary	Schwartz	Technical	Editors:	Buzz
+Murphy	and	Warren	Wyrostek	Production	Editor:	Christine	O’Connor	Copy	Editor:	Elizabeth	Welch
+Editorial	Manager:	Mary	Beth	Wakefield	Production	Manager:	Kathleen	Wisor	Associate	Publisher:	Jim
+Minatel	Book	Designers:	Bill	Gibson	and	Judy	Fung	Proofreader:	Kim	Wimpsett
+Indexer:	John	Sleeva
+Project	Coordinator,	Cover:	Brent	Savage	Cover	Designer:	Wiley
+Cover	Image:	Getty	Images	Inc./Jeremy	Woodhouse	Copyright	©	2018	by	John	Wiley	&	Sons,	Inc.,
+Indianapolis,	Indiana	Published	simultaneously	in	Canada	ISBN:	978-1-119-41687-6	
+ISBN:	978-1-119-41690-6	(ebk.)
+ISBN:	978-1-119-41689-0	(ebk.)	Manufactured	in	the	United	States	of	America	No	part	of	this	publication
+may	be	reproduced,	stored	in	a	retrieval	system	or	transmitted	in	any	form	or	by	any	means,	electronic,
+mechanical,	photocopying,	recording,	scanning	or	otherwise,	except	as	permitted	under	Sections	107	or	108
+of	the	1976	United	States	Copyright	Act,	without	either	the	prior	written	permission	of	the	Publisher,	or
+authorization	through	payment	of	the	appropriate	per-copy	fee	to	the	Copyright	Clearance	Center,	222
+Rosewood	Drive,	Danvers,	MA	01923,	(978)	750-8400,	fax	(978)	646-8600.	Requests	to	the	Publisher	for
+permission	should	be	addressed	to	the	Permissions	Department,	John	Wiley	&	Sons,	Inc.,	111	River	Street,
+Hoboken,	NJ	07030,	(201)	748-6011,	fax	(201)	748-6008,	or	online	at
+http://www.wiley.com/go/permissions
+.
+Limit	of	Liability/Disclaimer	of	Warranty:	The	publisher	and	the	author	make	no	representations	or
+warranties	with	respect	to	the	accuracy	or	completeness	of	the	contents	of	this	work	and	specifically
+disclaim	all	warranties,	including	without	limitation	warranties	of	fitness	for	a	particular	purpose.	No
+warranty	may	be	created	or	extended	by	sales	or	promotional	materials.	The	advice	and	strategies	contained
+herein	may	not	be	suitable	for	every	situation.	This	work	is	sold	with	the	understanding	that	the	publisher	is
+not	engaged	in	rendering	legal,	accounting,	or	other	professional	services.	If	professional	assistance	is
+required,	the	services	of	a	competent	professional	person	should	be	sought.	Neither	the	publisher	nor	the
+author	shall	be	liable	for	damages	arising	herefrom.	The	fact	that	an	organization	or	Web	site	is	referred	to
+in	this	work	as	a	citation	and/or	a	potential	source	of	further	information	does	not	mean	that	the	author	or
+the	publisher	endorses	the	information	the	organization	or	Web	site	may	provide	or	recommendations	it	may
+make.	Further,	readers	should	be	aware	that	Internet	Web	sites	listed	in	this	work	may	have	changed	or
+disappeared	between	when	this	work	was	written	and	when	it	is	read.
+For	general	information	on	our	other	products	and	services	or	to	obtain	technical	support,	please	contact	our
+Customer	Care	Department	within	the	U.S.	at	(877)	762-2974,	outside	the	U.S.	at	(317)	572-3993	or	fax
+(317)	572-4002.
+Wiley	publishes	in	a	variety	of	print	and	electronic	formats	and	by	print-on-demand.	Some	material
+included	with	standard	print	versions	of	this	book	may	not	be	included	in	e-books	or	in	print-on-demand.	If
+this	book	refers	to	media	such	as	a	CD	or	DVD	that	is	not	included	in	the	version	you	purchased,	you	may
+download	this	material	at	
+http://booksupport.wiley.com
+.	For	more	information	about	Wiley	products,	visit
+www.wiley.com
+.
+Library	of	Congress	Control	Number:
+	2017955410
+TRADEMARKS:	Wiley,	the	Wiley	logo,	and	the	Sybex	logo	are	trademarks	or	registered	trademarks	of
+John	Wiley	&	Sons,	Inc.	and/or	its	affiliates,	in	the	United	States	and	other	countries,	and	may	not	be	used
+without	written	permission.	CompTIA	and	Security+	are	trademarks	or	registered	trademarks	of	CompTIA,
+Inc.	All	other	trademarks	are	the	property	of	their	respective	owners.	John	Wiley	&	Sons,	Inc.	is	not
+associated	with	any	product	or	vendor	mentioned	in	this	book.
+
+         
+For	Emmett	Buis	and	Wolfgang	Scisney:	bookends.
+         
+—Emmett
+
+Acknowledgments
+This	book	would	not	exist	were	it	not	for	Mike	Pastore,	the	author	of	the	first
+edition.	He	took	a	set	of	convoluted	objectives	for	a	broad	exam	and	wrote	the
+foundation	of	the	study	guide	that	you	now	hold	in	your	hands.	While	the	exam
+and	their	associated	objectives	improved	with	each	iteration,	all	subsequent
+editions	of	this	text	are	forever	indebted	to	his	knowledge,	hard	work,	and
+brilliance	so	early	on.
+Thanks	are	also	due	to	Gary	Schwartz,	for	being	one	of	the	best	editors	in
+publishing	to	work	with,	and	to	all	of	those	at	Wiley	who	helped	with	this	title.
+
+About	the	Authors
+Emmett	Dulaney
+	
+is	a	professor	at	a	small	university	in	Indiana	and	the	former
+director	of	training	for	Mercury	Technical	Solutions.	He	is	a	columnist	for
+Certification	Magazine
+	and	the	author	of	more	than	30	books	on	certification,
+operating	systems,	and	cross-platform	integration.	Emmett	can	be	reached	at
+eadulaney@comcast.net
+.
+Chuck	Easttom
+	
+is	a	researcher,	consultant,	and	trainer	in	computer	science	and
+computer	security.	He	has	expertise	in	software	engineering,	operating	systems,
+databases,	web	development,	and	computer	networking.	He	travels	the	world
+teaching	and	consulting	on	digital	forensics,	cyber	security,	cryptology,	and
+related	topics.	He	has	authored	22	books	and	counting,	as	well	as	dozens	of
+research	papers.	Chuck	is	additionally	an	inventor	with	10	patented	computer-
+science	inventions.	He	also	frequently	works	as	an	expert	witness	in	computer-
+related	cases.	His	website	is	
+http://chuckeasttom.com/
+.
+
+Contents
+Acknowledgments
+About	the	Authors
+Introduction
+Before	You	Begin	the	CompTIA	Security+	Certification	Exam
+Why	Become	Security+	Certified?
+How	to	Become	a	Security+	Certified	Professional
+Who	Should	Read	This	Book?
+What	Does	This	Book	Cover?
+Tips	for	Taking	the	Security+	Exam
+What’s	Included	in	the	Book
+Interactive	Online	Learning	Environment	and	Test	Bank
+How	to	Use	This	Book	and	Study	Tools
+Exam	SY0-501	Exam	Objectives
+SY0-501	Certification	Exam	Objective	Map
+Assessment	Test
+Answers	to	Assessment	Test
+Chapter	1	Managing	Risk
+Risk	Terminology
+Threat	Assessment
+Risk	Assessment
+Developing	Policies,	Standards,	and	Guidelines
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	2	Monitoring	and	Diagnosing	Networks
+Monitoring	and	Diagnosing	Networks	Terminology
+Frameworks,	Best	Practices,	and	Configuration	Guides
+Secure	Network	Architecture	Concepts
+
+Secure	Systems	Design
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	3	Understanding	Devices	and	Infrastructure
+Infrastructure	Terminology
+Designing	with	Security	in	Mind
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	4	Identity	and	Access	Management
+Using	Tools	to	Assess	Your	Network
+Troubleshooting	Common	
+Security	Issues
+Security	Technologies
+Identity	and	Access	Management	Concepts
+Install	and	Configure	Identity	and	Access	Services
+File	and	Database	Security
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	5	Wireless	Network	Threats
+Wireless	Threat	Terminology
+Wireless	Vulnerabilities	to	Know
+Wireless	Commonsense
+Wireless	Attack	Analogy
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	6	Securing	the	Cloud
+Cloud-Related	Terminology
+
+Working	with	Cloud	Computing
+Working	with	Virtualization
+Security	and	the	Cloud
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	7	Host,	Data,	and	Application	Security
+Threat	Actors	and	Attributes
+Use	of	Open	Source	Intelligence
+Types	of	Vulnerabilities
+Embedded	Systems	Security
+Application	Vulnerabilities
+Secure	Programming
+Other	Application	Security	Issues
+Code	Issues
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	8	Cryptography
+An	Overview	of	Cryptography
+Modern	Cryptography
+Using	Cryptographic	Systems
+Understanding	Cryptography	Standards	and	Protocols
+Public	Key	Infrastructure
+Using	Public	Key	Infrastructure
+Authentication
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	9	Threats,	Attacks,	and	Vulnerabilities
+
+Threat	and	Attack	Terminology
+Living	in	a	World	of	Viruses
+Malware	and	Crypto-Malware
+Understanding	Various	Types	of	Application/Service	Attacks
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	10	Social	Engineering	and	Other	Foes
+Social	Engineering	and	Physical	Security	Terminology
+Understanding	Social	Engineering
+Understanding	Physical	Security
+Various	Control	Types
+Data	Security	and	Privacy	Practices
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	11	Security	Administration
+Connection	Types
+Mobile	Devices
+Account	Management	Concepts
+Summary
+Exam	Essentials
+Review	Questions
+Chapter	12	Disaster	Recovery	and	Incident	Response
+Disaster	and	Incident	Related	Terminology
+Penetration	Testing
+Issues	Associated	with	Business	Continuity
+Summary
+Exam	Essentials
+Review	Questions
+
+Appendix	Answers	to	Review	Questions
+Chapter	1	:	Managing	Risk
+Chapter	2	:	Monitoring	and	Diagnosing	Networks
+Chapter	3	:	Understanding	Devices	and	Infrastructure
+Chapter	4	:	Identity	and	Access	Management
+Chapter	5	:	Wireless	Network	Threats
+Chapter	6	:	Securing	the	Cloud
+Chapter	7	:	Host,	Data,	and	Application	Security
+Chapter	8	:	Cryptography
+Chapter	9	:	Threats,	Attacks,	and	Vulnerabilities
+Chapter	10	:	Social	Engineering	and	Other	Foes
+Chapter	11	:	Security	Administration
+Chapter	12	:	Disaster	Recovery	and	Incident	Response
+Advert
+EULA
+
+List	of	Tables
+Chapter	1
+TABLE	1.1
+TABLE	1.2
+TABLE	1.3
+Chapter	4
+TABLE	4.1
+TABLE	4.2
+TABLE	4.3
+TABLE	4.4
+TABLE	4.5
+TABLE	4.6
+TABLE	4.7
+Chapter	5
+TABLE	5.1
+Chapter	7
+TABLE	7.1
+Chapter	8
+TABLE	8.1
+Chapter	9
+TABLE	9.1
+Chapter	10
+TABLE	10.1
+
+List	of	Illustrations
+Chapter	1
+FIGURE	1.1
+	The	four	primary	RAID	technologies	used	in	systems
+Chapter	2
+FIGURE	2.1
+	PCI-DSS	control	objectives
+FIGURE	2.2
+	A	typical	DMZ
+FIGURE	2.3
+	Network	segmentation
+FIGURE	2.4
+	Two	LANs	connected	using	a	VPN	across	the	Internet
+FIGURE	2.5
+	A	proxy	firewall	blocking	network	access	from	external
+networks
+FIGURE	2.6
+	Windows	10	Control	Panel
+FIGURE	2.7
+	Windows	10	System	and	Security
+FIGURE	2.8
+	Windows	10	Administrative	Tools	screen
+FIGURE	2.9
+	Windows	10	Services
+Chapter	3
+FIGURE	3.1
+	A	proxy	firewall	blocking	network	access	from	external
+networks
+FIGURE	3.2
+	Two	LANs	connected	using	a	VPN	across	the	Internet
+FIGURE	3.3
+	An	IDS	and	a	firewall	working	together	to	secure	a
+network
+FIGURE	3.4
+	The	components	of	an	IDS	working	together	to	provide
+network	monitoring
+FIGURE	3.5
+	A	signature-based	detection	system	in	action
+FIGURE	3.6
+	AD-IDS	using	expert	system	technology	to	evaluate
+risks
+FIGURE	3.7
+	NIDS	placement	in	a	network	determines	what	data	will
+be	analyzed.
+FIGURE	3.8
+	A	hub	being	used	to	attach	the	NIDS	to	the	network
+
+FIGURE	3.9
+	An	IPS	instructing	TCP	to	reset	all	connections
+FIGURE	3.10
+	An	IPS	instructing	the	firewall	to	close	port	80	for	60
+seconds	to	thwart	an	IIS	attack
+FIGURE	3.11
+	A	network	honeypot	deceives	an	attacker	and	gathers
+intelligence.
+FIGURE	3.12
+	A	host-based	IDS	interacting	with	the	operating	system
+FIGURE	3.13
+	Router	connecting	two	LANs
+FIGURE	3.14
+	A	corporate	network	implementing	routers	for
+segmentation	and	security
+FIGURE	3.15
+	Switching	between	two	systems
+Chapter	4
+FIGURE	4.1
+	tcpdump
+FIGURE	4.2
+	Wireshark
+FIGURE	4.3
+	Wireshark	follow	conversation
+FIGURE	4.4
+	SolarWinds	network	topology	scan
+FIGURE	4.5
+	SolarWinds	scan	results
+FIGURE	4.6
+	LanHelper
+FIGURE	4.7
+	Aircrack
+FIGURE	4.8
+	pwdump
+FIGURE	4.9
+	Ophcrack
+FIGURE	4.10
+	Nessus	report
+FIGURE	4.11
+	MBSA	output
+FIGURE	4.12
+	OWASP	ZAP	output
+FIGURE	4.13
+	
+ping
+FIGURE	4.14
+	
+netstat
+FIGURE	4.15
+	
+tracert
+FIGURE	4.16
+	nslookup
+FIGURE	4.17
+	
+arp
+
+FIGURE	4.18
+	
+ipconfig
+FIGURE	4.19
+	
+netcat
+FIGURE	4.20
+	Malwarebytes
+FIGURE	4.21
+	Windows	Firewall
+FIGURE	4.22
+	A	logon	process	occurring	on	a	workstation
+FIGURE	4.23
+	Kerberos	authentication	process
+FIGURE	4.24
+	The	RADIUS	client	manages	the	local	connection	and
+authenticates	against	a	central	server
+Chapter	5
+FIGURE	5.1
+	Wireless	security	settings	for	a	simple	router
+FIGURE	5.2
+	Examples	of	some	questionable	wireless	networks
+Chapter	6
+FIGURE	6.1
+	The	SaaS	service	model
+FIGURE	6.2
+	The	PaaS	service	model
+FIGURE	6.3
+	The	IaaS	service	model
+FIGURE	6.4
+	Type	I	hypervisor	model
+FIGURE	6.5
+	Type	II	hypervisor	model
+Chapter	7
+FIGURE	7.1
+	Dark	web	market
+FIGURE	7.2
+	ThreatCrowd
+FIGURE	7.3
+	OpenPhish
+FIGURE	7.4
+	OSINT	framework
+FIGURE	7.5
+	Shodan
+FIGURE	7.6
+	Firefox
+FIGURE	7.7
+	Prototyping
+Chapter	8
+FIGURE	8.1
+	A	simple	transposition	cipher	in	action
+
+FIGURE	8.2
+	Symmetric	encryption	system
+FIGURE	8.3
+	A	two-key	system	in	use
+FIGURE	8.4
+	The	MAC	value	is	calculated	by	the	sender	and	receiver
+using	the	same	algorithm.
+FIGURE	8.5
+	Digital	signature	processing	steps
+FIGURE	8.6
+	The	PGP	encryption	system
+FIGURE	8.7
+	The	SSL	connection	process
+FIGURE	8.8
+	The	TLS	connection	process
+Chapter	9
+FIGURE	9.1
+	Virus	spreading	from	an	infected	system	using	the
+network	or	removable	media
+FIGURE	9.2
+	An	email	virus	spreading	geometrically	to	other	users
+FIGURE	9.3
+	A	logic	bomb	being	initiated
+FIGURE	9.4
+	A	backdoor	attack	in	progress
+FIGURE	9.5
+	Distributed	denial-of-service	attack
+FIGURE	9.6
+	A	man-in-the-middle	attack	occurring	between	a	client
+and	a	web	server
+FIGURE	9.7
+	A	replay	attack	occurring
+FIGURE	9.8
+	A	spoofing	attack	during	logon
+Chapter	10
+FIGURE	10.1
+	An	example	of	vishing
+FIGURE	10.2
+	An	example	of	tailgating
+FIGURE	10.3
+	An	example	of	dumpster	diving
+FIGURE	10.4
+	An	example	of	shoulder	surfing
+FIGURE	10.5
+	Falsely	sounding	an	alarm	is	a	type	of	hoax.
+FIGURE	10.6
+	The	three-layer	security	model
+FIGURE	10.7
+	A	cable	can	be	used	to	keep	a	desktop	machine	from
+easily	being	taken.
+
+FIGURE	10.8
+	If	theft	of	equipment	is	a	possibility,	run	one	end	of	the
+cable	from	the	monitor	to	the	desktop	computer	through	a	hole	in	the
+work	desk.
+FIGURE	10.9
+	A	mantrap	in	action
+FIGURE	10.10
+	A	hot	and	cold	aisle	design
+FIGURE	10.11
+	Water-based	fire-suppression	system
+FIGURE	10.12
+	Electromagnetic	interference	(EMI)	pickup	in	a	data
+cable
+FIGURE	10.13
+	RF	desensitization	occurring	as	a	result	of	cell	phone
+interference
+FIGURE	10.14
+	A	cable	in	the	security	slot	keeps	the	laptop	from
+easily	being	removed.
+Chapter	11
+FIGURE	11.1
+	Bluesnarfing
+FIGURE	11.2
+	Evil	twin	rogue	access	point
+FIGURE	11.3
+	Geofencing
+Chapter	12
+FIGURE	12.1
+	Database	transaction	auditing	process
+FIGURE	12.2
+	Grandfather,	Father,	Son	backup	method
+FIGURE	12.3
+	Full	Archival	backup	method
+FIGURE	12.4
+	A	backup	server	archiving	server	files
+FIGURE	12.5
+	System	regeneration	process	for	a	workstation	or	server
+
+Introduction
+If	you’re	preparing	to	take	the	Security+	exam,	you’ll	undoubtedly	want	to	find
+as	much	information	as	you	can	about	computer	and	physical	security.	The	more
+information	you	have	at	your	disposal	and	the	more	hands-on	experience	you
+gain,	the	better	off	you’ll	be	when	attempting	the	exam.	This	study	guide	was
+written	with	that	in	mind.	The	goal	was	to	provide	enough	information	to
+prepare	you	for	the	test,	but	not	so	much	that	you’ll	be	overloaded	with
+information	that’s	outside	the	scope	of	the	exam.
+This	book	presents	the	material	at	an	intermediate	technical	level.	Experience
+with	and	knowledge	of	security	concepts,	operating	systems,	and	application
+systems	will	help	you	get	a	full	understanding	of	the	challenges	that	you’ll	face
+as	a	security	professional.
+We’ve	included	review	questions	at	the	end	of	each	chapter	to	give	you	a	taste	of
+what	it’s	like	to	take	the	exam.	If	you’re	already	working	in	the	security	field,	we
+recommend	that	you	check	out	these	questions	first	to	gauge	your	level	of
+expertise.	You	can	then	use	the	book	mainly	to	fill	in	the	gaps	in	your	current
+knowledge.	This	study	guide	will	help	you	round	out	your	knowledge	base
+before	tackling	the	exam.
+If	you	can	answer	90	percent	or	more	of	the	review	questions	correctly	for	a
+given	chapter,	you	can	feel	safe	moving	on	to	the	next	chapter.	If	you’re	unable
+to	answer	that	many	correctly,	reread	the	chapter	and	try	the	questions	again.
+Your	score	should	improve.
+ Don’t	just	study	the	questions	and	answers!	The	questions	on	the
+actual	exam	will	be	different	from	the	practice	questions	included	in	this
+book.	The	exam	is	designed	to	test	your	knowledge	of	a	concept	or
+objective,	so	use	this	book	to	learn	the	objectives	behind	the	questions.
+
+Before	You	Begin	the	CompTIA	Security+
+Certification	Exam
+Before	you	begin	studying	for	the	exam,	it’s	imperative	that	you	understand	a
+few	things	about	the	Security+	certification.	Security+	is	a	certification	from
+CompTIA	(an	industry	association	responsible	for	many	entry-level
+certifications)	granted	to	those	who	obtain	a	passing	score	on	a	single	entry-level
+exam.	In	addition	to	adding	Security+	to	your	résumé	as	a	stand-alone
+certification,	you	can	use	it	as	an	elective	in	many	vendor-certification	tracks.
+ The	CompTIA	Advance	Security	Practitioner	(CASP)
+certification	is	designed	for	those	with	up	to	10	years	of	security	experience.
+It	builds	on	Security+	and	authenticates	knowledge	at	a	higher	level.
+Between	Security+	and	CASP,	CompTIA	created	a	Cybersecurity	Analyst
+certification	(CSA+)	as	a	bridge	that	remains	vendor-neutral	and	verifies	that
+successful	candidates	have	the	knowledge	and	skills	required	to	configure
+and	use	threat	detection	tools,	perform	data	analysis,	and	interpret	the	results
+to	identify	vulnerabilities,	threats,	and	risks	to	an	organization,	with	the	end
+goal	of	securing	and	protecting	applications	and	systems	within	an
+organization.
+When	you’re	studying	for	any	exam,	the	first	step	in	preparation	should	always
+be	to	find	out	as	much	as	possible	about	the	test:	the	more	you	know	up	front,
+the	better	you	can	plan	your	course	of	study.	The	current	exam,	and	the	one
+addressed	by	this	book,	is	the	2017	update.	Although	all	variables	are	subject	to
+change,	as	this	book	is	being	written,	the	exam	consists	of	100	questions.	You
+have	90	minutes	to	take	the	exam,	and	the	passing	score	is	based	on	a	scale	from
+100	to	900.	Pearson	VUE	testing	centers	administer	the	exam	throughout	the
+United	States	and	several	other	countries.
+The	exam	is	predominantly	multiple	choice	with	short,	concise	questions,
+usually	followed	by	four	possible	answers.	Don’t	expect	lengthy	scenarios	and
+complex	solutions.	This	is	an	entry-level	exam	of	knowledge-level	topics;	you’re
+expected	to	know	a	great	deal	about	security	topics	from	an	overview
+perspective	rather	than	implementation.	In	many	books,	the	glossary	is	filler
+
+added	to	the	back	of	the	text;	this	book’s	glossary	(located	on	the	book’s	online
+test	bank	at	
+www.wiley.com/go/sybextestprep
+)	should	be	considered	necessary
+reading.	You’re	likely	to	see	a	question	on	the	exam	about	what	a	Trojan	horse
+is,	not	how	to	identify	it	at	the	code	level.	Spend	your	study	time	learning	the
+different	security	solutions	and	identifying	potential	security	vulnerabilities	and
+where	they	would	be	applicable.	Don’t	get	bogged	down	in	step-by-step	details;
+those	are	saved	for	certification	exams	beyond	the	scope	of	Security+.
+You	should	also	know	that	CompTIA	is	notorious	for	including	vague	questions
+on	all	of	its	exams.	You	might	see	a	question	for	which	two	of	the	possible	four
+answers	are	correct—but	you	can	choose	only	one.	Use	your	knowledge,	logic,
+and	intuition	to	choose	the	best	answer	and	then	move	on.	Sometimes,	the
+questions	are	worded	in	ways	that	would	make	English	majors	cringe—a	typo
+here,	an	incorrect	verb	there.	Don’t	let	this	frustrate	you;	answer	the	question,
+and	go	to	the	next.	Although	we	haven’t	intentionally	added	typos	or	other
+grammatical	errors,	the	questions	throughout	this	book	make	every	attempt	to	re-
+create	the	structure	and	appearance	of	the	real	exam	questions.
+ CompTIA	frequently	does	what	is	called	
+item	seeding
+,	which	is
+the	practice	of	including	unscored	questions	on	exams.	It	does	so	to	gather
+psychometric	data,	which	is	then	used	when	developing	new	versions	of	the
+exam.	Before	you	take	it,	you	are	told	that	your	exam	may	include	unscored
+questions.	So,	if	you	come	across	a	question	that	does	not	appear	to	map	to
+any	of	the	exam	objectives—or	for	that	matter,	does	not	appear	to	belong	in
+the	exam—it	is	likely	a	seeded	question.	You	never	really	know	whether	or
+not	a	question	is	seeded,	however,	so	always	make	your	best	effort	to	answer
+every	question.
+As	you	study,	you	need	to	know	that	the	exam	you’ll	take	was	created	at	a
+certain	point	in	time.	You	won’t	see	a	question	about	the	new	virus	that	hit	your
+systems	last	week,	but	you’ll	see	questions	about	concepts	that	existed	when	this
+exam	was	created.	Updating	the	exam	is	a	difficult	process	and	results	in	an
+increment	in	the	exam	number.
+
+Why	Become	Security+	Certified?
+There	are	a	number	of	reasons	for	obtaining	a	Security+	certification.	These
+include	the	following:
+It	provides	proof	of	professional	achievement.
+	Specialized	certifications	are
+the	best	way	to	stand	out	from	the	crowd.	In	this	age	of	technology	certifications,
+you’ll	find	hundreds	of	thousands	of	administrators	who	have	successfully
+completed	the	Microsoft	and	Cisco	certification	tracks.	To	set	yourself	apart
+from	the	crowd,	you	need	a	little	bit	more.	The	Security+	exam	is	part	of	the
+CompTIA	certification	track	that	includes	A+,	Network+,	and	other	vendor-
+neutral	certifications	such	as	Linux+,	Project+,	and	more.	This	exam	will	help
+you	prepare	for	more	advanced	certifications	because	it	provides	a	solid
+grounding	in	security	concepts,	and	it	will	give	you	the	recognition	you	deserve.
+It	increases	your	marketability.
+	Almost	anyone	can	bluff	their	way	through	an
+interview.	Once	you’re	Security+	certified,	you’ll	have	the	credentials	to	prove
+your	competency.	Moreover,	certifications	can’t	be	taken	from	you	when	you
+change	jobs—you	can	take	that	certification	with	you	to	any	position	you	accept.
+It	provides	opportunity	for	advancement.
+	Individuals	who	prove	themselves
+to	be	competent	and	dedicated	are	the	ones	who	will	most	likely	be	promoted.
+Becoming	certified	is	a	great	way	to	prove	your	skill	level	and	show	your
+employer	that	you’re	committed	to	improving	your	skill	set.	Look	around	you	at
+those	who	are	certified:	they	are	probably	the	people	who	receive	good	pay
+raises	and	promotions.
+It	fulfills	training	requirements.
+	Many	companies	have	set	training
+requirements	for	their	staff	so	that	they	stay	up-to-date	on	the	latest	technologies.
+Having	a	certification	program	in	security	provides	administrators	with	another
+certification	path	to	follow	when	they	have	exhausted	some	of	the	other
+industry-standard	certifications.
+It	raises	customer	confidence.
+	As	companies	discover	the	advantages	of
+CompTIA,	they	will	undoubtedly	require	qualified	staff	to	achieve	these
+certifications.	Many	companies	outsource	their	work	to	consulting	firms	with
+experience	working	with	security.	Firms	that	have	certified	staff	have	a	definite
+advantage	over	firms	that	don’t.
+
+How	to	Become	a	Security+	Certified
+Professional
+The	first	place	to	start	to	get	your	certification	is	to	register	for	the	exam	at	any
+Pearson	VUE	testing	center.	Exam	pricing	might	vary	by	country	or	by
+CompTIA	membership.	You	can	contact	Pearson	at:
+Pearson	VUE
+www.vue.com/comptia
+U.S.	and	Canada:	877-551-PLUS	(7587)
+When	you	schedule	the	exam,	you’ll	receive	instructions	regarding	appointment
+and	cancellation	procedures,	ID	requirements,	and	information	about	the	testing
+center	location.	In	addition,	you’ll	receive	a	registration	and	payment
+confirmation	letter.	Exams	can	be	scheduled	up	to	six	weeks	out	or	as	late	as	the
+next	day	(or,	in	some	cases,	even	on	the	same	day).
+ Exam	prices	and	codes	may	vary	based	on	the	country	in	which
+the	exam	is	administered.	For	detailed	pricing	and	exam	registration
+procedures,	refer	to	CompTIA’s	website	at	
+http://certification.comptia.org
+.
+After	you’ve	successfully	passed	your	Security+	exam,	CompTIA	will	award
+you	a	certification.	Within	four	to	six	weeks	of	passing	the	exam,	you’ll	receive
+your	official	CompTIA	Security+	certificate	and	ID	card.	(If	you	don’t	receive
+these	within	eight	weeks	of	taking	the	test,	contact	CompTIA	directly	using	the
+information	found	in	your	registration	packet.)
+
+Who	Should	Read	This	Book?
+If	you	want	to	acquire	a	solid	foundation	in	computer	security	and	your	goal	is	to
+prepare	for	the	exam	by	learning	how	to	develop	and	improve	security,	this	book
+is	for	you.	You’ll	find	clear	explanations	of	the	concepts	that	you	need	to	grasp
+and	plenty	of	help	to	achieve	the	high	level	of	professional	competency	that	you
+need	in	order	to	succeed	in	your	chosen	field.
+If	you	want	to	become	certified	as	a	certification	holder,	this	book	is	definitely
+what	you	need.	However,	if	you	just	want	to	attempt	to	pass	the	exam	without
+really	understanding	security,	this	study	guide	isn’t	for	you.	It’s	written	for
+people	who	want	to	acquire	hands-on	skills	and	in-depth	knowledge	of	computer
+security.
+ In	addition	to	reading	this	book,	you	might	consider	downloading
+and	reading	the	white	papers	on	security	that	are	scattered	throughout	the
+Internet.
+
+What	Does	This	Book	Cover?
+This	book	covers	everything	you	need	to	know	to	pass	the	Security+	exam.
+Chapter	1	:	Managing	Risk
+Chapter	2	:	Designing	and	Diagnosing	Networks
+Chapter	3	:	Understanding	Devices	and	Infrastructure
+Chapter	4	:	Identity	and	Access	Management
+Chapter	5	:	Wireless	Network	Threats
+Chapter	6	:	Securing	the	Cloud
+Chapter	7	:	Data	and	Privacy	Security	Practices
+Chapter	8	:	Cryptography
+Chapter	9	:	Threats,	Attacks,	and	Vulnerabilities
+Chapter	10	:	Social	Engineering	and	Other	Foes
+Chapter	11	:	Security	Administration
+Chapter	12	:	Disaster	Recovery	and	Incident	Response
+
+Tips	for	Taking	the	Security+	Exam
+Here	are	some	general	tips	for	taking	your	exam:
+Bring	two	forms	of	ID	with	you.	One	must	be	a	photo	ID,	such	as	a	driver’s
+license.	The	other	can	be	a	major	credit	card	or	a	passport.	Both	forms	must
+include	a	signature.
+Arrive	early	at	the	exam	center	so	that	you	can	relax	and	review	your	study
+materials,	particularly	tables	and	lists	of	exam-related	information.	After
+you	are	ready	to	enter	the	testing	room,	you	will	need	to	leave	everything
+outside;	you	won’t	be	able	to	bring	any	materials	into	the	testing	area.
+Read	the	questions	carefully.	Don’t	be	tempted	to	jump	to	an	early
+conclusion.	Make	sure	that	you	know	exactly	what	each	question	is	asking.
+Don’t	leave	any	unanswered	questions.	Unanswered	questions	are	scored
+against	you.
+There	will	be	questions	with	multiple	correct	responses.	When	there	is	more
+than	one	correct	answer,	a	message	at	the	bottom	of	the	screen	will	prompt
+you	to	either	“Choose	two”	or	“Choose	all	that	apply.”	Be	sure	to	read	the
+messages	displayed	to	know	how	many	correct	answers	you	must	choose.
+When	answering	multiple-choice	questions	about	which	you’re	unsure,	use
+a	process	of	elimination	to	get	rid	of	the	obviously	incorrect	answers	first.
+Doing	so	will	improve	your	odds	if	you	need	to	make	an	educated	guess.
+On	form-based	tests	(nonadaptive),	because	the	hard	questions	will	take	the
+most	time,	save	them	for	last.	You	can	move	forward	and	backward	through
+the	exam.
+For	the	latest	pricing	on	the	exams	and	updates	to	the	registration
+procedures,	visit	CompTIA’s	website	at	
+http://certification.comptia.org
+.
+
+What’s	Included	in	the	Book
+We’ve	included	several	testing	features	in	this	book	and	on	the	companion
+website.	These	tools	will	help	you	retain	vital	exam	content	as	well	as	prepare
+you	to	sit	for	the	actual	exam:
+Assessment	Test
+	At	the	end	of	this	introduction	is	an	assessment	test	that	you
+can	use	to	check	your	readiness	for	the	exam.	Take	this	test	before	you	start
+reading	the	book;	it	will	help	you	determine	the	areas	in	which	you	might	need
+to	brush	up.	The	answers	to	the	assessment	test	questions	appear	on	a	separate
+page	after	the	last	question	of	the	test.	Each	answer	includes	an	explanation	and
+a	note	telling	you	the	chapter	in	which	the	material	appears.
+Objective	Map	and	Opening	List	of	Objectives
+	After	this	book’s	introduction,
+we	have	included	a	detailed	exam	objective	map	showing	you	where	each	of	the
+exam	objectives	is	covered	in	this	book.	In	addition,	each	chapter	opens	with	a
+list	of	the	exam	objectives	it	covers.	Use	these	to	see	exactly	where	each	of	the
+exam	topics	is	covered.
+Exam	Essentials
+	Just	before	the	Summary,	each	chapter	includes	a	number	of
+exam	essentials.	These	are	the	key	topics	that	you	should	take	from	the	chapter
+in	terms	of	areas	to	focus	on	when	preparing	for	the	exam.
+Review	Questions
+	To	test	your	knowledge	as	you	progress	throughout	the	book,
+there	are	review	questions	at	the	end	of	each	chapter.	As	you	finish	each	chapter,
+answer	the	review	questions	and	then	check	your	answers.	The	correct	answers
+and	explanations	are	found	in	Appendix	A.	You	can	go	back	to	reread	the	section
+that	deals	with	each	question	that	you	got	wrong	to	ensure	that	you	answer
+correctly	the	next	time	you’re	tested	on	the	material.
+ The	Sybex	Interactive	Online	Test	Bank,	flashcards,	bonus	labs,
+and	glossary	can	be	accessed	at	
+http://www.wiley.com/go/sybextestprep
+.
+
+Interactive	Online	Learning	Environment	and
+Test	Bank
+The	interactive	online	learning	environment	that	accompanies	
+CompTIA
+Security+	Study	Guide:	Exam	SY0-501
+	provides	a	test	bank	with	study	tools	to
+help	you	prepare	for	the	certification	exams	and	increase	your	chances	of
+passing	them	the	first	time!	The	test	bank	includes	the	following	elements:
+Sample	Tests
+	All	of	the	questions	in	this	book,	including	the	assessment	test	that
+you’ll	find	at	the	end	of	this	introduction	and	the	chapter	tests,	which	include	the
+review	questions	at	the	end	of	each	chapter,	are	provided.	In	addition,	there	are
+two	practice	exams.	Use	these	questions	to	test	your	knowledge	of	the	study
+guide	material.	The	online	test	bank	runs	on	multiple	devices.
+Electronic	Flashcards
+	One	set	of	questions	is	provided	in	digital	flashcard
+format	(a	question	followed	by	a	single	correct	answer).	You	can	use	the
+flashcards	to	reinforce	your	learning	and	provide	last-minute	test	prep	before	the
+exam.
+Glossary
+	The	key	terms	from	this	book	and	their	definitions	are	available	as	a
+fully	searchable	PDF.
+Bonus	Labs
+	Also	online,	you	will	find	additional	bonus	labs.	These	include
+activities	such	as	labs	that	you	can	do	on	a	system	as	well	as	mental	exercises
+(crossword	puzzles,	word	searches,	and	so	forth)	to	help	you	memorize	key
+concepts.
+ You	can	access	the	online	test	bank	at
+www.wiley.com/go/sybextestprep
+.
+
+How	to	Use	This	Book	and	Study	Tools
+If	you	want	a	solid	foundation	for	preparing	for	the	Security+	exam,	this	is	the
+book	for	you.	We’ve	spent	countless	hours	putting	together	this	book	with	the
+sole	intention	of	helping	you	prepare	for	the	exam.
+This	book	is	loaded	with	valuable	information,	and	you	will	get	the	most	out	of
+your	study	time	if	you	understand	how	we	put	it	together.	Here’s	a	list	that
+describes	how	to	approach	studying:
+1
+.	
+Take	the	assessment	test	immediately	following	this	introduction.	It’s	okay
+if	you	don’t	know	any	of	the	answers—that’s	what	this	book	is	for.
+Carefully	read	over	the	explanations	for	any	question	that	you	get	wrong,
+and	make	a	note	of	the	chapters	where	that	material	is	covered.
+2
+.	
+Study	each	chapter	carefully,	making	sure	that	you	fully	understand	the
+information	and	the	exam	objectives	listed	at	the	beginning	of	each	one.
+Again,	pay	extra-close	attention	to	any	chapter	that	includes	material
+covered	in	the	questions	that	you	missed	on	the	assessment	test.
+3
+.	
+Read	over	the	summary	and	exam	essentials.	These	will	highlight	the
+sections	from	the	chapter	with	which	you	need	to	be	familiar	before	sitting
+for	the	exam.
+4
+.	
+Answer	all	of	the	review	questions	at	the	end	of	each	chapter.	Specifically
+note	any	questions	that	confuse	you,	and	study	those	sections	of	the	book
+again.	Don’t	just	skim	these	questions—make	sure	that	you	understand	each
+answer	completely.
+5
+.	
+Go	over	the	electronic	flashcards.	These	help	you	to	prepare	for	the	latest
+Security+	exam,	and	they’re	really	great	study	tools.
+6
+.	
+Take	the	practice	exams.
+Performance-Based	Questions
+CompTIA	introduced	performance-based	questions	in	their	certification
+exams,	including	Security+,	several	years	ago.	These	are	not	the	traditional
+multiple-choice	questions	with	which	you’re	probably	familiar.	These
+questions	require	the	candidate	to	know	how	to	perform	a	specific	task	or
+
+series	of	tasks.	Although	the	new	Security+	exam	was	not	live	by	the	time
+this	book	was	published,	we	have	a	pretty	good	idea	of	how	these	questions
+will	be	laid	out.	In	some	cases,	the	candidate	might	be	asked	to	fill	in	the
+blank	with	the	best	answer.	Alternatively,	you	may	be	asked	to	match	certain
+items	from	one	list	into	another.	Some	of	the	more	involved	performance-
+based	questions	might	present	the	candidate	with	a	scenario	and	then	ask
+them	to	complete	a	task.	You	will	be	taken	to	a	simulated	environment
+where	you	will	have	to	perform	a	series	of	steps,	and	you	will	be	graded	on
+how	well	you	complete	the	task.
+The	Sybex	test	engine	does	not	have	the	ability	to	include	performance-
+based	questions.	However,	we	have	included	numerous	hands-on	exercises
+throughout	the	book	that	are	designed	to	measure	how	well	you	understand
+the	chapter	topics.	Being	able	to	think	logically	is	a	great	way	to	learn.
+
+Exam	SY0-501	Exam	Objectives
+CompTIA	goes	to	great	lengths	to	ensure	that	its	certification	programs
+accurately	reflect	the	IT	industry’s	best	practices.	They	do	this	by	establishing
+committees	for	each	of	its	exam	programs.	Each	committee	comprises	a	small
+group	of	IT	professionals,	training	providers,	and	publishers	who	are	responsible
+for	establishing	the	exam’s	baseline	competency	level	and	who	determine	the
+appropriate	target-audience	level.
+Once	these	factors	are	determined,	CompTIA	shares	this	information	with	a
+group	of	hand-selected	subject	matter	experts	(SMEs).	These	folks	are	the	true
+brainpower	behind	the	certification	program.	In	the	case	of	this	exam,	they	are
+IT-seasoned	pros	from	the	likes	of	Microsoft,	Oracle,	VeriSign,	and	RSA
+Security,	to	name	just	a	few.	The	SMEs	review	the	committee’s	findings,	refine
+them,	and	shape	them	into	the	objectives	that	follow	this	section.	CompTIA	calls
+this	process	a	job-task	analysis	(JTA).
+Finally,	CompTIA	conducts	a	survey	to	ensure	that	the	objectives	and	weightings
+truly	reflect	job	requirements.	Only	then	can	the	SMEs	go	to	work	writing	the
+hundreds	of	questions	needed	for	the	exam.	Even	so,	they	have	to	go	back	to	the
+drawing	board	for	further	refinements	in	many	cases	before	the	exam	is	ready	to
+go	live	in	its	final	state.	Rest	assured	that	the	content	you’re	about	to	learn	will
+serve	you	long	after	you	take	the	exam.
+ Exam	objectives	are	subject	to	change	at	any	time	without	prior
+notice	and	at	CompTIA’s	sole	discretion.	Visit	the	certification	page	of
+CompTIA’s	website	at	
+http://certification.comptia.org
+	for	the	most	current
+listing	of	exam	objectives.
+CompTIA	also	publishes	relative	weightings	for	each	of	the	exam’s	objectives.
+The	following	table	lists	the	six	Security+	objective	domains	and	the	extent	to
+which	they	are	represented	on	the	exam.	As	you	use	this	study	guide,	you’ll	find
+that	we	have	administered	just	the	right	dosage	of	objective	knowledge	by
+tailoring	coverage	to	mirror	the	percentages	that	CompTIA	uses.
+Domain
+%	of	Exam
+
+1.0	Threats,	Attacks	and	Vulnerabilities
+21%
+2.0	Technologies	and	Tools
+22%
+3.0	Architecture	and	Design
+15%
+4.0	Identity	and	Access	Management
+16%
+5.0	Risk	Management
+14%
+6.0	Cryptography	and	PKI
+12%
+Total
+100%
+
+SY0-501	Certification	Exam	Objective	Map
+Objective
+Chapter
+1.0	Threats,	Attacks	and	Vulnerabilities
+1.1	Given	a	scenario,	analyze	indicators	of	compromise	and
+determine	the	type	of	malware
+Chapter
+9
+Viruses;	Crypto-malware;	Ransomware;	Worm;	Trojan;	Rootkit;
+Keylogger;	Adware;	Spyware;	Bots;	RAT;	Logic	bomb;	Backdoor
+1.2	Compare	and	contrast	types	of	attacks
+Social	Engineering:	Phishing;	Spear	phishing;	Whaling;	Vishing;
+Tailgating;	Impersonation;	Dumpster	diving;	Shoulder	surfing;	Hoax;
+Watering	hole	attack;	Principles	(reasons	for	effectiveness):
+(Authority;	Intimidation;	Consensus;	Scarcity;	Familiarity;	Trust;
+Urgency)
+Chapter
+10
+Application/service	attacks:	DoS;	DDoS;	Man-in-the-middle;	Buffer
+overflow;	Injection;	Cross-site	scripting;	Cross-site	request	forgery;
+Privilege	escalation;	ARP	poisoning;	Amplification;	DNS	poisoning;
+Domain	hijacking;	Man-in-the-browser;	Zero	day;	Replay;	Pass	the
+hash;	Hijacking	and	related	attacks	(Clickjacking;	Session	hijacking;
+URL	hijacking;	Typo	squatting);	Driver	manipulation	(Shimming;
+Refactoring);	MAC	spoofing;	IP	spoofing
+Chapter
+9
+Wireless	attacks:	Replay;	IV;	Evil	twin;	Rogue	AP;	Jamming;	WPS;
+Bluejacking;	Bluesnarfing;	RFID;	NFC;	Disassociation
+Chapter
+5
+Cryptographic	attacks:	Birthday;	Known	plain	text/cipher	text;
+Rainbow	tables;	Dictionary;	Brute	force	(Online	vs.	offline);
+Collision;	Downgrade;	Replay;	Weak	implementations
+Chapter
+8
+1.3	Explain	threat	actor	types	and	attributes
+Chapter
+7
+Types	of	actors:	Script	kiddies;	Hacktivist;	Organized	crime;	Nation
+states/APT;	Insiders;	Competitors
+Attributes	of	actors:	Internal/external;	Level	of	sophistication;
+Resources/	funding;	Intent/motivation
+Use	of	open-source	intelligence
+
+1.4	Explain	penetration	testing	concepts
+Chapter
+12
+Active	reconnaissance;	Passive	reconnaissance;	Pivot;	Initial
+exploitation;	Persistence;	Escalation	of	privilege;	Black	box;	White
+box;	Gray	box;	Pen	testing	vs.	vulnerability	scanning
+1.5	Explain	vulnerability	scanning	concepts
+Chapter
+12
+Passively	test	security	controls;	Identify	vulnerability;	Identify	lack	of
+security	controls;	Identify	common	misconfigurations;	Intrusive	vs.
+non-intrusive;	Credentialed	vs.	non-credentialed;	False	positive
+1.6	Explain	the	impact	associated	with	types	of	vulnerabilities
+Chapter
+7
+Race	conditions;	Vulnerabilities	due	to:	(End-of-life	systems;
+Embedded	systems;	Lack	of	vendor	support);	Improper	input
+handling;	Improper	error	handling;	Misconfiguration/weak
+configuration;	Default	configuration;	Resource	exhaustion;	Untrained
+users;	Improperly	configured	accounts;	Vulnerable	business
+processes;	Weak	cipher	suites	and	implementations;	Memory/buffer
+vulnerability	(Memory	leak;	Integer	overflow;	Buffer	overflow;
+Pointer	dereference;	DLL	injection);	System	sprawl/undocumented
+assets;	Architecture/design	weaknesses;	New	threats/zero	day;
+Improper	certificate	and	key	management
+2.0	Technologies	and	Tools
+2.1	Install	and	configure	network	components,	both	hardware-and
+software-based,	to	support	organizational	security
+Chapter
+3
+Firewall	(ACL;	Application-based	vs.	network-based;	Stateful	vs.
+stateless;	Implicit	deny);	VPN	Concentrator	(Remote	access	vs.	site-
+to-site;	IPSec	(Tunnel	mode,	Transport	mode,	AH,	ESP);	Split	tunnel
+vs.	full	tunnel;	TLS;	Always-on	VPN);	NIPS/NIDS	(Signature-based;
+Heuristic/behavioral;	Anomaly;	Inline	vs.	passive;	In-band	vs.	out-of-
+band;	Rules;	Analytics	(False	positive,	False	negative));	Router
+(ACLs;	Antispoofing);	Switch	(Port	security;	Layer	2	vs.	Layer	3;
+Loop	protection;	Flood	guard);	Proxy	(Forward	and	reverse	proxy;
+Transparent;	Application/multipurpose);	Load	balancer	(Scheduling
+(Affinity,	Round-robin);	Active-passive;	Active-active;	Virtual	IPs);
+
+Access	point	(SSID;	MAC	filtering;	Signal	strength;	Band
+selection/width;	Antenna	types	and	placement;	Fat	vs.	thin;
+Controller-based	vs.	standalone);	SIEM	(Aggregation;	Correlation;
+Automated	alerting	and	triggers;	Time	synchronization;	Event
+deduplication;	Logs/WORM);	DLP	(USB	blocking;	Cloud-based;
+Email);	NAC	(Dissolvable	vs	permanent;	Host	health	checks;	Agent
+vs.	agentless);	Mail	gateway	(Spam	filter;	DLP;	Encryption);	Bridge;
+SSL/TLS	accelerators;	SSL	decryptors;	Media	gateway;	Hardware
+security	module
+2.2	Given	a	scenario,	use	appropriate	software	tools	to	assess	the
+security	posture	of	an	organization
+Chapter
+4
+Protocol	analyzer;	Network	scanners	(Rogue	system	detection;
+Network	mapping);	Wireless	scanners/cracker;	Password	cracker;
+Vulnerability	scanner;	Configuration	compliance	scanner;
+Exploitation	frameworks;	Data	sanitation	tools;	Steganography	tools;
+Honeypot;	Backup	utilities;	Banner	grabbing;	Passive	vs.	active;
+Command	line	tools	(ping;	netstat;	tracert;	nslookup/dig;	arp;
+ipconfig/ip/ifconfig;	tcpdump;	nmap;	netcat)
+2.3	Given	a	scenario,	troubleshoot	common	security	issues
+Chapter
+4
+Unencrypted	credentials/clear	text;	Logs	and	events	anomalies;
+Permission	issues;	Access	violations;	Certificate	issues;	Data
+exfiltration;	Misconfigured	devices	(Firewall;	Content	filter;	Access
+points);	Weak	security	configurations;	Personnel	issues	(Policy
+violation;	insider	threat;	Social	engineering;	Social	media;	Personal
+email);	Unauthorized	software;	Baseline	deviation;	License
+compliance	violation	(availability/integrity);	Asset	management;
+Authentication	issues
+2.4	Given	a	scenario,	analyze	and	interpret	output	from	security
+technologies
+Chapter
+4
+HIDS/HIPS;	Antivirus;	File	integrity	check;	Host-based	firewall;
+Application	whitelisting;	Removable	media	control;	Advanced
+malware	tools;	Patch	management	tools;	UTM;	DLP;	Data	execution
+prevention;	Web	application	firewall
+2.5	Given	a	scenario,	deploy	mobile	devices	securely
+Chapter
+11
+
+Connection	methods	(Cellular;	WiFi;	SATCOM;	Bluetooth;	NFC;
+ANT;	Infrared;	USB);	Mobile	device	management	concepts
+(Application	management;	Content	management;	Remote	wipe;
+Geofencing;	Geolocation;	Screen	locks;	Push	notification	services;
+Passwords	and	pins;	Biometrics;	Context-aware	authentication;
+Containerization;	Storage	segmentation;	Full	device	encryption);
+Enforcement	and	monitoring	for:	(Third-party	app	stores;
+Rooting/jailbreaking;	Sideloading;	Custom	firmware;	Carrier
+unlocking;	Firmware	OTA	updates;	Camera	use;	SMS/MMS;
+External	media;	USB	OTG;	Recording	microphone;	GPS	tagging;
+WiFi	direct/ad	hoc;	Tethering;	Payment	methods);	Deployment
+models	(BYOD;	COPE;	CYOD;	Corporate-owned;	VDI)
+2.6	Given	a	scenario,	implement	secure	protocols
+Chapter
+7
+Protocols	(DNSSEC;	SSH;	S/MIME;	SRTP;	LDAPS;	FTPS;	SFTP;
+SNMPv3;	SSL/TLS;	HTTPS;	Secure	POP/IMAP);	Use	cases	(Voice
+and	video;	Time	synchronization;	Email	and	web;	File	transfer;
+Directory	services;	Remote	access;	Domain	name	resolution;	Routing
+and	switching;	Network	address	allocation;	Subscription	services)
+3.0	Architecture	and	Design
+3.1	Explain	use	cases	and	purpose	for	frameworks,	best	practices	and
+secure	configuration	guides
+Chapter
+2
+Industry-standard	frameworks	and	reference	architecture	(Regulatory;
+Non-regulatory;	National	vs.	international;	Industry-specific
+frameworks);	Benchmarks/secure	configuration	guides
+(Platform/vendor-specific	guides	(Web	server;	Operating	system;
+Application	server;	Network	infrastructure	devices);	General	purpose
+guides);	Defense-in-depth/layered	security	(Vendor	diversity;	Control
+diversity	(Administrative;	Technical);	User	training)
+3.2	Given	a	scenario,	implement	secure	network	architecture	concepts
+Chapter
+2
+Zones/topologies	(DMZ;	Extranet;	Intranet;	Wireless;	Guest;
+Honeynets;	NAT;	Ad	hoc);	Segregation/segmentation/isolation
+(Physical;	Logical	(VLAN);	Virtualization;	Air	gaps);
+Tunneling/VPN	(Site-to-site;	Remote	access);	Security
+device/technology	placement	(Sensors;	Collectors;	Correlation
+engines;	Filters;	Proxies;	Firewalls;	VPN	concentrators;	SSL
+
+accelerators;	Load	balancers;	DDoS	mitigator;	Aggregation	switches;
+Taps	and	port	mirror);	SDN
+3.3	Given	a	scenario,	implement	secure	systems	design
+Chapter
+2
+Hardware/firmware	security	(FDE/SED;	TPM;	HSM;	UEFI/BIOS;
+Secure	boot	and	attestation;	Supply	chain;	Hardware	root	of	trust;
+EMI/EMP);	Operating	systems	(Types	(Network;	Server;
+Workstation;	Appliance;	Kiosk;	Mobile	OS);	Patch	management;
+Disabling	unnecessary	ports	and	services;	Least	functionality;	Secure
+configurations;	Trusted	operating	system;	Application
+whitelisting/blacklisting;	Disable	default	accounts/passwords);
+Peripherals	(Wireless	keyboards;	Wireless	mice;	Displays;	WiFi-
+enabled	MicroSD	cards;	Printers/MFDs;	External	storage	devices;
+Digital	cameras)
+3.4	Explain	the	importance	of	secure	staging	deployment	concepts
+Chapter
+2
+Sandboxing;	Environment	(Development;	Test;	Staging;	Production);
+Secure	baseline;	Integrity	measurement
+3.5	Explain	the	security	implications	of	embedded	systems
+Chapter
+7
+SCADA/ICS;	Smart	devices/IoT	(Wearable	technology;	Home
+automation);	HVAC;	SoC;	RTOS;	Printers/MFDs;	Camera	systems;
+Special	purpose	(Medical	devices;	Vehicles;	Aircraft/UAV)
+3.6	Summarize	secure	application	development	and	deployment
+concepts
+Chapter
+7
+Development	life-cycle	models	(Waterfall	vs.	Agile);	Secure	DevOps
+(Security	automation;	Continuous	integration;	Baselining;	Immutable
+systems;	Infrastructure	as	code);	Version	control	and	change
+management;	Provisioning	and	deprovisioning;	Secure	coding
+techniques	(Proper	error	handling;	Proper	input	validation;
+Normalization;	Stored	procedures;	Code	signing;	Encryption;
+Obfuscation/camouflage;	Code	reuse/dead	code;	Server-side	vs.
+client-side	execution	and	validation;	Memory	management;	Use	of
+third-party	libraries	and	SDKs;	Data	exposure);	Code	quality	and
+testing	(Static	code	analyzers;	Dynamic	analysis	(e.g.,	fuzzing);	Stress
+testing;	Sandboxing;	Model	verification);	Compiled	vs.	runtime	code
+
+3.7	Summarize	cloud	and	virtualization	concepts
+Chapter
+6
+Hypervisor	(Type	I;	Type	II;	Application	cells/containers);	VM
+sprawl	avoidance;	VM	escape	protection;	Cloud	storage;	Cloud
+deployment	models	(SaaS;	PaaS;	IaaS;	Private;	Public;	Hybrid;
+Community);	On-premise	vs	hosted	vs.	cloud;	VDI/VDE;	Cloud
+access	security	broker;	Security	as	a	Service
+3.8	Explain	how	resiliency	and	automation	strategies	reduce	risk
+Chapter
+1
+Automation/Scripting	(Automated	courses	of	action;	Continuous
+monitoring;	Configuration	validation);	Templates:	Master	image;
+Non-persistence	(Snapshots;	Revert	to	known	state;	Rollback	to
+known	configuration;	Live	boot	media);	Elasticity:	Scalability;
+Distributive	allocation;	Redundancy;	Fault	tolerance;	High
+availability;	RAID
+3.9	Explain	the	importance	of	physical	security	controls
+Chapter
+10
+Lighting;	Signs;	Fencing/gate/cage;	Security	guards;	Alarms;	Safe;
+Secure	cabinets/enclosures;	Protected	distribution/Protected	cabling;
+Airgap;	Mantrap;	Faraday	cage;	Lock	types;	Biometrics;
+Barricades/bollards;	Tokens/cards;	Environmental	controls	(HVAC;
+Hot	and	cold	aisles;	Fire	suppression);	Cable	locks;	Screen	filters;
+Cameras;	Motion	detection;	Logs;	Infrared	detection;	Key
+management
+4.0	Identity	and	Access	Management
+4.1	Compare	and	contrast	identity	and	access	management	concepts
+Chapter
+4
+Identification,	authentication,	authorization	and	accounting	(AAA);
+Multifactor	authentication	(Something	you	are;	Something	you	have;
+Something	you	know;	Somewhere	you	are;	Something	you	do);
+Federation;	Single	sign-on;	Transitive	trust
+4.2	Given	a	scenario,	install	and	configure	identity	and	access
+services
+Chapter
+4
+LDAP;	Kerberos;	TACACS+;	CHAP;	PAP;	MSCHAP;	RADIUS;
+SAML;	OpenID	Connect;	OAUTH;	Shibboleth;	Secure	token;	NTLM
+
+4.3	Given	a	scenario,	implement	identity	and	access	management
+controls
+Chapter
+4
+Access	control	models	(MAC;	DAC;	ABAC;	Role-based	access
+control;	Rule-based	access	control);	Physical	access	control
+(Proximity	cards;	Smart	cards);	Biometric	factors	(Fingerprint
+scanner;	Retinal	scanner;	Iris	scanner;	Voice	recognition;	Facial
+recognition;	False	acceptance	rate;	False	rejection	rate;	Crossover
+error	rate);	Tokens	(Hardware;	Software;	HOTP/TOTP);	Certificate-
+based	authentication	(PIV/CAC/smart	card;	IEEE	802.1s);	File
+system	security;	Database	security
+4.4	Given	a	scenario,	differentiate	common	account	management
+practices
+Chapter
+11
+Account	types	(User	account;	Shared	and	generic
+accounts/credentials;	Guest	accounts;	Service	accounts;	Privileged
+accounts);	General	concepts	(Least	privilege;
+Onboarding/offboarding;	Permission	auditing	and	review;	Usage
+auditing	and	review;	Time-of-day	restrictions;	Recertification;
+Standard	naming	convention;	Account	maintenance;	Group-based
+access	control;	Location-based	policies);	Account	policy	enforcement
+(Credential	management;	Group	policy;	Password	complexity;
+Expiration;	Recovery;	Disablement;	Lockout;	Password	history;
+Password	reuse;	Password	length)
+5.0	Risk	Management
+5.1	Explain	the	importance	of	policies,	plans	and	procedures	related
+to	organizational	security
+Chapter
+1
+Standard	operating	procedure;	Agreement	types	(BPA;	SLA;	ISA;
+MOU/MOA);	Personnel	management	(Mandatory	vacations;	Job
+rotation;	Separation	of	duties;	Clean	desk;	Background	checks;	Exit
+interviews;	Role-based	awareness	training	(Data	owner;	System
+administrator;	System	owner;	User;	Privileged	user;	Executive	user);
+NDA,	Onboarding;	Continuing	education;	Acceptable	use
+policy/rules	of	behavior;	Adverse	actions);	General	security	policies
+(Social	media	networks/applications;	Personal	email)
+5.2	Summarize	business	impact	analysis	concepts
+Chapter
+1
+
+RTO/RPO;	MTBF;	MTTR;	Mission-essential	functions;	Identification
+of	critical	systems;	Single	point	of	failure;	Impact	(Life;	Property;
+Safety;	Finance;	Reputation);	Privacy	impact	assessment;	Privacy
+threshold	assessment
+5.3	Explain	risk	management	processes	and	concepts
+Chapter
+1
+Threat	assessment	(Environmental;	Manmade;	Internal	vs.	External);
+Risk	assessment	(SLE;	ALE;	ARO;	Asset	value;	Risk	register;
+Likelihood	of	occurrence;	Supply	chain	assessment;	Impact;
+Quantitative;	Qualitative;	Testing	(Penetration	testing	authorization;
+Vulnerability	testing	authorization);	Risk	response	techniques
+(Accept,	Transfer,	Avoid,	Mitigate));	Change	management
+5.4	Given	a	scenario,	follow	incident	response	procedures
+Chapter
+12
+Incident	response	plan	(Documented	incident	types/category
+definitions;	Roles	and	responsibilities;	Reporting
+requirements/escalation;	Cyber-incident	response	teams;	Exercise);
+Incident	response	process	(Preparation;	Identification;	Containment;
+Eradication;	Recovery;	Lessons	learned)
+5.5	Summarize	basic	concepts	of	forensics
+Chapter
+12
+Order	of	volatility;	Chain	of	custody;	Legal	hold;	Data	acquisition
+(Capture	system	image;	Network	traffic	and	logs;	Capture	video;
+Record	time	offset;	Take	hashes;	Screenshots;	Witness	interviews);
+Preservation;	Recovery;	Strategic	intelligence/counterintelligence
+gathering	(Active	logging);	Track	man-hours
+5.6	Explain	disaster	recovery	and	continuity	of	operation	concepts
+Chapter
+12
+Recovery	sites	(Hot	site;	Warm	site;	Cold	site);	Order	of	restoration;
+Backup	concepts	(Differential;	Incremental;	Snapshots;	Full);
+Geographic	considerations	(Off-site	backups;	Distance;	Location
+selection;	Legal	implications;	Data	sovereignty);	Continuity	of
+operation	planning	(Exercises/tabletop;	After-action	reports;	Failover;
+Alternate	processing	sites;	Alternate	business	practices)
+5.7	Compare	and	contrast	various	types	of	controls
+Chapter
+10
+
+Deterrent;	Preventive;	Detective;	Corrective;	Compensating;
+Technical;	Administrative;	Physical
+5.8	Given	a	scenario,	carry	out	data	security	and	privacy	practices
+Chapter
+10
+Data	destruction	and	media	sanitization	(Burning;	Shredding;
+Pulping;	Pulverizing;	Degaussing;	Purging;	Wiping);	Data	sensitivity
+labeling	and	handling	(Confidential;	Private;	Public;	Proprietary;	PII;
+PHI);	Data	roles	(Owner;	Steward/custodian;	Privacy	officer);	Data
+retention;	Legal	and	compliance
+6.0	Cryptography	and	PKI
+6.1	Compare	and	contrast	basic	concepts	of	cryptography
+Chapter
+8
+Symmetric	algorithms;	Modes	of	operation;	Asymmetric	algorithms;
+Hashing;	Salt,	IV,	nonce;	Elliptic	curve;	Weak/deprecated	algorithms;
+Key	exchange;	Digital	signatures;	Diffusion;	Collision;
+Steganography;	Obfuscation;	Stream	vs.	block;	Key	strength;	Session
+keys;	Ephemeral	key;	Secret	algorithm;	Data-in-transit;	Data-at-rest;
+Data-in-use;	Random/pseudo-random	number	generation;	Key
+stretching;	Implementation	vs.	algorithm	selection	(Crypto	service
+provider;	Crypto	modules);	Perfect	forward	secrecy;	Security	through
+obscurity;	Common	use	cases	(Low	power	devices;	Low	latency;
+High	resiliency;	Supporting	confidentiality;	Supporting	integrity;
+Supporting	obfuscation;	Supporting	authentication;	Supporting	non-
+repudiation;	Resource	vs.	security	constraints)
+6.2	Explain	cryptography	algorithms	and	their	basic	characteristics
+Chapter
+8
+Symmetric	algorithms	(AES;	DES;	3DES;	RC4;	Blowfish/Twofish);
+Cipher	modes	(CBC;	GCM;	ECB;	CTM;	Stream	vs.	block);
+Asymmetric	algorithms	(RSA;	DSA;	Diffie-Hellman	(Groups;	DHE;
+ECDHE);	Elliptic	curve;	PGP/GPG);	Hashing	algorithms	(MD5;
+SHA;	HMAC;	RIPEMD);	Key	stretching	algorithms	(BCRYPT;
+PBKDF2);	Obfuscation	(XOR;	ROT13;	Substitution	ciphers)
+6.3	Given	a	scenario,	install	and	configure	wireless	security	settings
+Chapter
+8
+Cryptographic	protocols	(WPA;	WPA2;	CCMP;	TKIP);
+
+Authentication	protocols	(EAP;	PEAP;	EAP-FAST;	EAP-TLS;	EAP-
+TTLS;	IEEE	802.1x;	RADIUS	Federation);	Methods	(PSK	vs.
+Enterprise	v.	Open;	WPS;	Captive	portals)
+6.4	Given	a	scenario,	implement	public	key	infrastructure
+Chapter
+8
+Components	(CA;	Intermediate	CA;	CRL;	OCSP;	CSR;	Certificate;
+Public	key;	Private	key;	Object	identifiers	(OID));	Concepts	(Online
+vs.	offline	CA;	Stapling;	Pinning;	Trust	model;	Key	escrow;
+Certificate	chaining);	Types	of	certificates	(Wildcard;	SAN;	Code
+signing;	Self-signed;	Machine/computer;	Email;	User;	Root;	Domain
+validation;	Extended	validation);	Certificate	formats	(DER;	PEM;
+PFX;	CER;	P12;	P7B)
+ Exam	objectives	are	subject	to	change	at	any	time	without	prior
+notice	and	at	CompTIA’s	discretion.	Please	visit	CompTIA’s	website
+(
+www.comptia.org
+)	for	the	most	current	listing	of	exam	objectives.
+
+Assessment	Test
+1
+.	
+Which	type	of	audit	can	be	used	to	determine	whether	accounts	have	been
+established	properly	and	verify	that	privilege	creep	isn’t	occurring?
+A
+.	
+Privilege	audit
+B
+.	
+Usage	audit
+C
+.	
+Escalation	audit
+D
+.	
+Report	audit
+2
+.	
+What	kind	of	physical	access	device	restricts	access	to	a	small	number	of
+individuals	at	one	time?
+A
+.	
+Checkpoint
+B
+.	
+Perimeter	security
+C
+.	
+Security	zones
+D
+.	
+Mantrap
+3
+.	
+Which	of	the	following	is	a	set	of	voluntary	standards	governing
+encryption?
+A
+.	
+PKI
+B
+.	
+PKCS
+C
+.	
+ISA
+D
+.	
+SSL
+4
+.	
+What	is	the	acronym	associated	with	the	point	of	maximum	tolerable	loss
+for	a	system	due	to	a	major	incident?
+A
+.	
+ARO
+B
+.	
+RPO
+C
+.	
+RTP
+D
+.	
+WML
+5
+.	
+What	type	of	exercise	involves	discussing	possible	security	risks	in	a	low-
+stress
+
+environment?
+A
+.	
+White	box
+B
+.	
+Tabletop
+C
+.	
+Black	hat
+D
+.	
+DHE
+6
+.	
+You	want	to	install	a	cryptoprocessor	chip	that	can	be	used	to	enhance
+security	with	the	PKI	systems.	Which	of	the	following	is	the	one	you	are
+looking	for?
+A
+.	
+OCSP
+B
+.	
+HSM
+C
+.	
+MTU
+D
+.	
+PIV
+7
+.	
+Which	design	concept	limits	access	to	systems	from	outside	users	while
+protecting	users	and	systems	inside	the	LAN?
+A
+.	
+DMZ
+B
+.	
+VLAN
+C
+.	
+I&A
+D
+.	
+Router
+8
+.	
+In	the	key	recovery	process,	which	key	must	be	recoverable?
+A
+.	
+Rollover	key
+B
+.	
+Secret	key
+C
+.	
+Previous	key
+D
+.	
+Escrow	key
+9
+.	
+Which	kind	of	attack	is	designed	to	overload	a	particular	protocol	or
+service?
+A
+.	
+Spoofing
+B
+.	
+Back	door
+C
+.	
+Man	in	the	middle
+
+D
+.	
+Flood
+10
+.	
+Which	component	of	an	IDS	collects	data?
+A
+.	
+Data	source
+B
+.	
+Sensor
+C
+.	
+Event
+D
+.	
+Analyzer
+11
+.	
+Which	of	the	following	is	included	in	an	SSID	broadcast	(choose	the	best
+answer)?
+A
+.	
+Network	name
+B
+.	
+MAC	address
+C
+.	
+DHCP	configuration	information
+D
+.	
+DNS	default	values
+12
+.	
+The	integrity	objective	addresses	which	characteristic	of	information
+security?
+A
+.	
+Verification	that	information	is	accurate
+B
+.	
+Verification	that	ethics	are	properly	maintained
+C
+.	
+Establishment	of	clear	access	control	of	data
+D
+.	
+Verification	that	data	is	kept	private	and	secure
+13
+.	
+Which	mechanism	is	used	by	PKI	to	allow	immediate	verification	of	a
+certificate’s	validity?
+A
+.	
+CRL
+B
+.	
+MD5
+C
+.	
+SSHA
+D
+.	
+OCSP
+14
+.	
+To	increase	security,	TKIP	places	a	wrapper	around	the	WEP	encryption
+with	a	key	that	is	based	on	things	such	as	the	MAC	address	of	the	host
+device	and	the	serial	number	of	the	packet.	What	is	the	size	of	the	wrapper?
+A
+.	
+64-bit
+B
+.	
+128-bit
+
+C
+.	
+256-bit
+D
+.	
+512-bit
+15
+.	
+A	user	has	just	reported	that	he	downloaded	a	file	from	a	prospective	client
+using	IM.	The	user	indicates	that	the	file	was	called	
+account.doc
+.	The
+system	has	been	behaving	unusually	since	he	downloaded	the	file.	What	is
+the	most	likely	event	that	occurred?
+A
+.	
+Your	user	inadvertently	downloaded	a	virus	using	IM.
+B
+.	
+Your	user	may	have	a	defective	hard	drive.
+C
+.	
+Your	user	is	imagining	what	cannot	be	and	is	therefore	mistaken.
+D
+.	
+The	system	is	suffering	from	power	surges.
+16
+.	
+Which	mechanism	or	process	is	used	to	enable	or	disable	access	to	a
+network	resource	based	on	an	IP	address?
+A
+.	
+NDS
+B
+.	
+ACL
+C
+.	
+Hardening
+D
+.	
+Port	blocking
+17
+.	
+Virtualization	that	does	not	utilize	hypervisors	can	be	accomplished	through
+the	use	of	which	of	the	following?
+A
+.	
+Wrappers
+B
+.	
+Containers
+C
+.	
+Portals
+D
+.	
+Sinks
+18
+.	
+What	type	of	program	exists	primarily	to	propagate	and	spread	itself	to
+other	systems?
+A
+.	
+Virus
+B
+.	
+Trojan	horse
+C
+.	
+Logic	bomb
+D
+.	
+Worm
+19
+.	
+An	individual	presents	herself	at	your	office	claiming	to	be	a	service
+
+technician.	She	wants	to	discuss	your	current	server	configuration.	This
+may	be	an	example	of	what	type	of	attack?
+A
+.	
+Social	engineering
+B
+.	
+Access	control
+C
+.	
+Perimeter	screening
+D
+.	
+Behavioral	engineering
+20
+.	
+Which	of	the	following	is	a	type	of	man-in-the-middle	attack	in	which	a
+Trojan	horse	manipulates	calls	between	the	browser	and	its	security
+mechanisms	yet	still	displays	back	the	user’s	intended	transaction?
+A
+.	
+PFS
+B
+.	
+MITB
+C
+.	
+P12
+D
+.	
+SDN
+21
+.	
+Which	system	would	you	install	to	provide	active	protection	and
+notification	of	security	problems	in	a	network	connected	to	the	Internet?
+A
+.	
+IPS
+B
+.	
+Network	monitoring
+C
+.	
+Router
+D
+.	
+VPN
+22
+.	
+The	process	of	verifying	the	steps	taken	to	maintain	the	integrity	of
+evidence	is	called	what?
+A
+.	
+Security	investigation
+B
+.	
+Chain	of	custody
+C
+.	
+Three	As	of	investigation
+D
+.	
+Security	policy
+23
+.	
+What	encryption	process	uses	one	message	to	hide	another?
+A
+.	
+Steganography
+B
+.	
+Hashing
+C
+.	
+MDA
+
+D
+.	
+Cryptointelligence
+24
+.	
+Penetration/vulnerability	testing	that	takes	a	passive	approach	rather	than
+actually	trying	to	break	into	the	network	is	known	as	which	one	of	the
+following?
+A
+.	
+Flaccid	testing
+B
+.	
+Noncredentialed	testing
+C
+.	
+Nonintrusive	testing
+D
+.	
+Pedestrian	testing
+25
+.	
+Which	algorithm	is	used	to	create	a	temporary	secure	session	for	the
+exchange	of	key
+information?
+A
+.	
+KDC
+B
+.	
+KEA
+C
+.	
+SSL
+D
+.	
+RSA
+26
+.	
+You’ve	been	hired	as	a	security	consultant	for	a	company	that’s	beginning
+to	implement	handheld	devices,	such	as	smartphones.	You’re	told	that	the
+company	must	use	an	asymmetric	system.	Which	security	standard	would
+you	recommend	that	it	implement?
+A
+.	
+ECC
+B
+.	
+PKI
+C
+.	
+SHA
+D
+.	
+MD
+27
+.	
+Which	of	the	following	backup	methods	will	generally	provide	the	fastest
+backup	times?
+A
+.	
+Full	backup
+B
+.	
+Incremental	backup
+C
+.	
+Differential	backup
+D
+.	
+Archival	backup
+
+28
+.	
+You	want	to	grant	access	to	network	resources	based	on	authenticating	an
+individual’s	retina	during	a	scan.	Which	security	method	uses	a	physical
+characteristic	as	a	method	of	determining	identity?
+A
+.	
+Smart	card
+B
+.	
+I&A
+C
+.	
+Biometrics
+D
+.	
+CHAP
+29
+.	
+Which	access	control	method	is	primarily	concerned	with	the	role	that
+individuals	have	in	the	organization?
+A
+.	
+MAC
+B
+.	
+DAC
+C
+.	
+RBAC
+D
+.	
+STAC
+30
+.	
+The	process	of	investigating	a	computer	system	for	clues	about	an	event	is
+called	what?
+A
+.	
+Computer	forensics
+B
+.	
+Virus	scanning
+C
+.	
+Security	policy
+D
+.	
+Evidence	gathering
+
+Answers	to	Assessment	Test
+1
+.	
+A.	privilege	audit	is	used	to	determine	that	all	groups,	users,	and	other
+accounts	have	the	appropriate	privileges	assigned	according	to	the	policies
+of	an	organization.	For	more	information,	see	Chapter	11.
+2
+.	
+D.	A	mantrap	limits	access	to	one	individual	at	a	time.	It	could	be,	for
+example,	a	small	room.	Mantraps	typically	use	electronic	locks	and	other
+methods	to	control	access.	For	more	information,	see	Chapter	10.
+3
+.	
+B.	Public	Key	Cryptography	Standards	is	a	set	of	voluntary	standards	for
+public	key	cryptography.	This	set	of	standards	is	coordinated	by	RSA.	For
+more	information,	see	Chapter	8.
+4
+.	
+B.	The	Recovery	Point	Objective	(RPO)	is	the	point	of	maximum	tolerable
+loss	for	a	system	due	to	a	major	incident.	For	additional	information,	see
+Chapter	1.
+5
+.	
+B.	A	tabletop	exercise	involves	sitting	around	the	table	and	discussing	(with
+the	help	of	a	facilitator)	possible	security	risks	in	a	low-stress	format.	For
+more	information,	see	Chapter	12.
+6
+.	
+B.	A	Hardware	Security	Module	(HSM)	is	a	cryptoprocessor	chip	(or	circuit
+mounted	within	the	computer)	that	can	be	used	to	enhance	security,	and	it	is
+commonly	used	with	PKI	systems.	For	more	information,	see	Chapter	3.
+7
+.	
+A.	A	DMZ	(demilitarized	zone)	is	an	area	in	a	network	that	allows
+restrictive	access	to	untrusted	users	and	isolates	the	internal	network	from
+access	by	external	users	and	systems.	It	does	so	by	using	routers	and
+firewalls	to	limit	access	to	sensitive	network	resources.	For	more
+information,	see	Chapter	2.
+8
+.	
+C.	A	key	recovery	process	must	be	able	to	recover	a	previous	key.	If	the
+previous	key	can’t	be	recovered,	then	all	the	information	for	which	the	key
+was	used	will	be	irrecoverably	lost.	For	more	information,	see	Chapter	8.
+9
+.	
+D.	A	flood	attack	is	designed	to	overload	a	protocol	or	service	by	repeatedly
+initiating	a	request	for	service.	This	type	of	attack	usually	results	in	a	DoS
+(denial-of-service)	situation	occurring	because	the	protocol	freezes	or	since
+excessive	bandwidth	is	used	in	the	network	as	a	result	of	the	requests.	For
+more	information,	see	Chapter	3.
+
+10
+.	
+B.	A	sensor	collects	data	from	the	data	source	and	passes	it	on	to	the
+analyzer.	If	the	analyzer	determines	that	unusual	activity	has	occurred,	an
+alert	may	be	generated.	For	additional	information,	see	Chapter	2.
+11
+.	
+A.	An	SSID	(Service	Set	Identifier)	broadcast	includes	the	network	name.
+For	additional	information	on	hardening,	see	Chapter	3.
+12
+.	
+A.	To	meet	the	goal	of	integrity,	you	must	verify	that	the	information	being
+used	is	accurate	and	hasn’t	been	tampered	with.	Integrity	is	coupled	with
+accountability	to	ensure	that	data	is	accurate	and	that	a	final	authority	exists
+to	verify	this,	if	needed.	For	more	information,	see	Chapter	8.
+13
+.	
+D.	Online	Certificate	Status	Protocol	(OCSP)	is	the	mechanism	used	to
+verify	immediately	whether	a	certificate	is	valid.	The	Certificate
+Revocation	List	(CRL)	is	published	on	a	regular	basis,	but	it	isn’t	current
+once	it’s	published.	For	additional	information,	see	Chapter	8.
+14
+.	
+B.	TKIP	places	a	128-bit	wrapper	around	the	WEP	encryption	with	a	key
+that	is	based	on	things	such	as	the	MAC	address	of	the	host	device	and	the
+serial	number	of	the	packet.	For	additional	information,	see	Chapter	5.
+15
+.	
+A.	IM	and	other	systems	allow	unsuspecting	users	to	download	files	that
+may	contain	viruses.	Due	to	a	weakness	in	the	file	extension	naming
+conventions,	a	file	that	appears	to	have	one	extension	may	actually	have
+another	extension.	For	example,	the	file	
+account.doc.vbs
+	would	appear	in
+many	applications	as	
+account.doc
+,	but	it’s	actually	a	Visual	Basic	script
+and	could	contain	malicious	code.	For	additional	information,	see	Chapter
+9.
+16
+.	
+B.	Access	control	lists	(ACLs)	are	used	to	allow	or	deny	an	IP	address
+access	to	a	network.	ACL	mechanisms	are	implemented	in	many	routers,
+firewalls,	and	other	network	devices.	For	additional	information,	see
+Chapter	3.
+17
+.	
+B.	Virtualization	that	does	not	utilize	hypervisors	can	be	accomplished
+through	the	use	of	containers,	also	known	as	“Docker	containers.”	For	more
+information,	see	Chapter	6.
+18
+.	
+D.	A	worm	is	designed	to	multiply	and	propagate.	Worms	may	carry	viruses
+that	cause	system	destruction,	but	that	isn’t	their	primary	mission.	For	more
+information,	see	Chapter	9.
+19
+.	
+A.	Social	engineering	is	using	human	intelligence	methods	to	gain	access	or
+information	about	your	organization.	For	additional	information,	see
+
+Chapter	10.
+20
+.	
+B.	A	man-in-the-browser	attack	(abbreviated	as	MITB,	MitB,	MIB,	and
+MiB)	is	a	type	of	man-in-the-middle	attack	in	which	a	Trojan	horse
+manipulates	calls	between	the	browser	and	its	security	mechanisms,
+sniffing	or	modifying	transactions	as	they	are	formed	on	the	browser	yet
+still	displaying	back	the	user’s	intended	transaction.	For	additional
+information,	see	Chapter	9.
+21
+.	
+A.	An	intrusion	prevention	system	(IPS)	provides	active	monitoring	and
+rule-based	responses	to	unusual	activities	on	a	network.	A	firewall,	for
+example,	provides	passive	security	by	preventing	access	from	unauthorized
+traffic.	If	the	firewall	were	compromised,	the	IPS	would	notify	you	based
+on	rules	that	it’s	designed	to	implement.	For	more	information,	see	Chapter
+3.
+22
+.	
+B.	The	chain	of	custody	ensures	that	each	step	taken	with	evidence	is
+documented	and	accounted	for	from	the	point	of	collection.	Chain	of
+custody	is	the	Who,	What,	When,	Where,	and	Why	of	evidence	storage.	For
+additional	information,	see	Chapter	12.
+23
+.	
+A.	Steganography	is	the	process	of	hiding	one	message	in	another.
+Steganography	may	also	be	referred	to	as	electronic	watermarking.	For
+additional	information,	see	Chapter	8.
+24
+.	
+C.	Penetration/vulnerability	testing	that	takes	a	passive	approach	rather	than
+actually	trying	to	break	into	the	network	is	known	as	nonintrusive	testing.
+For	additional	information,	see	Chapter	12.
+25
+.	
+B.	The	Key	Exchange	Algorithm	(KEA)	is	used	to	create	a	temporary
+session	to	exchange	key	information.	This	session	creates	a	secret	key.
+When	the	key	has	been	exchanged,	the	regular	session	begins.	For	more
+information,	see	Chapter	8.
+26
+.	
+A.	Elliptic	Curve	Cryptography	(ECC)	would	probably	be	your	best	choice.
+ECC	is	designed	to	work	with	smaller	processors.	The	other	systems	may
+be	options,	but	they	require	more	computing	power	than	ECC.	For
+additional	information,	see	Chapter	8.
+27
+.	
+B.	An	incremental	backup	will	generally	be	the	fastest	of	the	backup
+methods	because	it	backs	up	only	the	files	that	have	changed	since	the	last
+incremental	or	full	backup.	See	Chapter	12	for	more	information.
+28
+.	
+C.	Biometrics	is	the	authentication	process	that	uses	physical
+
+characteristics,	such	as	a	palm	print	or	retinal	pattern,	to	establish
+identification.	For	more	information,	see	Chapter	11.
+29
+.	
+C.	Role-based	access	control	(RBAC)	is	primarily	concerned	with
+providing	access	to	systems	that	a	user	needs	based	on	the	user’s	role	in	the
+organization.	For	more	information,	see	Chapter	4.
+30
+.	
+A.	Computer	forensics	is	the	process	of	investigating	a	computer	system	to
+determine	the	cause	of	an	incident.	Part	of	this	process	would	be	gathering
+evidence.	For	additional	information,	see	Chapter	12.
+
+Chapter	1
+Managing	Risk
+THE	FOLLOWING	COMPTIA	SECURITY+	EXAM	OBJECTIVES	ARE
+COVERED	IN	THIS	CHAPTER:
+ 3.8	Explain	how	resiliency	and	automation	strategies	reduce	risk.
+Automation/Scripting:	Automated	courses	of	action;	Continuous
+monitoring;	Configuration	validation
+Templates
+Master	image
+Non-persistence:	Snapshots;	Revert	to	known	state;	Rollback	to	known
+configuration;	Live	boot	media
+Elasticity
+Scalability
+Distributive	allocation
+Redundancy
+Fault	tolerance
+High	availability
+RAID
+ 5.1	Explain	the	importance	of	policies,	plans,	and	procedures	related
+to	organizational	security.
+Standard	operating	procedure
+Agreement	types:	BPA;	SLA;	ISA;	MOU/MOA
+Personnel	management:	Mandatory	vacations;	Job	rotation;	Separation
+of	duties;	Clean	desk;	Background	checks;	Exit	interviews;	Role-based
+awareness	training	(Data	owner;	System	administrator;	System	owner;
+User;	Privileged	user;	Executive	user);	NDA,	Onboarding;	Continuing
+education;	Acceptable	use	policy/rules	of	behavior;	Adverse	actions
+
+General	security	policies:	Social	media	networks/applications;
+Personal	email
+ 5.2	Summarize	business	impact	analysis	concepts.
+RTO/RPO
+MTBF
+MTTR
+Mission-essential	functions
+Identification	of	critical	systems
+Single	point	of	failure
+Impact:	Life;	Property;	Safety;	Finance;	Reputation
+Privacy	impact	assessment
+Privacy	threshold	assessment
+ 5.3	Explain	risk	management	processes	and	concepts.
+Threat	assessment:	Environmental;	Manmade;	Internal	vs.	External
+Risk	assessment:	SLE;	ALE;	ARO;	Asset	value;	Risk	register;
+Likelihood	of	occurrence;	Supply	chain	assessment;	Impact;
+Quantitative;	Qualitative;	Testing	(Penetration	testing	authorization;
+Vulnerability	testing	authorization);	Risk	response	techniques	(Accept,
+Transfer,	Avoid,	Mitigate)
+Change	management
+ As	an	administrator,	you	are	responsible.	You	are
+responsible	for	data	that	gets	created,	stored,	transmitted,	viewed,	modified,
+deleted,	and	just	about	everything	else	that	can	be	done	with	it.	Because	of	this,
+not	only	must	you	enable	it	to	exist,	but	you	must	protect	it,	authenticate	it,
+secure	it,	and	keep	it	in	the	form	that	complies	with	every	applicable	law,	policy,
+and	regulation.	Counter	to	this	are	all	of	the	dangers	that	can	befall	the	data:	it
+
+can	be	accidentally	deleted,	overwritten,	stolen,	and	lost.	These	potential	harms
+represent	
+risks
+,	and	you	must	know	the	risks	involved	in	working	with	data.	You
+have	to	know	and	accept	that	data	can	be	corrupted,	it	can	be	accessed	by	those
+who	shouldn’t	see	it,	values	can	be	changed,	and	so	on.
+If	you	think	that	being	armed	with	this	knowledge	is	enough	to	drive	you	into
+taking	the	steps	necessary	to	keep	any	harm	from	happening,	however,	you	are
+sadly	mistaken.	One	of	the	actions	that	administrators	can	be	instructed	to	take
+by	upper	management	regarding	potential	threats	is	to	accept	that	they	exist.	If
+the	cost	of	preventing	a	particular	risk	from	becoming	a	reality	exceeds	the	value
+of	the	harm	that	could	occur,	then	a	cost-benefit	risk	calculation	dictates	that	the
+risk	should	stand.
+Risk	calculations	weigh	a	potential	
+threat
+	against	the	
+likelihood
+	or	
+probability
+	of
+it	occurring.	As	frustrating	as	it	may	seem,	you	should	accept	the	fact	that	some
+risks,	often	called	
+residual	risk
+,	will	and	must	remain.	This	chapter	focuses	on
+risk	and	the	various	ways	of	dealing	with	it,	all	of	which	you	will	need	to
+understand	fully	in	order	to	succeed	on	the	Security+	exam.
+We	will	start	out	by	looking	at	some	of	the	
+vernacular
+,	or	terms	associated	with
+the	field	of	risk.	Then	we	will	move	into	risk	assessment;	policies,	standards,	and
+guidelines;	and	change	management.
+
+Risk	Terminology
+Every	field	of	study	has	a	few	terms	or	words	that	are	unique	to	that	particular
+field	in	order	to	help	those	in	the	profession	to	communicate	among	themselves.
+The	study	of	risk	is	no	different.	A	number	of	terms	are	associated	with	risk	that
+will	appear	at	various	places	in	this	chapter	and	throughout	the	book.	The
+following	terms	(also	found	in	the	online	glossary)	are	those	that	CompTIA	is
+fond	of	using	and	testing.	They	are	provided	in	order	to	make	it	easier	for	you	to
+know	what	each	is	intended	to	convey.
+Security+	Terminology
+acceptable	use	policy/rules	of	behavior
+	Agreed-upon	principles	set	forth
+by	a	company	to	govern	how	the	employees	of	that	company	may	use
+resources	such	as	computers	and	Internet	access.
+annual	loss	expectancy	(ALE)
+	A	calculation	used	to	identify	risks	and
+calculate	the	expected	loss	each	year.
+annualized	rate	of	occurrence	(ARO)
+	A	calculation	of	how	often	a	threat
+will	occur.	For	example,	a	threat	that	occurs	once	every	five	years	has	an
+annualized	rate	of	occurrence	of	1/5,	or	0.2.
+asset	value	(AV)
+	The	assessed	value	of	an	item	(server,	property,	and	so	on)
+associated	with	cash	flow.
+business	impact	analysis	(BIA)
+	A	study	of	the	possible	impact	if	a
+disruption	to	a	business’s	vital	resources	were	to	occur.
+business	partners	agreement	(BPA)
+	An	agreement	between	partners	in	a
+business	that	outlines	their	responsibilities,	obligations,	and	sharing	of
+profits	and	losses.
+exposure	factor	(EF)
+	The	potential	percentage	of	loss	to	an	asset	if	a	threat
+is	realized.
+interconnection	security	agreement	(ISA)
+	As	defined	by	NIST	(in
+Publication	800-47),	it	is	“an	agreement	established	between	the
+organizations	that	own	and	operate	connected	IT	systems	to	document	the
+
+technical	requirements	of	the	interconnection.	The	ISA	also	supports	a
+Memorandum	of	Understanding	or	Agreement	(MOU/A)	between	the
+organizations.”
+maximum	tolerable	downtime	(MTD)
+	The	maximum	period	of	time	that	a
+business	process	can	be	down	before	the	survival	of	the	organization	is	at
+risk.
+mean	time	between	failures	(MTBF)
+	The	measurement	of	the	anticipated
+lifetime	of	a	system	or	component.
+mean	time	to	failure	(MTTF)
+	The	measurement	of	the	average	of	how	long
+it	takes	a	system	or	component	to	fail.
+mean	time	to	restore	(MTTR)
+	The	measurement	of	how	long	it	takes	to
+repair	a	system	or	component	once	a	failure	occurs.
+memorandum	of	understanding	(MOU)/memorandum	of	agreement
+(MOA)
+	Most	commonly	known	as	an	MOU	rather	than	MOA,	this	is	a
+document	between	two	or	more	parties	defining	their	respective
+responsibilities	in	accomplishing	a	particular	goal	or	mission,	such	as
+securing	a	system.
+recovery	point	objective	(RPO)
+	The	point	last	known	good	data	prior	to	an
+outage	that	is	used	to	recover	systems.
+recovery	time	objective	(RTO)
+	The	maximum	amount	of	time	that	a
+process	or	service	is	allowed	to	be	down	and	the	consequences	still	to	be
+considered	acceptable.
+Redundant	Array	of	Independent	Disks	(RAID)
+	A	configuration	of
+multiple	hard	disks	used	to	provide	fault	tolerance	should	a	disk	fail.
+Different	levels	of	RAID	exist.
+risk
+	The	probability	that	a	particular	threat	will	occur,	either	accidentally	or
+intentionally,	leaving	a	system	vulnerable	and	the	impact	of	this	occurring.
+risk	acceptance
+	A	strategy	of	dealing	with	risk	in	which	it	is	decided	the
+best	approach	is	simply	to	accept	the	consequences	should	the	threat	happen.
+risk	analysis
+	An	evaluation	of	each	risk	that	can	be	identified.	Each	risk
+should	be	outlined,	described,	and	evaluated	on	the	likelihood	of	it
+occurring.
+risk	assessment
+	An	evaluation	of	the	possibility	of	a	threat	or	vulnerability
+
+existing.	An	assessment	must	be	performed	before	any	other	actions—such
+as	how	much	to	spend	on	security	in	terms	of	dollars	and	manpower—can	be
+decided.
+risk	avoidance
+	A	strategy	of	dealing	with	risk	in	which	it	is	decided	that	the
+best	approach	is	to	avoid	the	risk.
+risk	calculation
+	The	process	of	calculating	the	risks	that	exist	in	terms	of
+costs,	number,	frequency,	and	so	forth.
+risk	deterrence
+	A	strategy	of	dealing	with	risk	in	which	it	is	decided	that	the
+best	approach	is	to	discourage	potential	attackers	from	engaging	in	the
+behavior	that	leads	to	the	risk.
+risk	mitigation
+	A	strategy	of	dealing	with	risk	in	which	it	is	decided	that	the
+best	approach	is	to	lessen	the	risk.
+risk	transference
+	A	strategy	of	dealing	with	risk	in	which	it	is	decided	that
+the	best	approach	is	to	offload	some	of	the	risk	through	insurance,	third-
+party	contracts,	and/or	shared	responsibility.
+service-level	agreement	(SLA)
+	An	agreement	that	specifies	performance
+requirements	for	a	vendor.	This	agreement	may	use	mean	time	before	failure
+(MTBF)	and	mean	time	to	repair	(MTTR)	as	performance	measures	in	the
+SLA.
+single	loss	expectancy	(SLE)
+	The	cost	of	a	single	loss	when	it	occurs.	This
+loss	can	be	a	critical	failure,	or	it	can	be	the	result	of	an	attack.
+single	point	of	failure	(SPOF)
+	A	single	weakness	that	is	capable	of	bringing
+an	entire	system	down
+vulnerability
+	A	flaw	or	weakness	in	some	part	of	a	system’s	security
+procedures,	design,	implementation,	or	internal	controls	that	could	expose	it
+to	danger	(accidental	or	intentional)	and	result	in	a	violation	of	the	security
+policy.
+
+Threat	Assessment
+To	protect	your	resources,	you	need	to	be	able	to	identify	what	threats	to	them
+exist—the	more	specific	you	can	be,	the	better.	It	is	easy	to	say	that	you	“might
+lose	data,”	but	that	is	a	danger	as	opposed	to	a	threat.	The	
+threat
+	is	what	would
+cause	you	to	lose	this	data.	In	general	terms,	a	
+threat
+	is	anything	that	can	harm
+your	resources,	and	there	are	three	primary	categories	of	threats	that	need	to	be
+identified	and	examined:
+Environmental
+	Threats	from	the	environment	include	things	such	as	floods,
+tornados,	hurricanes,	and	so	on.	If	you	share	a	building	with	another
+organization,	what	would	happen	if	a	fire	alarm	went	off	in	their	area?	Would
+sprinklers	throughout	the	entire	building	be	activated	and	your	server	room
+flooded?
+Manmade
+	There	can	be	overlap	between	the	categories,	and	the	environmental
+flooding	of	a	server	room	could	be	manmade	in	nature,	caused	by	an	individual
+holding	a	match	to	the	bathroom	smoke	detector.
+Internal	vs.	External
+	If	the	threat	is	an	individual	who	is	employed	by	your
+organization,	then	it	is	considered	an	internal	threat.	If	the	individual	is	not
+currently	employed	by	your	organization,	then	it	is	considered	an	external	threat.
+One	graphical	tool	that	is	often	used	to	identify	threats	is	a	
+risk	register
+,	which	is
+essentially	a	scatterplot	of	possible	problem	areas.	With	the	categories	of	threats
+now	identified,	we	will	factor	them	into	an	assessment	of	risk	in	the	following
+sections.
+
+Risk	Assessment
+Risk	assessment	is	also	known	as	
+risk	analysis
+	or	
+risk	calculation
+.	For	purposes
+of	uniformity,	we	will	use	
+risk	assessment
+	as	the	term	of	choice	for	this
+discussion.	
+Risk	assessment
+	deals	with	the	threats,	vulnerabilities,	and	impacts	of
+a	loss	of	information-processing	capabilities	or	a	loss	of	information	itself.	In
+simple	terms,	a	
+vulnerability
+	is	a	weakness	that	could	be	exploited	by	a	threat.
+Each	risk	that	can	be	identified	should	be	outlined,	described,	and	evaluated	for
+the	likelihood	of	it	occurring.	The	key	here	is	to	think	outside	the	box.
+Conventional	threats	and	risks	are	often	too	limited	when	considering	risk
+assessment.
+The	chief	components	of	a	risk	assessment	process	are	outlined	here:
+Risks	to	Which	the	Organization	Is	Exposed
+	This	component	allows	you	to
+develop	scenarios	that	can	help	you	evaluate	how	to	deal	with	these	types	of
+risks	if	they	occur.	An	operating	system,	server,	or	application	may	have	known
+risks	in	certain	environments.	You	should	create	a	plan	for	how	your
+organization	will	best	deal	with	these	risks	and	the	best	way	for	it	to	respond	to
+them.
+Risks	That	Need	Addressing
+	The	risk	assessment	component	also	allows	an
+organization	to	provide	a	reality	check	on	which	risks	are	real	and	which	are
+unlikely.	This	process	helps	an	organization	focus	on	its	resources	as	well	as	on
+the	risks	that	are	most	likely	to	occur.	For	example,	industrial	espionage	and
+theft	are	likely,	but	the	risk	of	a	hurricane	damaging	the	server	room	in	Indiana	is
+very	low.	Therefore,	more	resources	should	be	allocated	to	prevent	espionage	or
+theft	as	opposed	to	the	latter	possibility.
+Coordination	with	BIA
+	The	risk	assessment	component,	in	conjunction	with
+the	
+business	impact	analysis	(BIA)
+,	provides	an	organization	with	an	accurate
+picture	of	the	situation	facing	it.	It	allows	an	organization	to	make	intelligent
+decisions	about	how	to	respond	to	various	scenarios.
+ Conducting	a	Risk	Assessment
+
+You’ve	been	asked	to	do	a	quick	assessment	of	the	risks	your	company	faces
+from	a	security	perspective.	What	steps	might	you	take	to	develop	an
+overview	of	your	company’s	problems?
+1
+.	
+Interview	the	department	heads	and	the	data	owners	to	determine	what
+information	they	believe	requires	additional	security	and	to	identify	the
+existing	vulnerabilities	from	their	perspective.
+2
+.	
+Evaluate	the	network	infrastructure	to	determine	known	vulnerabilities
+and	how	you	might	counter	them.
+3
+.	
+Perform	a	physical	assessment	of	the	facility	to	evaluate	what	physical
+risks	must	be	countered.
+Armed	with	this	information,	you	have	a	place	to	start,	and	you	can
+determine	which	countermeasures	may	be	appropriate	for	the	company	to
+mitigate	risk.
+Computing	Risk	Assessment
+When	you’re	doing	a	risk	assessment,	one	of	the	most	important	things	to	do	is
+to	prioritize.	Not	everything	should	be	weighed	evenly,	because	some	events
+have	a	greater	likelihood	of	happening.	In	addition,	a	company	can	accept	some
+risks,	whereas	others	would	be	catastrophic	for	the	company.
+ One	document	you	should	read	is	the	National	Institute	of
+Standards	and	Technology	(NIST)	Guide	for	Conducting	Risk	Assessments,
+Publication	800-30.	Revision	1	of	this	document	can	be	found	here:
+http://nvlpubs.nist.gov/nistpubs/Legacy/SP/nistspecialpublication800-
+30r1.pdf
+It	is	worth	noting	that	the	revision	to	the	original	document	refocuses	it	from
+being	primarily	just	about	risk	management	to	one	that	strongly	emphasizes
+risk	assessment.
+Risk	Calculations
+For	purposes	of	risk	assessment,	both	in	the	real	world	and	for	the	exam,	you
+
+should	familiarize	yourself	with	a	number	of	terms	to	determine	the	
+impact
+	an
+event	could	have:
+ALE
+	is	the	
+annual	loss	expectancy
+	value.	This	is	a	monetary	measure	of
+how	much	loss	you	could	expect	in	a	year.
+SLE
+	is	another	monetary	value,	and	it	represents	how	much	you	could
+expect	to	lose	at	any	one	time:	the	
+single	loss	expectancy
+.	SLE	can	be
+divided	into	two	components:
+AV	(asset	value)
+:	the	value	of	the	item
+EF	(exposure	factor)
+:	the	percentage	of	it	threatened
+ARO
+	is	the	likelihood,	often	drawn	from	historical	data,	of	an	event
+occurring	within	a	year:	the	
+annualized	rate	of	occurrence
+.
+When	you	compute	risk	assessment,	remember	this	formula:
+SLE	×	ARO	=	ALE
+As	an	example,	if	you	can	reasonably	expect	that	every	SLE,	which	is	equal	to
+asset	value	(AV)	times	exposure	factor	(EF),	will	be	the	equivalent	of	$1,000	and
+that	there	will	be	seven	such	occurrences	a	year	(ARO),	then	the	ALE	is	$7,000.
+Conversely,	if	there	is	only	a	10	percent	chance	of	an	event	occurring	within	a
+year	time	period	(ARO	=	0.1),	then	the	ALE	drops	to	$100.
+In	Exercise	1.1,	we’ll	walk	through	some	risk	assessment	computations.
+EXERCISE	1.1
+Risk	Assessment	Computations
+As	a	security	professional,	you	should	know	how	to	compute	SLE,	ALE,	and
+ARO.	Given	any	two	of	the	numbers,	it’s	possible	to	calculate	the	third.	Here
+are	three	scenarios	detailing	a	hypothetical	risk	assessment	situation
+followed	by	the	details	for	figuring	out	the	ALE.	They	are	intended	to	give
+you	experience	working	with	scenarios	similar	to	those	that	you	may	find	on
+the	Security+	exam.	For	this	exercise,	compute	the	missing	values:
+1
+.	
+You’re	the	administrator	of	a	web	server	that	generates	$25,000	per
+hour	in	revenue.	The	probability	of	the	web	server	failing	during	the
+year	is	estimated	to	be	25	percent.	A	failure	would	lead	to	three	hours
+
+of	downtime	and	cost	$5,000	in	components	to	correct.	What	is	the
+ALE?
+The	SLE	is	$80,000	($25,000	×	3	hours	+	$5,000),	and	the	ARO	is
+0.25.	Therefore,	the	ALE	is	$20,000	($80,000	×	0.25).
+2
+.	
+You’re	the	administrator	for	a	research	firm	that	works	on	only	one
+project	at	a	time	and	collects	data	through	the	web	to	a	single	server.
+The	value	of	each	research	project	is	approximately	$100,000.	At	any
+given	time,	an	intruder	could	commandeer	no	more	than	90	percent	of
+the	data.	The	industry	average	for	ARO	is	0.33.	What	is	the	ALE?
+The	SLE	equals	$90,000	($100,000	×	0.9),	and	the	ARO	is	0.33.
+Therefore,	the	ALE	is	$29,700	($90,000	×	0.33).
+3
+.	
+You	work	at	the	help	desk	for	a	small	company.	One	of	the	most
+common	requests	to	which	you	must	respond	is	to	help	retrieve	a	file
+that	has	been	accidentally	deleted	by	a	user.	On	average,	this	happens
+once	a	week.	If	the	user	creates	the	file	and	then	deletes	it	on	the	server
+(about	60	percent	of	the	incidents),	then	it	can	be	restored	in	moments
+from	the	shadow	copy	and	there	is	rarely	any	data	lost.	If	the	user
+creates	the	file	on	their	workstation	and	then	deletes	it	(about	40	percent
+of	the	incidents),	and	if	it	can’t	be	recovered	and	it	takes	the	user	an
+average	of	two	hours	to	re-create	it	at	$12	an	hour,	what	is	the	ALE?
+The	SLE	is	$24	($12	×	2),	and	the	ARO	is	20.8	(52	weeks	×	0.4).
+Therefore,	the	ALE	equals	$499.20	($24	×	20.8).
+Key	to	any	risk	assessment	is	identifying	both	assets	and	threats.	You	first	have
+to	identify	what	it	is	that	you	want	to	protect	and	then	what	possible	harm	could
+come	to	those	assets.	You	then	analyze	the	risks	in	terms	of	either	cost	or
+severity.
+Quantitative	vs.	Qualitative	Risk	Assessment
+Risk	assessment	can	be	either	
+qualitative
+	(opinion-based	and	subjective)	or
+quantitative
+	(cost-based	and	objective),	depending	on	whether	you	are	focusing
+on	dollar	amounts	or	simply	downtime.	The	formulas	for	single	loss	expectancy
+(SLE),	annual	loss	expectancy	(ALE),	and	annualized	rate	of	occurrence	(ARO)
+are	all	based	on	doing	assessments	that	lead	to	dollar	amounts	and	are	thus
+quantitative.
+
+To	understand	the	difference	between	quantitative	and	qualitative,	it	helps	to	use
+a	simple	example.	Imagine	that	you	get	an	emergency	call	to	help	a	small
+company	that	you	have	never	heard	from	before.	It	turns	out	that	their	one	and
+only	server	has	crashed	and	that	their	backups	are	useless.	One	of	the	lost	files
+was	the	only	copy	of	the	company’s	history.	This	file	detailed	the	company	from
+the	day	it	began	to	the	present	day	and	had	the	various	iterations	of	the	mission
+statement	as	it	changed	over	time.	As	painful	a	loss	as	this	file	represents	to	the
+company’s	culture,	it	has	nothing	to	do	with	filling	orders	and	keeping	customers
+happy,	and	thus	its	loss	is	qualitative	in	nature.
+Another	loss	was	the	customer	database.	This	held	customer	contact	information
+as	well	as	the	history	of	all	past	orders,	charge	numbers,	and	so	on.	The	company
+cannot	function	without	this	file,	and	it	needs	to	be	re-created	by	pulling	all	of
+the	hard	copy	invoices	from	storage	and	re-entering	them	into	the	system.	This
+loss	can	be	calculated	by	the	amount	of	business	lost	and	the	amount	of	time	it
+takes	to	find/re-enter	all	of	the	data,	and	thus	it	is	a	quantitative	loss.
+ Whenever	you	see	the	word	
+quantitative
+,	think	of	the	goal	as
+determining	a	dollar	amount.	Whenever	you	see	the	word	
+qualitative
+,	think
+of	a	best	guess	or	opinion	of	the	loss,	including	reputation,	goodwill,	and
+irreplaceable	information;	pictures;	or	data	that	get	you	to	a	subjective	loss
+amount.
+Risk	Measurements
+Make	sure	that	you	understand	the	scope	and	terms	of	hardware	and	
+service-
+level	agreement	(SLA)
+–related	terms.	Doing	so	can	help	avoid	frustration	and
+prevent	unanticipated	disruptions	from	crippling	your	organization.	The
+following	are	key	measures	with	which	you	should	be	familiar:
+Likelihood
+	The	meaning	of	the	word	
+likelihood
+	is	usually	self-explanatory;
+however,	actual	values	can	be	assigned	to	likelihood.	The	National	Institute	of
+Standards	and	Technology	recommends	viewing	likelihood	as	a	score
+representing	the	possibility	of	threat	initiation.	In	this	way,	it	can	be	expressed
+either	in	qualitative	or	quantitative	terms.	
+Table	1.1
+	shows	an	assessment	scale
+for	the	likelihood	of	threat	event	initiation	adapted	from	Appendix	G	of	NIST
+Publication	800-30.
+
+TABLE	1.1
+	Likelihood	assessment	scale
+Qualitative
+values
+Semi-quantitative
+values
+Description
+Very	High
+10
+Adversary	is	almost	certain	to	initiate
+threat	event.
+High
+8
+Adversary	is	highly	likely	to	initiate
+threat	event.
+Moderate
+5
+Adversary	is	somewhat	likely	to	initiate
+threat	event.
+Low
+2
+Adversary	is	unlikely	to	initiate	threat
+event.
+Very	Low
+0
+Adversary	is	highly	unlikely	to	initiate
+threat	event.
+Guide	for	Conducting	Risk	Assessments,	National	Institute	of	Standards	and	Technology,	Publication	800-
+30.
+A	
+supply	chain	assessment
+	is	similarly	used	to	look	at	the	vendors	your
+organization	works	with	strategically	and	the	potential	risks	they	introduce.
+Threat	Vectors
+	The	term	
+threat	vector
+	is	the	way	in	which	an	attacker	poses	a
+threat.	This	can	be	a	particular	tool	that	they	can	use	against	you	(a	vulnerability
+scanner,	for	example)	or	the	path(s)	of	attack	that	they	follow.	Under	that	broad
+definition,	a	threat	vector	can	be	anything	from	a	fake	email	that	lures	you	into
+clicking	a	link	(phishing)	or	an	unsecured	hotspot	(rouge	access	point)	and
+everything	in	between.
+Mean	Time	Between	Failures
+	The	
+mean	time	between	failures	(MTBF)
+	is	the
+measure	of	the	anticipated	incidence	of	failure	for	a	system	or	component.	This
+measurement	determines	the	component’s	anticipated	lifetime.	If	the	MTBF	of	a
+cooling	system	is	one	year,	you	can	anticipate	that	the	system	will	last	for	a	one-
+year	period;	this	means	that	you	should	be	prepared	to	replace	or	rebuild	the
+system	once	a	year.	If	the	system	lasts	longer	than	the	MTBF,	it’s	a	bonus	for
+your	organization.	MTBF	is	helpful	in	evaluating	a	system’s	reliability	and	life
+expectancy.
+Mean	Time	to	Failure
+	Similar	to	MTBF,	the	
+mean	time	to	failure	(MTTF)
+	is	the
+average	time	to	failure	for	a	nonrepairable	system.	If	the	system	can	be	repaired,
+the	MTBF	is	the	measurement	to	focus	on,	but	if	it	cannot,	then	MTTF	is	the
+number	to	examine.	Sometimes,	MTTF	is	improperly	used	in	place	of	MTBF,
+
+but	as	an	administrator	you	should	know	the	difference	between	them	and	when
+to	use	one	measurement	or	the	other.
+Mean	Time	to	Restore
+	The	
+mean	time	to	restore	(MTTR
+)
+	is	the	measurement	of
+how	long	it	takes	to	repair	a	system	or	component	once	a	failure	occurs.	(This	is
+often	also	referenced	as	
+mean	time	to	repair.
+)	In	the	case	of	a	computer	system,
+if	the	MTTR	is	24	hours,	this	tells	you	that	it	will	typically	take	24	hours	to
+repair	it	when	it	breaks.
+ Although	MTTR	is	considered	a	common	measure	of
+maintainability,	be	careful	when	evaluating	it	because	it	doesn’t	typically
+include	the	time	needed	to	acquire	a	component	and	have	it	shipped	to	your
+location.	This	author	(Emmett	Dulaney)	once	worked	with	a	national	vendor
+who	thought	MTTR	meant	mean	time	to	respond—that	is,	a	technician
+would	show	up	on	site	within	the	time	called	for	in	the	contract,	but	would
+only	then	begin	to	look	at	the	problem	and	make	a	list	of	any	needed
+supplies.	Make	sure	that	the	contract	or	service-level	agreement	spells	out
+exactly	what	you	want.
+Recovery	Time	Objective
+	The	
+recovery	time	objective	(RTO)
+	is	the	maximum
+amount	of	time	that	a	process	or	service	is	allowed	to	be	down	and	the
+consequences	still	to	be	considered	acceptable.	Beyond	this	time,	the	break	in
+business	continuity	is	considered	to	affect	the	business	negatively.	The	RTO	is
+agreed	on	during	BIA	creation.
+Recovery	Point	Objective
+	The	
+recovery	point	objective	(RPO)
+	is	similar	to
+RTO,	but	it	defines	the	point	at	which	the	system	needs	to	be	restored.	This
+could	be	where	the	system	was	two	days	before	it	crashed	(whip	out	the	old
+backup	tapes)	or	five	minutes	before	it	crashed	(requiring	complete	redundancy).
+As	a	general	rule,	the	closer	the	RPO	matches	the	item	of	the	crash,	the	more
+expensive	it	is	to	obtain.
+Most	SLAs	that	relate	to	risk	management	stipulate	the	definitions	of	these	terms
+and	how	they	apply	to	the	agreement.	You	should	understand	how	these	terms
+are	used	and	what	they	mean	to	the	vendor	and	to	your	organization	in	order	to
+ensure	that	there	is	concurrence.
+Assessing	Privacy
+
+One	area	of	primary	importance	for	administrators	today	is	privacy.	Not	only	are
+you	charged	with	keeping	data	accessible,	but	that	accessibility	must	be	limited
+to	certain	parties,	and	those	parties	seem	to	change	on	a	regular	basis.	In
+healthcare,	for	example,	records	may	be	limited	to	only	a	patient	and	a	doctor,
+but	one	patient	may	have	a	dozen	doctors	and	all	of	those	doctors	need	to	see
+that	data.	Other	patients	will	want	their	spouse	to	be	able	to	access	their	records,
+while	still	others	won’t.	And	so	it	goes…
+Two	privacy-related	concepts	with	which	you	should	be	familiar	are	the	
+privacy
+impact	assessment	(PIA)
+	and	
+privacy	threshold	assessment	(PTA)
+.	A	PIA	is	often
+associated	with	a	business	impact	analysis,	and	it	identifies	the	adverse	impacts
+that	can	be	associated	with	the	destruction,	corruption,	or	loss	of	accountability
+of	data	for	the	organization.	The	Department	of	Homeland	Security	(DHS),	for
+example,	uses	it	to	identify	and	mitigate	privacy	risks	by	telling	the	public	what
+personally	identifiable	information	(PII)
+	it	collects,	why	it	is	collected,	and	how
+it	is	used,	accessed,	shared,	safeguarded,	and	stored.	According	to	the	DHS,	a
+PIA	needs	to	do	three	things:	ensure	conformance	with	applicable	legal,
+regulatory,	and	policy	requirements	for	privacy;	determine	risks	and	effects;	and
+evaluate	protections	and	alternative	processes	to	mitigate	potential	privacy	risks.
+A	PTA,	on	the	other	hand,	is	more	commonly	known	as	an	“analysis”	rather	than
+an	“assessment.”	This	is	the	compliance	tool	used	in	conjunction	with	the	PIA.
+An	example	of	the	form	the	DHS	uses	for	this	purpose	can	be	found	at
+https://www.dhs.gov/compliance
+.
+Two	types	of	testing	that	can	help	identify	risks	are	
+penetration	testing
+	and
+vulnerability	testing
+.	They	are	particularly	useful	with	identifying	threats
+associated	with	authorization.	Both	are	discussed	in	more	detail	in	subsequent
+chapters.
+Acting	on	Your	Risk	Assessment
+Once	you’ve	identified	and	assessed	the	risks	that	exist,	for	the	purpose	of	the
+exam,	you	have	four	possible	responses	that	you	can	choose	to	follow:
+Risk	Avoidance
+	
+Risk	avoidance
+	involves	identifying	a	risk	and	making	the
+decision	not	to	engage	any	longer	in	the	actions	associated	with	that	risk.	For
+example,	a	company	may	decide	that	many	risks	are	associated	with	email
+attachments,	and	it	may	choose	to	forbid	any	email	attachments	from	entering
+the	network.	As	part	of	risk	avoidance,	the	company	takes	steps	to	remove	the
+risk,	chooses	to	engage	in	some	other	activity,	or	puts	a	stop	to	their	exposure	to
+
+the	risk.	Avoidance	should	be	based	on	an	informed	decision	that	the	best	course
+of	action	is	to	deviate	from	what	could	lead	to	exposure	to	the	risk.	One	of	the
+biggest	problems	with	risk	avoidance	is	that	you	are	actually	steering	clear	of
+activities	from	which	you	may	benefit.	The	most	effective	risk	avoidance
+strategy	to	avoid	computer	crime,	for	example,	would	simply	be	to	avoid	using
+computers	at	all.	Not	only	is	that	solution	impractical,	but	it	would	also	prevent
+companies	from	adding	social	value	(not	to	mention	monetary	value)	for	their
+stakeholders.
+Risk	Transference
+	
+Risk	transference
+,	contrary	to	what	the	name	may	imply,
+does	not	mean	that	you	shift	the	risk	completely	to	another	entity.	What	you	do
+instead	is	share	some	of	the	burden	of	the	risk	with	someone	else,	such	as	an
+insurance	company.	A	typical	policy	would	pay	you	a	cash	amount	if	all	the
+steps	were	in	place	to	reduce	risk	and	your	system	was	still	harmed.
+The	current	push	is	to	move	many	services	to	the	cloud,	hosted	by	a	third-party
+provider.	If	you	do	so,	you	are	engaging	in	a	form	of	risk	transference	by	relying
+on	that	third-party	provider	for	uptime,	performance,	and	security	measures.
+Another	risk	transference	possibility	involves	employing	external	consultants	for
+assistance	with	solutions	in	areas	where	internal	IT	is	weak	and	requiring	the
+external	consultants	to	guarantee	their	work.
+Risk	Mitigation
+	
+Risk	mitigation
+	is	accomplished	any	time	you	take	steps	to
+reduce	risk.	This	category	includes	installing	antivirus	software,	educating	users
+about	possible	threats,	monitoring	network	traffic,	adding	a	firewall,	and	so	on.
+In	Microsoft’s	Security	Intelligence	Report,	Volume	13,	the	following
+suggestions	for	mitigating	risk	through	user	awareness	training	are	listed:
+Keep	security	messages	fresh	and	in	circulation.
+Target	new	employees	and	current	staff	members.
+Set	goals	to	ensure	that	a	high	percentage	of	the	staff	is	trained	on	security
+best	practices.
+Repeat	the	information	to	raise	awareness.
+CompTIA	is	fond	of	risk	mitigation	and	confronting	it	through	the	use	of	routine
+audits
+	that	address	
+user	rights
+	and	
+permission	reviews
+;	
+change	management
+,	the
+structured	approach	that	is	followed	to	secure	a	company’s	assets;	and	
+incident
+management
+,	the	steps	followed	when	events	occur	(making	sure	that	controls
+are	in	place	in	order	to	prevent	unauthorized	access	to,	and	changes	of,	all	IT
+assets).	Policies	addressing	data	loss	or	theft	need	to	be	in	place,	and	technology
+
+controls	should	be	enforced.
+Data	loss	prevention	(DLP)
+	systems	monitor	the	contents	of	systems
+(workstations,	servers,	and	networks)	to	make	sure	that	key	content	is	not
+deleted	or	removed.	They	also	monitor	who	is	using	the	data	(looking	for
+unauthorized	access)	and	transmitting	the	data.	DLP	systems	share	commonality
+with	network	intrusion	prevention	systems.	Other	approaches	include	IPSs,
+firewalls,	and	similar	devices	that	can	help	mitigate	risk.
+Risk	Acceptance
+	
+Risk	acceptance
+	is	often	the	choice	that	you	must	make	when
+the	cost	of	implementing	any	of	the	other	responses	exceeds	the	value	of	the
+harm	that	would	occur	if	the	risk	came	to	fruition.	To	truly	qualify	as	acceptance,
+it	cannot	be	a	risk	where	the	administrator	or	manager	is	unaware	of	its
+existence;	it	has	to	be	an	identified	risk	for	which	those	involved	understand	the
+potential	cost	or	damage	and	agree	to	accept	it.	
+Risk	acceptance
+	is	nothing	more
+than	acknowledging	that	a	risk	exists	and	choosing	to	do	nothing	about	it.	It	does
+not	necessarily	mean	that	you	will	be	affected	by	the	risk,	but	only	that	you
+realize	that	such	a	possibility	exists.	Quite	often,	this	is	the	choice	that	you	make
+when	the	cost	of	implementing	any	of	the	other	options	exceeds	the	value	of	any
+harm	that	could	occur	if	the	risk	is	realized.	Every	firm	has	a	different	level	of
+risk	tolerance
+	(sometimes	called	a	
+risk	appetite
+)	that	they	are	willing	to	accept.
+Risk	strategies	need	not	be	thought	of	as	either/or	propositions.	It	is	often
+possible	to	combine	a	bit	of	mitigation	with	avoidance.	You	will	often	try	to
+combine	strategies	to	reduce	your	exposure	as	much	as	possible.	You	are	then
+left	to	accept	those	issues	that	cannot	be	addressed	otherwise.	In	the	case	of	the
+mailbox	analogy,	the	approach	of	grouping	individual	boxes	together	and
+placing	them	all	in	stone	combines	elements	of	both	mitigation	and	transference.
+Often	you	can	create	interesting	or	memorable	examples	to	help	in
+understanding	or	memorizing	various	lists.	This	works	well	for	the	possible	risk
+responses,	too.
+Imagine	that	you	are	a	junior	administrator	for	a	large	IT	department,	and	you
+believe	that	one	of	the	older	servers	should	be	replaced	with	a	new	one.	There
+are	no	signs	of	failure	now,	but	you	believe	it	would	be	prudent	to	upgrade
+before	anything	disastrous	happens.	The	problem,	however,	is	that	all	spending
+requires	approval	from	your	superior,	who	is	focused	on	saving	the	company	as
+much	money	as	possible	and,	by	doing	so,	hopes	to	be	considered	for	a
+promotion.	Thus,	she	does	not	want	anyone	coming	up	with	ways	to	spend
+money	unnecessarily.	You	know	her	well	enough	to	realize	that	if	a	problem
+
+does	occur,	she	will	not	hesitate	to	put	all	the	blame	on	you	in	order	to	save	her
+own	career.	
+Table	1.2
+	shows	how	you	would	apply	each	of	the	possible	risk
+actions	to	this	scenario.
+TABLE	1.2
+	Risk	actions	for	the	scenario
+Risk	action
+Application
+Risk
+avoidance
+You	begin	moving	services	from	the	older	server	to	other	servers
+and	remove	the	load	to	avoid	the	risk	of	any	services	being
+affected	by	its	demise.
+Risk
+transference
+You	write	up	the	possibility	of	the	server	failing	along	with	details
+of	what	you	think	should	be	done	to	prevent	it,	and	you	submit
+your	findings	to	your	boss	while	keeping	a	copy	for	yourself.	If	the
+server	does	fail,	you	have	proof	that	you	documented	this
+possibility	and	made	the	appropriate	parties	aware	of	the	situation.
+Risk
+mitigation
+You	write	up	the	possibility	of	failure	and	submit	it	to	your	boss
+while	also	moving	crucial	services	from	that	server	to	others.
+Risk
+acceptance
+You	know	the	server	could	fail	but	hope	that	it	doesn’t.	You
+neither	write	nor	submit	reports	because	you	don’t	want	to	rock
+the	boat	and	make	your	boss	unhappy	with	you.	With	luck,	you’ll
+have	transferred	to	another	division	before	the	server	ever	goes
+down.
+Risk	transference,	mitigation,	and	avoidance	are	all	proactive	solutions	that
+require	planning	and	implementation	ahead	of	time.	Risk	acceptance,	on	the
+other	hand,	merely	adopts	a	“do	nothing”	approach.	These	constitute	the	four
+response	strategies	that	CompTIA	expects	you	to	know	for	the	risk	management
+portion	of	the	Security+	exam.
+Risks	Associated	with	Cloud	Computing
+The	term	
+cloud	computing
+	has	grown	in	popularity	recently,	but	few	agree	on
+what	it	truly	means.	For	the	purpose	of	the	Security+	exam,	
+cloud	computing
+means	hosting	services	and	data	on	the	Internet	instead	of	hosting	it	locally.
+Some	examples	of	this	include	running	office	suite	applications	such	as	Office
+365	or	Google	Docs	from	the	web	instead	of	having	similar	applications
+installed	on	each	workstation;	storing	data	on	server	space,	such	as	Google
+Drive,	SkyDrive,	or	Amazon	Web	Services;	and	using	cloud-based	sites	such	as
+Salesforce.com
+.
+
+From	an	exam	standpoint,	there	are	three	different	ways	of	implementing	cloud
+computing:
+Platform	as	a	Service
+	The	
+Platform	as	a	Service	(PaaS)
+	model	is	also	known	as
+cloud	platform	services
+.	In	this	model,	vendors	allow	apps	to	be	created	and	run
+on	their	infrastructure.	Two	well-known	models	of	this	implementation	are
+Amazon	Web	Services	and	Google	Code.
+Software	as	a	Service
+	The	
+Software	as	a	Service	(SaaS)
+	model	is	the	one	often
+thought	of	when	users	generically	think	of	cloud	computing.	In	this	model,
+applications	are	remotely	run	over	the	web.	The	big	advantages	are	that	no	local
+hardware	is	required	(other	than	that	needed	to	obtain	web	access)	and	no
+software	applications	need	to	be	installed	on	the	machine	accessing	the	site.	The
+best-known	model	of	this	type	is	
+Salesforce.com
+.	Costs	are	usually	computed	on
+a	subscription	basis.
+Infrastructure	as	a	Service
+	The	
+Infrastructure	as	a	Service	(IaaS)
+	model
+utilizes	virtualization,	and	clients	pay	a	cloud	service	provider	for	resources
+used.	Because	of	this,	the	IaaS	model	closely	resembles	the	traditional	utility
+model	used	by	electric,	gas,	and	water	providers.	GoGrid	is	a	well-known
+example	of	this	implementation.
+A	number	of	organizations	have	examined	risk-related	issues	associated	with
+cloud	computing.	These	issues	include	the	following:
+Regulatory	Compliance
+	Depending	on	the	type	and	size	of	your	organization,
+there	are	any	number	of	regulatory	agencies’	rules	with	which	you	must	comply.
+If	your	organization	is	publicly	traded,	for	example,	you	must	adhere	to
+Sarbanes-Oxley’s	demanding	and	exacting	rules,	which	can	be	difficult	to	do
+when	the	data	is	not	located	on	your	servers.	Make	sure	that	whoever	hosts	your
+data	takes	privacy	and	security	as	seriously	as	you	do.
+User	Privileges
+	Enforcing	user	privileges	can	be	fairly	taxing.	If	the	user	does
+not	have	least	privileges	(addressed	later	in	this	chapter),	then	their	escalated
+privileges	could	allow	them	to	access	data	to	which	they	would	not	otherwise
+have	access	and	cause	harm	to	it—intentional	or	not.	Be	cognizant	of	the	fact
+that	you	won’t	have	the	same	control	over	user	accounts	in	the	cloud	as	you	do
+locally,	and	when	someone	locks	their	account	by	entering	the	wrong	password
+too	many	times	in	a	row,	you	or	they	could	be	at	the	mercy	of	the	hours	that	the
+technical	staff	is	available	at	the	provider.
+Data	Integration/Segregation
+	Just	as	web-hosting	companies	usually	put	more
+than	one	company’s	website	on	a	server	in	order	to	be	profitable,	data-hosting
+
+companies	can	put	more	than	one	company’s	data	on	a	server.	To	keep	this	from
+being	problematic,	you	should	use	encryption	to	protect	your	data.	Be	aware	of
+the	fact	that	your	data	is	only	as	safe	as	the	data	with	which	it	is	integrated.	For
+example,	assume	that	your	client	database	is	hosted	on	a	server	that	another
+company	is	also	using	to	test	an	application	that	they	are	creating.	If	their
+application	obtains	root-level	access	at	some	point	(such	as	to	change
+passwords)	and	crashes	at	that	point,	then	the	user	running	the	application	could
+be	left	with	root	permissions	and	conceivably	be	able	to	access	data	on	the	server
+for	which	they	are	not	authorized,	such	as	your	client	database.	Data	segregation
+is	crucial;	keep	your	data	on	secure	servers.
+Data	integration	is	equally	important.	Make	sure	that	your	data	is	not	comingled
+beyond	your	expectations.	It	is	not	uncommon	in	an	extranet	to	pull	information
+from	a	number	of	databases	in	order	to	create	a	report.	Those	databases	can	be
+owned	by	anyone	connected	to	the	extranet,	and	it	is	important	to	make	certain
+that	the	permissions	on	your	databases	are	set	properly	to	keep	other	members
+from	accessing	more	information	than	you	intended	to	share.
+ Among	the	groups	focused	on	cloud	security	issues,	one	worth
+noting	is	the	Cloud	Security	Alliance	(
+https://cloudsecurityalliance.org
+).
+They	have	published	a	number	of	whitepapers	on	security-related	issues	that
+can	be	found	on	their	site	and	should	be	considered	highly	recommended
+reading	for	security	administrators.
+Risks	Associated	with	Virtualization
+If	cloud	computing	has	grown	in	popularity,	
+virtualization
+	has	become	the
+technology	du	jour.	Virtualization	consists	of	allowing	one	set	of	hardware	to
+host	multiple	virtual	machines.	It	is	in	use	at	most	large	corporations,	and	it	is
+also	becoming	more	common	at	smaller	businesses.
+Some	of	the	possible	security	risks	associated	with	virtualization	include	the
+following:
+Breaking	Out	of	the	Virtual	Machine
+	If	a	disgruntled	employee	could	break
+out	of	the	virtualization	layer	and	were	able	to	access	the	other	virtual	machines,
+they	could	access	data	that	they	should	never	be	able	to	access.
+
+Intermingling	Network	and	Security	Controls
+	The	tools	used	to	administer
+the	virtual	machine	may	not	have	the	same	granularity	as	those	used	to	manage
+the	network.	This	could	lead	to	privilege	escalation	and	a	compromise	of
+security.
+Most	virtualization-specific	threats	focus	on	the	hypervisor.	
+Hypervisor
+	is	the
+virtual	machine	monitor—that	is,	the	software	that	allows	the	virtual	machines	to
+exist.	If	the	hypervisor	can	be	successfully	attacked,	the	attacker	can	gain	root-
+level	access	to	all	virtual	systems.	Although	this	is	a	legitimate	issue,	and	one
+that	has	been	demonstrated	as	possible	in	most	systems	(including	VMware,
+Xen,	and	Microsoft	Virtual	Machine),	it	is	one	that	has	been	patched	each	time	it
+has	arisen.	The	solution	to	most	virtualization	threats	is	always	to	apply	the	most
+recent	patches	and	keep	the	system(s)	up	to	date.	Be	sure	to	look	for	and
+implement	suggestions	that	the	vendor	of	your	virtualization	system	may	have
+published	in	a	hardening	guide.
+
+Developing	Policies,	Standards,	and	Guidelines
+The	process	of	implementing	and	maintaining	a	secure	network	must	first	be
+addressed	from	a	policies,	standards,	and	guidelines	perspective.	This	sets	the
+tone,	provides	authority,	and	gives	your	efforts	the	teeth	they	need	to	be
+effective.	Policies	and	guidelines	set	a	standard	of	expectation	in	an
+organization.	The	process	of	developing	these	policies	will	help	everyone	in	an
+organization	become	involved	and	invested	in	making	security	efforts	successful.
+You	can	think	of	policies	as	providing	high-level	guidance	on	large	issues.
+Standards	tell	people	what	is	expected,	and	guidelines	provide	specific	advice	on
+how	to	accomplish	a	given	task	or	activity.
+ There	is	a	difference	between	“top-down	policies”	(those	that	use
+the	support	of	upper	management)	and	“bottom-up	policies”	(often
+generated	by	the	IT	department	with	little	intradepartmental	support).
+The	following	sections	discuss	the	policies,	standards,	and	guidelines	that	you’ll
+need	to	establish	in	order	for	your	security	efforts	to	be	successful.
+Implementing	Policies
+Policies
+	provide	the	people	in	an	organization	with	guidance	about	their
+expected	behavior.	Well-written	policies	are	clear	and	concise,	and	they	outline
+the	consequences	when	they	aren’t	followed.	A	good	policy	contains	several	key
+areas	besides	the	policy	itself.
+Scope	Statement
+	A	good	policy	has	a	
+scope	statement
+	that	outlines	what	the
+policy	intends	to	accomplish	and	which	documents,	laws,	and	practices	the
+policy	addresses.	The	scope	statement	provides	background	to	help	readers
+understand	what	the	policy	is	about	and	how	it	applies	to	them.
+ The	scope	statement	is	always	brief—usually	not	more	than	a
+single	sentence	in	length.
+
+Policy	Overview	Statement
+	A	
+policy	overview	statement
+	provides	the	goal	of
+the	policy,	why	it’s	important,	and	how	to	comply	with	it.	Ideally,	a	single
+paragraph	is	all	you	need	to	provide	readers	with	a	sense	of	the	policy.
+Policy	Statement
+	Once	the	policy’s	readers	understand	its	importance,	they
+should	be	informed	about	the	substance	of	the	policy.	A	
+policy	statement
+	should
+be	as	clear	and	unambiguous	as	possible.	The	policy	may	be	presented	in
+paragraph	form,	as	bulleted	lists,	or	as	checklists.
+The	presentation	will	depend	on	the	policy’s	target	audience	as	well	as	its	nature.
+If	the	policy	is	intended	to	help	people	determine	how	to	lock	up	the	building	at
+the	end	of	the	business	day,	for	example,	it	might	be	helpful	to	provide	a	specific
+checklist	of	the	steps	that	need	to	be	taken	to	accomplish	this	task.
+Accountability	Statement
+	This	policy	should	address	who	(usually	expressed
+as	a	position,	not	the	actual	name	of	an	individual)	is	responsible	for	ensuring
+that	the	policy	is	enforced.	The	
+accountability	statement
+	provides	additional
+information	to	the	reader	about	who	to	contact	if	a	problem	is	discovered.	It
+should	also	indicate	the	consequences	of	not	complying	with	the	policy.
+ The	accountability	statement	should	be	written	in	such	a	way	as
+to	leave	no	room	for	misinterpretation	on	the	part	of	users.
+Exception	Statement
+	Sometimes,	even	the	best	policy	doesn’t	foresee	every
+eventuality.	The	
+exception	statement
+	provides	specific	guidance	about	the
+procedure	or	process	that	must	be	followed	in	order	to	deviate	from	the	policy.
+This	may	include	an	escalation	contact	in	the	event	that	the	person	who	is
+dealing	with	the	situation	needs	to	know	whom	to	contact	next.
+The	policy	development	process	is	often	time-consuming.	The	advantage	of	this
+process,	though,	is	that	the	decisions	can	be	made	in	advance	and	can	be	sent	to
+all	involved	parties	so	that	the	policy	doesn’t	have	to	be	restated	over	and	over
+again.	In	fact,	formally	developing	policies	saves	time	and	provides	structure:
+Instead	of	using	valuable	time	trying	to	figure	out	what	to	do,	employees	will
+know	exactly	what	to	do.
+Incorporating	Standards
+A	
+standard
+	deals	with	specific	issues	or	aspects	of	a	business.	Standards	are
+
+derived	from	policies.	A	standard	should	provide	enough	detail	that	an	audit	can
+be	performed	to	determine	whether	the	standard	is	being	met.	Standards,	like
+policies,	have	certain	structural	aspects	in	common.
+The	following	five	points	are	the	key	aspects	of	standards	documents:
+Scope	and	Purpose
+	The	
+standards	document
+	should	explain	or	describe	the
+intention.	If	a	standard	is	developed	for	a	technical	implementation,	the	scope
+might	include	software,	updates,	add-ins,	and	any	other	relevant	information	that
+helps	the	implementer	carry	out	the	task.
+Roles	and	Responsibilities
+	This	section	of	the	standards	document	outlines	who
+is	responsible	for	implementing,	monitoring,	and	maintaining	the	standard.	In	a
+system	configuration,	this	section	would	outline	what	the	customer	is	supposed
+to	accomplish	and	what	the	installer	is	supposed	to	accomplish.	This	doesn’t
+mean	that	one	or	the	other	can’t	exceed	those	roles;	it	means	that,	in	the	event	of
+confusion,	it’s	clear	who	is	responsible	for	accomplishing	which	tasks.
+Reference	Documents
+	This	section	of	the	standards	document	explains	how	the
+standard	relates	to	the	organization’s	different	policies,	thereby	connecting	the
+standard	to	the	underlying	policies	that	have	been	put	in	place.	In	the	event	of
+confusion	or	uncertainty,	it	also	allows	people	to	go	back	to	the	source	and	figure
+out	what	the	standard	means.	You’ll	encounter	many	situations	throughout	your
+career	where	you’re	given	a	standard	that	doesn’t	make	sense.	Frequently,	by
+referring	to	the	policies,	you	can	figure	out	why	the	standard	was	written	as	it
+was.	Doing	so	may	help	you	carry	out	the	standard	or	inform	the	people
+responsible	for	the	standard	of	a	change	or	problem.
+Performance	Criteria
+	This	part	of	the	standards	document	outlines	how	to
+accomplish	the	task.	It	should	include	relevant	baseline	and	technology
+standards.	Baselines	provide	a	minimum	or	starting	point	for	the	standard.
+Technology	standards	provide	information	about	the	platforms	and	technologies.
+Baseline	standards	spell	out	high-level	requirements	for	the	standard	or
+technology.
+ An	important	aspect	of	performance	criteria	is	benchmarking.	You
+need	to	define	what	will	be	measured	and	the	metrics	that	will	be	used	to	do
+so.
+
+If	you’re	responsible	for	installing	a	server	in	a	remote	location,	for	example,	the
+standards	spell	out	what	type	of	computer	will	be	used,	what	operating	system
+will	be	installed,	and	any	other	relevant	specifications.
+Maintenance	and	Administrative	Requirements
+	These	standards	outline	what
+is	required	to	manage	and	administer	the	systems	or	networks.	For	instance,	in
+the	case	of	a	physical	security	requirement,	the	frequency	with	which	locks	or
+combinations	are	changed	would	be	addressed.
+As	you	can	see,	the	standards	documents	provide	a	mechanism	for	both	new	and
+existing	standards	to	be	evaluated	for	compliance.	The	process	of	evaluation	is
+called	an	
+audit
+.	Increasingly,	organizations	are	being	required	to	conduct	regular
+audits	of	their	standards	and	policies.
+Following	Guidelines
+Guidelines	are	slightly	different	from	either	policies	or	standards.	
+Guidelines
+help	an	organization	implement	or	maintain	standards	by	providing	information
+on	how	to	accomplish	the	policies	and	maintain	the	standards.
+Guidelines	can	be	less	formal	than	policies	or	standards	because	their	nature	is	to
+help	users	comply	with	policies	and	standards.	An	example	might	be	an
+explanation	of	how	to	install	a	service	pack	and	what	steps	should	be	taken
+before	doing	so.
+Guidelines	aren’t	hard-and-fast	rules.	They	may,	however,	provide	a	step-by-step
+process	to	accomplish	a	task.	Guidelines,	like	standards	and	policies,	should
+contain	background	information	to	help	a	user	perform	the	task.
+The	following	four	items	represent	the	minimum	contents	of	a	good	guidelines
+document:
+Scope	and	Purpose
+	The	
+scope	and	purpose
+	section	provides	an	overview	and
+statement	of	the	guideline’s	intent.	It	is	not	uncommon	to	see	the	heading
+“Purpose	and	Scope”	or	“Scope	and	Purpose”	at	the	beginning	of	a	document
+followed	by	verbiage	to	the	effect:	“This	document	contains	the	guidelines	and
+procedures	for	the	assignment	and	use	of	
+xyz
+	and	establishes	the	minimum
+requirements	for	governing	the	acceptable	use	of…”
+Where	scope	and	purpose	are	two	separate	headings,	the	information	beneath	the
+“Purpose”	section	states	why	it	exists	(for	example,	“This	policy	establishes
+guidelines	and	minimum	requirements	governing…”),	and	the	“Scope”	section
+tells	to	whom	it	applies	(for	instance,	“This	policy	applies	to	any	employee
+
+who…”).
+Roles	and	Responsibilities
+	This	section	of	the	guidelines	identifies	which
+individuals	or	departments	are	responsible	for	accomplishing	specific	tasks.	This
+may	include	implementation,	support,	and	administration	of	a	system	or	service.
+In	a	large	organization,	it’s	likely	that	the	individuals	involved	in	the	process	will
+have	different	levels	of	training	and	expertise.	From	a	security	perspective,	it
+could	be	disastrous	if	an	unqualified	technician	installed	a	system	without
+guidelines.
+Guideline	Statements
+	The	
+guideline	statements
+	provide	the	step-by-step
+instructions	or	procedures	on	how	to	accomplish	a	task	in	a	specific	manner.
+Again,	these	are	guidelines	or	recommendations—they	may	not	be	hard-and-fast
+rules	and	can	even	include	shortcuts	and	suggestions.
+Operational	Considerations
+	A	procedure’s	
+operational	considerations
+	specify
+and	identify	what	duties	are	required	and	at	what	intervals.	This	list	might
+include	daily,	weekly,	and	monthly	tasks.	Guidelines	for	systems	backup,	for
+example,	might	provide	specific	guidance	as	to	which	files	and	directories	must
+be	backed	up	and	how	frequently.
+Guidelines	help	an	organization	in	three	ways:
+If	a	process	or	set	of	steps	isn’t	performed	routinely,	experienced	support
+and	security	staff	will	forget	how	to	do	them;	guidelines	will	help	refresh
+their	memory.
+When	you’re	trying	to	train	someone	to	do	something	new,	written
+guidelines	can	reduce	the	new	person’s	learning	curve.
+When	a	crisis	or	high-stress	situation	occurs,	guidelines	can	keep	you	from
+coming	unglued.
+Business	Policies	to	Implement
+Business	policies	also	affect	the	security	of	an	organization.	They	address
+organizational	and	departmental	business	issues	as	opposed	to	corporate-wide
+personnel	issues.	When	developing	your	business	policy,	you	must	consider
+these	primary	areas	of	concern.	Policies	can	be	divided	into	two	general
+categories:	those	for	vendors	and	those	for	personnel.
+Implementing	Policies	for	Vendors
+The	overriding	policy	for	operations	is	the	
+standard	operating	procedure	(SOP)
+.
+
+This	serves	as	the	baseline	for	business	and,	if	properly	written,	covers	what	is
+expected	on	a	regular	basis.	More	importantly,	from	a	crisis	management
+standpoint,	it	outlines	what	to	do	when	things	aren’t	running	as	well	as	they
+should,	such	as	which	vendor	to	call	when	the	communications	server	crashes,
+who	to	notify	when	their	keypads	won’t	allow	access	to	the	server	room,	and	so
+on.
+Service-level	agreements	(SLAs)
+	were	discussed	previously,	and	equally
+important	are	
+business	partner	agreements	(BPAs)
+.	These	outline	responsibilities
+and	obligations	(as	well	as	the	sharing	of	profits	and	losses)	between	business
+partners.	These	documents	can	be	important	when	you	need	authorization	before
+or	after	a	disaster	to	get	the	help	and	equipment	needed	to	have	everything
+functioning	as	it	should	be.
+For	the	most	part	synonymous,	
+memorandum	of	understanding	(MOU)
+	and
+memorandum	of	agreement	(MOA)
+	define	the	terms	and	conditions	for	securely
+sharing	data	and	information	resources.	It	is	important	that	it	identify	the
+purpose	for	the	interconnection’s	existence.	It	should	also	identify	who	the
+relevant	authorities	are	within	each	organization	and	define	their	responsibilities.
+Since	nothing	lasts	forever,	conditions	of	terminating	the	agreement	should	be
+included	in	it	as	well	as	expected	cost	apportionment.
+An	
+interconnection	security	agreement	(ISA)
+	documents	the	technical	and
+security	requirements	for	establishing,	operating,	and	maintaining	the
+interconnection.	It	works	in	conjunction	with	the	MOU/A	between	organizations
+by	spelling	out	the	requirements	for	connecting	the	IT	systems	and	describing
+the	security	controls	to	be	used	to	protect	the	systems	and	data,	and	it	includes
+any	necessary	topological	drawings	of	the	interconnection.
+ Although	the	two	can	overlap,	the	general	guideline	is	that	the
+ISA	specifies	the	technical	and	security	requirements	of	the	interconnection,
+whereas	the	MOU/A	defines	the	responsibilities	of	each	organization.	As
+such,	the	MOU/A	should	not	have	technical	details,	such	as	how	the
+interconnection	is	going	to	be	established	or	maintained	within	it.	Those
+details	are	contained	within	the	ISA.
+
+ Given	the	sensitive	nature	of	the	information	contained	within	the
+ISA	and	MOU/A,	it	is	imperative	that	their	physical	copies	be	stored	in	a
+safe	and	secure	location	to	keep	them	from	prying	eyes.	It	is	also	important
+that	electronic	copies	be	protected	from	those	same	prying	eyes.
+Implementing	Policies	for	Personnel
+For	exam	purposes,	there	are	more	policies	related	to	personnel—employees	and
+contractors—with	which	you	should	be	familiar	than	for	vendors.	The	following
+sections	look	at	them	and	guidelines	associated	with	them.
+Mandatory	Vacations
+	A	
+mandatory	vacation	policy
+	requires	employees	to	take
+time	away	from	work	to	refresh,	and	it	is	primarily	used	in	jobs	related	to	the
+financial	sector.	As	contradictory	as	it	may	seem,	an	employee	who	doesn’t	take
+their	vacation	time	can	be	detrimental	to	their	own	health	as	well	as	the
+organization’s	health.	If	the	company	becomes	too	dependent	on	one	person,
+they	can	end	up	in	a	real	bind	if	something	should	happen	to	that	person.	Not
+only	does	mandatory	vacation	give	the	employee	a	chance	to	refresh,	but	it	also
+gives	the	company	a	chance	to	make	sure	that	others	can	fill	in	any	gaps	in
+skills,	and	it	satisfies	the	need	to	have	replication	or	duplication	at	all	levels.
+Mandatory	vacations	also	provide	an	opportunity	to	discover	fraud.
+Job	Rotation
+	A	
+job	rotation	policy
+	defines	intervals	at	which	employees	must
+rotate	through	positions.	Similar	in	purpose	to	mandatory	vacations,	it	helps	to
+ensure	that	the	company	does	not	become	too	dependent	on	one	person	(who
+then	has	the	ability	to	do	enormous	harm).	Rotate	jobs	on	a	frequent	enough
+basis	so	that	you	are	not	putting	yourself—and	your	data—at	the	mercy	of	any
+one	administrator.	Just	as	you	want	redundancy	in	hardware,	you	want
+redundancy	in	abilities.
+When	one	person	fills	in	for	another,	such	as	for	mandatory	vacations,	it
+provides	an	opportunity	to	see	what	the	person	is	doing	and	potentially	uncover
+any	fraud.
+Separation	of	Duties	Policies
+	
+Separation	of	duties	policies
+	are	designed	to
+reduce	the	risk	of	fraud	and	to	prevent	other	losses	in	an	organization.	A	good
+policy	will	require	more	than	one	person	to	accomplish	key	processes.	This	may
+mean	that	the	person	who	processes	an	order	from	a	customer	isn’t	the	same
+person	who	generates	the	invoice	or	deals	with	the	billing.
+
+Separation	of	duties	helps	prevent	various	problems,	such	as	an	individual
+embezzling	money	from	a	company.	To	embezzle	funds	successfully,	an
+individual	would	need	to	recruit	others	to	commit	an	act	of	
+collusion
+—that	is,	an
+agreement	between	two	or	more	parties	established	for	the	purpose	of
+committing	deception	or	fraud.	Collusion,	when	part	of	a	crime,	is	also	a
+criminal	act	in	and	of	itself.
+In	addition,	separation-of-duties	policies	can	help	prevent	accidents	from
+occurring	in	an	organization.	Let’s	say	that	you’re	managing	a	software
+development	project.	You	want	someone	to	perform	a	quality	assurance	test	on	a
+new	piece	of	code	before	it’s	put	into	production.	Establishing	a	clear	separation
+of	duties	prevents	development	code	from	entering	production	status	until
+quality	testing	is	accomplished.
+Many	banks	and	financial	institutions	require	multiple	steps	and	approvals	to
+transfer	money.	This	helps	reduce	errors	and	minimizes	the	likelihood	of	fraud.
+ Very	small	assaults	are	often	called	“salami	attacks.”	In	banking,
+various	forms	of	salami	attacks	can	occur,	such	as	shaving	a	few	cents	from
+many	accounts,	rounding	to	whole	numbers	and	compiling	the	remainder
+into	one	account,	and	so	on.
+Clean	Desk
+	As	secure	as	data	within	a	computer	system	may	be,	equally
+insecure	are	printed	copies	of	the	data	resting	in	a	pile	on	someone’s	desk.	A
+clean	desk	policy	increases	the	physical	security	of	data	by	requiring	employees
+to	limit	what	is	on	their	desk	to	what	they	are	working	on	at	the	present	time,
+safely	securing	(locking	in	a	drawer,	for	example)	anything	not	presently	needed.
+Background	Checks
+	Given	the	need	to	protect	data,	one	of	the	best	ways	to	do
+so	is	to	make	sure	those	who	are	given	access	to	it	can	be	trusted.	All	potential
+employees	should	be	thoroughly	screened	with	an	extensive	background	check
+before	being	hired	and	given	access	to	the	computer	systems.
+Nondisclosure	Agreement
+	A	nondisclosure	agreement	(NDA)	is	a	legal	contract
+intended	to	cover	confidentiality.	An	NDA	can	be	crafted	and	accepted	to	cover
+almost	any	scale.	It	can,	for	example,	be	limited	to	only	what	is	discussed	in	a
+single	meeting	with	a	vendor	or	cover	everything	you	learned	during	the	course
+of	your	employment.
+
+Onboarding
+	The	process	used	to	train	a	new	employee	and	bring	them	up	to
+speed	with	the	organization,	its	clients,	its	products,	and	so	forth	is	known	as
+onboarding.	From	the	organization’s	prospective,	this	process	can	represent	a
+substantial	investment	in	the	new	employee	and	thus	the	organization	typically
+wants	to	make	sure	they	made	a	smart	hiring	decision	and	are	going	to	keep	the
+employee	for	a	while.	From	the	new	employee’s	standpoint,	they	are	usually
+much	more	valuable	after	the	onboarding	has	concluded.
+Continuing	Education
+	Lifelong	learning	is	a	necessity	in	the	workplace	of
+today.	Not	only	does	additional	learning	add	to	the	skills	an	employee	has	and
+make	them	more	valuable	to	the	employer,	but	often	it	is	required	to	maintain
+certifications.	Most	CompTIA	certifications	today	(including	Security+),	for
+example,	require	a	minimum	number	of	continuing	education	units	(CEUs)	in
+order	for	the	certified	administrator	to	keep	that	certification	over	time.
+Exit	Interviews
+	One	of	the	best	ways	to	find	problems	is	to	listen—not	talk—to
+those	with	whom	you	work.	The	last	real	opportunity	for	that	communication
+occurs	when	an	individual	leaves	the	organization	and	they	are	given	an	exit
+interview.	Never	bypass	this	learning	opportunity,	and	be	sure	to	listen	carefully
+to	what	is	being	said	and	ask	questions	that	can	help	you	determine	if	any
+changes	should	be	made.
+Role-Based	Awareness	Training
+	Not	all	employees	are	equal,	and	that	is
+especially	truly	when	it	comes	to	data	access.	Depending	on	your	organization,
+you	may	use	groups	with	lots	of	different	names	and	assign	users	to	those
+groups.	You	should,	however,	at	a	minimum	have	the	following:	Data	Owner,
+System	Administrator,	System	Owner,	User,	Privileged	User,	and	Executive
+User.
+When	deciding	what	group	each	user	should	be	a	member	of,	the	
+least	privilege
+policy
+	should	be	used,	particularly	when	assigning	permissions.	Give	users	only
+the	permissions	that	they	need	to	do	their	work	and	no	more.	For	example,	a
+temporary	employee	should	never	have	the	right	to	install	software,	a
+receptionist	does	not	need	the	right	to	make	backups,	and	so	on.	Every	operating
+system	includes	the	ability	to	limit	users	based	on	groups	and	individual
+permissions,	and	your	company	should	adhere	to	the	policy	of	always	applying
+only	those	permissions	users	need	and	blocking	those	that	they	do	not.
+ Any	time	you	see	the	phrase	“least	privilege,”	always	equate	it	with
+
+giving	only	the	minimum	permissions	needed	to	do	the	work	that	must	be
+done.
+Acceptable	Use	Policies
+	
+Acceptable	use	policies	(AUPs)
+	describe	how	the
+employees	in	an	organization	can	use	company	systems	and	resources,	both
+software	and	hardware.	This	policy	should	also	outline	the	consequences	for
+misuse.	In	addition,	the	policy	(also	known	as	a	
+use	policy
+)	should	address	the
+installation	of	personal	software	on	company	computers	and	the	use	of	personal
+hardware	such	as	USB	devices.	When	portable	devices	are	plugged	directly	into
+a	machine,	they	bypass	the	network	security	measures	(such	as	firewalls)	and
+allow	data	to	be	copied	in	what	is	known	as	
+pod	slurping
+.	This	can	also	be	done
+if	employees	start	using	free	cloud	drives	instead,	and	that	scenario	should	be
+addressed	in	the	AUP.
+ Even	secure	workstations	that	do	not	contain	traditional	media
+devices	(CD,	DVD,	and	so	forth)	usually	contain	USB	ports.	Unless	those
+ports	are	disabled,	a	user	can	easily	connect	a	flash	drive	and	copy	files	to
+and	from	it.	Not	only	should	you	make	every	effort	to	limit	USB	ports,	but
+you	should	also	have	the	use	of	such	devices	spelled	out	in	the	acceptable
+use	policy	to	circumvent	the	“I	didn’t	know”	defense.
+ The	Trouble	with	Not	Having	a	Policy
+A	few	years	ago,	an	employee	in	a	large	company	was	using	corporate
+computer	systems	to	run	a	small	accounting	firm	that	he	had	started.	He	was
+using	the	computers	on	his	own	time.	When	this	situation	was	discovered,	he
+was	immediately	fired	for	the	misuse	of	corporate	resources.	He	sued	the
+company	for	wrongful	discharge	and	won	the	case.	The	company	was	forced
+to	hire	him	back	and	pay	his	back	wages,	and	he	was	even	awarded
+damages.	The	primary	reason	the	company	lost	the	case	was	that	its
+acceptable	use	policy	didn’t	state	that	he	couldn’t	use	company	computers
+for	personal	work—only	that	he	couldn’t	use	them	for	personal	work	during
+
+work	hours.	The	company	was	unable	to	prove	that	he	did	the	personal	work
+during	work	hours.
+Every	acceptable	use	policy	today	should	include	a	section	on	smartphone	usage
+(and	even	presence)	within	the	workplace.	Although	a	smartphone	is	a
+convenience	for	employees	(they	can	now	more	easily	receive	and	make
+personal	calls	at	work),	it	can	be	a	headache	for	the	security	administrator.	Most
+smartphones	can	store	files	in	the	same	way	as	any	USB	device,	and	they	can	be
+used	to	copy	files	to	and	from	a	workstation.	Additionally,	the	camera	feature	on
+most	phones	makes	it	possible	for	a	user	to	take	pictures	of	things	such	as
+company	documents,	servers,	and	physical	security	implementation,	among
+many	other	things	that	the	company	may	not	want	to	share.	For	this	reason,	most
+secure	facilities	have	stringent	restrictions	on	the	presence	of	smartphones	within
+the	facility.
+ Make	sure	your	acceptable	use	policies	provide	your	company	with
+adequate	coverage	regarding	all	acceptable	uses	of	corporate	resources.
+Adverse	Actions
+	It	is	a	sad	but	true	condition	in	the	workplace	that
+administrative	(usually	adverse)	actions	must	be	taken	against	employees.	This
+could	be	due	to	an	employee	being	forced	to	take	an	administrative	leave,	being
+terminated,	or	any	number	of	other	situations.	An	adverse	action	policy	should
+be	in	place	detailing	exactly	what	must	be	done—suspending	the	user’s	account,
+revoking	privileges,	and	so	forth.
+The	more	detailed	the	policy,	the	less	opportunity	there	is	for	something
+important	to	fall	through	the	cracks	and	put	all	of	your	valuable	data	at	risk.	You
+may	truly	work	with	the	best	co-workers	on	the	planet,	but	it	is	surprising	how
+vindictive	they	can	become	if	they	feel	they’ve	been	wronged.	You	will	be	much
+happier	if	you	can	stick	to	preventive	measures	and	head	off	problems	before
+they	ever	have	the	opportunity	to	manifest	themselves.
+General	Security	Policies
+	
+Security	policies
+	define	what	controls	are	required	to
+implement	and	maintain	the	security	of	systems,	users,	and	networks.	This
+policy	should	be	used	as	a	guide	in	system	implementations	and	evaluations,
+addressing	what	one	might	consider	common	sense.
+Issues	that	should	be	defined	in	these	policies	include	the	difference	between
+
+company	and	personal	email	and	how	to	deal	appropriately	with	social	media—
+reminding	users	that	they	are	seen	as	an	extension	of	the	company	and	that	they
+must	always	put	the	interests	of	the	company	first.	Both	social	media	and
+personal	use	of	email	are	items	that	can	cause	companies	to	lose	big	in	the
+marketplace	and	the	courtroom.	Users	need	to	understand	that	with	a	company
+email	account	and/or	use	of	company	resources,	they	are	serving	as
+representatives	of	the	company	and	any	offensive	comments	they	make	could
+reflect	poorly	on	the	company.
+Network/Application	Policies
+As	you	just	learned,	anything	owned	by	the	company	is	thought	to	represent	the
+company	in	both	the	marketplace	and	the	courtroom.	This	is	true	of	employees
+using	company	email	accounts	for	personal	email,	the	use	of	company
+computers	for	social	media,	and	for	all	other	applications	and	networks	that	the
+employees	access	while	at	work	or	in	the	line	of	work.
+Understanding	Control	Types	and	False
+Positives/Negatives
+Risk	assessment	and	analysis	involves	calculating	potential	risks	and	making
+decisions	based	on	the	variables	associated	with	those	risks	(likelihood,	ALE,
+impact,	and	so	forth).	Once	you’ve	identified	risks	that	you	want	to	address	with
+actions	other	than	avoidance,	you	put	controls	in	place	to	address	those	risks.
+Control	Types
+The	National	Institute	of	Standards	and	Technology	places	controls	into
+various	types.	The	control	types	fall	into	three	categories:	Management,
+Operational,	and	Technical,	as	defined	in	Special	Publication	800-12.	
+Table
+1.3
+	lists	the	control	types	and	the	controls	with	which	they	are	associated.
+TABLE	1.3
+	Control	types	and	controls
+Control	type
+Controls
+Management
+Risk	Assessment
+Management
+Planning
+
+Management
+System	and	Services	Acquisition
+Management
+Certification,	Accreditation,	and	Security	Assessment
+Operational
+Personnel	Security
+Operational
+Physical	and	Environmental	Protection
+Operational
+Contingency	Planning
+Operational
+Configuration	Management
+Operational
+Maintenance
+Operational
+System	and	Information	Integrity
+Operational
+Media	Protection
+Operational
+Incident	Response
+Operational
+Awareness	and	Training
+Technical
+Identification	and	Authentication
+Technical
+Access	Control
+Technical
+Audit	and	Accountability
+Technical
+System	and	Communication	Protection
+Another	series	of	security	controls	worth	examining	is	NIST	800-53,	used	by
+government	and	industry	and	viewed	as	more	of	a	global	standard.	As	of	this
+writing,	the	current	publication	is	revision	4.
+ Although	we	discussed	risk	assessment	in	this	chapter,	we
+address	most	of	the	other	controls	in	subsequent	chapters.
+After	you	have	implemented	security	controls	based	on	risk,	you	must	perform
+routine	audits.	These	audits	should	include	reviews	of	user	rights	and
+permissions	as	well	as	specific	events.	Pay	particular	attention	to	false	positives
+and	negatives.
+False	positives
+	are	events	that	aren’t	really	incidents.	Event	flagging	is	often
+based	on	established	rules	of	acceptance	(deviations	from	which	are	known	as
+anomalies
+)	and	things	such	as	attack	signatures.	If	the	rules	aren’t	set	up
+properly,	normal	traffic	may	set	off	an	analyzer	and	generate	an	event.	You	don’t
+
+want	to	declare	an	emergency	unless	you’re	sure	that	you	have	one.	The	opposite
+of	a	false	positive	is	a	
+false	negative
+.	With	a	false	negative,	you	are	not	alerted	to
+a	situation	when	you	should	be	alerted.	In	this	case,	you	miss	something	crucial
+and	it	slips	right	by.
+Error	Types
+A	number	of	error	types	exist	beyond	what	you	need	to	know	for	the	exam.
+Type	I	errors	are	those	with	false	positives—that	is,	you	think	that	evil	is
+present	when	it	is	not.	You	have	to	be	careful	with	them	because	if	you
+erroneously	raise	a	red	flag	and	it	turns	out	nothing	is	wrong,	it	becomes
+more	difficult	to	get	anyone	to	listen	to	you	the	next	time	you	think	you’ve
+uncovered	something	wrong	because	you’ve	lost	credibility.
+Type	II	errors	are	those	with	false	negatives,	where	you	fail	to	notice	a
+problem	even	though	it	is	there—that	is,	you	were	looking	directly	at	the	evil
+and	didn’t	recognize	it.	These	errors	are	generally	considered	less	harmful
+than	Type	I	errors,	though	they	allow	the	wrongdoer	to	get	away	with	the	act
+and	maybe	even	keep	doing	it.
+Type	III	errors	are	those	in	which	you	come	to	the	right	conclusion	for	all	of
+the	wrong	reasons.	You	may	conclude	that	someone	broke	into	your	systems
+because	users	are	having	trouble	logging	in.	Someone	did	indeed	break	into
+the	system,	but	you	should	have	noticed	it	because	all	of	the	valuable	data	is
+gone.
+Risk	Management	Best	Practices
+One	of	the	leading	ways	to	address	
+business	continuity
+	is	to	do	a	BIA	and
+implement	
+best	practices
+.	Best	practices	are	based	on	what	is	known	in	the
+industry	and	those	methods	that	have	consistently	shown	superior	results	over
+those	achieved	by	other	means.
+ You	need	only	a	passing	knowledge	of	business	continuity	issues
+for	the	Security+	exam.	If	you	plan	on	taking	the	Project+	exam,	also	from
+
+CompTIA,	you	will	need	a	more	thorough	knowledge	of	these	topics.
+Undertaking	Business	Impact	Analysis
+Business	impact	analysis	(BIA)
+	is	the	process	of	evaluating	all	of	the	critical
+systems	(important	to	core	business	functions)	in	an	organization	to	define
+impact	and	recovery	plans.	BIA	isn’t	concerned	with	external	threats	or
+vulnerabilities;	the	analysis	focuses	on	the	impact	a	loss	would	have	on	the
+organization.
+Here	are	the	key	components	of	a	BIA:
+Identifying	Critical	Functions
+	To	identify	critical	functions,	a	company	must
+ask	itself,	“What	functions	are	necessary	to	continue	operations	until	full	service
+can	be	restored?”	This	identification	process	will	help	you	establish	which
+systems	must	be	returned	to	operation	in	order	for	the	business	to	continue.	In
+performing	this	identification,	you	may	find	that	a	small	or	overlooked
+application	in	a	department	may	be	critical	for	operations.	Many	organizations
+have	overlooked	seemingly	insignificant	process	steps	or	systems	that	have
+prevented	business	continuity	planning	(BCP)	from	being	effective.	Every
+department	should	be	evaluated	to	ensure	that	no	critical	processes	are
+overlooked.
+Prioritizing	Critical	Business	Functions
+	When	business	is	continued	after	an
+event,	operations	must	be	prioritized	as	
+mission-essential
+	or	nonessential
+functions.	If	the	organization	makes	resources	available	to	the	recovery	process,
+these	resources	may	be	limited.	Furthermore,	in	a	widespread	outage,	full
+operation	may	not	be	possible	for	some	time.	What	would	happen,	for	example,
+if	your	data	communications	services	went	down?	You	can	usually	establish
+temporary	services,	but	you	probably	won’t	be	able	to	restore	full	network
+capability.	There	should	be	no	internal	disagreement	about	the	
+identification	of
+critical	systems
+,	and	you	should	be	clear	about	which	applications	or	systems
+have	priority	based	on	the	resources	available.	For	example,	your	company	may
+find	itself	choosing	to	restore	email	before	it	restores	its	website.
+Calculating	a	Timeframe	for	Critical	Systems	Loss
+	How	long	can	the
+organization	survive	without	a	critical	function?	Some	functions	in	an
+organization	don’t	require	immediate	action	whereas	others	do.	Which	functions
+must	be	reestablished	and	in	what	timeframe?	If	your	business	is	entirely
+dependent	on	its	web	presence	and	is	e-commerce	oriented,	how	long	can	the
+website	stay	inoperable?	Your	organization	may	need	to	evaluate	and	attempt	to
+
+identify	the	maximum	time	that	a	particular	function	can	be	unavailable.	When
+you	look	at	the	
+impact
+,	be	sure	to	factor	in	the	following	variables:
+Life
+	Is	anyone	in	immediate	jeopardy	because	of	the	failure?
+Property
+	Will	anything	be	lost	as	a	result	of	the	malfunction?
+Safety
+	Is	anyone	in	harm’s	way	due	to	the	crash?
+Finance
+	How	much	will	be	lost	due	to	the	stoppage?
+Reputation
+	How	harmful	is	the	breakdown	to	the	trust	of	the	organization?
+This	component	dictates	the	contingencies	that	must	be	established	to	minimize
+losses	due	to	exceeding	the	allowable	period.
+Estimating	the	Tangible	and	Intangible	Impact	on	the	Organization
+	Your
+organization	will	suffer	losses	in	an	outage.	These	losses	will	be	tangible	in
+nature,	such	as	lost	production	and	lost	sales.	Intangible	losses	will	also	be	a
+factor.	For	example,	will	customers	lose	faith	in	your	service?	Knowing	the	true
+cost	of	these	impacts	in	advance	will	greatly	increase	the	organization’s
+effectiveness	in	responding	to	such	outages.
+A	thorough	BIA	will	accomplish	several	organizational	goals:
+The	true	impact	and	damage	that	an	outage	can	cause	will	be	visible.
+Understanding	the	true	loss	potential	may	help	you	in	your	fight	for	a
+budget.
+Most	important,	perhaps,	the	process	will	document	which	business
+processes	are	being	used,	the	impact	they	have	on	the	organization,	and
+how	to	restore	them	quickly.
+The	BIA	will	gain	power	in	the	organization	as	the	true	costs	of	an	outage
+become	known.	People	buy	insurance	not	because	they	intend	to	have	an
+accident	but	just	in	case	they	have	one.	A	BIA	can	help	identify	what	insurance
+is	needed	for	the	organization	to	feel	safe.
+Identifying	Critical	Systems	and	Components
+Sometimes	your	systems	are	dependent	on	things	that	you	would	not	normally
+consider.	Basic	utilities	such	as	electricity,	water,	and	natural	gas	are	key	aspects
+of	business	continuity.	In	the	vast	majority	of	cases,	electricity	and	water	are
+restored—at	least	on	an	emergency	basis—fairly	rapidly.	The	damage	created	by
+blizzards,	tornadoes,	and	other	natural	disasters	is	managed	and	repaired	by
+
+utility	companies	and	government	agencies.	Other	disasters,	such	as	a	major
+earthquake	or	hurricane,	can	overwhelm	these	agencies,	and	services	may	be
+interrupted	for	quite	a	while.	When	these	types	of	events	occur,	critical
+infrastructure	may	be	unavailable	for	days,	weeks,	or	even	months.
+ The	Importance	of	Utilities
+When	the	earthquake	of	1989	occurred	in	San	Francisco,	California,	portions
+of	the	city	were	without	electricity,	natural	gas,	and	water	for	several
+months.	Entire	buildings	were	left	unoccupied	because	the	infrastructure	was
+badly	damaged.	This	damage	prevented	many	businesses	whose	information
+systems	departments	were	located	in	those	buildings	from	returning	to
+operation	for	several	weeks.	Most	of	the	larger	organizations	were	able	to
+shift	the	processing	loads	to	other	companies	or	divisions.
+When	you	evaluate	your	business’s	sustainability,	realize	that	disasters	do	indeed
+happen.	If	possible,	build	infrastructure	that	doesn’t	have	a	
+single	point	of	failure
+(SPOF)
+	or	connection.	After	the	September	11,	2001,	terrorist	attack	on	the
+World	Trade	Center	(WTC),	several	ISPs	and	other	companies	became
+nonfunctional	because	the	WTC	housed	centralized	communications	systems
+and	computer	departments.	If	you’re	the	administrator	for	a	small	company,	it	is
+not	uncommon	for	the	SPOF	to	be	a	router/gateway.	The	best	way	to	remove	an
+SPOF	from	your	environment	is	to	add	redundancy.
+Consider	the	impact	of	weather	on	your	
+contingency	plans
+.	What	if	you	needed
+to	relocate	your	facility	to	another	region	of	the	country	due	to	a	tornado	hitting
+your	server	room?	How	would	you	get	personnel	there?	What	personnel	would
+be	relocated?	How	would	they	be	housed	and	fed	during	the	time	of	the	crisis?
+You	should	consider	these	possibilities	in	advance.	Although	the	possibility	of	a
+crippling	disaster	is	relatively	small,	you	still	need	to	evaluate	the	risk.
+ Formulating	Business	Continuity	Plans
+
+As	a	security	administrator,	you	need	to	think	through	a	way	to	maintain
+business	continuity	should	a	crisis	occur.	Imagine	that	your	company	is
+involved	in	each	of	the	following	three	scenarios:
+Scenario	1
+Your	company	is	in	the	business	of	monitoring	criminal	offenders	who	are
+under	electronic	house	arrest	nationwide.	Every	offender	wears	an	ankle
+bracelet	that	wirelessly	communicates	with	a	device	in	his	or	her	home.	The
+home	device	communicates	to	your	site	in	real	time	over	phone	lines	by
+calling	a	toll-free	number	to	report	if	the	offender	is	in	or	out	of	the	home,
+and	you	alert	local	authorities	immediately	if	someone	isn’t	in	compliance.
+The	number	of	offenders,	and	the	number	of	home	devices	that	call	your
+center,	is	in	the	tens	of	thousands.	How	could	business	be	maintained	if	the
+trunk	line	for	the	toll-free	phone	carrier	were	disrupted	in	the	middle	of	the
+night?	How	could	you	verify	offender	compliance	if	the	problem	took	hours
+to	correct?
+Scenario	2
+You’re	the	administrator	for	a	small	educational	company	that	delivers
+certification	exams	locally.	The	exams	are	downloaded	the	night	before	and
+delivered	throughout	the	day	as	students—who	have	registered	over	the
+Internet—arrive.	You	show	up	at	8	a.m.	on	Friday,	knowing	that	there	are
+more	than	20	exams	to	be	administered	that	were	downloaded	Thursday
+night.	What	you	find,	however,	is	that	someone	has	broken	into	the	testing
+room	and	trashed	all	of	the	workstations	and	monitors.	Some	of	those
+coming	to	take	the	exams	are	driving	from	far	away.	How	will	you	approach
+the	situation?
+Scenario	3
+You’re	the	database	administrator	for	a	large	grocery	chain.	When	you	leave
+on	Wednesday,	there	are	no	problems.	When	you	arrive	on	Thursday—the
+day	a	new	sale	starts—you	learn	that	the	DSL	lines	are	down.	They	went
+down	before	the	local	stores	could	download	the	new	sale	prices.	All
+scanned	goods	will	ring	up	at	the	price	they	were	last	week	(either	sale	or
+regular)	and	not	at	current	prices.	The	provider	says	it’s	working	on	the	DSL
+problem	but	can’t	estimate	how	long	the	repairs	will	take.	How	do	you
+approach	the	problem?
+
+Just	like	in	the	real	world,	there	are	no	right	or	wrong	answers	for	these
+scenarios.	However,	they	all	represent	situations	that	have	happened	and	for
+which	administrators	planned	ahead	of	time.
+There	are	several	ways	to	plan	for	such	scenarios,	including	implementing
+redundant	technology,	fault-tolerant	systems,	and	RAID.	A	truly	redundant
+system	won’t	use	just	one	of	these	methods,	but	rather	it	will	support	some
+aspect	of	all	of	them.	The	following	sections	address	these	topics	in	more
+detail.
+As	an	administrator,	you	should	always	be	aware	of	problems	that	can	occur	and
+have	an	idea	of	how	you’ll	approach	them.	It’s	impossible	to	prepare	for	every
+emergency,	but	you	can	plan	for	those	that	could	conceivably	happen.
+Automation/Scripting
+The	days	of	relying	on	someone	in	the	server	room	to	see	a	problem	and	push	a
+button	to	head	it	off	are	coming	to	a	close.	Thanks	to	sophisticated	monitors	and
+sensors,	it	is	possible	to	use	
+automation/scripting
+	in	a	wide	variety	of	scenarios
+to	preplan	
+automated	courses	of	action
+.	Scenarios	in	which	the	automated
+courses	of	action	can	be	taken	range	from	
+configuration	validation
+	of	new
+equipment	added	on	the	network	to	
+continuous	monitoring
+	of	server	operations.
+Frameworks	and	Templates
+Templates
+	can	be	helpful	in	the	risk	assessment	process	by	providing	a	means	to
+summarize	and	document	results	of	threat	source	identification,	characterization,
+vulnerabilities,	and	impacts.	Typical	templates	include	scales	for	evaluating	the
+threats	and	deciding	the	best	responses	to	them.
+Master	Image
+Most	newer	operating	systems	allow	you	to	create	a	model	user	system	as	a	disk
+image	on	a	server;	the	disk	image	is	downloaded	and	installed	when	a	failure
+occurs.	This	method	makes	it	easier	for	administrators	to	restore	a	system	than	it
+would	be	to	do	it	manually.
+Nonpersistence
+Persistent	images	are	those	that	stay	the	same,	while	nonpersistent	are	those	that
+are	temporary.	They	can	exist	only	in	RAM	or	be	changes	that	are	overwritten	on
+
+a	reboot	by	a	persistent/frozen	image.
+In	a	nutshell,	a	system	image	(referenced	earlier)	is	a	
+snapshot
+	of	what	exists.
+Capturing	an	image	of	the	operating	system	in	its	exploited	state	can	be	helpful
+in	revisiting	the	issue	after	the	fact	to	learn	more	about	it.	As	an	analogy,	think	of
+germ	samples	that	are	stored	in	labs	after	major	outbreaks	so	that	scientists	can
+revisit	them	later	and	study	them	further.
+Most	newer	operating	systems	take	snapshots	of	the	configuration	at	various
+times	and	these	can	be	manually	created	as	well	(which	is	highly	recommended
+before	updates	or	major	system	changes).	When	something	goes	awry,	you	can
+revert	to	known	state
+—that	is,	go	back	to	the	configuration	as	it	was	before	the
+last	major	change.	This	ability	to	
+roll	back	to	a	known	configuration
+	is	helpful
+on	workstations	as	well	as	servers.
+When	all	else	fails,	you	can	often	use	
+live	boot	media
+	to	boot	a	system	and	begin
+troubleshooting	it.	You	can	usually	create	bootable	flash	drives	and/or	DVDs
+based	on	the	operating	system	you	are	using	and	the	abilities	it	offers.	Bear	in
+mind	that	for	the	live	boot	media	to	work,	the	system	on	which	you	are	working
+must	be	configured	to	boot	from	that	media.
+Elasticity
+Elasticity
+	is	a	major	feature	of	cloud	computing,	meaning	the	ability	to	scale	up
+resources	as	needed.	A	number	of	other	benefits	go	along	with	it:	the	time	to
+service	is	a	possibility,	as	is	the	mean	time	to	implement	being	quicker	inside
+rather	than	outside	the	virtual	model,	or	resource	pooling.	Other	features	that
+make	elasticity	so	valuable	include	using	multitenant	models,	and	the	fact	that	it
+is	scalable	not	only	up	but	also	down,	and	applications	are	both	available	and
+portable.
+Scalability
+Speaking	of	scaling	both	up	and	down,	
+scalability
+	is	always	a	desired	attribute	of
+any	system.	A	virtual	datacenter,	for	example,	appears	the	same	as	a	physical
+datacenter	from	an	administration	standpoint,	and	it	features	elasticity,
+scalability,	and	so	forth.	A	big	benefit	of	the	virtual	center	is	that	it	can	employ	a
+pay-as-you-go	model.
+Distributive	Allocation
+Commonly	known	as	load	balancing,	
+distributive	allocation
+	allows	for
+
+distributing	the	load	(file	requests,	data	routing,	and	so	on)	so	that	no	device	is
+overly	burdened.	This	can	help	with	redundancy,	availability,	and	fault	tolerance.
+High	Availability
+High	availability	(HA)
+	refers	to	the	measures,	such	as	redundancy,	failover,	and
+mirroring,	used	to	keep	services	and	systems	operational	during	an	outage.	In
+short,	the	goal	is	to	provide	all	services	to	all	users,	where	they	need	them	and
+when	they	need	them.	With	high	availability,	the	goal	is	to	have	key	services
+available	99.999	percent	of	the	time	(also	known	as	
+five	nines	availability)
+.
+Planning	for	Resiliency
+Resiliency
+	is	the	capacity	to	recover	quickly	from	difficulties.	Few	things	are	as
+difficult	in	the	world	of	IT	as	a	crash	or	failure—be	it	at	the	server	level	or	the
+server	room	level.	This	chapter	is	focused	on	how	to	compute	and	manage	risk
+and	increase	your	resiliency	when	it	is	economically	feasible	to	do	so.	For	the
+most	part,	risk	resilience	is	a	buzzword	that	can	be	equated	with	risk
+management.
+Redundancy
+Redundancy
+	refers	to	systems	that	either	are	duplicated	or	
+fail	over
+	to	other
+systems	in	the	event	of	a	malfunction.	
+Failover
+	refers	to	the	process	of
+reconstructing	a	system	or	switching	over	to	other	systems	when	a	failure	is
+detected.	In	the	case	of	a	server,	the	server	switches	to	a	redundant	server	when	a
+fault	is	detected.	This	strategy	allows	service	to	continue	uninterrupted	until	the
+primary	server	can	be	restored.	In	the	case	of	a	network,	this	means	processing
+switches	to	another	network	path	in	the	event	of	a	network	failure	in	the	primary
+path.
+ Failover	systems	can	be	expensive	to	implement.	In	a	large
+corporate	network	or	e-commerce	environment,	a	failover	might	entail
+switching	all	processing	to	a	remote	location	until	your	primary	facility	is
+operational.	The	primary	site	and	the	remote	site	would	synchronize	data	to
+ensure	that	information	is	as	up	to	date	as	possible.
+Many	operating	systems,	such	as	Linux,	Windows	Server	2012,	and	Novell
+
+Open	Enterprise	Server,	are	capable	of	
+clustering
+	to	provide	failover	capabilities.
+Clustering
+	involves	multiple	systems	connected	together	cooperatively	(which
+provides	
+load	balancing
+)	and	networked	in	such	a	way	that	if	any	of	the	systems
+fail,	the	other	systems	take	up	the	slack	and	continue	to	operate.	The	overall
+capability	of	the	server	cluster	may	decrease,	but	the	network	or	service	will
+remain	operational.
+ To	appreciate	the	beauty	of	clustering,	contemplate	the	fact	that
+this	is	the	technology	on	which	Google	is	built.	Not	only	does	clustering
+allow	you	to	have	redundancy,	but	it	also	offers	you	the	ability	to	scale	as
+demand	increases.
+Most	ISPs	and	network	providers	have	extensive	internal	failover	capability	to
+provide	high	availability	to	clients.	Business	clients	and	employees	who	are
+unable	to	access	information	or	services	tend	to	lose	confidence.	The	trade-off
+for	reliability	and	trustworthiness,	of	course,	is	cost:	failover	systems	can
+become	prohibitively	expensive.	You’ll	need	to	study	your	needs	carefully	to
+determine	whether	your	system	requires	this	capability.	For	example,	if	your
+environment	requires	a	high	level	of	availability,	your	servers	should	be
+clustered.	This	will	allow	the	other	servers	in	the	network	to	take	up	the	load	if
+one	of	the	servers	in	the	cluster	fails.
+Fault	Tolerance
+Fault	tolerance
+	is	the	ability	of	a	system	to	sustain	operations	in	the	event	of	a
+component	failure.	Fault-tolerant	systems	can	continue	operation	even	though	a
+critical	component,	such	as	a	disk	drive,	has	failed.	This	capability	involves
+over-engineering	systems	by	adding	redundant	components	and	subsystems.
+ Fault	tolerance	is	discussed	in	more	detail	in	Chapter	7,	“Data
+and	Privacy	Security	Practices,”	but	it	appears	here	as	it	relates	to	risk.
+Fault	tolerance	can	be	built	into	a	server	by	adding	a	second	power	supply,	a
+second	CPU,	and	other	key	components.	Several	manufacturers	(such	as	HP,
+
+Unisys,	and	IBM)	offer	fault-tolerant	servers.	These	servers	typically	have
+multiple	processors	that	automatically	fail	over	if	a	malfunction	occurs.
+ In	addition	to	fault-tolerant	servers,	you	can	have	fault-tolerant
+implementations	such	as	Tandem,	Stratus,	and	HP.	In	these	settings,	multiple
+computers	are	used	to	provide	100	percent	availability	of	a	single	server.
+There	are	two	key	components	of	fault	tolerance	that	you	should	never	overlook:
+spare	parts	and	electrical	power.	Spare	parts	should	always	be	readily	available
+to	repair	any	system-critical	component	if	it	should	fail.	The	redundancy	strategy
+“N+1”	means	that	you	have	the	number	of	components	you	need,	plus	one	to
+plug	into	any	system	should	it	be	needed.	For	example,	a	small	company	with
+five	stand-alone	servers	that	are	all	the	same	model	should	have	a	power	supply
+in	a	box	nearby	to	install	in	any	one	of	the	servers	should	there	be	a	failure.	(The
+redundancy	strategy	1+1	[or	2N]	has	one	spare	part	for	every	component	in	use.)
+Since	computer	systems	cannot	operate	in	the	absence	of	electrical	power,	it	is
+imperative	that	fault	tolerance	be	built	into	your	electrical	infrastructure	as	well.
+At	a	bare	minimum,	an	
+uninterruptible	power	supply	(UPS)
+—with	surge
+protection—should	accompany	every	server	and	workstation.	That	UPS	should
+be	rated	for	the	load	it	is	expected	to	carry	in	the	event	of	a	power	failure
+(factoring	in	the	computer,	monitor,	and	any	other	device	connected	to	it)	and	be
+checked	periodically	as	part	of	your	preventive	maintenance	routine	to	make
+sure	that	the	battery	is	operational.	You	will	need	to	replace	the	battery	every
+few	years	to	keep	the	UPS	operational.
+A	UPS	will	allow	you	to	continue	to	function	in	the	absence	of	power	for	only	a
+short	duration.	For	fault	tolerance	in	situations	of	longer	duration,	you	will	need
+a	
+backup	generator
+.	Backup	generators	run	off	of	gasoline,	propane,	natural	gas,
+or	diesel	and	generate	the	electricity	needed	to	provide	steady	power.	Although
+some	backup	generators	can	come	on	instantly	in	the	event	of	a	power	outage,
+most	take	a	short	time	to	warm	up	before	they	can	provide	consistent	power.
+Therefore,	you	will	find	that	you	still	need	to	implement	UPSs	within	your
+organization.
+Redundant	Array	of	Independent	Disks
+Redundant	Array	of	Independent	Disks	(RAID)
+	is	a	technology	that	uses	multiple
+
+disks	to	provide	fault	tolerance.	There	are	several	designations	for	RAID	levels.
+ RAID	stands	for	not	only	
+Redundant	Array	of	Independent	Disks
+but	also	
+Redundant	Array	of	Inexpensive	Disks
+.	Although	the	latter	term	has
+lost	its	popularity,	you	might	still	encounter	it	in	some	books.
+The	most	commonly	implemented	RAID	levels	are	as	follows:
+RAID	Level	0
+	RAID	0	is	
+disk	striping
+.	It	uses	multiple	drives	and	maps	them
+together	as	a	single	physical	drive.	This	is	done	primarily	for	performance,	not
+for	fault	tolerance.	If	any	drive	in	a	RAID	0	array	fails,	the	entire	logical	drive
+becomes	unusable.
+RAID	Level	1
+	RAID	1	is	
+disk	mirroring
+.	Disk	mirroring	provides	100	percent
+redundancy	because	everything	is	stored	on	two	disks.	If	one	disk	fails,	another
+disk	continues	to	operate.	The	failed	disk	can	be	replaced,	and	the	RAID	1	array
+can	be	regenerated.	This	system	offers	the	advantage	of	100	percent	data
+redundancy	at	the	expense	of	doubling	the	storage	requirements.	Each	drive
+keeps	an	exact	copy	of	all	information,	which	reduces	the	effective	storage
+capability	to	50	percent	of	the	overall	rated	storage.	Some	implementations	of
+disk	mirroring	are	called	
+disk	duplexing
+	(
+duplexing
+	is	a	less	commonly	used
+term).	The	difference	between	mirroring	and	duplexing	is	one	more	controller
+card.	With	mirroring,	one	controller	card	writes	sequentially	to	each	disk.	With
+duplexing,	the	same	data	is	written	to	both	disks	simultaneously.	Disk	duplexing
+has	much	faster	write	performance	than	disk	mirroring.	Many	hardware
+implementations	of	RAID	1	are	actually	duplexing,	but	they	are	still	generally
+referred	to	as	mirrors.
+ The	data	is	intact	in	a	RAID	1	array	if	either	one	of	the	two	drives
+fails.	After	the	failed	drive	is	replaced	with	a	new	drive,	you	remirror	the
+data	from	the	good	drive	to	the	new	drive	to	re-create	the	array.
+RAID	Level	3
+	RAID	3	is	
+disk	striping	with	a	parity	disk
+.	RAID	3	arrays
+implement	fault	tolerance	by	using	striping	(RAID	0)	in	conjunction	with	a
+separate	disk	that	stores	parity	information.	
+Parity	information
+	is	a	value	based
+
+on	the	value	of	the	data	stored	in	each	disk	location.	This	system	ensures	that	the
+data	can	be	recovered	in	the	event	of	a	failure.	The	process	of	generating	parity
+information	uses	the	arithmetic	value	of	the	data	binary.	This	process	allows	any
+single	disk	in	the	array	to	fail	while	the	system	continues	to	operate.	The	failed
+disk	is	removed,	a	new	disk	is	installed,	and	the	new	drive	is	then	regenerated
+using	the	parity	information.	RAID	3	is	common	in	older	systems,	and	it’s
+supported	by	most	Unix	systems.
+RAID	Level	5
+	RAID	5	is	
+disk	striping	with	parity
+,	and	it	is	one	of	the	most
+common	forms	of	RAID	in	use	today.	It	operates	similarly	to	disk	striping,	as	in
+RAID	0.	The	parity	information	is	spread	across	all	of	the	disks	in	the	array
+instead	of	being	limited	to	a	single	disk,	as	in	RAID	3.	Most	implementations
+require	a	minimum	of	three	disks	and	support	a	maximum	of	32.
+These	four	types	of	RAID	drives,	or	arrays,	are	illustrated	in	
+Figure	1.1
+.
+
+
+[Note: PDF has 642 pages, only first 100 pages extracted]

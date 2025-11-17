@@ -1,0 +1,2760 @@
+{
+  "strategies": {},
+  "market_patterns": {},
+  "successful_trades": [],
+  "failed_trades": [],
+  "learning_history": [],
+  "predictions": [
+    {
+      "timestamp": "2025-11-02T17:11:36.993221",
+      "symbol": "TEST-0",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3522694260265293
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7934881224682889
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3343007542842461
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993237",
+      "symbol": "TEST-1",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2648907426639468
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6940412862631752
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.49259142912418286
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993243",
+      "symbol": "TEST-2",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3299601608297038
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.646941918539367
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.5698828998850509
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993247",
+      "symbol": "TEST-3",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7555261348892715
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.40997215877920323
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.71152812677866
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993251",
+      "symbol": "TEST-4",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8310596940556019
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.4732303720449776
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.7534750422067402
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993255",
+      "symbol": "TEST-5",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3194694102481387
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.737933798088741
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.8939370675706948
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993259",
+      "symbol": "TEST-6",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.24103131765225916
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7153867424070661
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.6834760040688709
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993262",
+      "symbol": "TEST-7",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.777718391293398
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3705700829224867
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.4237912810877207
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993265",
+      "symbol": "TEST-8",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.258539968664684
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.662448735619544
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.4116687604860081
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993268",
+      "symbol": "TEST-9",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8930913390613376
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.41653140377476106
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.3121815394089
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993272",
+      "symbol": "TEST-10",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.747317498617276
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.40484723140788953
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.7896303811137735
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993275",
+      "symbol": "TEST-11",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2170396461342225
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7240394138989535
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.8741239156024014
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993278",
+      "symbol": "TEST-12",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7998703036310708
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4236951914449268
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.4754601304478453
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993281",
+      "symbol": "TEST-13",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.30588624878535664
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6253822637344872
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.7469882645561396
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993284",
+      "symbol": "TEST-14",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8533138438379883
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.457379615018063
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5510838263920121
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993288",
+      "symbol": "TEST-15",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.24368151104956928
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7914090647853347
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.8154455467193078
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993291",
+      "symbol": "TEST-16",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.22137441575273736
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6885813113797412
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.6184683749598086
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993294",
+      "symbol": "TEST-17",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.27820974615479277
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7733209952470598
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.7053681073125134
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993298",
+      "symbol": "TEST-18",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8795086050584888
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.352512145246015
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.7588783734386897
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993301",
+      "symbol": "TEST-19",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.28718794008859244
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6143165560528672
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.39100318304622655
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993305",
+      "symbol": "TEST-20",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.26489745620324223
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6205314004057484
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.40556248300088166
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993308",
+      "symbol": "TEST-21",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.23424533035741077
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6105794315979266
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.5982207158944814
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993311",
+      "symbol": "TEST-22",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.22799293818013516
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7433372273832456
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.338103313804742
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993315",
+      "symbol": "TEST-23",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7098015318064378
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.37665839462362993
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.6582092148601039
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993318",
+      "symbol": "TEST-24",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7040729272517013
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.4570488927279065
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.6586766773331489
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993321",
+      "symbol": "TEST-25",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8490042670625761
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.34809702160714256
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.8567352190777169
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993324",
+      "symbol": "TEST-26",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3565368851467944
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6419063345796292
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.3343592692606498
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993328",
+      "symbol": "TEST-27",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.29094184607090706
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.715684543422882
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.4725954179024483
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993331",
+      "symbol": "TEST-28",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7488300475427345
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.32938208450789286
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3772416311797393
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993334",
+      "symbol": "TEST-29",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3256694499566207
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6283304331336116
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.3295578085869624
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993337",
+      "symbol": "TEST-30",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.27118249402459715
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7242353040310949
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.4962925890147023
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993340",
+      "symbol": "TEST-31",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7871172073546141
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4234064954637763
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.37609023357215954
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993344",
+      "symbol": "TEST-32",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7378254634559527
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.31276089729020706
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.4178866262614209
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993347",
+      "symbol": "TEST-33",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.31454988468367856
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6179582841732811
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5708096739670737
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993350",
+      "symbol": "TEST-34",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8613893623177046
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.41322823094489347
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.37815445084713945
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993354",
+      "symbol": "TEST-35",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8628119998896894
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.47111285525408075
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.6950646150553937
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993357",
+      "symbol": "TEST-36",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8040834374230605
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3728548693888666
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.7148752425894936
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993360",
+      "symbol": "TEST-37",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.26979385641555637
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7810616359251994
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.7339502053572675
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993363",
+      "symbol": "TEST-38",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.872445872006828
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3251993510026593
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.4127034714318688
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993366",
+      "symbol": "TEST-39",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3685602732976325
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7085945433730638
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.8700662207014913
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993370",
+      "symbol": "TEST-40",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8833284557760663
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4191919891403081
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.4601660808651732
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993373",
+      "symbol": "TEST-41",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2181446509312975
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7912820620471501
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.48172322967877357
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993376",
+      "symbol": "TEST-42",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.240658779958073
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7123822191677847
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.4946165708809635
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993380",
+      "symbol": "TEST-43",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.24544971557449463
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7637037331081045
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.33275175700474263
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993383",
+      "symbol": "TEST-44",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7963122750897974
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.47389467517628814
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.8069274429288114
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993387",
+      "symbol": "TEST-45",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8027110519414287
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.34936246277720784
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.6496140093984453
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993390",
+      "symbol": "TEST-46",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3071992146320782
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.728308703342178
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.7609558380757341
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993393",
+      "symbol": "TEST-47",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7476249144106482
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.30187461947662736
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.4962596367896032
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993397",
+      "symbol": "TEST-48",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7889494906940324
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.45201301773241676
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5808562698484341
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993400",
+      "symbol": "TEST-49",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2793725878938455
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.739798810329681
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3865966005751725
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993403",
+      "symbol": "TEST-50",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.29220561105318765
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7706702252455286
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.8512142680988024
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993407",
+      "symbol": "TEST-51",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2585620305024199
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7258548172238275
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.5897578928355929
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993410",
+      "symbol": "TEST-52",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2513427002413883
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7120101100031283
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.4252691232585576
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993414",
+      "symbol": "TEST-53",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.80422834637403
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3038563890488593
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.3482253032008375
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993417",
+      "symbol": "TEST-54",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8397371651276968
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3885762181850235
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.30915118461899377
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993420",
+      "symbol": "TEST-55",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2704659658080282
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.734487526189592
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.537467009340985
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993423",
+      "symbol": "TEST-56",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.26457893679598127
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7095295180169683
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5601305324518624
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993427",
+      "symbol": "TEST-57",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7516196401543865
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4283068139935913
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.8001455147542964
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993430",
+      "symbol": "TEST-58",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.39193412897830326
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7714123195020954
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.38709164739706137
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993433",
+      "symbol": "TEST-59",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2305794254762704
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7749342805687744
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.529014341829306
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993436",
+      "symbol": "TEST-60",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7656888979026828
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3969231820052904
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.4140559884434508
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993440",
+      "symbol": "TEST-61",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.33752471369149506
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.789495880620023
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.6086086852105642
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993443",
+      "symbol": "TEST-62",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8696624623486604
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4591244634210611
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.31061468189024327
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993447",
+      "symbol": "TEST-63",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8238535434748636
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.33242330383792945
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.521917001754338
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993450",
+      "symbol": "TEST-64",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.37515867991613855
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.744789062560044
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.6348389590129169
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993454",
+      "symbol": "TEST-65",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8664282326202699
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.48449366761913554
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.39885000889957606
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993457",
+      "symbol": "TEST-66",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.23196133371313987
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7802918398767114
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.4333348996284909
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993460",
+      "symbol": "TEST-67",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3435896988892835
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7999387002130489
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.7965415915863362
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993464",
+      "symbol": "TEST-68",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3082013237054704
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6029564993863724
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.619668130088987
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993467",
+      "symbol": "TEST-69",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8931081849501282
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.49503328394393736
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.788480813749137
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993470",
+      "symbol": "TEST-70",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8373834585452663
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.32331848051862855
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.4949770649118448
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993473",
+      "symbol": "TEST-71",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2826762682288626
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.654438296117839
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.7754491958907772
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993477",
+      "symbol": "TEST-72",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3215715731881807
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.699353109277851
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.7305117272782508
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993480",
+      "symbol": "TEST-73",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8971093588602537
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.32418052521940016
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.5558696211031773
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993483",
+      "symbol": "TEST-74",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.26716926260624135
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7543581601121014
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.3821844575859099
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993487",
+      "symbol": "TEST-75",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3620170345734268
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6178055769560874
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.7318689734381365
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993490",
+      "symbol": "TEST-76",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7477705270946461
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3369057860998132
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.34868828411676095
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993494",
+      "symbol": "TEST-77",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3014722347472962
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.75525221342646
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.6968787871280748
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993497",
+      "symbol": "TEST-78",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.32693159246570436
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.659123903748465
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.6492206090181816
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993500",
+      "symbol": "TEST-79",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8281354707581676
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.48574332722402913
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.666156515179112
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993503",
+      "symbol": "TEST-80",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7773127815132651
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4943450557490434
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3087043340959805
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993507",
+      "symbol": "TEST-81",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8296301683048082
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.44240642190089774
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.33628047085242463
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993510",
+      "symbol": "TEST-82",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7550920252993685
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.373021481496792
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5993450051293759
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993513",
+      "symbol": "TEST-83",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.23482787697239202
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6328282033704509
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5809844824638652
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993517",
+      "symbol": "TEST-84",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7676467537118773
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.4422409096530895
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.3995230720654945
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993520",
+      "symbol": "TEST-85",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3189722257856627
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6009755833732807
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.6543768708982163
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993523",
+      "symbol": "TEST-86",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.33687060710753447
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6222400441401241
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.37116751137027304
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993526",
+      "symbol": "TEST-87",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8932698929316456
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4714709180698603
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.8069373734348961
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993530",
+      "symbol": "TEST-88",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8906922394172996
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4897497979107402
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3843131402327161
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993533",
+      "symbol": "TEST-89",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7330403672874024
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.3641613600533303
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5010804464967888
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993537",
+      "symbol": "TEST-90",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8948750414881483
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.30705524193145106
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.4080127374947523
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993540",
+      "symbol": "TEST-91",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8134796588876357
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.38127359401863736
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.4533280993179519
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993543",
+      "symbol": "TEST-92",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7993954555797793
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.45369330707636774
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.6173482508697374
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993547",
+      "symbol": "TEST-93",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7125859440597709
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3355076132427433
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.3651125708563616
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993550",
+      "symbol": "TEST-94",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8584249230005612
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3547060579712231
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5305134947669519
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993553",
+      "symbol": "TEST-95",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7113374056586714
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.4937222861089519
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.7300064098596435
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993557",
+      "symbol": "TEST-96",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3510435441947834
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7348897160332382
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.6735638339887282
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993560",
+      "symbol": "TEST-97",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8407628955302946
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4041320727445161
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.5972011661493326
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993563",
+      "symbol": "TEST-98",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7811531174606108
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3580453040106054
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.5225860294247997
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993567",
+      "symbol": "TEST-99",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.32453351719574397
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6223626927987609
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.5537606184991606
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993570",
+      "symbol": "TEST-100",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2547664254344195
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6074754579465491
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5970689318438993
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993573",
+      "symbol": "TEST-101",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8428666625503536
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.41148875809348706
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.8206544102743036
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993576",
+      "symbol": "TEST-102",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8831201589214609
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.39925734867914453
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.4194411382134823
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993580",
+      "symbol": "TEST-103",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3867741046820615
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.768823889030445
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.4714503305866252
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993583",
+      "symbol": "TEST-104",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7598648003904024
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3769152829602969
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.6908671137551605
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993586",
+      "symbol": "TEST-105",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3082364011153775
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6994748887772001
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3237291069510648
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993590",
+      "symbol": "TEST-106",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7759838689210223
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3384315098811137
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.5506948234408415
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993593",
+      "symbol": "TEST-107",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3326607236600126
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7880787657196728
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.7396876693950927
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993596",
+      "symbol": "TEST-108",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8119131188202884
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4309151172067498
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3022835529001261
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993600",
+      "symbol": "TEST-109",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8945543222723886
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3493986774953962
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3468047845503238
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993603",
+      "symbol": "TEST-110",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.34940028245020405
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7037072290503398
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.806778901930902
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993606",
+      "symbol": "TEST-111",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3405504994518233
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7916887573041469
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5884278887486325
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993610",
+      "symbol": "TEST-112",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.32269388244623715
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7092381743922687
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.8773113192586981
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993613",
+      "symbol": "TEST-113",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7011300878732045
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4245651758717842
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.6144944254822446
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993616",
+      "symbol": "TEST-114",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7544147041337258
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4721173255957746
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.6894792165551498
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993619",
+      "symbol": "TEST-115",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2242858729557793
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7625784781245449
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.7963030323804298
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993623",
+      "symbol": "TEST-116",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7867224802871547
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.49445997990466206
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.3876475891586457
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993626",
+      "symbol": "TEST-117",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.3052195378509458
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6991129348923592
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3205668006842426
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993629",
+      "symbol": "TEST-118",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2463718698462284
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6892361127017832
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.531448235310952
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993632",
+      "symbol": "TEST-119",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7493313337764337
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.42427115228827883
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.5161290673283023
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993636",
+      "symbol": "TEST-120",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.814068700662069
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.30272145382828985
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.39095288687743335
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993639",
+      "symbol": "TEST-121",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.38131906680495076
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6201476497094978
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.45809218049482825
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993642",
+      "symbol": "TEST-122",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8332650581255632
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.4863121800620707
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.8250979046781151
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993645",
+      "symbol": "TEST-123",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7311782974978885
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.34499455027783543
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.7801949541399806
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993649",
+      "symbol": "TEST-124",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.28553964565296386
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7077652872958266
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.6513488864714667
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993652",
+      "symbol": "TEST-125",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7170690726032295
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.33835579095684165
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.7290777432787018
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993655",
+      "symbol": "TEST-126",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.29835056041229874
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7203663365167862
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.8199482126014881
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993658",
+      "symbol": "TEST-127",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.38353645044208623
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.7528630891058028
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5805873090787306
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993662",
+      "symbol": "TEST-128",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8004414604010512
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3769480794812473
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3465278405130524
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993665",
+      "symbol": "TEST-129",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.28719134716344635
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6807713539087611
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.561064299728754
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993669",
+      "symbol": "TEST-130",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.22103970667985137
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6912753203255003
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.46019594484868065
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993845",
+      "symbol": "TEST-131",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8978554630757096
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.447689672919116
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.5305851099758812
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993850",
+      "symbol": "TEST-132",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.770789486009424
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.30281989697055395
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.705212774387626
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993854",
+      "symbol": "TEST-133",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2637403833690236
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.6391182992441797
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.7770281018615506
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993858",
+      "symbol": "TEST-134",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8694405228691203
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.325121285235426
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3737533930303468
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993861",
+      "symbol": "TEST-135",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2949232355750133
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6417925004517223
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.8025683860106281
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993864",
+      "symbol": "TEST-136",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8571310453239315
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.39313877185321866
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.332991967917023
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993867",
+      "symbol": "TEST-137",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8388154083014223
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.332819355105379
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.3576469716577805
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993871",
+      "symbol": "TEST-138",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7288151166844914
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.32555887117090404
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.6399644317440765
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993874",
+      "symbol": "TEST-139",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.35015113025293104
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7727679569156168
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.8787474941672404
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993877",
+      "symbol": "TEST-140",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.34034204330113016
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6114702573789617
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.85695675670563
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993881",
+      "symbol": "TEST-141",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7435194527866629
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.37975066458110296
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.3905402542196974
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993884",
+      "symbol": "TEST-142",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8718017485525587
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.31089608636458954
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.7838566132258059
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993887",
+      "symbol": "TEST-143",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8981537591516153
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.46134307358319404
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.5209436476623059
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993891",
+      "symbol": "TEST-144",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2008345009899837
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.6809999188819329
+      },
+      "prediction": {
+        "direction": "bullish",
+        "confidence": 0.6684560125201134
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993894",
+      "symbol": "TEST-145",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7156721192912107
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3297795590276241
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.32022864953611463
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993897",
+      "symbol": "TEST-146",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.7753887798010197
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.3406233402632072
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.3819525548072913
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993900",
+      "symbol": "TEST-147",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2505046264436623
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7127397879757653
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.683549765422939
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993904",
+      "symbol": "TEST-148",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.8046493659898792
+        },
+        "technical_signals": {
+          "golden_cross": false,
+          "rsi_oversold": true
+        },
+        "fundamental_score": 0.4349640128916409
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.5038532021108476
+      }
+    },
+    {
+      "timestamp": "2025-11-02T17:11:36.993908",
+      "symbol": "TEST-149",
+      "analysis": {
+        "risk_assessment": {
+          "risk_score": 0.2562720555813998
+        },
+        "technical_signals": {
+          "golden_cross": true,
+          "rsi_oversold": false
+        },
+        "fundamental_score": 0.7786785164694427
+      },
+      "prediction": {
+        "direction": "bearish",
+        "confidence": 0.8857473847408373
+      }
+    }
+  ],
+  "market_insights": [
+    {
+      "type": "model_drift_analysis",
+      "timestamp": "2025-11-02T17:11:37.015969",
+      "summary": {
+        "trades_analyzed": 150,
+        "significant_drift": false,
+        "precision_gain": 0.05
+      }
+    },
+    {
+      "type": "signal_fusion_analysis",
+      "timestamp": "2025-11-02T17:14:42.185815",
+      "summary": {
+        "stronger_signal": "gold_nasdaq_ratio",
+        "confidence": 0.5
+      }
+    },
+    {
+      "type": "signal_fusion_analysis",
+      "timestamp": "2025-11-02T17:15:13.279582",
+      "summary": {
+        "stronger_signal": "gold_nasdaq_ratio",
+        "confidence": 0.5
+      }
+    },
+    {
+      "type": "signal_fusion_analysis",
+      "timestamp": "2025-11-02T17:15:50.602502",
+      "summary": {
+        "stronger_signal": "gold_nasdaq_ratio",
+        "confidence": 0.41034482758620683
+      }
+    },
+    {
+      "type": "signal_fusion_analysis",
+      "timestamp": "2025-11-02T17:18:53.427440",
+      "summary": {
+        "stronger_signal": "gold_nasdaq_ratio",
+        "confidence": 0.41034482758620683
+      }
+    },
+    {
+      "type": "signal_fusion_analysis",
+      "timestamp": "2025-11-02T17:19:14.927780",
+      "summary": {
+        "stronger_signal": "gold_nasdaq_ratio",
+        "confidence": 0.41034482758620683
+      }
+    }
+  ]
+}

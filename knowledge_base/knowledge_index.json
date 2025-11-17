@@ -1,0 +1,3647 @@
+{
+  "security": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_60a2a39c46d1",
+      "title": "The Art of Invisibility 2017",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_baf3b963eb5f",
+      "title": "John.Wiley.and.Sons.The.Art.of.Intrusion.The.R",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_d9a8ec7b626a",
+      "title": "MCSA Windows Server 2016 Practice Tests. Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_014b32937a5e",
+      "title": "CompTIA Network+ Practice Tests Exam N10-007 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_8dd2a383167c",
+      "title": "Cracking Codes with Python-Al Sweigart",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ea192e7a0067",
+      "title": "CCNA Routing and Switching Complete Study Guide Exam 100-105, Exam 200-105, Exam 200-125 [2nd Edition] ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_09cad8de27f9",
+      "title": "CCNA Routing and Switching Practice Tests Exam 100-105, Exam 200-105, and Exam 200-125 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3220400f4e06",
+      "title": "Kevin_Mitnick_-_The_Art_of_Deception",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_20a62987a238",
+      "title": "Wireshark (R) 101 Essential Skills for Network",
+      "relevance": "high"
+    }
+  ],
+  "network": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_60a2a39c46d1",
+      "title": "The Art of Invisibility 2017",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ba643da305d",
+      "title": "CompTIA Project+ Practice Tests_ Exam PK0-004 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_baf3b963eb5f",
+      "title": "John.Wiley.and.Sons.The.Art.of.Intrusion.The.R",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_d9a8ec7b626a",
+      "title": "MCSA Windows Server 2016 Practice Tests. Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_014b32937a5e",
+      "title": "CompTIA Network+ Practice Tests Exam N10-007 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ea192e7a0067",
+      "title": "CCNA Routing and Switching Complete Study Guide Exam 100-105, Exam 200-105, Exam 200-125 [2nd Edition] ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_09cad8de27f9",
+      "title": "CCNA Routing and Switching Practice Tests Exam 100-105, Exam 200-105, and Exam 200-125 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3220400f4e06",
+      "title": "Kevin_Mitnick_-_The_Art_of_Deception",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_20a62987a238",
+      "title": "Wireshark (R) 101 Essential Skills for Network",
+      "relevance": "high"
+    }
+  ],
+  "authentication": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_60a2a39c46d1",
+      "title": "The Art of Invisibility 2017",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_d9a8ec7b626a",
+      "title": "MCSA Windows Server 2016 Practice Tests. Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_8dd2a383167c",
+      "title": "Cracking Codes with Python-Al Sweigart",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ea192e7a0067",
+      "title": "CCNA Routing and Switching Complete Study Guide Exam 100-105, Exam 200-105, Exam 200-125 [2nd Edition] ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_09cad8de27f9",
+      "title": "CCNA Routing and Switching Practice Tests Exam 100-105, Exam 200-105, and Exam 200-125 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3220400f4e06",
+      "title": "Kevin_Mitnick_-_The_Art_of_Deception",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "encryption": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_60a2a39c46d1",
+      "title": "The Art of Invisibility 2017",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_014b32937a5e",
+      "title": "CompTIA Network+ Practice Tests Exam N10-007 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_8dd2a383167c",
+      "title": "Cracking Codes with Python-Al Sweigart",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ea192e7a0067",
+      "title": "CCNA Routing and Switching Complete Study Guide Exam 100-105, Exam 200-105, Exam 200-125 [2nd Edition] ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_09cad8de27f9",
+      "title": "CCNA Routing and Switching Practice Tests Exam 100-105, Exam 200-105, and Exam 200-125 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3220400f4e06",
+      "title": "Kevin_Mitnick_-_The_Art_of_Deception",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "database": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_60a2a39c46d1",
+      "title": "The Art of Invisibility 2017",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ea192e7a0067",
+      "title": "CCNA Routing and Switching Complete Study Guide Exam 100-105, Exam 200-105, Exam 200-125 [2nd Edition] ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_09cad8de27f9",
+      "title": "CCNA Routing and Switching Practice Tests Exam 100-105, Exam 200-105, and Exam 200-125 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3220400f4e06",
+      "title": "Kevin_Mitnick_-_The_Art_of_Deception",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_20a62987a238",
+      "title": "Wireshark (R) 101 Essential Skills for Network",
+      "relevance": "high"
+    }
+  ],
+  "rest": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_60a2a39c46d1",
+      "title": "The Art of Invisibility 2017",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ba643da305d",
+      "title": "CompTIA Project+ Practice Tests_ Exam PK0-004 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_baf3b963eb5f",
+      "title": "John.Wiley.and.Sons.The.Art.of.Intrusion.The.R",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_d9a8ec7b626a",
+      "title": "MCSA Windows Server 2016 Practice Tests. Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_8dd2a383167c",
+      "title": "Cracking Codes with Python-Al Sweigart",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ea192e7a0067",
+      "title": "CCNA Routing and Switching Complete Study Guide Exam 100-105, Exam 200-105, Exam 200-125 [2nd Edition] ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_09cad8de27f9",
+      "title": "CCNA Routing and Switching Practice Tests Exam 100-105, Exam 200-105, and Exam 200-125 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3220400f4e06",
+      "title": "Kevin_Mitnick_-_The_Art_of_Deception",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_20a62987a238",
+      "title": "Wireshark (R) 101 Essential Skills for Network",
+      "relevance": "high"
+    }
+  ],
+  "algorithm": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_60a2a39c46d1",
+      "title": "The Art of Invisibility 2017",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_baf3b963eb5f",
+      "title": "John.Wiley.and.Sons.The.Art.of.Intrusion.The.R",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_8dd2a383167c",
+      "title": "Cracking Codes with Python-Al Sweigart",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ea192e7a0067",
+      "title": "CCNA Routing and Switching Complete Study Guide Exam 100-105, Exam 200-105, Exam 200-125 [2nd Edition] ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "vulnerability": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3220400f4e06",
+      "title": "Kevin_Mitnick_-_The_Art_of_Deception",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    }
+  ],
+  "aws": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_60a2a39c46d1",
+      "title": "The Art of Invisibility 2017",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_baf3b963eb5f",
+      "title": "John.Wiley.and.Sons.The.Art.of.Intrusion.The.R",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_8dd2a383167c",
+      "title": "Cracking Codes with Python-Al Sweigart",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ea192e7a0067",
+      "title": "CCNA Routing and Switching Complete Study Guide Exam 100-105, Exam 200-105, Exam 200-125 [2nd Edition] ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_09cad8de27f9",
+      "title": "CCNA Routing and Switching Practice Tests Exam 100-105, Exam 200-105, and Exam 200-125 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_20a62987a238",
+      "title": "Wireshark (R) 101 Essential Skills for Network",
+      "relevance": "high"
+    }
+  ],
+  "firewall": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_d9a8ec7b626a",
+      "title": "MCSA Windows Server 2016 Practice Tests. Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_014b32937a5e",
+      "title": "CompTIA Network+ Practice Tests Exam N10-007 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ea192e7a0067",
+      "title": "CCNA Routing and Switching Complete Study Guide Exam 100-105, Exam 200-105, Exam 200-125 [2nd Edition] ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_09cad8de27f9",
+      "title": "CCNA Routing and Switching Practice Tests Exam 100-105, Exam 200-105, and Exam 200-125 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3220400f4e06",
+      "title": "Kevin_Mitnick_-_The_Art_of_Deception",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_20a62987a238",
+      "title": "Wireshark (R) 101 Essential Skills for Network",
+      "relevance": "high"
+    }
+  ],
+  "exploit": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_baf3b963eb5f",
+      "title": "John.Wiley.and.Sons.The.Art.of.Intrusion.The.R",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3220400f4e06",
+      "title": "Kevin_Mitnick_-_The_Art_of_Deception",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "penetration": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_60a2a39c46d1",
+      "title": "The Art of Invisibility 2017",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_baf3b963eb5f",
+      "title": "John.Wiley.and.Sons.The.Art.of.Intrusion.The.R",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    }
+  ],
+  "sql": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_d9a8ec7b626a",
+      "title": "MCSA Windows Server 2016 Practice Tests. Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "api": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_014b32937a5e",
+      "title": "CompTIA Network+ Practice Tests Exam N10-007 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ea192e7a0067",
+      "title": "CCNA Routing and Switching Complete Study Guide Exam 100-105, Exam 200-105, Exam 200-125 [2nd Edition] ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_09cad8de27f9",
+      "title": "CCNA Routing and Switching Practice Tests Exam 100-105, Exam 200-105, and Exam 200-125 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3220400f4e06",
+      "title": "Kevin_Mitnick_-_The_Art_of_Deception",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_20a62987a238",
+      "title": "Wireshark (R) 101 Essential Skills for Network",
+      "relevance": "high"
+    }
+  ],
+  "framework": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ea192e7a0067",
+      "title": "CCNA Routing and Switching Complete Study Guide Exam 100-105, Exam 200-105, Exam 200-125 [2nd Edition] ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    }
+  ],
+  "sql injection": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "payload": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "xss": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    }
+  ],
+  "react": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "hacking": [
+    {
+      "book_id": "book_4aa086a72c6b",
+      "title": "(ISC)² CISSP certified information systems security professional_ official study guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_60a2a39c46d1",
+      "title": "The Art of Invisibility 2017",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_baf3b963eb5f",
+      "title": "John.Wiley.and.Sons.The.Art.of.Intrusion.The.R",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_8dd2a383167c",
+      "title": "Cracking Codes with Python-Al Sweigart",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3220400f4e06",
+      "title": "Kevin_Mitnick_-_The_Art_of_Deception",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "linux": [
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_8dd2a383167c",
+      "title": "Cracking Codes with Python-Al Sweigart",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7499aeca3405",
+      "title": "Hacking for Dummies",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_20a62987a238",
+      "title": "Wireshark (R) 101 Essential Skills for Network",
+      "relevance": "high"
+    }
+  ],
+  "python": [
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_8dd2a383167c",
+      "title": "Cracking Codes with Python-Al Sweigart",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "javascript": [
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_83b1e2b18eed",
+      "title": "CompTIA A+ 220-1001 & 1002",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ec8ad20f8b02",
+      "title": "Hacking - An Unofficial Anonymous Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_20a62987a238",
+      "title": "Wireshark (R) 101 Essential Skills for Network",
+      "relevance": "high"
+    }
+  ],
+  "data structure": [
+    {
+      "book_id": "book_707cea01a4f7",
+      "title": "Android Hackers Handbook",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a04ec178de57",
+      "title": "Fundamentals of Python First Programs (2nd Edi",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "wireshark": [
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_2ac1db9ab14f",
+      "title": "CEH v9_ Certified Ethical Hacker Version 9 Study Guide ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_29baa48e55e0",
+      "title": "CompTIA Network+ Complete Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_873c7ea23f04",
+      "title": "CompTIA Network+ Study Guide Exam N10-007, 4th Edition",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1837eae50983",
+      "title": "Understanding Network Hacks_ Attack and Defense with Python ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_20a62987a238",
+      "title": "Wireshark (R) 101 Essential Skills for Network",
+      "relevance": "high"
+    }
+  ],
+  "metasploit": [
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_95ecfb740e6d",
+      "title": "CompTIA Cybersecurity Analyst (CSA+) Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_592ea8b973a5",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Complete Study Guide Exam CS0-001",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_affd5bf78eb4",
+      "title": "CompTIA Cybersecurity Analyst (CySA+) Practice Tests Exam CS0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_6f1a203bf9c4",
+      "title": "Comptia Pentest+ Study Guide_ Exam Pt0-001 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a428bcc51fee",
+      "title": "Gray Hat Hacking and Complete Guide to Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_0f2335fae265",
+      "title": "Metasploit-The Penetration Tester s Guide",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    }
+  ],
+  "kali": [
+    {
+      "book_id": "book_91a9eb0d5c58",
+      "title": "Attacking Network Protocols_ A Hacker’s Guide to Capture, Analysis, and Exploitation ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_98505baf9d66",
+      "title": "Beginning Ethical Hacking with Python (2017)",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e45625800c51",
+      "title": "Hacking_ Beginner to Expert Guide to Computer Hacking, Basic Security, and Penetration Testing (Computer Science Series) ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e97f64f85185",
+      "title": "rtfm-red-team-field-manual",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_e398d81444eb",
+      "title": "Black Hat Python - Ethical Hacking",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eb68da013341",
+      "title": "Hacking Secrets Exposed - A Beginner s Guide - January 1 2015.pdf filenam",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_ad4c60a1989d",
+      "title": "Cyber Operations_ Building, Defending, and Attacking Modern Computer Networks ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5f9afd6d794d",
+      "title": "Cybersecurity – Attack and Defense Strategies_ Infrastructure security with Red Team and Blue Team tactics ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1b49d22e4b17",
+      "title": "Kali Linux 2 Windows Penetration Testing ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_88a4a9daf22d",
+      "title": "Kali Linux 2018_ Windows Penetration Testing Second Edition Conduct network testing, surveillance, and pen testing on MS Windows using Kali Linux 2018 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_4d85a6095f9d",
+      "title": "Kali Linux Wireless Penetration Testing",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c12a6eb53571",
+      "title": "Kali Linux Wireless Pentesting and Security for Beginners ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_a6025f41dd2e",
+      "title": "Penetration Testing with Raspberry Pi_ Construct a hacking arsenal for penetration testers or hacking enthusiasts using Kali Linux on a Raspberry Pi ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_1552f749e6e7",
+      "title": "The Hacker Playbook 2- Practical Guide To Pene",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    }
+  ],
+  "docker": [
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_5e6e38f3c4a2",
+      "title": "CompTIA Security+ Study Guide_ Exam SY0-501 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_c5ce9275bb30",
+      "title": "MCSA Windows Server 2016 Complete Study Guide Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_3a1878a85023",
+      "title": "MCSA Windows Server 2016 Complete Study Guide_ Exam 70-740, Exam 70-741, Exam 70-742, and Exam 70-743 ( PDFDrive.com )",
+      "relevance": "high"
+    }
+  ],
+  "node.js": [
+    {
+      "book_id": "book_28cc650b53fe",
+      "title": "AWS Certified SysOps Administrator Official Study Guide_ Associate Exam ( PDFDrive.com )",
+      "relevance": "high"
+    },
+    {
+      "book_id": "book_eea48983b904",
+      "title": "The Hacker Playbook 3- Practical Guide To Penet",
+      "relevance": "high"
+    }
+  ],
+  "csrf": [
+    {
+      "book_id": "book_7c3e3876cd59",
+      "title": "The-Hacker-Playbook-Practical-Guide-To-Penetra",
+      "relevance": "high"
+    }
+  ]
+}

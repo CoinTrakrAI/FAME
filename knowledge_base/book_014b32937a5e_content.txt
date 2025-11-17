@@ -1,0 +1,5502 @@
+CompTIA
+®
+Network+
+®
+Practice Tests
+Exam N10-007
+Craig Zacker
+
+Senior Acquisitions Editor: Kenyon Brown
+Development Editor: Kelly Talbot
+Technical Editor: Todd Montgomery
+Production Manager: Kathleen Wisor
+Copy Editor: Elizabeth Welch
+Editorial Manager: Pete Gaughan
+Executive Editor: Jim Minatel
+Book Designer: Judy Fung and Bill Gibson
+Proofreader: Kim Wimpsett
+Indexer: Johnna VanHoose Dinse
+Project Coordinator, Cover: Brent Savage
+Cover Designer: Wiley
+Cover Image: ©Jeremy Woodhouse/Getty Images, Inc.
+Copyright © 2018 by John Wiley & Sons, Inc., Indianapolis, Indiana
+Published simultaneously in Canada
+ISBN: 978-1-119-43212-8
+ISBN: 978-1-119-43237-1 (ebk.)
+ISBN: 978-1-119-43229-6 (ebk.)
+Manufactured in the United States of America
+No part of this publication may be reproduced, stored in a retrieval
+system or transmitted in any form or by any means, electronic,
+mechanical, photocopying, recording, scanning or otherwise, except as
+permitted under Sections 107 or 108 of the 1976 United States
+Copyright Act, without either the prior written permission of the
+Publisher, or authorization through payment of the appropriate per-
+copy fee to the Copyright Clearance Center, 222 Rosewood Drive,
+Danvers, MA 01923, (978) 750-8400, fax (978) 646- 8600. Requests
+to the Publisher for permission should be addressed to the
+Permissions Department, John Wiley & Sons, Inc., 111 River Street,
+Hoboken, NJ 07030, (201) 748-6011, fax (201) 748-6008, or online at
+http://www.wiley.com/go/permissions
+.
+Limit of Liability/Disclaimer of Warranty: The publisher and the
+author make no representations or warranties with respect to the
+
+accuracy or completeness of the contents of this work and specifically
+disclaim all warranties, including without limitation warranties of
+fitness for a particular purpose. No warranty may be created or
+extended by sales or promotional materials. The advice and strategies
+contained herein may not be suitable for every situation. This work is
+sold with the understanding that the publisher is not engaged in
+rendering legal, accounting, or other professional services. If
+professional assistance is required, the services of a competent
+professional person should be sought. Neither the publisher nor the
+author shall be liable for damages arising herefrom. The fact that an
+organization or Web site is referred to in this work as a citation and/or
+a potential source of further information does not mean that the
+author or the publisher endorses the information the organization or
+Web site may provide or recommendations it may make. Further,
+readers should be aware that Internet Web sites listed in this work
+may have changed or disappeared between when this work was
+written and when it is read.
+For general information on our other products and services or to
+obtain technical support, please contact our Customer Care
+Department within the U.S. at (877) 762-2974, outside the U.S. at
+(317) 572-3993 or fax (317) 572-4002.
+Wiley publishes in a variety of print and electronic formats and by
+print-on-demand. Some material included with standard print
+versions of this book may not be included in e-books or in print-on-
+demand. If this book refers to media such as a CD or DVD that is not
+included in the version you purchased, you may download this
+material at http://booksupport.wiley.com. For more information
+about Wiley products, visit 
+www.wiley.com
+.
+Library of Congress Control Number:
+ 2018933558
+TRADEMARKS: Wiley, the Wiley logo, and the Sybex logo are
+trademarks or registered trademarks of John Wiley & Sons, Inc.
+and/or its affiliates, in the United States and other countries, and may
+not be used without written permission. CompTIA and Network+ are
+registered trademarks of CompTIA Properties LLC. All other
+trademarks are the property of their respective owners. John Wiley &
+
+Sons, Inc. is not associated with any product or vendor mentioned in
+this book.
+
+About the Author
+Craig Zacker
+ is the author or co-author of dozens of books, manuals,
+articles, and websites on computer and networking topics. He has also
+been an English professor, a technical and copy editor, a network
+administrator, a webmaster, a corporate trainer, a technical support
+engineer, a minicomputer operator, a literature and philosophy
+student, a library clerk, a photographic darkroom technician, a
+shipping clerk, and a newspaper boy. He lives in a little house with his
+beautiful wife and a neurotic cat.
+
+About the Technical Editor
+Todd Montgomery
+ has been in the networking industry for more
+than 35 years and holds many certifications from CompTIA, Cisco,
+Juniper, VMware, and other companies. Todd has spent most of his
+career out in the field working on-site in datacenters throughout North
+America and around the world. He has worked for equipment
+manufacturers, systems integrators, and end users of datacenter
+equipment in the public, service provider, and government sectors. He
+is currently working as a writer and technical editor and is involved in
+cloud projects. Todd lives in Austin, Texas, and in his free time enjoys
+auto racing, general aviation, and Austin’s live music venues. He can
+be reached at 
+toddmont@thegateway.net
+.
+
+Introduction
+Welcome to 
+CompTIA Network+ Practice Tests: Exam N10-007.
+ This
+book gives you a focused, timesaving way to review your networking
+knowledge and prepare to pass the Computing Technology Industry
+Association (CompTIA) Network+ exam. The book combines realistic
+exam prep questions with detailed answers and two complete practice
+tests to help you become familiar with the types of questions that you
+will encounter on the Network+ exam. By reviewing the objectives and
+sample questions, you can focus on the specific skills that you need to
+improve before taking the exam.
+
+How This Book Is Organized
+The first five chapters of this book are based on the five objective
+domains published by CompTIA for the N10-007 Network+ exam.
+There are 200 questions for each objective domain, broken down into
+the individual subdomains and covering each of the suggested topics.
+The next two chapters each contain a 100-question practice test
+covering all of the objective domains. Once you have prepared each of
+the objective domains individually, you can take the practice tests to
+see how you will perform on the actual exam.
+Interactive Online Learning 
+Environment and Test Bank
+The interactive online learning environment that accompanies
+CompTIA Network+ Practice Tests: Exam N10-007
+ provides a test
+bank with study tools to help you prepare for the certification exam,
+and increase your chances of passing it the first time. The online test
+bank runs on multiple devices. The test bank includes the following:
+Chapter Tests
+ The questions in the chapters align with objectives
+in the exam outline. Use these questions to test your knowledge.
+Practice Exams
+ Two practice exams are provided to prepare you
+for the type of questions to expect on the actual exam.
+Go to 
+http://www.wiley.com/go/netplustestprep
+ to
+register and gain access to this interactive online learning
+environment and test bank with study tools.
+Who Should Read This Book
+CompTIA recommends, but does not require, that candidates for the
+Network+ exam meet the following prerequisites:
+
+CompTIA A+ certification or equivalent knowledge
+At least 9 to 12 months of work experience in IT networking
+CompTIA’s certification program relies on exams that measure your
+ability to perform a specific job function or set of tasks. CompTIA
+develops the exams by analyzing the tasks performed by people who
+are currently working in the field. Therefore, the specific knowledge,
+skills, and abilities relating to the job are reflected in the certification
+exam.
+Because the certification exams are based on real-world tasks, you
+need to gain hands-on experience with the applicable technology in
+order to master the exam. In a sense, you might consider hands-on
+experience in an organizational environment to be a prerequisite for
+passing the Network+ exam. Many of the questions relate directly to
+specific network products or technologies, so use opportunities at your
+school or workplace to practice using the relevant tools. Candidates for
+the exam are also expected to have a basic understanding of enterprise
+technologies, including cloud and virtualization.
+How To Use This Book
+Although you can use this book in a number of ways, you might begin
+your studies by taking one of the practice exams as a pretest. After
+completing the exam, review your results for each Objective Domain
+and focus your studies first on the Objective Domains for which you
+received the lowest scores.
+As this book contains only practice questions and answers, the best
+method to prepare for the Network+ exam is to use this book along
+with a companion book that provides more extensive explanations for
+the elements covered in each objective domain. Todd Lammle’s
+CompTIA Network+ Study Guide: Exam N10-007
+ provides complete
+coverage of all the technology you need to know for the exam.
+After you have taken your pretest, you can use the chapters for the
+objective domains in which you need work to test your detailed
+knowledge and learn more about the technologies involved. By
+reviewing why the answers are correct or incorrect, you can determine
+
+if you need to study the objective topics more.
+What’s Next
+The next step is to review the objective domains for the Network+
+N10-007 exam and think about which topics you need to work on
+most. Then, you can turn to the appropriate chapter and get started.
+Good luck on the exam.
+
+Contents
+Cover
+Introduction
+How This Book Is Organized
+Interactive Online Learning Environment and Test Bank
+Who Should Read This Book
+How To Use This Book
+What’s Next
+Chapter 1: Networking Concepts
+Chapter 2: Infrastructure
+Chapter 3: Network Operations
+Chapter 4: Network Security
+Chapter 5: Network Troubleshooting and Tools
+Chapter 6: Practice Test 1
+Chapter 7: Practice Test 2
+Appendix Answers to Review Questions
+Chapter 1: Networking Concepts
+Chapter 2: Infrastructure
+Chapter 3: Network Operations
+Chapter 4: Network Security
+Chapter 5: Network Troubleshooting and Tools
+Chapter 6: Practice Test 1
+Chapter 7: Practice Test 2
+EULA
+
+Chapter 1
+ 
+Networking Concepts
+THE COMPTIA NETWORK+ EXAM N10-007 TOPICS
+COVERED IN THIS CHAPTER INCLUDE THE FOLLOWING:
+ 
+1.1 Explain the purposes and uses of ports and protocols
+Protocols and Ports
+SSH 22
+DNS 53
+SMTP 25
+SFTP 22
+FTP 20, 21
+TFTP 69
+TELNET 23
+DHCP 67, 68
+HTTP 80
+HTTPS 443
+SNMP 161
+RDP 3389
+NTP 123
+SIP 5060, 5061
+SMB 445
+POP 110
+IMAP 143
+LDAP 389
+LDAPS 636
+
+H.323 1720
+Protocol Types
+ICMP
+UDP
+TCP
+IP
+Connection-oriented vs. connectionless
+ 
+1.2 Explain devices, applications, protocols and services at
+their appropriate OSI layers
+Layer 1 – Physical
+Layer 2 – Data link
+Layer 3 – Network
+Layer 4 – Transport
+Layer 5 – Session
+Layer 6 – Presentation
+Layer 7 – Application
+ 
+1.3 Explain the concepts and characteristics of routing and
+switching
+Properties of network traffic
+Broadcast domains
+CSMA/CD
+CSMA/CA
+Collision domains
+Protocol data units
+MTU
+Broadcast
+Multicast
+
+Unicast
+Segmentation and interface properties
+VLANs
+Trunking (802.1q)
+Tagging and untagging 
+ports
+Port mirroring
+Switching loops/spanning tree
+PoE and PoE + (802.3af, 802.3at)
+DMZ
+MAC address table
+ARP table
+Routing
+Routing protocols (IPv4 and IPv6)
+Distance-vector routing protocols
+RIP
+EIGRP
+Link-state routing protocols
+OSPF
+Hybrid
+BGP
+Routing types
+Static
+Dynamic
+Default
+IPv6 concepts
+Addressing
+
+Tunneling
+Dual stack
+Router advertisement
+Neighbor discovery
+Performance concepts
+Traffic shaping
+QoS
+Diffserv
+CoS
+NAT/PAT
+Port forwarding
+Access control list
+Distributed switching
+Packet-switched vs. circuit-switched network
+Software-defined networking
+ 
+1.4 Given a scenario, configure the appropriate IP
+addressing components
+Private vs. public
+Loopback and reserved
+Default gateway
+Virtual IP
+Subnet mask
+Subnetting
+Classful
+Classes A, B, C, D, and E
+Classless
+
+VLSM
+CIDR notation (IPv4 vs. IPv6)
+Address assignments
+DHCP
+DHCPv6
+Static
+APIPA
+EUI64
+IP reservations
+ 
+1.5 Compare and contrast the characteristics of network
+topologies, types and technologies
+Wired topologies
+Logical vs. physical
+Star
+Ring
+Mesh
+Bus
+Wireless topologies
+Mesh
+Ad hoc
+Infrastructure
+Types
+LAN
+WLAN
+MAN
+WAN
+
+CAN
+SAN
+PAN
+Technologies that facilitate the Internet of Things ( IoT
+)
+Z-Wave
+Ant+
+Bluetooth
+NFC
+IR
+RFID
+802.11
+ 
+1.6 Given a scenario, implement the appropriate wireless
+technologies and configurations
+802.11 standards
+a
+b
+g
+n
+ac
+Cellular
+GSM
+TDMA
+CDMA
+Frequencies
+2.4 GHz
+5. 0 GHz
+
+Speed and distance requirements
+Channel bandwidth
+Channel bonding
+MIMO/MU-MIMO
+Unidirectional/omnidirectional
+Site surveys
+ 
+1.7 Summarize cloud concepts and their purposes
+Types of services
+SaaS
+PaaS
+IaaS
+Cloud delivery models
+Private
+Public
+Hybrid
+Connectivity methods
+Security implications/considerations
+Relationship between local and cloud resources
+ 
+1.8 Explain the functions of network services.
+DNS service
+Record types
+A, AAA
+TXT (SPF, DKIM)
+SRV
+MX
+CNAME
+
+NS
+PTR
+Internal vs. external DNS
+Third-party/cloud-hosted DNS
+Hierarchy
+Forward vs. reverse zone
+DHCP service
+MAC reservations
+Pools
+IP exclusions
+Scope options
+Lease time
+TTL
+DHCP relay/IP helper
+NTP
+IPAM
+1
+. 
+Which of the following pairs of well-known ports are the default
+values you would use to configure a POP3 email client?
+A
+. 
+110 and 25
+B
+. 
+143 and 25
+C
+. 
+110 and 143
+D
+. 
+80 and 110
+E
+. 
+25 and 80
+2
+. 
+Which of the following server applications use two well-known port
+numbers during a typical transaction?
+A
+. 
+NTP
+
+B
+. 
+SNMP
+C
+. 
+HTTP
+D
+. 
+FTP
+3
+. 
+Which of the following protocols does the Ping utility use to
+exchange messages with another system?
+A
+. 
+UDP
+B
+. 
+TCP
+C
+. 
+ICMP
+D
+. 
+IGMP
+4
+. 
+Which of the following components does the port number in a
+transport layer protocol header identify?
+A
+. 
+A transport layer protocol
+B
+. 
+An application
+C
+. 
+A gateway
+D
+. 
+A proxy server
+5
+. 
+Which of the following organizations is responsible for assigning
+the well-known port numbers used in transport layer protocol
+headers?
+A
+. 
+Institute for Electronic and Electrical Engineers (IEEE)
+B
+. 
+Internet Assigned Numbers Authority (IANA)
+C
+. 
+Internet Engineering Task Force (IETF)
+D
+. 
+International Organization for Standardization (ISO)
+6
+. 
+A client on a TCP/IP network is attempting to establish a session
+with a server. Which of the following correctly lists the order of
+Transmission Control Protocol (TCP) session establishment
+messages?
+A
+. 
+SYN, ACK, SYN, ACK
+B
+. 
+SYN, SYN, ACK, ACK
+
+C
+. 
+SYN/ACK, SYN/ACK
+D
+. 
+SYN, SYN/ACK, ACK
+7
+. 
+Which of the following is the default well-known port number for
+the Hypertext Transfer Protocol (HTTP) used for web client/server
+communications?
+A
+. 
+22
+B
+. 
+20
+C
+. 
+80
+D
+. 
+1720
+8
+. 
+The secured version of the Hypertext Transfer Protocol (HTTPS)
+uses a different well-known port from the unsecured version.
+Which of the following ports is used by HTTPS by default?
+A
+. 
+25
+B
+. 
+80
+C
+. 
+110
+D
+. 
+443
+9
+. 
+Which of the following Transmission Control Protocol (TCP)
+control bits is set to 1 to initiate the termination of a session?
+A
+. 
+SYN
+B
+. 
+URG
+C
+. 
+FIN
+D
+. 
+END
+E
+. 
+PSH
+10
+. 
+What field in the Transmission Control Protocol (TCP) Option
+subheader specifies the size of the largest segment a system can
+receive?
+A
+. 
+MSS
+B
+. 
+Window
+
+C
+. 
+MMS
+D
+. 
+WinMS
+11
+. 
+What is the term for the combination of an IPv4 address and a port
+number, as in the following example: 192.168.1.3:23?
+A
+. 
+Socket
+B
+. 
+OUI
+C
+. 
+Well-known port
+D
+. 
+Network address
+E
+. 
+Domain
+12
+. 
+Which of the following protocols generate messages that are
+carried directly within Internet Protocol (IP) datagrams, with no
+intervening transport layer protocol? (Choose all correct answers.)
+A
+. 
+ICMP
+B
+. 
+IGMP
+C
+. 
+SMTP
+D
+. 
+SNMP
+13
+. 
+Which of the following protocols is used to exchange directory
+service information?
+A
+. 
+RDP
+B
+. 
+LDAP
+C
+. 
+SNMP
+D
+. 
+SMB
+14
+. 
+Which of the following is the primary application layer protocol
+used by web browsers to communicate with web servers?
+A
+. 
+HTTP
+B
+. 
+HTML
+C
+. 
+SMTP
+D
+. 
+FTP
+
+15
+. 
+Which of the following protocols appears on the network as a
+service that client computers use to resolve names into IP
+addresses?
+A
+. 
+DHCP
+B
+. 
+BOOTP
+C
+. 
+DNS
+D
+. 
+SNMP
+16
+. 
+Which of the following protocols use(s) the term 
+datagram
+ to
+describe the data transfer unit it creates? (Choose all correct
+answers.)
+A
+. 
+Ethernet
+B
+. 
+IP
+C
+. 
+TCP
+D
+. 
+UDP
+17
+. 
+What is the native file sharing protocol used on all Microsoft
+Windows operating systems?
+A
+. 
+Hypertext Transfer Protocol (HTTP)
+B
+. 
+Network File System (NFS)
+C
+. 
+File Transfer Protocol (FTP)
+D
+. 
+Server Message Block (SMB)
+E
+. 
+Lightweight Directory Access Protocol (LDAP)
+18
+. 
+When analyzing captured TCP/IP packets, which of the following
+control bits must you look for in the Transmission Control Protocol
+(TCP) header to determine whether the receiving host has
+successfully received the sending host’s data?
+A
+. 
+ACK
+B
+. 
+FIN
+C
+. 
+PSH
+
+D
+. 
+SYN
+E
+. 
+URG
+19
+. 
+Which of the following terms describes the Transmission Control
+Protocol (TCP) exchange that establishes a connection prior to the
+transmission of any data?
+A
+. 
+Synchronization
+B
+. 
+Initialization exchange
+C
+. 
+Connection establishment
+D
+. 
+Three-way handshake
+20
+. 
+Alice has been instructed to install 100 Windows workstations, and
+she is working on automating the process by configuring the
+workstations to use PXE boots. Each workstation therefore must
+obtain an IP address from a DHCP server and download a boot
+image file from a TFTP server. Which of the following well-known
+ports must Alice open on the firewall separating the workstations
+from the servers? (Choose all correct answers.)
+A
+. 
+65
+B
+. 
+66
+C
+. 
+67
+D
+. 
+68
+E
+. 
+69
+21
+. 
+Which of the following explanations best describes the function of
+a Transmission Control Protocol (TCP) or User Datagram Protocol
+(UDP) port number?
+A
+. 
+The port number indicates to the receiver that the sender can
+activate a specific port only.
+B
+. 
+The port number is used by both the sender and the receiver to
+identify the application that generated the information in the
+datagram.
+C
+. 
+The port number is used only by the receiver to indicate the
+
+application process running on the sender.
+D
+. 
+The port number is used by both the sender and the receiver to
+negotiate a well-known server port for the communicating
+processes.
+22
+. 
+What is the valid range of numbers for the ephemeral client ports
+used by the Transmission Control Protocol (TCP) and User
+Datagram Protocol (UDP)?
+A
+. 
+1023 through 65534
+B
+. 
+1 through 1024
+C
+. 
+49152 through 65535
+D
+. 
+1024 to 49151
+23
+. 
+Which of the following statements about the User Datagram
+Protocol (UDP) are true? (Choose all correct answers.)
+A
+. 
+UDP does not use packet sequencing and acknowledgments.
+B
+. 
+UDP uses packet sequencing and acknowledgments.
+C
+. 
+UDP is a connection-oriented protocol.
+D
+. 
+UDP is a connectionless protocol.
+E
+. 
+UDP has an 8-byte header.
+F
+. 
+UDP has a 20-byte header.
+24
+. 
+Which of the following port values are used by the File Transfer
+Protocol (FTP)? (Choose all correct answers.)
+A
+. 
+21
+B
+. 
+23
+C
+. 
+20
+D
+. 
+53
+E
+. 
+69
+25
+. 
+Which of the following protocols provides connectionless delivery
+service at the transport layer of the Open Systems Interconnection
+
+(OSI) model?
+A
+. 
+TCP
+B
+. 
+HTTP
+C
+. 
+UDP
+D
+. 
+ARP
+26
+. 
+What is the valid range of numbers for the well-known
+Transmission Control Protocol (TCP) and User Datagram Protocol
+(UDP) ports used by servers?
+A
+. 
+1024 through 49151
+B
+. 
+1 through 49151
+C
+. 
+49152 through 65534
+D
+. 
+1 through 1023
+27
+. 
+Ralph is a network administrator who has just installed a new open
+source email server for the users at his company. The server is
+configured to send and receive Internet email and create a mailbox
+for each user that will permanently store the user’s mail on the
+server. Ralph next uses a protocol analyzer to examine the network
+traffic resulting from the new server installation. Which of the
+following new protocols should Ralph expect to see in his network
+traffic analysis? (Choose all correct answers.)
+A
+. 
+SNMP
+B
+. 
+SMTP
+C
+. 
+POP3
+D
+. 
+IMAP
+E
+. 
+RIP
+28
+. 
+Which of the following values could a web client use as an
+ephemeral port number when communicating with a web server?
+A
+. 
+1
+B
+. 
+23
+
+C
+. 
+80
+D
+. 
+1024
+E
+. 
+1999
+F
+. 
+50134
+29
+. 
+Which of the following protocols provides connection-oriented
+service with guaranteed delivery at the transport layer of the OSI
+model?
+A
+. 
+TCP
+B
+. 
+HTTP
+C
+. 
+UDP
+D
+. 
+IP
+30
+. 
+Which of the following protocols is limited to use on the local
+subnet only?
+A
+. 
+Address Resolution Protocol (ARP)
+B
+. 
+Dynamic Host Configuration Protocol (DHCP)
+C
+. 
+Domain Name System (DNS)
+D
+. 
+Simple Mail Transfer Protocol (SMTP)
+31
+. 
+At which of the following layers of the Open Systems
+Interconnection (OSI) model do the protocols on a typical local
+area network use MAC addresses to identify other computers on
+the network?
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+32
+. 
+Which of the following organizations developed the Open Systems
+Interconnection (OSI) model?
+A
+. 
+International Telecommunication Union (ITU-T)
+
+B
+. 
+Comité Consultatif International Télégraphique et
+Téléphonique (CCITT)
+C
+. 
+American National Standards Institute (ANSI)
+D
+. 
+Institute of Electrical and Electronics Engineers (IEEE)
+E
+. 
+International Organization for Standardization (ISO)
+33
+. 
+Which layer of the Open Systems Interconnection (OSI) model is
+responsible for the logical addressing of end systems and the
+routing of datagrams on a network?
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+E
+. 
+Session
+F
+. 
+Presentation
+G
+. 
+Application
+34
+. 
+What layer of the Open Systems Interconnection (OSI) model is
+responsible for translating and formatting information?
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+E
+. 
+Session
+F
+. 
+Presentation
+G
+. 
+Application
+35
+. 
+Which of the following devices typically operates at the network
+layer of the Open Systems Interconnection (OSI) model?
+A
+. 
+Proxy server
+B
+. 
+Hub
+
+C
+. 
+Network interface adapter
+D
+. 
+Router
+36
+. 
+Which layer of the Open Systems Interconnection (OSI) model
+provides an entrance point to the protocol stack for applications?
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+E
+. 
+Session
+F
+. 
+Presentation
+G
+. 
+Application
+37
+. 
+Which layer of the Open Systems Interconnection (OSI) model is
+responsible for dialogue control between two communicating end
+systems?
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+E
+. 
+Session
+F
+. 
+Presentation
+G
+. 
+Application
+38
+. 
+Some switches can perform functions associated with two layers of
+the Open Systems Interconnection (OSI) model. Which two of the
+following layers are often associated with network switching?
+(Choose all correct answers.)
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+
+D
+. 
+Transport
+E
+. 
+Session
+F
+. 
+Presentation
+G
+. 
+Application
+39
+. 
+At which layer of the Open Systems Interconnection (OSI) model
+are there TCP/IP protocols that can provide either connectionless
+or connection-oriented services to applications?
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+E
+. 
+Session
+F
+. 
+Presentation
+G
+. 
+Application
+40
+. 
+Which of the following layers of the Open Systems Interconnection
+(OSI) model typically have dedicated physical hardware devices
+associated with them? (Choose all correct answers.)
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+E
+. 
+Session
+F
+. 
+Presentation
+G
+. 
+Application
+41
+. 
+At which layer of the Open Systems Interconnection (OSI) model is
+there a protocol that adds both a header and footer to the
+information that is passed down from an upper layer, thus creating
+a frame?
+
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+E
+. 
+Session
+F
+. 
+Presentation
+G
+. 
+Application
+42
+. 
+Identify the layer of the Open Systems Interconnection (OSI)
+model that controls the addressing, transmission, and reception of
+Ethernet frames, and also identify the media access control method
+that Ethernet uses.
+A
+. 
+Physical layer; Carrier Sense Multiple Access with Collision
+Detection (CSMA/CD)
+B
+. 
+Physical layer; Carrier Sense Multiple Access with Collision
+Avoidance (CSMA/CA)
+C
+. 
+Data link layer; CSMA/CD
+D
+. 
+Data link layer; CSMA/CA
+43
+. 
+At which layer of the OSI model do you find the protocol
+responsible for the delivery of data to its ultimate destination on an
+internetwork?
+A
+. 
+Data link
+B
+. 
+Network
+C
+. 
+Session
+D
+. 
+Application
+44
+. 
+Which of the following is 
+not
+ a protocol operating at the network
+layer of the OSI model?
+A
+. 
+IP
+B
+. 
+ICMP
+
+C
+. 
+IGMP
+D
+. 
+IMAP
+45
+. 
+Ed is a software developer who has been given the task of creating
+an application that requires guaranteed delivery of information
+between end systems. At which layer of the Open Systems
+Interconnection (OSI) model does the protocol that provides the
+guaranteed delivery run, and what type of protocol must Ed use?
+A
+. 
+Data link layer; connectionless
+B
+. 
+Network layer; connection-oriented
+C
+. 
+Transport layer; connection-oriented
+D
+. 
+Application layer; connectionless
+46
+. 
+Which of the following devices operates only at the physical layer
+of the Open Systems Interconnection (OSI) model?
+A
+. 
+Hub
+B
+. 
+Bridge
+C
+. 
+Switch
+D
+. 
+Router
+47
+. 
+Alice is a network administrator designing a new local area
+network (LAN). She needs to determine the type of cabling and the
+network topology to implement. Which layers of the Open Systems
+Interconnection (OSI) model apply to cabling and topology
+elements?
+A
+. 
+Physical and data link layers
+B
+. 
+Data link and network layers
+C
+. 
+Network and transport layers
+D
+. 
+Transport and application layers
+48
+. 
+Which layers of the Open Systems Interconnection (OSI) model do
+not have protocols in the TCP/IP suite exclusively dedicated to
+them? (Choose all correct answers.)
+
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+E
+. 
+Session
+F
+. 
+Presentation
+G
+. 
+Application
+49
+. 
+The protocols at which layer of the Open Systems Interconnection
+(OSI) model use port numbers to identify the applications that are
+the source and the destination of the data in the packets?
+A
+. 
+Application
+B
+. 
+Presentation
+C
+. 
+Transport
+D
+. 
+Network
+50
+. 
+Which of the following is a correct listing of the Open Systems
+Interconnection (OSI) model layers, in order, from top to bottom?
+A
+. 
+Physical, data link, transport, network, session presentation,
+application
+B
+. 
+Application, session, presentation, transport, network, data
+link, physical
+C
+. 
+Presentation, application, transport, session, network, physical,
+data link
+D
+. 
+Session, application, presentation, transport, data link,
+network, physical
+E
+. 
+Application, presentation, session, transport, network, data
+link, physical
+51
+. 
+At which of the Open Systems Interconnection (OSI) model layers
+do switches and bridges perform their basic functions?
+A
+. 
+Physical
+
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+52
+. 
+Flow control is a function implemented in protocols operating at
+which layer of the Open Systems Interconnection (OSI) model?
+A
+. 
+Presentation
+B
+. 
+Session
+C
+. 
+Transport
+D
+. 
+Network
+53
+. 
+Which layer of the Open Systems Interconnection (OSI) model
+defines the medium, network interfaces, connecting hardware, and
+signaling methods used on a network?
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+E
+. 
+Session
+F
+. 
+Presentation
+G
+. 
+Application
+54
+. 
+Which of the OSI model layers is responsible for syntax translation
+and compression or encryption?
+A
+. 
+Data link
+B
+. 
+Network
+C
+. 
+Session
+D
+. 
+Presentation
+E
+. 
+Application
+55
+. 
+Which layer of the Open Systems Interconnection (OSI) model is
+responsible for transmitting signals over the network medium?
+
+A
+. 
+Physical
+B
+. 
+Data link
+C
+. 
+Network
+D
+. 
+Transport
+E
+. 
+Session
+F
+. 
+Presentation
+G
+. 
+Application
+56
+. 
+Specify the layer of the Open Systems Interconnection (OSI) model
+at which the Internet Protocol (IP) operates and whether it is
+connection-oriented or connectionless.
+A
+. 
+Network; connection-oriented
+B
+. 
+Network; connectionless
+C
+. 
+Transport; connection-oriented
+D
+. 
+Transport; connectionless
+57
+. 
+An Ethernet network interface adapter provides functions that
+span which two layers of the Open Systems Interconnection (OSI)
+model?
+A
+. 
+Physical and data link
+B
+. 
+Data link and network
+C
+. 
+Network and transport
+D
+. 
+Transport and application
+58
+. 
+Which of the following protocols operate at the application layer of
+the Open Systems Interconnection (OSI) model? (Choose all
+correct answers.)
+A
+. 
+HTTP
+B
+. 
+SNMP
+C
+. 
+ICMP
+D
+. 
+IGMP
+
+E
+. 
+UDP
+59
+. 
+Which layer of the Open Systems Interconnection (OSI) model
+would be responsible for converting a text file encoded using
+EBCDIC on the sending system into ASCII code, when required by
+the receiving system?
+A
+. 
+Application
+B
+. 
+Presentation
+C
+. 
+Session
+D
+. 
+Physical
+60
+. 
+Which of the following protocols operates at the network layer of
+the OSI model but does not encapsulate data generated by an
+upper layer protocol for transmission over the network?
+A
+. 
+IP
+B
+. 
+UDP
+C
+. 
+ARP
+D
+. 
+ICMP
+E
+. 
+TCP
+61
+. 
+Which of the following could be a valid MAC address for a network
+interface adapter?
+A
+. 
+10.124.25.43
+B
+. 
+FF:FF:FF:FF:FF:FF
+C
+. 
+00:1A:6B:31:9A:4E
+D
+. 
+03:AE:16:3H:5B:11
+E
+. 
+fe80::89a5:9e4d:a9d0:9ed7
+62
+. 
+Which of the following TCP/IP parameters, configured on an end
+system, specifies the Internet Protocol (IP) address of a router on
+the local network that provides access to other networks?
+A
+. 
+WINS Server Addresses
+
+B
+. 
+Default Gateway
+C
+. 
+DNS Server Addresses
+D
+. 
+Subnet Gateway
+63
+. 
+Which of the following services enables computers on a private
+IPv4 network to access the Internet using a registered IP address?
+A
+. 
+DHCP
+B
+. 
+NAT
+C
+. 
+DNS
+D
+. 
+NTP
+64
+. 
+Which of the following protocols prevents network switching loops
+from occurring by shutting down redundant links until they are
+needed?
+A
+. 
+RIP
+B
+. 
+STP
+C
+. 
+VLAN
+D
+. 
+NAT
+65
+. 
+Which of the following are techniques used in traffic shaping to
+prevent networks from being overwhelmed by data transmissions?
+(Choose all correct answers.)
+A
+. 
+Bandwidth throttling
+B
+. 
+Rate limiting
+C
+. 
+Broadcast storming
+D
+. 
+Network address translation
+66
+. 
+Which of the following best defines the concept of the dual stack?
+A
+. 
+A computer with two network interface adapters
+B
+. 
+A computer with two installed operating systems
+C
+. 
+A computer with two sets of networking protocols
+D
+. 
+A computer with connections to two different network
+
+segments
+67
+. 
+An enterprise network has been designed with individual
+departmental switches because in most cases, the devices in a
+specific department exchange network traffic with other devices in
+the same department. Each of the departmental switches is also
+connected to a host switch, which enables devices to communicate
+with other departments. Which of the following terms describes
+this switching architecture?
+A
+. 
+Distributed switching
+B
+. 
+Port forwarding
+C
+. 
+Traffic shaping
+D
+. 
+Neighbor discovery
+68
+. 
+Which of the following terms refers to methods by which network
+traffic is prioritized to prevent applications from suffering faults
+due to network congestion?
+A
+. 
+Port forwarding
+B
+. 
+Dynamic routing
+C
+. 
+VLANs
+D
+. 
+QoS
+69
+. 
+Which of the following statements about Routing Information
+Protocol version 1 (RIPv1) is true? (Choose all correct answers.)
+A
+. 
+RIPv1 broadcasts the entire contents of the routing table every
+30 seconds.
+B
+. 
+RIPv1 advertises the subnet mask along with the destination
+network.
+C
+. 
+RIPv1 broadcasts only the elements in the routing table that
+have changed every 60 seconds.
+D
+. 
+RIPv1 does not include the subnet mask in its network
+advertisements.
+70
+. 
+Which of the following is an example of a circuit-switched network
+
+connection, as opposed to a packet-switched network connection?
+A
+. 
+Two wireless computers using an ad hoc topology
+B
+. 
+A landline voice telephone call
+C
+. 
+A smartphone connecting to a cellular tower
+D
+. 
+Computers connected by a wired LAN
+71
+. 
+Which of the following mechanisms for prioritizing network traffic
+uses a 6-bit classification identifier in the Internet Protocol (IP)
+header?
+A
+. 
+Diffserv
+B
+. 
+CoS
+C
+. 
+Traffic shaping
+D
+. 
+QoS
+72
+. 
+Which of the following is a network layer protocol that uses
+ICMPv6 messages to locate routers, DNS servers, and other nodes
+on an IPv6 network?
+A
+. 
+BGP
+B
+. 
+NDP
+C
+. 
+OSPF
+D
+. 
+PoE
+73
+. 
+Which of the following is a protocol that identifies VLANs by
+inserting a 32-bit field in the Ethernet frame?
+A
+. 
+IEEE 802.1P
+B
+. 
+IEEE 802.1Q
+C
+. 
+IEEE 802.1X
+D
+. 
+IEEE 802.1AB
+74
+. 
+Which of the following is 
+not
+ an advantage of packet switching over
+circuit switching?
+A
+. 
+Packets can be transmitted out of order.
+
+B
+. 
+Packets can take different routes to the destination.
+C
+. 
+Packets can be stored temporarily in the event of network
+congestion.
+D
+. 
+Packets can be routed around areas of network congestion.
+75
+. 
+Which of the following statements about static routing are true?
+(Choose all correct answers.)
+A
+. 
+Static routes are manually configured routes that
+administrators must add, modify, or delete when a change in
+the network occurs.
+B
+. 
+Static routes are automatically added to the routing table by
+routing protocols when a new network path becomes available.
+C
+. 
+Static routes adapt to changes in the network infrastructure
+automatically.
+D
+. 
+Static routes are a recommended solution for large
+internetworks with redundant paths to each destination
+network.
+E
+. 
+Static routes are a recommended solution for small
+internetworks with a single path to each destination network.
+76
+. 
+Which of the following TCP/IP routing protocols does not include
+the subnet mask within its route update messages, preventing it
+from supporting subnetting?
+A
+. 
+Routing Information Protocol, version 1 (RIPv1)
+B
+. 
+Routing Information Protocol, version 2 (RIPv2)
+C
+. 
+Border Gateway Protocol (BGP)
+D
+. 
+Open Shortest Path First (OSPF)
+77
+. 
+Which of the following terms refers to a routing protocol that does
+not
+ rely on hop counts to measure the efficiency of routes?
+A
+. 
+Interior gateway protocol
+B
+. 
+Edge gateway protocol
+C
+. 
+Distance vector protocol
+
+D
+. 
+Link state protocol
+78
+. 
+What is the maximum number of routes that can be included in a
+single RIP broadcast packet?
+A
+. 
+20
+B
+. 
+25
+C
+. 
+32
+D
+. 
+Unlimited
+79
+. 
+Which of the following routing protocols can you use on a TCP/IP
+internetwork with segments running at different speeds, making
+hop counts an inaccurate measure of route efficiency? (Choose all
+correct answers.)
+A
+. 
+Enhanced Interior Gateway Routing Protocol (EIGRP)
+B
+. 
+Routing Information Protocol (RIP)
+C
+. 
+Open Shortest Path First (OSPF)
+D
+. 
+Border Gateway Protocol (BGP)
+80
+. 
+What is the term for the process by which dynamic routing
+protocols update other routers with routing table information?
+A
+. 
+Convergence
+B
+. 
+Distance vectoring
+C
+. 
+Redistribution
+D
+. 
+Dissemination
+81
+. 
+Which of the following are terms for an area of an enterprise
+network, separated by firewalls, that contains servers that must be
+accessible both from the Internet and from the internal network?
+(Choose all correct answers.)
+A
+. 
+Intranet
+B
+. 
+DMZ
+C
+. 
+EGP
+
+D
+. 
+Stateless network
+E
+. 
+Perimeter network
+82
+. 
+Each of the following Carrier Sense Multiple Access with Collision
+Detection (CSMA/CD) events occurs on an Ethernet network when
+two stations transmit simultaneously, although not in the order
+listed. Which of the following events occurs immediately after the
+collision?
+A
+. 
+The two stations observe a random back-off interval.
+B
+. 
+The two stations transmit a jam signal.
+C
+. 
+The two stations stop transmitting.
+D
+. 
+The two stations listen to see if the channel is idle.
+E
+. 
+The two stations begin retransmitting their frames.
+83
+. 
+Which of the following TCP/IP routing protocols measures the
+efficiency of routes by the number of hops between the source and
+the destination?
+A
+. 
+Routing Information Protocol (RIP)
+B
+. 
+Open Shortest Path First (OSPF)
+C
+. 
+Border Gateway Protocol (BGP)
+D
+. 
+Intermediate System to Intermediate System (IS-IS)
+84
+. 
+Which of the following IEEE standards calls for the use of the
+Carrier Sense Multiple Access with Collision Avoidance
+(CSMA/CA) media access control mechanism?
+A
+. 
+802.11ac
+B
+. 
+802.1X
+C
+. 
+802.3
+D
+. 
+All of the above
+85
+. 
+Which of the following devices is used to physically connect
+computers in the same VLAN?
+A
+. 
+A bridge
+
+B
+. 
+A hub
+C
+. 
+A switch
+D
+. 
+A router
+86
+. 
+Which of the following statements is true about an Ethernet
+network that uses CSMA/CD?
+A
+. 
+Collisions are a normal occurrence.
+B
+. 
+Collisions never occur unless there is a network fault.
+C
+. 
+Collisions cause data to be irretrievably lost.
+D
+. 
+Collisions are the result of duplicate IP addresses.
+87
+. 
+VLANs create the administrative boundaries on a switched
+network that are otherwise provided by which of the following
+devices?
+A
+. 
+Hubs
+B
+. 
+Routers
+C
+. 
+Domains
+D
+. 
+Bridges
+88
+. 
+Which of the following statements about VLANs are true? (Choose
+all correct answers.)
+A
+. 
+All of the devices in a particular VLAN must be physically
+connected to the same switch.
+B
+. 
+A VLAN creates a limited broadcast domain on a switched
+network.
+C
+. 
+You must have VLANs on a switched network for
+communication between computers on different cable segments
+to occur.
+D
+. 
+A router is required for communication between VLANs.
+89
+. 
+Which of the following elements can be used to identify the devices
+in a particular VLAN? (Choose all correct answers.)
+A
+. 
+Hardware addresses
+
+B
+. 
+IP addresses
+C
+. 
+DNS names
+D
+. 
+Switch port numbers
+90
+. 
+Network address translation (NAT) operates at which layer of the
+Open Systems Interconnection (OSI) model?
+A
+. 
+Data link
+B
+. 
+Network
+C
+. 
+Transport
+D
+. 
+Application
+91
+. 
+Which of the following types of routing protocols route datagrams
+between autonomous systems?
+A
+. 
+EGP
+B
+. 
+RIP
+C
+. 
+IGP
+D
+. 
+OSPF
+92
+. 
+Which of the following is the most accurate description of the
+subnetting process on a TCP/IP network?
+A
+. 
+You extend the IP address by adding bits for a subnet identifier.
+B
+. 
+You borrow bits from the network identifier to create a subnet
+identifier.
+C
+. 
+You borrow bits from the host identifier to create a subnet
+identifier.
+D
+. 
+You create a subnet identifier by borrowing half of the bits from
+the network identifier and half from the host identifier.
+93
+. 
+Which of the following IPv4 addresses are you unable to assign to a
+network host? (Choose all correct answers.)
+A
+. 
+1.1.1.1
+B
+. 
+229.6.87.3
+
+C
+. 
+103.256.77.4
+D
+. 
+9.34.0.1
+94
+. 
+How many bits are allocated to the host identifier in an IPv4
+address on the 10.72.0.0/17 network?
+A
+. 
+8
+B
+. 
+15
+C
+. 
+16
+D
+. 
+17
+95
+. 
+Which of the following are 
+not
+ valid IPv4 addresses in the private
+address space defined by RFC 1918? (Choose all correct answers.)
+A
+. 
+10.16.225.1
+B
+. 
+172.33.19.7
+C
+. 
+192.168.254.77
+D
+. 
+10.255.255.255
+E
+. 
+172.15.2.9
+96
+. 
+Alice has been instructed to create a network with 8 subnets and
+30 hosts per subnet. She has been assigned a Class C network
+address. Which of the following subnet masks will she have to use?
+A
+. 
+255.255.255.128
+B
+. 
+255.255.255.192
+C
+. 
+255.255.255.224
+D
+. 
+255.255.255.240
+E
+. 
+255.255.255.248
+F
+. 
+255.255.255.252
+97
+. 
+Which of the following is the default subnet mask for an IPv4 Class
+A network?
+A
+. 
+255.0.0.0
+B
+. 
+255.255.0.0
+
+C
+. 
+255.255.255.0
+D
+. 
+255.255.255.255
+98
+. 
+Which of the following is the range of IPv4 addresses that
+Automatic Private IP Addressing (APIPA) assigns to DHCP clients
+that cannot access a DHCP server?
+A
+. 
+10.0.0.0 to 10.0.255.255
+B
+. 
+169.254.0.0 to 169.254.255.255
+C
+. 
+192.168.0.0 to 192.168.0.255
+D
+. 
+224.0.0.0 to 224.0.255.255
+99
+. 
+In which IPv4 class is the address 127.0.0.1 found?
+A
+. 
+Class A
+B
+. 
+Class B
+C
+. 
+Class C
+D
+. 
+None of the above
+100
+. 
+Which of the following is a valid IPv6 address?
+A
+. 
+fe00::b491:cf79:p493:23ff
+B
+. 
+2001:0:49e6:39ff:8cf5:6812:ef56
+C
+. 
+fe00::c955:c944:acdd:3fcb
+D
+. 
+2001:0:44ef68:23eb:99fe:72bec6:ea5f
+101
+. 
+To which class does the following IPv4 address belong:
+190.126.14.251?
+A
+. 
+Class A
+B
+. 
+Class B
+C
+. 
+Class C
+D
+. 
+Class D
+102
+. 
+Classless Inter-Domain Routing (CIDR) is a standard for IP
+addressing that includes the ability to create subnets using any
+
+number of IP address bits, rather than using 8-bit blocks. Which of
+the following terms describes this ability?
+A
+. 
+VLSM
+B
+. 
+APIPA
+C
+. 
+VLAN
+D
+. 
+EUI-64
+103
+. 
+Ralph has been instructed to use the network address 10.12.0.0/14
+for the new network he is installing. What subnet mask value
+should he use when configuring his computers?
+A
+. 
+255.248.0.0
+B
+. 
+255.252.0.0
+C
+. 
+255.254.0.0
+D
+. 
+255.255.248.0
+E
+. 
+255.255.252.0
+F
+. 
+255.255.254.0
+104
+. 
+Ed has been hired to design a company’s network. The company
+has an assigned Class C network address of 192.168.30.0. Ed’s
+client wants the network to be configured with 10 subnets, each
+with 14 hosts. Is this configuration possible with the given address,
+and if so, how many subnets and hosts can Ed create on the
+network?
+A
+. 
+Yes, this will work. By using 4 subnet bits, it is possible for Ed
+to create up to 16 subnets. He can then use the remaining 4 host
+bits to create 14 hosts on each subnet.
+B
+. 
+No, this will not work. A Class C address cannot be subnetted to
+create 8 subnets.
+C
+. 
+No, this will not work. Although there are sufficient bits
+available to create 10 subnets, there are not enough bits left
+over for Ed to create 14 hosts per subnet.
+D
+. 
+Yes, this will work. Ed can create 10 subnets with 14 hosts per
+
+subnet. By using 3 subnet bits, he can create 10 subnets, which
+leaves 5 bits to create up to 30 hosts per subnet.
+105
+. 
+What is the greatest number of subnets you can create with a Class
+A IPv4 address if you use a 14-bit subnet identifier?
+A
+. 
+256
+B
+. 
+1,022
+C
+. 
+1,024
+D
+. 
+16,382
+E
+. 
+16,384
+106
+. 
+Alice has been asked to design her company’s Internet Protocol
+(IP) addressing scheme. The company has been assigned Class C
+network address of 192.168.30.0. Alice’s director wants 4 subnets
+with 28 hosts per subnet. How many bits are required for subnets?
+How many bits are required for hosts? What will the new subnet
+mask be for this network?
+A
+. 
+3 subnet bits, 5 host bits, and subnet mask 255.255.255.240
+B
+. 
+4 subnet bits, 3 host bits, and subnet mask 255.255.255.248
+C
+. 
+3 subnet bits, 5 host bits, and subnet mask 255.255.255.224
+D
+. 
+5 subnet bits, 3 host bits, and subnet mask 255.255.255.192
+107
+. 
+A network interface adapter in a workstation has a hexadecimal
+MAC address of 001F9EFC7AD0. Which of the following would be
+the adapter’s IPv6 link local address based on its EUI-64 value?
+A
+. 
+FE80::001F:9EFF:FEFC:7AD0
+B
+. 
+FE80::FFFE:021F:9EFC:7AD0
+C
+. 
+FE80::FF00:1F9E:FC7A:D0FE
+D
+. 
+FE80::021F:9EFF:FEFC:7AD0
+108
+. 
+The default mask for a Class B network is 255.255.0.0. How many
+subnet bits do you need to create 600 subnets with 55 hosts per
+subnet, and what is the new subnet mask for the network?
+
+A
+. 
+10 subnet bits with a subnet mask of 255.255.255.192
+B
+. 
+9 subnet bits with a subnet mask of 255.255.255.128
+C
+. 
+10 subnet bits with a subnet mask of 255.255.224.0
+D
+. 
+11 subnet bits with a subnet mask of 255.255.255.192
+109
+. 
+What is the greatest number of host addresses you can create on a
+single subnet of a network with the following address:
+172.16.0.0/20?
+A
+. 
+142
+B
+. 
+144
+C
+. 
+4,094
+D
+. 
+4,096
+110
+. 
+Ralph has a Class B network with a subnet mask of 255.255.248.0.
+How many subnets can he create, and how many hosts can he
+create per subnet?
+A
+. 
+64 subnets and 2046 hosts
+B
+. 
+32 subnets and 2046 hosts
+C
+. 
+30 subnets and 1022 hosts
+D
+. 
+62 subnets and 1022 hosts
+111
+. 
+Convert the binary mask 11111111.11111111.11100000.00000000
+into its equivalent decimal value. What is the decimal
+representation of this mask?
+A
+. 
+255.255.224.0
+B
+. 
+255.255.240.0
+C
+. 
+255.255.248.0
+D
+. 
+255.255.252.0
+112
+. 
+If you have a network address of 192.168.1.32/27, what is the valid
+range of host addresses you can use for your workstations?
+A
+. 
+192.168.1.33 through 192.168.1.63
+
+B
+. 
+192.168.1.33 through 192.168.1.62
+C
+. 
+192.168.1.34 through 192.168.1.62
+D
+. 
+192.168.1.34 through 192.168.1.63
+113
+. 
+Alice has been assigned the network address 172.21.0.0/22 for the
+creation of a new department network in her company. How many
+host addresses does she have available to her?
+A
+. 
+510
+B
+. 
+512
+C
+. 
+1022
+D
+. 
+1024
+114
+. 
+Automatic Private IP Addressing (APIPA) assigns IPv4 addresses
+from which of the following classes to Dynamic Host Configuration
+Protocol (DHCP) clients that cannot contact a DHCP server?
+A
+. 
+Class A
+B
+. 
+Class B
+C
+. 
+Class C
+D
+. 
+Class D
+115
+. 
+Which of the following Internet Protocol (IP) address classes
+identifies multicast addresses?
+A
+. 
+Class A
+B
+. 
+Class B
+C
+. 
+Class C
+D
+. 
+Class D
+E
+. 
+Class E
+116
+. 
+Which of the following is an address that you can assign to a host
+on a private IPv4 network?
+A
+. 
+192.167.9.46
+B
+. 
+172.16.255.255
+
+C
+. 
+10.1.0.253
+D
+. 
+225.87.34.1
+117
+. 
+Which of the following is the correct subnet mask for a network
+with the address 172.16.0.0/20?
+A
+. 
+255.255.224.0
+B
+. 
+255.255.240.0
+C
+. 
+255.255.248.0
+D
+. 
+255.255.255.224
+E
+. 
+255.255.255.240
+118
+. 
+Ed has been assigned the IPv4 network address 192.168.2.32/28
+for the computers in his department. Which of the following ranges
+of addresses can Ed use to configure the TCP/IP clients on his
+computers?
+A
+. 
+192.168.2.32 to 192.168.2.55
+B
+. 
+192.168.2.33 to 192.168.2.46
+C
+. 
+192.168.2.33 to 192.168.2.40
+D
+. 
+192.168.2.1 to 192.168.2.254
+119
+. 
+Which of the following IP addresses is available for use on a
+network device?
+A
+. 
+1.0.0.1
+B
+. 
+127.98.127.0
+C
+. 
+234.9.76.32
+D
+. 
+240.65.8.124
+120
+. 
+Which of the following IPv6 address types is the functional
+equivalent of an IPv4 APIPA address?
+A
+. 
+Link local
+B
+. 
+Global unicast
+C
+. 
+Site local
+
+D
+. 
+Anycast
+121
+. 
+Ralph is having trouble accessing the Internet this morning and
+calls his colleague Ed in another department to find out if he’s
+experiencing the same problem. Ed says he’s having no problem
+accessing the Internet, but that might not mean anything because
+they might be on different subnets. Ralph asks Ed how to tell if
+they’re on different subnets. Ed asks Ralph to read him his IP
+address. Ralph’s address is 192.168.176.171, and Ed says his is
+192.168.176.195. Both of them are using the same subnet mask:
+255.255.255.224. Are the two men working on the same subnet?
+A
+. 
+No, they are not on the same subnet. Ralph’s subnet address is
+192.168.176.192, and Ed’s subnet address is 192.168.176.160.
+B
+. 
+No, they are not on the same subnet. Ralph’s subnet address is
+192.168.176.160, and Ed’s subnet address is 192.168.176.192.
+C
+. 
+Yes, they are on the same subnet. The subnet address for both is
+192.168.176.192.
+D
+. 
+Yes, they are on the same subnet. The subnet address for both is
+192.168.176.160.
+122
+. 
+Ralph has been contracted to consult for a company that wants to
+update its legacy Ethernet network to Gigabit Ethernet. On
+examining the site, he discovers that the network is still using
+coaxial-based Thin Ethernet. What change in network topology
+must occur to upgrade the existing network to Gigabit Ethernet
+using unshielded twisted pair (UTP) cable?
+A
+. 
+Bus to ring
+B
+. 
+Ring to star
+C
+. 
+Star to bus
+D
+. 
+Bus to star
+E
+. 
+Star to ring
+123
+. 
+An electrician installing a new light fixture accidentally severs one
+of the LAN cables running through the dropped ceiling space. With
+which topology would the severed cable cause the greatest amount
+
+of disturbance to the network?
+A
+. 
+Bus
+B
+. 
+Star
+C
+. 
+Logical ring
+D
+. 
+Mesh
+124
+. 
+Which of the following statements about a wired local area network
+(LAN) is true?
+A
+. 
+Wired LANs support only the star topology.
+B
+. 
+Wired LANs support only the star and bus topologies.
+C
+. 
+Wired LANs support only the star and ring topologies.
+D
+. 
+Wired LANs can support ring, bus, or star topologies.
+125
+. 
+Which type of network is typically confined to a small area, such as
+a single room, floor, or building?
+A
+. 
+WAN
+B
+. 
+LAN
+C
+. 
+MAN
+D
+. 
+CAN
+126
+. 
+Which type of network connects local area networks (LANs) in
+distant locations?
+A
+. 
+WAN
+B
+. 
+LAN
+C
+. 
+MAN
+D
+. 
+CAN
+127
+. 
+Which of the following topologies requires the installation of
+terminating resistors at two locations?
+A
+. 
+Bus
+B
+. 
+Star
+
+C
+. 
+Ring
+D
+. 
+Mesh
+128
+. 
+A wireless access point (AP) enables computers equipped with
+wireless network interface adapters to function in which of the
+following topologies?
+A
+. 
+Star
+B
+. 
+Ad hoc
+C
+. 
+Bus
+D
+. 
+Infrastructure
+129
+. 
+Which of the following topologies is used by the majority of new
+Ethernet networks installed today?
+A
+. 
+Bus
+B
+. 
+Virtual ring
+C
+. 
+Mesh
+D
+. 
+Hierarchical star
+130
+. 
+Which of the following technologies associated with the Internet of
+Things (IoT) is often used to identify pets using embedded chips?
+A
+. 
+Z-wave
+B
+. 
+Bluetooth
+C
+. 
+NFC
+D
+. 
+RFID
+131
+. 
+Alice has constructed a five-node failover cluster in which all five
+servers are connected to a hard disk array using a dedicated Fibre
+Channel network. Which of the following terms describes this
+network arrangement?
+A
+. 
+SAN
+B
+. 
+PAN
+C
+. 
+WAN
+
+D
+. 
+MAN
+132
+. 
+Which of the following is not a technology typically used for a
+personal area network (PAN)?
+A
+. 
+Bluetooth
+B
+. 
+Z-Wave
+C
+. 
+NFC
+D
+. 
+ISDN
+133
+. 
+Near-field communication (NFC) is a short-range wireless
+technology that is designed to facilitate communications between
+two devices within which of the following distances from each
+other?
+A
+. 
+4 millimeters
+B
+. 
+4 centimeters
+C
+. 
+4 decimeters
+D
+. 
+4 meters
+134
+. 
+Which of the following network topologies are used by wireless
+local area networks (WLANs)? (Choose all correct answers.)
+A
+. 
+Ad hoc
+B
+. 
+Bus
+C
+. 
+Infrastructure
+D
+. 
+Star
+135
+. 
+Which of the following cabling topologies was used by the first
+Ethernet networks?
+A
+. 
+Bus
+B
+. 
+Ring
+C
+. 
+Star
+D
+. 
+Mesh
+136
+. 
+On an Ethernet network using the star topology, which of the
+
+following devices can function as the cabling nexus that forms the
+figurative center of the star? (Choose all correct answers.)
+A
+. 
+Hub
+B
+. 
+Router
+C
+. 
+Switch
+D
+. 
+All of the above
+137
+. 
+Which of the following topologies enables wireless devices to
+access resources on a wired network?
+A
+. 
+Ad hoc
+B
+. 
+Star
+C
+. 
+Infrastructure
+D
+. 
+Bus
+138
+. 
+Which of the following components are required for two computers
+to communicate using an IEEE 802.11 wireless LAN using an ad
+hoc topology?
+A
+. 
+A router connected to the Internet
+B
+. 
+A wireless access point
+C
+. 
+An external antenna
+D
+. 
+None of the above
+139
+. 
+Which of the following is typically 
+not
+ an example of the Internet of
+Things (IoT)?
+140
+. 
+A
+. 
+A key fob that unlocks your car
+B
+. 
+A smartphone home automation app
+C
+. 
+A remotely monitored cardiac pacemaker
+D
+. 
+A seismic early warning system
+141
+. 
+Which of the following topologies provides the greatest number of
+redundant paths through the network?
+
+A
+. 
+Star
+B
+. 
+Ring
+C
+. 
+Mesh
+D
+. 
+Bus
+142
+. 
+Which of the following Ethernet physical layer options does not use
+the star topology?
+A
+. 
+10Base2
+B
+. 
+10Base-T
+C
+. 
+100Base-TX
+D
+. 
+1000Base-T
+143
+. 
+Which of the following network types are typically wireless?
+(Choose all correct answers.)
+A
+. 
+WAN
+B
+. 
+PAN
+C
+. 
+SAN
+D
+. 
+WLAN
+144
+. 
+In its physical implementation, a LAN using a logical ring topology
+most closely resembles which of the following physical topologies?
+A
+. 
+Bus
+B
+. 
+Mesh
+C
+. 
+Star
+D
+. 
+Ad hoc
+145
+. 
+Which of the following wireless networking technologies will never
+experience interference from a 2.4 GHz wireless telephone?
+(Choose all correct answers.)
+A
+. 
+IEEE 802.11a
+B
+. 
+IEEE 802.11b
+C
+. 
+IEEE 802.11g
+
+D
+. 
+IEEE 802.11n
+E
+. 
+IEEE 802.11ac
+146
+. 
+Which of the following wireless networking standards is capable of
+supporting speeds of 54 Mbps and is also backward compatible
+with IEEE 802.11b?
+A
+. 
+IEEE 802.11a
+B
+. 
+IEEE 802.11 g
+C
+. 
+IEEE 802.11n
+D
+. 
+Bluetooth
+E
+. 
+IEEE 802.11
+147
+. 
+Which of the following wireless LAN standards include the ability
+to use multiple input and multiple output (MIMO) antennae?
+(Choose all correct answers.)
+A
+. 
+IEEE 802.11a
+B
+. 
+IEEE 802.11b/g
+C
+. 
+IEEE 802.11n
+D
+. 
+IEEE 802.11ac
+148
+. 
+Which of the following is a cellular communication technology that
+is virtually obsolete in the United States?
+A
+. 
+GSM
+B
+. 
+CDMA
+C
+. 
+CSMA/CD
+D
+. 
+TDMA
+149
+. 
+Which of the following IEEE wireless LAN standards uses the
+Direct Sequence Spread Spectrum (DSSS) signal modulation
+technique?
+A
+. 
+802.11a
+B
+. 
+802.11b
+
+C
+. 
+802.11 g
+D
+. 
+802.11n
+E
+. 
+802.11ac
+150
+. 
+When designing a wireless LAN installation, which of the following
+are valid reasons to install a unidirectional antenna in an access
+point, rather than an omnidirectional one? (Choose all correct
+answers.)
+A
+. 
+The access point will be located against an outside wall.
+B
+. 
+There are many interior walls between the access point and the
+most distant workstation.
+C
+. 
+A unidirectional antenna can be focused to a specific signal
+pattern width.
+D
+. 
+All of the above.
+151
+. 
+How do wireless networking devices conforming to the IEEE
+802.11n and 802.11ac standards achieve transmission speeds
+greater than 72.2 Mbps?
+A
+. 
+By using direct sequence spread spectrum (DSSS) modulation
+B
+. 
+By using multiple antennae to transmit several data streams
+simultaneously
+C
+. 
+By using frequencies in the 5 GHz band
+D
+. 
+By sacrificing transmission range for speed
+152
+. 
+Which of the following are possible reasons why the 5 GHz
+frequency tends to perform better than the 2.4 GHz frequency on a
+wireless LAN? (Choose all correct answers.)
+A
+. 
+The 5 GHz frequency has more channels than the 2.4 GHz
+frequency.
+B
+. 
+The 5 GHz frequency supports longer ranges than the 2.4 GHz
+frequency.
+C
+. 
+The 5 GHz frequency conflicts with fewer common household
+devices than the 2.4 GHz frequency.
+
+D
+. 
+The 5 GHz frequency transmits at faster speeds than the 2.4
+GHz frequency.
+153
+. 
+Alice is attempting to deploy an IEEE 802.11b/g wireless LAN on
+the fifth floor of a ten-story office building that is surrounded on all
+sides by other office buildings, all of which seem to be running
+many wireless LANs. Scanning the 2.4 GHz band, she sees literally
+dozens of networks, spread across all of the available channels. As
+a result, her wireless devices have trouble connecting to their
+access point, and when they do, they achieve only low speeds.
+Choose the two tasks from the following list that Alice should
+perform to enable the wireless clients to connect to the network
+most reliably. (Choose two correct answers.)
+A
+. 
+Upgrade all of the wireless network devices to IEEE 802.11n.
+B
+. 
+Configure the wireless devices to use the 5 GHz band.
+C
+. 
+Configure all of the network devices to use WPA2 encryption
+with AES.
+D
+. 
+Configure the access point to suppress SSID broadcasts.
+E
+. 
+Upgrade all of the network devices to the latest firmware.
+154
+. 
+Which of the following is the fastest speed achievable by a wireless
+LAN using the currently ratified IEEE 802.11 standards?
+A
+. 
+54 Mbps
+B
+. 
+600 Mbps
+C
+. 
+1.3 Gbps
+D
+. 
+2.6 Gbps
+155
+. 
+What is the term for the technology implemented in the IEEE
+802.11ac standard that enables a wireless device to transmit
+multiple frames to multiple clients simultaneously?
+A
+. 
+MIMO
+B
+. 
+Channel bonding
+C
+. 
+CSMA/CA
+
+D
+. 
+MU-MIMO
+156
+. 
+On an IEEE 802.11b/g/n wireless network running at 2.4 GHz with
+multiple access points, the traditional best practice is to use
+channels 1, 6, and 11, with no two adjacent access points configured
+to use the same channel. Which of the following is the real reason
+why this is a good plan?
+A
+. 
+Channels 1, 6, and 11 are the only three channels with
+frequencies that do not overlap.
+B
+. 
+Channels 1, 6, and 11 have more bandwidth than the other
+channels.
+C
+. 
+Channels 1, 6, and 11 have greater ranges than the other
+channels.
+D
+. 
+Channels 1, 6, and 11 are the default settings on most wireless
+devices.
+157
+. 
+Ralph is performing a site survey for a wireless LAN installation in
+a warehouse with two offices at either end of the building,
+approximately 300 feet apart. If he installs a single access point in
+the center of the warehouse, equidistant from the two offices,
+which of the following standards should he look for when
+purchasing hardware so that workstations in both offices will be
+able to connect to the network at the best possible speed?
+A
+. 
+IEEE 802.11a
+B
+. 
+IEEE 802.11g
+C
+. 
+IEEE 802.11n
+D
+. 
+IEEE 802.11ac
+158
+. 
+Which of the following terms defines a wireless LAN transmission
+technique in which devices use multiple antennae to increase
+transmission speeds?
+A
+. 
+MIMO
+B
+. 
+TDMA
+C
+. 
+PAN
+
+D
+. 
+Ant+
+159
+. 
+What is the maximum channel width possible using wireless
+networking equipment based on the ratified IEEE 802.11
+standards?
+A
+. 
+20 MHz
+B
+. 
+40 MHz
+C
+. 
+80 MHz
+D
+. 
+160 MHz
+160
+. 
+Which of the following wireless networking standards are capable
+of using only the 5 GHz frequency? (Choose all correct answers.)
+A
+. 
+IEEE 802.11a
+B
+. 
+IEEE 802.11b
+C
+. 
+IEEE 802.11g
+D
+. 
+IEEE 802.11n
+E
+. 
+IEEE 802.11ac
+161
+. 
+Which of the following IEEE wireless LAN standards provides the
+greatest possible throughput?
+A
+. 
+802.11a
+B
+. 
+802.11ac
+C
+. 
+802.11b
+D
+. 
+802.11g
+E
+. 
+802.11n
+162
+. 
+Which of the following IEEE 802.11 wireless LAN standards are
+capable of supporting both the 2.4 GHz and 5 GHz frequencies?
+A
+. 
+802.11a
+B
+. 
+802.11b
+C
+. 
+802.11g
+D
+. 
+802.11n
+
+E
+. 
+802.11ac
+163
+. 
+What is the maximum number of transmit and receive antennae
+supported by the currently ratified IEEE 802.11 wireless LAN
+standards?
+A
+. 
+2
+B
+. 
+4
+C
+. 
+8
+D
+. 
+16
+164
+. 
+Which of the following is the term for the network name that you
+use to connect a client device to an access point on a wireless LAN?
+A
+. 
+BSS
+B
+. 
+ESS
+C
+. 
+SSID
+D
+. 
+BSSID
+165
+. 
+Which of the following IEEE wireless LAN standards define devices
+with a maximum aggregate channel width of 20 MHz? (Choose all
+correct answers.)
+A
+. 
+802.11a
+B
+. 
+802.11g
+C
+. 
+802.11n
+D
+. 
+802.11ac
+166
+. 
+Which of the following cloud service models enables you to select
+the operating system you want to install?
+A
+. 
+IaaS
+B
+. 
+PaaS
+C
+. 
+SaaS
+D
+. 
+All of the above
+167
+. 
+When you contract with a provider to obtain email services for your
+
+company using their servers in the public cloud, which of the
+following service models are you using?
+A
+. 
+IaaS
+B
+. 
+PaaS
+C
+. 
+SaaS
+D
+. 
+None of the above
+168
+. 
+Which of the following cloud service models provides the consumer
+with the most control over the cloud resources?
+A
+. 
+IaaS
+B
+. 
+PaaS
+C
+. 
+SaaS
+D
+. 
+IaaS, PaaS, and SaaS all provide the same degree of control.
+169
+. 
+Alice has just created a new Windows Server 2016 virtual machine
+using remote controls provided by a cloud service provider on the
+Internet. Which of the following cloud architectures is she using?
+(Choose all correct answers.)
+A
+. 
+IaaS
+B
+. 
+PaaS
+C
+. 
+SaaS
+D
+. 
+Public cloud
+E
+. 
+Private cloud
+F
+. 
+Hybrid cloud
+170
+. 
+In which of the following cloud models does a single organization
+function as both the provider and the consumer of all cloud
+services?
+A
+. 
+Public cloud
+B
+. 
+Private cloud
+C
+. 
+Hybrid cloud
+
+D
+. 
+Ad hoc cloud
+171
+. 
+Ed is the overnight manager of his company’s datacenter, and he is
+responsible for both private and public resources in the company’s
+hybrid cloud. Due to a new TV commercial shown that night, the
+company’s website experiences a massive upsurge in traffic. The
+web server farm on the private cloud is being overwhelmed, so Ed
+configures some virtual machines in the public cloud to take up the
+slack. Which of the following is a common term for what Ed has
+done?
+A
+. 
+Cloud busting
+B
+. 
+Cloud bursting
+C
+. 
+Cloud splitting
+D
+. 
+Cloud migrating
+172
+. 
+Microsoft’s Outlook.com email service is an example of which of
+the following cloud service models?
+A
+. 
+IaaS
+B
+. 
+PaaS
+C
+. 
+SaaS
+D
+. 
+None of the above
+173
+. 
+Which of the following statements about cloud delivery models is
+true?
+A
+. 
+A public cloud is inherently insecure because anyone can access
+it.
+B
+. 
+A private cloud consists of hardware that is all located in a
+single datacenter.
+C
+. 
+A hybrid cloud enables administrators to migrate services
+between public and private resources.
+D
+. 
+Public, private, and hybrid clouds all utilize the same hardware
+resources.
+174
+. 
+Ed has just created a new Windows application for his company,
+
+and he wants to deploy it in the public cloud. He is looking for a
+provider that will furnish his company with a fully installed and
+configured Windows server on which he can install and run his
+application. Which of the following service models is he seeking to
+use?
+A
+. 
+IaaS
+B
+. 
+PaaS
+C
+. 
+SaaS
+D
+. 
+None of the above
+175
+. 
+In which of the following DNS transactions does the querying
+system generate a recursive query? (Choose all correct answers.)
+A
+. 
+A DNS client sends the server name 
+www.adatum.com
+ from a
+URL to its designated DNS server for resolution.
+B
+. 
+A client’s DNS server sends a request to a root domain server to
+find the authoritative server for the 
+com
+ top-level domain.
+C
+. 
+A client’s DNS server sends a request to the 
+com
+ top-level
+domain server to find the authoritative server for the
+adatum.com
+ domain.
+D
+. 
+A client’s DNS server, which has been configured to function as
+a forwarder, sends the server name 
+www.adatum.com
+ from a
+URL to its ISP’s DNS server for resolution.
+E
+. 
+A client’s DNS server sends a request to the adatum.com
+domain server to find the IP address associated with the server
+name www.
+176
+. 
+Which of the following devices would you most likely configure to
+function as a Dynamic Host Configuration Protocol (DHCP)
+server?
+A
+. 
+A wireless router
+B
+. 
+An unmanaged switch
+C
+. 
+A hub
+D
+. 
+A bridge
+
+177
+. 
+Which of the following protocols are responsible for assigning IP
+addresses to hosts? (Choose all correct answers.)
+A
+. 
+Dynamic Host Configuration Protocol (DHCP)
+B
+. 
+Address Resolution Protocol (ARP)
+C
+. 
+Domain Name System (DNS)
+D
+. 
+File Transfer Protocol (FTP)
+E
+. 
+Bootstrap Protocol (BOOTP)
+178
+. 
+Which of the following Domain Name System (DNS) resource
+records is used only for reverse name resolution?
+A
+. 
+MX
+B
+. 
+AAAA
+C
+. 
+CNAME
+D
+. 
+PTR
+179
+. 
+201.Which of the following features is supported by DHCP, but not
+by BOOTP and RARP?
+A
+. 
+Dynamic address allocation
+B
+. 
+Relay agents
+C
+. 
+Manual address allocation
+D
+. 
+Automatic address allocation
+180
+. 
+Which of the following message types are exchanged by Dynamic
+Host Configuration Protocol (DHCP) clients and servers during a
+successful IP address allocation transaction? (Choose all correct
+answers.)
+A
+. 
+DHCPDISCOVER
+B
+. 
+DHCPOFFER
+C
+. 
+DHCPINFORM
+D
+. 
+DHCPACK
+E
+. 
+DHCPREQUEST
+
+F
+. 
+DHCPNAK
+G
+. 
+DHCPRENEW
+H
+. 
+DHCPRELEASE
+181
+. 
+Which of the following message types are exchanged by Dynamic
+Host Configuration Protocol (DHCP) clients and servers during a
+successful IP address lease renewal transaction? (Choose all
+correct answers.)
+A
+. 
+DHCPDISCOVER
+B
+. 
+DHCPOFFER
+C
+. 
+DHCPINFORM
+D
+. 
+DHCPACK
+E
+. 
+DHCPREQUEST
+F
+. 
+DHCPNAK
+G
+. 
+DHCPRENEW
+H
+. 
+DHCPRELEASE
+182
+. 
+Which of the following is not a protocol used to allocate IP address
+assignments to clients on a network?
+A
+. 
+ARP
+B
+. 
+RARP
+C
+. 
+BOOTP
+D
+. 
+DHCP
+183
+. 
+Which of the following best describes what happens when a DNS
+server receives an iterative name resolution query?
+A
+. 
+The DNS server responds immediately to the query with the
+best information it has in its resource records or in its cache or,
+failing that, with an error message stating that it could not
+resolve the requested name.
+B
+. 
+The DNS server attempts to resolve the requested name by
+checking its own resource records and cache or, failing that, by
+
+issuing its own iterative queries to other DNS servers.
+C
+. 
+The DNS server attempts to resolve the requested name by
+checking its own resource records and cache or, failing that, by
+forwarding the name resolution request to another DNS server
+in a recursive query.
+D
+. 
+The DNS server responds immediately if it is the authoritative
+server for the domain in which the requested name is located.
+Otherwise, it returns an error message stating that it could not
+resolve the requested name.
+184
+. 
+What is the term used to refer to the DNS client mechanism that
+generates name resolution queries and sends them to DNS servers?
+A
+. 
+Requestor
+B
+. 
+Forwarder
+C
+. 
+Authority
+D
+. 
+Resolver
+185
+. 
+Which of the following TCP/IP parameters, configured on an end
+system, specifies the IP address of a device that performs domain
+name resolution services?
+A
+. 
+WINS Server Addresses
+B
+. 
+Default Gateway
+C
+. 
+DNS Server Addresses
+D
+. 
+Subnet Gateway
+186
+. 
+Which IP address allocation method is not supported by Dynamic
+Host Configuration Protocol (DHCP)?
+A
+. 
+Manual
+B
+. 
+Dynamic
+C
+. 
+Stable
+D
+. 
+Automatic
+187
+. 
+On a Dynamic Host Configuration Protocol (DHCP) server, what is
+
+the name of the element you create to specify which IP addresses
+the server should assign to clients?
+A
+. 
+Range
+B
+. 
+Scope
+C
+. 
+Pool
+D
+. 
+Subnet
+188
+. 
+Why is it necessary to use a relay agent to enable a Dynamic Host
+Configuration Protocol (DHCP) server to assign IP addresses to
+clients on other networks? (Choose all correct answers.)
+A
+. 
+Because DHCP requires a separate license for each subnet
+B
+. 
+Because clients cannot initiate an address assignment by
+contacting DHCP servers on other networks directly
+C
+. 
+Because DHCP must use the Transmission Control Protocol
+(TCP) to communicate with clients
+D
+. 
+Because the DHCP address assignment process relies on
+broadcast transmissions
+189
+. 
+Which of the following Domain Name System (DNS) resource
+records is used to resolve a hostname into an IPv6 address?
+A
+. 
+MX
+B
+. 
+PTR
+C
+. 
+AAAA
+D
+. 
+CNAME
+190
+. 
+Ralph has configured a server called NE6 to function as a web
+server. He does not want to change the server’s existing name, but
+he wants it to be accessible to clients using the name 
+www
+. What
+Domain Name System (DNS) modification can Ralph make to
+accomplish this?
+A
+. 
+Create an additional A resource record.
+B
+. 
+Create a new CNAME resource record.
+
+C
+. 
+Modify the existing A resource record.
+D
+. 
+Create a new PTR resource record.
+191
+. 
+Which of the following options should you configure on a Dynamic
+Host Configuration Protocol (DHCP) server to supply clients with a
+default gateway address?
+A
+. 
+Router
+B
+. 
+Time Server
+C
+. 
+Name Server
+D
+. 
+LPR Server
+192
+. 
+Dynamic Host Configuration Protocol (DHCP) clients rely on
+which of the following types of transmissions to locate and initiate
+contact with DHCP servers on the local network?
+A
+. 
+Unicast
+B
+. 
+Broadcast
+C
+. 
+Multicast
+D
+. 
+Anycast
+193
+. 
+Which of the following Domain Name System (DNS) resource
+record types specifies the IP addresses of the authoritative DNS
+servers for a particular zone?
+A
+. 
+NS
+B
+. 
+PTR
+C
+. 
+MX
+D
+. 
+SRV
+194
+. 
+Which of the following must you create on a DHCP server if you
+want it to always assign the same IP address to a particular
+computer?
+A
+. 
+Exclusion
+B
+. 
+Scope
+
+C
+. 
+Reservation
+D
+. 
+Relay
+195
+. 
+Which of the following DHCP address allocation methods enables
+the server to reclaim IP addresses when they are no longer in use
+by clients?
+A
+. 
+Automatic
+B
+. 
+Dynamic
+C
+. 
+Manual
+D
+. 
+Static
+196
+. 
+Which of the following technologies enables the IP addresses
+assigned to clients by a Dynamic Host Configuration Protocol
+(DHCP) server to be automatically added to the DNS namespace?
+A
+. 
+Reverse name resolution
+B
+. 
+Dynamic DNS
+C
+. 
+Automatic allocation
+D
+. 
+HOSTS
+197
+. 
+Which of the following is a tool that integrates DHCP and DNS so
+that each is aware of the changes made by the other?
+A
+. 
+HOSTS
+B
+. 
+DHCPv6
+C
+. 
+IPAM
+D
+. 
+APIPA
+198
+. 
+Which of the following protocols is used to synchronize computer
+clocks to a time signal provided by a server?
+A
+. 
+TFTP
+B
+. 
+HTTP
+C
+. 
+SMTP
+D
+. 
+NTP
+
+199
+. 
+Which of the words in the fully qualified domain name (FQDN)
+www.paris.mydomain.org
+ represents the topmost layer in the DNS
+namespace hierarchy?
+A
+. 
+www
+B
+. 
+paris
+C
+. 
+mydomain
+D
+. 
+org
+200
+. 
+Which of the following Dynamic Host Configuration Protocol
+(DHCP) options prevents the client from transmitting IP
+datagrams that circulate endlessly around the network?
+A
+. 
+Interface MTU
+B
+. 
+Default IP TTL
+C
+. 
+ARP cache timeout
+D
+. 
+TCP keepalive interval
+201
+. 
+In designing a network for a client, Ed has decided to use both
+internal and external DNS servers. Which of the following
+resources should Ed register with the external DNS server?
+(Choose all correct answers.)
+A
+. 
+Company database servers
+B
+. 
+Internet web servers
+C
+. 
+Incoming email servers
+D
+. 
+Domain controllers
+202
+. 
+Which of the following features enables an intrusion detection
+system (IDS) to monitor all of the traffic on a switched network?
+A
+. 
+Stateful packet inspection
+B
+. 
+Port mirroring
+C
+. 
+Trunking
+D
+. 
+Service dependent filtering
+
+203
+. 
+Which of the following Domain Name System (DNS) resource
+records is used to implement email security mechanisms such as
+Sender Policy Framework and DomainKey Identified Mail?
+A
+. 
+MX
+B
+. 
+PTR
+C
+. 
+TXT
+D
+. 
+CNAME
+
+Chapter 2
+ 
+Infrastructure
+THE COMPTIA NETWORK+ EXAM N10-007 TOPICS
+COVERED IN THIS CHAPTER INCLUDE THE FOLLOWING:
+ 
+2.1 Given a scenario, deploy the appropriate cabling
+solution.
+Media types
+Copper
+UTP
+STP
+Coaxial
+Fiber
+Single-mode
+Multimode
+Plenum vs. PVC
+Connector types
+Copper
+RJ-45
+RJ-11
+BNC
+DB-9
+DB-25
+F-type
+Fiber
+LC
+
+ST
+SC
+APC
+UPC
+MTRJ
+Transceivers
+SFP
+GBIC
+SFP±
+QSFP
+Characteristics of fiber transceivers
+Bidirectional
+Duplex
+Termination points
+66 block
+110 block
+Patch panel
+Fiber distribution panel
+Copper cable standards
+Cat 3
+Cat 5
+Cat 5e
+Cat 6
+Cat 6a
+Cat 7
+RG-6
+
+RG-59
+Copper termination standards
+TIA/EIA 568a
+TIA/EIA 568b
+Crossover
+Straight-through
+Ethernet deployment standards
+100BaseT
+1000BaseT
+1000BaseLX
+1000BaseSX
+10GBaseT
+✔
+2.2 Given a scenario, determine the appropriate
+placement of networking devices on a network and
+install/configure them.
+Firewall
+Router
+Switch
+Hub
+Bridge
+Modems
+Wireless access point
+Media converter
+Wireless range extender
+VoIP endpoint
+ 
+2.3 Explain the purposes and use cases for advanced
+networking devices.
+
+Multilayer switch
+Wireless controller
+Load balancer
+IDS/IPS
+Proxy server
+VPN concentrator
+AAA/RADIUS server
+UTM appliance
+NGFW/Layer 7 firewall
+VoIP PBX
+VoIP gateway
+Content filter
+ 
+2.4 Explain the purposes of virtualization and network
+storage technologies.
+Virtual networking components
+Virtual switch
+Virtual firewall
+Virtual NIC
+Virtual router
+Hypervisor
+Network storage types
+NAS
+SAN
+Connection type
+FCoE
+FibreChannel
+
+iSCSI
+InfiniBand
+Jumbo frame
+ 
+2.5 Compare and contrast WAN technologies.
+Service type
+ISDN
+T1/T3
+E1/E3
+OC-3 – OC-192
+DSL
+Metropolitan Ethernet
+Cable broadband
+Dial-up
+PRI
+Transmission mediums
+Satellite
+Copper
+Fiber
+Wireless
+Characteristics of service
+MPLS
+ATM
+Frame relay
+PPPoE
+PPP
+DMVPN
+
+SIP trunk
+Termination
+Demarcation point
+CSU/DSU
+Smart jack
+1
+. 
+Which of the following best describes the function of the network
+medium?
+A
+. 
+The network medium provides the physical connection between
+networked computers.
+B
+. 
+The network medium provides the protocol used to transmit
+data between end systems.
+C
+. 
+The network medium passes data between two routers.
+D
+. 
+The network medium processes electrical or light signals and
+converts them to data.
+2
+. 
+Which of the following signal types is carried by copper cable?
+A
+. 
+Fiber optic
+B
+. 
+Microwave
+C
+. 
+Infrared
+D
+. 
+Electrical
+3
+. 
+Identify the organizations that developed the general cable type
+standards for voice and data communications that are currently in
+use, and identify the document name.
+A
+. 
+ANSI/TVA, document C568
+B
+. 
+TWA/ANSI/EIA, document T530-A
+C
+. 
+EIA/ANSI/TWA, document 802.2
+D
+. 
+TDA/EIA/TIA, document 802.11
+E
+. 
+ANSI/TIA/EIA, document T568b
+
+4
+. 
+Which of the following cable types and connectors are used to
+attach a television set to a cable television (CATV) network?
+A
+. 
+A fiber-optic cable and a straight tip (ST) connector
+B
+. 
+A coaxial cable and a Bayonet-Neill-Concelman (BNC)
+connector
+C
+. 
+A twisted pair cable and an RJ-45 connector
+D
+. 
+A coaxial cable and an F-type connector
+E
+. 
+An AUI cable and a vampire tap connector
+5
+. 
+Which of the following cable types is used for Thick Ethernet
+network segments?
+A
+. 
+RG-8
+B
+. 
+RG-58
+C
+. 
+RJ-45
+D
+. 
+RJ-11
+6
+. 
+Which of the following cable types is used for Thin Ethernet
+network segments?
+A
+. 
+RG-8
+B
+. 
+RG-58
+C
+. 
+RJ-45
+D
+. 
+RJ-11
+7
+. 
+Which of the following telecommunications components is all but
+obsolete and is found only in old, analog telephone installations?
+A
+. 
+66 block
+B
+. 
+110 block
+C
+. 
+Patch panel
+D
+. 
+Fiber distribution panel
+8
+. 
+Which of the following coaxial cable types are still in general use?
+(Choose all correct answers.)
+
+A
+. 
+RG-6
+B
+. 
+RG-8
+C
+. 
+RG-58
+D
+. 
+RG-59
+9
+. 
+Under which of the following conditions might the local building
+code require that a data network use plenum cable?
+A
+. 
+When multiple cables run through the same conduit
+B
+. 
+When cables run near to devices that generate electromagnetic
+interference (EMI)
+C
+. 
+When cables must run through heating ducts
+D
+. 
+When cable runs exceed the maximum length specified by the
+physical layer specification
+10
+. 
+Which of the following statements about the differences between
+fiber-optic angle-polished connectors (APCs) and ultra-polished
+connectors (UPCs) are true? (Choose all correct answers.)
+A
+. 
+APCs should only be joined to other APCs.
+B
+. 
+APCs generate more insertion loss that UPCs.
+C
+. 
+UPCs generate more return loss than APCs.
+D
+. 
+UPCs use a green connector boot or body.
+11
+. 
+Which of the following is not a type of fiber-optic connector?
+A
+. 
+SC
+B
+. 
+MTRJ
+C
+. 
+ST
+D
+. 
+BNC
+12
+. 
+Which of the following physical layer transceiver module standards
+is the oldest and therefore the most obsolete?
+A
+. 
+SFP
+B
+. 
+BiDi
+
+C
+. 
+QSFP
+D
+. 
+GBIC
+13
+. 
+Which of the following cable types is typically configured in a star
+topology, uses eight copper conductors arranged in four pairs, and
+uses RJ-45 connectors?
+A
+. 
+RG-8
+B
+. 
+Twisted pair
+C
+. 
+RG-58
+D
+. 
+Fiber optic
+14
+. 
+Which of the following statements explains the purpose of the
+twists in twisted pair cabling?
+A
+. 
+The twists prevent collisions.
+B
+. 
+The twists completely eliminate crosstalk and electromagnetic
+interference (EMI) in adjacent wire pairs.
+C
+. 
+The twists prevent crosstalk in adjacent wire pairs and limit the
+effects of EMI on the signals carried over the cable.
+D
+. 
+The twists extend the bend radius allowance of the cable.
+15
+. 
+Which of the following tools do cable installers use to add
+connectors such as RJ-45 and RJ-11 to twisted pair cabling?
+A
+. 
+A crimper
+B
+. 
+A splicer
+C
+. 
+A pigtail
+D
+. 
+A patch
+16
+. 
+Which of the following combinations of attributes describes the
+cable used for a Thin Ethernet network?
+A
+. 
+RJ-45, 50-ohm, 0.270-inch, coaxial cable with BNC connectors
+B
+. 
+RG-59, 75-ohm, 0.242-inch, coaxial cable with F connectors
+C
+. 
+RG-58, 50-ohm, 0.195-inch, coaxial cable with BNC connectors
+
+D
+. 
+RG-8, 50-ohm, 0.405-inch, coaxial cable with N connectors
+E
+. 
+RJ-6, 75-ohm, 0.242-inch, coaxial cable with BNC connectors
+17
+. 
+Which of the following connector types are typically associated
+with Ethernet networks? (Choose all correct answers.)
+A
+. 
+F-type
+B
+. 
+BNC
+C
+. 
+RJ-45
+D
+. 
+DB-9
+E
+. 
+N-type
+18
+. 
+Which of the following connector types was typically associated
+with a T-connector attached to the computer?
+A
+. 
+RJ45
+B
+. 
+MTRJ
+C
+. 
+8P8C
+D
+. 
+BNC
+E
+. 
+F-type
+19
+. 
+Which of the following connector types are associated with fiber-
+optic cables? (Choose all correct answers.)
+A
+. 
+RJ11
+B
+. 
+ST
+C
+. 
+F-type
+D
+. 
+LC
+E
+. 
+MTRJ
+20
+. 
+Which of the following types of cable, when installed, sometimes
+employed a device called a vampire tap?
+A
+. 
+Unshielded twisted pair
+B
+. 
+Shielded twisted pair
+
+C
+. 
+Multimode fiber optic
+D
+. 
+Single-mode fiber optic
+E
+. 
+Coaxial
+21
+. 
+In an internal UTP cable installation, each horizontal cable run
+connects a wall plate in the work area to a centralized cabling
+nexus in a telecommunications room. Which of the following is the
+correct term for this cabling nexus?
+A
+. 
+Telepole
+B
+. 
+Demarc
+C
+. 
+Backbone
+D
+. 
+Patch panel
+22
+. 
+Which of the following statements about single-mode and
+multimode fiber-optic cables are true? (Choose all correct
+answers.)
+A
+. 
+Single-mode cables can span longer distances than multimode
+cables.
+B
+. 
+Single-mode cables are more resistant to electromagnetic
+interference than multimode cables.
+C
+. 
+Single-mode cables are more difficult to install than multimode
+cables.
+D
+. 
+Single-mode cables have a much larger core diameter than
+multimode cables.
+23
+. 
+Which of the following components are typically used only for
+telephone cable installations, and not for data networking?
+(Choose all correct answers.)
+A
+. 
+66 blocks
+B
+. 
+110 blocks
+C
+. 
+25 pair UTP cables
+D
+. 
+100 pair UTP cables
+
+24
+. 
+Which of the following statements about single-mode fiber-optic
+cable are true? (Choose all correct answers.)
+A
+. 
+Single-mode cables use an LED light source, whereas
+multimode cables use a laser.
+B
+. 
+Single-mode cables can span longer distances than multimode
+cables.
+C
+. 
+Single-mode cables have a smaller core filament than
+multimode cables.
+D
+. 
+Single-mode cables have a smaller bend radius than
+multimode, making them easier to install.
+E
+. 
+Single-mode fiber-optic cables require a ground, whereas
+multimode cables do not.
+25
+. 
+Which of the following tools do cable installers use to connect bulk
+cable runs to wall plates and patch panels?
+A
+. 
+A crimper
+B
+. 
+A splicer
+C
+. 
+A pigtail
+D
+. 
+A punchdown block tool
+26
+. 
+Ralph has been hired by a client to install cabling to connect two
+existing networks. The two networks are in different buildings
+approximately 1,000 feet apart. The cable type must support
+Gigabit Ethernet data rates of 1,000 megabits per second (Mbps)
+and provide a high level of resistance to electromagnetic
+interference (EMI). Your client wants the most economical cabling
+solution that meets their needs. Which of the following cable types
+best meets the needs of this client?
+A
+. 
+Multimode fiber-optic cable
+B
+. 
+Shielded twisted pair (STP) cable
+C
+. 
+Unshielded twisted pair (UTP) cable
+D
+. 
+Thin coaxial cable
+
+E
+. 
+Single-mode fiber-optic cable
+27
+. 
+Which of the following are connector types used with coaxial
+cables? (Choose all correct answers.)
+A
+. 
+BNC
+B
+. 
+F-type
+C
+. 
+N-type
+D
+. 
+ST
+E
+. 
+RJ-11
+28
+. 
+Alice has been hired by a corporation to design the cabling for their
+network. The corporation just moved in to two different floors of
+an older building, a retail space on the ground floor and an office
+space on the 43rd floor. The building has existing Category 5
+(CAT5) unshielded twisted pair (UTP) cable. Alice’s client wants
+two separate local area networks (LANs), one on each of the two
+floors, with a backbone network connecting them. They want a 1
+gigabit per second (Gbps) data rate for each LAN but plan on
+migrating to 10 Gbps in the future. The two networks are
+approximately 200 meters apart. Which of the following solutions
+best meets the client’s needs?
+A
+. 
+Install Category 6 (CAT6) or Category 6a (CAT6a) UTP cable
+for the LANs. These cables run at 1 Gbps and provide a
+migration path to 10 Gbps. Use twisted pair cable for the
+backbone network.
+B
+. 
+Use the existing CAT5 cabling for the LANs since CAT5 runs at
+1 Gbps. Use thick coaxial cable for the backbone network.
+C
+. 
+Install CAT6 or CAT6a UTP cable for the LANs. These cables
+run at 1 Gbps and provide a migration path to 10 Gbps. Use
+multimode fiber-optic cable for the backbone network.
+D
+. 
+Install CAT6 or CAT6a UTP cable for the LANs. These cables
+run at 1 Gbps and provide a migration path to 10 Gbps. Use the
+existing CAT5 cable for the backbone network.
+29
+. 
+A maintenance worker, while replacing a light fixture in an office
+
+building, accidentally severs a network cable in the drop ceiling.
+The tenants use a variety of local area network (LAN) technologies
+throughout the structure, but on that particular floor there are
+three separate LANs: a 10-node Thin Ethernet LAN using coaxial
+cable in a bus topology, a 25-node Gigabit Ethernet LAN using
+twisted pair cable in a star topology, and a 5-node Fiber
+Distributed Data Interface (FDDI) LAN using multimode fiber-
+optic cable in a double ring topology. Without knowing which of
+the LANs the severed cable belongs to, what is the maximum
+number of computers that could be directly affected by the cable
+break?
+A
+. 
+0
+B
+. 
+1
+C
+. 
+5
+D
+. 
+10
+E
+. 
+25
+F
+. 
+40
+30
+. 
+In the punchdown process for unshielded twisted pair (UTP) cable,
+which of the following is the last step that you perform when
+connecting bulk cables to jacks in wall plates and patch panels?
+A
+. 
+Cut off the excess wire that protrudes past the contacts.
+B
+. 
+Press the bare wire down between the two metal contacts that
+hold it in place.
+C
+. 
+Strip some of the insulating sheath off the cable end to expose
+the wires.
+D
+. 
+Insert the wires into the appropriate contacts in the jack.
+E
+. 
+Strip a small amount of insulation off each wire.
+F
+. 
+Separate the twisted wire pairs at the ends.
+31
+. 
+Which of the following cable connector types is not used with fiber-
+optic cable?
+A
+. 
+Straight tip (ST)
+
+B
+. 
+Subscriber connector (SC)
+C
+. 
+Mechanical transfer–registered jack (MTRJ)
+D
+. 
+F-type
+E
+. 
+Fiber local connector (LC)
+32
+. 
+Which of the following twisted pair cable types can you use to
+construct a 10GBase-T network with 100-meter segments? (Choose
+all correct answers.)
+A
+. 
+CAT5
+B
+. 
+CAT5e
+C
+. 
+CAT6
+D
+. 
+CAT6a
+E
+. 
+CAT7
+33
+. 
+Which of the following cable connector types have been rendered
+nearly obsolete by Universal Serial Bus (USB) connections?
+(Choose all correct answers.)
+A
+. 
+BNC
+B
+. 
+RJ-11
+C
+. 
+DB-9
+D
+. 
+DB-25
+34
+. 
+Which of the following twisted pair cable types is rated for both a
+10-megabit-per-second (Mbps) data rate (using two pairs) and a
+100-Mbps data rate (using four pairs)?
+A
+. 
+Category 3 (CAT3)
+B
+. 
+Category 5 (CAT5)
+C
+. 
+Category 5e (CAT5e)
+D
+. 
+Category 6 (CAT6)
+35
+. 
+Ed has been hired to install network cabling for a small private
+company with 15 employees who need to share files and printers.
+
+All of the employees are physically located within the same
+building in two separate office spaces directly adjacent to each
+other, sharing a common wall and door for access. Both offices
+have drop ceilings. The client wants a simple Gigabit Ethernet
+installation that’s easy to troubleshoot. In addition, Ed’s client
+wants to keep installation costs to a minimum. Which of the
+following combinations of topology, cable type, and installation
+method would best meet the needs of Ed’s client?
+A
+. 
+Star topology, fiber-optic cabling, and internal installation
+B
+. 
+Bus topology, coaxial cabling, and external installation
+C
+. 
+Bus topology, twisted pair cabling, and internal installation
+D
+. 
+Star topology, coaxial cabling, and external installation
+E
+. 
+Star topology, twisted pair cabling, and external installation
+36
+. 
+Which of the following cable types are typically used in newly
+constructed local area network (LAN) installations? (Choose all
+correct answers.)
+A
+. 
+Single-mode fiber optic
+B
+. 
+Multimode fiber optic
+C
+. 
+Coaxial
+D
+. 
+Unshielded twisted pair
+37
+. 
+Which of the following statements are true about coaxial cable?
+(Choose all correct answers.)
+A
+. 
+Coaxial cable has three conductors within the same sheath.
+B
+. 
+Coaxial cable has two conductors within the same sheath.
+C
+. 
+Coaxial cable has a copper core that carries light pulse signals.
+D
+. 
+Coaxial cable has a copper core that carries electrical signals.
+E
+. 
+Coaxial cable has an insulating outer sheath made of braided
+strands.
+F
+. 
+Coaxial cable has an insulating sheath made of either PVC or
+Teflon.
+
+38
+. 
+Which of the following twisted pair cable types are rated for 1,000
+megabit per second (Mbps) Gigabit Ethernet using two wire pairs?
+(Choose all correct answers.)
+A
+. 
+Category 3 (CAT3)
+B
+. 
+Category 5 (CAT5)
+C
+. 
+Category 5e (CAT5e)
+D
+. 
+Category 6 (CAT6)
+E
+. 
+Category 6a (CAT6a)
+F
+. 
+None of the above
+39
+. 
+Which of the following twisted pair cable types support both 10
+megabit per second (Mbps) and 100 Mbps data rates, using only
+two pairs? (Choose all correct answers.)
+A
+. 
+Category 3 (CAT3)
+B
+. 
+Category 5 (CAT5)
+C
+. 
+Category 5e (CAT5e)
+D
+. 
+Category 6 (CAT6)
+40
+. 
+Which of the following statements about fiber-optic cabling are
+true? (Choose all correct answers.)
+A
+. 
+There are two fiber-optic cable types: single-mode and
+multimode.
+B
+. 
+Fiber-optic cable is typically used to span long distances.
+C
+. 
+Fiber-optic cables use IBM data connector (IDC) connectors.
+D
+. 
+Fiber-optic cables use straight tip (ST) and subscriber
+connector (SC) connectors.
+E
+. 
+Single-mode fiber-optic cable uses a laser light source and a
+glass core.
+F
+. 
+Multimode fiber-optic cable uses a light-emitting diode (LED)
+light source.
+41
+. 
+Which of the following are characteristics of an internal cable
+
+installation? (Choose all correct answers.)
+A
+. 
+An internal cable installation uses bulk spools of cabling with
+no connectors attached for most cable runs.
+B
+. 
+An internal cable installation uses only prefabricated cables
+with connectors attached for all cable runs.
+C
+. 
+An internal cable installation uses solid wire conductors for all
+cable runs, regardless of distance.
+D
+. 
+An internal cable installation uses stranded wire conductors for
+short cable runs and solid core for longer cable runs.
+E
+. 
+In an internal cable installation, cables are typically not run
+through walls or ceilings.
+F
+. 
+In an internal cable installation, cables are typically run
+through walls or ceilings.
+42
+. 
+Ralph has been hired to connect three local area networks (LANs)
+together with redundant paths that form a fault-tolerant backbone.
+The LANs reside on different floors in the same building and are
+approximately 600 meters apart. Each LAN is currently configured
+in a star topology using twisted pair cabling. Each LAN includes
+wall plates and rack-mounted patch panels and switches. Building
+and fire codes allow cables to run through existing risers, ceilings,
+and walls, but a 50,000-watt radio station occupies one of the
+floors between the LANs. Which topology, cable type, and
+installation method is best suited for this network?
+A
+. 
+Star topology, fiber-optic cabling, and internal installation
+B
+. 
+Star topology, coaxial cabling, and external installation
+C
+. 
+Mesh topology, fiber-optic cabling, and external installation
+D
+. 
+Bus topology, twisted pair cabling, and internal installation
+E
+. 
+Mesh topology, fiber-optic cabling, and internal installation
+F
+. 
+Star topology, twisted pair cabling, and external installation
+43
+. 
+Alice is a network consultant who has been contracted to evaluate a
+network design created many years ago by another consultant. The
+
+client wants to know if the design is still viable. The network is to
+be installed in a large factory that needs 20 workstations, scattered
+throughout the building, to run an inventory database application.
+The two most distant computers are 150 meters apart. The primary
+goal for the network design is to connect all 20 workstations to a
+single local area network (LAN) running at 10 megabits per second
+(Mbps). The two secondary goals are to provide sufficient fault
+tolerance for a single cable break to occur without affecting the
+entire network and to provide resistance to the electromagnetic
+interference (EMI) generated by machinery in the factory. The
+design created by the other consultant calls for a Thin Ethernet
+LAN with all of the computers connected to a single coaxial cable
+segment. Which of the following statements about the proposal is
+true?
+A
+. 
+The solution achieves neither the primary goal nor either of the
+secondary goals.
+B
+. 
+The solution achieves the primary goal but neither of the
+secondary goals.
+C
+. 
+The solution achieves the primary goal and one of the
+secondary goals.
+D
+. 
+The solution achieves the primary goal and both of the
+secondary goals.
+44
+. 
+Ed is a network consultant who has been contracted to design the
+network for a new manufacturing plant. The plant consists of two
+buildings 150 meters apart: an office containing 20 computers and
+a manufacturing facility, which has 30 computers scattered
+throughout it. The two most distant computers at the site are 225
+meters apart. Ed’s design calls for a Gigabit Ethernet network
+using fiber-optic cable. On receiving the proposal, the client
+requests that Ed justify the additional labor and expense of
+installing fiber-optic cable instead of unshielded twisted pair
+(UTP). Which of the following is not a valid reason for choosing
+fiber optic over UTP for this project?
+A
+. 
+The 225 meter distance between the two most distant
+
+computers exceeds Ethernet’s maximum cable segment length
+for UTP.
+B
+. 
+Only fiber-optic cable can keep the two buildings electrically
+isolated.
+C
+. 
+Fiber-optic cable is completely resistant to any electromagnetic
+interference generated by the equipment in the manufacturing
+plant.
+D
+. 
+Fiber-optic cable provides a greater degree of tolerance to cable
+breaks than UTP.
+45
+. 
+In the 100Base-T specification, which of the following are the
+functions of the fast link pulse (FLP) signals exchanged by switches
+and network interface adapters? (Choose all correct answers.)
+A
+. 
+The FLP signals verify the integrity of the connection (or link)
+between the devices.
+B
+. 
+The FLP signals enable the devices to negotiate the speed of the
+link between them.
+C
+. 
+The FLP signals indicate when a collision has occurred.
+D
+. 
+The devices use FLP signals to detect bad frames.
+46
+. 
+Which of the following 10 Gigabit Ethernet specifications calls for
+the use of copper cable?
+A
+. 
+10GBase-LR
+B
+. 
+10GBase-CX4
+C
+. 
+10GBase-ER
+D
+. 
+10GBase-LX4
+E
+. 
+10GBase-SR
+47
+. 
+Alice is a network consultant who has been contracted to upgrade
+an existing Ethernet network to Gigabit Ethernet. The network
+consists of 20 workstations with integrated 10Base-T/100Base-
+TX/1000Base-T network interface adapters. The network cabling is
+Category 5 (CAT5) unshielded twisted pair (UTP), installed when
+the building was constructed. All of the workstations are connected
+
+to a single 100Base-T switch. Which of the following options would
+Alice find to be a valid upgrade path to Gigabit Ethernet?
+A
+. 
+Replace the CAT5 cable with Category 5e (CAT5e) or Category 6
+(CAT6) and leave the existing network interface adapters and
+switch in place.
+B
+. 
+Install a 1000Base-T network interface card in each computer
+and leave the existing cables and switch in place.
+C
+. 
+Replace the CAT5 cable with CAT5e or CAT6 and replace the
+100Base-T switch with a 1000Base-T switch.
+D
+. 
+Replace the 100Base-T switch with a 1000Base-T switch and
+leave the existing cables and network interface adapters in
+place.
+48
+. 
+Ralph is a network consultant with a client who wants him to
+design the local area network (LAN) for his company’s new branch
+office. The site consists of a building with unshielded twisted pair
+(UTP) cable already installed, which the client considered a major
+selling point when selecting the property. He wants Ralph to install
+the fastest possible LAN using the existing cable. After examining
+the site, Ralph notes that the cable is Category 5 (CAT5), installed
+using a star topology, and that the individual cable runs are all less
+than 100 meters long. Which of the following Ethernet physical
+layer specifications can Ralph use for the new network to provide
+the fastest transmission speeds without replacing the cable?
+A
+. 
+10GBase-T
+B
+. 
+100Base-TX
+C
+. 
+1000Base-T
+D
+. 
+1000Base-LX
+49
+. 
+Which Institute of Electrical and Electronics Engineers (IEEE)
+standards for Ethernet support 10 megabit per second (Mbps)
+communications, and what are the correct segment limitations for
+each standard? (Choose all correct answers.)
+A
+. 
+10Base2; segment maximum is 100 meters
+
+B
+. 
+10Base2; segment maximum is 185 meters
+C
+. 
+10Base5; segment maximum is 500 meters
+D
+. 
+100Base5; segment maximum is 500 meters
+E
+. 
+10Base-T; segment maximum is 100 meters
+F
+. 
+10Base-T; segment maximum is 328 meters
+50
+. 
+Which of the following are Ethernet cable types that must be
+configured in a bus topology? (Choose all correct answers.)
+A
+. 
+RG-8
+B
+. 
+RG-10
+C
+. 
+RG-14
+D
+. 
+RG-58
+51
+. 
+Ed has been hired by a company to upgrade its network
+infrastructure. The current network is 10 Mbps Ethernet running
+on Category 5 (CAT5) twisted pair cable. There are 100 computers
+on the network, all of which have 10/100/1000 multispeed
+network interface adapters. The computers are all connected to
+hubs. Users are complaining that the network is too slow and
+connections are sometimes dropped. Management wants to
+upgrade to the fastest Ethernet standard possible, using the
+existing cabling, and still keep costs to a minimum. Which of the
+following implementations should Ed recommend to the client?
+A
+. 
+Upgrade to 100Base-TX and keep the existing hubs.
+B
+. 
+Upgrade to 1000Base-T and keep the existing hubs.
+C
+. 
+Upgrade to 100Base-FX and replace all of the hubs with
+switches.
+D
+. 
+Upgrade to 1000Base-T and replace all of the hubs with
+switches.
+52
+. 
+Ralph has been hired by a company to redesign its local area
+network (LAN). Right now it has a single 100 Mbps Ethernet LAN
+with 40 users and 2 shared servers, all connected through 3 hubs.
+The users on the network must share files with one another and
+
+
+[Note: PDF has 686 pages, only first 100 pages extracted]

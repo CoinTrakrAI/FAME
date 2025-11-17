@@ -1,0 +1,18 @@
+{"session_id": "session_1762614945", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.5, "latency_ms": 15.39, "timestamp": "2025-11-08T15:15:45.532797+00:00"}
+{"session_id": "session_1762614967", "skill": "qa_engine", "feedback_type": "implicit", "score": 1.0, "latency_ms": 4.25, "confidence": 1.0, "timestamp": "2025-11-08T15:16:07.210254+00:00"}
+{"session_id": "session_1762614981", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.5, "latency_ms": 5478.47, "timestamp": "2025-11-08T15:16:27.237350+00:00"}
+{"session_id": "session_1762615013", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.5, "latency_ms": 6066.1, "timestamp": "2025-11-08T15:16:59.256180+00:00"}
+{"session_id": "session_1762615075", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.5, "latency_ms": 2.76, "timestamp": "2025-11-08T15:17:55.891593+00:00"}
+{"session_id": "session_1762615091", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.5, "latency_ms": 3.11, "timestamp": "2025-11-08T15:18:11.097302+00:00"}
+{"session_id": "session_1762617862", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.5, "latency_ms": 21.9, "timestamp": "2025-11-08T16:04:22.541782+00:00"}
+{"session_id": "session_1762617875", "skill": "trading_skill_plugin", "feedback_type": "implicit", "score": 0.0, "latency_ms": 800.51, "timestamp": "2025-11-08T16:04:36.589641+00:00"}
+{"session_id": "session_1762626215", "skill": "trading_skill_plugin", "feedback_type": "implicit", "score": 0.0, "latency_ms": 880.37, "timestamp": "2025-11-08T18:23:36.445649+00:00"}
+{"session_id": "session_1762632253", "skill": "qa_engine", "feedback_type": "implicit", "score": 1.0, "latency_ms": 12.46, "confidence": 1.0, "timestamp": "2025-11-08T20:04:13.915054+00:00"}
+{"session_id": "session_1762632276", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.5, "latency_ms": 3.67, "timestamp": "2025-11-08T20:04:36.093306+00:00"}
+{"session_id": "session_1762634361", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.75, "latency_ms": 1849.0, "confidence": 0.75, "timestamp": "2025-11-08T20:39:23.718202+00:00"}
+{"session_id": "abc", "intent": "hello", "timestamp": "2025-11-08T21:25:58.631081+00:00"}
+{"session_id": "abc", "intent": "hello", "timestamp": "2025-11-08T21:26:51.878496+00:00"}
+{"session_id": "session_1762639068", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.0, "latency_ms": 20.34, "timestamp": "2025-11-08T21:57:48.689442+00:00"}
+{"session_id": "session_1762639526", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.5, "latency_ms": 1834.45, "timestamp": "2025-11-08T22:05:28.046358+00:00"}
+{"session_id": "session_1762639630", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.5, "latency_ms": 121.68, "timestamp": "2025-11-08T22:07:10.612188+00:00"}
+{"session_id": "session_1762640457", "skill": "qa_engine", "feedback_type": "implicit", "score": 0.5, "latency_ms": 153.45, "timestamp": "2025-11-08T22:20:57.824893+00:00"}

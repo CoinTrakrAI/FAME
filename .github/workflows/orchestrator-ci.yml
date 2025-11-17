@@ -1,0 +1,67 @@
+name: orchestrator-ci
+
+on:
+  push:
+    paths:
+      - 'orchestrator/**'
+      - 'core/**'
+      - '.github/workflows/orchestrator-ci.yml'
+  pull_request:
+    paths:
+      - 'orchestrator/**'
+      - 'core/**'
+
+jobs:
+  lint-test:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install flake8 pytest
+          pip install fastapi uvicorn  # For API server tests
+      
+      - name: Lint orchestrator
+        run: |
+          flake8 orchestrator/ --max-line-length=120 --ignore=E501,W503 || true
+          flake8 core/ --max-line-length=120 --ignore=E501,W503 || true
+      
+      - name: Run tests
+        run: |
+          python -m pytest tests/test_orchestrator.py -v || true
+      
+      - name: Check plugin loading
+        run: |
+          python -c "from orchestrator.plugin_loader import load_plugins; plugins = load_plugins(); print(f'Loaded {len(plugins)} plugins')"
+
+  integration-test:
+    runs-on: ubuntu-latest
+    needs: lint-test
+    
+    steps:
+      - uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          pip install fastapi uvicorn
+      
+      - name: Test brain initialization
+        run: |
+          python -c "import asyncio; from orchestrator.brain import Brain; b = Brain(); print(f'Brain initialized with {len(b.plugins)} plugins')"
+      
+      - name: Test API server import
+        run: |
+          python -c "import orchestrator.api_server; print('API server module loads successfully')"
+

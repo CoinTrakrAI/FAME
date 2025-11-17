@@ -1,0 +1,44 @@
+groups:
+  - name: fame-business-kpi
+    interval: 1m
+    rules:
+      - alert: ProjectedRoiDrawdown
+        expr: trading_projected_roi_avg < -0.05
+        for: 10m
+        labels:
+          severity: high
+          component: business
+        annotations:
+          summary: "Projected ROI trending negative"
+          description: "Projected ROI averaged {{ $value }} over the last 10 minutes. Investigate strategy allocation."
+
+      - alert: WinRateCollapse
+        expr: rate(trading_win_trades_total[30m]) / clamp_min(rate(trading_loss_trades_total[30m]), 1) < 0.4
+        for: 15m
+        labels:
+          severity: critical
+          component: business
+        annotations:
+          summary: "Trading win rate collapsed"
+          description: "Win/loss ratio dropped below 0.4. Validate signal quality and risk checks."
+
+      - alert: VoiceConversionDrop
+        expr: (1 - (increase(trading_voice_failed_requests[15m]) / clamp_min(increase(trading_voice_total_requests[15m]), 1))) < 0.6
+        for: 10m
+        labels:
+          severity: warning
+          component: voice
+        annotations:
+          summary: "Voice conversion success deteriorating"
+          description: "Voice success ratio fell below 60%. Review wake-word accuracy and STT performance."
+
+      - alert: ConversationStall
+        expr: rate(training_cycles_total{training_type="conversation"}[30m]) == 0
+        for: 20m
+        labels:
+          severity: medium
+          component: training
+        annotations:
+          summary: "Conversation learning stalled"
+          description: "No conversation training cycles executed in the last 30 minutes."
+

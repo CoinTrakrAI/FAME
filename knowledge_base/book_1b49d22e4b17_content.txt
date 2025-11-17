@@ -1,0 +1,1514 @@
+Kali Linux 2: Windows 
+Penetration Testing
+Kali Linux: a complete pentesting toolkit facilitating 
+smooth backtracking for working hackers
+Wolf Halton
+Bo Weaver
+BIRMINGHAM - MUMBAI
+
+Kali Linux 2: Windows Penetration Testing
+Copyright © 2016 Packt Publishing
+All rights reserved. No part of this book may be reproduced, stored in a retrieval 
+system, or transmitted in any form or by any means, without the prior written 
+permission of the publisher, except in the case of brief quotations embedded in 
+critical articles or reviews.
+Every effort has been made in the preparation of this book to ensure the accuracy 
+of the information presented. However, the information contained in this book is 
+sold without warranty, either express or implied. Neither the authors, nor Packt 
+Publishing, and its dealers and distributors will be held liable for any damages 
+caused or alleged to be caused directly or indirectly by this book.
+Packt Publishing has endeavored to provide trademark information about all of the 
+companies and products mentioned in this book by the appropriate use of capitals. 
+However, Packt Publishing cannot guarantee the accuracy of this information.
+First published: June 2016
+Production reference: 1220616
+Published by Packt Publishing Ltd.
+Livery Place
+35 Livery Street
+Birmingham B3 2PB, UK.
+ISBN 978-1-78216-849-2
+www.packtpub.com
+
+Credits
+Authors
+Wolf Halton
+Bo Weaver
+Reviewer
+Paolo Stagno
+Commissioning Editor
+Kunal Paraikh
+Acquisition Editor
+Tushar Gupta
+Content Development Editor
+Aishwarya Pandere
+Technical Editor
+Mohit Hassija
+Copy Editor
+Madhusudan UchilProject Coordinator
+Nidhi Joshi
+Proofreader
+Safis Editing
+Indexer
+Mariammal Chettiyar
+Graphics
+Kirk D'Penha
+Production Coordinator
+Shantanu N. Zagade
+Cover Work
+Shantanu N. Zagade
+
+About the Authors
+Wolf Halton  is a widely recognized authority on computer and internet security, 
+an Amazon best selling author on computer security, and the CEO of Atlanta Cloud 
+Technology. He specializes in business continuity, security engineering, open source 
+consulting, marketing automation, virtualization and datacenter restructuring, and 
+Linux evangelism. Wolf started hacking Windows in 1993 and loaded Linux for the 
+first time in 2002.  Wolf attributes whatever successes he has had to his darling bride, 
+Helen, without whose tireless encouragement he would have never come so far so 
+fast. To contact Wolf, e-mail him at wolf@atlantacloudtech.com .
+
+Bo Weaver  is an old-school ponytailed geek who misses the old days of black 
+screens and green text, when mice were only found under the subflooring and 
+monitors only had eight colors. His first involvement with networks was in 1972, 
+while working on an R&D project called ARPANET in the US Navy. Here, he also 
+learned the power of Unix and how to "outsmart" the operating system. In the 
+early days of BBS systems, he helped set up, secure, and maintain these systems in 
+the South. He later worked with many in the industry to set up Internet providers 
+and secured these environments. Bo has been working with and using Linux daily 
+since the 1990s, and he is a promoter of open source (yes, Bo runs on Linux). He has 
+also worked in physical security fields as a private investigator and in executive 
+protection. Bo is now the senior penetration tester for Compliancepoint, an Atlanta-
+based security consulting company, where he works remotely from under a tree 
+in the North Georgia mountains. Bo is Cherokee and works with Native American 
+youth to help keep their traditions alive and strong. He is also the father of a geek 
+son, Ross, a hacker in his own right, and the grandfather of two grandchildren, 
+Rachel and Austin, who at their young age can Nmap a network. To contact Bo, 
+e-mail him at bo@boweaver.com .
+We would like to thank Dyana Pearson (Hacker Girl) and Joe Sikes 
+for their input and suggestions. Without their assistance and humor, 
+this book would not be what it is.
+Special thanks to Offensive Security for creating the Kali Linux 
+platform, to Rapid 7 for bringing us Metasploit, to Insecure.org for 
+the Nmap tool suite, and to all the upstream developers who make 
+our lives so much easier. We produced this book on open source 
+software, and all of the tools reviewed are open source.
+
+About the Reviewer
+Paolo Stagno , aka VoidSec, is a cyber security analyst and security researcher.
+He specializes in penetration testing, vulnerability assessment, cybercrime,  
+and underground intelligence for a wide range of high-profile clients across  
+top-tier international banks, major companies, and industries using  
+bleeding-edge technologies in the cyberspace arena.  
+He has attended various international conferences as a speaker, such as DEFCON, 
+BlackHat, and Droidcon. 
+He is also the leader and founder of the security blog VoidSec ( http://
+voidsec.com ). During the last few years, especially in Italy, the underground 
+hacking community died, not for a lack of ideas or skills but because we lost two 
+fundamental requirements: a meeting place and the possibility to share. VoidSec.
+com intends to give to all hackers a meeting place, where ideas can be shared freely, 
+where the ones who know can share their knowledge with the community and the 
+inexperienced can learn.
+
+www.PacktPub.com
+eBooks, discount offers, and more
+Did you know that Packt offers eBook versions of every book published, with PDF 
+and ePub files available? You can upgrade to the eBook version at www.PacktPub.
+com and as a print book customer, you are entitled to a discount on the eBook copy. 
+Get in touch with us at customercare@packtpub.com  for more details.
+At www.PacktPub.com , you can also read a collection of free technical articles, sign 
+up for a range of free newsletters and receive exclusive discounts and offers on Packt 
+books and eBooks.
+TM
+https://www2.packtpub.com/books/subscription/packtlib
+Do you need instant solutions to your IT questions? PacktLib is Packt's online digital 
+book library. Here, you can search, access, and read Packt's entire library of books.
+Why subscribe?
+• Fully searchable across every book published by Packt
+• Copy and paste, print, and bookmark content
+• On demand and accessible via a web browser
+
+[ i ]Table of Contents
+Preface vii
+Chapter 1: Sharpening the Saw 1
+Installing Kali Linux to an encrypted USB drive 2
+Prerequisites for installation 4
+Booting Up 4
+Installing configuration 5
+Setting up the drive 8
+Booting your new installation of Kali 19
+Running Kali from the live CD 22
+Installing and configuring applications 24
+Gedit – the Gnome text editor 24
+Terminator – the terminal emulator for multitasking 24
+EtherApe – the graphical protocol analysis tool 25
+Setting up and configuring OpenVAS 26
+Reporting the tests 33
+KeepNote – the standalone document organizer 34
+Dradis – the web-based document organizer 35
+Running services on Kali Linux 35
+Exploring the Kali Linux Top 10 and more 36
+Summary 37
+Chapter 2: Information Gathering and Vulnerability Assessment 39
+Footprinting the network  39
+Exploring the network with Nmap 40
+Zenmap 42
+The difference verbosity makes 45
+Scanning a network range 47
+Where can you find instructions on this thing? 54
+
+Table of Contents[ ii ]A return to OpenVAS 59
+Using Maltego 65
+Using Unicorn-Scan 72
+Monitoring resource use with Htop 77
+Monkeying around the network 78
+Summary 79
+Chapter 3: Exploitation Tools (Pwnage) 81
+Choosing the appropriate time and tool 81
+Choosing the right version of Metasploit 83
+Starting Metasploit 84
+Creating workspaces to organize your attack 89
+Using the hosts and services commands 91
+Using advanced footprinting  92
+Interpreting the scan and building on the result 97
+Exploiting poor patch management 99
+Finding out whether anyone is home 103
+Using the pivot 104
+Mapping the network to pivot 105
+Creating the attack path 106
+Grabbing system on the target 107
+Setting Up the route 109
+Exploring the inner network 110
+Abusing the Windows NET USE command 114
+Adding a Windows user from the command line 114
+Summary 121
+Chapter 4: Web Application Exploitation 123
+Surveying the webscape 123
+Concept of Robots.txt 124
+Concept of .htaccess 124
+Quick solutions to cross-site scripting 127
+Reducing buffer overflows  128
+Avoiding SQL injection 128
+Arm yourself with Armitage  130
+Working with a single known host 132
+Discovering new machines with NMap  135
+Zinging Windows servers with OWASP ZAP  142
+Using ZAP as an attack proxy 148
+Reading the ZAP interface 153
+
+Table of Contents[ iii ]Search and destroy with Burp Suite 154
+Targeting the test subject 156
+Using Burp Suite as a Proxy  157
+Installing the Burp Suite security certificate 158
+Spidering a site with Burp Spider 161
+Summary 162
+Chapter 5: Sniffing and Spoofing 163
+Sniffing and spoofing network traffic 164
+Sniffing network traffic 165
+Basic sniffing with tcpdump 165
+More basic sniffing with WinDump (Windows tcpdump) 173
+Packet hunting with Wireshark 180
+Dissecting the packet 180
+Swimming with Wireshark 185
+Spoofing network traffic 191
+Ettercap 191
+Using Ettercap on the command line 203
+Summary 205
+Chapter 6: Password Attacks 207
+Password attack planning 209
+Cracking the NTLM code (Revisited) 209
+Password lists 210
+Cleaning a password list 211
+My friend Johnny 216
+John the Ripper (command line) 223
+xHydra 226
+Adding a tool to the main menu in Kali 2.x 238
+Summary 241
+Chapter 7: Windows Privilege Escalation 243
+Gaining access with Metasploit 243
+Replacing the executable 246
+Local privilege escalation with a standalone tool 256
+Escalating privileges with physical access 261
+Robbing the Hives with samdump2 262
+Owning the registry with chntpw 265
+Weaseling in with Weevely 270
+Preparing to use Weevely 271
+Creating an agent 272
+Testing Weevely locally 272
+
+Table of Contents[ iv ]Testing Weevely on a Windows server 273
+Getting help in Weevely 274
+Getting the system info 276
+Using filesystem commands in Weevely 277
+Writing into files 278
+Summary 281
+Chapter 8: Maintaining Remote Access 283
+Maintaining access 283
+Covering our tracks 287
+Maintaining access with Ncat 288
+Phoning Home with Metasploit 292
+The Dropbox 303
+Cracking the NAC (Network Access Controller) 304
+Creating a Spear-Phishing Attack with the Social Engineering Toolkit 307
+Using Backdoor-Factory to Evade Antivirus 318
+Summary 321
+Chapter 9: Reverse Engineering and Stress Testing 323
+Setting up a test environment 325
+Creating your victim machine(s) 325
+Testing your testing environment 325
+Reverse engineering theory 326
+One general theory of reverse engineering 327
+Working with Boolean logic 328
+Reviewing a while loop structure 330
+Reviewing the for loop structure 332
+Understanding the decision points 334
+Practicing reverse engineering 335
+Demystifying debuggers 336
+Using the Valgrind Debugger to discover memory leaks 336
+Translating your app to assembler with the EDB-Debugger 337
+EDB-Debugger symbol mapper 339
+Running OllyDbg 340
+Introduction to disassemblers 341
+Running JAD 342
+Create your own disassembling code with Capstone 344
+Some miscellaneous reverse engineering tools 345
+Running Radare2 345
+Additional members of the Radare2 tool suite 347
+Running rasm2 348
+Running rahash2 348
+Running radiff2 350
+Running rafind2 350
+Running rax2 351
+
+Table of Contents[ v ]Stresstesting Windows 352
+Dealing with Denial 353
+Putting the network under Siege  354
+Configuring your Siege engine 355
+Summary 357
+Chapter 10: Forensics 359
+Getting into Digital Forensics 360
+Exploring Guymager  360
+Starting Kali for Forensics 362
+Acquiring a drive to be legal evidence 363
+Cloning With Guymager 367
+Diving into Autopsy 369
+Mounting image files 393
+Summary 394
+Index 395
+
+Preface
+Attacks on networks are increasing, and these days, it is not so much whether your 
+network will be breached, but when. The stakes are high, and the training most 
+Windows engineers get is weak in in-depth defense. You have to think like an 
+attacker to know what really needs protection in your network. We are dedicated to 
+your success in protecting your network and the data that your organization runs 
+on. The stakeholders include your customers, whose personal data can be exploited. 
+There is no peace of mind in hoping and praying your network is secure, and hope is 
+not a strategy. Welcome to the fascinating world of network penetration testing with 
+the Kali security platform.
+As a working hacker, you need the most compact and complete toolset for the largest 
+proportion of conditions. This book helps you prepare for and conduct network 
+testing, surveillance, infiltration, penetration tests, advanced persistent threat 
+detection, and forensics on the most commonly hacked operating system family on 
+the planet, Microsoft Windows, using the most compact and flexible toolset on the 
+planet—Kali Linux.
+What this book covers
+Chapter 1 , Sharpening the Saw,  teaches you the several ways of setting up Kali to 
+perform different tasks. This chapter introduces you to the setup that works best, 
+the documentation tools that we use to make sure that the results of the tests are 
+prepared and presented right, and the details of Linux services you need to use these 
+tools. Most books about Kali set the chapters in the order of the submenus in the Kali 
+Security desktop. We have put all the setup at the beginning to reduce confusion for 
+the first-time Kali users and because some things, such as the documentation tools, 
+must be understood before you start using the other tools. The reason why the title 
+of this chapter is "Sharpening the Saw" is that the skilled craftsman spends a bit more 
+time preparing the tools so the job goes faster.
+
+Preface[ viii ]Chapter 2 , Information Gathering and ulnerability Assessment,  explains how 
+understanding the network can make a hacker's life a lot easier. You need to be able 
+to find your way around your target network and determine known vulnerabilities 
+to be able to exploit a Windows system remotely. As time goes by, you will discover 
+that you have memorized many of the most effective Windows exploits, but 
+vulnerability assessment is a moving target. You will need to keep bringing on new 
+exploits as time goes by.
+Chapter 3 , Exploitation Tools (Pwnage) , demonstrates how once you have done your 
+due diligence investigating the network and uncovering several vulnerabilities, 
+it's time to prove that the vulnerabilities you have found are real and exploitable. 
+You will learn to use tools to exploit several common Windows vulnerabilities 
+and guidelines to create and implement new exploits for upcoming Windows 
+vulnerabilities.
+Chapter 4 , Web Application Exploitation , tells you that at least 25% of the web servers 
+on the Internet are Windows based, and a much larger group of intranet servers 
+are Windows machines. Web access exploits may be some of the easiest to perform, 
+and here you will find the tools you need to compromise web services (a subset of 
+exploitation tools).
+Chapter 5 , Sniffing and Spoofing , explains how network sniffing helps you understand 
+which users are using services you can exploit and IP spoofing can be used to 
+poison a system's DNS cache so that all their traffic is sent to a man in the middle 
+(your designated host, for instance) as well as being an integral part of most e-mail 
+phishing schemes. Sniffing and spoofing are often used against the Windows 
+endpoints in the network, and you need to understand the techniques that the bad 
+guys are going to be using.
+Chapter 6 , Password Attacks , warns you that your Windows security is only as strong 
+as the weakest link in the chain. Passwords are often that weak link. Password 
+attacks can be used in concert with other approaches to break into and own a 
+Windows network.
+Chapter 7 , Windows Privilege Escalation , asks the question of what happens if you 
+have some access at a lower level but want to have administrative privileges on 
+your compromised Windows server. There are a few cool ways to get administrative 
+privileges on a Windows server or workstation when you have some lower-level 
+access. This is a great advantage when you want to install backdoors and malware 
+services on a target Windows machine.
+Chapter 8 , Maintaining Access , explores the possibility of how once you have cracked 
+a machine or a network, you may want to maintain access to it. This chapter covers 
+some devious ways of maintaining access and control of a Windows machine after 
+you have gained access through the techniques you learned in the previous chapters.
+
+Preface[ ix ]Chapter 9 , Reverse Engineering and Stress Testing , is about voiding your warranty for 
+fun and profit. There are many respectable reasons to reverse engineer a Windows 
+component, service, or program, and Kali has tools to help you do that. This chapter 
+also covers stress testing your Windows server or application. This is a great idea if 
+you want to discover how much DDoS will turn your server belly-up. This chapter is 
+the beginning of how to develop an anti-fragile, self-healing Windows network.
+Chapter 10 , Forensics , explains how forensic research is required to help you 
+understand how one of your Windows devices was compromised. This chapter 
+introduces you to Kali Linux forensic tools. Forensic research could be employed 
+to deal with a damaged hardware component or to find or recover corrupted 
+applications or data files.
+What you need for this book
+1. An Internet-connected computer/laptop for your Kali attack platform.
+2. A workstation with a minimum of 8 GB of RAM. An Ubuntu or Debian base 
+OS is recommended.
+3. The Kali Linux ISO that matches your workstation architecture (32 or 64 bit). 
+Download it from http://kali.org.
+4. Oracle VirtualBox for your workstation to create VMs for Windows and Kali 
+Linux machines.
+5. (Suggested) Several test machines to set up in your test network.
+6. Licenses for Windows 7, Windows 8 (8.1), Windows 10, Windows Server 
+2008, and Windows Server 2012. You can get evaluation copies of all of these 
+except Windows 7 from Microsoft's website ( https://www.microsoft.com/
+en-us/evalcenter/ ).
+Who this book is for
+This book is a set of reminders for the working ethical hacker and a guidebook to 
+the Kali Linux toolkit for network analysts who are improving their value to the 
+enterprise by adding offense to their security analyst defense. You ideally are a 
+network engineer with a good grasp of networking concepts and operating systems. 
+If the network security engineer title is no longer large enough to fit your skill set, 
+this book can increase your skills even more.
+
+Preface[ x ]To get the most out of this book, you need to have:
+• Curiosity about how systems fail and how they can be protected
+• Advanced experience with Linux operating systems and the bash  
+terminal emulator
+• Advanced experience with the Windows desktop and command line
+If you are an absolute beginner, you may find this book too challenging for you. 
+You need to consider getting the Kali Linux Cookbook  by Pritchett and de Smet. If you 
+are a script kiddie looking for cheap exploits so you can brag to your friends on the 
+Interwebs, this book could help you get your first, best, real job, or your first felony 
+conviction—choose wisely.
+Conventions
+In this book, you will find a number of text styles that distinguish between different 
+kinds of information. Here are some examples of these styles and an explanation of 
+their meaning.
+Code words in text, database table names, folder names, filenames, file extensions, 
+pathnames, dummy URLs, user input, and Twitter handles are shown as follows: 
+"Use a real domain name that you or your company controls. Do not use a bogus 
+domain name such as .local  or .localdomain ."
+Any command-line input or output is written as follows:
+root@kalibook :~#  apt-get -y install gedit
+New terms  and important words  are shown in bold. Words that you see on the 
+screen, for example, in menus or dialog boxes, appear in the text like this: "Pull up 
+a terminal window by clicking in the menu bar in the upper left hand corner and 
+go to Applications  | Accessories  | Terminal . This will bring up the terminal or 
+command-line window."
+Warnings or important notes appear in a box like this.
+Tips and tricks appear like this.
+
+Preface[ xi ]Reader feedback
+Feedback from our readers is always welcome. Let us know what you think about 
+this book—what you liked or disliked. Reader feedback is important for us as it helps 
+us develop titles that you will really get the most out of.
+To send us general feedback, simply e-mail feedback@packtpub.com , and mention 
+the book's title in the subject of your message.
+If there is a topic that you have expertise in and you are interested in either writing 
+or contributing to a book, see our author guide at www.packtpub.com/authors .
+Customer support
+Now that you are the proud owner of a Packt book, we have a number of things to 
+help you to get the most from your purchase.
+Downloading the color images of this book
+We also provide you with a PDF file that has color images of the 
+screenshots/diagrams used in this book. The color images will help you 
+better understand the changes in the output. You can download this file 
+from https://www.packtpub.com/sites/default/files/downloads/
+KaliLinux2WindowsPenetrationTesting_ColorImages.pdf .
+Errata
+Although we have taken every care to ensure the accuracy of our content, mistakes 
+do happen. If you find a mistake in one of our books—maybe a mistake in the text or 
+the code—we would be grateful if you could report this to us. By doing so, you can 
+save other readers from frustration and help us improve subsequent versions of this 
+book. If you find any errata, please report them by visiting http://www.packtpub.
+com/submit-errata , selecting your book, clicking on the Errata Submission Form  
+link, and entering the details of your errata. Once your errata are verified, your 
+submission will be accepted and the errata will be uploaded to our website or  
+added to any list of existing errata under the Errata section of that title.
+To view the previously submitted errata, go to https://www.packtpub.com/books/
+content/support  and enter the name of the book in the search field. The required 
+information will appear under the Errata  section.
+
+Preface[ xii ]Piracy
+Piracy of copyrighted material on the Internet is an ongoing problem across all 
+media. At Packt, we take the protection of our copyright and licenses very seriously. 
+If you come across any illegal copies of our works in any form on the Internet, please 
+provide us with the location address or website name immediately so that we can 
+pursue a remedy.
+Please contact us at copyright@packtpub.com  with a link to the suspected  
+pirated material.
+We appreciate your help in protecting our authors and our ability to bring you 
+valuable content.
+Questions
+If you have a problem with any aspect of this book, you can contact us at 
+questions@packtpub.com , and we will do our best to address the problem.
+
+[ 1 ]Sharpening the Saw
+A craftsman is only as good as his tools and tools need to be set up and maintained. 
+In this chapter we will go through the setup and configuration of Kali Linux.
+There are several ways to set up Kali to perform different tasks. This chapter 
+introduces you to the setup that works best for your Windows-hacking use case, 
+the documentation tools that we use to make sure that the results of the tests are 
+prepared and presented correctly, and the details of Linux services you need in 
+order to use these tools. Most books about Kali set the chapters in the order of the 
+submenus in the Kali security desktop. We have put all the set-up at the beginning 
+to reduce the confusion for first-time Kali users, and because some things, such as 
+the documentation tools, must be understood before you start using the other tools. 
+The reason why the title of this chapter is Sharpening the Saw  is because the skilled 
+craftsman spends a bit more time preparing the tools to make the job go faster.
+In the Kali Desktop Menu, there is a sub-menu, Top 10 Security Tools , and these are 
+the tools that the creators of Kali Linux believe to be the most indispensable weapons 
+for a working security analyst to understand. In this chapter we are going to show 
+you the tools we use the most. Most of them are in the Kali Top 10 Menu, but not all 
+of them!
+Many of the system services on Kali Linux are the same as those on most Linux 
+servers, but because there are security tools that use a client/server model, there 
+are services that will need to have their servers started early to run your tests 
+successfully.
+• Learn to set up Kali Linux like a professional. There are lots of choices in 
+setting up a Kali Linux workstation, and some are more effective than others.
+• Once you have your installation complete, you need to make a decision on 
+what documentation system you will use to keep your research notes and 
+results organized and secure.
+
+Sharpening the Saw[ 2 ]• The final section of this chapter is a short primer in how to use security 
+services on a Linux OS. Almost all of the services are started in the command 
+line (CLI), and they are almost uniform in their operation syntax.
+Installing Kali Linux to an encrypted USB 
+drive
+Secure networking environments such as those  found in most organizations that 
+have IT departments present several challenges to you as a security engineer. 
+The company probably has a specific list of approved applications. Anti-virus 
+applications are usually managed from a central location. Security tools are 
+miscategorized as evil hacking tools or malware packages. Many companies have 
+defensive rules against having any operating system that isn't Microsoft Windows 
+installed on company computing hardware.
+To add to the challenge, they prohibit non-corporate assets on the corporate network. 
+The main problem you will find is that there are very few economical penetration 
+testing tools written for Windows, and the few, such  as Metasploit , that do have 
+a Windows version, tend to fight with the lower-level operating system functions. 
+Since most company laptops must have anti-virus software running on the system, 
+you have to do some serious exception voodoo on Metasploit's directories. The 
+anti-virus software will quarantine all the viruses that come with Metasploit. Also, 
+intrusion protection software and local firewall rules will cause problems. These OS 
+functions and security add-ons are designed to prevent hacking, and that is exactly 
+what you are preparing to do.
+The Payment Card Industry Digital Security Standard  (PCI DSS 3.0) 
+requires that any Windows machine that handles payment data or is on 
+a network with any machine that handles payment data to be patched, 
+runs a firewall and has anti-virus software installed on it. Further, many 
+company IT security policies mandate that no end user can disable anti-
+virus protection without a penalty.
+Another issue with using a Windows machine as your penetration-testing machine 
+is that you may do external testing from time to time. In order to do a proper 
+external test the testing machine must be on the public Internet. It is unwise to hang 
+a Windows machine out on the public network with all your security applications 
+turned off. Such a configuration will probably be infected with worms within 20 
+minutes of putting it on the Internet.
+
+Chapter 1[ 3 ]So what's the answer? An encrypted bootable USB drive loaded with Kali Linux. 
+On Kali's install screen there is the option to install Kali to a USB drive with what is 
+called "persistence". This gives you the ability to install to a USB drive and have the 
+ability to save files to the USB but the drive is not encrypted. By mounting the USB 
+drive with a Linux machine your files are there for the taking. This is fine for trying 
+out Kali but you don't want real test data floating around on a USB drive. By doing 
+a normal full install of Kali to the USB drive, full disk encryption can be used on the 
+disk. If the USB is compromised or lost, the data is still safe.
+In this chapter we will install Kali to a 64GB USB disk. You can use a smaller one but 
+remember  you will be gathering data from your testing and even on a small network 
+this can amount to a lot of data. We do testing almost daily so we used a 1TB USB 3.0 
+drive. The 64GB drive is a good size for most testing.
+
+
+Sharpening the Saw[ 4 ]Prerequisites for installation
+For this chapter you will need a 64GB thumb drive, a copy of Kali burned to a DVD 
+and a machine with a DVD player and USB capabilities on boot. You  can download 
+Kali at http://kali.org  and look for the download link.
+Booting Up
+Once you are ready, insert your DVD and your USB drive into your machine.
+Be sure to insert the USB before  powering up the machine. You want the 
+machine to see the USB on boot so the installer will see it during the 
+install.
+Now power up the machine and you'll get the screen below. Pick the Graphic Install  
+from the menu. This installation will also work if you use the text installer found by 
+picking the Install  command on line six.
+
+
+Chapter 1[ 5 ]Installing configuration
+If you have  ever installed any distribution of Linux, the first section of the installation 
+should seem very familiar. You will see a series of screens for the country, language, 
+and keyboard set up. Set this up for your locale and language of choice. Normally 
+the installer will discover the keyboard and you can click on the one chosen. Click 
+the Continue  button to continue on each of these pages.
+After these configurations you'll be presented with the following window and 
+asked to give it a hostname. Give it a distinctive name and not the default. This will 
+be helpful later when using saved data and screenshots taken. If you have several 
+people using Kali and all the machines are named Kali it can be confusing as to 
+exactly where the data came from.
+
+
+Sharpening the Saw[ 6 ]In the next screen you will be asked for a domain name. Use a real domain name that 
+you or your company controls. Do not use a bogus domain name such as .local  
+or .localdomain . If you are doing business on the Internet, or even if you are an 
+individual please use a proper domain name. This makes tracing routes and tracking 
+packets easier. Domains are cheap. If the domain belongs to your employer, and 
+you cannot just use their domain name, request a subdomain such as testing.
+mycompany.com .
+In the next window you will be asked to provide a root password. Make this a good  
+password. The longer and more complex the password, the better. Remember, after 
+a few tests the keys to your network kingdom will be on this device. Unlike most 
+computer operations during testing you will be using the root account and not a 
+normal user account for testing. You will need the ability to open and close ports and 
+have full control of the network stack.
+
+Chapter 1[ 7 ]A standard Kali install does not offer you the chance to add a standard 
+user. If you install Kali on the laptop itself, and use this laptop for other 
+things besides testing, create a standard user and give it sudoer  privileges. 
+You never want to get into the habit of using your root  account for 
+browsing the World-Wide Web and sending e-mails.
+Next to be set up is the time zone. Set up by your location on the graphical map, or 
+pull-down menu, or pick your UTC offset. Many of the tools on Kali Linux output 
+timestamps and these provide legal evidence that you did what you said you did, 
+when you said you did.
+
+Sharpening the Saw[ 8 ]Setting up the drive
+The next step will be setting up the drive, encrypting it, and partitioning the drive. 
+The next dialog will ask you to select the type of partitioning for this install.
+1. Pick Guided – Use entire disk and set up encrypted LVM . This will fully-
+encrypt the entire drive, as opposed to just encrypting the /home  directory.
+In the next window you will be asked to pick the disk you require for 
+installation.
+
+Chapter 1[ 9 ]WARNING. Be careful to pick the USB disk and not your local drive. 
+If you pick your local drive you will wipe the operating system from 
+that drive. Note in the window below you can see the USB drive and 
+a VMware virtual disk. The virtual disk is the hard drive of the virtual 
+machine being used for this demonstration.
+2. Pick the USB disk and click on Continue .
+
+
+Sharpening the Saw[ 10 ]3. In the next window you will be asked how you want to partition the drive. 
+Just keep the default and click on Continue .
+
+
+Chapter 1[ 11 ]4. Next you will be asked to save the partitioning information and this will start 
+the partitioning process. When you click on Continue , here all data will be 
+lost on the disk you are installing to. Click on Yes and then Continue .
+
+
+Sharpening the Saw[ 12 ]This will start the disk encryption and partitioning process. First the drive 
+is fully erased and encrypted. This will take a while. Get a cup of coffee, or 
+better yet, go for a walk outside. A 1TB drive will take about 30 hours for the 
+encrypting process. The 64GB drive takes about 30 minutes.
+5. In the next window, you will be asked to give provide a passphrase for the 
+drive encryption. You will use this passphrase when booting up Kali. Note 
+the term passphrase .
+
+Chapter 1[ 13 ]Use something really long but easy to remember. A line from a song or a 
+poem or quote! The longer the better! "Mary had a little lamb and walked 
+it to town." Even with no numbers in this phrase it would take John the 
+Ripper over a month to crack this.
+
+
+Sharpening the Saw[ 14 ]6. Next  you will be asked to confirm these changes. Pick Finish partitioning 
+and write changes to disk . And then click Continue .
+
+
+Chapter 1[ 15 ]7. Next, click  on the Yes radio button and then click on Continue .
+
+
+Sharpening the Saw[ 16 ]Now the system will start the partitioning process.
+
+
+Chapter 1[ 17 ]After the partitioning process, the system install will start.
+
+
+Sharpening the Saw[ 18 ]8. Next you will be asked if you want to use a Network Mirror . Click Yes on 
+this! This will select repository mirrors close to your location and help speed 
+up your updates later when you update your system.
+9. Your installation process will now complete and you will be asked to reboot 
+the system. Be sure to remove the install disk before rebooting.
+
+Chapter 1[ 19 ]Booting your new installation of Kali
+Now we're  ready to fire up Kali. Insert your Kali USB drive into your machine and 
+power it up. In the beginning of the boot process you will be given the ability to 
+manually select a boot drive. The specific keystroke will vary depending on the type 
+and make of your machine. By whatever process your machine uses you will be 
+given a menu of the available drives to boot from. Pick the USB drive and continue. 
+When the system boots, you will be presented with a screen asking for your 
+passphrase. This is the passphrase we had set earlier during the installation. This is 
+not the root login password. Enter the passphrase and hit the Enter  key.
+
+
+Sharpening the Saw[ 20 ]This will  start the actual boot process of the system from the now unencrypted drive. 
+Once the system is booted up you will be presented the login following screen:
+Hacker Tip
+Before  we go any further we would advise you to use these tools only 
+on systems that you have written authorization to test, or systems that 
+you personally own. Any use of these tools on a machine you do not 
+have authorization to test is illegal under various Federal and State laws. 
+When you get caught, you will go to jail. Sentences for hacking tend to be 
+draconically long.
+Get a personal copy of the testing waiver that your company receives 
+to allow them to test the client's network and systems. This document 
+should contain the dates and times of testing and the IP addresses and/or 
+networks to be tested. This is the "scope" of your testing. This document is 
+your "Get out of jail free card." Do not test without this.
+
+Chapter 1[ 21 ]Now with that said let's login and continue our set up.
+1. Hit the Enter  key or click on Other  in the menu box. You will then be given a 
+field asking for the user name. Enter the root and hit the Enter  key. You will 
+then be prompted with the password field.
+2. Enter the root password and hit Enter . Your desktop will now load.
+On your first login, check to be sure that everything is up to date. Pull up a 
+terminal window by clicking in the menu bar in the upper left hand corner and 
+go to Applications  | Accessories  | Terminal . This will bring up the terminal or 
+command-line window. Type the following:
+root@kalibook :~#  apt-get update
+This will refresh the update list and check for new updates. Next run:
+root@kalibook :~#  apt-get -y upgrade
+This will run the upgrade process as the -y automatically answers "yes" to the 
+upgrade. The system will run an upgrade of all applications. Reboot if necessary.
+
+Sharpening the Saw[ 22 ]Hacker Trick
+Here's another way to get to your terminal window and skip the main 
+menu. Press Alt + F2. This opens a dialog window with a single field. You 
+can type any program name into the field and it opens the program. In 
+this case, type terminal  in the field, and click OK
+Running Kali from the live CD
+Running Kali Linux from the live disk is best when you are doing forensics or 
+recovery tasks. Some tools, such as OpenVAS  will not work at all, because they have  
+to be configured and file updates must be saved. You can't do this from the CD. One 
+thing you can do very neatly from the live disk is to start up a computer without 
+writing anything to the hard drive, and this is an important consideration when 
+you are working on recovering files from the hard drive in question for forensic 
+investigation.
+To run Kali from the CD, just load the CD and boot from it. You will see the 
+following screen. Note there are several options in booting live from the CD:
+• Booting from the first option loads Kali complete with a working network 
+stack. You can run a lot of the tools over the network with this option. One 
+of the best uses for this mode is the recovery of a dead machine. It may allow 
+you to resurrect a crashed machine after the OS drive dies. No matter what 
+Voodoo you do with fsck and other disk utilities, it just will not come back 
+up on its own. If you boot from the live CD, you can then run fsck and most 
+likely get the drive back up enough to copy data from it. You can then use 
+Kali to copy the data from the drive to another machine on the network.
+• Booting from the second option will boot Kali with no running services 
+and no network stack. This option is good when things really go bad with a 
+system. Perhaps it was struck by lightning and the network interface card is 
+damaged. You can do the above operation and copy the data to a mounted 
+USB drive in this mode.
+• The third option is "Forensic Mode". When booted with this option it does its 
+best not touch the machine itself when booting. No drives are spun up and 
+the memory is not fully flushed as with a normal boot up. This allows you to 
+capture old memory from the last boot and allows you to do a forensic copy 
+of any drives without actually touching the data. You do not have a working 
+network stack or running services.
+
+Chapter 1[ 23 ]• Booting from the fourth and fifth options requires you to install Kali onto a 
+USB drive and run it from the USB drive. When you boot from the USB you 
+will get the same screen as follows but you will pick one of these options. For 
+the USB with persistence see the  link listed http://kali.org/prst  for an 
+excellent tutorial.
+• If you are comfortable with the Linux command line, you may want the 
+sixth  option. This is the Debian Ncurses  installer. It has all the functions of 
+the graphical installer, but it lacks the modern slick look of the graphical 
+installer. You can also use this installer with the section on fully installing to 
+an encrypted USB. The steps are all the same.
+• The Graphical Installer  is for installing directly to a hard drive and as in our 
+demonstration you can also use it to do a full install to a USB or Flash Drive.
+
+
+Sharpening the Saw[ 24 ]Installing and configuring applications
+Most of what you need comes preloaded on Kali. There are a few applications we 
+have found useful that are not loaded with the base install. We will also set up and 
+configure OpenVAS to use as our vulnerability scanner.
+Gedit – the Gnome text editor
+Kali comes  with Leafpad  as its default text editor. This is a very lightweight text 
+editor. Kali's desktop is Gnome-based and the Gnome text editor Gedit  is a much 
+better editor. To install:
+root@kalibook :~#  apt-get -y install gedit
+Once installed you will find it under Accessories .
+Terminator – the terminal emulator for 
+multitasking
+This is Bo's favorite terminal application. You can split the screen into several 
+windows. This proves to be a great help when running several ssh sessions at the 
+same time. It also has a broadcast function where you can run the same string in all 
+windows at the same time.
+
+
+Chapter 1[ 25 ]To install:
+root@kalibook :~#  apt-get -y install terminator
+EtherApe – the graphical protocol analysis 
+tool
+This is a great  visual passive/active network sniffing tool. It works really  well for 
+sniffing Wi-Fi networks. It shows you where the services are running, and can 
+also show you where users are doing suspicious bit-torrent downloads and other 
+behavior that is not approved on most corporate networks.
+
+
+Sharpening the Saw[ 26 ]Setting up and configuring OpenVAS
+Recon is  everything, so a good vulnerability scanner is necessary. Kali come with 
+OpenVAS installed. It must be configured and updated before use. Fortunately, Kali 
+comes with a helpful script to set this up. This can be found under Applications  | 
+openvas initial setup . Clicking on this will open a terminal window and run the 
+script for you. This will set up the self-signed certificates  for SSL and download the 
+latest vulnerability files and related data. It will also generate a password for the 
+admin account on the system.
+Be sure to save this password as you will need it to login. You can change 
+it after your first login.
+
+
+Chapter 1[ 27 ]Kali also comes with a check setup script which will check the services and 
+configuration. If an issue does come up it will give you helpful information on the 
+issue. This script can be found at Applications  | Kali Linux  | System Services  | 
+OpenVas  | openvas check setup . Click here and a terminal window will open and 
+run the script.
+
+
+Sharpening the Saw[ 28 ]The script results are as shown in the following screenshot:
+Note this check shows the running ports of the services. The check  shows a warning 
+that these services are only running on the local interface. This is fine for your work. 
+It may at some point be useful for you to run the OpenVAS server on some other 
+machine to improve the speed of your scans.
+
+Chapter 1[ 29 ]Next, we will log into the Greenbone web interface to check OpenVAS. Open the 
+browser and go to https://localhost:9392.  You will be shown the security 
+warning for a self-signed certificate. Accept this and you will get the following login 
+screen.
+
+
+Sharpening the Saw[ 30 ]You will log in with the user name admin  and the very long and complex password 
+generated during the set up. Don't worry, we're going to change that once we get 
+logged in. Once logged in you will see the following page.
+
+
+Chapter 1[ 31 ]Now  go to the Administration  | Users tab :
+
+
+Sharpening the Saw[ 32 ]This will take you to the user administration page. Click the wrench link to the right 
+of the name admin  and this will open the edit page for the admin user.
+
+
+Chapter 1[ 33 ]This will take you to the edit page. Change the radio button for Use existing value  to 
+the blank field and add your new password and click the Save  button.
+We've now finished the setup of OpenVAS and we're ready to do some real work.
+Reporting the tests
+A clean and  clear documentation helps you report your work. There are two 
+documentation tools we use to keep documentation organized:
+• KeepNote
+• Dradis
+
+Sharpening the Saw[ 34 ]A document organizer is a little different from a mere text editor or word processor. 
+Proper documentation requires an organized filing structure. Certainly, a Windows 
+security analyst could create a folder structure that lets them organize the 
+documents. It is in-built in these document-organizing applications, and using them 
+reduces the chance of losing a folder, or accidentally recursing your folders, or losing 
+important parts of the investigation's documentation.
+KeepNote – the standalone document 
+organizer
+KeepNote  is the simpler tool, and quite sufficient if you are working alone. To find 
+KeepNote, open the Application  menu and click on Kali Linux  | Recording tools  | 
+Documentation  | KeepNote . The following image shows a KeepNote setup similar 
+to the way you would record a short test.
+
+
+Chapter 1[ 35 ]Dradis – the web-based document organizer
+Dradis  is a web application, and can be used to share documentation with a team. 
+The default URL for Dradis is https://127.0.0.1:3004 . The application can be 
+hosted on a remote secure server, and that is the best feature about Dradis. The 
+following screenshot comes from http://dradisframework.org .
+Running services on Kali Linux
+There are several services that you will want to turn on when you need them. 
+The general use of services in Windows and Linux is to have them start when 
+the computer boots up. Most administrators spend little time managing services 
+unless something goes wrong. In the Kali system, you will tend to shut down the 
+workstation when you are not actually doing security analysis tasks, and you 
+certainly do not want the security tools, like OpenVAS or Metasploit that you have 
+on your workstation, to be accessible over the Internet. This means that you will 
+want to start them when you need them, and shut them down when you are not 
+using them.
+
+Sharpening the Saw[ 36 ]You can find the commands to start and stop Kali Services from the Application  
+menu: Kali Linux  | System Services  | Metasploit | Community / Pro [Start|Stop]
+Another way to work with services is using the command line. As an example, 
+consider HTTP (Apache2). There are several options for services:
+• Start – This starts the Apache web server and shows the process ID (PID)
+• Status – Shows the status of the server. Is it up? Is it down? Is it stuck?
+• Restart – Takes the server down and restarts it on a different PID. Use this if 
+the server is stuck or if you have changed the networking processes on which 
+the server depends.
+• Reload – Re-reads the configuration. Use this when  you make minor changes 
+on the configurations.
+• Stop – This shuts down the web server.
+Exploring the Kali Linux Top 10 and more
+The creators of Kali Linux have a toolbar for the Top 10 Security Tools. We will show 
+you appropriate uses for all of these tools: and several others:
+• Aircrack-ng: Encryption-cracking  tool for cracking 802.11 WPA-PSA and 
+WEP keys.
+
+Chapter 1[ 37 ]• Burpsuite: An integrated tool for testing web applications.
+• (THC) Hydra: A parallelized login cracker.
+• John (the Ripper): A password-cracking tool.
+• Maltego: An intelligence and forensics application.
+• Metasploit Framework: An extremely flexible security testing suite.
+• NMap: The pre-eminent network mapping tool.
+• Owasp-ZAP: Another web application testing tool.
+• SqlMap: An SQL  injection and database takeover tool
+• Wireshark: The premier network protocol analysis tool.
+Summary
+This chapter shows you two ways to set up Kali Linux so that you can use your 
+company-issued Windows laptop, or any other laptop, to get a better performance 
+out of Kali Linux and not to have requisition to a new machine just for Kali. Most 
+enterprises do not allow you to dual-boot your computer, and running Kali on  
+a VM throttles the resources for your Kali installation. Further, this chapter shows 
+you the two reporting tools we use, and the situations where each of these tools 
+makes the most sense. We showed you how to set up OpenVAS for the first time.  
+We also showed you how to run services on Kali Linux. Finally, we introduced 
+the top ten Kali security tools we use every day to perform penetration tests on 
+Windows networks.
+
+[ 39 ]Information Gathering and 
+Vulnerability Assessment
+There is a myth that all Windows systems are easy to exploit. This is not entirely 
+true. Almost any Windows system can be hardened to the point that it takes too long 
+to exploit its vulnerabilities. In this chapter, you will learn the following:
+• How to footprint your Windows network and discover the vulnerabilities 
+before the bad guys do
+• Ways to investigate and map your Windows network to find the Windows 
+systems that are susceptible to exploits
+In some cases, this will be adding to your knowledge of the top 10 security tools, 
+and in others, we will show you entirely new tools to handle this category of 
+investigation.
+Footprinting the network 
+You can't find your way without a good map. In this chapter, we are going to learn 
+how to gather network information and assess the vulnerabilities on the network. 
+In the Hacker world this is called Footprinting. This is the first step to any righteous  
+hack. This is where you will save yourself time and massive headaches. Without 
+Footprinting your targets, you are just shooting in the dark. The biggest tool in any 
+good pen tester's toolbox is Mindset. You have to have the mind of a sniper. You 
+learn your targets habits and its actions. You learn the traffic flows on the network 
+where your target lives. You find the weaknesses in your target and then attack those 
+weaknesses. Search and destroy!
+
+Information Gathering and Vulnerability Assessment[ 40 ]In order to do good Footprinting, you have to use several tools that come with Kali. 
+Each tool has it strong points and looks at the target from a different angle. The more 
+views you have of your target, the better plan of attack you have. Footprinting will 
+differ depending on whether your targets are external on the public network, or 
+internal and on a LAN. We will be covering both aspects.
+Scanning and using these tools against a machine on the public network if you do 
+not have written permission to do so is a federal crime. In this book, for most of the 
+instances of Kali Linux, we will be using virtual machines running on VMware and 
+Oracle VirtualBox that are  built specifically for this book. The instances of Kali that 
+we use on a daily basis are fairly heavily customized, and it would take a whole book 
+just to cover the customizations. For external networks, we will be using several live 
+servers on the Internet. Please be respectful and leave these addresses alone as they 
+are in the authors' Atlanta Cloud Technology server cluster.
+Please read the paragraph above again, and remember you do not have our 
+permission to attack these machines. Don't do the crime if you can't do the time.
+Exploring the network with Nmap
+You can't talk about networking without talking about Nmap. Nmap is the Swiss 
+Army knife for network administrators. It is not only a great Footprinting tool, but 
+also the best and cheapest network analysis tool any sysadmin can get. It's a great 
+tool for checking a single server to make sure the ports are operating properly. It 
+can heartbeat and ping an entire network segment. It can even discover machines 
+when ICMP (ping) has been turned off. It can be used to pressure-test services. If the 
+machine freezes under the load, it needs repairs.
+Nmap was created in 1997 by Gordon Lyon , who goes by the handle Fyodor on the 
+Internet. Fyodor still maintains Nmap and it can be downloaded from http://
+insecure.org . You can also order his book Nmap Network Scanning  on that website. 
+It is a great book, well worth the price! Fyodor and the Nmap hackers have collected 
+a great deal of information and security e-mail lists on their site. Since you have Kali 
+Linux, you have a full copy of Nmap already installed! Here is an example of Nmap 
+running against a Kali Linux instance. Open the terminal from the icon on the top bar 
+or by clicking on the menu link Application  | Accessories  | Terminal . You could 
+also choose the Root Terminal  if you want, but since you are already logged in as 
+Root, you will not see any differences in how the terminal emulator behaves.
+Type nmap -A 10.0.0.4  at the command prompt (you need to put in the IP of the 
+machine you are testing). The output shows the open ports among 1000  commonly 
+used ports. Kali Linux, by default, has no running network services, and so in this 
+run you will see a readout showing no open ports.
+
+Chapter 2[ 41 ]To make it a little more interesting, start the built-in webserver by typing /etc/
+init.d/apache2 start . With the web server started, run the Nmap command 
+again:
+nmap -A 10.0.0.4 
+As you can see, Nmap is attempting to discover the operating system (OS) and to tell 
+which version of the web server is running:
+
+
+Information Gathering and Vulnerability Assessment[ 42 ]Here is an  example of running Nmap  from the Git Bash application, which lets you 
+run Linux commands on your Windows desktop. This view shows a neat feature 
+of Nmap. If you get bored or anxious and think the system is taking too much time 
+to scan, you can hit the down arrow key and it will print out a status line to tell you 
+what percentage of the scan is complete. This is not the same as telling you how 
+much time is left on the scan, but it does give you an idea what has been done:
+Zenmap
+Nmap comes  with a GUI frontend called Zenmap. Zenmap  is a friendly graphic 
+interface for the Nmap application. You will find Zenmap under Applications  | 
+Information Gathering  | Zenmap . Like many Windows engineers, you may like 
+Zenmap more than Nmap:
+
+Chapter 2[ 43 ]
+Here we see a list of the most common scans in a drop-down box. One  of the cool 
+features of Zenmap is when you set up a scan using the buttons, the application also 
+writes out the command-line version of the command, which will help you learn the 
+command-line flags used when using Nmap in command-line mode.
+Hacker tip
+Most hackers are very comfortable with the Linux Command Line 
+Interface  (CLI). You want to learn the Nmap commands on the command 
+line because you can use Nmap inside automated Bash scripts and make 
+up cron jobs to make routine scans much simpler. You can set a cron job 
+to run the test in non-peak hours, when the network is quieter, and your 
+tests will have less impact on the network's legitimate users.
+
+Information Gathering and Vulnerability Assessment[ 44 ]The choice of intense scan produces a command line of nmap -T4 -A -v . This 
+produces a fast scan.
+• The T stands for Timing (from 1 to 5), and the default timing is -T3. The 
+faster the timing, the rougher the test, and the more likely you are to be 
+detected if the  network is running an Intrusion Detection System  (IDS).
+• The -A stands for All, so this single option gets you a deep port scan, 
+including OS identification, and attempts to find the applications listening on 
+the ports, and the versions of those applications.
+• Finally, the -v stands for verbose. -vv means very verbose:
+
+
+Chapter 2[ 45 ]The difference verbosity makes
+The next three images show the difference verbosity makes in an OS scan. The OS 
+scan includes a Stealth scan, so nmap -O hostname  is exactly the same as nmap -sS 
+-O hostname . You can choose to have verbosity levels from 1 to 5 by using the -v 
+option. As an example, we will test a machine running an Apache web server.
+First, we will run nmap -A  and then we will run it as nmap -A -v . Verbosity gives a 
+lot more  information. First we see a normal run. It produces some output. This is the 
+way to test whole networks, because it is quick and produces some useful data:
+
+
+Information Gathering and Vulnerability Assessment[ 46 ]The verbose version, which follows, has been adjusted slightly to fit all the detail into 
+the image. The different scan options have different enhanced content when the -v 
+or -vv options are added to the search strings. It makes sense to use -v or -vv when 
+you have chosen some likely targets using the basic display option:
+Depending  upon the services running on the target machine, -v and -vv may be 
+quite different. You won't know until you try, so if you come across a machine with 
+interesting services, by all means try -vv:
+
+Chapter 2[ 47 ]
+Scanning a network range
+The example below has a network range of 192.168.202.0/24 , and the scan type 
+chosen is  an intense scan with no ping. You then click the Start Scan  button and your 
+scan runs. During the scan you will see the output in the Nmap Output  tab on the 
+screen. From our scan, six active hosts are on the network. From the icons next to 
+the IP addresses we can tell we have identified two Windows machines, two Linux 
+machines, and two unknown OS systems.
+
+Information Gathering and Vulnerability Assessment[ 48 ]Note in the Command text box the string you would use in the command line to run 
+the same scan from the command line:
+If a network  has ICMP turned off, attempting to  ping the machines takes a lot of 
+time. It takes almost as long as pinging UDP ports on the target machines. For either 
+case, each machine will take approximately 75 seconds per port. In the first case, 
+that means a ping of six machines takes 450 seconds just to fail the ping test. UDP 
+searches test many more ports per machine. At 1000  ports tested per standard UDP-
+port scan, you are going to take about 21 hours per machine, just to test UDP. If 
+you don't have a really good reason to check UDP ports with Nmap, it is not a cost-
+effective exercise.
+
+Chapter 2[ 49 ]By clicking the Topology  tab and then clicking the Hosts Viewer  button you get 
+a nice list of the hosts. By clicking the address you can see the details of each host. 
+Note that the addresses are different colors. Nmap picks out the low hanging fruit 
+for you. Green is secured. Yellow and red have vulnerabilities or services that could 
+be exploited:
+
+
+Information Gathering and Vulnerability Assessment[ 50 ]Zenmap also  has a nice feature for comparing scans. You will find it in the Menu 
+bar under Compare Results . In the following screenshot you will see we ran two 
+scans on the network. When we compared the two, a new machine was found 
+on the second scan. The results of the first scan are marked in red and show 
+192.168.202.131  as Down. In green it is showing it as up and shows the  
+open ports and system information:
+Open ports and system information
+
+Chapter 2[ 51 ]Below is  the result of running Nmap from the  command line. As you saw previously, 
+Nmap has been ported to Windows. If your company allows it, Nmap can be run on 
+a Windows system by the command line in either the Command window or through 
+Windows Power Shell:
+
+
+Information Gathering and Vulnerability Assessment[ 52 ]If you have a large network and just want to  find the Windows machines, you 
+can focus on Windows vulnerabilities You can run the Quick Scan ( nmap -T4 -F 
+10.0.0.0/24 ) or the Quick Scan Plus ( nmap -sV -T4 -O -F –version-light 
+10.0.0.0/24 ). These will give you a good idea of which machines you really want to 
+focus on. It looks like 10.0.0.12  is a Windows machine, based on the fact that four 
+of five open ports are Windows-related:
+When you are looking at the Topology , you can adjust the size of the group by 
+changing the values of the controls at the bottom of the window. The size of the 
+graphic is increased by increasing interest factor. The standard view puts the local 
+host at the center of the grouping, but if you click on one of the other hosts, it is 
+brought to the center:
+
+Chapter 2[ 53 ]
+Changing the values of the controls using topology
+Even though Zenmap has a short punchy drop-down  list of popular and useful 
+scans, there are quite an assortment of commands and options that you can use  
+in customizing your scans. This is a view of the help file that comes with Nmap,  
+with our comments included. You can find much more on the manual page at 
+http://nmap.org/book/man .
+
+Information Gathering and Vulnerability Assessment[ 54 ]Where can you find instructions on this 
+thing?
+On a Linux box  there are three places you can find more information about a 
+command-line application:
+• The Help page : Almost all Unix and Linux applications have a help file that 
+you can access by typing the application name and -h on the command line, 
+for example, root@kali-01: ~# nmap -h .
+• The Man page : Here is  a full manual for most modern command-line 
+applications that you can access by typing man and the application name on 
+the command line. For example, root@kali-01: ~# man rsync  gets you 
+a pretty good explanation of how to use Rsync, the secure and logged file 
+transfer protocol. Man pages are of varying quality and many of them are 
+actually written by rocket scientists, so a newbie may have to research how to 
+read the manual page before it can be useful. The Nmap man page is clearly 
+written with understandable examples to try out.
+• Info pages : For BASH shell built-ins, there is a group of info pages instead of 
+man pages. To get at the info pages, type the word info and the application 
+name. For example, root@kali-01: ~# info ls  will present you with 
+the info page for the command ls, which is the Linux version of the DOS 
+command DIR
+The -h command option presents you with in-line text in the terminal window, so 
+you are returned to the command prompt immediately after the information scrolls 
+past. The man and info commands launch the text reader, Less, so you can scroll up 
+and down on the document, even though you are still in the terminal window. To 
+exit from Less, just press the q key.
+The Shift key is your friend in the Linux Terminal Emulator. If you want to scroll 
+up and down in the terminal window, for instance, if the -h help file is longer than 
+a single screen, just hold Shift  + the up or down  cursor key. The hot-key sequence for 
+copy and paste is Shift  + Ctrl + C and Shift  + Ctrl + V, respectively. Ctrl + C closes the 
+running application in the Bash shell, and Ctrl + V does nothing at all.
+The following table is a truncated list of all the options in Nmap. This is the same 
+information that you would get from the manual file on Nmap that is already 
+installed on your Kali Linux installation:
+
+Chapter 2[ 55 ]Usage: nmap [Scan Type(s)] [Options] {target specification}
+TARGET SPECIFICATION:
+Can pass hostnames, IP addresses, networks, and so on
+ Example: atlantacloudtech.com, aarrrggh.com/26, 192.168.3.111; 10.1-16.0-255.1-254
+ -iL "inputfilename" Input from list of hosts/networks.
+ -iR "num hosts" Choose random targets.
+ --exclude "host1[,host2]
+[,host3],...." Exclude hosts/networks.
+ --excludefile "exclude_file Exclude list from file.
+HOST DISCOVERY:
+ -sL List scan - simply list targets to scan.
+ -sn Ping scan - disable port scan.
+ -Pn Treat all hosts as online; skip the ping for host discovery.
+ -PS [portlist] TCP SYN discovery to given ports.
+ - PA [portlist] TCP ACK discovery to given ports.
+ - PU [portlist] UDP discovery to given ports.
+ -PY[portlist] SCTP discovery to given ports.
+ -PE ICMP echo discovery probe.
+ -PP ICMP timestamp discovery probe.
+ -PM ICMP netmask request discovery probe.
+ -PO[protocol list] IP Protocol Ping, as opposed to an ICMP ping.
+ -n Never do DNS resolution [default: sometimes].
+ -R Always resolve [default: sometimes].
+Hacker Tip:
+Resolving DNS gives you more information about the network, but it creates DNS-
+Request traffic, which can alert a sysadmin that there is something going on that is not 
+entirely normal – especially if they are not using DNS in the network.
+ --dns-servers 
+"serv1[,serv2],..." Specify custom DNS servers.
+ --system-dns Use the OS's DNS resolver. This is the default 
+behavior.
+ --traceroute Trace the hop path to each host. This would only 
+make sense in large, complicated, segmented 
+networks.
+SCAN TECHNIQUES:
+ -sS TCP SYN scan (you will use this one often).
+
+Information Gathering and Vulnerability Assessment[ 56 ] -sT TCP Connect() scan (you will use this one often).
+ -sA TCP ACK scans.
+ -sW TCP Window scans.
+ -sM TCP Maimon scans.
+ -sU UDP Scan.
+ -sN TCP Null scan.
+ -sF TCP FIN scan.
+ -sX: TCP Xmas scan. All flags set. Confuses the target machine.
+ --scanflags "flags" Customize TCP scan flags, including those in the 9 rows 
+below.
+  NS ECN-nonce concealment protection (experimental: see RFC 
+3540).
+ CWR Congestion Window Reduced. Used to indicate that 
+packets are being reduced in size to maintain traffic under 
+congested network conditions.
+ ECE ECN-Echo has a dual role, depending on the value of the 
+SYN flag. It indicates the following:
+ If the SYN flag is set (1), that the TCP peer is ECN 
+capable.
+ If the SYN flag is clear (0), that a packet with the 
+Congestion Experienced flag in the IP header set is received 
+during normal transmission (added to header by RFC 3168).
+ URG Indicates that the Urgent pointer field is significant.
+ ACK Indicates that the Acknowledgment field is significant.
+ PSH Push function. Asks to push the buffered data to the 
+receiving application.
+ RST Reset the connection.
+ SYN Synchronize sequence numbers.
+ FIN No more data from sender.
+ -sI "zombie host[:probeport]" Idle scan.
+ -sO IP protocol scan.
+ -b "FTP relay host" FTP bounce scan.
+PORT SPECIFICATION AND SCAN ORDER:
+ -p "port ranges" Only scan specified ports, for example -p22; -p1-65535; -p 
+U:53, 111, 137 ,T:21-25 ,80, 139 ,8080, S:9.
+ -F Fast mode - Scan fewer ports than the default scan.
+ -r Scan ports consecutively–don't randomize.
+ --top-ports "number" Scan "number" most common ports.
+
+Chapter 2[ 57 ] --port-ratio "ratio" Scan ports more common than "ratio".
+SERVICE/VERSION DETECTION:
+ -sV Probe open ports to determine service/version info.
+ --version-intensity "level" Set from 0 (light) to 9 (try all probes).
+ --version-light Limit to most likely probes (intensity 2).
+ --version-all Try every single probe (intensity 9).
+ --version-trace Show detailed version scan activity (for debugging).
+SCRIPT SCAN:
+ -sC equivalent to–script=default.
+ --script="Lua scripts": "Lua scripts" is a comma-separated list of directories, script-
+files, or script-categories that you enter here.
+ --script-
+args="n1=v1,[n2=v2,...]" You provide arguments (or parameters) to scripts.
+ --script-args-file=filename provide NSE script arguments from a file.
+ --script-trace Show all data sent and received.
+ --script-updatedb Update the script database.
+ --script-help="Lua scripts" Show help about scripts. "Lua scripts" is a comma-separated 
+list of script-files or script-categories.
+OS DETECTION:
+ -O Enable OS detection.
+ --osscan-limit Limit OS detection to promising targets.
+ --osscan-guess Guess OS more aggressively.
+TIMING AND PERFORMANCE:
+Options specifying time intervals are in seconds, or append 'ms' (milliseconds), 's' 
+(seconds), 'm' (minutes), or 'h' (hours) to the value. For example 23ms).
+ -T"0-5" Set timing template (higher is faster, and also noisier).
+ --min-hostgroup "size" Parallel host scan group sizes.
+ --max-hostgroup "size" Parallel host scan group sizes.
+ --min-parallelism 
+"numprobes" Probe parallelization.
+ --max-parallelism 
+"numprobes" Probe parallelization.
+ --min-rtt-timeout "time" Specifies probe round trip time.
+ --max-rtt-timeout "time" Specifies probe round trip time.
+ --initial-rtt-timeout "time" Specifies probe round trip time.
+ --max-retries "tries" Caps the number of port scan probe retransmissions.
+ --host-timeout "time" Give up on target after this time interval.
+
+Information Gathering and Vulnerability Assessment[ 58 ] --scan-delay "time" Adjust delay between probes.
+ --max-scan-delay "time" Adjust delay between probes.
+ --min-rate "number" Send packets no slower than "number" per second.
+ --max-rate "number" Send packets no faster than "number" per second.
+FIREWALL/IDS EVASION AND SPOOFING:
+ -f; --mtu "value" fragment packets (optionally w/given MTU).
+ -D "decoy1,decoy2[,ME],..." Cloak a scan with decoys.
+ -S "IP_Address" Spoof source address.
+ -e "iface" Use specified interface.
+ -g/--source-port "portnum" Use given port number.
+ --proxies "url1,[url2],..." Relay connections through HTTP/SOCKS4 proxies.
+ --data-length "number" Append random data to sent packets.
+ --ip-options "options" Send packets with specified IP options.
+ --ttl "value" Set the IP time-to-live field.
+ --spoof-mac "mac address/
+prefix/vendor name" Spoof your MAC address.
+ --badsum Send packets with a bogus TCP/UDP/SCTP checksum.
+OUTPUT:
+ -oN "file" Output scan to the given filename in normal format.
+ -oX "file" Output scan to the given filename in XML format.
+ -oS "file" Output scan to the given filename in s|"rIpt kIddi3 format. 
+This one is just for fun.
+ -oG "file" Output scan to the given filename in Grepable format.
+ -oA "basename" Output in the three major formats at once.
+ -v Increase verbosity level from 1-5. Use -vv (verbosity 2) –vvv 
+(verbosity 3) and so on for greater effect.
+ -d Increase debugging level 0-6. You can repeat the "d" like 
+verbosity levels, or use -d5 to save space in your command 
+line. The default is -d0.
+ --reason Display the reason a port is in a particular state.
+ --open Only show open (or possibly open) ports.
+ --packet-trace Show all packets sent and received.
+ --iflist Print host interfaces and routes (for debugging).
+ --log-errors Log errors/warnings to the normal-format output file.
+ --append-output Append to rather than clobber specified output files.
+ --resume "filename" Resume an aborted scan.
+ --stylesheet "path/URL" XSL stylesheet to transform XML output to HTML.
+
+Chapter 2[ 59 ] --webxml Reference stylesheet from Nmap.org for more portable 
+XML.
+ --no-stylesheet Prevent associating XSL stylesheet with XML output.
+MISC:
+ -6 Enable IPv6 scanning.
+ -A Enable OS detection, version detection, script scanning, 
+and traceroute. This is a shortcut for -sS -sV --traceroute -O. 
+Wolf's favorite scanning option.
+ --datadir "dirname" Specify custom Nmap data file location.
+ --send-eth Send using raw Ethernet frames.
+--send-ip Send using raw IP packets.
+ --privileged Assume that the user is fully privileged.
+ --unprivileged Assume the user lacks raw socket privileges
+ -V Print Nmap version number. Doesn't work in conjunction 
+with other options.
+ -h Print the help summary page.
+EXAMPLES:
+ nmap -v -A boweaver.com
+ nmap -v -sn 192.168.0.0/16 10.0.0.0/8
+ nmap -v -iR 10000 -Pn -p 80
+Hacker Tip:
+You can construct custom Nmap scanning strings and copy them into 
+Zenmap so you get the benefits of the Zenmap interface.
+A return to OpenVAS
+In Chapter 1 , Sharpening the Saw  we set up OpenVAS for vulnerability scanning. 
+Nmap does a great job of reporting ports and services but lacks the ability to scan 
+for vulnerabilities. OpenVAS will find the vulnerabilities and produce a report of 
+the systems. OpenVAS updates their vulnerability list weekly so it is best to update 
+OpenVAS before running a scan. To do this on Kali, run the following commands 
+from the terminal window:
+root@kalibook : ~ #  OpenVAS-nvt-sync
+
+Information Gathering and Vulnerability Assessment[ 60 ]This will run the vulnerability updates for OpenVAS. The first time you run it you 
+will see the information in the following screenshot asking to migrate to using Rsync 
+to update the vulnerabilities. Enter y and hit the Enter key. The update will start. The 
+first time this is run, it will take quite a while, because it has to give you the entire 
+list of plugins and tests available. In subsequent runs of the update command, it only 
+adds the new or changed data, and is far faster:
+Update command
+You will also need to run the following command:
+root@kalibook : ~ #  OpenVAS-scapdata-sync
+After this updates, we are ready to go. Now let's fire up the OpenVAS service. Go to 
+the OpenVAS and click on Start  button. A terminal window will open and you will 
+see the related services starting. Once they are started, you can close this window 
+and go to the following link: https://localhost:9392 .
+
+Chapter 2[ 61 ]When would you not use OpenVAS?
+On some company networks there are scanning services in place that 
+you can use to scan for vulnerabilities. There is no sense in doing it 
+twice, unless you suspect that the official company scanning tool is not 
+configured properly for the scope of the search, or has not been updated 
+to include searches for the most recent vulnerabilities. Scanning services 
+such as Qualys, Nexpose, and Nessus are great scanning tools and 
+accomplish the same task as OpenVAS. All the above services will export 
+their data in XML format, which can be imported later into tools such as 
+Metasploit.
+Now log into the OpenVAS web interface with the password that you chose in 
+Chapter 1 , Sharpening the Saw . Normally, the user is admin. To run your first scan, just 
+enter the network subnet or the single IP address of the machine to be scanned in the 
+scan text box and start the scan by  clicking the Start Scan  button. The little geeky girl 
+wizard will set up several normal parameters for you and run the scan. You can also 
+set up custom scans and even schedule jobs to run at a given date and time:
+Setup custom scans and schedule jobs
+
+Information Gathering and Vulnerability Assessment[ 62 ]Once the scan is  started, you will get the following screen. You will see it marked 
+Requested in a minute or so, and the screen will refresh. Now you will see the 
+progress bar start. Depending on how large a network you are scanning, you can 
+either go get a cup of coffee, go have a meal, come back tomorrow, or leave for the 
+weekend. This will take a while. A good thing to note is you do not need to stay close 
+by to click a Next  button throughout this process:
+Completion of the scanning
+Now that the scan has completed, you will see a screen like the following one. Go to 
+the Scan Management  tab and then to Reports  in the drop-down menu. This will 
+take you to the Reports  page:
+
+Chapter 2[ 63 ]
+Reports page
+The Reports  page  will give you the results of the scan with the vulnerabilities sorted 
+from the highest severity to the lowest:
+Results of the scan on the reports page
+
+Information Gathering and Vulnerability Assessment[ 64 ]From here, you can  generate a report in various formats. Pick the format needed and 
+click the green down arrow button:
+You can then download the report. You can edit it to have your company logo and 
+any required company information that is not already in the document:
+
+Chapter 2[ 65 ]
+Using Maltego
+Maltego  is an  information gathering tool that has many uses besides gathering 
+network information. You can also gather information on people and companies 
+from various sources. For now, we will use it to gather network information about a 
+public network.
+
+Information Gathering and Vulnerability Assessment[ 66 ]The first time you start Maltego, you will need to do some setting up and also 
+register at their website in order to log in to the Transform servers. It's easy, free, and 
+spam-free, so giving them your e-mail address won't be a problem. Once you have 
+registered, you will be asked to pick the level of search you want. In this example, 
+we have picked a Level 1 search. Maltego then asks for the domain, as shown in the 
+following screenshot. Add the domain name, and click on the Finish  button. The 
+Transform will run and retrieve the information:
+Retrieving the information
+Choose the Maltego Public Servers  checkbox  instead of Local Transform 
+Application Server  (TAS ):
+
+Chapter 2[ 67 ]
+Choose your  target domain. Here we have chosen the www.boweaver.com  domain. 
+You will want to choose a domain that you own or control for this step:
+Choosing the domain
+
+Information Gathering and Vulnerability Assessment[ 68 ]The Level 1 scan in the following screenshot shows the target domain name with 
+related websites, machines serving the site, and DNS servers resolving the domain:
+View of the target domain name
+This is a nice start, but we really want some more information on this, so we right-
+click on the website www.boweaver.com  and go to the Transforms list. We are going 
+to run the Resolve to IP Built With Technology transforms to find the types of service 
+running and the IP address of the site:
+
+Chapter 2[ 69 ]
+Types of service running and the IP address
+We can see that the IP address is 164.243.238.98  and the site is running Debian as 
+the OS, Apache 2.2 as the web server, and PHP as the site framework:
+
+
+Information Gathering and Vulnerability Assessment[ 70 ]When we  click on the Entity List  tab we get a list of the information nodes:
+By double-clicking on an icon you get a Details  window. Here, you can keep  
+notes on the node, attach related files, and do several searches, such as Google  
+and Wikipedia:
+
+Chapter 2[ 71 ]
+Using the  Pro version you can generate reports and graphs of the maps.  
+The community version is also limited to 12 nodes for each search of a node.
+Maltego can be used to compile all your notes and gather data from your penetration 
+testing. You will also find an application called Casefile installed on Kali. Casefile  is 
+an offline version of Maltego used to store and compile data from security work.
+You can find Windows versions of these applications online at http://www.
+paterva.com . See their website for more in depth usage of their applications. Check 
+out how this tool can also be used in social engineering.
+
+Information Gathering and Vulnerability Assessment[ 72 ]Using Unicorn-Scan
+Unicorn-Scan  is another port scanning tool. It creates a chrooted environment 
+(userland) to protect you from the possibly hostile network you are scanning. It can 
+be used from the command line, or from a PostgreSQL-powered frontend. We will 
+show you the command-line version here. The following chart is a concordance from 
+Nmap users from the documentation on the Unicorn-Scan project website:
+A basic connect scan to find all open ports in a range using Unicorn-Scan is 
+unicornscan -i eth0 -Ir 160 -E 10.0.0.012/32:20-600 . If we break this up 
+into sections, the command is as follows:
+• i eth0 : It defines the interface eth0 on the Kali machine
+• -Ir 160 : Its has two options in a group
+ °-I: It is telling Unicorn-Scan to print to screen immediately as open 
+ports are found
+ °-r 160 : It is setting the scan rate to 160 ports per second (PPS) 
+• -E 10.0.0.012/32:20-600 : It is the target range
+• The Classless Inter-Domain Routing  (CIDR ) code shows a network mask of 
+/32 bits, which means a single IP address 
+• The port range is from 20 to 600:
+
+Chapter 2[ 73 ]
+The extremely verbose version of the same scan with -vvvv  gives you a lot more 
+information. Proto 6  is the TCP protocol, and Proto 17  is UDP protocol. The 
+extremely verbose version is loading tests for a possible web server at port 80 
+(TCP) and several expected UDP set-ups: DNS at port 53; SIP protocol at port 5060 ; 
+Microsoft Simple Service Discovery Protocol  (SSDP ) at port 1900 ; and Talkd, 
+a service that allows  two users to be logged in to the same machine, such as the 
+situation that exists when two people are shelled into the same service, on port 518:
+
+
+Information Gathering and Vulnerability Assessment[ 74 ]Hacker Tip
+A word here on note taking! Pen testing gathers a lot of data, even on a 
+small network. I mean A LOT! So when pen testing, you need the ability 
+to gather your incoming data as you're testing.
+Kali comes with several applications for this. Whichever one you choose, choose it 
+and use it. If you need to go back six weeks after the test is run to verify something, 
+you'll be happy you did. Also, when testing a high security environment such as 
+a network that must be either HIPPA or PCI compliant, these notes can be useful 
+during your certification. Keep all your project files in one directory with the same 
+framework. Furthermore, it is possible that your work may be used in court, either to 
+litigate against your client, a third party, or you, yourself. Your notes are your only 
+defense in the latter case. The following is a framework we use:
+1. Make a folder for the client organization.
+2. Then make a folder for the actual test with the date in the folder name. It 
+is safe to assume that wherever you ply your trade, you will see the same 
+clients over and over. If you are not seeing repeat business, something 
+is wrong with your own business model. ext-20150315  translates to 
+an external test conducted on March 15th, 2015. 20150315 is a Unix date 
+which breaks out to YYYY/MM/DD . If you see Unix date stamps that look like 
+20150317213209 , that is broken down to the second.
+3. Inside of that folder, set up evidence, notes, and scans-docs directories. 
+All evidence collected and screenshots are dropped into the evidence 
+folder. Notes from KeepNote are kept in the notes folder, and scans and 
+other related documents are kept in the scans-docs folder. When we start 
+conducting tests later in this book, you will see this framework being used:
+
+Chapter 2[ 75 ]
+Even if you work for only one company, keep each test's data separated and dated.  
+It will help keeping track of your testing.
+
+Information Gathering and Vulnerability Assessment[ 76 ]For the actual note-taking, Kali comes with several applications. Maltego is one of 
+these tools and is capable of keeping all your data in one place. The authors' favorites 
+are KeepNote and Maltego. You saw an introduction to KeepNote in Chapter 1 , 
+Sharpening the Saw . KeepNote  is a simple note-taking application. As you run tests, 
+keep copies of output from manual exploits, individual scan data, and screenshots. 
+What makes this nice is you have the ability to format your data as you go, so 
+importing it into a template later is just a matter of copy and paste. The next  
+image is an excellent setup for Keepnote:
+Notice the  Project Notes page for general notes about the project, and individual 
+pages under the targets folder for notes on each machine being tested.
+
+Chapter 2[ 77 ]Monitoring resource use with Htop
+A great tool that we often add to Kali is htop. Htop  is a command-line tool similar to 
+Windows Task Manager. It is important to know the rate of use for memory, swap-
+file, CPU, cycles and IOPS. Htop lets you use the mouse to sort by any category, and 
+can mean an improvement in scan performance. This is the same information that 
+the Top tool gives you, but being an ncurses application, it gives you a more modern 
+GUI-like feel without using large quantities of resources to show the resource 
+data. For the following image, we started a long scan nmap -A 100.0.0.0/8 . The 
+Iceweasel lines are the Debian/Kali all-free-software version of Firefox, which has 
+the same memory-hogging behavior of Firefox. Nmap scans use a lot of CPU cycles, 
+and not so much memory:
+
+
+Information Gathering and Vulnerability Assessment[ 78 ]Monkeying around the network
+The network scanner, EtherApe, is another tool you might want to have installed 
+on your hackbox. It shows a graphic display of the protocols in use on the network. 
+In the images below, 10.0.0.4  is the Kali hackbox. All of the other endpoints are 
+internal and external hosts. The protocol list runs up the left side:
+When you are running EtherApe, you can really see how noisy a port scan can 
+be. You can also see other surprises, such as people downloading large files, such 
+as music and movies. The lines are larger when the data being moved is larger. 
+The large solar object in the image below is the source of a file download, and the 
+triangular flight-path to the hackbox shows the destination machine:
+
+Chapter 2[ 79 ]
+Summary
+We showed you some of the tools we use to discover the extents of a target network. 
+We use most of these tools every single week. The first three, Nmap, Zenmap, and 
+OpenVAS, are in use daily. Maltego and KeepNote help you keep your evidence in 
+order. Unicorn-Scan is an interesting alternative to Nmap. EtherApe is really a tool 
+you can use as a graphical display of what is happening in your network. Just run it 
+on a utility box with the output screen where you can see it. You will be able to see 
+traffic issues before your IPS sends an alert. If you have been trying things out as you 
+went along, you should be able to produce a complete and precise overview of the 
+network, and be able to start targeting specific machines for attacks in any network.
+In the next chapter, we'll be learning the use of tools to exploit several common 
+windows vulnerabilities and guidelines to create and implement new exploits for 
+upcoming vulnerabilities.
+
+
+[Note: PDF has 422 pages, only first 100 pages extracted]

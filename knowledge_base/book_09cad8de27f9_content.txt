@@ -1,0 +1,6135 @@
+ 
+R
+o
+u
+t
+i
+n
+g
+ 
+a
+n
+d
+ 
+S
+w
+i
+t
+c
+h
+i
+n
+g
+ 
+P
+r
+a
+c
+t
+i
+c
+e
+T
+e
+s
+t
+s
+J
+o
+n
+ 
+B
+u
+h
+a
+g
+i
+a
+r
+
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+Senior
+ 
+Acquisitions
+ 
+Editor:
+ 
+Kenyon
+ 
+Brown
+Development
+ 
+Editor:
+ 
+Kim
+ 
+Wimpsett
+Technical
+ 
+Editor:
+ 
+Mark
+ 
+Dittmer
+Production
+ 
+Editor:
+ 
+Christine
+ 
+O’Connor;
+ 
+Dassi
+ 
+Zeidel
+Copy
+ 
+Editor:
+ 
+Judy
+ 
+Flynn
+Editorial
+ 
+Manager:
+ 
+Mary
+ 
+Beth
+ 
+Wakefield
+Production
+ 
+Manager:
+ 
+Kathleen
+ 
+Wisor
+Executive
+ 
+Editor:
+ 
+Jim
+ 
+Minatel
+Book
+ 
+Designers:
+ 
+Judy
+ 
+Fung
+ 
+and
+ 
+Bill
+ 
+Gibson
+Proofreader:
+ 
+Nancy
+ 
+Carrasco
+Indexer:
+ 
+Ted
+ 
+Laux
+Project
+ 
+Coordinator,
+ 
+Cover:
+ 
+Brent
+ 
+Savage
+Cover
+ 
+Designer:
+ 
+Wiley
+Cover
+ 
+Image:
+ 
+©Getty
+ 
+Images,
+ 
+Inc./Jeremy
+ 
+Woodhouse
+Copyright
+ 
+©
+ 
+2017
+ 
+by
+ 
+John
+ 
+Wiley
+ 
+&
+ 
+Sons,
+ 
+Inc.,
+ 
+Indianapolis,
+ 
+Indiana,
+Published
+ 
+simultaneously
+ 
+in
+ 
+Canada
+ISBN:
+ 
+978-1-119-36097-1
+ISBN:
+ 
+978-1-119-36099-5
+ 
+(ebk.)
+ISBN:
+ 
+978-1-1193-6098-8
+ 
+(ebk.)
+Manufactured
+ 
+in
+ 
+the
+ 
+United
+ 
+States
+ 
+of
+ 
+America
+No
+ 
+part
+ 
+of
+ 
+this
+ 
+publication
+ 
+may
+ 
+be
+ 
+reproduced,
+ 
+stored
+ 
+in
+ 
+a
+ 
+retrieval
+ 
+system
+ 
+or
+ 
+transmitted
+ 
+in
+ 
+any
+ 
+form
+ 
+or
+ 
+by
+ 
+any
+ 
+means,
+ 
+electronic,
+ 
+mechanical,
+ 
+photocopying,
+ 
+recording,
+ 
+scanning
+ 
+or
+ 
+otherwise,
+ 
+except
+ 
+as
+ 
+permitted
+ 
+under
+ 
+Sections
+ 
+107
+ 
+or
+ 
+108
+ 
+of
+ 
+the
+ 
+1976
+ 
+United
+ 
+States
+ 
+Copyright
+ 
+Act,
+ 
+without
+ 
+either
+ 
+the
+ 
+prior
+ 
+written
+ 
+permission
+ 
+of
+ 
+the
+ 
+Publisher,
+ 
+or
+ 
+authorization
+ 
+through
+ 
+payment
+ 
+of
+ 
+the
+ 
+appropriate
+ 
+per-copy
+ 
+fee
+ 
+to
+ 
+the
+ 
+Copyright
+ 
+Clearance
+ 
+Center,
+ 
+222
+ 
+Rosewood
+ 
+Drive,
+ 
+Danvers,
+ 
+MA
+ 
+01923,
+ 
+(978)
+ 
+750-8400,
+ 
+fax
+ 
+(978)
+646-8600.
+ 
+Requests
+ 
+to
+ 
+the
+ 
+Publisher
+ 
+for
+ 
+permission
+ 
+should
+ 
+be
+ 
+addressed
+ 
+to
+ 
+the
+ 
+Permissions
+ 
+Department,
+ 
+John
+ 
+Wiley
+ 
+&
+ 
+Sons,
+ 
+Inc.,
+ 
+111
+ 
+River
+ 
+Street,
+ 
+Hoboken,
+ 
+NJ
+ 
+07030,
+ 
+(201)
+ 
+748-6011,
+ 
+fax
+ 
+(201)
+ 
+748-6008,
+ 
+or
+ 
+online
+ 
+at
+ 
+http://www.wiley.com/go/permissions
+.
+Limit
+ 
+of
+ 
+Liability/Disclaimer
+ 
+of
+ 
+Warranty:
+ 
+The
+ 
+publisher
+ 
+and
+ 
+the
+ 
+author
+ 
+make
+ 
+no
+ 
+representations
+ 
+or
+ 
+warranties
+ 
+with
+ 
+respect
+ 
+to
+ 
+the
+ 
+accuracy
+ 
+or
+ 
+completeness
+ 
+of
+ 
+the
+ 
+contents
+ 
+of
+ 
+this
+ 
+work
+ 
+and
+ 
+specifically
+ 
+disclaim
+ 
+all
+ 
+warranties,
+ 
+including
+ 
+without
+ 
+limitation
+ 
+warranties
+ 
+of
+ 
+fitness
+ 
+for
+ 
+a
+ 
+particular
+ 
+purpose.
+ 
+No
+ 
+warranty
+ 
+may
+ 
+be
+ 
+created
+ 
+or
+ 
+extended
+ 
+by
+ 
+sales
+ 
+or
+ 
+promotional
+ 
+materials.
+ 
+The
+ 
+advice
+ 
+and
+ 
+strategies
+ 
+contained
+ 
+herein
+ 
+may
+ 
+not
+ 
+be
+ 
+suitable
+ 
+for
+ 
+every
+ 
+situation.
+ 
+This
+ 
+work
+ 
+is
+ 
+sold
+ 
+with
+ 
+the
+ 
+understanding
+ 
+that
+ 
+the
+ 
+publisher
+ 
+is
+ 
+not
+ 
+engaged
+ 
+in
+ 
+rendering
+ 
+legal,
+ 
+accounting,
+ 
+or
+ 
+other
+ 
+professional
+ 
+services.
+ 
+If
+ 
+professional
+ 
+assistance
+ 
+is
+ 
+required,
+ 
+the
+ 
+services
+ 
+of
+ 
+a
+ 
+competent
+ 
+professional
+ 
+person
+ 
+should
+ 
+be
+ 
+sought.
+ 
+Neither
+ 
+the
+ 
+publisher
+ 
+nor
+ 
+the
+ 
+author
+ 
+shall
+ 
+be
+ 
+liable
+ 
+for
+ 
+damages
+ 
+arising
+ 
+herefrom.
+ 
+The
+ 
+fact
+ 
+that
+ 
+an
+ 
+organization
+ 
+or
+ 
+Web
+ 
+site
+ 
+is
+ 
+referred
+ 
+to
+ 
+in
+ 
+this
+ 
+work
+ 
+as
+ 
+a
+ 
+citation
+ 
+and/or
+ 
+a
+ 
+potential
+ 
+source
+ 
+of
+ 
+further
+ 
+information
+ 
+does
+ 
+not
+ 
+mean
+ 
+that
+ 
+the
+ 
+author
+ 
+or
+ 
+the
+ 
+publisher
+ 
+endorses
+ 
+the
+ 
+information
+ 
+the
+ 
+organization
+ 
+or
+ 
+Web
+ 
+site
+ 
+may
+ 
+provide
+ 
+or
+ 
+recommendations
+ 
+it
+ 
+may
+ 
+make.
+ 
+Further,
+ 
+readers
+ 
+should
+ 
+be
+ 
+aware
+ 
+that
+ 
+Internet
+ 
+Web
+ 
+sites
+ 
+listed
+ 
+in
+ 
+this
+ 
+work
+ 
+may
+ 
+have
+ 
+changed
+ 
+or
+ 
+disappeared
+ 
+between
+ 
+when
+ 
+this
+ 
+work
+ 
+was
+ 
+written
+ 
+and
+ 
+when
+ 
+it
+ 
+is
+read.
+For
+ 
+general
+ 
+information
+ 
+on
+ 
+our
+ 
+other
+ 
+products
+ 
+and
+ 
+services
+ 
+or
+ 
+to
+ 
+obtain
+ 
+technical
+ 
+support,
+ 
+please
+ 
+contact
+
+our Customer Care Department within the U.S. at (877) 762-2974, outside the U.S. at (317) 572-3993 or
+fax (317) 572-4002.
+Wiley publishes in a variety of print and electronic formats and by print-on-demand. Some material
+included with standard print versions of this book may not be included in e-books or in print-on-demand.
+If this book refers to media such as a CD or DVD that is not included in the version you purchased, you
+may download this material at 
+http://booksupport.wiley.com
+. For more information about Wiley
+products, visit 
+www.wiley.com
+.
+Library of Congress Control Number:
+ 2017931101
+TRADEMARKS: Wiley, the Wiley logo, and the Sybex logo are trademarks or registered trademarks of
+John Wiley & Sons, Inc. and/or its affiliates, in the United States and other countries, and may not be
+used without written permission. CCNA is a registered trademark of Cisco Technology, Inc. All other
+trademarks are the property of their respective owners. John Wiley & Sons, Inc. is not associated with
+any product or vendor mentioned in this book.
+
+I dedicate this book to my wife, Teresa, and my son, Joseph. I love you both.
+
+Acknowledgments
+I would like to thank my wife, Teresa. She has had so much patience during
+the writing of this book. I would also like to thank the many people who made
+this book possible, including the following: Kenyon Brown at Wiley
+Publishing for giving me the opportunity to write this book; Kim Wimpsett,
+for working with me as the developmental editor and making the entire
+project seamless; Christine O’Conner and Dassi Zeidel, for helping with
+production editing and guiding me through the process; Mark Dittmer, for
+serving as technical reviewer to ensure I didn’t miss any details; and Judy
+Flynn, for her many edits that helped make this book a polished product.
+Thank you to the many other people I’ve never met who worked behind the
+scenes to make this book a success.
+
+About the Author
+Jon Buhagiar, BS/ITM, MCSE, CCNA
+ is an information technology
+professional with two decades of experience in higher education and the
+private sector.
+Jon currently serves as supervisor of network operations at Pittsburgh
+Technical College. In this role, he manages datacenter and network
+infrastructure operations and IT operations and is involved in strategic
+planning of IT projects supporting the quality of education at the College. He
+also serves as an adjunct instructor in the College’s School of Information
+Technology department, where he teaches courses for Microsoft and Cisco
+certification. Jon has been an instructor for 18 years with several colleges in
+the Pittsburgh area, since the introduction of the Windows NT MCSE in 1998.
+Jon earned a bachelor of science degree in Information Technology
+Management from Western Governors University. He also achieved an
+associate degree in Business Management from Pittsburgh Technical College.
+He has recently become a Windows Server 2012 R2 Microsoft Certified
+Solutions Expert (MCSE) and earned the Cisco Certified Network Associate
+(CCNA) Routing and Switching certification. Other certifications include
+CompTIA Network+, A+, and Project+.
+In addition to his professional and teaching roles, he served as the Technical
+Editor for the second edition of the 
+CompTIA Cloud+ Study Guide
+ by Todd
+Montgomery (Sybex, 2016). He has spoken at several conferences about spam
+and email systems. He is an active radio electronics hobbyist and has held a
+ham radio license for the past 15 years (KB3KGS). He experiments with
+electronics and has a strong focus on the Internet of Things (IoT).
+
+Contents
+Introduction
+Cisco’s Network Certification
+Where Do You Take the Exams?
+ICND1 (100-105) Exam Objectives
+ICND2 (200-105) Exam Objectives
+CCNA Composite (200-125) Exam Objectives
+Using This Book to Practice
+Chapter 1 Network Fundamentals (Domain 1)
+Chapter 2 LAN Switching Technologies (Domain 2)
+Chapter 3 Routing Technologies (Domain 3)
+Chapter 4 WAN Technologies (Domain 4)
+Chapter 5 Infrastructure Services (Domain 5)
+Chapter 6 Infrastructure Security (Domain 6)
+Chapter 7 Infrastructure Management (Domain 7)
+Chapter 8 Practice Test 1
+Chapter 9 Practice Test 2
+Appendix Answers to Review Questions
+Chapter 1: Network Fundamentals (Domain 1)
+Chapter 2: LAN Switching Technologies (Domain 2)
+Chapter 3: Routing Technologies (Domain 3)
+Chapter 4: WAN Technologies (Domain 4)
+Chapter 5: Infrastructure Services (Domain 5)
+Chapter 6: Infrastructure Security (Domain 6)
+Chapter 7: Infrastructure Management (Domain 7)
+Chapter 8: Practice Test 1
+Chapter 9: Practice Test 2
+Advert
+EULA
+
+List of Tables
+Appendix
+Table 1
+Table 2
+Table 3
+Table 4
+Table 5
+Table 6
+Table 7
+Table 8
+Table 9
+Table 10
+Table 11
+Table 12
+Table 13
+Table 14
+Table 15
+Table 16
+Table 17
+
+Introduction
+CCNA Routing and Switching Practice Tests
+ is a companion volume to the
+CCNA Routing and Switching Complete Study Guide, Second Edition
+. If
+you’re looking to test your knowledge before you take the CCNA exam, this
+book will help you by providing a combination of 1,500 questions that cover
+the CCNA objectives.
+If you’re just starting to prepare for the CCNA exam, I highly recommend that
+you use the 
+CCNA Routing and Switching Complete Study Guide, Second
+Edition
+ by Todd Lammle (Sybex, 2016) to help you learn about each of the
+objectives covered in the CCNA exam. Once you’re ready to test your
+knowledge, use this book to help find places where you may need to study
+more or to practice for the exam itself.
+Since it is a companion to the 
+CCNA Routing and Switching Complete Study
+Guide, Second Edition
+, this book is designed to be similar to taking the CCNA
+Routing and Switching exam. It contains scenarios and standard multiple-
+choice questions similar to those you may encounter in the certification exam
+itself. The book contains nine chapters: seven objective-centric chapters with
+140 to 320 questions, weighted by the objectives, and two chapters that
+contain 50-question practice tests to simulate taking the exam itself. The bulk
+of the questions are in the routing and switching objectives.
+
+Cisco’s Network Certification
+It used to be that to secure the holy grail of Cisco certifications—the CCIE—
+you passed only one written test before being faced with a grueling,
+formidable hands-on lab. This intensely daunting, all-or-nothing approach
+made it nearly impossible to succeed and predictably didn’t work out too well
+for most people. Cisco responded to this issue by creating a series of new
+certifications, which not only made it easier to eventually win the highly
+coveted CCIE prize, it gave employers a way to accurately rate and measure
+the skill levels of prospective and current employees. This exciting paradigm
+shift in Cisco’s certification path truly opened doors that few were allowed
+through before!
+Beginning in 1998, obtaining the Cisco Certified Network Associate (CCNA)
+certification was the first milestone in the Cisco certification climb, as well as
+the official prerequisite to each of the more advanced levels. But that changed
+in 2007 when Cisco announced the Cisco Certified Entry Network Technician
+(CCENT) certification. And then in May 2016, Cisco once again proclaimed
+updates to the CCENT and CCNA Routing and Switching (R/S) tests. Now the
+Cisco certification process looks like Figure I.1.
+Cisco Certified Entry Network Technician (CCENT)
+Don’t be fooled by the oh-so-misleading name of this first certification
+because it absolutely isn’t entry level! Okay—maybe entry level for Cisco’s
+certification path, but definitely not for someone without experience trying to
+break into the highly lucrative yet challenging IT job market! For the
+uninitiated, the CompTIA A+ and Network+ certifications aren’t official
+prerequisites, but know that Cisco does expect you to have that type and level
+of experience before embarking on your Cisco certification journey.
+All of this gets us to 2017, when the climb to Cisco supremacy got much
+harder again. The innocuous-sounding siren’s call of the CCENT can lure you
+
+to some serious trouble if you’re not prepared, because it’s actually much
+harder than the old CCNA ever was. This will rapidly become apparent once
+you start studying, but be encouraged! The fact that the certification process
+is getting harder really works better for you in the long run, because that
+which is harder to obtain only becomes that much more valuable when you
+finally do, right? Yes, indeed!
+Another important factor to keep in mind is that the Interconnection Cisco
+Network Devices Part 1 (ICND1) exam, which is the required exam for the
+CCENT certification, costs $150 per attempt, and it’s anything but easy to
+pass! However, there is one way to skip the CCENT exam and still meet the
+prerequisite before moving on to any other certification track, and that path is
+through the CCNA R/S Composite exam. First, I’ll discuss the
+Interconnecting Cisco Network Devices Part 2 (ICND2) exam, and then I’ll
+tell you about the CCNA Composite exam, which will provide you, when
+successful, with both the CCENT and the CCNA R/S certification.
+Cisco Certified Network Associate Routing and Switching
+(CCNA R/S)
+Once you have achieved your CCENT certification, you can take the ICND2
+(200-105) exam in order to achieve your CCNA R/S certification, which is the
+most popular certification Cisco has by far because it’s the most sought-after
+certification of all employers.
+As with the CCENT, the ICND2 exam is also $150 per attempt—although
+thinking you can just skim a book and pass any of these exams would
+probably be a really expensive mistake! The CCENT/CCNA exams are
+extremely hard and cover a lot of material, so you have to really know your
+stuff. Taking a Cisco class or spending months with hands-on experience is
+definitely a requirement to succeed when faced with this monster!
+And once you have your CCNA, you don’t have to stop there—you can choose
+to continue and achieve an even higher certification, called the Cisco Certified
+Network Professional (CCNP). There are various ones, as shown in Figure 1.1.
+The CCNP R/S is still the most popular, with Voice certifications coming in at
+a close second. And I’ve got to tell you that the Data Center certification will
+be catching up fast. Also good to know is that anyone with a CCNP R/S has all
+the skills and knowledge needed to attempt the notoriously dreaded but
+coveted CCIE R/S lab. But just becoming a CCNA R/S can land you 
+that job
+
+you’ve dreamed about, and that’s what this book is all about: helping you to
+get and keep a great job!
+Still, why take two exams to get your CCNA if you don’t have to? Cisco still
+has the CCNA Routing and Switching Composite (200-125) exam that, if
+passed, will land you with your CCENT and your CCNA R/S via only one test
+priced at only $295. Some people like the one-test approach, and some people
+like the two-test approach. Part of this book covers the ICND2 exam topics.
+Why Become a CCENT and CCNA R/S?
+Cisco, like Microsoft and other vendors that provide certification, has created
+the certification process to give administrators a set of skills and to equip
+prospective employers with a way to measure those skills or match certain
+criteria. And as you probably know, becoming a CCNA R/S is certainly the
+initial, key step on a successful journey toward a new, highly rewarding, and
+sustainable networking career.
+The CCNA program was created to provide a solid introduction not only to the
+Cisco Internetwork Operating System (IOS) and Cisco hardware but also to
+internetworking in general, making it helpful to you in areas that are not
+exclusively Cisco’s. And regarding today’s certification process, it’s not
+unrealistic that network managers—even those without Cisco equipment—
+require Cisco certifications for their job applicants. Rest assured that if you
+make it through the CCNA and are still interested in Cisco and
+internetworking, you’re headed down a path to certain success!
+What Skills Do You Need to Become a CCNA R/S?
+This ICND1 exam (100-105) tests a candidate for the knowledge and skills
+required to successfully install, operate, and troubleshoot a small branch
+office network. The exam includes questions on the operation of IP data
+networks, LAN switching technologies, IPv6, IP routing technologies, IP
+services, network device security, and basic troubleshooting. The ICND2
+exam (200-105) tests a candidate for the knowledge and skills required to
+successfully install, operate, and troubleshoot a small- to medium-size
+enterprise branch network. The exam includes questions on LAN switching
+technologies, IP routing technologies, security, troubleshooting, and WAN
+technologies.
+
+How Do You Become a CCNA R/S
+If you want to go straight for your CCNA R/S and take only one exam, all you
+have to do is pass the CCNA Composite exam (200-125). Oh, but don’t you
+wish it were that easy? True, it’s just one test, but it’s a whopper, and to pass
+it you must possess enough knowledge to understand what the test writers
+are saying, and you need to know everything I mentioned previously, in the
+sections on the ICND1 and ICND2 exams! Hey, it’s hard, but it can be done!
+What does the CCNA Composite exam (200-125) cover? Pretty much the
+same topics covered in the ICND1 and ICND2 exams. Exam 200-125 tests a
+candidate’s knowledge and skills required to install, operate, and troubleshoot
+a small to medium-size enterprise branch network.
+While you can take the Composite exam to get your CCNA, it’s good to know
+that Cisco offers the two-step process I discussed earlier in this introduction.
+And this book covers both those exams too! It may be easier than taking that
+one ginormous exam for you, but don’t think the two-test method is easy. It
+takes work! However, it can be done; you just need to stick with your studies.
+The two-test method involves passing the following:
+Exam 100-105: Interconnecting Cisco Networking Devices Part 1 (ICND1)
+Exam 200-105: Interconnecting Cisco Networking Devices Part 2 (ICND2)
+
+Where Do You Take the Exams?
+You may take the ICND1, ICND2, or CCNA R/S Composite or any Cisco exam
+at any of the Pearson VUE authorized testing centers. For information, check
+www.vue.com
+ or call 877-404-EXAM (3926).
+To register for a Cisco exam, follow these steps:
+1
+. 
+Determine the number of the exam you want to take. (The ICND1 exam
+number is 100-105, ICND2 is 100-205, and CCNA R/S Composite is 200-
+125.)
+2
+. 
+Register with the nearest Pearson VUE testing center. At this point, you
+will be asked to pay in advance for the exam. At the time of this writing,
+the ICND1 and ICND2 exams are $150 each, and the CCNA R/S Composite
+exam is $295. The exams must be taken within one year of payment. You
+can schedule exams up to six weeks in advance or as late as the day you
+want to take it—but if you fail a Cisco exam, you must wait five days
+before you will be allowed to retake it. If something comes up and you
+need to cancel or reschedule your exam appointment, contact Pearson
+VUE at least 24 hours in advance.
+3
+. 
+When you schedule the exam, you’ll get instructions regarding all
+appointment and cancellation procedures, the ID requirements, and
+information about the testing-center location.
+Tips for Taking Your Cisco Exams
+The Cisco exams contain about 40–50 questions and must be completed in
+about 90 minutes or less. This information can change per exam. You must
+get a score of about 85 percent to pass this exam, but again, each exam can be
+different.
+Many questions on the exam have answer choices that at first glance look
+identical, especially the syntax questions! So remember to read through the
+choices carefully because 
+close just doesn’t cut it. If you get commands in the
+wrong order or forget one measly character, you’ll get the question wrong. So,
+to practice, do the hands-on exercises at the end of this book’s chapters over
+and over again until they feel natural to you.
+Also, never forget that the right answer is the Cisco answer. In many cases,
+more than one appropriate answer is presented, but the correct answer is the
+
+one that Cisco recommends. On the exam, you will always be told to pick one,
+two, or three options, never “choose all that apply.” The Cisco exam may
+include the following test formats:
+Multiple-choice single answer
+Multiple-choice multiple answers
+Drag-and-drop
+Router simulations
+Cisco proctored exams will not show the steps to follow in completing a
+router interface configuration, but they do allow partial command responses.
+For example, 
+show run
+, 
+sho running
+, or 
+sh running-config
+ would be
+acceptable.
+Here are some general tips for exam success:
+Arrive early at the exam center so you can relax and review your study
+materials.
+Read the questions carefully. Don’t jump to conclusions. Make sure you’re
+clear about exactly what each question asks. “Read twice, answer once,” is
+what I always tell my students.
+When answering multiple-choice questions that you’re not sure about, use
+the process of elimination to get rid of the obviously incorrect answers
+first. Doing this greatly improves your odds if you need to make an
+educated guess.
+You can no longer move forward and backward through the Cisco exams,
+so double-check your answer before clicking Next since you can’t change
+your mind.
+After you complete an exam, you’ll get immediate, online notification of your
+pass or fail status, a printed examination score report that indicates your pass
+or fail status, and your exam results by section. (The test administrator will
+give you the printed score report.) Test scores are automatically forwarded to
+Cisco within five working days after you take the test, so you don’t need to
+send your score to them. If you pass the exam, you’ll receive confirmation
+from Cisco, typically within two to four weeks, sometimes a bit longer.
+
+ICND1 (100-105) Exam Objectives
+Exam objectives are subject to change at any time without prior notice and at
+Cisco’s sole discretion. Please visit Cisco’s certification website,
+www.cisco.com/web/learning
+, for the latest information on the ICND1 exam.
+Tables 1
+–
+5
+ cover the ICND1 (100-105) exam objectives.
+TABLE 1
+ 
+20% 1.0 Network Fundamentals
+Objective
+Chapter
+1.1 Compare and contrast OSI and TCP/IP models
+1
+1.2 Compare and contrast TCP and UDP protocols
+1
+1.3 Describe the impact of infrastructure components in an
+enterprise network
+1
+1.3.a Firewalls
+1
+1.3.b Access points
+1
+1.3.c Wireless controllers
+1
+1.4 Compare and contrast collapsed core and three-tier
+architectures
+1
+1.5 Compare and contrast network topologies
+1
+1.5.a Star
+1
+1.5.b Mesh
+1
+1.5.c Hybrid
+1
+1.6 Select the appropriate cabling type based on implementation
+requirements
+1
+1.7 Apply troubleshooting methodologies to resolve problems
+1
+1.7.a Perform fault isolation and document
+1
+1.7.b Resolve or escalate
+1
+1.7.c Verify and monitor resolution
+1
+1.8 Configure, verify, and troubleshoot IPv4 addressing and
+subnetting
+1
+1.9 Compare and contrast IPv4 address types
+1
+1.9.a Unicast
+1
+
+1.9.b Broadcast
+1
+1.9.c Multicast
+1
+1.10 Describe the need for private IPv4 addressing
+1
+1.11 Identify the appropriate IPv6 addressing scheme to satisfy
+addressing requirements in a LAN/WAN environment
+1
+1.12 Configure, verify, and troubleshoot IPv6 addressing
+1
+1.13 Configure and verify IPv6 Stateless Address Autoconfiguration
+1
+1.14 Compare and contrast IPv6 address types
+1
+1.14.a Global unicast
+1
+1.14.b Unique local
+1
+1.14.c Link local
+1
+1.14.d Multicast
+1
+1.14.e Modified EUI 64
+1
+1.14.f Autoconfiguration
+1
+1.14.g Anycast
+1
+
+TABLE 2
+ 
+26% 2.0 LAN Switching Fundamentals
+Objective
+Chapter
+2.1 Describe and verify switching concepts
+2
+2.1.a MAC learning and aging
+2
+2.1.b Frame switching
+2
+2.1.c Frame flooding
+2
+2.1.d MAC address table
+2
+2.2 Interpret Ethernet frame format
+2
+2.3 Troubleshoot interface and cable issues (collisions, errors,
+duplex, speed)
+2
+2.4 Configure, verify, and troubleshoot VLANs (normal range)
+spanning multiple switches
+2
+2.4.a Access ports (data and voice)
+2
+2.4.b Default VLAN
+2
+2.5 Configure, verify, and troubleshoot interswitch connectivity
+2
+2.5.a Trunk ports
+2
+2.5.b 802.1Q
+2
+2.5.c Native VLAN
+2
+2.6 Configure and verify Layer 2 protocols
+2
+2.6.a Cisco Discovery Protocol
+2, 7
+2.6.b LLDP
+2, 7
+2.7 Configure, verify, and troubleshoot port security
+6
+2.7.a Static
+6
+2.7.b Dynamic
+6
+2.7.c Sticky
+6
+2.7.d Max MAC addresses
+6
+2.7.e Violation actions
+6
+2.7.f Err-disable recovery
+6
+
+TABLE 3
+ 
+25% 3.0 Routing Fundamentals
+Objective
+Chapter
+3.1 Describe the routing concepts
+3
+3.1.a Packet handling along the path through a network
+3
+3.1.b Forwarding decision based on route lookup
+3
+3.1.c Frame rewrite
+3
+3.2 Interpret the components of routing table
+3
+3.2.a Prefix
+3
+3.2.b Network mask
+3
+3.2.c Next hop
+3
+3.2.d Routing protocol code
+3
+3.2.e Administrative distance
+3
+3.2.f Metric
+3
+3.2.g Gateway of last resort
+3
+3.3 Describe how a routing table is populated by different routing
+information sources
+3
+3.3.a Admin distance
+3
+3.4 Configure, verify, and troubleshoot inter-VLAN routing
+3
+3.4.a Router on a stick
+3
+3.5 Compare and contrast static routing and dynamic routing
+3
+3.6 Configure, verify, and troubleshoot IPv4 and IPv6 static routing
+3
+3.6.a Default route
+3
+3.6.b Network route
+3
+3.6.c Host route
+3
+3.6.d Floating static
+3
+3.7 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding
+authentication, filtering, manual summarization, redistribution)
+3
+
+TABLE 4
+ 
+15% 4.0 Infrastructure Services
+Objective
+Chapter
+4.1 Describe DNS lookup operation
+5
+4.2 Troubleshoot client connectivity issues involving DNS
+5
+4.3 Configure and verify DHCP on a router (excluding static
+reservations)
+5
+4.3.a Server
+5
+4.3.b Relay
+5
+4.3.c Client
+5
+4.3.d TFTP, DNS, and gateway options
+5
+4.4 Troubleshoot client- and router-based DHCP connectivity
+issues
+5
+4.5 Configure and verify NTP operating in client/server mode
+5
+4.6 Configure, verify, and troubleshoot IPv4 standard numbered
+and named access list for routed interfaces
+6
+4.7 Configure, verify, and troubleshoot inside source NAT
+5
+4.7.a Static
+5
+4.7.b Pool
+5
+4.7.c PAT
+5
+
+TABLE 5
+ 
+14% 5.0 Infrastructure Maintenance
+Objective
+Chapter
+5.1 Configure and verify device-monitoring using syslog
+7
+5.2 Configure and verify device management
+7
+5.2.a Backup and restore device configuration
+7
+5.2.b Using Cisco Discovery Protocol and LLDP for device
+discovery
+2, 7
+5.2.c Licensing
+7
+5.2.d Logging
+7
+5.2.e Timezone
+7
+5.2.f Loopback
+7
+5.3 Configure and verify initial device configuration
+7
+5.4 Configure, verify, and troubleshoot basic device hardening
+7
+5.4.a Local authentication
+6
+5.4.b Secure password
+6
+5.4.c Access to device
+6
+5.4.c. (i) Source address
+6
+5.4.c. (ii) Telnet/SSH
+6
+5.4.d Login banner
+6
+5.5 Perform device maintenance
+7
+5.5.a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5
+verify)
+7
+5.5.b Password recovery and configuration register
+7
+5.5.c File system management
+7
+5.6 Use Cisco IOS tools to troubleshoot and resolve problems
+7
+5.6.a Ping and traceroute with extended option
+7
+5.6.b Terminal monitor
+7
+5.6.c Log events
+7
+
+ICND2 (200-105) Exam Objectives
+Exam objectives are subject to change at any time without prior notice and at
+Cisco’s sole discretion. Please visit Cisco’s certification website
+(
+www.cisco.com/web/learning
+) for the latest information on the ICND2
+exam. 
+Tables 6
+–
+10
+ cover the ICND2 (200-105) exam objectives.
+
+TABLE 6
+ 
+26% 1.0 LAN Switching Technologies
+Objective
+Chapter
+1.1 Configure, verify, and troubleshoot VLANs (normal/extended
+range) spanning multiple switches
+2
+1.1.a Access ports (data and voice)
+2
+1.1.b Default VLAN
+2
+1.2 Configure, verify, and troubleshoot interswitch connectivity
+2
+1.2.a Add and remove VLANs on a trunk
+2
+1.2.b DTP and VTP (v1&v2)
+2
+1.3 Configure, verify, and troubleshoot STP protocols
+2
+1.3.a STP mode (PVST+ and RPVST+)
+2
+1.3.b STP root bridge selection
+2
+1.4 Configure, verify, and troubleshoot STP-related optional
+features
+2
+1.4.a PortFast
+2
+1.4.b BPDU guard
+2
+1.5 Configure, verify, and troubleshoot (Layer 2/Layer 3)
+EtherChannel
+2
+1.5.a Static
+2
+1.5.b PAGP
+2
+1.5.c LACP
+2
+1.6 Describe the benefits of switch stacking and chassis
+aggregation
+2
+1.7 Describe common access layer threat mitigation techniques
+6
+1.7.a 802.1x
+6
+1.7.b DHCP snooping
+6
+1.7.c Nondefault native VLAN
+6
+Technet24.ir
+
+TABLE 7
+ 
+29% 2.0 Routing Technologies
+Objective
+Chapter
+2.1 Configure, verify, and troubleshoot Inter-VLAN routing
+3
+2.1.a Router on a stick
+3
+2.1.b SVI
+3
+2.2 Compare and contrast distance vector and link-state routing
+protocols
+3
+2.3 Compare and contrast interior and exterior routing protocols
+3
+2.4 Configure, verify, and troubleshoot single area and multiarea
+OSPFv2 for IPv4 (excluding authentication, filtering, manual
+summarization, redistribution, stub, virtual-link, and LSAs)
+3
+2.5 Configure, verify, and troubleshoot single area and multiarea
+OSPFv3 for IPv6 (excluding authentication, filtering, manual
+summarization, redistribution, stub, virtual-link, and LSAs)
+3
+2.6 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding
+authentication, filtering, manual summarization, redistribution,
+stub)
+3
+2.7 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding
+authentication, filtering, manual summarization, redistribution,
+stub)
+3
+
+TABLE 8
+ 
+16% 3.0 WAN Technologies
+Objective
+Chapter
+3.1 Configure and verify PPP and MLPPP on WAN interfaces using
+local authentication
+4
+3.2 Configure, verify, and troubleshoot PPPoE client-side
+interfaces using local authentication
+4
+3.3 Configure, verify, and troubleshoot GRE tunnel connectivity
+4
+3.4 Describe WAN topology options
+4
+3.4.a Point-to-point
+4
+3.4.b Hub and spoke
+4
+3.4.c Full mesh
+4
+3.4.d Single vs dual-homed
+4
+3.5 Describe WAN access connectivity options
+4
+3.5.a MPLS
+4
+3.5.b MetroEthernet
+4
+3.5.c Broadband PPPoE
+4
+3.5.d Internet VPN (DMVPN, site-to-site VPN, client VPN)
+4
+3.6 Configure and verify single-homed branch connectivity using
+eBGP IPv4 (limited to peering and route advertisement using
+Network command only)
+4
+Technet24.ir
+
+TABLE 9
+ 
+14% 4.0 Infrastructure Services
+Objective
+Chapter
+4.1 Configure, verify, and troubleshoot basic HSRP
+5
+4.1.a Priority
+5
+4.1.b Preemption
+5
+4.1.c Version
+5
+4.2 Describe the effects of cloud resources on enterprise network
+architecture
+1
+4.2.a Traffic path to internal and external cloud services
+1
+4.2.b Virtual services
+1
+4.2.c Basic virtual network infrastructure
+1
+4.3 Describe basic QoS concepts
+4
+4.3.a Marking
+4
+4.3.b Device trust
+4
+4.3.c Prioritization
+4
+4.3.c. (i) Voice
+4
+4.3.c. (ii) Video
+4
+4.3.c. (iii) Data
+4
+4.3.d Shaping
+4
+4.3.e Policing
+4
+4.3.f Congestion management
+4
+4.4 Configure, verify, and troubleshoot IPv4 and IPv6 access list
+for traffic filtering
+6
+4.4.a Standard
+6
+4.4.b Extended
+6
+4.4.c Named
+6
+4.5 Verify ACLs using the APIC-EM Path Trace ACL analysis tool
+6
+
+TABLE 10
+ 
+15% 5.0 Infrastructure Maintenance
+Objective
+Chapter
+5.1 Configure and verify device-monitoring protocols
+7
+5.1.a SNMPv2
+7
+5.1.b SNMPv3
+7
+5.2 Troubleshoot network connectivity issues using ICMP echo-
+based IP SLA
+7
+5.3 Use local SPAN to troubleshoot and resolve problems
+7
+5.4 Describe device management using AAA with TACACS+ and
+RADIUS
+6
+5.5 Describe network programmability in enterprise network
+architecture
+7
+5.5.a Function of a controller
+7
+5.5.b Separation of control plane and data plane
+7
+5.5.c Northbound and southbound APIs
+7
+5.6 Troubleshoot basic Layer 3 end-to-end connectivity issues
+3
+Technet24.ir
+
+CCNA Composite (200-125) Exam Objectives
+Exam objectives are subject to change at any time without prior notice and at
+Cisco’s sole discretion. Please visit Cisco’s certification website
+(
+www.cisco.com/web/learning
+) for the latest information on the CCNA
+Composite exam. 
+Tables 11
+–
+17
+ cover the ICND2 (200-105) exam objectives.
+TABLE 11
+ 15% 1.0 Network Fundamentals
+Objective
+Chapter
+1.1 Compare and contrast OSI and TCP/IP models
+1
+1.2 Compare and contrast TCP and UDP protocols
+1
+1.3 Describe the impact of infrastructure components in an
+enterprise network
+1
+1.3a Firewalls
+1
+1.3b Access points
+1
+1.3c Wireless controllers
+1
+1.4 Describe the effects of cloud resources on enterprise network
+architecture
+1
+1.4a Traffic path to internal and external cloud services
+1
+1.4b Virtual services
+1
+1.4c Basic virtual network infrastructure
+1
+1.5 Compare and contrast collapsed core and three-tier
+architectures
+1
+1.6 Compare and contrast network topologies
+1
+1.6a Star
+1
+1.6b Mesh
+1
+1.6c Hybrid
+1
+1.7 Select the appropriate cabling type based on implementation
+requirements
+1
+1.8 Apply troubleshooting methodologies to resolve problems
+1
+1.8a Perform and document fault isolation
+1
+1.8b Resolve or escalate
+1
+
+1.8c Verify and monitor resolution
+1
+1.9 Configure, verify, and troubleshoot IPv4 addressing and
+subnetting
+1
+1.10 Compare and contrast IPv4 address types
+1
+1.10a Unicast
+1
+1.10b Broadcast
+1
+1.10c Multicast
+1
+1.11 Describe the need for private IPv4 addressing
+1
+1.12 Identify the appropriate IPv6 addressing scheme to satisfy
+addressing requirements in a LAN/WAN environment
+1
+1.13 Configure, verify, and troubleshoot IPv6 addressing
+1
+1.14 Configure and verify IPv6 Stateless Address Autoconfiguration
+1
+1.15 Compare and contrast IPv6 address types
+1
+1.15a Global unicast
+1
+1.15b Unique local
+1
+1.15c Link local
+1
+1.15d Multicast
+1
+1.15e Modified EUI 64
+1
+1.15f Autoconfiguration
+1
+1.15g Anycast
+1
+TABLE 12
+ 21% 2.0 LAN Switching Technologies
+Objective
+Chapter
+2.1 Describe and verify switching concepts
+2
+2.1a MAC learning and aging
+2
+2.1b Frame switching
+2
+2.1c Frame flooding
+2
+2.1d MAC address table
+2
+2.2 Interpret Ethernet frame format
+2
+2.3 Troubleshoot interface and cable issues (collisions, errors,
+duplex, speed)
+2
+Technet24.ir
+
+2.4 Configure, verify, and troubleshoot VLANs (normal/extended
+range) spanning multiple switches
+2
+2.4a Access ports (data and voice)
+2
+2.4b Default VLAN
+2
+2.5 Configure, verify, and troubleshoot interswitch connectivity
+2
+2.5a Trunk ports
+2
+2.5b Add and remove VLANs on a trunk
+2
+2.5c DTP, VTP (v1&v2), and 802.1Q
+2
+2.5d Native VLAN
+2
+2.6 Configure, verify, and troubleshoot STP protocols
+2
+2.6a STP mode (PVST+ and RPVST+)
+2
+2.6b STP root bridge selection
+2
+2.7 Configure, verify and troubleshoot STP related optional
+features
+2
+2.7a PortFast
+2
+2.7b BPDU guard
+2
+2.8 Configure and verify Layer 2 protocols
+2
+2.8a Cisco Discovery Protocol
+2
+2.8b LLDP
+2
+2.9 Configure, verify, and troubleshoot (Layer 2/Layer 3)
+EtherChannel
+2
+2.9a Static
+2
+2.9b PAGP
+2
+2.9c LACP
+2
+2.10 Describe the benefits of switch stacking and chassis
+aggregation
+2
+TABLE 13
+ 
+23% 3.0 Routing Technologies
+Objective
+Chapter
+3.1 Describe the routing concepts
+3
+3.1a Packet handling along the path through a network
+3
+
+3.1b Forwarding decision based on route lookup
+3
+3.1c Frame rewrite
+3
+3.2 Interpret the components of a routing table
+3
+3.2a Prefix
+3
+3.2b Network mask
+3
+3.2c Next hop
+3
+3.2d Routing protocol code
+3
+3.2e Administrative distance
+3
+3.2f Metric
+3
+3.2g Gateway of last resort
+3
+3.3 Describe how a routing table is populated by different routing
+information sources
+3
+3.3a Admin distance
+3
+3.4 Configure, verify, and troubleshoot inter-VLAN routing
+3
+3.4a Router on a stick
+3
+3.4b SVI
+3
+3.5 Compare and contrast static routing and dynamic routing
+3
+3.6 Compare and contrast distance vector and link state routing
+protocols
+3
+3.7 Compare and contrast interior and exterior routing protocols
+3
+3.8 Configure, verify, and troubleshoot IPv4 and IPv6 static
+routing
+3
+3.8a Default route
+3
+3.8b Network route
+3
+3.8c Host route
+3
+3.8d Floating static
+3
+3.9 Configure, verify, and troubleshoot single area and multi-area
+OSPFv2 for IPv4 (excluding authentication, filtering, manual
+summarization, redistribution, stub, virtual link, and LSAs)
+3
+3.10 Configure, verify, and troubleshoot single area and multi-area
+OSPFv3 for IPv6 (excluding authentication, filtering, manual
+3
+Technet24.ir
+
+summarization, redistribution, stub, virtual link, and LSAs)
+3.11 Configure, verify, and troubleshoot EIGRP for IPv4 (excluding
+authentication, filtering, manual summarization, redistribution,
+stub)
+3
+3.12 Configure, verify, and troubleshoot EIGRP for IPv6 (excluding
+authentication, filtering, manual summarization, redistribution,
+stub)
+3
+3.13 Configure, verify, and troubleshoot RIPv2 for IPv4 (excluding
+authentication, filtering, manual summarization, redistribution)
+3
+3.14 Troubleshoot basic Layer 3 end-to-end connectivity issues
+3
+
+TABLE 14
+ 
+10% 4.0 WAN Technologies
+Objective
+Chapter
+4.1 Configure and verify PPP and MLPPP on WAN interfaces using
+local authentication
+4
+4.2 Configure, verify, and troubleshoot PPPoE client-side
+interfaces using local authentication
+4
+4.3 Configure, verify, and troubleshoot GRE tunnel connectivity
+4
+4.4 Describe WAN topology options
+4
+4.4a Point-to-point
+4
+4.4b Hub and spoke
+4
+4.4c Full mesh
+4
+4.4d Single vs dual-homed
+4
+4.5 Describe WAN access connectivity options
+4
+4.5a MPLS
+4
+4.5b Metro Ethernet
+4
+4.5c Broadband PPPoE
+4
+4.5d Internet VPN (DMVPN, site-to-site VPN, client VPN)
+4
+4.6 Configure and verify single-homed branch connectivity using
+eBGP IPv4 (limited to peering and route advertisement using
+Network command only)
+4
+4.7 Describe basic QoS concepts
+4
+4.7a Marking
+4
+4.7b Device trust
+4
+4.7c Prioritization
+4
+4.7c(i) Voice
+4
+4.7c(ii) Video
+4
+4.7c(iii) Data
+4
+4.7d Shaping
+4
+4.7e Policing
+4
+4.7f Congestion management
+4
+Technet24.ir
+
+TABLE 15
+ 
+10% 5.0 Infrastructure Services
+Objective
+Chapter
+5.1 Describe DNS lookup operation
+5
+5.2 Troubleshoot client connectivity issues involving DNS
+5
+5.3 Configure and verify DHCP on a router (excluding static
+reservations)
+5
+5.3a Server
+5
+5.3b Relay
+5
+5.3c Client
+5
+5.3d TFTP, DNS, and gateway options
+5
+5.4 Troubleshoot client and router-based DHCP connectivity issues
+5
+5.5 Configure, verify, and troubleshoot basic HSRP
+5
+5.5a Priority
+5
+5.5b Preemption
+5
+5.5c Version
+5
+5.6 Configure, verify, and troubleshoot inside source NAT
+5
+5.6a Static
+5
+5.6b Pool
+5
+5.6c PAT
+5
+5.7 Configure and verify NTP operating in a client/server mode
+5
+
+TABLE 16
+ 
+11% 6.0 Infrastructure Security
+Objective
+Chapter
+6.1 Configure, verify, and troubleshoot port security
+6
+6.1a Static
+6
+6.1b Dynamic
+6
+6.1c Sticky
+6
+6.1d Max MAC addresses
+6
+6.1e Violation actions
+6
+6.1f Err-disable recovery
+6
+6.2 Describe common access layer threat mitigation techniques
+6
+6.2a 802.1x
+6
+6.2b DHCP snooping
+6
+6.2c Nondefault native VLAN
+6
+6.3 Configure, verify, and troubleshoot IPv4 and IPv6 access list
+for traffic filtering
+6
+6.3a Standard
+6
+6.3b Extended
+6
+6.3c Named
+6
+6.4 Verify ACLs using the APIC-EM Path Trace ACL Analysis tool
+6
+6.5 Configure, verify, and troubleshoot basic device hardening
+6
+6.5a Local authentication
+6
+6.5b Secure password
+6
+6.5c Access to device
+6
+6.5c(i) Source address
+6
+6.5c(ii) Telnet/SSH
+6
+6.5d Login banner
+6
+6.6 Describe device security using AAA with TACACS+ and
+RADIUS
+6
+TABLE 17
+ 
+10% 7.0 Infrastructure Management
+Technet24.ir
+
+Objective
+Chapter
+7.1 Configure and verify device-monitoring protocols
+7
+7.1a SNMPv2
+7
+7.1b SNMPv3
+7
+7.1c Syslog
+7
+7.2 Troubleshoot network connectivity issues using ICMP echo-
+based IP SLA
+7
+7.3 Configure and verify device management
+7
+7.3a Backup and restore device configuration
+7
+7.3b Using Cisco Discovery Protocol or LLDP for device discovery
+7
+7.3c Licensing
+7
+7.3d Logging
+7
+7.3e Timezone
+7
+7.3f Loopback
+7
+7.4 Configure and verify initial device configuration
+7
+7.5 Perform device maintenance
+7
+7.5a Cisco IOS upgrades and recovery (SCP, FTP, TFTP, and MD5
+verify)
+7
+7.5b Password recovery and configuration register
+7
+7.5c File system management
+7
+7.6 Use Cisco IOS tools to troubleshoot and resolve problems
+7
+7.6a Ping and traceroute with extended option
+7
+7.6b Terminal monitor
+7
+7.6c Log events
+7
+7.6d Local SPAN
+7
+7.7 Describe network programmability in enterprise network
+architecture
+7
+7.7a Function of a controller
+7
+7.7b Separation of control plane and data plane
+7
+7.7c Northbound and southbound APIs
+7
+
+Using This Book to Practice
+This book is composed of nine chapters. Each of the first seven chapters
+covers a domain, with a variety of questions that can help you test your
+knowledge of real-world, scenario, and best practices–based networking
+knowledge. The final two chapters are complete practice exams that can serve
+as timed practice tests to help determine if you’re ready for the CCNA exam.
+I recommend taking the first practice exam to help identify where you may
+need to spend more study time, and then using the domain-specific chapters
+to test your domain knowledge where it is weak. Once you’re ready, take the
+second practice exam to make sure you’ve covered all of the material and are
+ready to attempt the CCNA exam.
+The book is separated into nine chapters, seven chapters to reflect the major
+objectives and two chapters with practice tests:
+Chapter 1: Network Fundamentals (Domain 1)
+Chapter 2: LAN Switching Technologies (Domain 2)
+Chapter 3: Routing Technologies (Domain 3)
+Chapter 4: WAN Technologies (Domain 4)
+Chapter 5: Infrastructure Services (Domain 5)
+Chapter 6: Infrastructure Security (Domain 6)
+Chapter 7: Infrastructure Management (Domain 7)
+Chapter 8: Practice Test 1
+Chapter 9: Practice Test 2
+Technet24.ir
+
+Chapter 1
+Network Fundamentals (Domain 1)
+THE CCNA EXAM TOPICS COVERED IN THIS PRACTICE TEST
+INCLUDE THE FOLLOWING:
+ 
+1.0 Network Fundamentals (ICND1)
+1.1 Compare and contrast OSI and TCP/IP models (ICND1)
+1.2 Compare and contrast TCP and UDP protocols (ICND1)
+1.3 Describe the impact of infrastructure components in an enterprise
+network (ICND1)
+1.4 Describe the effects of cloud resources on enterprise network
+architecture (ICND2)
+1.5 Compare and contrast collapsed core and three-tier architectures
+(ICND1)
+1.6 Compare and contrast network topologies (ICND1)
+1.7 Select the appropriate cabling type based on implementation
+requirements (ICND1)
+1.8 Apply troubleshooting methodologies to resolve problems (ICND1)
+1.9 Configure, verify, and troubleshoot IPv4 addressing and subnetting
+(ICND1)
+1.10 Compare and contrast IPv4 address types (ICND1)
+1.11 Describe the need for private IPv4 addressing (ICND1)
+1.12 Identify the appropriate IPv6 addressing scheme to satisfy
+addressing requirements in a LAN/WAN environment (ICND1)
+1.13 Configure, verify, and troubleshoot IPv6 addressing (ICND1)
+1.14 Configure and verify IPv6 Stateless Address Autoconfiguration
+(ICND1)
+1.15 Compare and contrast IPv6 address types (ICND1)
+1.
+ 
+Which statement is a valid reason the OSI reference model was created?
+Technet24.ir
+
+A
+. 
+It encourages vendors to create proprietary standards for any
+component of the OSI.
+B
+. 
+It allows for changes on one layer to apply to another layer so they
+can work together.
+C
+. 
+It prevents industry standardization of network processes.
+D
+. 
+It divides network communication into smaller components for
+design and troubleshooting.
+2.
+ When a program uses encryption such as SSL, which layer is
+responsible?
+A
+. 
+Presentation layer
+B
+. 
+Transport layer
+C
+. 
+Data Link layer
+D
+. 
+Session layer
+3.
+ Which device would primarily function at the Data Link layer?
+A
+. 
+Routers
+B
+. 
+Firewalls
+C
+. 
+Gateways
+D
+. 
+Switches
+4.
+ Which is the proper order of the OSI layers?
+A
+. 
+Application, Transport, Session, Presentation, Network, Data Link,
+Physical
+B
+. 
+Presentation, Application, Session, Transport, Network, Data Link,
+Physical
+C
+. 
+Application, Presentation, Session, Transport, Network, Data Link,
+Physical
+D
+. 
+Application, Presentation, Transport, Network, Session, Data Link,
+Physical
+5.
+ Which OSI layer is responsible for logical addressing?
+
+A
+. 
+Transport layer
+B
+. 
+Network layer
+C
+. 
+Application layer
+D
+. 
+Data Link layer
+6.
+ Which OSI layer is responsible for connection-oriented
+communication?
+A
+. 
+Transport layer
+B
+. 
+Presentation layer
+C
+. 
+Data Link layer
+D
+. 
+Application layer
+7.
+ Which layer is responsible for compression and decompression?
+A
+. 
+Application layer
+B
+. 
+Physical layer
+C
+. 
+Session layer
+D
+. 
+Presentation layer
+8.
+ 
+Which layer of the OSI is responsible for dialog control of applications?
+A
+. 
+Application layer
+B
+. 
+Physical layer
+C
+. 
+Session layer
+D
+. 
+Network layer
+9.
+ At which layer of the OSI can you find DTE and DCE interfaces?
+A
+. 
+Application layer
+B
+. 
+Physical layer
+C
+. 
+Session layer
+D
+. 
+Transport layer
+10.
+ At which DoD model layer does Telnet, TFTP, SNMP, and SMTP
+function?
+Technet24.ir
+
+A
+. 
+Host-to-Host layer
+B
+. 
+Process/Application layer
+C
+. 
+Internet layer
+D
+. 
+Network Access layer
+11.
+ An administrator is checking to make sure that SNMP is working
+properly. Which is the highest layer checked in the OSI if it is working
+successfully?
+A
+. 
+Application layer
+B
+. 
+Presentation layer
+C
+. 
+Session layer
+D
+. 
+Network layer
+12.
+ The receiving computer checked the checksum of a frame. It had been
+damaged during transfer, so it is discarded. At which layer of the OSI did
+this occur?
+A
+. 
+Physical layer
+B
+. 
+Data Link layer
+C
+. 
+Network layer
+D
+. 
+Session layer
+13.
+ Which layer in the DoD model is responsible for routing?
+A
+. 
+Host-to-Host layer
+B
+. 
+Process/Application layer
+C
+. 
+Internet layer
+D
+. 
+Network Access layer
+14.
+ Which devices create collision domains, raising effective bandwidth?
+A
+. 
+Firewalls
+B
+. 
+Hubs
+C
+. 
+Routers
+D
+. 
+Switches
+
+15.
+ 
+Which device acts like a multiport repeater?
+A
+. 
+Firewall
+B
+. 
+Hub
+C
+. 
+Router
+D
+. 
+Switch
+16.
+ Which layer of the OSI defines the PDU, or protocol data unit, of
+segments?
+A
+. 
+Application layer
+B
+. 
+Session layer
+C
+. 
+Network layer
+D
+. 
+Transport layer
+17.
+ Which device will create broadcast domains and raise effective
+bandwidth?
+A
+. 
+Firewall
+B
+. 
+Hub
+C
+. 
+Router
+D
+. 
+Switch
+18.
+ Which is a correct statement about MAC addresses?
+A
+. 
+Organizationally unique identifiers (OUIs) create a unique MAC
+address.
+B
+. 
+The first 24 bits of a MAC address is specified by the vendor.
+C
+. 
+The IEEE is responsible for MAC address uniqueness.
+D
+. 
+If the I/G bit is set to 1, then the frame identifies a broadcast or
+multicast.
+19.
+ Which access/contention method is used for Ethernet?
+Technet24.ir
+
+A
+. 
+CSMA/CA
+B
+. 
+CSMA/CD
+C
+. 
+802.2
+D
+. 
+Token passing
+20.
+ What is the correct order of encapsulation?
+A
+. 
+User datagrams, packets, segments, frames, bits
+B
+. 
+User datagrams, sessions, segments, packets, frames, bits
+C
+. 
+User datagrams, segments, packets, frames, bits
+D
+. 
+Bits, frames, sessions, packets, user datagrams
+21.
+ Which application provides terminal emulation over a network?
+A
+. 
+SNMP
+B
+. 
+Telnet
+C
+. 
+HTTP
+D
+. 
+TFTP
+22.
+ 
+Which protocol is responsible for identifying upper-layer network
+protocols at the Data Link layer?
+A
+. 
+LLC
+B
+. 
+MAC
+C
+. 
+802.3
+D
+. 
+FCS
+23.
+ The translation of ASCII to EBCDIC is performed at which layer of the
+OSI?
+A
+. 
+Application layer
+B
+. 
+Session layer
+C
+. 
+Presentation layer
+D
+. 
+Data Link layer
+24.
+ Which is not a common cause for LAN congestion?
+
+A
+. 
+Broadcasts
+B
+. 
+Multicasts
+C
+. 
+Adding switches for connectivity
+D
+. 
+Using multiple hubs for connectivity
+25.
+ Flow control can be found at which layer of the OSI?
+A
+. 
+Transport layer
+B
+. 
+Network layer
+C
+. 
+Data Link layer
+D
+. 
+Session layer
+26.
+ Which protocol requires the programmer to deal with lost segments?
+A
+. 
+SSL
+B
+. 
+TCP
+C
+. 
+UDP
+D
+. 
+NMS
+27.
+ Which is a correct statement about the Transmission Control Protocol
+(TCP)?
+A
+. 
+TCP is a connectionless protocol.
+B
+. 
+TCP allows for error detection and correction.
+C
+. 
+TCP is faster than UDP.
+D
+. 
+TCP allows for retransmission of lost segments.
+28.
+ Which statement correctly describes what happens when a web
+browser initiates a request to a web server?
+Technet24.ir
+
+A
+. 
+The sender allocates a port dynamically above 1024 and associates it
+with the request.
+B
+. 
+The receiver allocates a port dynamically above 1024 and associates
+it with the request.
+C
+. 
+The sender allocates a port dynamically below 1024 and associates it
+with the request.
+D
+. 
+The receiver allocates a port dynamically below 1024 and associates
+it with the request.
+29.
+ 
+Which protocol and port number is associated with SMTP?
+A
+. 
+UDP/69
+B
+. 
+UDP/25
+C
+. 
+TCP/69
+D
+. 
+TCP/25
+30.
+ How does TCP guarantee delivery of segments to the receiver?
+A
+. 
+Via the destination port
+B
+. 
+TCP checksums
+C
+. 
+Window size
+D
+. 
+Sequence and acknowledgment numbers
+31.
+ When a programmer decides to use UDP as a transport protocol, what
+is a decision factor?
+A
+. 
+Redundancy of acknowledgment is not needed.
+B
+. 
+Guaranteed delivery of segments is required.
+C
+. 
+Windowing flow control is required.
+D
+. 
+A virtual circuit is required.
+32.
+ Which mechanism allows for programs running on a server (daemons)
+to listen for requests through the process called binding?
+
+A
+. 
+Headers
+B
+. 
+Port numbers
+C
+. 
+MAC address
+D
+. 
+Checksums
+33.
+ Which is a correct statement about sliding windows used with TCP?
+A
+. 
+The window size is established during the three-way handshake.
+B
+. 
+Sliding windows allow for data of different lengths to be padded.
+C
+. 
+It allows TCP to indicate which upper-layer protocol created the
+request.
+D
+. 
+It allows the router to see the segment as urgent data.
+34.
+ Why does DNS use UDP?
+A
+. 
+DNS requires acknowledgment of the request for auditing.
+B
+. 
+The requests require flow control of UDP.
+C
+. 
+DNS requests are usually small and do not require connections
+setup.
+D
+. 
+DNS requires a temporary virtual circuit.
+35.
+ What is required before TCP can begin sending segments?
+A
+. 
+Three-way handshake
+B
+. 
+Port agreement
+C
+. 
+Sequencing of segments
+D
+. 
+Acknowledgment of segments
+36.
+ 
+Which term describes what it is called when more than one wireless
+access point (WAP) covers the same SSID?
+A
+. 
+Broadcast domain
+B
+. 
+Basic service set
+C
+. 
+Extended server set
+D
+. 
+Wireless mesh
+Technet24.ir
+
+37.
+ Which protocol allows a Lightweight AP (LWAP) to forward data to the
+wired LAN?
+A
+. 
+Spanning Tree Protocol (STP)
+B
+. 
+Bridge protocol data units (BPDUs)
+C
+. 
+Orthogonal Frequency Division Multiplexing (OFDM)
+D
+. 
+Control and Provisioning of Wireless Access Points (CAPWAP)
+38.
+ Which component allows wireless clients to roam between access
+points and maintain authentication?
+A
+. 
+Basic service set
+B
+. 
+Extended service set
+C
+. 
+Wireless LAN controller
+D
+. 
+Service set ID
+39.
+ Which is a valid reason to implement a wireless LAN controller
+(WLC)?
+A
+. 
+Centralized authentication
+B
+. 
+The use of autonomous WAPs
+C
+. 
+Multiple SSIDs
+D
+. 
+Multiple VLANs
+40.
+ You require a density of 100 wireless clients in a relatively small area.
+Which design would be optimal?
+A
+. 
+Autonomous WAPs with a WLC
+B
+. 
+Lightweight WAPs with a WLC
+C
+. 
+Autonomous WAPs without a WLC
+D
+. 
+Lightweight WAPs without a WLC
+41.
+ When designing a wireless network, which would be a compelling
+reason to use 5 GHz?
+
+A
+. 
+5 GHz can go further.
+B
+. 
+5 GHz allows for more clients.
+C
+. 
+There are 24 non-overlapping channels.
+D
+. 
+There is less interference on 5 GHz.
+42.
+ 
+Which allows for seamless wireless roaming between access points?
+A
+. 
+Single SSID
+B
+. 
+Single service set
+C
+. 
+802.11ac
+D
+. 
+Wireless LAN controller
+43.
+ In the 2.4 GHz spectrum for 802.11, which channels are non-
+overlapping?
+A
+. 
+Channels 1, 3, and 11
+B
+. 
+Channels 1, 3, and 6
+C
+. 
+Channels 1, 6, and 11
+D
+. 
+Channels 1 through 6
+44.
+ Which is one of the critical functions that a wireless LAN controller
+performs?
+A
+. 
+Allows autonomous WAPs
+B
+. 
+Synchronizes the WAPs with the same IOS
+C
+. 
+Triangulates users for location lookups
+D
+. 
+Allows for the use of all frequency channels
+45.
+ Which is the contention method 802.11 wireless uses?
+A
+. 
+CSMA/CA
+B
+. 
+CSMA/CD
+C
+. 
+BSSS
+D
+. 
+OFDM
+46.
+ When firewalls are placed in a network, which zone contains Internet-
+Technet24.ir
+
+facing services?
+A
+. 
+Outside zone
+B
+. 
+Enterprise network zone
+C
+. 
+Demilitarized zone
+D
+. 
+Inside zone
+47.
+ According to best practices, what is the proper placement of a firewall?
+A
+. 
+Only between the internal network and the Internet
+B
+. 
+At key security boundaries
+C
+. 
+In the DMZ
+D
+. 
+Only between the DMZ and the Internet
+48.
+ Which is a false statement about firewalls?
+A
+. 
+Firewalls can protect a network from external attacks.
+B
+. 
+Firewalls can protect a network from internal attacks.
+C
+. 
+Firewalls can provide stateful packet inspection.
+D
+. 
+Firewalls can control application traffic.
+49.
+ 
+Which of the following options is not a consideration for the
+management of a firewall?
+A
+. 
+All physical access to the firewall should be tightly controlled.
+B
+. 
+All firewall policies should be documented.
+C
+. 
+Firewall logs should be regularly monitored.
+D
+. 
+Firewalls should allow traffic by default and deny traffic explicitly.
+50.
+ What is the reason firewalls are considered stateful?
+A
+. 
+Firewalls keep track of the zone states.
+B
+. 
+Firewalls keep accounting on the state of packets.
+C
+. 
+Firewalls track the state of a TCP conversation.
+D
+. 
+Firewalls transition between defense states.
+51.
+ You have an Adaptive Security Appliance (ASA) and two separate
+
+Internet connections via different providers. How could you apply the
+same policies to both connections?
+A
+. 
+Place both connections into the same zone.
+B
+. 
+Place each connection into an ISP zone.
+C
+. 
+Apply the same ACL to both of the interfaces.
+D
+. 
+Each connection must be managed separately.
+52.
+ Why should servers be placed in the DMZ?
+A
+. 
+So that Internet clients can access them
+B
+. 
+To allow access to the Internet and the internal network
+C
+. 
+To allow the server to access the Internet
+D
+. 
+To restrict the server to the Internet
+53.
+ Which type of device will detect but not prevent unauthorized access?
+A
+. 
+Firewall
+B
+. 
+IPS
+C
+. 
+IDS
+D
+. 
+Honey pots
+54.
+ When a firewall matches a URI, it is operating at which layer?
+A
+. 
+Layer 7
+B
+. 
+Layer 5
+C
+. 
+Layer 4
+D
+. 
+Layer 3
+55.
+ In which zone should an email server be located?
+A
+. 
+Inside zone
+B
+. 
+Outside zone
+C
+. 
+DNS zone
+D
+. 
+DMZ
+56.
+ 
+Amazon Web Services (AWS) and Microsoft Azure are examples of
+Technet24.ir
+
+what?
+A
+. 
+Public cloud providers
+B
+. 
+Private cloud providers
+C
+. 
+Hybrid cloud providers
+D
+. 
+Dynamic cloud providers
+57.
+ You are looking to create a fault tolerant colocation site for your
+servers at a cloud provider. Which type of cloud provider would you be
+searching for?
+A
+. 
+PaaS
+B
+. 
+IaaS
+C
+. 
+SaaS
+D
+. 
+BaaS
+58.
+ Which allows for the distribution of compute resources such as CPU
+and RAM to be distributed over several operating systems?
+A
+. 
+Physical server
+B
+. 
+Hypervisor
+C
+. 
+Virtual machine
+D
+. 
+Virtual network
+59.
+ Which option describes a virtual machine (VM) best?
+A
+. 
+An operating system that is running directly on hardware
+B
+. 
+An operating system that is running with dedicated hardware
+C
+. 
+An operating system that is running on reduced hardware features
+D
+. 
+An operating system that is decoupled from the hardware
+60.
+ What is the physical hardware used in virtualization called?
+
+A
+. 
+Host
+B
+. 
+VM
+C
+. 
+Hypervisor
+D
+. 
+Guest
+61.
+ Which component connects the virtual machine NIC to the physical
+network?
+A
+. 
+vNIC
+B
+. 
+Trunk
+C
+. 
+Virtual switch
+D
+. 
+NX-OS
+62.
+ Which component acts as a distribution switch for the physical data
+center?
+A
+. 
+Top of Rack switch
+B
+. 
+End of Row switch
+C
+. 
+Core switch
+D
+. 
+Virtual switch
+63.
+ 
+Which is not a NIST criteria for cloud computing?
+A
+. 
+Resource pooling
+B
+. 
+Rapid elasticity
+C
+. 
+Automated billing
+D
+. 
+Measured service
+64.
+ Which term describes an internal IT department hosting virtualization
+for a company?
+A
+. 
+Public cloud
+B
+. 
+Elastic cloud
+C
+. 
+Private cloud
+D
+. 
+Internal cloud
+Technet24.ir
+
+65.
+ What is the role of a cloud services catalog?
+A
+. 
+It defines the capabilities for the cloud.
+B
+. 
+It defines the available VMs for creation in the cloud.
+C
+. 
+It defines the available VMs running in the cloud.
+D
+. 
+It defines the drivers for VMs in the cloud.
+66.
+ A hosted medical records service is an example of which cloud model?
+A
+. 
+PaaS
+B
+. 
+IaaS
+C
+. 
+SaaS
+D
+. 
+BaaS
+67.
+ A hosted environment that allows you to write and run programs is an
+example of which cloud model?
+A
+. 
+PaaS
+B
+. 
+IaaS
+C
+. 
+SaaS
+D
+. 
+BaaS
+68.
+ Which cloud connectivity method allows for seamless transition
+between public clouds?
+A
+. 
+MPLS VPN
+B
+. 
+Internet VPN
+C
+. 
+Intercloud exchange
+D
+. 
+Private WAN
+69.
+ Which statement is not a consideration when converting to an email
+SaaS application if the majority of users are internal?
+
+A
+. 
+Internal bandwidth usage
+B
+. 
+External bandwidth usage
+C
+. 
+Location of the users
+D
+. 
+Branch office connectivity to the Internet
+70.
+ 
+Which of the following is a virtual network function (VNF) device?
+A
+. 
+Virtual switch
+B
+. 
+Virtual firewall
+C
+. 
+Database server
+D
+. 
+File server
+71.
+ You purchase a VM on a public cloud and plan to create a VPN tunnel
+to the cloud provider. Your IP network is 172.16.0.0/12, and the provider
+has assigned an IP address in the 10.0.0.0/8 network. What VNF will you
+need from the provider to communicate with the VM?
+A
+. 
+Virtual switch
+B
+. 
+Virtual firewall
+C
+. 
+Virtual router
+D
+. 
+Another IP scheme at the provider
+72.
+ Which protocol would you use to synchronize the VM in the public
+cloud with an internal time source at your premise?
+A
+. 
+DNS
+B
+. 
+rsync
+C
+. 
+NTP
+D
+. 
+VPN
+73.
+ You need to scale out some web servers to accommodate load. Which
+method would you use?
+Technet24.ir
+
+A
+. 
+Add vCPUs.
+B
+. 
+Add vRAM.
+C
+. 
+Add DNS.
+D
+. 
+Add SLBaaS.
+74.
+ You have several VMs in a public cloud. What is a benefit of creating
+NTP VNF in the public cloud for the VMs?
+A
+. 
+Better time synchronization
+B
+. 
+Better response time from the VMs
+C
+. 
+Lower bandwidth utilization from your premises
+D
+. 
+Overcoming different time zones
+75.
+ When deciding to move DNS into the cloud for an application on the
+public cloud, what is the primary decision factor?
+A
+. 
+Bandwidth
+B
+. 
+Response time
+C
+. 
+Proper DNS resolution
+D
+. 
+The cloud provider’s requirements
+76.
+ 
+Access layer switches in the three-tier design model perform which
+task?
+A
+. 
+Connect to other switches for redundancy
+B
+. 
+Connect to users
+C
+. 
+Connect campuses
+D
+. 
+Connect to the Internet
+77.
+ Distribution layer switches in the three-tier design model perform
+which task?
+A
+. 
+Connect to other switches for redundancy
+B
+. 
+Connect to users
+C
+. 
+Connect campuses
+D
+. 
+Connect to the Internet
+
+78.
+ Core layer switches in the three-tier design model perform which task?
+A
+. 
+Connect to other switches for redundancy
+B
+. 
+Connect to users
+C
+. 
+Connect campuses
+D
+. 
+Connect to the Internet
+79.
+ The two-tier design model contains which layer switches?
+A
+. 
+Core, distribution, and access
+B
+. 
+Core and distribution
+C
+. 
+Distribution and access
+D
+. 
+Internet, core, distribution, and access
+80.
+ You have one campus, which contains 2,000 PCs, and each edge
+switch will contain 25 to 40 PCs. Based on this layout, which design model
+should be used?
+A
+. 
+Collapsed-core model
+B
+. 
+Three-tier model
+C
+. 
+DOD model
+D
+. 
+Access model
+81.
+ You have four campuses, each containing 500 PCs, and each edge
+switch will contain 20 to 30 PCs. Based on this layout, which design model
+should be used?
+A
+. 
+Collapsed-core model
+B
+. 
+Three-tier model
+C
+. 
+DOD model
+D
+. 
+Access model
+82.
+ Which should only be performed at the core layer?
+Technet24.ir
+
+A
+. 
+Routing
+B
+. 
+Supporting clients
+C
+. 
+Configuring ACLs
+D
+. 
+Switching
+83.
+ 
+Which layer in the three-tier model is where redistribution of routing
+protocols should be performed?
+A
+. 
+Core layer
+B
+. 
+Distribution layer
+C
+. 
+Access layer
+D
+. 
+Routing layer
+84.
+ Which layer in the three-tier model is where collision domains should
+be created?
+A
+. 
+Core layer
+B
+. 
+Distribution layer
+C
+. 
+Access layer
+D
+. 
+Routing layer
+85.
+ Which is an accurate statement about the collapsed-core design
+concept?
+A
+. 
+It is best suited for large-scale networks.
+B
+. 
+It allows for better bandwidth.
+C
+. 
+It is best suited for small enterprises.
+D
+. 
+It bottlenecks bandwidth.
+86.
+ Which network topology design has a centralized switch connecting all
+of the devices?
+A
+. 
+Star topology
+B
+. 
+Full mesh topology
+C
+. 
+Partial mesh topology
+D
+. 
+Hybrid topology
+
+87.
+ Which is a direct benefit of a full mesh topology?
+A
+. 
+Increased bandwidth
+B
+. 
+Increased redundancy
+C
+. 
+Decreased switch count
+D
+. 
+Increased complexity
+88.
+ Where is the hybrid topology most commonly seen in the three-tier
+design model?
+A
+. 
+Core layer
+B
+. 
+Distribution layer
+C
+. 
+Access layer
+D
+. 
+Routing layer
+89.
+ Where is the full mesh topology commonly seen in the three-tier
+design model?
+A
+. 
+Core layer
+B
+. 
+Distribution layer
+C
+. 
+Access layer
+D
+. 
+Routing layer
+90.
+ 
+Where is the star topology most commonly seen in the three-tier
+design model?
+A
+. 
+Core layer
+B
+. 
+Distribution layer
+C
+. 
+Access layer
+D
+. 
+Routing layer
+91.
+ Which topology does the collapsed core layer switch use in a two-tier
+design model?
+Technet24.ir
+
+A
+. 
+Star topology
+B
+. 
+Full mesh topology
+C
+. 
+Partial mesh topology
+D
+. 
+Hybrid topology
+92.
+ Define a full mesh topology design.
+A
+. 
+All links from the central switch connect to the edge switches.
+B
+. 
+All links between switches are connected to each other redundantly.
+C
+. 
+Only links between similar switch types are connected to each other
+redundantly.
+D
+. 
+All ports are used for connecting only other switches.
+93.
+ Define a star topology design.
+A
+. 
+All links from the central switch connect to the edge switches.
+B
+. 
+All links between switches are connected to each other redundantly.
+C
+. 
+Only links between similar switch types are connected to each other
+redundantly.
+D
+. 
+All ports are used for connecting other switches.
+94.
+ Which topology does an autonomous WAP use?
+A
+. 
+Star topology
+B
+. 
+Full mesh topology
+C
+. 
+Partial mesh topology
+D
+. 
+Hybrid topology
+95.
+ If you had limited cable access for the distribution switches, which
+topology would you need to plan for?
+A
+. 
+Star topology
+B
+. 
+Full mesh topology
+C
+. 
+Partial mesh topology
+D
+. 
+Hybrid topology
+
+96.
+ Which cable standard delivers 1 Gb/s using four pairs of CAT5e?
+A
+. 
+1000Base-T
+B
+. 
+1000Base-SX
+C
+. 
+1000Base-LX
+D
+. 
+1000Base-X
+97.
+ 
+Which fiber optic standard uses a 9 micron core and can span up to
+10km?
+A
+. 
+UTP
+B
+. 
+Multi-mode
+C
+. 
+Single-mode
+D
+. 
+STP
+98.
+ Which cable type would you use to connect a router to a switch?
+A
+. 
+Straight-through cable
+B
+. 
+Crossover cable
+C
+. 
+Rolled cable
+D
+. 
+Shielded cable
+99.
+ What is the maximum distance you can run 1000Base-T?
+A
+. 
+100 meters
+B
+. 
+1,000 meters
+C
+. 
+100 feet
+D
+. 
+1,000 feet
+100.
+ What is the terminal specification to connect to a Cisco router or
+switch via serial cable?
+A
+. 
+9600 baud 8-N-0
+B
+. 
+9600 baud 8-N-1
+C
+. 
+2400 baud 8-N-1
+D
+. 
+115,200 baud 8-N-1
+Technet24.ir
+
+101.
+ Which cable type would you use to connect a switch to a switch?
+A
+. 
+Straight-through cable
+B
+. 
+Crossover cable
+C
+. 
+Rolled cable
+D
+. 
+Shielded cable
+102.
+ Which fiber optic standard utilizes a 50 micron core?
+A
+. 
+UTP
+B
+. 
+Multi-mode
+C
+. 
+Single-mode
+D
+. 
+STP
+103.
+ Which type of cable would be used to connect a computer to a switch
+for management of the switch?
+A
+. 
+Straight-through cable
+B
+. 
+Crossover cable
+C
+. 
+Rolled cable
+D
+. 
+Shielded cable
+104.
+ 
+Which specification for connectivity is currently used in data centers
+for cost and simplicity?
+A
+. 
+10GBase-T
+B
+. 
+40GBase-T
+C
+. 
+10GBase-CX
+D
+. 
+100GBase-TX
+105.
+ If you had an existing installation of Cat5e on your campus, what is
+the highest speed you could run?
+
+A
+. 
+10 Mb/s
+B
+. 
+100 Mb/s
+C
+. 
+1 Gb/s
+D
+. 
+10 Gb/s
+106.
+ You get a call that the Internet is down. When you investigate the
+Internet router and perform a 
+show interface serial 0/0
+, you see the
+following status. What might be the problem?
+Serial0/0 is administratively down, line protocol is up
+  Hardware is MCI Serial
+A
+. 
+The serial line connecting to the ISP is down.
+B
+. 
+Someone accidentally shut down the serial interface.
+C
+. 
+Routing to the ISP is not set correctly.
+D
+. 
+The clocking from the ISP has stopped.
+107.
+ When performing troubleshooting for a routing issue, which method
+should be used first to isolate the problem?
+A
+. 
+Pinging the destination IP back to the originating IP
+B
+. 
+Pinging the originating IP to the destination IP
+C
+. 
+Traceroute from the originating IP to the destination IP
+D
+. 
+Traceroute from the destination IP to the originating IP
+108.
+ 
+Which command would you run to diagnose a possible line speed or
+duplex issue?
+A
+. 
+Switch#
+show speed
+B
+. 
+Switch#
+show duplex
+C
+. 
+Switch#
+show interface status
+D
+. 
+Switch#
+show diagnostics
+109.
+ Which command would you use, to diagnose a problem with frames
+that are not getting forwarded to the destination node on a switch?
+Technet24.ir
+
+A
+. 
+Switch#
+show route
+B
+. 
+Switch#
+show mac address-table
+C
+. 
+Switch#
+show mac table
+D
+. 
+Switch#
+show interface
+110.
+ Which command should you start with when trying to diagnose port
+security issues?
+A
+. 
+Switch#
+show port-security
+B
+. 
+Switch#
+show mac address-table
+C
+. 
+Switch#
+show interface
+D
+. 
+Switch#
+show security
+111.
+ After solving the root cause of a problem, what should be done?
+A
+. 
+Isolate the problem.
+B
+. 
+Perform root cause analysis.
+C
+. 
+Escalate the problem.
+D
+. 
+Monitor the solution.
+112.
+ What is the first step to troubleshooting a problem?
+A
+. 
+Isolate the problem.
+B
+. 
+Perform root cause analysis.
+C
+. 
+Escalate the problem.
+D
+. 
+Monitor the solution.
+113.
+ Which command should be used to verify that a VLAN is defined on a
+switch to troubleshoot a VLAN forwarding issue?
+A
+. 
+Switch#
+show interfaces fast 0/0 switchport
+B
+. 
+Switch#
+show vlan
+C
+. 
+Switch#
+show vlans
+D
+. 
+Switch#
+show vtp
+114.
+ It is reported that users cannot reach an internal server. You only
+
+have access to the local switches at your facility. You perform a 
+show
+interface fast 0/23
+ on the user reporting the problem and the status of
+the switch is up/up. What should you do next?
+A
+. 
+Isolate the problem.
+B
+. 
+Perform root cause analysis.
+C
+. 
+Escalate the problem.
+D
+. 
+Monitor the solution.
+115.
+ You just installed a new switch and you cannot get traffic forwarded
+to a remote VLAN. You believe there is a problem with trunking. Which
+command will you start with to verify trunking.
+A
+. 
+Switch#
+show interfaces fast 0/0 switchport
+B
+. 
+Switch#
+show vlan
+C
+. 
+Switch#
+show vlans
+D
+. 
+Switch#
+show trunks
+116.
+ 
+Which class is the IP address 172.23.23.2?
+A
+. 
+Class A
+B
+. 
+Class B
+C
+. 
+Class C
+D
+. 
+Class D
+117.
+ Which is the default subnet mask for a Class A address?
+A
+. 
+255.0.0.0
+B
+. 
+255.255.0.0
+C
+. 
+255.255.255.0
+D
+. 
+255.255.255.255
+118.
+ Which address is a multicast IP address?
+Technet24.ir
+
+A
+. 
+221.22.20.2
+B
+. 
+223.3.40.2
+C
+. 
+238.20.80.4
+D
+. 
+240.34.22.12
+119.
+ Which is true of an IP address of 135.20.255.255?
+A
+. 
+It is a Class A address.
+B
+. 
+It is a broadcast address.
+C
+. 
+It is the default gateway address.
+D
+. 
+It has a default mask of 255.0.0.0
+120.
+ What is the CIDR notation for a subnet mask of 255.255.240.0?
+A
+. 
+/19
+B
+. 
+/20
+C
+. 
+/22
+D
+. 
+/28
+121.
+ 
+You have been given an IP address network of 203.23.23.0. You are
+asked to subnet it for two hosts per network. What is the subnet mask you
+will need to use to maximize networks?
+A
+. 
+255.255.255.252
+B
+. 
+255.255.255.248
+C
+. 
+255.255.255.240
+D
+. 
+255.255.255.224
+122.
+ You have been given an IP address network of 213.43.53.0. You are
+asked to subnet it for 22 hosts per network. What is the subnet mask you
+will need to use to maximize networks?
+A
+. 
+255.255.255.252
+B
+. 
+255.255.255.248
+C
+. 
+255.255.255.240
+D
+. 
+255.255.255.224
+
+123.
+ Which valid IP is in the same network as 192.168.32.61/26?
+A
+. 
+192.168.32.59
+B
+. 
+192.168.32.63
+C
+. 
+192.168.32.64
+D
+. 
+192.168.32.72
+124.
+ You are setting up a network in which you need 15 routed networks.
+You have been given a network address of 153.20.0.0, and you need to
+maximize the number of hosts in each network. Which subnet mask will
+you use?
+A
+. 
+255.255.224.0
+B
+. 
+255.255.240.0
+C
+. 
+255.255.248.0
+D
+. 
+255.255.252.0
+125.
+ An ISP gives you an IP address of 209.183.160.45/30 to configure
+your end of the serial connection. Which IP address will be on the side at
+the ISP?
+A
+. 
+209.183.160.43/30
+B
+. 
+209.183.160.44/30
+C
+. 
+209.183.160.46/30
+D
+. 
+209.183.160.47/30
+126.
+ In the following exhibit, what needs to be changed for Computer A to
+successfully communicate with Computer B (assume the least amount of
+effort to fix the problem)?
+Technet24.ir
+
+A
+. 
+Computer A needs to have its IP address changed.
+B
+. 
+Computer B needs to have its IP address changed.
+C
+. 
+The default gateway IP address for Computer A needs to be changed.
+D
+. 
+The default gateway IP address for Computer B needs to be changed.
+127.
+ In the following exhibit, what needs to be changed for Computer A to
+successfully communicate with Computer B (assume the least amount of
+effort to fix the problem)?
+A
+. 
+Computer A needs to have its IP address changed.
+B
+. 
+Computer B needs to have its IP address changed.
+C
+. 
+The default gateway IP address for Computer A needs to be changed.
+D
+. 
+The default gateway IP address for Computer B needs to be changed.
+128.
+ Which subnet does host 131.50.39.23/21 belong to?
+A
+. 
+131.50.39.0/21
+B
+. 
+131.50.32.0/21
+C
+. 
+131.50.16.0/21
+D
+. 
+131.50.8.0/21
+129.
+ A computer has an IP address of 145.50.23.1/22. What is the
+broadcast address for that computer?
+A
+. 
+145.50.254.255
+B
+. 
+145.50.255.255
+C
+. 
+145.50.22.255
+D
+. 
+145.50.23.255
+
+130.
+ What is the valid IP address range for the network of 132.59.34.0/23?
+A
+. 
+132.59.34.1 to 132.59.36.254
+B
+. 
+132.59.34.1 to 132.59.35.254
+C
+. 
+132.59.34.1 to 132.59.34.254
+D
+. 
+132.59.34.1 to 132.59.35.255
+131.
+ 
+What is the subnet mask for a CIDR notation of /20?
+A
+. 
+255.255.224.0
+B
+. 
+255.255.240.0
+C
+. 
+255.255.248.0
+D
+. 
+225.225.252.0
+132.
+ What is the number of subnets which you can have for a mask of
+255.255.255.248?
+A
+. 
+8
+B
+. 
+16
+C
+. 
+32
+D
+. 
+64
+133.
+ What is the valid number of hosts for a network with a subnet mask
+of 255.255.255.224?
+A
+. 
+16
+B
+. 
+32
+C
+. 
+14
+D
+. 
+30
+134.
+ You have been given the network of 141.23.64.0/19. What is a valid
+host in this network?
+Technet24.ir
+
+A
+. 
+141.23.120.5/19
+B
+. 
+141.23.96.12/19
+C
+. 
+141.23.97.45/19
+D
+. 
+141.23.90.255/19
+135.
+ You have four networks of 141.24.4.0, 141.24.5.0, 141.24.6.0, and
+141.24.7.0 that you need to super-net together so you can write one ACL in
+your firewall. What is the super-netted address you will use?
+A
+. 
+141.24.4.0/20
+B
+. 
+141.24.4.0/21
+C
+. 
+141.24.4.0/22
+D
+. 
+141.24.4.0/23
+136.
+ You have eight consecutive networks of 132.22.24.0 to 123.22.31.0,
+which you need to super-net together so you can write one ACL in your
+firewall. What is the super-netted address you will use?
+A
+. 
+132.22.24.0/20
+B
+. 
+132.22.24.0/21
+C
+. 
+132.22.24.0/22
+D
+. 
+132.22.24.0/23
+137.
+ 
+You need to use the IP address space of 198.33.20.0/24 and create a
+VLSM subnet scheme for the network in the following exhibit. What is the
+network ID for Subnet A?
+
+
+A
+. 
+198.33.20.0/25
+B
+. 
+198.33.20.0/24
+C
+. 
+198.33.20.0/26
+D
+. 
+198.33.20.0/28
+138.
+ You need to use the IP space of 198.33.20.0/24 and create a VLSM
+subnet scheme for the network in the following exhibit. What is the
+network ID for Subnet B?
+A
+. 
+198.33.20.0/25
+B
+. 
+198.33.20.0/24
+C
+. 
+198.33.20.0/26
+D
+. 
+198.33.20.0/28
+139.
+ 
+You need to use the IP space of 198.33.20.0/24 and create a VLSM
+subnet scheme for the network in the following exhibit. What is the
+network ID for Subnet C?
+Technet24.ir
+
+A
+. 
+198.33.20.0/25
+B
+. 
+198.33.20.0/24
+C
+. 
+198.33.20.0/26
+D
+. 
+198.33.20.0/28
+140.
+ A computer with an IP address of 172.18.40.5/12 is having trouble
+getting to an internal server at an IP address of 172.31.2.4. The default
+gateway of the computer is 172.16.1.1. What is the problem?
+A
+. 
+The IP address of the computer is wrong.
+B
+. 
+The IP address of the default gateway is wrong.
+C
+. 
+The IP address of the internal server is wrong.
+D
+. 
+The problem is not the networking configuration.
+141.
+ A computer has an IP address of 192.168.1.6/24, and its gateway
+address is 192.168.1.1. It is trying to reach a server on an IP address of
+127.20.34.4. The server is not responding. What is the problem?
+A
+. 
+The IP address of the computer is wrong.
+B
+. 
+The IP address of the default gateway is wrong.
+C
+. 
+The IP address of the internal server is wrong.
+D
+. 
+The problem is not the networking configuration.
+142.
+ Which is true about a layer 3 broadcast?
+
+A
+. 
+All of the network bits are ones.
+B
+. 
+The destination MAC in the frame is always all 
+F
+s.
+C
+. 
+The broadcast can be segmented by switches.
+D
+. 
+The IP address is always 255.255.255.255.
+143.
+ 
+Which method is used to direct communications to a single host?
+A
+. 
+Unicast
+B
+. 
+Broadcast
+C
+. 
+Multicast
+D
+. 
+Anycast
+144.
+ Which method is used to direct communications to the closest IP
+address to the source?
+A
+. 
+Unicast
+B
+. 
+Broadcast
+C
+. 
+Multicast
+D
+. 
+Anycast
+145.
+ Which method is used to direct communications to a group of
+computers that subscribe to the transmission?
+A
+. 
+Unicast
+B
+. 
+Broadcast
+C
+. 
+Multicast
+D
+. 
+Anycast
+146.
+ What is the multicast address range?
+A
+. 
+224.0.0.0/7
+B
+. 
+224.0.0.0/6
+C
+. 
+224.0.0.0/5
+D
+. 
+224.0.0.0/4
+147.
+ Which protocol allows multicast switches to join computers to the
+Technet24.ir
+
+multicast group?
+A
+. 
+ICMP
+B
+. 
+IGMP
+C
+. 
+IPMI
+D
+. 
+IPGRP
+148.
+ Which protocol uses broadcasting at layer 3?
+A
+. 
+ARP
+B
+. 
+DHCP
+C
+. 
+IGMP
+D
+. 
+SNMP
+149.
+ Which method is used to direct communications to all computers in a
+subnet?
+A
+. 
+Unicast
+B
+. 
+Broadcast
+C
+. 
+Multicast
+D
+. 
+Anycast
+150.
+ 
+Which of the following is an example of a multicast address?
+A
+. 
+192.168.1.224
+B
+. 
+240.23.4.224
+C
+. 
+239.45.32.1
+D
+. 
+244.23.43.11
+151.
+ Which RFC defines private IP addresses?
+A
+. 
+RFC 1819
+B
+. 
+RFC 1911
+C
+. 
+RFC 1918
+D
+. 
+RFC 3030
+152.
+ What is a major reason to use private IP addressing?
+
+A
+. 
+It allows for the conservation of public IP addresses.
+B
+. 
+Since they are non-routable on the Internet, they are secure.
+C
+. 
+It keeps communications private.
+D
+. 
+They allow easier setup than public IP addresses.
+153.
+ What is required when using private IP addresses to communicate
+with Internet hosts?
+A
+. 
+Internet router
+B
+. 
+IPv4 tunnel
+C
+. 
+VPN tunnel
+D
+. 
+Network Address Translation
+154.
+ Which is the Class A private IP address range?
+A
+. 
+10.0.0.0/8
+B
+. 
+10.0.0.0/12
+C
+. 
+172.16.0.0/12
+D
+. 
+10.0.0.0/10
+155.
+ Which is the Class B private IP address range?
+A
+. 
+10.0.0.0/8
+B
+. 
+10.0.0.0/12
+C
+. 
+172.16.0.0/12
+D
+. 
+10.0.0.0/10
+156.
+ Which is the Class C private IP address range?
+A
+. 
+192.168.1.0/24
+B
+. 
+192.168.0.0/24
+C
+. 
+192.168.0.0/16
+D
+. 
+192.168.0.0/12
+157.
+ 
+You plug a laptop into a network jack. When you examine the IP
+address, you see 169.254.23.43. What can you conclude?
+Technet24.ir
+
+A
+. 
+The network jack is not working.
+B
+. 
+Your laptop has a static IP address configured.
+C
+. 
+The network is configured properly.
+D
+. 
+The DHCP server is down.
+158.
+ You plug a laptop into a network jack. When you examine the IP
+address, you see 10.23.2.3. What can you conclude?
+A
+. 
+The network jack is not working.
+B
+. 
+Your laptop has a static IP address configured.
+C
+. 
+The network is configured properly.
+D
+. 
+The DHCP server is down.
+159.
+ You want to put a web server online for public use. Which IP address
+would you use?
+A
+. 
+192.168.34.34
+B
+. 
+172.31.54.3
+C
+. 
+10.55.33.32
+D
+. 
+198.168.55.45
+160.
+ Who is the governing body that distributes public IP address?
+A
+. 
+IANA
+B
+. 
+RFC
+C
+. 
+IAB
+D
+. 
+IETF
+161.
+ Why is IPv6 needed in the world today?
+A
+. 
+It does not require NAT to operate.
+B
+. 
+The IPv4 address space is exhausted.
+C
+. 
+IPv4 is considered legacy, and IPv6 is the replacement.
+D
+. 
+IPv6 does not require subnetting.
+162.
+ How many bits is an IPv6 address?
+
+A
+. 
+32 bits
+B
+. 
+64 bits
+C
+. 
+128 bits
+D
+. 
+256 bits
+163.
+ 
+You have two facilities and both use IPv6 addressing internally.
+However, both facilities are connected to the Internet via IPv4. What is
+one recommended method you can use to communicate between the
+facilities over the Internet?
+A
+. 
+Dedicated leased line
+B
+. 
+Frame Relay
+C
+. 
+Dual stack
+D
+. 
+6to4 tunnel
+164.
+ Which command is required on a router to support IPv6 static
+addressing?
+A
+. 
+Router(config)#
+ipv6 address
+B
+. 
+Router(config)#
+ipv6 routing
+C
+. 
+Router(config)#
+ipv6 enable
+D
+. 
+Router(config)#
+ipv6 unicast-routing
+165.
+ Which command would you use on an interface to set the IPv6
+address?
+A
+. 
+Router(config-if)#
+ip address
+2001:0db8:85aa:0000:0000:8a2e:1343:1337
+B
+. 
+Router(config-if)#
+ipv6 address
+2001:0db8:85aa:0000:0000:8a2e:1343:1337
+C
+. 
+Router(config-if)#
+ip address
+2001:0db8:85aa:0000:0000:8a2e:1343:1337/64
+D
+. 
+Router(config-if)#
+ipv6 address
+2001:0db8:85aa:0000:0000:8a2e:1343:1337/64
+166.
+ Which field of the IPv6 header allows for a dual-stack host to decide
+which stack to process the packet in?
+Technet24.ir
+
+A
+. 
+Version field
+B
+. 
+Flow label
+C
+. 
+Source address
+D
+. 
+Destination address
+167.
+ Which command would set the IPv6 default route for a router to
+interface s0/0?
+A
+. 
+Router(config)#
+ip route 0.0.0.0/0 s0/0
+B
+. 
+Router(config)#
+ipv6 route 0.0.0.0/0 s0/0
+C
+. 
+Router(config)#
+ipv6 unicast-route ::0/0 s0/0
+D
+. 
+Router(config)#
+ipv6 route ::0/0 s0/0
+168.
+ You want to see all of the interfaces on a router configured with IPv6.
+Which command would you use?
+A
+. 
+Router#
+show ipv6 interfaces brief
+B
+. 
+Router#
+show ip interfaces brief
+C
+. 
+Router#
+show interfaces status
+D
+. 
+Router#
+show ip addresses
+169.
+ 
+Which dynamic routing protocol(s) can be used with IPv6?
+A
+. 
+RIPng
+B
+. 
+OSPFv3
+C
+. 
+EIGRPv6
+D
+. 
+All of the above
+170.
+ You need to see all routes in the routing table for only IPv6. Which
+command will achieve this?
+A
+. 
+Router#
+show route
+B
+. 
+Router#
+show ip route
+C
+. 
+Router#
+show ipv6 route
+D
+. 
+Router#
+show route ipv6
+
+171.
+ Which is a valid shortened IPv6 address for
+2001:0db8:0000:0000:0000:8a2e:0000:1337?
+A
+. 
+2001:db8:0000::8a2e::1337
+B
+. 
+2001:db8:::8a2e:0000:1337
+C
+. 
+2001:db8::8a2e::1337
+D
+. 
+2001:db8::8a2e:0:1337
+172.
+ Which is the correct expanded IPv6 address of 2001::456:0:ada4?
+A
+. 
+2001:0000:0000:0456:0000:ada4
+B
+. 
+2001:0000:0000:0000:456:0000:ada4
+C
+. 
+2001:0000:0000:0000:0000:0456:0000:ada4
+D
+. 
+2001:0000:0000:0000:0456:0000:0000:ada4
+173.
+ In the IPv6 address of
+2001.0db8:1234:0016:0023:8080:2345:88ab/64, what is the subnet
+quartet?
+A
+. 
+1234
+B
+. 
+0016
+C
+. 
+0023
+D
+. 
+8080
+174.
+ What is the network prefix for the IPv6 address of
+2001.db8::8080:2345:88ab/64?
+A
+. 
+2001:db8::/64
+B
+. 
+2001:0db8:8080:2345/64
+C
+. 
+2001:0db8:0000:8080/64
+D
+. 
+2001:0db8:0000:2345/64
+175.
+ 
+You need to verify connectivity to an IPv6 address of
+fc00:0000:0000:0000:0000:0000: 0000:0004. Which command would
+you use?
+Technet24.ir
+
+A
+. 
+Router#
+ping fc00::4
+B
+. 
+Router#
+ping fc::4
+C
+. 
+Router#
+ping6 fc00::4
+D
+. 
+Router#
+ping6 fc::4
+176.
+ Which address is a valid IPv6 host address?
+A
+. 
+fe8::1
+B
+. 
+2001:db8::2435
+C
+. 
+ff02::1
+D
+. 
+::1
+177.
+ Which statement is true of an IPv6 address?
+A
+. 
+The first 48 bits is the subnet ID.
+B
+. 
+All IPv6 addresses have a built-in loopback.
+C
+. 
+A single interface can be assigned multiple IPv6 addresses.
+D
+. 
+The IPv6 address plan allows for doubling the amount of IPv4
+addresses.
+178.
+ You have been given an IPv6 prefix of 2001:0db8:aabb:5/52. How
+many subnets can you have from this address?
+A
+. 
+8,192
+B
+. 
+4,096
+C
+. 
+1,024
+D
+. 
+512
+179.
+ You work for an ISP. The American Registry for Internet Numbers
+(ARIN) has given you the 2001:0db8:8/34 IP address block. You need to
+figure out how many /48 blocks you can assign to your customers.
+A
+. 
+32,768
+B
+. 
+16,384
+C
+. 
+8,192
+D
+. 
+4,096
+
+180.
+ How many bits are contained in each field of an IPv6 address
+between the colons?
+A
+. 
+8 bits
+B
+. 
+32 bits
+C
+. 
+4 bits
+D
+. 
+16 bits
+181.
+ 
+Which command would be used inside of an interface to configure
+SLAAC?
+A
+. 
+Router(config-if)#
+enable slaac
+B
+. 
+Router(config-if)#
+ipv6 address slaac
+C
+. 
+Router(config-if)#
+ipv6 address dhcp
+D
+. 
+Router(config-if)#
+ipv6 address autoconfig
+182.
+ Which address is used for RS (Router Solicitation) messages?
+A
+. 
+ff00::2
+B
+. 
+ff02::2
+C
+. 
+ff00::1
+D
+. 
+ff02::1
+183.
+ Which address is used for RA (Router Advertisement) messages?
+A
+. 
+ff00:2
+B
+. 
+ff02:2
+C
+. 
+ff00:1
+D
+. 
+ff02:1
+184.
+ What protocol/process in IPv6 replaces the IPv4 ARP process?
+A
+. 
+NDP (NS/NA)
+B
+. 
+DAD (NS/NA)
+C
+. 
+SLAAC (RS/RA)
+D
+. 
+ARPv6(NS/NA)
+Technet24.ir
+
+185.
+ Which layer 3 protocol allows for NDP to process SLAAC?
+A
+. 
+IGMP
+B
+. 
+ICMP
+C
+. 
+ICMPv6
+D
+. 
+IGMPv6
+186.
+ What are stateless DHCPv6 servers used for?
+A
+. 
+Configuring the default gateway
+B
+. 
+Configuring the IPv6 address
+C
+. 
+Configuring the IPv6 prefix length
+D
+. 
+Configuring the DNS server address
+187.
+ Which command will configure an IPv6 DHCP relay agent for an
+interface?
+A
+. 
+Router(config-if)#
+ipv6 helper 2001:db8:1234::1
+B
+. 
+Router(config-if)#
+ipv6 dhcp helper 2001:db8:1234::1
+C
+. 
+Router(config-if)#
+ipv6 dhcp 2001:db8:1234::1
+D
+. 
+Router(config-if)#
+ipv6 dhcp relay destination 2001:db8:1234::1
+188.
+ 
+Which mechanism in IPv6 allows for SLAAC to avoid duplicating an
+IPv6 address?
+A
+. 
+NDP (NS/NA)
+B
+. 
+DAD (NS/NA)
+C
+. 
+SLAAC (RS/RA)
+D
+. 
+ARPv6(NS/NA)
+189.
+ What is the process of stateful DHCPv6 for IPv6?
+A
+. 
+Discover, Offer, Request, Acknowledge
+B
+. 
+Solicit, Advertise, Request, Reply
+C
+. 
+Neighbor Solicitation, Neighbor Advertisement
+D
+. 
+Router Solicitation, Router Advertisement
+
+190.
+ When SLAAC is performed on an IPv6 host, which process happens
+first?
+A
+. 
+A Router Solicitation message is sent from the client.
+B
+. 
+A Router Advertisement message is sent from the router.
+C
+. 
+A link-local address is auto-configured on the client.
+D
+. 
+DAD is performed on the IPv6 address.
+191.
+ 
+Which address is a global unicast address?
+A
+. 
+fe80:db80:db01:ada0:1112::1
+B
+. 
+2005:acd:234:1132::43
+C
+. 
+fd00:ac34:34b:8064:234a::7
+D
+. 
+ff00:101:4ab0:3b3e::10
+192.
+ Which address is a link-local address?
+A
+. 
+fe80:db80:db01:ada0:1112::1
+B
+. 
+2005:acd:234:1132::43
+C
+. 
+fd00:ac34:34b:8064:234a::7
+D
+. 
+ff00:101:4ab0:3b3e::10
+193.
+ For global unicast addresses, which part of the address is allotted by
+the RIR, or Regional Internet Registry?
+A
+. 
+First 23 bits
+B
+. 
+First 32 bits
+C
+. 
+First 48 bits
+D
+. 
+First 64 bits
+194.
+ Which address is a unique-local address?
+A
+. 
+fe80:db80:db01:ada0:1112::1
+B
+. 
+2005:acd:234:1132::43
+C
+. 
+fd00:ac34:34b:8064:234a::7
+D
+. 
+ff00::10
+Technet24.ir
+
+195.
+ Which address is a multicast address?
+A
+. 
+fe80:db80:db01:ada0:1112::1
+B
+. 
+2005:acd:234:1132::43
+C
+. 
+fd00:ac34:34b:8064:234a::7
+D
+. 
+ff00::10
+196.
+ Which IPv6 address type is similar to IPv4 RFC 1918 addresses?
+A
+. 
+Link-local addresses
+B
+. 
+Global unicast addresses
+C
+. 
+EUI-64 addresses
+D
+. 
+Anycast addresses
+197.
+ Which command would configure a single anycast address on a
+router’s interface?
+A
+. 
+Router(config-if)#
+ip address 2001:db8:1:1:1::12/64
+B
+. 
+Router(config-if)#
+ipv6 address 2001:db8:1:1:1::12/64 anycast
+C
+. 
+Router(config-if)#
+ipv6 anycast address 2001:db8:1:1:1::12/128
+D
+. 
+Router(config-if)#
+ipv6 address 2001:db8:1:1:1::12/128 anycast
+198.
+ 
+You are using the EUI-64 method of allocating the host portion of the
+IPv6 addresses. The MAC address of the host is f423:5634:5623. Which is
+the correct IP address that will be calculated for a network ID of
+fd00:1:1::?
+A
+. 
+fd00:0001:0001:0000:f623:56ff:fe34:5623/64
+B
+. 
+fd00:0001:0001:0000:f423:56ff:fe34:5623/64
+C
+. 
+fd00:0001:0001:0000:fffe:f623:5634:5623/64
+D
+. 
+fd00:0001:0001:0000:f623:56ff:ff34:5623/64
+199.
+ Which address is a EUI-64 generated address?
+
+A
+. 
+2001:db8:33::f629:58fe:ff35:5893/64
+B
+. 
+fd00:4:33::f680:45ca:ac3b:5a73/64
+C
+. 
+2001:db8:aa::f654:56ff:fe34:a633/64
+D
+. 
+2001:db8:17:fffe:f623::ff34:5623/64
+200.
+ Which command would use the MAC address for the host portion of
+the IPv6 address on a router interface?
+A
+. 
+Router(config-if)#
+ip address eui-64 2001:db8:1234::/64
+B
+. 
+Router(config-if)#
+ip address 2001:db8:1234::/64 mac-address
+C
+. 
+Router(config-if)#
+ipv6 address 2001:db8:1234::/64 eui-64
+D
+. 
+Router(config-if)#
+ipv6 address 2001:db8:1234::/64 mac
+201.
+ You are using the EUI-64 method of allocating the host portion of the
+IPv6 addresses. The MAC address of the host is e5ee:f556:2434. What is
+the correct IP address that will be calculated for a network ID of
+fd00:2:2::?
+A
+. 
+fd00:2:2::e9ee:f5ff:fe56:2434/64
+B
+. 
+fd00:2:2::fffe:e5ee:f556:2434/64
+C
+. 
+fd00:2:2::e7ee:f5ff:fe56:2434/64
+D
+. 
+fd00:2:2::e2ee:f5ff:fe56:2434/64
+202.
+ Which command would you use to find the joined multicast groups
+for an IPv6 interface?
+A
+. 
+Router#
+show ipv6 multicast
+B
+. 
+Router#
+show ipv6 interface gi 0/1
+C
+. 
+Router#
+show ipv6 routes
+D
+. 
+Router#
+show mutlicast
+203.
+ Which type of IPv6 addressing allows for a one-to-many address for
+IP services?
+Technet24.ir
+
+A
+. 
+Multicast address
+B
+. 
+Anycast address
+C
+. 
+Unicast address
+D
+. 
+Localcast address
+204.
+ What type of address is ::1/128?
+A
+. 
+Multicast address
+B
+. 
+Anycast address
+C
+. 
+Unicast address
+D
+. 
+Loopback address
+205.
+ Which type of IPv6 addressing allows for a one-to-closest address for
+IP services?
+A
+. 
+Multicast address
+B
+. 
+Anycast address
+C
+. 
+Unicast address
+D
+. 
+Loopback address
+206.
+ Which type of automatic address assignment will not allow for EUI-
+64 addressing?
+A
+. 
+Static addressing
+B
+. 
+SLAAC addressing
+C
+. 
+Stateful DHCPv6 addressing
+D
+. 
+Stateless DHCPv6 addressing
+207.
+ 
+Which type of address always uses the EUI-64 addressing
+mechanism?
+A
+. 
+Link-local addresses
+B
+. 
+Global unicast addresses
+C
+. 
+SLAAC addresses
+D
+. 
+Anycast addresses
+
+208.
+ You have been given an IPv6 address of 2030:3454:aabb::/64. What
+can you conclude?
+A
+. 
+The IP address is a unique-local address.
+B
+. 
+The IP has been given to you by the Regional Internet Registry.
+C
+. 
+The IP has been given to you by the Internet service provider.
+D
+. 
+The IP has been given to you by IANA.
+209.
+ You are using the EUI-64 method of allocating the host portion of the
+IPv6 addresses. The MAC address of the host is 401e:32e4:ff03. What is
+the correct IP address that will be calculated for a network ID of
+fd00:3:3::?
+A
+. 
+fd00:3:3::fffe:421e:32e4:ff03/64
+B
+. 
+fd00:3:3::421e:32ff:fee4:ff03/64
+C
+. 
+fd00:3:3::401e:32ff:fee4:ff03/64
+D
+. 
+fd00:3:3::421e:32ff:ffe4:ff03/64
+210.
+ Which is a valid unique-local address?
+A
+. 
+fec0:1111:2e3c:eab3::5/64
+B
+. 
+fe80:d2e1:e24:63::25/64
+C
+. 
+fd00:1edc:bae:eea4::2478/64
+D
+. 
+fc00:4fec:ecf2:343::e44/64
+Technet24.ir
+
+Chapter 2
+LAN Switching Technologies (Domain 2)
+THE CCNA EXAM TOPICS COVERED IN THIS PRACTICE TEST
+INCLUDE THE FOLLOWING:
+ 
+2.0 LAN Switching Technologies (ICND1) (ICND2)
+2.1 Describe and verify switching concepts (ICND1)
+2.1a MAC learning and aging (ICND1)
+2.1b Frame switching (ICND1)
+2.1c Frame flooding (ICND1)
+2.1d MAC address table (ICND1)
+2.2 Interpret Ethernet frame format (ICND1)
+2.3 Troubleshoot interface and cable issues (collisions, errors, duplex,
+speed) (ICND1)
+2.4 Configure, verify, and troubleshoot VLANs (normal/extended
+range) spanning multiple switches (ICND1) (ICND2)
+2.4a Access ports (data and voice) (ICND1) (ICND2)
+2.4b Default VLAN (ICND1) (ICND2)
+2.5 Configure, verify, and troubleshoot interswitch connectivity
+(ICND1) (ICND2)
+2.5a Trunk ports (ICND1)
+2.5b Add and remove VLANs on a trunk (ICND2)
+2.5c DTP, VTP (v1&v2), and 802.1Q (ICND1) (ICND2)
+2.5d Native VLAN (ICND1)
+2.6 Configure, verify, and troubleshoot STP protocols (ICND2)
+2.6a STP mode (PVST+ and RPVST+) (ICND2)
+2.6b STP root bridge selection (ICND2)
+2.7 Configure, verify, and troubleshoot STP related optional features
+(ICND2)
+Technet24.ir
+
+2.7a PortFast (ICND2)
+2.7b BPDU guard (ICND2)
+2.8 Configure and verify Layer 2 protocols (ICND1)
+2.8a Cisco Discovery Protocol (ICND1)
+2.8b LLDP (ICND1)
+2.9 Configure, verify, and troubleshoot (Layer 2/Layer 3)
+EtherChannel (ICND2)
+2.9a Static (ICND2)
+2.9b PAGP (ICND2)
+2.9c LACP (ICND2)
+2.10 Describe the benefits of switch stacking and chassis aggregation
+(ICND2)
+1.
+ 
+Which benefit to a LAN does a switch provide?
+A
+. 
+Breaks up broadcast domains
+B
+. 
+Breaks up collision domains
+C
+. 
+Forces full-duplex on all ports
+D
+. 
+Allows for a fast uplink port
+2.
+ Where are MAC address tables stored?
+A
+. 
+Flash
+B
+. 
+CPU registers
+C
+. 
+RAM
+D
+. 
+NVRAM
+3.
+ Which advantage(s) are gained using switches?
+A
+. 
+Low latency
+B
+. 
+Software switching
+C
+. 
+High cost
+D
+. 
+All of the above
+
+4.
+ How do switches forward frames only to the destination computer?
+A
+. 
+Forward filter decisions based on the MAC address table
+B
+. 
+Forward filter decisions based on the routing table
+C
+. 
+Flooding ports for the destination MAC address
+D
+. 
+Broadcasting for the MAC address
+5.
+ Which mechanism does a switch employ to stop switching loops?
+A
+. 
+Port channels
+B
+. 
+Spanning Tree Protocol
+C
+. 
+Ether channels
+D
+. 
+Trunks
+6.
+ How are MAC addresses learned and associated with the port?
+A
+. 
+Destination MAC address learning
+B
+. 
+Source MAC address learning
+C
+. 
+Port listen/learning
+D
+. 
+Frame type learning
+7.
+ 
+How many broadcast domains are present in the network in the
+following exhibit?
+Technet24.ir
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+A.
+ 
+One
+ 
+broadcast
+ 
+domain
+B.
+ 
+Two
+ 
+broadcast
+ 
+domains
+C.
+ 
+Three
+ 
+broadcast
+ 
+domains
+D.
+ 
+Seven
+ 
+broadcast
+ 
+domains
+8.
+ 
+How
+ 
+many
+ 
+potential
+ 
+collision
+ 
+domains
+ 
+are
+ 
+present
+ 
+in
+ 
+the
+ 
+network
+ 
+in
+ 
+the
+ 
+following
+ 
+exhibit?
+Technet24.ir
+
+A
+. 
+One collision domain
+B
+. 
+Two collision domains
+C
+. 
+Three collision domains
+D
+. 
+Seven collision domains
+9.
+ 
+In the following exhibit, what will happen first at the switch when
+Computer A wants to sends Computer B a message?
+Technet24.ir
+
+
+[Note: PDF has 637 pages, only first 100 pages extracted]

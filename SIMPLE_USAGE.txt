@@ -1,0 +1,20 @@
+SIMPLE FAME CHAT INTERFACE
+==========================
+
+Just double-click: talk_to_fame_simple.bat
+
+OR
+
+Run: python fame_simple.py
+
+That's it. No GUI, no complexity, just type and talk.
+
+Commands:
+- Type normally to chat with FAME
+- "list questions" - see unanswered questions
+- "answer question 22" - FAME answers question 22
+- "answer all" - FAME answers all questions
+- "exit" - quit
+
+Simple and works.
+

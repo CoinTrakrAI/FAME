@@ -1,0 +1,3282 @@
+www.hellodigi.ir
+
+ 
+Cybersecurity Analyst (CSA+™)
+www.hellodigi.ir
+
+Study Guide
+Exam CS0-001
+Mike Chapple
+David Seidl
+www.hellodigi.ir
+
+    
+   
+   
+   
+   
+    
+   
+   
+      
+  
+  
+    
+  
+     
+          
+   
+ 
+  
+  
+      
+                  
+           
+                
+              
+             
+             
+                
+  
+             
+               
+             
+              
+                
+              
+              
+                
+                   
+               
+              
+                  
+               Se
+nior
+ Ac
+quisitions
+ Ed
+itor:
+ Ke
+nyon
+ Br
+own
+Development
+ Ed
+itor:
+ Da
+vid
+ Cl
+ark
+Technical
+ Ed
+itor:
+ Ro
+bin
+ Ab
+ernathy
+Production
+ Ed
+itor:
+ Re
+becca
+ An
+derson
+Copy
+ Ed
+itor:
+ El
+izabeth
+ We
+lch
+Editorial
+ Ma
+nager:
+ Ma
+ry
+ Be
+th
+ Wa
+kefield
+Production
+ Ma
+nager:
+ Ka
+thleen
+ Wi
+sor
+Executive
+ Ed
+itor:
+ Ji
+m
+ Mi
+natel
+Book
+ De
+signers:
+ Ju
+dy
+ Fu
+ng
+ an
+d
+ Bi
+ll
+ Gi
+bson
+Proofreader:
+ Ki
+m
+ Wi
+mpsett
+Indexer:
+ Te
+d
+ La
+ux
+Project
+ Co
+ordinator,
+ Co
+ver:
+ Br
+ent
+ Sa
+vage
+Cover
+ De
+signer:
+ Wi
+ley
+Cover
+ Im
+age:
+ ©G
+etty
+ Im
+ages
+ In
+c./Jeremy
+ Wo
+odhouse
+Copyright
+ © 20
+17
+ by
+ Jo
+hn
+ Wi
+ley
+ & So
+ns,
+ In
+c.,
+ In
+dianapolis,
+ In
+diana,
+Published
+ si
+multaneously
+ in
+ Ca
+nada
+ISBN:
+ 97
+8-1-119-34897-9
+ISBN:
+ 97
+8-1-119-34991-4
+ (e
+bk.)
+ISBN:
+ 97
+8-1-119-34988-4
+ (e
+bk.)
+Manufactured
+ in
+ th
+e
+ Un
+ited
+ St
+ates
+ of
+ Am
+erica
+No
+ pa
+rt
+ of
+ th
+is
+ pu
+blication
+ ma
+y
+ be
+ re
+produced,
+ st
+ored
+ in
+ a re
+trieval
+ sy
+stem
+ or
+ tr
+ansmitted
+ in
+ an
+y
+ fo
+rm
+ or
+ 
+by
+ an
+y
+ me
+ans,
+ el
+ectronic,
+ me
+chanical,
+ ph
+otocopying,
+ re
+cording,
+ sc
+anning
+ or
+ ot
+herwise,
+ ex
+cept
+ as
+ 
+pe
+rmitted
+ un
+der
+ Se
+ctions
+ 10
+7
+ or
+ 10
+8
+ of
+ th
+e
+ 19
+76
+ Un
+ited
+ St
+ates
+ Co
+pyright
+ Ac
+t,
+ wi
+thout
+ ei
+ther
+ th
+e
+ pr
+ior
+ 
+wr
+itten
+ pe
+rmission
+ of
+ th
+e
+ Pu
+blisher,
+ or
+ au
+thorization
+ th
+rough
+ pa
+yment
+ of
+ th
+e
+ ap
+propriate
+ pe
+r-copy
+ fe
+e
+ to
+ 
+th
+e
+ Co
+pyright
+ Cl
+earance
+ Ce
+nter,
+ 22
+2
+ Ro
+sewood
+ Dr
+ive,
+ Da
+nvers,
+ MA
+ 01
+923,
+ (9
+78)
+ 75
+0-8400,
+ fa
+x
+ (9
+78)
+646-8600.
+ Re
+quests
+ to
+ th
+e
+ Pu
+blisher
+ fo
+r
+ pe
+rmission
+ sh
+ould
+ be
+ ad
+dressed
+ to
+ th
+e
+ Pe
+rmissions
+ De
+partment,
+ 
+Jo
+hn
+ Wi
+ley
+ & So
+ns,
+ In
+c.,
+ 11
+1
+ Ri
+ver
+ St
+reet,
+ Ho
+boken,
+ NJ
+ 07
+030,
+ (2
+01)
+ 74
+8-6011,
+ fa
+x
+ (2
+01)
+ 74
+8-6008,
+ or
+ 
+on
+line
+ at
+ ht
+tp://www.wiley.com/go/permissions .
+Limit
+ of
+ Li
+ability/Disclaimer
+ of
+ Wa
+rranty:
+ Th
+e
+ pu
+blisher
+ an
+d
+ th
+e
+ au
+thor
+ ma
+ke
+ no
+ re
+presentations
+ or
+ 
+wa
+rranties
+ wi
+th
+ re
+spect
+ to
+ th
+e
+ ac
+curacy
+ or
+ co
+mpleteness
+ of
+ th
+e
+ co
+ntents
+ of
+ th
+is
+ wo
+rk
+ an
+d
+ sp
+ecifically
+ 
+di
+sclaim
+ al
+l
+ wa
+rranties,
+ in
+cluding
+ wi
+thout
+ li
+mitation
+ wa
+rranties
+ of
+ fi
+tness
+ fo
+r
+ a pa
+rticular
+ pu
+rpose.
+ No
+ 
+wa
+rranty
+ ma
+y
+ be
+ cr
+eated
+ or
+ ex
+tended
+ by
+ sa
+les
+ or
+ pr
+omotional
+ ma
+terials.
+ Th
+e
+ ad
+vice
+ an
+d
+ st
+rategies
+ 
+co
+ntained
+ he
+rein
+ ma
+y
+ no
+t
+ be su
+itable
+ fo
+r
+ ev
+ery
+ si
+tuation.
+ Th
+is
+ wo
+rk
+ is so
+ld
+ wi
+th
+ th
+e
+ un
+derstanding
+ th
+at
+ 
+th
+e
+ pu
+blisher
+ is no
+t
+ en
+gaged
+ in re
+ndering
+ le
+gal,
+ ac
+counting,
+ or ot
+her
+ pr
+ofessional
+ se
+rvices.
+ If pr
+ofessional
+ 
+as
+sistance
+ is re
+quired,
+ th
+e
+ se
+rvices
+ of a co
+mpetent
+ pr
+ofessional
+ pe
+rson
+ sh
+ould
+ be so
+ught.
+ Ne
+ither
+ th
+e
+ 
+pu
+blisher
+ no
+r
+ th
+e
+ au
+thor
+ sh
+all
+ be li
+able
+ fo
+r
+ da
+mages
+ ar
+ising
+ he
+refrom.
+ Th
+e
+ fa
+ct
+ th
+at
+ an or
+ganization
+ or 
+We
+b
+ si
+te
+ is re
+ferred
+ to in th
+is
+ wo
+rk
+ as a ci
+tation
+ an
+d/or
+ a po
+tential
+ so
+urce
+ of fu
+rther
+ in
+formation
+ do
+es
+ no
+t
+ 
+me
+an
+ th
+at
+ th
+e
+ au
+thor
+ or th
+e
+ pu
+blisher
+ en
+dorses
+ th
+e
+ in
+formation
+ th
+e
+ or
+ganization
+ or We
+b
+ si
+te
+ ma
+y
+ 
+pr
+ovide
+ or re
+commendations
+ it ma
+y
+ ma
+ke.
+ Fu
+rther,
+ re
+aders
+ sh
+ould
+ be aw
+are
+ th
+at
+ In
+ternet
+ We
+b
+ si
+tes
+ 
+li
+sted
+ in th
+is
+ wo
+rk
+ ma
+y
+ ha
+ve
+ ch
+anged
+ or di
+sappeared
+ be
+tween
+ wh
+en
+ th
+is
+ wo
+rk
+ wa
+s
+ wr
+itten
+ an
+d
+ wh
+en
+ it is
+r
+ead.
+For
+ ge
+neral
+ in
+formation
+ on ou
+r
+ ot
+her
+ pr
+oducts
+ an
+d
+ se
+rvices
+ or to ob
+tain
+ te
+chnical
+ su
+pport,
+ pl
+ease
+ co
+ntact
+www.hellodigi.ir
+
+our Customer Care Department within the U.S. at (877) 762-2974, outside the U.S. at (317) 572-3993 or
+fax (317) 572-4002.
+Wiley publishes in a variety of print and electronic formats and by print-on-demand. Some material
+included with standard print versions of this book may not be included in e-books or in print-on-demand.
+If this book refers to media such as a CD or DVD that is not included in the version you purchased, you
+may download this material at http://booksupport.wiley.com. For more information about Wiley
+products, visit www.wiley.com .
+Library of Congress Control Number:  2017935704
+TRADEMARKS: Wiley, the Wiley logo, and the Sybex logo are trademarks or registered trademarks of
+John Wiley & Sons, Inc. and/or its affiliates, in the United States and other countries, and may not be
+used without written permission. CompTIA and CSA+ are trademarks or registered trademarks of
+CompTIA Properties, LLC. All other trademarks are the property of their respective owners. John Wiley
+& Sons, Inc. is not associated with any product or vendor mentioned in this book.
+This eBook was posted by AlenMiler on AvaxHome!
+Many New eBooks in my Blog:  http://avxhome.in/blogs/AlenMilerMirror:  https://avxhome.unblocked.tw/blogs/AlenMiler
+www.hellodigi.ir
+
+www.hellodigi.ir
+
+I dedicate this book to my father, who was a role model of the value of hard
+work, commitment to family, and the importance of doing the right thing.
+Rest in peace, Dad.
+—Mike Chapple
+This book is dedicated to Ric Williams, my friend, mentor, and partner in
+crime through my first forays into the commercial IT world. Thanks for
+making my job as a “network janitor” one of the best experiences of my life.
+—David Seidl
+www.hellodigi.ir
+
+www.hellodigi.ir
+
+Acknowledgments
+Books like this involve work from many people, and as authors, we truly
+appreciate the hard work and dedication that the team at Wiley shows. We
+would especially like to thank senior acquisitions editor Kenyon Brown. We
+have worked with Ken on multiple projects and consistently enjoy our work
+with him.
+We also greatly appreciated the editing and production team for the book,
+including David Clark, our developmental editor, who brought years of
+experience and great talent to the project, Robin Abernathy, our technical
+editor, who provided insightful advice and gave wonderful feedback
+throughout the book, and Becca Anderson, our production editor, who guided
+us through layouts, formatting, and final cleanup to produce a great book. We
+would also like to thank the many behind-the-scenes contributors, including
+the graphics, production, and technical teams who make the book and
+companion materials into a finished product.
+Our agent, Carole Jelen of Waterside Productions, continues to provide us
+with wonderful opportunities, advice, and assistance throughout our writing
+careers.
+Finally, we would like to thank our families and significant others who
+support us through the late evenings, busy weekends, and long hours that a
+book like this requires to write, edit, and get to press.
+www.hellodigi.ir
+
+www.hellodigi.ir
+
+About the Authors
+Mike Chapple, Ph.D., CSA+ , is author of the best-selling CISSP (ISC)2
+Certified Information Systems Security Professional Official Study Guide
+(Sybex, 2015) and the CISSP (ISC)2 Official Practice Tests  (Sybex 2016). He is
+an information security professional with two decades of experience in higher
+education, the private sector, and government.
+Mike currently serves as senior director for IT Service Delivery at the
+University of Notre Dame. In this role, he oversees the information security,
+data governance, IT architecture, project management, strategic planning, and
+product management functions for Notre Dame. Mike also serves as
+Associate Teaching Professor in the university’s IT, Analytics, and Operations
+department, where he teaches undergraduate and graduate courses on
+cybersecurity, data management, and business analytics.
+Before returning to Notre Dame, Mike served as executive vice president and
+chief information officer of the Brand Institute, a Miami-based marketing
+consultancy. Mike also spent four years in the information security research
+group at the National Security Agency and served as an active duty
+intelligence officer in the U.S. Air Force.
+Mike is technical editor for Information Security Magazine  and has written
+more than 25 books. He earned both his B.S. and Ph.D. degrees from Notre
+Dame in computer science and engineering. Mike also holds an M.S. in
+computer science from the University of Idaho and an MBA from Auburn
+University. Mike holds the Cybersecurity Analyst+ (CSA+), Security+, and
+Certified Information Systems Security Professional (CISSP) certifications.
+David Seidl  is the senior director for Campus Technology Services at the
+University of Notre Dame. As the senior director for CTS, David is responsible
+for central platform and operating system support, database administration
+and services, identity and access management, application services, email and
+digital signage, and document management.
+During his over 20 years in information technology, he has served in a variety
+of leadership, technical, and information security roles, including leading
+Notre Dame’s information security team as Notre Dame’s director of
+information security. He currently teaches a popular course on networking
+and security for Notre Dame’s Mendoza College of Business and has written
+books on security certification and cyberwarfare, including co-authoring
+www.hellodigi.ir
+
+CISSP (ISC)2 Official Practice Tests  (Sybex 2016).
+David holds a bachelor’s degree in communication technology and a master’s
+degree in information security from Eastern Michigan University, as well as
+CISSP, GPEN, and GCIH certifications.
+www.hellodigi.ir
+
+www.hellodigi.ir
+
+CONTENTS
+Acknowledgments
+About the Authors
+Introduction
+What Does This Book Cover?
+Objectives Map for CompTIA Cybersecurity Analyst (CSA+) Exam CS0-
+001
+Objectives Map
+Assessment Test
+Answer to the Assessment Test
+Chapter 1 Defending Against Cybersecurity Threats
+Cybersecurity Objectives
+Evaluating Security Risks
+Building a Secure Network
+Secure Endpoint Management
+Penetration Testing
+Reverse Engineering
+Summary
+Exam Essentials
+Lab Exercises
+Review Questions
+Chapter 2 Reconnaissance and Intelligence Gathering
+Footprinting
+Passive Footprinting
+Gathering Organizational Intelligence
+Detecting, Preventing, and Responding to Reconnaissance
+Summary
+Exam Essentials
+Lab Exercises
+Review Questions
+www.hellodigi.ir
+
+Chapter 3 Designing a Vulnerability Management Program
+Identifying Vulnerability Management Requirements
+Configuring and Executing Vulnerability Scans
+Developing a Remediation Workflow
+Overcoming Barriers to Vulnerability Scanning
+Summary
+Exam Essentials
+Lab Exercises
+Review Questions
+Chapter 4 Analyzing Vulnerability Scans
+Reviewing and Interpreting Scan Reports
+Validating Scan Results
+Common Vulnerabilities
+Summary
+Exam Essentials
+Lab Exercises
+Review Questions
+Chapter 5 Building an Incident Response Program
+Security Incidents
+Phases of Incident Response
+Building the Foundation for Incident Response
+Creating an Incident Response Team
+Coordination and Information Sharing
+Classifying Incidents
+Summary
+Exam Essentials
+Lab Exercises
+Review Questions
+Chapter 6 Analyzing Symptoms for Incident Response
+Analyzing Network Events
+www.hellodigi.ir
+
+Handling Network Probes and Attacks
+Investigating Host Issues
+Investigating Service and Application Issues
+Summary
+Exam Essentials
+Lab Exercises
+Review Questions
+Chapter 7 Performing Forensic Analysis
+Building a Forensics Capability
+Understanding Forensic Software
+Conducting a Forensic Investigation
+Forensic Investigation: An Example
+Summary
+Exam Essentials
+Lab Exercises
+Review Questions
+Chapter 8 Recovery and Post-Incident Response
+Containing the Damage
+Incident Eradication and Recovery
+Wrapping Up the Response
+Summary
+Exam Essentials
+Lab Exercises
+Review Questions
+Chapter 9 Policy and Compliance
+Understanding Policy Documents
+Complying with Laws and Regulations
+Adopting a Standard Framework
+Implementing Policy-Based Controls
+Security Control Verification and Quality Control
+www.hellodigi.ir
+
+Summary
+Exam Essentials
+Lab Exercises
+Review Questions
+Chapter 10 Defense-in-Depth Security Architectures
+Understanding Defense in Depth
+Implementing Defense in Depth
+Analyzing Security Architecture
+Summary
+Exam Essentials
+Lab Exercises
+Review Questions
+Chapter 11 Identity and Access Management Security
+Understanding Identity
+Threats to Identity and Access
+Identity as a Security Layer
+Understanding Federated Identity and Single Sign-On
+Review Questions
+Chapter 12 Software Development Security
+Understanding the Software Development Life Cycle
+Designing and Coding for Security
+Software Security Testing
+Summary
+Exam Essentials
+Lab Exercises
+Review Questions
+Chapter 13 Cybersecurity Toolkit
+Host Security Tools
+Monitoring and Analysis Tools
+Scanning and Testing Tools
+www.hellodigi.ir
+
+Network Security Tools
+Web Application Security Tools
+Forensics Tools
+Summary
+Appendix A Answers to the Review Questions
+Chapter 1: Defending Against Cybersecurity Threats
+Chapter 2: Reconnaissance and Intelligence Gathering
+Chapter 3: Designing a Vulnerability Management Program
+Chapter 4: Analyzing Vulnerability Scans
+Chapter 5: Building an Incident Response Program
+Chapter 6: Analyzing Symptoms for Incident Response
+Chapter 7: Performing Forensic Analysis
+Chapter 8: Recovery and Post-Incident Response
+Chapter 9: Policy and Compliance
+Chapter 10: Defense-in-Depth Security Architectures
+Chapter 11: Identity and Access Management Security
+Chapter 12: Software Development Security
+Appendix B Answers to the Lab Exercises
+Chapter 1: Defending Against Cybersecurity Threats
+Chapter 2: Reconnaissance and Intelligence Gathering
+Chapter 4: Analyzing Vulnerability Scans
+Chapter 5: Building an Incident Response Program
+Chapter 6: Analyzing Symptoms for Incident Response
+Chapter 7: Performing Forensic Analysis
+Chapter 8: Recovery and Post-Incident Response
+Chapter 9: Policy and Compliance
+Chapter 10: Defense-in-Depth Security Architectures
+Chapter 11: Identity and Access Management Security
+Chapter 12: Software Development Security
+Index
+www.hellodigi.ir
+
+Advert
+EULA
+www.hellodigi.ir
+
+List of Illustrations
+Chapter 1
+Figure 1.1  The three key objectives of cybersecurity programs are
+confidentiality, integrity, and availability.
+Figure 1.2  Risks exist at the intersection of threats and
+vulnerabilities. If either the threat or vulnerability is missing, there is
+no risk.
+Figure 1.3  The NIST SP 800-30 risk assessment process suggests that
+an organization should identify threats and vulnerabilities and then
+use that information to determine the level of risk posed by the
+combination of those threats and vulnerabilities.
+Figure 1.4  Many organizations use a risk matrix to determine an
+overall risk rating based on likelihood and impact assessments.
+Figure 1.5  In an 802.1x system, the device attempting to join the
+network runs a NAC supplicant, which communicates with an
+authenticator on the network switch or wireless access point. The
+authenticator uses RADIUS to communicate with an authentication
+server.
+Figure 1.6  A triple-homed firewall connects to three different
+networks, typically an internal network, a DMZ, and the Internet.
+Figure 1.7  A triple-homed firewall may also be used to isolate internal
+network segments of varying trust levels.
+Figure 1.8  Group Policy Objects (GPOs) may be used to apply settings
+to many different systems at the same time.
+Figure 1.9  NIST divides penetration testing into four phases.
+Figure 1.10  The attack phase of a penetration test uses a cyclical
+process that gains a foothold and then uses it to expand access within
+the target organization.
+Chapter 2
+Figure 2.1  Zenmap topology view
+Figure 2.2  Nmap scan results
+www.hellodigi.ir
+
+Figure 2.3  Nmap service and version detection
+Figure 2.4  Nmap of a Windows 10 system
+Figure 2.5  Angry IP Scanner
+Figure 2.6  Cisco router log
+Figure 2.7  SNMP configuration from a typical Cisco router
+Figure 2.8  Linux netstat -a output
+Figure 2.9  Windows netstat -o output
+Figure 2.10  Windows netstat -e output
+Figure 2.11  Windows netstat -nr output
+Figure 2.12  Linux dhcp.conf file
+Figure 2.13  Nslookup for google.com
+Figure 2.14  nslookup using Google’s DNS with MX query flag
+Figure 2.15  Traceroute for bbc.co.uk
+Figure 2.16  Whois query data for google.com
+Figure 2.17  host command response for google.com
+Figure 2.18  Packet capture data from an nmap scan
+Figure 2.19  Demonstration account from immersion.media.mit.edu
+Chapter 3
+Figure 3.1  FIPS 199 Standards
+Figure 3.2  QualysGuard asset map
+Figure 3.3  Configuring a Nessus scan
+Figure 3.4  Sample Nessus scan report
+Figure 3.5  Nessus scan templates
+Figure 3.6  Disabling unused plug-ins
+Figure 3.7  Configuring authenticated scanning
+Figure 3.8  Choosing a scan appliance
+Figure 3.9  National Cyber Awareness System Vulnerability Summary
+www.hellodigi.ir
+
+Figure 3.10  Nessus Automatic Updates
+Figure 3.11  Vulnerability management life cycle
+Figure 3.12  QualysGuard dashboard example
+Figure 3.13  Nessus report example by IP address
+Figure 3.14  Nessus report example by criticality
+Figure 3.15  Detailed vulnerability report
+Figure 3.16  QualysGuard scan performance settings
+Chapter 4
+Figure 4.1  Nessus vulnerability scan report
+Figure 4.2  Qualys vulnerability scan report
+Figure 4.3  Scan report showing vulnerabilities and best practices
+Figure 4.4  Vulnerability trend analysis
+Figure 4.5  Vulnerabilities exploited in 2015 by year of initial
+discovery
+Figure 4.6  Missing patch vulnerability
+Figure 4.7  Unsupported operating system vulnerability
+Figure 4.8  Dirty COW website
+Figure 4.9  Code execution vulnerability
+Figure 4.10  FTP cleartext authentication vulnerability
+Figure 4.11  Debug mode vulnerability
+Figure 4.12  Outdated SSL version vulnerability
+Figure 4.13  Insecure SSL cipher vulnerability
+Figure 4.14  Invalid certificate warning
+Figure 4.15  DNS amplification vulnerability
+Figure 4.16  Internal IP disclosure vulnerability
+Figure 4.17  Inside a virtual host
+Figure 4.18  SQL injection vulnerability
+www.hellodigi.ir
+
+Figure 4.19  Cross-site scripting vulnerability
+Figure 4.20  First vulnerability report
+Figure 4.21  Second vulnerability report
+Chapter 5
+Figure 5.1  Incident response process
+Figure 5.2  Incident response checklist
+Chapter 6
+Figure 6.1  Routers provide a central view of network traffic flow by
+sending data to flow collectors.
+Figure 6.2  Netflow data example
+Figure 6.3  Passive monitoring between two systems
+Figure 6.4  PRTG network overview
+Figure 6.5  Netflow Traffic Analyzer
+Figure 6.6  SolarWinds Performance Monitor
+Figure 6.7  Nagios Core tactical view
+Figure 6.8  Nagios Core notifications view
+Figure 6.9  Network bandwidth monitoring showing a dropped link
+Figure 6.10  Beaconing in Wireshark
+Figure 6.11  Unexpected network traffic shown in flows
+Figure 6.12  Sample functional design of a cloud-based DDoS
+mitigation service
+Figure 6.13  nmap scan of a potential rogue system
+Figure 6.14  The Windows Resource Monitor view of system
+resources
+Figure 6.15  The Windows Performance Monitor view of system usage
+Chapter 7
+Figure 7.1  Sample chain-of-custody form
+Figure 7.2  Advanced Office Password Breaker cracking a Word DOC
+www.hellodigi.ir
+
+file
+Figure 7.3  Order of volatility of common storage locations
+Figure 7.4  dd of a volume
+Figure 7.5  FTK imaging of a system
+Figure 7.6  FTK image metadata
+Figure 7.7  Logicube’s Forensic Dossier duplicator device
+Figure 7.8  A Tableau SATA- and IDE-capable hardware write blocker
+Figure 7.9  FTK image hashing and bad sector checking
+Figure 7.10  USB Historian drive image
+Figure 7.11  Initial case information and tracking
+Figure 7.12  Initial case information and tracking
+Figure 7.13  Email extraction
+Figure 7.14  Web search history
+Figure 7.15  iCloud setup log with timestamp
+Figure 7.16  CCleaner remnant data via the Index Search function
+Figure 7.17  Resignation letter found based on document type
+Figure 7.18  Sample forensic finding from Stroz Friedberg’s Facebook
+contract investigation
+Chapter 8
+Figure 8.1  Incident response process
+Figure 8.2  Proactive network segmentation
+Figure 8.3  Network segmentation for incident response
+Figure 8.4  Network isolation for incident response
+Figure 8.5  Network removal for incident response
+Figure 8.6  Patching priorities
+Figure 8.7  Sanitization and disposition decision flow
+Chapter 9
+www.hellodigi.ir
+
+Figure 9.1  Excerpt from CMS training matrix
+Figure 9.2  Excerpt from UC Berkeley Minimum Security Standards
+for Electronic Information
+Figure 9.3  NIST Cybersecurity Framework Core Structure
+Figure 9.4  Asset Management Cybersecurity Framework
+Figure 9.5  TOGAF Architecture Development Model
+Figure 9.6  ITIL service life cycle
+Chapter 10
+Figure 10.1  Layered security network design
+Figure 10.2  Uniform protection applied to all systems
+Figure 10.3  Protected enclave for credit card operations
+Figure 10.4  Data classification–based design
+Figure 10.5  DMZ with a single firewall
+Figure 10.6  Single firewall service-leg DMZ
+Figure 10.7  Dual-firewall network design
+Figure 10.8  Outsourced remote services via public Internet
+Figure 10.9  VPN-connected remote network design
+Figure 10.10  A fully redundant network edge design
+Figure 10.11  Single points of failure in a network design
+Figure 10.12  Single points of failure in a process flow
+Figure 10.13  Sample security architecture
+Chapter 11
+Figure 11.1  A high-level logical view of identity management
+infrastructure
+Figure 11.2  LDAP directory structure
+Figure 11.3  Kerberos authentication flow
+Figure 11.4  OAuth covert redirects
+Figure 11.5  A sample account life cycle
+www.hellodigi.ir
+
+Figure 11.6  Phishing for a PayPal ID
+Figure 11.7  Authentication security model
+Figure 11.8  Google Authenticator token
+Figure 11.9  Context-based authentication
+Figure 11.10  Federated identity high-level design
+Figure 11.11  Attribute release request for loginradius.com
+Figure 11.12  Simple SAML transaction
+Figure 11.13  OAuth authentication process
+Chapter 12
+Figure 12.1  High-level SDLC view
+Figure 12.2  The Waterfall SDLC model
+Figure 12.3  The Spiral SDLC model
+Figure 12.4  Agile sprints
+Figure 12.5  Rapid Application Development prototypes
+Figure 12.6  Fagan code review
+Figure 12.7  Acunetix web application scan vulnerability report
+Figure 12.8  Tamper Data session showing login data
+Chapter 13
+Figure 13.1  Malwarebytes Anti-Malware
+Figure 13.2  Sysinternals Process Explorer
+Figure 13.3  Kiwi Syslog
+Figure 13.4  Splunk
+Figure 13.5  AlienVault SIEM
+Figure 13.6  AlienVault SIEM drill-down
+Figure 13.7  SolarWinds’s Orion
+Figure 13.8  Nmap
+Figure 13.9  Nikto web application scanner
+www.hellodigi.ir
+
+Figure 13.10  Nessus web application scanner
+Figure 13.11  Metasploit Console
+Figure 13.12  John the Ripper
+Figure 13.13  Check Point firewall console
+Figure 13.14  Bro intrusion detection and prevention system
+Figure 13.15  Wireshark packet captures
+Figure 13.16  tcpdump packet captures
+Figure 13.17  Netstat output
+Figure 13.18  Ping
+Figure 13.19  Traceroute
+Figure 13.20  ifconfig
+Figure 13.21  nslookup
+Figure 13.22  dig
+Figure 13.23  Proxy servers act as intermediaries for network
+communications.
+Figure 13.24  Configuring a web proxy
+Figure 13.25  Kproxy.com public anonymizing proxy
+Figure 13.26  ModSecurity firewall log entry
+Figure 13.27  Zed Attack Proxy (ZAP)
+Figure 13.28  Burp Proxy
+Figure 13.29  shasum
+Figure 13.30  FTK email viewer
+www.hellodigi.ir
+
+www.hellodigi.ir
+
+www.hellodigi.ir
+
+www.hellodigi.ir
+
+Introduction
+CompTIA Cybersecurity Analyst (CSA+) Study Guide  provides accessible
+explanations and real-world knowledge about the exam objectives that make
+up the Cybersecurity Analyst+ certification. This book will help you to assess
+your knowledge before taking the exam, as well as provide a stepping-stone to
+further learning in areas where you may want to expand your skillset or
+expertise.
+Before you tackle the CSA+, you should already be a security practitioner.
+CompTIA suggests that test takers have between 3 and 4 years of existing
+hands-on information security experience. You should also be familiar with at
+least some of the tools and techniques described in this book. You don’t need
+to know every tool, but understanding how to approach a new scenario, tool,
+or technology that you may not know using existing experience is critical to
+passing the CSA+ exam.
+   For up-to-the-minute updates covering additions or
+modifications to the CompTIA certification exams, as well as additional
+study tools, videos, practice questions, and bonus material, be sure to visit
+the Sybex website and forum at www.sybex.com.
+CompTIA
+CompTIA is a nonprofit trade organization that offers certification in a variety
+of IT areas, ranging from the skills that a PC support technical needs, which
+are covered in the A+ exam, to advanced certifications like the CompTIA
+Advanced Security Practitioner, or CASP certification. CompTIA divides its
+exams into four different categories based on the skill level required for the
+exam and what topics it covers, as shown in the following table:
+www.hellodigi.ir
+
+Foundational Professional Specialty Mastery
+IT Fundamentals A+
+Cloud+ with Virtualization
+CSA+
+Linux+
+Mobility+
+Network+
+Security+
+Project+
+Server+CDIA+
+CTT+
+Cloud Essentials
+Healthcare IT TechCASP
+CompTIA recommends that practitioners follow a cybersecurity career path as
+shown here:
+www.hellodigi.ir
+
+As you can see, despite the A+, Network+, and Security+ falling into the
+Professional certification category, the Cybersecurity Analyst+ exam is a more
+advanced exam, intended for professionals with hands-on experience and who
+possess the knowledge covered by the prior exams.
+CompTIA certifications are ISO and ANSI accredited, and they are used
+throughout multiple industries as a measure of technical skill and knowledge.
+In addition, CompTIA certifications, including the Security+ and the CASP,
+have been approved by the U.S. government as Information Assuance
+baseline certifications and are included in the State Department’s Skills
+Incentive Program.
+The Cybersecurity Analyst+ Exam
+The Cybersecurity Analyst+ exam, which CompTIA refers to as the CSA+, is
+designed to be a vendor-neutral certification for cybersecurity, threat, and
+vulnerability analysts. The CSA+ certification is designed for security analysts
+www.hellodigi.ir
+
+and engineers as well as Security Operations Center (SOC) staff, vulnerability
+analysts, and threat intelligence analysts. It focuses on security analytics and
+practical use of security tools in real-world scenarios. It covers four major
+domains: Threat Management, Vulnerability Management, Cyber Incident
+Response, and Security Architecture and Tool Sets. These four areas include a
+range of topics, from reconnaissance to incident response and forensics, while
+focusing heavily on scenario-based learning.
+The CSA+ exam fits between the entry-level Security+ exam and the
+CompTIA Advanced Security Practitioner (CASP) certification, providing a
+mid-career certification for those who are seeking the next step in their
+certification and career path.
+The CSA+ exam is conducted in a format that CompTIA calls “performance-
+based assessment.” This means that the exam uses hands-on simulations
+using actual security tools and scenarios to perform tasks that match those
+found in the daily work of a security practitioner. Exam questions may
+include multiple types of questions such as multiple-choice, fill-in-the-blank,
+multiple-response, drag-and-drop, and image-based problems.
+CompTIA recommends that test takers have 3–4 years of information
+security–related experience before taking this exam. The exam costs $320 in
+the United States, with roughly equivalent prices in other locations around
+the globe. More details about the CSA+ exam and how to take it can be found
+at https://certification.comptia.org/certifications/cybersecurity-analyst.
+Study and Exam Preparation Tips
+A test preparation book like this cannot teach you every possible security
+software package, scenario, or specific technology that may appear on the
+exam. Instead, you should focus on whether you are familiar with the type or
+category of technology, tool, process, or scenario as you read the book. If you
+identify a gap, you may want to find additional tools to help you learn more
+about those topics.
+CompTIA recommends the use of NetWars-style simulations, penetration
+testing and defensive cybersecurity simulations, and incident response
+training to prepare for the CSA+.
+Additional resources for hands-on exercises include the following:Exploit-Exercises.com provides virtual machines, documentation, and
+www.hellodigi.ir
+
+challenges covering a wide range of security issues at https://exploit-
+exercises.com/ .
+Hacking-Lab provides Capture the Flag (CTF) exercises in a variety of
+fields at https://www.hacking-lab.com/index.html .
+The OWASP Hacking Lab provides excellent web application–focused
+exercises at https://www.owasp.org/index.php/OWASP_Hacking_Lab.
+PentesterLab provides a subscription-based access to penetration testing
+exercises at https://www.pentesterlab.com/exercises/.
+The InfoSec Institute provides online capture-the-flag activities with
+bounties for written explanations of successful hacks at
+http://ctf.infosecinstitute.com/.
+Since the exam uses scenario-based learning, expect the questions to involve
+analysis and thought, rather than relying on simple memorization. As you
+might expect, it is impossible to replicate that experience in a book, so the
+questions here are intended to help you be confident that you know the topic
+well enough to think through hands-on exercises.
+Taking the Exam
+Once you are fully prepared to take the exam, you can visit the CompTIA
+website to purchase your exam voucher:
+www.comptiastore.com/Articles.asp?ID=265&category=vouchersCompTIA partners with Pearson VUE’s testing centers, so your next step will
+be to locate a testing center near you. In the United States, you can do this
+based on your address or your ZIP code, while non-U.S. test takers may find it
+easier to enter their city and country. You can search for a test center near
+you at the Pearson Vue website, where you will need to navigate to “Find a
+test center.”
+http://www.pearsonvue.com/comptia/Now that you know where you’d like to take the exam, simply set up a
+Pearson VUE testing account and schedule an exam:
+https://certification.comptia.org/testing/schedule-exam
+On the day of the test, take two forms of identification, and make sure to
+show up with plenty of time before the exam starts. Remember that you will
+www.hellodigi.ir
+
+not be able to take your notes, electronic devices (including smartphones and
+watches), or other materials in with you.
+After the Cybersecurity Analyst+ Exam
+Once you have taken the exam, you will be notified of your score
+immediately, so you’ll know if you passed the test right away. You should
+keep track of your score report with your exam registration records and the
+email address you used to register for the exam.
+Maintaining Your Certification
+CompTIA certifications must be renewed on a periodic basis. To renew your
+certification, you can either pass the most current version of the exam, earn a
+qualifying higher-level CompTIA or industry certification, or complete
+sufficient continuing education activities to earn enough continuing
+education units (CEUs) to renew it.
+CompTIA provides information on renewals via their website at
+https://certification.comptia.org/continuing-education/how-to-renewWhen you sign up to renew your certification, you will be asked to agree to
+the CE program’s Code of Ethics, to pay a renewal fee, and to submit the
+materials required for your chosen renewal method.
+A full list of the industry certifications you can use to acquire CEUs toward
+renewing the CSA+ can be found at
+https://certification.comptia.org/continuing-education/renewothers/renewing-csa
+www.hellodigi.ir
+
+What Does This Book Cover?
+This book is designed to cover the four domains included in the CSA+:
+Chapter 1: Defending Against Cybersecurity Threats  The book starts
+by teaching you how to assess cybersecurity threats, as well as how to
+evaluate and select controls to keep your networks and systems secure.
+Chapter 2: Reconnaissance and Intelligence Gathering  Gathering
+information about an organization and its systems is one of the things that
+both attackers and defenders do. In this chapter, you will learn how to acquire
+intelligence about an organization using popular tools and techniques. You
+will also learn how to limit the impact of intelligence gathering performed
+against your own organization.
+Chapter 3: Designing a Vulnerability Management Program
+Managing vulnerabilities helps to keep your systems secure. In this chapter
+you will learn how to identify, prioritize, and remediate vulnerabilities using a
+well-defined workflow and continuous assessment methodologies.
+Chapter 4: Analyzing Vulnerability Scans  Vulnerability reports can
+contain huge amounts of data about potential problems with systems. In this
+chapter you will learn how to read and analyze a vulnerability scan report,
+what CVSS scoring is and what it means, as well as how to choose the
+appropriate actions to remediate the issues you have found. Along the way,
+you will explore common types of vulnerabilities and their impact on systems
+and networks.
+Chapter 5: Building an Incident Response Program  This chapter
+focuses on building a formal incident response handling program and team.
+You will learn the details of each stage of incident handling from preparation,
+to detection and analysis, to containment, eradication, and recovery, to the
+final post-incident recovery, as well as how to classify incidents and
+communicate about them.
+Chapter 6: Analyzing Symptoms for Incident Response  Responding
+appropriately to an incident requires understanding how incidents occur and
+what symptoms may indicate that an event has occurred. To do that, you also
+need the right tools and techniques. In this chapter, you will learn about three
+major categories of symptoms. First, you will learn about network events,
+including malware beaconing, unexpected traffic, and link failures, as well as
+network attacks. Next, you will explore host issues, ranging from system
+www.hellodigi.ir
+
+resource consumption issues to malware defense and unauthorized changes.
+Finally, you will learn about service- and application-related problems.
+Chapter 7: Performing Forensic Analysis  Understanding what occurred
+on a system, device, or network, either as part of an incident or for other
+purposes, frequently involves forensic analysis. In this chapter you will learn
+how to build a forensic capability and how the key tools in a forensic toolkit
+are used.
+Chapter 8: Recovery and Post-Incident Analysis  Once an incident has
+occurred and the initial phases of incident response have taken place, you will
+need to work on recovering from it. That process involves containing the
+incident to ensure no further issues occur and then working on eradicating
+malware, rootkits, and other elements of a compromise. Once the incident
+has been cleaned up, the recovery stage can start, including reporting and
+preparation for future issues.
+Chapter 9: Policy and Compliance  Policy provides the foundation of any
+cybersecurity program, and building an effective set of policies is critical to a
+successful program. In this chapter you will acquire the tools to build a
+standards-based set of security policies, standards, and procedures. You will
+also learn how to leverage industry best practices by using guidelines and
+benchmarks from industry experts.
+Chapter 10: Defense-in-Depth Security Architectures  A strong security
+architecture requires layered security procedures, technology, and processes
+to provide defense in depth, ensuring that a single failure won’t lead to a
+failure. In this chapter you will learn how to design a layered security
+architecture and how to analyze security designs for flaws, including single
+points of failure and gaps.
+Chapter 11: Identity and Access Management Security  The identities
+that we rely on to authenticate and authorize users, services, and systems are
+a critical layer in a defense-in-depth architecture. This chapter explains
+identity, authentication, and authorization concepts and systems. You will
+learn about the major threats to identity and identity systems as well as how
+to use identity as a defensive layer.
+Chapter 12: Software Development Security  Creating, testing, and
+maintaining secure software, from simple scripts to complex applications, is
+critical for security analysts. In this chapter you will learn about the software
+development life cycle, including different methodologies, testing and review
+www.hellodigi.ir
+
+techniques, and how secure software is created. In addition, you will learn
+about industry standards for secure software to provide you with the
+foundation you need to help keep applications and services secure.
+Chapter 13: Cybersecurity Toolkit  This chapter provides a survey-style
+view of the many tools that you may encounter while performing threat and
+vulnerability management as well as incident response. We review tools, what
+they do, and where to get them.
+Practice Exam  Once you have completed your studies, the practice exam
+will provide you with a chance to test your knowledge. Use this exam to find
+places where you may need to study more or to verify that you are ready to
+tackle the exam. We’ll be rooting for you!
+Appendix A: Answers to Review Questions  The appendix has answers to
+the review questions you will find at the end of each chapter.
+Objective Mapping
+The following listing shows how the four Cybersecurity Analyst Exam
+objectives map to the chapters in this book. If you want to study a specific
+domain, this mapping can help you identify where to focus your reading.
+Threat Management: Chapters 1, 2
+Vulnerability Management: Chapters 3, 4
+Cyber Incident Response: Chapters 5, 6, 7, 8
+Security Architecture and Tools Sets: Chapters 7, 9, 10, 11, 12, 13
+The book is written to build your knowledge as you progress through it, so
+starting at the beginning is a good idea. Each chapter includes notes on
+important content and 20 questions to help you test your knowledge. Once
+you are ready, a complete practice test is provided to assess your knowledge.
+Study Guide Elements
+This study guide uses a number of common elements to help you prepare.
+These include the following:
+Summaries  The summary section of each chapter briefly explains the
+chapter, allowing you to easily understand what it covers.
+Exam Essentials  The exam essentials focus on major exam topics and
+www.hellodigi.ir
+
+critical knowledge that you should take into the test. The exam essentials
+focus on the exam objectives provided by CompTIA.
+Chapter Review Questions  A set of questions at the end of each chapter
+will help you assess your knowledge and if you are ready to take the exam
+based on your knowledge of that chapter’s topics.
+Written Labs  The written labs provide more in-depth practice opportunities
+to expand your skills and to better prepare for performance-based testing on
+the Cybersecurity Analyst+ exam.
+Real-World Scenarios  The real-world scenarios included in each chapter
+tell stories and provide examples of how topics in the chapter look from the
+point of view of a security professional. They include current events, personal
+experience, and approaches to actual problems.
+Additional Study Tools
+This book comes with a number of additional study tools to help you prepare
+for the exam. They include the following.
+   Go to www.wiley.com/go/Sybextestprep  to register and gain
+access to this interactive online learning environment and test bank with
+study tools.
+Sybex Test Preparation Software
+Sybex’s test preparation software lets you prepare with electronic test
+versions of the review questions from each chapter, the practice exam, and
+the bonus exam that are included in this book. You can build and take tests
+on specific domains, by chapter, or cover the entire set of Cybersecurity
+Analyst+ exam objectives using randomized tests.
+Electronic Flashcards
+Our electronic flashcards are designed to help you prepare for the exam. Over
+100 flashcards will ensure that you know critical terms and concepts.
+Glossary of Terms
+Sybex provides a full glossary of terms in PDF format, allowing quick
+www.hellodigi.ir
+
+searches and easy reference to materials in this book.
+Bonus Practice Exam
+In addition to the practice questions for each chapter, this book includes both
+a full 90-question practice exam and a 50-question bonus exam. We
+recommend that you use them both to test your preparedness for the
+certification exam.
+www.hellodigi.ir
+
+Objectives Map for CompTIA Cybersecurity Analyst
+(CSA+) Exam CS0-001
+The following objective map for the CompTIA Cybersecurity Analyst (CSA+)
+certification exam will enable you to find the chapter in this book, which
+covers each objective for the exam.
+www.hellodigi.ir
+
+Objectives Map
+ 
+Objective Chapter
+1.0 Threat Management
+1.1 Given a scenario, apply environmental reconnaissance
+techniques using appropriate tools and processes.Chapter 2
+Procedures/common tasks including Topology discovery, OS
+fingerprinting, Service discovery, Packet capture, Log review,
+Router/firewall ACLs review, Email harvesting, Social media
+profiling, Social engineering, DNS harvesting, Phishing; Variables
+including Wireless vs. wired, virtual vs. physical, internal vs.
+external, and on-premises vs. cloud; Tools including NMAP, Host
+scanning, Network mapping, netstat, packet analyzers, IDS/IPS,
+HIDS/NIDS, Firewall rule-based and logs, Syslog, Vulnerability
+scanners
+1.2 Given a scenario, analyze the results of a network
+reconnaissance.Chapter 2
+Point-in-time data analysis including Packet analysis, Protocol
+analysis, Traffic analysis, Netflow analysis, Wireless analysis;
+Data correlation and analytics including Anomaly analysis, Trend
+analysis, Availability analysis, Heuristic analysis, Behavioral
+analysis; Data output including Firewall logs, Packet captures,
+NMAP scan results, Event logs, Syslogs, IDS reports; Tools
+including SIEM, Packet analyzers, IDS/IPS, Resource monitoring
+tools, Netflow analyzer
+1.3 Given a network-based threat, implement or recommend the
+appropriate response and countermeasure.Chapter 1
+Network segmentation, system isolation, jump boxes and bastion
+hosts, Honeypots and honeynets, Endpoint security, Group
+policies, ACLs, Sinkholes, Hardening, Mandatory Access Control
+(MAC), Compensating controls, Blocking unused ports/services,
+Patching, Network Access Control (NAC) policies including time-
+based, rule-based, role-based, and location-based
+1.4 Explain the purpose of practices used to secure a corporate Chapter 1
+www.hellodigi.ir
+
+environment.
+Penetration testing, Rules of engagement: timing, scope.
+Authorization, exploitation, communication, and reporting.
+Reverse engineering, Isolation/sandboxing, Hardware concerns
+including source authenticity of hardware, trusted foundry, and
+OEM documentation. Software/malware,
+Fingerprinting/hashing, Decomposition, Training and exercises,
+Red teams, Blue teams, and White teams. Risk evaluation,
+Technical control review, Operational control review, Technical
+impact and likelihood and rating: High, Medium, and Low
+2.0 Vulnerability Management
+2.1 Given a scenario, implement an information security
+vulnerability management process.Chapter 3
+Identification of requirements, Regulatory environments,
+Corporate policy, Data classification, Asset inventory including
+critical and non-critical assets. Establishing scanning frequency
+based on risk appetite, regulatory requirements, technical
+constraints, and workflow. Configure tools to perform scans
+according to specification, Determining scanning criteria, setting
+sensitivity levels, vulnerability feeds, scan scope, credentialed vs.
+non-credentialed, types of data, and server-based vs. agent-based
+scanning. Tool updates/ plug-ins, SCAP, Permissions and access,
+How to execute scanning and generate reports, Automated vs.
+manual distribution, remediation, prioritizing response based on
+criticality and difficulty of implementation.
+Communication/change control, Sandboxing/testing, Inhibitors
+to remediation: MOUs, SLAs, organizational governance,
+business process interruption, and degrading functionality.
+Ongoing scanning and continuous monitoring
+2.2 Given a scenario, analyze the output resulting from a
+vulnerability scan.Chapter 4
+Analyze reports from a vulnerability scan, Review and interpret
+scan results, Identify false positives, Identify exceptions,
+Prioritize response actions, Validate results and correlate other
+data points, Compare to best practices or compliance, Reconcile
+results, Review related logs and/or other data sources,
+www.hellodigi.ir
+
+Determine trends
+2.3 Compare and contrast common vulnerabilities found in the
+following targets within an organization.Chapter 4
+Servers, Endpoints, Network infrastructure, Network appliances,
+Virtual infrastructure, Virtual hosts, Virtual networks,
+Management interfaces, Mobile devices, Interconnected
+networks, Virtual private networks (VPNs), Industrial Control
+Systems (ICSs), SCADA devices
+3.0 Cyber Incident Response
+3.1 Given a scenario, distinguish threat data or behavior to
+determine the impact of an incidentChapter 5
+Threat classification: known threats vs. unknown threats, Zero
+day, and advanced persistent threats. Factors contributing to
+incident severity and prioritization: scope of impact, downtime,
+recovery time. data integrity, economic impact, system process
+criticality. Types of data: Personally Identifiable Information
+(PII), Personal Health Information (PHI), payment card
+information, intellectual property, corporate confidential,
+accounting data. mergers and acquisitions
+3.2 Given a scenario, prepare a toolkit and use appropriate
+forensics tools during an investigation.Chapter 7
+Forensics kits, Digital forensics workstations, Write blockers,
+Cables, Drive adapters, Wiped removable media, Cameras, o
+Crime tape, Tamper-proof seals, Documentation/forms, Chain of
+custody forms, Incident response plan, Incident forms, Call
+list/escalation lists. Forensic investigation suites, Imaging
+utilities, Analysis utilities, Chain of custody, Hashing utilities, OS
+and process analysis, Mobile device forensics, Password crackers,
+Cryptography tools, Log viewers
+3.3 Explain the importance of communication during the
+incident response process.Chapter 5
+Stakeholders: HR, legal, marketing, and management. Purpose of
+communication processes: Limiting communication to trusted
+parties, disclosure based on regulatory/legislative requirements,
+o Preventing inadvertent release of information, secure method
+www.hellodigi.ir
+
+of communication. Role-based responsibilities: technical,
+management, law enforcement, and retaining an incident
+response provider
+3.4 Given a scenario, analyze common symptoms to select the
+best course of action to support incident response.Chapter 6
+Common network-related symptoms: bandwidth consumption,
+beaconing, irregular peer-to-peer communication, rogue devices
+on the network, scan sweeps, and unusual traffic spikes.
+Common host-related symptoms: processor (CPU) consumption,
+memory consumption, drive capacity consumption, unauthorized
+software, malicious processes, unauthorized changes,
+unauthorized privileges, data exfiltration. Common application-
+related symptoms: anomalous activity, introduction of new
+accounts, unexpected output, unexpected outbound
+communication, service interruption, memory overflows
+3.5 Summarize the incident recovery and post-incident response
+process.Chapter 8
+Containment techniques: segmentation, isolation, removal, and
+reverse engineering. Eradication techniques: sanitization,
+reconstruction/reimage, secure disposal, validation, patching,
+permissions, scanning, and verifying logging/communication to
+security monitoring. Corrective actions, Lessons learned reports,
+Change control process, Updating incident response plans,
+Incident summary reports
+4.0 Security Architecture and Tool Sets
+4.1 Explain the relationship between frameworks, common
+policies, controls, and procedures.Chapter 9
+Regulatory compliance, Frameworks: NIST, ISO, COBIT, SABSA,
+TOGAF, ITIL. Policies: password policy, acceptable use policy,
+data ownership policy, data retention policy, account
+management policy, and data classification policies. Controls,
+Control selection based on criteria, Organizationally defined
+parameters, Physical controls, Logical controls, Administrative
+controls, Procedures: continuous monitoring, evidence
+production, patching, compensating control development, control
+testing procedures, managing exceptions, developing and
+www.hellodigi.ir
+
+executing remediation plans. Verifications and quality control,
+Audits, Evaluations, Assessments, Maturity models, Certification
+4.2 Given a scenario, use data to recommend remediation of
+security issues related to identity and access management.Chapter 11
+Security issues associated with context-based authentication
+based on time, location, frequency, behavioral patterns. Security
+issues associated with identities: personnel, endpoints, servers,
+services, roles, applications. Security issues associated with
+identity repositories, Directory services, TACACS+, RADIUS,
+Security issues associated with federation and single sign-on: o
+Manual vs. automatic provisioning/deprovisioning and self-
+service password reset. Exploits: impersonation, man-in-the-
+middle attacks, session hijacking, cross-site scripting, privilege
+escalation, and rootkits.
+4.3 Given a scenario, review security architecture and make
+recommendations to implement compensating controls.Chapter 10
+Security data analytics using data aggregation and correlation,
+trend analysis, and historical analysis. Manual review of firewall
+logs, syslogs, authentication logs, and event logs. Defense in
+depth concepts. Personnel security: training, dual control,
+separation of duties, third party/consultants, cross training,
+mandatory vacation, succession planning. Defense in depth
+related processes: continual improvement, scheduled reviews,
+and retirement of processes. Technologies: automated reporting,
+security appliances. security suites, outsourcing, Security as a
+Service (SaaS), and cryptography. Other security concepts:
+network design and network segmentation
+4.4 Given a scenario, use application security best practices while
+participating in the Software Development Life Cycle (SDLC).Chapter 12
+Best practices during software development, Security
+requirements definition, Security testing phases, Static code
+analysis, Web app vulnerability scanning, Fuzzing, Use of
+interception proxies to crawl applications, Manual peer reviews,
+User acceptance testing, Stress testing applications, Security
+regression testing, Input validation, Secure coding best practices
+from OWASP, SANS, Center for Internet Security. System design
+www.hellodigi.ir
+
+recommendations and benchmarks
+4.5 Compare and contrast the general purpose and reasons for
+using various cybersecurity tools and technologies.Chapter 13
+Preventative tools, including IPS: Sourcefire, Snort, Bro, HIPS,
+Firewalls: Cisco, Palo Alto, Check Point. Antivirus and Anti-
+malware, EMET, Web proxies, Web Application Firewall (WAF)
+systems: ModSecurity, NAXSI, Imperva.
+Collective tools, including SIEMs: ArcSight, QRadar, Splunk,
+AlienVault, OSSIM, Kiwi Syslog. Network scanning tool with
+NMAP, Vulnerability scanning using Qualys, Nessus, OpenVAS,
+Nexpose, Nikto, and the Microsoft Baseline Security Analyzer. o
+Packet capture using Wireshark, tcpdump, Network General, and
+Aircrack-ng. Command line/IP utilities: netstat, ping, tracert/
+traceroute, ipconfig/ifconfig, nslookup/dig, the Sysinternals
+suite, OpenSSL. IDS/HIDS: Bro.
+Analytical tools, including Vulnerability scanning including
+Qualys, Nessus, OpenVAS, Nexpose, Nikto, and the Microsoft
+Baseline Security Analyzer. Monitoring tools: MRTG, Nagios,
+SolarWinds, Cacti, NetFlow Analyzer. Interception proxies: Burp
+Suite, Zap, and Vega.
+Exploit tools, including Interception proxies: Burp Suite, Zap,
+and Vega. o Exploit framework: Metasploit and Nexpose.
+Fuzzers: Untidy, Peach Fuzzer, Microsoft SDL File/Regex Fuzzer.
+Forensics tools, including Forensic suites: EnCase, FTK, Helix,
+Sysinternals, and Cellebrite. Hashing tools: MD5sum, SHAsum.
+Password cracking tools; John the Ripper, Cain & Abel. Imaging
+using DD
+www.hellodigi.ir
+
+www.hellodigi.ir
+
+Assessment Test
+If you’re considering taking the Cybersecurity Analyst+ exam, you should
+have already taken and passed the CompTIA Security+ and Network+ exams
+and should have 3–4 years of experience in the field. You may also already
+hold other equivalent certifications. The following assessment test help to
+make sure that you have the knowledge that you should have before you
+tackle the Cybersecurity Analyst+ certification and will help you determine
+where you may want to spend the most time with this book.
+1. After running an nmap scan of a system, you receive scan data that
+indicates the following three ports are open:
+22/TCP
+443/TCP
+1521/TCP
+What services commonly run on these ports?
+A. SMTP, NetBIOS, MySQL
+B. SSH, Microsoft DS, WINS
+C. SSH, HTTPS, Oracle
+D. FTP, HTTPS, MS-SQL
+2. Which of the following tools is best suited to querying data provided by
+organizations like the American Registry for Internet Numbers (ARIN) as
+part of a footprinting or reconnaissance exercise?
+A. nmap
+B. traceroute
+C. regmon
+D. whois
+3. What type of system allows attackers to believe they have succeeded
+with their attack, thus providing defenders with information about their
+attack methods and tools?
+www.hellodigi.ir
+
+A. A honeypot
+B. A sinkhole
+C. A crackpot
+D. A darknet
+4. What cybersecurity objective could be achieved by running your
+organization’s web servers in redundant, geographically separate
+datacenters?
+A. Confidentiality
+B. Integrity
+C. Immutability
+D. Availability
+5. Which of the following vulnerability scanning methods will provide the
+most accurate detail during a scan?
+A. Black box
+B. Authenticated
+C. Internal view
+D. External view
+6. In early 2017, a flaw was discovered in the Chakra JavaScript scripting
+engine in Microsoft’s Edge browser that could allow remote execution or
+denial of service via a specifically crafted website. The CVSS 3.0 score for
+this reads
+CVSS:3.0/AV:N/AC:H/PR:N/UI:R/S:U/C:H/I:H/A:H
+What is the attack vector and the impact to integrity based on this rating?
+A. System, 9, 8
+B. Browser, High
+C. Network, High
+D. None, High
+7. Alice is a security engineer tasked with performing vulnerability scans
+for her organization. She encounters a false positive error in one of her
+www.hellodigi.ir
+
+scans. What should she do about this?
+A. Verify that it is a false positive, and then document the exception
+B. Implement a workaround
+C. Update the vulnerability scanner
+D. Use an authenticated scan, and then document the vulnerability
+8. Which phase of the incident response process is most likely to include
+gathering additional evidence such as information that would support
+legal action?
+A. Preparation
+B. Detection and Analysis
+C. Containment, Eradication, and Recovery
+D. Post-Incident Activity and Reporting
+9. Which of the following descriptions explains an integrity loss?
+A. Systems were taken offline, resulting in a loss of business income.
+B. Sensitive or proprietary information was changed or deleted.
+C. Protected information was accessed or exfiltrated.
+D. Sensitive personally identifiable information was accessed or
+exfiltrated.
+10. Which of the following techniques is an example of active monitoring?
+A. Ping
+B. RMON
+C. Netflows
+D. A network tap
+11. Ben’s monitoring detects regular traffic sent from a system that is
+suspected to be compromised and participating in a botnet to a set of
+remote IP addresses. What is this called?
+www.hellodigi.ir
+
+A. Anomalous pings
+B. Probing
+C. Zombie chatter
+D. Beaconing
+12. Which of the following tools is not useful for monitoring memory
+usage in Linux?
+A. df
+B. top
+C. ps
+D. free
+13. Which of the following tools cannot be used to make a forensic disk
+image?
+A. xcopy
+B. FTK
+C. dd
+D. EnCase
+14. During a forensic investigation, Shelly is told to look for information in
+slack space on the drive. Where should she look, and what is she likely to
+find?
+A. She should look at unallocated space, and she is likely to find file
+fragments from deleted files.
+B. She should look at unused space where files were deleted, and she is
+likely to find complete files hidden there by the individual being
+investigated.
+C. She should look in the space reserved on the drive for spare blocks,
+and she is likely to find complete files duplicated there.
+D. She should look at unused space left when a file is written, and she
+is likely to find file fragments from deleted files.
+15. What type of system is used to contain an attacker to allow them to be
+monitored?
+www.hellodigi.ir
+
+A. A white box
+B. A sandbox
+C. A network jail
+D. A VLAN
+16. Bob’s manager has asked him to ensure that a compromised system
+has been completely purged of the compromise. What is Bob’s best course
+of action?
+A. Use an antivirus tool to remove any associated malware
+B. Use an antimalware tool to completely scan and clean the system
+C. Wipe and rebuild the system
+D. Restore a recent backup
+17. What level of secure media disposition as defined by NIST SP-800-88
+is best suited to a hard drive from a high-security system that will be
+reused in the same company by an employee of a different level or job
+type?
+A. Clear
+B. Purge
+C. Destroy
+D. Reinstall
+18. Which of the following actions is not a common activity during the
+recovery phase of an incident response process?
+A. Reviewing accounts and adding new privileges
+B. Validating that only authorized user accounts are on the systems
+C. Verifying that all systems are logging properly
+D. Performing vulnerability scans of all systems
+19. A statement like “Windows workstations must have the current
+security configuration template applied to them before being deployed” is
+most likely to be part of which document?
+www.hellodigi.ir
+
+A. Policies
+B. Standards
+C. Procedures
+D. Guidelines
+20. Jim is concerned with complying with the U.S. federal law covering
+student educational records. Which of the following laws is he attempting
+to comply with?
+A. HIPAA
+B. GLBA
+C. SOX
+D. FERPA
+21. A fire suppression system is an example of what type of control?
+A. Logical
+B. Physical
+C. Administrative
+D. Operational
+22. Lauren is concerned that Danielle and Alex are conspiring to use their
+access to defraud their organization. What personnel control will allow
+Lauren to review their actions to find any issues?
+A. Dual control
+B. Separation of duties
+C. Background checks
+D. Cross training
+23. Joe wants to implement an authentication protocol that is well suited
+to untrusted networks. Which of the following options is best suited to his
+needs in its default state?
+www.hellodigi.ir
+
+A. Kerberos
+B. RADIUS
+C. LDAP
+D. TACACS+
+24. Which software development life cycle model uses linear development
+concepts in an iterative, four-phase process?
+A. Waterfall
+B. Agile
+C. RAD
+D. Spiral
+www.hellodigi.ir
+
+www.hellodigi.ir
+
+Answer to the Assessment Test
+1. C. These three TCP ports are associated with SSH (22), HTTPS (443),
+and Oracle databases (1521). Other ports mentioned in the potential
+answers are SMTP (25), NetBIOS (137–139), MySQL (3306), WINS (1512),
+FTP (20 and 21), and MS-SQL (1433/1434).
+2. D. Regional Internet registries like ARIN are best queried either via
+their websites or using tools like Whois. Nmap is a useful port scanning
+utility, traceroute is used for testing the path packets take to a remote
+system, and regmon is an outdated Windows Registry tool that has been
+supplanted by Process Monitor.
+3. A. Honeypots are systems that are designed to look like attractive
+targets. When they are attacked, they simulate a compromise, providing
+defenders with a chance to see how attackers operate and what tools they
+use. DNS sinkholes provide false information to malicious software,
+redirecting queries about command and control systems to allow
+remediation. Darknets are segments of unused network space that are
+monitored to detect traffic—since legitimate traffic should never be aimed
+at the darknet, this can be used to detect attacks and other unwanted
+traffic. Crackpots are eccentric people—not a system you’ll run into on a
+network.
+4. D. Redundant systems, particularly when run in multiple locations and
+with other protections to ensure uptime, can help provide availability.
+5. B. An authenticated, or credentialed, scan provides the most detailed
+view of the system. Black-box assessments presume no knowledge of a
+system and would not have credentials or an agent to work with on the
+system. Internal views typically provide more detail than external views,
+but neither provides the same level of detail that credentials can allow.
+6. C. When reading the CVSS 3.0 score, AV is the attack vector. Here, N
+means network. Confidentiality (C), Integrity (I), and Availability (A) are
+listed at the end of the listing, and all three are rated as High in this CVSS
+rating.
+7. A. When Alice encounters a false positive error in her scans, her first
+action should be to verify it. This may involve running a more in-depth
+scan like an authenticated scan, but could also involve getting assistance
+from system administrators, checking documentation, or other validation
+www.hellodigi.ir
+
+actions. Once she is done, she should document the exception so that it is
+properly tracked. Implementing a workaround is not necessary for false
+positive vulnerabilities, and updating the scanner should be done before
+every vulnerability scan. Using an authenticated scan might help but does
+not cover all of the possibilities for validation she may need to use.
+8. C. The Containment, Eradication, and Recovery phase of an incident
+includes steps to limit damage and document what occurred, including
+potentially identifying the attacker and tools used for the attack. This
+means that information useful to legal actions is most likely to be
+gathered during this phase.
+9. B. Integrity breaches involve data being modified or deleted. Systems
+being taken offline is an availability issue, protected information being
+accessed might be classified as a breach of proprietary information, and
+sensitive personally identifiable information breaches would typically be
+classified as privacy breaches.
+10. C. Active monitoring sends traffic like pings to remote devices as part
+of the monitoring process. RMON and netflows are both examples of
+router-based monitoring, whereas network taps allow passive monitoring.
+11. C. Regular traffic from compromised systems to command and control
+nodes is known as beaconing. Anomalous pings could describe unexpected
+pings, but they are not typically part of botnet behavior, zombie chatter is
+a made-up term, and probing is part of scanning behavior in some cases.
+12. C. The df command is used to show the amount of free and used disk
+space. Each of the other commands can show information about memory
+usage in Linux.
+13. A. FTK, EnCase, and dd all provide options that support their use for
+forensic disk image creation. Since xcopy cannot create a bitwise image of
+a drive, it should not be used to create forensic images.
+14. D. Slack space is the space left when a file is written. Since the space
+may have previously been filled by another file, file fragments are likely to
+exist and be recoverable. Unallocated space is space that has not been
+partitioned and could contain data, but looking there isn’t part of Shelly’s
+task. The reserved space maintained by drives for wear leveling (for SSDs)
+or to replace bad blocks (for spinning disks) may contain data, but again,
+this was not part of her task.
+www.hellodigi.ir
+
+15. B. Sandboxes are used to isolate attackers, malicious code, and other
+untrusted applications. They allow defenders to monitor and study
+behavior in the sandbox without exposing systems or networks to
+potential attacks or compromise.
+16. C. The most foolproof means of ensuring that a system does not
+remain compromised is to wipe and rebuild it. Without full knowledge of
+when the compromise occurred, restoring a backup may not help, and
+both antimalware and antivirus software packages cannot always ensure
+that no remnant of the compromise remains, particularly if the attacker
+created accounts or otherwise made changes that wouldn’t be detected as
+malicious software.
+17. B. NIST SP 800-88 defines three levels of action of increasing severity:
+clear, purge, and destroy. In this case, purging, which uses technical
+means to make data infeasible to recover, is appropriate for a high-
+security device. Destruction might be preferable, but the reuse element of
+the question rules this out. Reinstallation is not an option in the NIST
+guidelines, and clearing is less secure.
+18. A. The recovery phase does not typically seek to add new privileges.
+Validating that only legitimate accounts exist, that the systems are all
+logging properly, and that systems have been vulnerability scanned are all
+common parts of an incident response recovery phase.
+19. B. This statement is most likely to be part of a standard. Policies
+contain high-level statements of management intent; standards provide
+mandatory requirements for how policies are carried out, including
+statements like that provided in the question. A procedure would include
+the step-by-step process, and a guideline describes a best practice or
+recommendation.
+20. D. The Family Educational Rights and Privacy Act (FERPA) requires
+educational institutions to implement security and privacy controls for
+student educational records. HIPAA covers security and privacy for
+healthcare providers, health insurers, and health information
+clearinghouses; GLBA covers financial institutions; and SOX applies to
+financial records of publicly traded companies.
+21. B. Fire suppression systems are physical controls. Logical controls are
+technical controls that enforce confidentiality, integrity, and availability.
+Administrative controls are procedural controls, and operational controls
+www.hellodigi.ir
+
+are not a type of security control as used in security design.
+22. B. Lauren should implement separation of duties in a way that ensures
+that Danielle and Alex cannot abuse their rights without a third party
+being involved. This will allow review of their actions and should result in
+any issues being discovered.
+23. A. Kerberos is designed to run on untrusted networks and encrypts
+authentication traffic by default. LDAP and RADIUS can be encrypted but
+are not necessarily encrypted by default (and LDAP has limitations as an
+authentication mechanism). It is recommended that TACACS+ be run
+only on isolated administrative networks.
+24. D. The Spiral model uses linear development concepts like those used
+in Waterfall but repeats four phases through its life cycle: requirements
+gathering, design, build, and evaluation.
+www.hellodigi.ir
+
+www.hellodigi.ir
+
+Chapter 1 
+Defending Against Cybersecurity Threats
+THE COMPTIA CYBERSECURITY ANALYST+ EXAM
+OBJECTIVES COVERED IN THIS CHAPTER INCLUDE:
+Domain 1: Threat Management
+✓ 1.3 Given a network-based threat, implement or
+recommend the appropriate response and countermeasure.
+✓ 1.4 Explain the purpose of practices used to secure a
+corporate environment.
+ Cybersecurity analysts are responsible for protecting the
+confidentiality, integrity, and availability of information and information
+systems used by their organizations. Fulfilling this responsibility requires a
+commitment to a defense-in-depth approach to information security that uses
+multiple, overlapping security controls to achieve each cybersecurity
+objective. It also requires that analysts have a strong understanding of the
+threat environment facing their organization in order to develop a set of
+controls capable of rising to the occasion and answering those threats.
+In the first section of this chapter, you will learn how to assess the
+cybersecurity threats facing your organization and determine the risk that
+they pose to the confidentiality, integrity, and availability of your operations.
+In the sections that follow, you will learn about some of the controls that you
+can put in place to secure networks and endpoints and evaluate the
+effectiveness of those controls over time.
+www.hellodigi.ir
+
+Cybersecurity Objectives
+When most people think of cybersecurity, they imagine hackers trying to
+break into an organization’s system and steal sensitive information, ranging
+from Social Security numbers and credit cards to top-secret military
+information. Although protecting sensitive information from unauthorized
+disclosure is certainly one element of a cybersecurity program, it is important
+to understand that cybersecurity actually has three complementary
+objectives, as shown in Figure 1.1.
+Figure 1.1  The three key objectives of cybersecurity programs are
+confidentiality, integrity, and availability.
+Confidentiality ensures that unauthorized individuals are not able to gain
+access to sensitive information. Cybersecurity professionals develop and
+implement security controls, including firewalls, access control lists, and
+encryption, to prevent unauthorized access to information. Attackers may
+seek to undermine confidentiality controls to achieve one of their goals: the
+unauthorized disclosure of sensitive information.
+Integrity ensures that there are no unauthorized modifications to information
+or systems, either intentionally or unintentionally. Integrity controls, such as
+hashing and integrity monitoring solutions, seek to enforce this requirement.
+Integrity threats may come from attackers seeking the alteration of
+www.hellodigi.ir
+
+information without authorization or nonmalicious sources, such as a power
+spike causing the corruption of information.
+Availability ensures that information and systems are ready to meet the needs
+of legitimate users at the time those users request them. Availability controls,
+such as fault tolerance, clustering, and backups, seek to ensure that legitimate
+users may gain access as needed. Similar to integrity threats, availability
+threats may come either from attackers seeking the disruption of access or
+nonmalicious sources, such as a fire destroying a datacenter that contains
+valuable information or services.
+Cybersecurity analysts often refer to these three goals, known as the CIA
+Triad, when performing their work. They often characterize risks, attacks, and
+security controls as meeting one or more of the three CIA Triad goals when
+describing them.
+www.hellodigi.ir
+
+Evaluating Security Risks
+Cybersecurity risk analysis is the cornerstone of any information security
+program. Analysts must take the time to thoroughly understand their own
+technology environments and the external threats that jeopardize their
+information security. A well-rounded cybersecurity risk assessment combines
+information about internal and external factors to help analysts understand
+the threats facing their organization and then design an appropriate set of
+controls to meet those threats.
+Before diving into the world of risk assessment, we must begin with a
+common vocabulary. You must know three important terms to communicate
+clearly with other risk analysts: vulnerabilities, threats, and risks.
+A vulnerability is a weakness in a device, system, application, or process that
+might allow an attack to take place. Vulnerabilities are internal factors that
+may be controlled by cybersecurity professionals. For example, a web server
+that is running an outdated version of the Apache service may contain a
+vulnerability that would allow an attacker to conduct a denial-of-service
+(DoS) attack against the websites hosted on that server, jeopardizing their
+availability. Cybersecurity professionals within the organization have the
+ability to remediate this vulnerability by upgrading the Apache service to the
+most recent version that is not susceptible to the DoS attack.
+A threat in the world of cybersecurity is an outside force that may exploit a
+vulnerability. For example, a hacker who would like to conduct a DoS attack
+against a website and knows about an Apache vulnerability poses a clear
+cybersecurity threat. Although many threats are malicious in nature, this is
+not necessarily the case. For example, an earthquake may also disrupt the
+availability of a website by damaging the datacenter containing the web
+servers. Earthquakes clearly do not have malicious intent. In most cases,
+cybersecurity professionals cannot do much to eliminate a threat. Hackers
+will hack and earthquakes will strike whether we like it or not.
+A risk is the combination of a threat and a corresponding vulnerability. Both
+of these factors must be present before a situation poses a risk to the security
+of an organization. For example, if a hacker targets an organization’s web
+server with a DoS attack but the server was patched so that it is not
+vulnerable to that attack, there is no risk because even though a threat is
+present (the hacker), there is no vulnerability. Similarly, a datacenter may be
+vulnerable to earthquakes because the walls are not built to withstand the
+www.hellodigi.ir
+
+extreme movements present during an earthquake, but it may be located in a
+region of the world where earthquakes do not occur. The datacenter may be
+vulnerable to earthquakes but there is little to no threat of earthquake in its
+location, so there is no risk.
+The relationship between risks, threats, and vulnerabilities is an important
+one, and it is often represented by this equation:
+Risk = Threat × Vulnerability
+This is not meant to be a literal equation where you would actually plug in
+values. Instead, it is meant to demonstrate the fact that risks exist only when
+there is both a threat and a corresponding vulnerability that the threat might
+exploit. If either the threat or vulnerability is zero, the risk is also zero. Figure1.2 shows this in another way: risks are the intersection of threats and
+vulnerabilities.
+Figure 1.2  Risks exist at the intersection of threats and vulnerabilities. If
+either the threat or vulnerability is missing, there is no risk.
+Organizations should routinely conduct risk assessments to take stock of
+their existing risk landscape. The National Institute of Standards and
+Technology (NIST) publishes a guide for conducting risk assessments that is
+widely used throughout the cybersecurity field as a foundation for risk
+assessments. The document, designated NIST Special Publication (SP) 800-
+30, suggests the risk assessment process shown in Figure 1.3.
+www.hellodigi.ir
+
+Figure 1.3  The NIST SP 800-30 risk assessment process suggests that an
+organization should identify threats and vulnerabilities and then use that
+information to determine the level of risk posed by the combination of those
+threats and vulnerabilities.
+Source: NIST SP 800-30
+Identify Threats
+Organizations begin the risk assessment process by identifying the types of
+threats that exist in their threat environment. Although some threats, such as
+malware and spam, affect all organizations, other threats are targeted against
+specific types of organizations. For example, government-sponsored advanced
+persistent threat (APT) attackers typically target government agencies,
+military organizations, and companies that operate in related fields. It is
+unlikely that an APT attacker would target an elementary school.
+NIST identifies four different categories of threats that an organization might
+face and should consider in its threat identification process:
+www.hellodigi.ir
+
+Adversarial threats are individuals, groups, and organizations that are
+attempting to deliberately undermine the security of an organization.
+Adversaries may include trusted insiders, competitors, suppliers,
+customers, business partners, or even nation-states. When evaluating an
+adversarial threat, cybersecurity analysts should consider the capability of
+the threat actor to engage in attacks, the intent of the threat actor, and the
+likelihood that the threat will target the organization.Accidental threats occur when individuals doing their routine work
+mistakenly perform an action that undermines security. For example, a
+system administrator might accidentally delete a critical disk volume,
+causing a loss of availability. When evaluating an accidental threat,
+cybersecurity analysts should consider the possible range of effects that
+the threat might have on the organization.Structural threats occur when equipment, software, or environmental
+controls fail due to the exhaustion of resources (such as running out of
+gas), exceeding their operational capability (such as operating in extreme
+heat), or simply failing due to age. Structural threats may come from IT
+components (such as storage, servers, and network devices),
+environmental controls (such as power and cooling infrastructure), and
+software (such as operating systems and applications). When evaluating a
+structural threat, cybersecurity analysts should consider the possible
+range of effects that the threat might have on the organization.Environmental threats occur when natural or man-made disasters occur
+that are outside the control of the organization. These might include fires,
+flooding, severe storms, power failures, or widespread
+telecommunications disruptions. When evaluating a structural threat,
+cybersecurity analysts should consider the possible range of effects that
+the threat might have on the organization.
+The nature and scope of the threats in each of these categories will vary
+depending on the nature of the organization, the composition of its
+technology infrastructure, and many other situation-specific circumstances.
+That said, it may be helpful to obtain copies of the risk assessments
+performed by other, similar, organizations as a starting point for an
+organization’s own risk assessment or to use as a quality assessment check
+during various stages of the organization’s assessment.
+www.hellodigi.ir
+
+The Insider Threat
+When performing a threat analysis, cybersecurity professionals must
+remember that threats come from both external and internal sources. In
+addition to the hackers, natural disasters, and other threats that begin
+outside the organization, rouge employees, disgruntled team members,
+and incompetent administrators also pose a significant threat to
+enterprise cybersecurity. As an organization designs controls, it must
+consider both internal and external threats.
+   NIST SP 800-30 provides a great deal of additional information to
+help organizations conduct risk assessments, including detailed tasks
+associated with each of these steps. This information is outside the scope
+of the Cybersecurity Analyst+ exam, but organizations preparing to
+conduct risk assessments should download and read the entire
+publication.
+Identify Vulnerabilities
+During the threat identification phase of a risk assessment, cybersecurity
+analysts focus on the external factors likely to impact an organization’s
+security efforts. After completing threat identification, the focus of the
+assessment turns inward, identifying the vulnerabilities that those threats
+might exploit to compromise an organization’s confidentiality, integrity, or
+availability.
+Chapters 3 and 4 of this book focus extensively on the identification and
+management of vulnerabilities.
+Determine Likelihood, Impact, and Risk
+After identifying the threats and vulnerabilities facing an organization, risk
+assessors next seek out combinations of threat and vulnerability that pose a
+risk to the confidentiality, integrity, or availability of enterprise information
+and systems. This requires assessing both the likelihood that a risk will
+materialize and the impact that the risk will have on the organization if it
+does occur.
+www.hellodigi.ir
+
+When determining the likelihood of a risk occurring, analysts should consider
+two factors. First, they should assess the likelihood that the threat source will
+initiate the risk. In the case of an adversarial threat source, this is the
+likelihood that the adversary will execute an attack against the organization.
+In the case of accidental, structural, or environmental threats, it is the
+likelihood that the threat will occur. The second factor that contributes is the
+likelihood that, if a risk occurs, it will actually have an adverse impact on the
+organization, given the state of the organization’s security controls. After
+considering each of these criteria, risk assessors assign an overall likelihood
+rating. This may use categories, such as “low,” “medium,” and “high,” to
+describe the likelihood qualitatively.
+Risk assessors evaluate the impact of a risk using a similar rating scale. This
+evaluation should assume that a threat actually does take place and cause a
+risk to the organization and then attempt to identify the magnitude of the
+adverse impact that the risk will have on the organization. When evaluating
+this risk, it is helpful to refer to the three objectives of cybersecurity shown in
+Figure 1.1, confidentiality, integrity, and availability, and then assess the
+impact that the risk would have on each of these objectives.
+   The risk assessment process described here, using categories of
+“high,” “medium,” and “low,” is an example of a qualitative risk
+assessment process. Risk assessments also may use quantitative
+techniques that numerically assess the likelihood and impact of risks.
+Quantitative risk assessments are beyond the scope of the Cybersecurity
+Analyst+ exam but are found on more advanced security exams, including
+the CompTIA Advanced Security Practitioner (CASP) and Certified
+Information Systems Security Professional (CISSP) exams.
+After assessing the likelihood and impact of a risk, risk assessors then
+combine those two evaluations to determine an overall risk rating. This may
+be as simple as using a matrix similar to the one shown in Figure 1.4 that
+describes how the organization assigns overall ratings to risks. For example,
+an organization might decide that the likelihood of a hacker attack is medium
+whereas the impact would be high. Looking this combination up in Figure 1.4reveals that it should be considered a high overall risk. Similarly, if an
+organization assesses the likelihood of a flood as medium and the impact as
+low, a flood scenario would have an overall risk of low.
+www.hellodigi.ir
+
+Figure 1.4  Many organizations use a risk matrix to determine an overall risk
+rating based on likelihood and impact assessments.
+Reviewing Controls
+Cybersecurity professionals use risk management strategies, such as risk
+acceptance, risk avoidance, risk mitigation, and risk transference, to reduce
+the likelihood and impact of risks identified during risk assessments. The
+most common way that organizations manage security risks is to develop sets
+of technical and operational security controls that mitigate those risks to
+acceptable levels.
+Technical controls are systems, devices, software, and settings that work to
+enforce confidentiality, integrity, and/or availability requirements. Examples
+of technical controls include building a secure network and implementing
+endpoint security, two topics discussed later in this chapter. Operational
+www.hellodigi.ir
+
+controls are practices and procedures that bolster cybersecurity. Examples of
+operational controls include conducting penetration testing and using reverse
+engineering to analyze acquired software. These two topics are also discussed
+later in this chapter.
+www.hellodigi.ir
+
+Building a Secure Network
+Many threats to an organization’s cybersecurity exploit vulnerabilities in the
+organization’s network to gain initial access to systems and information. To
+help mitigate these risks, organizations should focus on building secure
+networks that keep attackers at bay. Examples of the controls that an
+organization may use to contribute to building a secure network include
+network access control (NAC) solutions; network perimeter security controls,
+such as firewalls; network segmentation; and the use of deception as a
+defensive measure.
+Network Access Control
+One of the basic security objectives set forth by most organizations is
+controlling access to the organization’s network. Network access control
+(NAC) solutions help security professionals achieve two cybersecurity
+objectives: limiting network access to authorized individuals and ensuring
+that systems accessing the organization’s network meet basic security
+requirements.
+The 802.1x protocol is a common standard used for NAC. When a new device
+wishes to gain access to a network, either by connecting to a wireless access
+point or plugging into a wired network port, the network challenges that
+device to authenticate using the 802.1x protocol. A special piece of software,
+known as a supplicant, resides on the device requesting to join the network.
+The supplicant communicates with a service known as the authenticator that
+runs on either the wireless access point or the network switch. The
+authenticator does not have the information necessary to validate the user
+itself, so it passes access requests along to an authentication server using the
+RADIUS protocol. If the user correctly authenticates and is authorized to
+access the network, the switch or access point then joins the user to the
+network. If the user does not successfully complete this process, the device is
+denied access to the network or may be assigned to a special quarantine
+network for remediation. Figure 1.5 shows the devices involved in 802.1x
+authentication.
+www.hellodigi.ir
+
+Figure 1.5  In an 802.1x system, the device attempting to join the network
+runs a NAC supplicant, which communicates with an authenticator on the
+network switch or wireless access point. The authenticator uses RADIUS to
+communicate with an authentication server.
+There are many different NAC solutions available on the market, and they
+differ in two major ways:
+Agent-Based vs. Agentless  Agent-based solutions, such as 802.1x, require
+that the device requesting access to the network run special software
+designed to communicate with the NAC service. Agentless approaches to NAC
+conduct authentication in the web browser and do not require special
+software.
+In-Band vs. Out-of-Band  In-band (or inline) NAC solutions use dedicated
+appliances that sit in between devices and the resources that they wish to
+access. They deny or limit network access to devices that do not pass the NAC
+authentication process. The “captive portal” NAC solutions found in hotels
+that hijack all web requests until the guest enters a room number are
+examples of in-band NAC. Out-of-band NAC solutions, such as 802.1x,
+leverage the existing network infrastructure and has network devices
+communicate with authentication servers and then reconfigure the network
+to grant or deny network access, as needed.
+NAC solutions are often used simply to limit access to authorized users based
+on those users successfully authenticating, but they may also make network
+admission decisions based on other criteria. Some of the criteria used by NAC
+solutions include:
+Time of Day  Users may be authorized to access the network only during
+specific time periods, such as during business hours.
+Role  Users may be assigned to particular network segments based on their
+role in the organization. For example, a college might assign faculty and staff
+www.hellodigi.ir
+
+to an administrative network that may access administrative systems while
+assigning students to an academic network that does not allow such access.
+Location  Users may be granted or denied access to network resources based
+on their physical location. For example, access to the datacenter network may
+be limited to systems physically present in the datacenter.
+System Health  NAC solutions may use agents running on devices to obtain
+configuration information from the device. Devices that fail to meet
+minimum security standards, such as having incorrectly configured host
+firewalls, outdated virus definitions, or missing patches, may be either
+completely denied network access or placed on a special quarantine network
+where they are granted only the limited access required to update the
+system’s security.
+Administrators may create NAC rules that limit access based on any
+combination of these characteristics. NAC products provide the flexibility
+needed to implement the organization’s specific security requirements for
+network admission.
+   You’ll sometimes see the acronym NAC expanded to “Network
+Admission Control” instead of “network access control.” In both cases,
+people are referring to the same general technology. Network Admission
+Control is a proprietary name used by Cisco for its network access control
+solutions.
+Firewalls and Network Perimeter Security
+NAC solutions are designed to manage the systems that connect directly to an
+organization’s wired or wireless network. They provide excellent protection
+against intruders who seek to gain access to the organization’s information
+resources by physically accessing a facility and connecting a device to the
+physical network. They don’t provide protection against intruders seeking to
+gain access over a network connection. That’s where firewalls enter the
+picture.
+Network firewalls sit at the boundaries between networks and provide
+perimeter security. Much like a security guard might control the physical
+perimeter of a building, the network firewall controls the electronic
+www.hellodigi.ir
+
+perimeter. Firewalls are typically configured in the triple-homed fashion
+illustrated in Figure 1.6 . Triple-homed simply means that the firewall
+connects to three different networks. The firewall in Figure 1.6  connects to
+the Internet, the internal network, and a special network known as the
+demilitarized zone (DMZ). Any traffic that wishes to pass from one zone to
+another, such as between the Internet and the internal network, must pass
+through the firewall.
+Figure 1.6  A triple-homed firewall connects to three different networks,
+typically an internal network, a DMZ, and the Internet.
+The DMZ is a special network zone designed to house systems that receive
+connections from the outside world, such as web and email servers. Sound
+firewall designs place these systems on an isolated network where, if they
+www.hellodigi.ir
+
+become compromised, they pose little threat to the internal network because
+connections between the DMZ and the internal network must still pass
+through the firewall and are subject to its security policy.
+Whenever the firewall receives a connection request, it evaluates it according
+to the firewall’s rule base. This rule base is an access control list (ACL) that
+identifies the types of traffic permitted to pass through the firewall. The rules
+used by the firewall typically specify the source and destination IP addresses
+for traffic as well as the destination port corresponding to the authorized
+service. A list of common ports appears in Table 1.1. Firewalls follow the
+default deny principle, which says that if there is no rule explicitly allowing a
+connection, the firewall will deny that connection.
+Table 1.1 Common TCP ports
+Port Service
+20,21 FTP
+22 SSH
+23 Telnet
+25 SMTP
+53 DNS
+69 TFTP
+80 HTTP
+110 POP3
+123 NTP
+143 IMAP
+161 SNMP
+389 LDAP
+443 HTTPS
+1443 SQL Server
+1521 Oracle
+1720 H.323
+1723 PPTP
+3389 RDP
+www.hellodigi.ir
+
+Several categories of firewalls are available on the market today, and they
+vary in both price and functionality:
+Packet filtering firewalls simply check the characteristics of each packet
+against the firewall rules without any additional intelligence. Packet
+filtering firewall capabilities are typically found in routers and other
+network devices and are very rudimentary firewalls.Stateful inspection firewalls go beyond packet filters and maintain
+information about the state of each connection passing through the
+firewall. These are the most basic firewalls sold as stand-alone products.
+Next-generation firewalls (NGFWs) incorporate even more information
+into their decision-making process, including contextual information
+about users, applications, and business processes. They are the current
+state-of-the-art in network firewall protection and are quite expensive
+compared to stateful inspection devices.
+Web application firewalls (WAFs) are specialized firewalls designed to
+protect against web application attacks, such as SQL injection and cross-
+site scripting. WAFs are discussed in more detail in Chapter 13,
+“Cybersecurity Toolkit.”
+Network Segmentation
+Firewalls use a principle known as network segmentation to separate
+networks of differing security levels from each other. This principle certainly
+applies to the example shown in Figure 1.6, where the internal network, DMZ,
+and Internet all have differing security levels. The same principle may be
+applied to further segment the internal network into different zones of trust.
+For example, imagine an organization that has several hundred employees
+and a large datacenter located in its corporate headquarters. The datacenter
+may house many sensitive systems, such as database servers that contain
+sensitive employee information, business plans, and other critical
+information assets. The corporate network may house employees, temporary
+contractors, visitors, and other people who aren’t entirely trusted. In this
+common example, security professionals would want to segment the
+datacenter network so that it is not directly accessible by systems on the
+corporate network. This can be accomplished using a firewall, as shown in
+Figure 1.7.
+www.hellodigi.ir
+
+Figure 1.7  A triple-homed firewall may also be used to isolate internal
+network segments of varying trust levels.
+The network shown in Figure 1.7  uses a triple-homed firewall, just as was
+used to control the network perimeter with the Internet in Figure 1.6 . The
+concept is identical, except in this case the firewall is protecting the perimeter
+of the datacenter from the less trusted corporate network.
+Notice that the network in Figure 1.7  also contains a DMZ with a server called
+the jump box. The purpose of this server is to act as a secure transition point
+between the corporate network and the datacenter network, providing a
+trusted path between the two zones. System administrators who need to
+access the datacenter network should not connect their laptops directly to the
+datacenter network but should instead initiate an administrative connection
+to the jump box, using secure shell (SSH), the Remote Desktop Protocol
+(RDP), or a similar secure remote administration protocol. After successfully
+www.hellodigi.ir
+
+authenticating to the jump box, they may then connect from the jump box to
+the datacenter network, providing some isolation between their own systems
+and the datacenter network. Connections to the jump box should be carefully
+controlled and protected with strong multifactor authentication technology.
+Jump boxes may also be used to serve as a layer of insulation against systems
+that may only be partially trusted. For example, if you have contractors who
+bring equipment owned by their employer onto your network or employees
+bringing personally-owned devices, you might use a jump box to prevent
+those systems from directly connecting to your company’s systems.
+Defense through Deception
+Cybersecurity professionals may wish to go beyond typical security controls
+and engage in active defensive measures that actually lure attackers to
+specific targets and seek to monitor their activity in a carefully controlled
+environment.
+Honeypots are systems designed to appear to attackers as lucrative targets
+due to the services they run, vulnerabilities they contain, or sensitive
+information that they appear to host. The reality is that honeypots are
+designed by cybersecurity experts to falsely appear vulnerable and fool
+malicious individuals into attempting an attack against them. When an
+attacker tries to compromise a honeypot, the honeypot simulates a successful
+attack and then monitors the attacker’s activity to learn more about his or her
+intentions. Honeypots may also be used to feed network blacklists, blocking
+all inbound activity from any IP address that attacks the honeypot.
+DNS sinkholes feed false information to malicious software that works its
+way onto the enterprise network. When a compromised system attempts to
+obtain information from a DNS server about its command-and-control server,
+the DNS server detects the suspicious request and, instead of responding with
+the correct answer, responds with the IP address of a sinkhole system
+designed to detect and remediate the botnet-infected system.
+www.hellodigi.ir
+
+Secure Endpoint Management
+Laptop and desktop computers, tablets, smartphones, and other endpoint
+devices are a constant source of security threats on a network. These systems
+interact directly with end users and require careful configuration
+management to ensure that they remain secure and do not serve as the entry
+point for a security vulnerability on enterprise networks. Fortunately, by
+taking some simple security precautions, technology professionals can secure
+these devices against most attacks.
+Hardening System Configurations
+Operating systems are extremely complex pieces of software designed to
+perform thousands of different functions. The large code bases that make up
+modern operating systems are a frequent source of vulnerabilities, as
+evidenced by the frequent security patches issued by operating system
+vendors.
+One of the most important ways that system administrators can protect
+endpoints is by hardening their configurations, making them as attack-
+resistant as possible. This includes disabling any unnecessary services or
+ports on the endpoints to reduce their susceptibility to attack, ensuring that
+secure configuration settings exist on devices and centrally controlling device
+security settings.
+Patch Management
+System administrators must maintain current security patch levels on all
+operating systems and applications under their care. Once the vendor releases
+a security patch, attackers are likely already aware of a vulnerability and may
+immediately begin preying on susceptible systems. The longer an
+organization waits to apply security patches, the more likely it becomes that
+they will fall victim to an attack. That said, enterprises should always test
+patches prior to deploying them on production systems and networks.
+Fortunately, patch management software makes it easy to centrally distribute
+and monitor the patch level of systems throughout the enterprise. For
+example, Microsoft’s System Center Configuration Manager (SCCM) allows
+administrators to quickly view the patch status of enterprise systems and
+remediate any systems with missing patches.
+www.hellodigi.ir
+
+Compensating Controls
+In some cases, security professionals may not be able to implement all of
+the desired security controls due to technical, operational, or financial
+reasons. For example, an organization may not be able to upgrade the
+operating system on retail point-of-sale terminals due to an
+incompatibility with the point-of-sale software. In these cases, security
+professionals should seek out compensating controls designed to provide
+a similar level of security using alternate means. In the point-of-sale
+example, administrators might place the point-of-sale terminals on a
+segmented, isolated network and use intrusion prevention systems to
+monitor network traffic for any attempt to exploit an unpatched
+vulnerability and block it from reaching the vulnerable host. This meets
+the same objective of protecting the point-of-sale terminal from
+compromise and serves as a compensating control.
+Group Policies
+Group Policies provide administrators with an efficient way to manage
+security and other system configuration settings across a large number of
+devices. Microsoft’s Group Policy Object (GPO) mechanism allows
+administrators to define groups of security settings once and then apply those
+settings to either all systems in the enterprise or a group of systems based
+upon role.
+For example, Figure 1.8 shows a GPO designed to enforce Windows Firewall
+settings on sensitive workstations. This GPO is configured to require the use
+of Windows Firewall and block all inbound connections.
+www.hellodigi.ir
+
+Figure 1.8  Group Policy Objects (GPOs) may be used to apply settings to
+many different systems at the same time.
+Administrators may use GPOs to control a wide variety of Windows settings
+and create different policies that apply to different classes of system.
+Endpoint Security Software
+Endpoint systems should also run specialized security software designed to
+enforce the organization’s security objectives. At a minimum, this should
+include antivirus software designed to scan the system for signs of malicious
+software that might jeopardize the security of the endpoint. Administrators
+may also choose to install host firewall software that serves as a basic firewall
+for that individual system, complementing network-based firewall controls or
+host intrusion prevention systems (HIPSs) that block suspicious network
+activity. Endpoint security software should report its status to a centralized
+management system that allows security administrators to monitor the entire
+enterprise from a single location.
+www.hellodigi.ir
+
+Mandatory Access Controls
+In highly secure environments, administrators may opt to implement a
+mandatory access control (MAC) approach to security. In a MAC system,
+administrators set all security permissions, and end users cannot modify
+those permissions. This stands in contrast to the discretionary access
+control (DAC) model found in most modern operating systems where the
+owner of a file or resource controls the permissions on that resource and
+can delegate them at his or her discretion.
+MAC systems are very unwieldy and, therefore, are rarely used outside of
+very sensitive government and military applications. Security Enhanced
+Linux (SE Linux), an operating system developed by the U.S. National
+Security Agency, is an example of a system that enforces mandatory
+access controls.
+www.hellodigi.ir
+
+Penetration Testing
+In addition to bearing responsibility for the design and implementation of
+security controls, cybersecurity analysts are responsible for monitoring the
+ongoing effectiveness of those controls. Penetration testing is one of the
+techniques they use to fulfill this obligation. During a penetration test, the
+testers simulate an attack against the organization using the same
+information, tools, and techniques available to real attackers. They seek to
+gain access to systems and information and then report their findings to
+management. The results of penetration tests may be used to bolster an
+organization’s security controls.
+Penetration tests may be performed by an organization’s internal staff or by
+external consultants. In the case of internal tests, they require highly skilled
+individuals and are quite time-consuming. External tests mitigate these
+concerns but are often quite expensive to conduct. Despite these barriers to
+penetration tests, organizations should try to perform them periodically since
+a well-designed and well-executed penetration test is one of the best
+measures of an organization’s cybersecurity posture.
+NIST divides penetration testing into the four phases shown in Figure 1.9.
+Figure 1.9  NIST divides penetration testing into four phases.
+Source: NIST SP 800-115: Technical Guide to Information Security Testing and Assessment
+Planning a Penetration Test
+The planning phase of a penetration test lays the administrative groundwork
+www.hellodigi.ir
+
+for the test. No technical work is performed during the planning phase, but it
+is a critical component of any penetration test. There are three important
+rules of engagement to finalize during the planning phase:
+Timing  When will the test take place? Will technology staff be informed of
+the test? Can it be timed to have as little impact on business operations as
+possible?
+Scope  What is the agreed-upon scope of the penetration test? Are any
+systems, networks, personnel, or business processes off-limits to the testers?
+Authorization  Who is authorizing the penetration test to take place? What
+should testers do if they are confronted by an employee or other individual
+who notices their suspicious activity?
+These details are administrative in nature, but it is important to agree on
+them up front and in writing to avoid problems during and after the
+penetration test.
+   You should never conduct a penetration test without permission.
+Not only is an unauthorized test unethical, it may be illegal.
+Conducting Discovery
+The technical work of the penetration test begins during the discovery phase
+when attackers conduct reconnaissance and gather as much information as
+possible about the targeted network, systems, users, and applications. This
+may include conducting reviews of publicly available material, performing
+port scans of systems, using network vulnerability scanners and web
+application testers to probe for vulnerabilities, and performing other
+information gathering.
+   Vulnerability scanning is an important component of
+penetration testing. This topic is covered extensively in Chapters 3 and 4.
+Executing a Penetration Test
+During the attack phase, penetration testers seek to bypass the organization’s
+www.hellodigi.ir
+
+security controls and gain access to systems and applications run by the
+organization. Testers often follow the NIST attack process shown in Figure
+1.10.
+Figure 1.10  The attack phase of a penetration test uses a cyclical process that
+gains a foothold and then uses it to expand access within the target
+organization.
+Source: NIST SP 800-115: Technical Guide to Information Security Testing and Assessment
+In this process, attackers use the information gathered during the discovery
+phase to gain initial access to a system. Once they establish a foothold, they
+then seek to escalate their access until they gain complete administrative
+control of the system. From there, they can scan for additional system on the
+network, install additional penetration testing tools, and begin the cycle anew,
+seeking to expand their footprint within the targeted organization. They
+continue this cycle until they exhaust the possibilities or the time allotted for
+the test expires.
+www.hellodigi.ir
+
+   The attack phase of a penetration test is also known as the
+exploitation phase. Questions on the exam referring to test execution, the
+attack phase, and the exploitation phase are all referring to the same
+thing.
+Communicating Penetration Test Results
+At the conclusion of the penetration test, the testers prepare a detailed report
+communicating the access they were able to achieve and the vulnerabilities
+they exploited to gain this access. The results of penetration tests are valuable
+security planning tools, as they describe the actual vulnerabilities that an
+attacker might exploit to gain access to a network. Penetration testing reports
+typically contain detailed appendixes that include the results of various tests
+and may be shared with system administrators responsible for remediating
+issues.
+Training and Exercises
+In addition to performing penetration tests, some organizations choose to run
+wargame exercises that pit teams of security professionals against each other
+in a cyberdefense scenario. These exercises are typically performed in
+simulated environments, rather than on production networks, and seek to
+improve the skills of security professionals on both sides by exposing them to
+the tools and techniques used by attackers. Three teams are involved in most
+cybersecurity wargames:The red team plays the role of the attacker and uses reconnaissance and
+exploitation tools to attempt to gain access to the protected network. The
+red team’s work is similar to that of the testers during a penetration test.
+The blue team is responsible for securing the targeted environment and
+keeping the red team out by building, maintaining, and monitoring a
+comprehensive set of security controls.
+The white team coordinates the exercise and serves as referees, arbitrating
+disputes between the team, maintaining the technical environment, and
+monitoring the results.
+Cybersecurity wargames can be an effective way to educate security
+www.hellodigi.ir
+
+professionals on modern attack and defense tactics.
+www.hellodigi.ir
+
+Reverse Engineering
+In many cases, vendors do not release the details of how hardware and
+software work. Certainly, the authors of malicious software don’t explain
+their work to the world. In these situations, security professionals may be in
+the dark about the security of their environments. Reverse engineering is a
+technique used to work backward from a finished product to figure out how it
+works. Security professionals sometimes use reverse engineering to learn the
+inner workings of suspicious software or inspect the integrity of hardware.
+Reverse engineering uses a philosophy known as decomposition where the
+reverse engineer starts with the finished product and works his or her way
+back to its component parts.
+Isolation and Sandboxing
+One of the most dangerous threats to the security of modern organizations is
+customized malware developed by APT actors who create specialized tools
+designed to penetrate a single target. Since they have never been used before,
+these tools are not detectable with the signature-detection technology used by
+traditional antivirus software.
+Sandboxing is an approach used to detect malicious software based on its
+behavior rather than its signatures. Sandboxing systems watch systems and
+the network for unknown pieces of code and, when they detect an application
+that has not been seen before, immediately isolate that code in a special
+environment known as a sandbox where it does not have access to any other
+systems or applications. The sandboxing solution then executes the code and
+watches how it behaves, checking to see if it begins scanning the network for
+other systems, gathering sensitive information, communicating with a
+command-and-control server, or performing any other potentially malicious
+activity.
+If the sandboxing solution identifies strange behavior, it blocks the code from
+entering the organization’s network and flags it for administrator review. This
+process, also known as code detonation, is an example of an automated
+reverse engineering technique that takes action based on the observed
+behavior of software.
+Reverse Engineering Software
+www.hellodigi.ir
+
+In most programming languages, developers write software in a human-
+readable language such as C/C++, Java, Ruby, or Python. Depending on the
+programming language, the computer may process this code in one of two
+ways. In interpreted languages, such as Ruby and Python, the computer
+works directly from the source code. Reverse engineers seeking to analyze
+code written in interpreted languages can simply read through the code and
+often get a good idea of what the code is attempting to accomplish.
+In compiled languages, such as Java and C/C++, the developer uses a tool
+called a compiler to convert the source code into binary code that is readable
+by the computer. This binary code is what is often distributed to users of the
+software, and it is very difficult, if not impossible, to examine binary code and
+determine what it is doing, making the reverse engineering of compiled
+languages much more difficult. Technologists seeking to reverse engineer
+compiled code have two options. First, they can attempt to use a specialized
+program known as a decompiler to convert the binary code back to source
+code. Unfortunately, however, this process usually does not work very well.
+Second, they can instrument a specialized environment and carefully monitor
+how software responds to different inputs in an attempt to discover its inner
+workings. In either case, reverse engineering compiled software is extremely
+difficult.
+   
+    Fingerprinting Software
+Although it is difficult to reverse engineer compiled code, technologists
+can easily detect whether two pieces of compiled code are identical or
+whether one has been modified. Hashing is a mathematical technique
+that analyzes a file and computes a unique fingerprint, known as a
+message digest or hash, for that file. Analysts using hash functions, such
+as the Secure Hash Algorithm (SHA), can compute the hashes of two files
+and compare the output values. If the hashes are identical, the file
+contents are identical. If the hashes differ, the two files contain at least
+one difference. Hashing software is covered in more detail in Chapter 13,
+“Cybersecurity Toolkit.”
+Reverse Engineering Hardware
+www.hellodigi.ir
+
+Reverse engineering hardware is even more difficult than reverse engineering
+software because the authenticity of hardware often rests in the invisible code
+embedded within integrated circuits and firmware contents. Although
+organizations may perform a physical inspection of hardware to detect
+tampering, it is important to verify that hardware has source authenticity,
+meaning that it comes from a trusted, reliable source, because it is simply too
+difficult to exhaustively test hardware.
+The U.S. government recognizes the difficulty of ensuring source authenticity
+and operates a trusted foundry program for critical defense systems. The
+Department of Defense and National Security Agency (NSA) certify
+companies as trusted foundries that are approved to create sensitive
+integrated circuits for government use. Companies seeking trusted foundry
+status must show that they completely secure the production process,
+including design, prototyping, packing, assembly, and other elements of the
+process.
+Reverse engineers seeking to determine the function of hardware use some of
+the same techniques used for compiled software, particularly when it comes
+to observing behavior. Operating a piece of hardware in a controlled
+environment and observing how it responds to different inputs provides clues
+to the functions performed in the hardware. Reverse engineers may also seek
+to obtain documentation from original equipment manufacturers (OEMs)
+that provide insight into how components of a piece of hardware function.
+www.hellodigi.ir
+
+   
+    Compromising Cisco Routers
+According to NSA documents released by Edward Snowden, the U.S.
+government has engaged in reverse engineering of hardware designed to
+circumvent security.
+Source: “Spiegel supply chain interdiction: Stealthy techniques can crack some of sigints hardest
+targets” by eff.org licensed under CC By 3.0 US
+In a process shown in this photo, NSA employees intercepted packages
+containing Cisco routers, switches, and other network gear after it left the
+factory and before it reached the customer. They then opened the
+packages and inserted covert firmware into the devices that facilitated
+government monitoring.
+www.hellodigi.ir
+
+Summary
+Cybersecurity professionals are responsible for ensuring the confidentiality,
+integrity, and availability of information and systems maintained by their
+organizations. Confidentiality ensures that unauthorized individuals are not
+able to gain access to sensitive information. Integrity ensures that there are
+no unauthorized modifications to information or systems, either intentionally
+or unintentionally. Availability ensures that information and systems are
+ready to meet the needs of legitimate users at the time those users request
+them. Together, these three goals are known as the CIA Triad.
+As cybersecurity analysts seek to protect their organizations, they must
+evaluate risks to the CIA Triad. This includes identifying vulnerabilities,
+recognizing corresponding threats, and determining the level of risk that
+results from vulnerability and threat combinations. Analysts must then
+evaluate each risk and identify appropriate risk management strategies to
+mitigate or otherwise address the risk.
+Cybersecurity analysts mitigate risks using security controls designed to
+reduce the likelihood or impact of a risk. Network security controls include
+network access control (NAC) systems, firewalls, and network segmentation.
+Secure endpoint controls include hardened system configurations, patch
+management, Group Policies, and endpoint security software.
+Penetration tests and reverse engineering provide analysts with the
+reassurance that the controls they’ve implemented to mitigate risks are
+functioning properly. By following a careful risk analysis and control process,
+analysts significantly enhance the confidentiality, integrity, and availability of
+information and systems under their control.
+www.hellodigi.ir
+
+Exam Essentials
+The three objectives of cybersecurity are confidentiality, integrity,
+and availability.  Confidentiality ensures that unauthorized individuals are
+not able to gain access to sensitive information. Integrity ensures that there
+are no unauthorized modifications to information or systems, either
+intentionally or unintentionally. Availability ensures that information and
+systems are ready to meet the needs of legitimate users at the time those
+users request them.
+Cybersecurity risks result from the combination of a threat and a
+vulnerability.  A vulnerability is a weakness in a device, system, application,
+or process that might allow an attack to take place. A threat in the world of
+cybersecurity is an outside force that may exploit a vulnerability.
+Cybersecurity threats may be categorized as adversarial, accidental,
+structural, or environmental.  Adversarial threats are individuals, groups,
+and organizations that are attempting to deliberately undermine the security
+of an organization. Accidental threats occur when individuals doing their
+routine work mistakenly perform an action that undermines security.
+Structural threats occur when equipment, software, or environmental
+controls fail due to the exhaustion of resources, exceeding their operational
+capability or simply failing due to age. Environmental threats occur when
+natural or man-made disasters occur that are outside the control of the
+organization.
+Networks are made more secure through the use of network access
+control, firewalls, and segmentation.  Network access control (NAC)
+solutions help security professionals achieve two cybersecurity objectives:
+limiting network access to authorized individuals and ensuring that systems
+accessing the organization’s network meet basic security requirements.
+Network firewalls sit at the boundaries between networks and provide
+perimeter security. Network segmentation uses isolation to separate
+networks of differing security levels from each other.
+Endpoints are made more secure through the use of hardened
+configurations, patch management, Group Policy, and endpoint
+security software.  Hardening configurations includes disabling any
+unnecessary services on the endpoints to reduce their susceptibility to attack,
+ensuring that secure configuration settings exist on devices and centrally
+controlling device security settings. Patch management ensures that
+www.hellodigi.ir
+
+operating systems and applications are not susceptible to known
+vulnerabilities. Group Policy allows the application of security settings to
+many devices simultaneously, and endpoint security software protects against
+malicious software and other threats.
+Penetration tests provide organizations with an attacker’s
+perspective on their security.  The NIST process for penetration testing
+divides tests into four phases: planning, discovery, attack, and reporting. The
+results of penetration tests are valuable security planning tools, since they
+describe the actual vulnerabilities that an attacker might exploit to gain
+access to a network.
+Reverse engineering techniques attempt to determine how
+hardware and software functions internally.  Sandboxing is an
+approach used to detect malicious software based on its behavior rather than
+its signatures. Other reverse engineering techniques are difficult to perform,
+are often unsuccessful, and are quite time-consuming.
+www.hellodigi.ir
+
+Lab Exercises
+Activity 1.1: Create an Inbound Firewall Rule
+In this lab, you will verify that the Windows Firewall is enabled on a server
+and then create an inbound firewall rule that blocks file and printer sharing.
+This lab requires access to a system running Windows Server 2012 or
+Windows Server 2012 R2.
+Part 1: Verify that Windows Firewall is enabled
+1. Open the Control Panel for your Windows Server.
+2. Choose System And Security.
+3. Under Windows Firewall, click Check Firewall Status.
+4. Verify that the Windows Firewall state is set to On for Private networks. If
+it is not on, enable the firewall by using the “Turn Windows Firewall on or
+off” link on the left side of the window.
+Part 2: Create an inbound firewall rule that blocks file and printer
+sharing
+1. On the left side of the Windows Firewall control panel, click “Allow an app
+or feature through Windows Firewall.”
+2. Scroll down the list of applications and find File And Printer Sharing.
+3. Uncheck the box to the left of that entry to block connections related to
+File And Printer Sharing.
+4. Click OK to apply the setting.
+Note: You should perform this lab on a test system. Disabling file and
+printer sharing on a production system may have undesired consequences.
+Activity 1.2: Create a Group Policy Object
+In this lab, you will create a Group Policy Object and edit its contents to
+enforce an organization’s password policy.
+This lab requires access to a system running Windows Server 2012 or
+Windows Server 2012 R2 that is configured as a domain controller.
+www.hellodigi.ir
+
+            
+             
+   
+         
+    
+       
+            
+         
+            
+ 
+         
+    
+     
+     
+     
+    
+    
+             
+      
+      
+            
+      
+                
+     
+      
+        
+              1. Op
+en th
+e Gr
+oup Po
+licy Ma
+nagement Co
+nsole. (I
+f yo
+u do no
+t fi
+nd th
+is
+console on yo
+ur Wi
+ndows 20
+12 Se
+rver, it is li
+kely th
+at it is no
+t co
+nfigured
+as a do
+main co
+ntroller.)
+2. Ex
+pand th
+e fo
+lder co
+rresponding to yo
+ur Ac
+tive Di
+rectory fo
+rest.
+3. Ex
+pand th
+e Do
+mains fo
+lder.
+4. Ex
+pand th
+e fo
+lder co
+rresponding to yo
+ur do
+main.
+5. Ri
+ght-click th
+e Gr
+oup Po
+licy Ob
+jects fo
+lder an
+d cl
+ick Ne
+w on th
+e po
+p-up
+menu.
+6. Na
+me yo
+ur ne
+w GP
+O Pa
+ssword Po
+licy an
+d cl
+ick OK
+.
+7. Ri
+ght-click th
+e ne
+w Pa
+ssword Po
+licy GP
+O an
+d ch
+oose Ed
+it fr
+om th
+e po
+p-
+up me
+nu.
+8. Wh
+en Gr
+oup Po
+licy Ed
+itor op
+ens, ex
+pand th
+e Co
+mputer Co
+nfiguration
+folder.
+9. Ex
+pand th
+e Po
+licies fo
+lder.
+10. Ex
+pand th
+e Wi
+ndows Se
+ttings fo
+lder.
+11. Ex
+pand th
+e Se
+curity Se
+ttings fo
+lder.
+12. Ex
+pand th
+e Ac
+count Po
+licies fo
+lder.
+13. Cl
+ick on Pa
+ssword Po
+licy.
+14. Do
+uble-click Ma
+ximum pa
+ssword ag
+e.
+15. In th
+e po
+p-up wi
+ndow, se
+lect th
+e De
+fine Th
+is Po
+licy Se
+tting ch
+eck bo
+x an
+d
+set th
+e ex
+piration va
+lue to 90 da
+ys.
+16. Cl
+ick OK to cl
+ose th
+e wi
+ndow.
+  17
+. Cl
+ick OK to ac
+cept th
+e su
+ggested ch
+ange to th
+e mi
+nimum pa
+ssword ag
+e. 
+18
+. Do
+uble-click th
+e Mi
+nimum Pa
+ssword Le
+ngth op
+tion.
+19. As in th
+e pr
+ior st
+ep, cl
+ick th
+e bo
+x to de
+fine th
+e po
+licy se
+tting an
+d se
+t th
+e
+minimum pa
+ssword le
+ngth to 12 ch
+aracters.
+20. Cl
+ick OK to cl
+ose th
+e wi
+ndow.
+  21
+. Do
+uble-click th
+e Pa
+ssword Mu
+st Me
+et Co
+mplexity Re
+quirements op
+tion. 
+22
+. Cl
+ick th
+e bo
+x to de
+fine th
+e po
+licy se
+tting an
+d ch
+ange th
+e va
+lue to En
+abled.
+Technet24.ir
+www.hellodigi.ir
+
+23. Click OK to close the window.
+24. Click the X to exit Group Policy Editor
+You have now successfully created a Group Policy Object that enforces the
+organization’s password policy. You may apply this GPO to users and/or
+groups as needed.
+Activity 1.3: Write a Penetration Testing Plan
+For this activity, design a penetration testing plan for a test against an
+organization of your choosing. If you are employed, you may choose to use
+your employer’s network. If you are a student, you may choose to create a
+plan for a penetration test of your school. Otherwise, you may choose any
+organization, real or fictitious, of your choice.
+Your penetration testing plan should cover the three main criteria required
+before initiating any penetration test:Timing
+Scope
+Authorization
+One word of warning: You should not conduct a penetration test without
+permission of the network owner. This assignment only asks you to design
+the test on paper.
+Activity 1.4: Security Tools
+Match each of the security tools listed in this table with the correct
+description.
+www.hellodigi.ir
+
+
+[Note: PDF has 819 pages, only first 100 pages extracted]

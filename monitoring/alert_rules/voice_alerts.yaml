@@ -1,0 +1,53 @@
+groups:
+  - name: fame-voice-critical
+    interval: 30s
+    rules:
+      - alert: VoiceExporterDown
+        expr: trading_voice_metrics_last_updated == 0
+        for: 2m
+        labels:
+          severity: critical
+          service: fame_voice
+        annotations:
+          summary: "Voice telemetry exporter not reporting"
+          description: "voice metrics have not been refreshed. Exporter may be down or unreachable."
+      - alert: VoiceErrorSpike
+        expr: rate(trading_voice_failed_requests[5m]) / clamp_min(rate(trading_voice_total_requests[5m]), 1) > 0.3
+        for: 5m
+        labels:
+          severity: high
+          service: fame_voice
+        annotations:
+          summary: "Voice failure ratio above 30%"
+          description: "Large number of failed voice interactions in the last 5 minutes."
+      - alert: VoiceLatencyHigh
+        expr: trading_voice_average_latency_ms > 1500
+        for: 3m
+        labels:
+          severity: high
+          service: fame_voice
+        annotations:
+          summary: "Voice latency exceeding threshold"
+          description: "Average voice latency above 1500 ms."
+  - name: fame-voice-wake-word
+    interval: 1m
+    rules:
+      - alert: WakeWordFalsePositiveFlood
+        expr: increase(trading_voice_wake_false_positives[10m]) > 20
+        for: 0m
+        labels:
+          severity: medium
+          service: fame_voice
+        annotations:
+          summary: "Wake word false positives surge"
+          description: "More than 20 false positives detected in the last 10 minutes."
+      - alert: WakeWordSilence
+        expr: increase(trading_voice_wake_events[15m]) == 0
+        for: 15m
+        labels:
+          severity: low
+          service: fame_voice
+        annotations:
+          summary: "No wake events detected"
+          description: "Voice subsystem has not registered wake events for 15 minutes."
+
