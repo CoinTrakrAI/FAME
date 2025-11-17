@@ -1,33 +1,41 @@
-$sshKey = "C:\Users\cavek\Downloads\FAME.pem"
-$user = "ec2-user"
-$ec2Host = "52.15.178.92"
-$localScript = "C:\Users\cavek\Downloads\FAME_Desktop\deploy_ec2.sh"
+# ==============================
+# FAME EC2 Deployment Script
+# ==============================
+# Configuration
+$sshKey       = "C:\Users\cavek\Downloads\FAME.pem"
+$user         = "ec2-user"
+$ec2Host      = "52.15.178.92"
+$localScript  = "deploy_ec2.sh"
 $remoteScript = "/home/ec2-user/deploy_ec2.sh"
-$ssh = "C:\Windows\System32\OpenSSH\ssh.exe"
-$scp = "C:\Windows\System32\OpenSSH\scp.exe"
 
+# Ensure local script exists
 if (-not (Test-Path $localScript)) {
-    Write-Host "Error: deploy_ec2.sh not found at $localScript"
+    Write-Host "Local deployment script $localScript not found!" -ForegroundColor Red
     exit 1
 }
 
-Write-Host "Uploading script..."
-$dest = "$user@$ec2Host`:$remoteScript"
-& $scp -i $sshKey -o StrictHostKeyChecking=no $localScript $dest
+# Convert script to Unix line endings to avoid CRLF issues
+Write-Host "Converting script to Unix line endings..."
+(Get-Content $localScript) | ForEach-Object { $_ -replace "`r`n","`n" } | Set-Content -NoNewline $localScript
+
+# Step 1: Upload the script to EC2
+Write-Host "Uploading deployment script to EC2..." -ForegroundColor Yellow
+scp -v -i $sshKey -o StrictHostKeyChecking=no $localScript "$user@$ec2Host:$remoteScript"
 
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "Upload failed. Exit code: $LASTEXITCODE"
+    Write-Host "Upload failed. Exit code: $LASTEXITCODE" -ForegroundColor Red
     exit 1
 }
 
-Write-Host "Script uploaded successfully"
-Write-Host "Running script on EC2..."
-$sshCmd = "chmod +x $remoteScript; bash $remoteScript"
-& $ssh -i $sshKey -o StrictHostKeyChecking=no "$user@$ec2Host" $sshCmd
+Write-Host "Script uploaded successfully." -ForegroundColor Green
+
+# Step 2: Run the script on EC2
+Write-Host "Executing deployment script on EC2..." -ForegroundColor Yellow
+ssh -v -i $sshKey -o StrictHostKeyChecking=no $user@$ec2Host "chmod +x $remoteScript && bash $remoteScript"
 
 if ($LASTEXITCODE -ne 0) {
-    Write-Host "Deployment failed. Exit code: $LASTEXITCODE"
+    Write-Host "Deployment failed on EC2. Exit code: $LASTEXITCODE" -ForegroundColor Red
     exit 1
 }
 
-Write-Host "Deployment complete."
+Write-Host "Deployment complete!" -ForegroundColor Green
