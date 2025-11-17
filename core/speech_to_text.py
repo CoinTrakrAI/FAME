@@ -4,30 +4,29 @@ F.A.M.E. - Speech-to-Text Engine
 Real-time voice recognition for natural interaction
 """
 
+import threading
+import queue
+import asyncio
+from typing import Dict, Any, Optional, Callable
+import logging
+
+logger = logging.getLogger(__name__)
+
+# Try to import speech recognition
 try:
     import speech_recognition as sr
     SPEECH_RECOGNITION_AVAILABLE = True
 except ImportError:
     SPEECH_RECOGNITION_AVAILABLE = False
-    print("[WARNING] speech_recognition not available. Install with: pip install SpeechRecognition")
+    logger.warning("speech_recognition not available - voice features will be limited")
 
+# Try to import pyaudio
 try:
     import pyaudio
     PYAUDIO_AVAILABLE = True
 except ImportError:
     PYAUDIO_AVAILABLE = False
-    print("[WARNING] pyaudio not available. Install with: pip install pyaudio")
-
-import threading
-try:
-    import queue
-    QUEUE_AVAILABLE = True
-except ImportError:
-    QUEUE_AVAILABLE = False
-
-import asyncio
-from typing import Dict, Any, Optional, Callable
-import json
+    logger.warning("pyaudio not available - voice features will be limited")
 
 
 class SpeechToTextEngine:
@@ -37,26 +36,24 @@ class SpeechToTextEngine:
         if not SPEECH_RECOGNITION_AVAILABLE:
             self.recognizer = None
             self.microphone = None
-            print("[WARNING] Speech recognition not available")
-        else:
-            self.recognizer = sr.Recognizer()
-            try:
-                self.microphone = sr.Microphone()
-                
-                # Adjust for ambient noise
-                print("Calibrating microphone for ambient noise...")
-                with self.microphone as source:
-                    self.recognizer.adjust_for_ambient_noise(source)
-                print("Microphone calibrated!")
-            except Exception as e:
-                print(f"[WARNING] Microphone initialization failed: {e}")
-                self.microphone = None
+            logger.warning("Speech recognition not available")
+            return
         
-        if QUEUE_AVAILABLE:
-            self.audio_queue = queue.Queue()
-        else:
-            self.audio_queue = None
+        self.recognizer = sr.Recognizer()
+        self.microphone = None
         
+        try:
+            self.microphone = sr.Microphone()
+            # Adjust for ambient noise
+            logger.info("Calibrating microphone for ambient noise...")
+            with self.microphone as source:
+                self.recognizer.adjust_for_ambient_noise(source, duration=1)
+            logger.info("Microphone calibrated!")
+        except Exception as e:
+            logger.warning(f"Microphone initialization failed: {e}")
+            self.microphone = None
+        
+        self.audio_queue = queue.Queue()
         self.is_listening = False
         self.callbacks = []
     
@@ -67,7 +64,7 @@ class SpeechToTextEngine:
     async def start_listening(self):
         """Start continuous listening"""
         if not SPEECH_RECOGNITION_AVAILABLE or not self.microphone:
-            print("[ERROR] Speech recognition not available")
+            logger.error("Speech recognition not available")
             return
         
         self.is_listening = True
@@ -75,24 +72,27 @@ class SpeechToTextEngine:
         def listen_worker():
             while self.is_listening:
                 try:
-                    print("Listening...")
+                    logger.debug("Listening...")
                     with self.microphone as source:
                         audio = self.recognizer.listen(source, timeout=1, phrase_time_limit=10)
                     
                     # Process audio
-                    text = self.process_audio_sync(audio)
-                    
-                    if text:
-                        for callback in self.callbacks:
-                            try:
+                    try:
+                        loop = asyncio.new_event_loop()
+                        asyncio.set_event_loop(loop)
+                        text = loop.run_until_complete(self.process_audio(audio))
+                        loop.close()
+                        
+                        if text:
+                            for callback in self.callbacks:
                                 callback(text)
-                            except Exception as e:
-                                print(f"Callback error: {e}")
-                                
+                    except Exception as e:
+                        logger.error(f"Audio processing error: {e}")
+                            
                 except sr.WaitTimeoutError:
                     continue
                 except Exception as e:
-                    print(f"Listening error: {e}")
+                    logger.error(f"Listening error: {e}")
                     continue
         
         # Start listening in background thread
@@ -103,42 +103,41 @@ class SpeechToTextEngine:
         """Stop listening"""
         self.is_listening = False
     
-    def process_audio_sync(self, audio) -> Optional[str]:
-        """Process audio synchronously"""
+    async def process_audio(self, audio) -> Optional[str]:
+        """Process audio with multiple recognition backends"""
+        if not self.recognizer:
+            return None
+        
         try:
             # Try Google Speech Recognition first
             try:
                 text = self.recognizer.recognize_google(audio)
-                print(f"Google STT: {text}")
+                logger.info(f"Google STT: {text}")
                 return text
             except sr.UnknownValueError:
-                print("Google Speech Recognition could not understand audio")
+                logger.debug("Google Speech Recognition could not understand audio")
             except sr.RequestError as e:
-                print(f"Google Speech Recognition error: {e}")
+                logger.warning(f"Google Speech Recognition error: {e}")
             
-            # Fallback: Sphinx (offline) - may not be available
+            # Fallback: Sphinx (offline)
             try:
                 text = self.recognizer.recognize_sphinx(audio)
-                print(f"Sphinx STT: {text}")
+                logger.info(f"Sphinx STT: {text}")
                 return text
             except sr.UnknownValueError:
-                print("Sphinx could not understand audio")
+                logger.debug("Sphinx could not understand audio")
             except Exception as e:
-                print(f"Sphinx error: {e}")
+                logger.debug(f"Sphinx error: {e}")
             
             return None
             
         except Exception as e:
-            print(f"Audio processing error: {e}")
+            logger.error(f"Audio processing error: {e}")
             return None
-    
-    async def process_audio(self, audio) -> Optional[str]:
-        """Process audio with multiple recognition backends (async wrapper)"""
-        return self.process_audio_sync(audio)
     
     async def transcribe_audio_file(self, audio_file_path: str) -> Dict[str, Any]:
         """Transcribe audio file"""
-        if not SPEECH_RECOGNITION_AVAILABLE:
+        if not self.recognizer:
             return {
                 "success": False,
                 "error": "Speech recognition not available",
@@ -162,26 +161,3 @@ class SpeechToTextEngine:
                 "error": str(e),
                 "file": audio_file_path
             }
-
-
-def handle(request: Dict[str, Any]) -> Dict[str, Any]:
-    """Orchestrator interface for speech-to-text"""
-    if not SPEECH_RECOGNITION_AVAILABLE:
-        return {"error": "Speech recognition not available. Install SpeechRecognition and pyaudio."}
-    
-    audio_file = request.get("audio_file")
-    if audio_file:
-        async def transcribe():
-            engine = SpeechToTextEngine()
-            return await engine.transcribe_audio_file(audio_file)
-        
-        loop = asyncio.new_event_loop()
-        asyncio.set_event_loop(loop)
-        try:
-            result = loop.run_until_complete(transcribe())
-            return result
-        finally:
-            loop.close()
-    else:
-        return {"error": "No audio file provided"}
-

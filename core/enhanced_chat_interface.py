@@ -6,15 +6,14 @@ Advanced LLM integration for intellectual conversations
 
 import asyncio
 import json
-try:
-    import requests
-    REQUESTS_AVAILABLE = True
-except ImportError:
-    REQUESTS_AVAILABLE = False
-
+import os
+import requests
 from typing import Dict, List, Any, Optional
 from datetime import datetime
 import re
+import logging
+
+logger = logging.getLogger(__name__)
 
 
 class EnhancedChatInterface:
@@ -31,7 +30,6 @@ class EnhancedChatInterface:
 - Technology trends and innovation
 - Entrepreneurship and venture capital
 - Corporate leadership and management
-
 Always provide insightful, data-driven responses. Be analytical but conversational.
 Use financial terminology appropriately and explain complex concepts clearly.""",
                 "temperature": 0.7
@@ -43,7 +41,6 @@ Use financial terminology appropriately and explain complex concepts clearly."""
 - Cloud infrastructure and DevOps
 - Cybersecurity and network engineering
 - Emerging technologies and innovation
-
 Provide detailed technical guidance with practical examples.""",
                 "temperature": 0.5
             },
@@ -54,7 +51,6 @@ Provide detailed technical guidance with practical examples.""",
 - Innovation strategy and R&D planning
 - Market disruption opportunities
 - Organizational transformation
-
 Think multiple steps ahead and consider systemic implications.""",
                 "temperature": 0.8
             }
@@ -63,8 +59,8 @@ Think multiple steps ahead and consider systemic implications.""",
         # Available LLM backends (can be extended)
         self.llm_backends = {
             "openai": self._call_openai,
-            "huggingface": self._call_huggingface,
-            "local": self._call_local_llm
+            "localai": self._call_localai,
+            "fallback": self._simulate_ai_response
         }
     
     async def chat_with_fame(self, message: str, persona: str = "business_expert", 
@@ -106,6 +102,7 @@ Think multiple steps ahead and consider systemic implications.""",
             }
             
         except Exception as e:
+            logger.error(f"Chat error: {e}")
             return {"error": f"Chat error: {str(e)}"}
     
     async def _generate_llm_response(self, message: str, system_prompt: str, 
@@ -113,7 +110,7 @@ Think multiple steps ahead and consider systemic implications.""",
         """Generate response using available LLM backends"""
         
         # Try different backends in order of preference
-        backends_to_try = ["openai", "huggingface", "local"]
+        backends_to_try = ["openai", "localai", "fallback"]
         
         for backend in backends_to_try:
             try:
@@ -126,7 +123,7 @@ Think multiple steps ahead and consider systemic implications.""",
                 if response:
                     return response
             except Exception as e:
-                print(f"Backend {backend} failed: {e}")
+                logger.debug(f"Backend {backend} failed: {e}")
                 continue
         
         # Fallback response
@@ -136,28 +133,63 @@ Think multiple steps ahead and consider systemic implications.""",
                           context: List[Dict], temperature: float) -> Optional[str]:
         """Call OpenAI GPT models"""
         try:
-            # This would be implemented with actual OpenAI API
-            # For now, return a simulated response
-            return self._simulate_ai_response(message, system_prompt)
-        except:
+            openai_key = os.getenv('OPENAI_API_KEY')
+            if not openai_key or openai_key.startswith('your_'):
+                return None
+            
+            # Try to use OpenAI API
+            try:
+                import openai
+                client = openai.OpenAI(api_key=openai_key)
+                
+                messages = [{"role": "system", "content": system_prompt}]
+                messages.extend(context)
+                messages.append({"role": "user", "content": message})
+                
+                response = client.chat.completions.create(
+                    model="gpt-4",
+                    messages=messages,
+                    temperature=temperature
+                )
+                
+                return response.choices[0].message.content
+            except ImportError:
+                logger.warning("OpenAI library not installed")
+                return None
+        except Exception as e:
+            logger.debug(f"OpenAI call failed: {e}")
             return None
     
-    async def _call_huggingface(self, message: str, system_prompt: str, 
-                               context: List[Dict], temperature: float) -> Optional[str]:
-        """Call Hugging Face inference API"""
+    async def _call_localai(self, message: str, system_prompt: str, 
+                           context: List[Dict], temperature: float) -> Optional[str]:
+        """Call LocalAI (local LLM)"""
         try:
-            # Simulated Hugging Face call
-            return self._simulate_ai_response(message, system_prompt)
-        except:
+            from core.localai_manager import get_localai_manager
+            manager = get_localai_manager()
+            
+            if not manager.is_container_running():
+                return None
+            
+            # Call LocalAI API
+            url = f"{manager.endpoint}/v1/chat/completions"
+            messages = [{"role": "system", "content": system_prompt}]
+            messages.extend(context)
+            messages.append({"role": "user", "content": message})
+            
+            payload = {
+                "model": "gpt-3.5-turbo",  # LocalAI model name
+                "messages": messages,
+                "temperature": temperature
+            }
+            
+            response = requests.post(url, json=payload, timeout=30)
+            if response.status_code == 200:
+                data = response.json()
+                return data.get('choices', [{}])[0].get('message', {}).get('content')
+            
             return None
-    
-    async def _call_local_llm(self, message: str, system_prompt: str, 
-                             context: List[Dict], temperature: float) -> Optional[str]:
-        """Call local LLM (Ollama, etc.)"""
-        try:
-            # Simulated local LLM call
-            return self._simulate_ai_response(message, system_prompt)
-        except:
+        except Exception as e:
+            logger.debug(f"LocalAI call failed: {e}")
             return None
     
     def _simulate_ai_response(self, message: str, system_prompt: str) -> str:
@@ -234,13 +266,12 @@ Could you provide more specific details about your situation so I can offer more
         
         # Check if we should use market analysis
         if any(word in message_lower for word in ['stock price', 'market analysis', 'trading', 'investment']):
-            # This would integrate with market_oracle
-            enhanced_response = current_response + "\n\n**Market Analysis Enhancement**: I can provide real-time market data and technical analysis for specific stocks if you'd like."
+            enhanced_response = current_response + "\n\n📈 **Market Analysis Enhancement**: I can provide real-time market data and technical analysis for specific stocks if you'd like."
             return enhanced_response
         
         # Check if we should use code generation
         elif any(word in message_lower for word in ['build', 'create app', 'develop', 'code']):
-            enhanced_response = current_response + "\n\n**Development Capability**: I can generate complete applications, trading bots, or data analysis tools. Just specify your requirements."
+            enhanced_response = current_response + "\n\n💻 **Development Capability**: I can generate complete applications, trading bots, or data analysis tools. Just specify your requirements."
             return enhanced_response
         
         return None
@@ -276,38 +307,3 @@ Could you provide more specific details about your situation so I can offer more
             "assistant_messages": len([m for m in self.conversation_history if m["role"] == "assistant"]),
             "last_activity": self.conversation_history[-1]["timestamp"] if self.conversation_history else None
         }
-
-
-def handle(request: Dict[str, Any]) -> Dict[str, Any]:
-    """Orchestrator interface for enhanced chat"""
-    text = request.get("text", "").lower().strip()
-    persona = request.get("persona", "business_expert")
-    
-    if not text:
-        return {"error": "No message text provided"}
-    
-    # Delegate simple queries to qa_engine instead of giving generic responses
-    simple_queries = [
-        'hi', 'hello', 'hey', 'greetings', 'howdy',
-        'date', 'time', 'today', 'now', 'what day', 'current date', 'current time',
-        'who is', 'who was', 'president', 'current'
-    ]
-    
-    # Check if this is a simple query that qa_engine should handle
-    if any(query in text for query in simple_queries) or len(text) < 10:
-        # Return error so qa_engine can handle it instead
-        return {"error": "delegate_to_qa_engine", "message": "Simple query - should be handled by qa_engine"}
-    
-    # For complex queries, use the chat interface
-    async def chat():
-        interface = EnhancedChatInterface()
-        return await interface.chat_with_fame(request.get("text", ""), persona)
-    
-    loop = asyncio.new_event_loop()
-    asyncio.set_event_loop(loop)
-    try:
-        result = loop.run_until_complete(chat())
-        return result
-    finally:
-        loop.close()
-

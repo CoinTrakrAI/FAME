@@ -106,14 +106,16 @@
 - `utils/market_data.py` - Keys configured
 
 **API Keys Configured:**
-- ✅ CoinGecko: `CG-PwNH6eV5PhUhFMhHspq3nqoz`
-- ✅ Alpha Vantage: `3GEY3XZMBLJGQ099`
-- ✅ Finnhub: `d3vpeq1r01qhm1tedo10d3vpeq1r01qhm1tedo1g`
+- ✅ CoinGecko: Configured (see config/env.example)
+- ✅ Alpha Vantage: Configured (see config/env.example)
+- ✅ Finnhub: Configured (see config/env.example)
 - ✅ OpenAI: Configured (see config/env.example)
-- ✅ SERPAPI: Primary + Backup keys
-- ✅ NewsAPI: `6bf62eb9d06844d6b9f303a95918c4cf`
-- ✅ GNews: `94f8d462ca1315981cf51e9e839a6d3c`
-- ✅ AWS: Access key + Secret key
+- ✅ SERPAPI: Primary + Backup keys configured
+- ✅ NewsAPI: Configured (see config/env.example)
+- ✅ GNews: Configured (see config/env.example)
+- ✅ AWS: Configured (see config/env.example)
+
+**Note:** API keys are hardcoded in service files for demo purposes. For production, use environment variables or secure parameter stores.
 
 **Status:** ✅ **ALL KEYS CONFIGURED**
 
