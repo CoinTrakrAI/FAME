@@ -189,16 +189,24 @@ class ResponseOrchestrator:
             loop = asyncio.new_event_loop()
             asyncio.set_event_loop(loop)
             try:
-                autonomous_response = loop.run_until_complete(
+                result = loop.run_until_complete(
                     engine.generate_response(user_text, context_list)
                 )
                 
-                if autonomous_response and len(autonomous_response) > 20:
+                # Extract response text from dict result
+                autonomous_response = result.get("response", "") if isinstance(result, dict) else result
+                response_confidence = result.get("confidence", 0.6) if isinstance(result, dict) else 0.6
+                
+                if autonomous_response and len(str(autonomous_response)) > 20:
                     return ResponsePayload(
-                        reply=autonomous_response,
+                        reply=str(autonomous_response),
                         intent="autonomous_response",
-                        confidence=0.6,
-                        trace={"handler": "autonomous_engine", "action": action or "unknown"},
+                        confidence=float(response_confidence),
+                        trace={
+                            "handler": "autonomous_engine",
+                            "action": action or "unknown",
+                            "source": result.get("breakdown", [{}])[0].get("source", "unknown") if isinstance(result, dict) else "unknown"
+                        },
                     )
             finally:
                 loop.close()

@@ -6,6 +6,8 @@
 # Async & Networking
 asyncio-throttle>=1.0.2
 aiohttp>=3.9.0
+aiodns>=3.1.0  # Async DNS for aiohttp
+async-timeout>=4.0.0  # Timeout support for async operations
 requests>=2.31.0
 
 # Data Processing
@@ -42,14 +44,17 @@ beautifulsoup4>=4.12.0
 lxml>=4.9.0
 
 # Machine Learning (Optional - for advanced features)
-# transformers>=4.30.0
+transformers>=4.30.0  # Local LLM support for autonomous engine
+torch>=2.0.0  # PyTorch for transformers (install separately if needed for GPU)
+accelerate>=0.20.0  # HuggingFace accelerate for transformers
 scikit-learn>=1.3.0
 
 # LLM Integration (Optional - for dynamic reasoning)
 openai>=1.0.0  # For dynamic reasoning and understanding
 
 chromadb>=0.4.0  # Vector database for memory
-# sentence-transformers>=2.2.0  # Embeddings for semantic search (install on-demand to avoid heavy torch wheels)
+sentence-transformers>=2.2.0  # Embeddings for semantic search (production-ready autonomous engine)
+faiss-cpu>=1.7.4  # Fast similarity search (CPU version, optional - use faiss-gpu for GPU)
 
 # Logging & Monitoring
 structlog>=23.1.0  # Structured logging

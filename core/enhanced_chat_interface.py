@@ -137,7 +137,11 @@ Think multiple steps ahead and consider systemic implications.""",
         try:
             from core.autonomous_response_engine import get_autonomous_engine
             engine = get_autonomous_engine()
-            return await engine.generate_response(message, context)
+            result = await engine.generate_response(message, context)
+            # Extract response text from dict result
+            if isinstance(result, dict):
+                return result.get("response", "")
+            return result
         except Exception as e:
             logger.error(f"Autonomous engine fallback error: {e}")
         

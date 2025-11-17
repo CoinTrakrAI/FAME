@@ -35,22 +35,26 @@ def handle_low_confidence(user_text: str, context: SessionContext, intent: Inten
         loop = asyncio.new_event_loop()
         asyncio.set_event_loop(loop)
         try:
-            autonomous_response = loop.run_until_complete(
+            result = loop.run_until_complete(
                 engine.generate_response(user_text, context_list)
             )
             
-            if autonomous_response and len(autonomous_response) > 20:
+            # Extract response text from dict result
+            autonomous_response = result.get("response", "") if isinstance(result, dict) else result
+            response_confidence = result.get("confidence", 0.7) if isinstance(result, dict) else 0.7
+            
+            if autonomous_response and len(str(autonomous_response)) > 20:
                 # Successfully got autonomous response
                 return ResponsePayload(
-                    reply=autonomous_response,
+                    reply=str(autonomous_response),
                     intent="autonomous_response",
-                    confidence=0.7,  # Moderate confidence for autonomous responses
+                    confidence=float(response_confidence),
                     trace={
                         "handler": "autonomous_engine",
                         "reason": "low_confidence_fallback",
                         "raw_intent": intent.intent,
                         "raw_confidence": intent.confidence,
-                        "source": "web_scraping_or_ai"
+                        "source": result.get("breakdown", [{}])[0].get("source", "unknown") if isinstance(result, dict) else "unknown"
                     },
                 )
         finally:
