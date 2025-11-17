@@ -23,8 +23,18 @@ from core.health_monitor import get_health_monitor
 from core.production_logger import get_production_logger, log_error, log_query, log_response
 from monitoring.tracing import init_tracing, span_async
 
-# Setup logging
+# Setup logging first
 logger = get_production_logger().get_logger()
+
+# Import AGI components
+try:
+    from core.task_router import TaskRouter
+    from agents.planner import Planner
+    from memory.memory_graph import MemoryGraph
+    AGI_COMPONENTS_AVAILABLE = True
+except ImportError as e:
+    logger.warning(f"AGI components not fully available: {e}")
+    AGI_COMPONENTS_AVAILABLE = False
 
 
 def _parse_headers(value: Optional[str]) -> Dict[str, str]:
@@ -53,11 +63,41 @@ class FAMEUnified:
     Works with voice, text, GUI, and API interfaces.
     """
     
-    def __init__(self):
+    def __init__(self, use_agi_system: bool = True):
         self.brain = Brain()
         self.decision_engine = get_decision_engine(self.brain)
         self.health_monitor = get_health_monitor()
         self.production_logger = get_production_logger()
+        
+        # Initialize AGI components if available
+        self.task_router = None
+        self.planner = None
+        self.memory_graph = None
+        
+        if use_agi_system and AGI_COMPONENTS_AVAILABLE:
+            try:
+                from core.task_router import TaskRouter
+                config = {}  # Use default config for now
+                self.task_router = TaskRouter(config)
+                logger.info("✅ TaskRouter initialized")
+            except Exception as e:
+                logger.warning(f"TaskRouter initialization failed: {e}")
+            
+            try:
+                from agents.planner import Planner
+                config = {"planning": {"max_plan_depth": 5}, "reflection": {"enabled": True}}
+                model_router = None  # Will use decision_engine's model router
+                self.planner = Planner(config, model_router)
+                logger.info("✅ Planner initialized")
+            except Exception as e:
+                logger.warning(f"Planner initialization failed: {e}")
+            
+            try:
+                from memory.memory_graph import MemoryGraph
+                self.memory_graph = MemoryGraph()
+                logger.info("✅ MemoryGraph initialized")
+            except Exception as e:
+                logger.warning(f"MemoryGraph initialization failed: {e}")
         
         # Session management
         self.sessions = {}
@@ -110,11 +150,53 @@ class FAMEUnified:
             try:
                 log_query(query)
 
-                routing_info = await self.decision_engine.route_query(query)
+                # Use AGI TaskRouter if available, otherwise fallback to decision_engine
+                routing_info = None
+                if self.task_router:
+                    try:
+                        # Use TaskRouter for intent classification
+                        context = self.sessions.get(query.get('session_id'), {}).get('context', [])
+                        intent_result = self.task_router.intent_classifier(query.get('text', ''), context)
+                        execution_plan = self.task_router.produce_final_plan(intent_result, context)
+                        
+                        # Convert to routing_info format
+                        routing_info = {
+                            'intent_type': intent_result.intent.value,
+                            'confidence': intent_result.confidence,
+                            'selected_modules': [executor for executor in execution_plan.executors],
+                            'estimated_complexity': intent_result.estimated_complexity,
+                            'requires_planning': intent_result.intent.value == 'agent_plan',
+                            'execution_plan': execution_plan
+                        }
+                        logger.debug(f"TaskRouter classified intent: {intent_result.intent.value} (confidence: {intent_result.confidence:.2f})")
+                    except Exception as e:
+                        logger.warning(f"TaskRouter failed, using decision_engine: {e}")
+                        routing_info = await self.decision_engine.route_query(query)
+                else:
+                    routing_info = await self.decision_engine.route_query(query)
 
                 query_with_routing = query.copy()
                 query_with_routing['routing_info'] = routing_info
                 query_with_routing['selected_modules'] = routing_info.get('selected_modules', [])
+                
+                # If intent requires planning, use Planner
+                if routing_info.get('requires_planning') and self.planner:
+                    try:
+                        plan = self.planner.decompose(query.get('text', ''), context=routing_info)
+                        query_with_routing['plan'] = plan
+                        logger.debug(f"Planner created plan: {plan.id} with {len(plan.tasks)} tasks")
+                    except Exception as e:
+                        logger.warning(f"Planner failed: {e}")
+                
+                # Check memory before processing
+                if self.memory_graph:
+                    try:
+                        memory_context = self.memory_graph.search_related(query.get('text', ''), limit=5)
+                        if memory_context:
+                            query_with_routing['memory_context'] = memory_context
+                            logger.debug(f"MemoryGraph found {len(memory_context)} related memories")
+                    except Exception as e:
+                        logger.warning(f"MemoryGraph search failed: {e}")
 
                 brain_response = await self.brain.handle_query(query_with_routing)
 
