@@ -9,6 +9,22 @@ LOG_FILE="/home/ec2-user/fame_deploy.log"
 echo "========== FAME Deployment ==========" | tee -a $LOG_FILE
 echo "Starting deployment at $(date)" | tee -a $LOG_FILE
 
+# Step 0: Install required tools
+echo "Installing required tools..." | tee -a $LOG_FILE
+if ! command -v git &> /dev/null; then
+    echo "Installing git..." | tee -a $LOG_FILE
+    sudo yum update -y -q
+    sudo yum install -y git -q
+fi
+
+if ! command -v docker &> /dev/null; then
+    echo "Installing Docker..." | tee -a $LOG_FILE
+    sudo yum install -y docker -q
+    sudo systemctl enable docker
+    sudo systemctl start docker
+    sudo usermod -aG docker ec2-user
+fi
+
 # Step 1: Ensure repo is present
 cd /home/ec2-user || exit 1
 if [ ! -d "FAME_Desktop" ]; then
