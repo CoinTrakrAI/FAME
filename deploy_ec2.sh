@@ -1,99 +1,53 @@
-﻿#!/bin/bash
+#!/bin/bash
+# ==============================
 # FAME EC2 Deployment Script
-# This script is uploaded and executed on the EC2 instance
+# ==============================
+set -euo pipefail
 
-set -e  # Exit on error
+LOG_FILE="/home/ec2-user/fame_deploy.log"
 
-echo "=========================================="
-echo "ðŸš€ FAME Production Deployment"
-echo "=========================================="
-echo ""
+echo "========== FAME Deployment ==========" | tee -a $LOG_FILE
+echo "Starting deployment at $(date)" | tee -a $LOG_FILE
 
-# Colors for output
-RED='\033[0;31m'
-GREEN='\033[0;32m'
-YELLOW='\033[1;33m'
-NC='\033[0m' # No Color
-
-# Configuration
-FAME_DIR="$HOME/FAME_Desktop"
-COMPOSE_FILE="docker-compose.prod.yml"
-
-echo -e "${YELLOW}ðŸ“‚ Step 1: Navigate to FAME directory${NC}"
-if [ -d "$FAME_DIR" ]; then
-    cd "$FAME_DIR"
-    echo -e "${GREEN}âœ… Found existing FAME directory${NC}"
-else
-    echo -e "${YELLOW}ðŸ“¥ Cloning FAME repository...${NC}"
-    git clone https://github.com/CoinTrakrAI/FAME.git "$FAME_DIR"
-    cd "$FAME_DIR"
-    echo -e "${GREEN}âœ… Repository cloned${NC}"
+# Step 1: Ensure repo is present
+cd /home/ec2-user || exit 1
+if [ ! -d "FAME_Desktop" ]; then
+    echo "Cloning FAME repository..." | tee -a $LOG_FILE
+    git clone https://github.com/CoinTrakrAI/FAME.git FAME_Desktop | tee -a $LOG_FILE
 fi
 
-echo ""
-echo -e "${YELLOW}ðŸ”„ Step 2: Update repository${NC}"
-git fetch origin
-git pull origin main
-LATEST_COMMIT=$(git log -1 --oneline)
-echo -e "${GREEN}âœ… Updated to: $LATEST_COMMIT${NC}"
+cd FAME_Desktop
 
-echo ""
-echo -e "${YELLOW}ðŸ³ Step 3: Stop existing containers${NC}"
-if sudo docker compose -f "$COMPOSE_FILE" ps -q | grep -q .; then
-    sudo docker compose -f "$COMPOSE_FILE" down
-    echo -e "${GREEN}âœ… Containers stopped${NC}"
-else
-    echo -e "${YELLOW}âš ï¸  No running containers found${NC}"
+# Step 2: Pull latest changes
+echo "Pulling latest changes..." | tee -a $LOG_FILE
+git fetch origin main | tee -a $LOG_FILE
+git reset --hard origin/main | tee -a $LOG_FILE
+
+# Step 3: Stop old containers (if any)
+if docker compose -f docker-compose.prod.yml ps -q | grep -q .; then
+    echo "Stopping old containers..." | tee -a $LOG_FILE
+    sudo docker compose -f docker-compose.prod.yml down | tee -a $LOG_FILE
 fi
 
-echo ""
-echo -e "${YELLOW}ðŸ”¨ Step 4: Rebuild Docker images${NC}"
-sudo docker compose -f "$COMPOSE_FILE" build --no-cache
-echo -e "${GREEN}âœ… Images rebuilt${NC}"
+# Step 4: Build new Docker images
+echo "Building Docker images..." | tee -a $LOG_FILE
+sudo docker compose -f docker-compose.prod.yml build --no-cache | tee -a $LOG_FILE
 
-echo ""
-echo -e "${YELLOW}ðŸš€ Step 5: Start production containers${NC}"
-sudo docker compose -f "$COMPOSE_FILE" up -d
-echo -e "${GREEN}âœ… Containers started${NC}"
+# Step 5: Start containers
+echo "Starting containers..." | tee -a $LOG_FILE
+sudo docker compose -f docker-compose.prod.yml up -d | tee -a $LOG_FILE
 
-echo ""
-echo -e "${YELLOW}â³ Step 6: Wait for services to be ready${NC}"
-sleep 10
+# Step 6: Show container status
+echo "Container status:" | tee -a $LOG_FILE
+sudo docker compose -f docker-compose.prod.yml ps | tee -a $LOG_FILE
 
-echo ""
-echo -e "${YELLOW}ðŸ“Š Step 7: Container Status${NC}"
-sudo docker compose -f "$COMPOSE_FILE" ps
+# Step 7: Health checks
+echo "Performing health checks..." | tee -a $LOG_FILE
+for service in $(sudo docker compose -f docker-compose.prod.yml ps --services); do
+    echo "Checking $service..." | tee -a $LOG_FILE
+    status=$(sudo docker inspect -f '{{.State.Health.Status}}' "$service" 2>/dev/null || echo "unknown")
+    echo "$service: $status" | tee -a $LOG_FILE
+done
 
-echo ""
-echo -e "${YELLOW}ðŸ¥ Step 8: Health Check${NC}"
-HEALTH_URL="http://localhost:8080/healthz"
-if command -v curl &> /dev/null; then
-    HEALTH_STATUS=$(curl -s -o /dev/null -w "%{http_code}" "$HEALTH_URL" || echo "000")
-    if [ "$HEALTH_STATUS" = "200" ]; then
-        echo -e "${GREEN}âœ… Health check passed (HTTP $HEALTH_STATUS)${NC}"
-    else
-        echo -e "${RED}âš ï¸  Health check returned HTTP $HEALTH_STATUS${NC}"
-    fi
-else
-    echo -e "${YELLOW}âš ï¸  curl not available, skipping health check${NC}"
-fi
-
-echo ""
-echo -e "${YELLOW}ðŸ“‹ Step 9: Recent Logs${NC}"
-sudo docker compose -f "$COMPOSE_FILE" logs --tail=20
-
-echo ""
-echo "=========================================="
-echo -e "${GREEN}âœ… Deployment Complete!${NC}"
-echo "=========================================="
-echo ""
-echo "ðŸŒ API should be available at:"
-echo "   http://$(curl -s http://169.254.169.254/latest/meta-data/public-ipv4):8080"
-echo ""
-echo "ðŸ“Š To view logs:"
-echo "   sudo docker compose -f $COMPOSE_FILE logs -f"
-echo ""
-echo "ðŸ›‘ To stop services:"
-echo "   sudo docker compose -f $COMPOSE_FILE down"
-echo ""
-
+echo "Deployment finished at $(date)" | tee -a $LOG_FILE
+echo "========== END ==========" | tee -a $LOG_FILE
