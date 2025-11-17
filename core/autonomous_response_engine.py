@@ -40,7 +40,14 @@ class AutonomousResponseEngine:
     """
     
     def __init__(self):
-        # API Keys (from user)
+        # Load API keys from local file if available
+        try:
+            from load_api_keys import load_api_keys
+            load_api_keys()
+        except ImportError:
+            pass
+        
+        # API Keys (from environment or defaults)
         self.google_ai_key = os.getenv("GOOGLE_AI_KEY", "AIzaSyA1mrDPxjMV8CJmoYgFPqk4ya23j3gM8OA")
         self.serpapi_key = os.getenv("SERPAPI_KEY", "90f8748cb8ab624df5d503e1765e929491c57ef0b4d681fbe046f1febe045dbc")
         self.serpapi_backup = os.getenv("SERPAPI_BACKUP_KEY", "912dc3fe069c587aa89dc662a492998ded20a25dfc49f9961ff5e5c99168eeb1")
