@@ -753,11 +753,37 @@ This structure is easy to extend: add new functions and register them in the `op
             result = _web_search_fallback(text)
         return _add_confidence_to_response(result, knowledge_context, confidence_boost)
     
-    # Cryptocurrency Price Prediction / Long-term Forecast questions (BEFORE math to avoid conflicts)
+    # CURRENT Cryptocurrency Price queries (must come BEFORE prediction handler)
+    # Check for simple current price queries first
+    crypto_current_price_patterns = [
+        (r'what.?s?\s+(?:the\s+)?price\s+(?:of|on)\s+([A-Z]{2,5})', 'get_crypto_price'),  # "what's the price of XRP"
+        (r'([A-Z]{2,5})\s+price', 'get_crypto_price'),  # "XRP price"
+        (r'price\s+of\s+([A-Z]{2,5})', 'get_crypto_price'),  # "price of XRP"
+        (r'how\s+much\s+is\s+([A-Z]{2,5})', 'get_crypto_price'),  # "how much is XRP"
+        (r'([A-Z]{2,5})\s+cost', 'get_crypto_price'),  # "XRP cost"
+    ]
+    
+    import re
+    for pattern, action in crypto_current_price_patterns:
+        match = re.search(pattern, text, re.IGNORECASE)
+        if match:
+            coin_symbol = match.group(1).upper()
+            # Known crypto symbols
+            crypto_symbols = ['XRP', 'BTC', 'ETH', 'BNB', 'ADA', 'SOL', 'DOGE', 'MATIC', 'DOT', 'LINK', 'LTC', 'BCH', 'XLM', 'AVAX', 'TRX', 'ALGO', 'ATOM', 'FIL', 'EOS', 'AAVE', 'UNI', 'LINK', 'CHZ', 'XTZ', 'VET', 'THETA', 'HBAR', 'ICP', 'NEAR', 'APT', 'OP', 'ARB', 'SUI', 'INJ']
+            if coin_symbol in crypto_symbols:
+                # This is a CURRENT price query, not a prediction
+                # Only route to prediction if explicitly asking about future/prediction
+                if not any(pred_word in text.lower() for pred_word in ['predict', 'prediction', 'forecast', 'future', '10 years', 'long term', 'could reach', 'anticipate', 'believe']):
+                    return _handle_current_crypto_price(coin_symbol, text)
+    
+    # Cryptocurrency Price Prediction / Long-term Forecast questions (AFTER current price check)
     crypto_prediction_keywords = ['crypto', 'cryptocurrency', 'price prediction', '10 years', 'long term price',
-                                 'how much', 'how high', 'anticipate', 'believe', 'could reach', 'xrp', 'bitcoin',
-                                 'ethereum', 'forecast', 'projection', 'future price']
-    if any(keyword in text for keyword in crypto_prediction_keywords):
+                                 'how much', 'how high', 'anticipate', 'believe', 'could reach', 'forecast', 
+                                 'projection', 'future price']
+    # Only match if explicitly asking for predictions AND contains crypto-related terms
+    has_prediction_keywords = any(keyword in text.lower() for keyword in crypto_prediction_keywords)
+    has_crypto_terms = any(term in text.lower() for term in ['xrp', 'bitcoin', 'ethereum', 'btc', 'eth', 'crypto', 'cryptocurrency'])
+    if has_prediction_keywords and has_crypto_terms:
         return _handle_crypto_prediction_question(text)
     
     # Math/calculation questions (after crypto to avoid conflicts with "how much" in price questions)
@@ -2117,6 +2143,101 @@ def _compound_multiplier_from_cagr(cagr_pct: float, years: float) -> float:
         float: Multiplier (e.g., 1.20^10 = 6.19 for 20% CAGR over 10 years)
     """
     return (1.0 + cagr_pct) ** years
+
+def _handle_current_crypto_price(coin_symbol: str, text: str) -> Dict[str, Any]:
+    """Handle current cryptocurrency price queries"""
+    try:
+        # Use action router for crypto price lookup
+        from core.assistant.action_router import execute_action
+        
+        result = execute_action("get_crypto_price", {"ticker": coin_symbol})
+        
+        if result.get("ok"):
+            response_text = result.get("text", f"{coin_symbol} price information retrieved")
+            return {
+                "response": response_text,
+                "source": "action_router",
+                "type": "crypto_price",
+                "confidence": 0.95,
+                "data": result.get("data", {})
+            }
+        else:
+            # Fallback to direct market_data call
+            try:
+                from utils.market_data import get_crypto_price, validate_price_data
+                
+                price_info = get_crypto_price(coin_symbol, preferred_provider="coingecko")
+                current_price = float(price_info["price"])
+                price_provider = price_info["provider"]
+                price_timestamp = price_info["timestamp"]
+                
+                # Validate price data
+                if not validate_price_data(price_info, max_age_seconds=300):
+                    return {
+                        "response": f"⚠️ Price data for {coin_symbol} may be stale. Last available price: ${current_price:.6f} [Source: {price_provider}]",
+                        "source": "qa_engine",
+                        "type": "crypto_price",
+                        "confidence": 0.80
+                    }
+                
+                # Format response
+                from datetime import datetime
+                price_datetime = datetime.fromtimestamp(price_timestamp).strftime("%Y-%m-%d %H:%M:%S UTC")
+                
+                response_text = f"{coin_symbol} is currently trading at ${current_price:.6f} USD [Source: {price_provider}, Updated: {price_datetime}]"
+                
+                # Add additional context if available
+                if "change_24h" in price_info:
+                    change = price_info["change_24h"]
+                    change_pct = price_info.get("change_24h_percent", 0)
+                    response_text += f"\n24h Change: {change:+.6f} ({change_pct:+.2f}%)"
+                
+                return {
+                    "response": response_text,
+                    "source": "qa_engine",
+                    "type": "crypto_price",
+                    "confidence": 0.95,
+                    "data": price_info
+                }
+            except Exception as e:
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.error(f"Failed to fetch price for {coin_symbol}: {e}")
+                
+                # Last resort: try yfinance
+                try:
+                    import yfinance as yf
+                    symbol = f"{coin_symbol}-USD"
+                    ticker = yf.Ticker(symbol)
+                    info = ticker.info
+                    
+                    if 'currentPrice' in info or 'regularMarketPrice' in info:
+                        price = float(info.get('currentPrice') or info.get('regularMarketPrice'))
+                        return {
+                            "response": f"{coin_symbol} is currently trading at ${price:.6f} USD [Source: yfinance]",
+                            "source": "yfinance",
+                            "type": "crypto_price",
+                            "confidence": 0.90
+                        }
+                except Exception as e2:
+                    logger.error(f"yfinance fallback also failed: {e2}")
+                
+                return {
+                    "response": f"❌ Unable to fetch current price for {coin_symbol}. Please check:\n  1. Network connectivity to price APIs\n  2. API keys are configured (COINGECKO_API_KEY, ALPHA_VANTAGE_API_KEY)\n  3. The cryptocurrency symbol is correct\n\nError: {str(e)[:200]}",
+                    "source": "qa_engine",
+                    "type": "error",
+                    "confidence": 0.0
+                }
+    except Exception as e:
+        import logging
+        logger = logging.getLogger(__name__)
+        logger.exception(f"Error in _handle_current_crypto_price: {e}")
+        return {
+            "response": f"❌ Error fetching {coin_symbol} price: {str(e)[:200]}",
+            "source": "qa_engine",
+            "type": "error",
+            "confidence": 0.0
+        }
 
 
 def _handle_crypto_prediction_question(text: str) -> Dict[str, Any]:
