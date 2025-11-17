@@ -25,22 +25,43 @@ if ! command -v docker &> /dev/null; then
     sudo usermod -aG docker ec2-user
 fi
 
-# Install Docker Compose if not available
-if ! command -v docker-compose &> /dev/null && ! docker compose version &> /dev/null; then
-    echo "Installing Docker Compose..." | tee -a $LOG_FILE
-    sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
-    sudo chmod +x /usr/local/bin/docker-compose
+# Install Docker Compose plugin (preferred method)
+if ! docker compose version &> /dev/null; then
+    echo "Installing Docker Compose plugin..." | tee -a $LOG_FILE
+    # Try to install docker-compose-plugin via yum (Amazon Linux 2023)
+    if sudo yum install -y docker-compose-plugin -q 2>/dev/null; then
+        echo "Docker Compose plugin installed via yum" | tee -a $LOG_FILE
+    else
+        # Fallback: install standalone docker-compose
+        echo "Installing standalone docker-compose..." | tee -a $LOG_FILE
+        sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+        sudo chmod +x /usr/local/bin/docker-compose
+    fi
 fi
 
-# Determine which compose command to use
-if command -v docker-compose &> /dev/null; then
-    COMPOSE_CMD="docker-compose"
-elif docker compose version &> /dev/null; then
+# Determine which compose command to use (prefer docker compose plugin)
+if docker compose version &> /dev/null 2>&1; then
     COMPOSE_CMD="docker compose"
+    echo "Using: docker compose (plugin)" | tee -a $LOG_FILE
+elif command -v docker-compose &> /dev/null; then
+    COMPOSE_CMD="docker-compose"
+    echo "Using: docker-compose (standalone)" | tee -a $LOG_FILE
 else
     echo "ERROR: Docker Compose not available" | tee -a $LOG_FILE
-    exit 1
+    echo "Attempting to install..." | tee -a $LOG_FILE
+    sudo yum install -y docker-compose-plugin -q
+    if docker compose version &> /dev/null 2>&1; then
+        COMPOSE_CMD="docker compose"
+        echo "Docker Compose plugin installed successfully" | tee -a $LOG_FILE
+    else
+        echo "ERROR: Failed to install Docker Compose" | tee -a $LOG_FILE
+        exit 1
+    fi
 fi
+
+# Verify the command works
+echo "Verifying Docker Compose..." | tee -a $LOG_FILE
+$COMPOSE_CMD version | tee -a $LOG_FILE
 
 # Step 1: Ensure repo is present
 cd /home/ec2-user || exit 1
