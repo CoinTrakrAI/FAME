@@ -2,13 +2,15 @@
 """
 F.A.M.E. - Text-to-Speech Engine
 Natural voice responses for FAME
+FAME Identity: Financial AI Mastermind Executive
 """
 
 import threading
 import queue
 import asyncio
-from typing import Dict, Any
+from typing import Dict, Any, Optional
 import logging
+import os
 
 logger = logging.getLogger(__name__)
 
@@ -20,26 +22,46 @@ except ImportError:
     PYTTSX3_AVAILABLE = False
     logger.warning("pyttsx3 not available - TTS features will be limited")
 
+# Try to import ElevenLabs TTS
+try:
+    from core.elevenlabs_tts import ElevenLabsTTS
+    ELEVENLABS_AVAILABLE = True
+except ImportError:
+    ELEVENLABS_AVAILABLE = False
+    logger.debug("ElevenLabs TTS not available")
+
 
 class TextToSpeechEngine:
-    """Advanced TTS with multiple voice options"""
+    """
+    Advanced TTS with multiple voice options
+    FAME Identity: Financial AI Mastermind Executive
+    """
     
-    def __init__(self):
-        if not PYTTSX3_AVAILABLE:
-            self.engine = None
-            logger.warning("TTS engine not available")
-            return
+    def __init__(self, use_elevenlabs: bool = True):
+        self.speech_queue = queue.Queue()
+        self.is_speaking = False
         
-        try:
-            self.engine = pyttsx3.init()
-            self.speech_queue = queue.Queue()
-            self.is_speaking = False
-            
-            # Configure engine
-            self._configure_engine()
-        except Exception as e:
-            logger.error(f"Failed to initialize TTS engine: {e}")
-            self.engine = None
+        # Try ElevenLabs first (premium voice)
+        self.elevenlabs = None
+        if use_elevenlabs and ELEVENLABS_AVAILABLE:
+            try:
+                self.elevenlabs = ElevenLabsTTS()
+                logger.info("✅ ElevenLabs TTS initialized (FAME Voice)")
+            except Exception as e:
+                logger.warning(f"ElevenLabs initialization failed: {e}")
+        
+        # Fallback to pyttsx3
+        self.engine = None
+        if not self.elevenlabs and PYTTSX3_AVAILABLE:
+            try:
+                self.engine = pyttsx3.init()
+                self._configure_engine()
+                logger.info("✅ Pyttsx3 TTS initialized (fallback)")
+            except Exception as e:
+                logger.error(f"Failed to initialize TTS engine: {e}")
+        
+        if not self.elevenlabs and not self.engine:
+            logger.warning("No TTS engine available")
     
     def _configure_engine(self):
         """Configure TTS engine"""
@@ -67,7 +89,13 @@ class TextToSpeechEngine:
             logger.warning(f"TTS configuration error: {e}")
     
     async def speak(self, text: str, wait: bool = False):
-        """Speak text"""
+        """Speak text - FAME Identity"""
+        # Prefer ElevenLabs if available
+        if self.elevenlabs:
+            self.elevenlabs.speak(text, wait=wait)
+            return
+        
+        # Fallback to pyttsx3
         if not self.engine:
             logger.warning("TTS engine not available")
             return
@@ -92,7 +120,13 @@ class TextToSpeechEngine:
             thread.join()
     
     def speak_async(self, text: str):
-        """Speak text asynchronously (add to queue)"""
+        """Speak text asynchronously (add to queue) - FAME Identity"""
+        # Prefer ElevenLabs if available
+        if self.elevenlabs:
+            self.elevenlabs.speak_async(text)
+            return
+        
+        # Fallback to pyttsx3
         if not self.engine:
             logger.warning("TTS engine not available")
             return
