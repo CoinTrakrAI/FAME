@@ -14,11 +14,14 @@
 - **Issue:** SSH connection timeout - instance may be stopped or IP changed
 - **Action Required:** Deploy new code to EC2
 
-### **❌ CI/CD Pipeline**
-- **Status:** ❌ **NOT CONFIGURED**
-- **Note:** You mentioned CI/CD is "setup locally and not on github"
-- **Current Setup:** Manual deployment only
-- **Action Required:** Set up GitHub Actions or AWS CodePipeline if desired
+### **✅ CI/CD Pipeline**
+- **Status:** ✅ **CONFIGURED**
+- **CI Workflow:** `.github/workflows/ci.yml` - Automated testing and Docker image building
+- **CD Workflow (EC2):** `.github/workflows/deploy-ec2.yml` - Automated EC2 deployment on push to main
+- **CD Workflow (K8s):** `.github/workflows/cd.yml` - Optional Kubernetes deployment
+- **Action Required:** 
+  - Set GitHub Secrets: `EC2_HOST` and `EC2_SSH_KEY` for automatic deployment
+  - Or use manual deployment: `.\deploy_ec2.ps1`
 
 ---
 
@@ -66,34 +69,26 @@ If the instance is stopped or you want a fresh start:
    docker compose -f docker-compose.prod.yml up -d
    ```
 
-### **Option 3: Set Up GitHub Actions CI/CD (Future)**
+### **Option 3: GitHub Actions CI/CD (✅ Now Configured!)**
 
-Create `.github/workflows/deploy.yml`:
-```yaml
-name: Deploy to EC2
+The workflow `.github/workflows/deploy-ec2.yml` is already created. To enable automatic deployment:
 
-on:
-  push:
-    branches: [ main ]
+1. **Set GitHub Secrets:**
+   - Go to GitHub → Repository → Settings → Secrets and variables → Actions
+   - Add `EC2_HOST`: Your EC2 public IP (e.g., `18.220.108.23`)
+   - Add `EC2_SSH_KEY`: Your private SSH key content (from `FAME.pem`)
 
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v3
-      - name: Deploy to EC2
-        uses: appleboy/ssh-action@master
-        with:
-          host: ${{ secrets.EC2_HOST }}
-          username: ec2-user
-          key: ${{ secrets.EC2_SSH_KEY }}
-          script: |
-            cd FAME_Desktop
-            git pull origin main
-            docker compose -f docker-compose.prod.yml down
-            docker compose -f docker-compose.prod.yml build
-            docker compose -f docker-compose.prod.yml up -d
-```
+2. **Trigger Deployment:**
+   - Push to `main` branch (automatic)
+   - Or manually trigger: Actions → Deploy to EC2 → Run workflow
+
+**Workflow Features:**
+- Builds Docker image and pushes to GitHub Container Registry
+- SSH into EC2 and runs deployment script
+- Performs health checks
+- Shows deployment summary
+
+**Workflow File:** See `.github/workflows/deploy-ec2.yml` for full configuration
 
 ---
 
@@ -161,6 +156,6 @@ jobs:
 
 ---
 
-**Last Updated:** 2025-01-XX
-**Status:** Code pushed to GitHub, needs deployment to EC2
+**Last Updated:** 2025-01-17
+**Status:** ✅ CI/CD pipeline configured, ready for automated deployment after setting GitHub Secrets
 

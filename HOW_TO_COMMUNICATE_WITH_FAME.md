@@ -455,10 +455,18 @@ const response = await fetch('http://18.220.108.23:8080/ask', {
 
 ## ✅ Status Check
 
-**GitHub:** ✅ All updates pushed (10 commits ahead, now synced)  
-**AWS EC2:** ⚠️ Needs deployment (run `.\deploy_ec2.ps1`)
+**GitHub:** ✅ All updates pushed and synced  
+**GitHub CI/CD:** ✅ Configured (automated deployment on push to main)  
+**AWS EC2:** ⚠️ Auto-deploy via GitHub Actions (requires EC2_HOST and EC2_SSH_KEY secrets)
+
+### CI/CD Pipeline:
+- **CI Workflow:** `.github/workflows/ci.yml` - Runs tests, linting, and builds Docker image
+- **CD Workflow (EC2):** `.github/workflows/deploy-ec2.yml` - Auto-deploys to EC2 on push to main
+- **CD Workflow (K8s):** `.github/workflows/cd.yml` - Optional Kubernetes deployment
+
+**Manual Deployment:** Run `.\deploy_ec2.ps1` for immediate deployment
 
 ---
 
-**Last Updated:** 2024  
+**Last Updated:** 2025-01-17  
 **Version:** 6.1 (Enhanced AGI)

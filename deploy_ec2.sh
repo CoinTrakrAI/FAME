@@ -88,16 +88,28 @@ else
     git reset --hard origin/main | tee -a $LOG_FILE
 fi
 
-# Step 3: Clean up Docker to free space
+# Step 3: Clean up Docker to free space (but keep images we might need)
 echo "Cleaning up Docker to free space..." | tee -a $LOG_FILE
-sudo docker system prune -af --volumes | tee -a $LOG_FILE
-sudo docker builder prune -af | tee -a $LOG_FILE
+sudo docker system prune -f --volumes | tee -a $LOG_FILE
+sudo docker builder prune -f | tee -a $LOG_FILE
 
-# Step 4: Stop old containers (if any)
-if $COMPOSE_CMD -f docker-compose.prod.yml ps -q 2>/dev/null | grep -q .; then
-    echo "Stopping old containers..." | tee -a $LOG_FILE
-    sudo $COMPOSE_CMD -f docker-compose.prod.yml down | tee -a $LOG_FILE
+# Step 4: Stop and remove old containers (handle conflicts)
+echo "Stopping and removing existing containers..." | tee -a $LOG_FILE
+# Stop docker-compose managed containers
+sudo $COMPOSE_CMD -f docker-compose.prod.yml down --remove-orphans 2>/dev/null || true
+
+# Remove any containers with conflicting names
+EXISTING_CONTAINER=$(sudo docker ps -aq -f name=fame_desktop-fame-1 2>/dev/null || echo "")
+if [ ! -z "$EXISTING_CONTAINER" ]; then
+    echo "Removing conflicting container: $EXISTING_CONTAINER" | tee -a $LOG_FILE
+    sudo docker rm -f $EXISTING_CONTAINER 2>/dev/null || true
 fi
+
+# Remove any other FAME containers that might be hanging around
+sudo docker ps -a | grep -i fame | awk '{print $1}' | xargs -r sudo docker rm -f 2>/dev/null || true
+
+# Clean up any hanging networks
+sudo docker network prune -f 2>/dev/null || true
 
 # Step 5: Create .env file if it doesn't exist
 if [ ! -f ".env" ]; then

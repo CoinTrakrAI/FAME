@@ -1,0 +1,148 @@
+name: CD - Deploy to EC2
+
+on:
+  workflow_dispatch:
+  push:
+    branches:
+      - main
+    paths:
+      - '**/*.py'
+      - '**/*.yml'
+      - '**/*.yaml'
+      - '**/*.sh'
+      - '**/*.md'
+      - '**/*.env.example'
+      - '**/requirements*.txt'
+      - '**/Dockerfile*'
+      - '**/docker-compose*.yml'
+      - '.github/workflows/deploy-ec2.yml'
+
+permissions:
+  contents: read
+
+env:
+  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/fame-api
+  DOCKER_TAG: ${{ github.sha }}
+
+jobs:
+  build:
+    name: Build Docker Image
+    runs-on: ubuntu-latest
+    outputs:
+      image: ${{ steps.set-image.outputs.image }}
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up QEMU
+        uses: docker/setup-qemu-action@v3
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: Login to GHCR
+        uses: docker/login-action@v3
+        with:
+          registry: ghcr.io
+          username: ${{ github.actor }}
+          password: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build & push image
+        uses: docker/build-push-action@v5
+        with:
+          context: .
+          file: ./Dockerfile
+          push: true
+          tags: |
+            ${{ env.IMAGE_NAME }}:${{ env.DOCKER_TAG }}
+            ${{ env.IMAGE_NAME }}:latest
+          platforms: linux/amd64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
+
+      - name: Set image output
+        id: set-image
+        run: echo "image=${{ env.IMAGE_NAME }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT
+
+  deploy-ec2:
+    name: Deploy to EC2
+    needs: build
+    runs-on: ubuntu-latest
+    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Deploy to EC2 via SSH
+        uses: appleboy/ssh-action@v1.0.3
+        with:
+          host: ${{ secrets.EC2_HOST }}
+          username: ec2-user
+          key: ${{ secrets.EC2_SSH_KEY }}
+          port: 22
+          timeout: 300s
+          script: |
+            # Navigate to project directory
+            cd /home/ec2-user || exit 1
+            
+            # Clone or update repository
+            if [ ! -d "FAME_Desktop" ]; then
+              echo "Cloning FAME repository..."
+              git clone https://github.com/CoinTrakrAI/FAME.git FAME_Desktop
+              cd FAME_Desktop
+            else
+              echo "Updating FAME repository..."
+              cd FAME_Desktop
+              git fetch origin main
+              git reset --hard origin/main
+            fi
+            
+            # Make deployment script executable
+            chmod +x deploy_ec2.sh
+            
+            # Run deployment script
+            echo "Starting deployment..."
+            sudo bash deploy_ec2.sh
+            
+            # Wait for services to be ready
+            echo "Waiting for services to start..."
+            sleep 30
+            
+            # Check service status
+            if command -v docker &> /dev/null; then
+              echo "=== Container Status ==="
+              sudo docker ps --format "table {{.Names}}\t{{.Status}}\t{{.Ports}}"
+              
+              echo "=== Service Health ==="
+              sudo docker compose -f docker-compose.prod.yml ps 2>/dev/null || sudo docker-compose -f docker-compose.prod.yml ps 2>/dev/null || echo "Docker Compose not available"
+            fi
+
+      - name: Health Check
+        continue-on-error: true
+        run: |
+          EC2_HOST="${{ secrets.EC2_HOST }}"
+          if [ -n "$EC2_HOST" ]; then
+            echo "Checking FAME health endpoint..."
+            curl -f "http://${EC2_HOST}:8080/health" || echo "⚠️ Health check failed - service may still be starting"
+            curl -f "http://${EC2_HOST}:8080/healthz" || echo "⚠️ Legacy health check failed"
+          else
+            echo "⚠️ EC2_HOST secret not set - skipping health check"
+          fi
+
+      - name: Deployment Summary
+        if: always()
+        run: |
+          echo "## 🚀 Deployment Summary" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "- **Commit:** ${{ github.sha }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Triggered by:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **Docker Image:** ${{ needs.build.outputs.image }}" >> $GITHUB_STEP_SUMMARY
+          echo "- **EC2 Host:** ${{ secrets.EC2_HOST }}" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "### 📋 Next Steps" >> $GITHUB_STEP_SUMMARY
+          echo "" >> $GITHUB_STEP_SUMMARY
+          echo "1. Verify deployment at: http://${{ secrets.EC2_HOST }}:8080" >> $GITHUB_STEP_SUMMARY
+          echo "2. Check health: http://${{ secrets.EC2_HOST }}:8080/health" >> $GITHUB_STEP_SUMMARY
+          echo "3. View API docs: http://${{ secrets.EC2_HOST }}:8080/docs" >> $GITHUB_STEP_SUMMARY
+
