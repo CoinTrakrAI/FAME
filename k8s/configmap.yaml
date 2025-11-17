@@ -1,0 +1,15 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: fame-config
+  namespace: fame
+data:
+  # Minimal env variables. For larger .env use other secret strategies.
+  FAME_ENV: "production"
+  FAME_HEALTH_URL: "http://127.0.0.1:8080/readyz"
+  DATABASE_URL: "postgresql://postgres:postgres@postgres.fame.svc.cluster.local:5432/fame"
+  REDIS_URL: "redis://redis.fame.svc.cluster.local:6379/0"
+  USE_LOCALAI: "false"
+  LOCALAI_ENDPOINT: "http://localhost:8080"
+  ENABLE_VOICE: "true"
+
