@@ -81,6 +81,10 @@ class ResponseOrchestrator:
         elif intent_result.intent == "follow_up_negative":
             payload = follow_up.handle_negative(context, intent_result)
         elif intent_result.confidence < self._low_confidence_threshold:
+            # Low confidence - use autonomous engine
+            payload = fallback.handle_low_confidence(user_text, context, intent_result)
+        elif intent_result.intent == "unknown":
+            # Unknown intent - use autonomous engine
             payload = fallback.handle_low_confidence(user_text, context, intent_result)
         else:
             payload = self._handle_via_policy(intent_result, context, user_text)
@@ -166,9 +170,45 @@ class ResponseOrchestrator:
                 },
             )
 
-        # Fallback if policy responded with an unsupported action.
+        # Fallback if policy responded with an unsupported action - use autonomous engine
+        try:
+            from core.autonomous_response_engine import get_autonomous_engine
+            import asyncio
+            
+            engine = get_autonomous_engine()
+            
+            # Prepare context
+            context_list = []
+            for msg in context.history[-5:]:
+                role = "user" if msg.get("role") == "user" else "assistant"
+                content = msg.get("content", "")
+                if content:
+                    context_list.append({"role": role, "content": content})
+            
+            # Generate autonomous response
+            loop = asyncio.new_event_loop()
+            asyncio.set_event_loop(loop)
+            try:
+                autonomous_response = loop.run_until_complete(
+                    engine.generate_response(user_text, context_list)
+                )
+                
+                if autonomous_response and len(autonomous_response) > 20:
+                    return ResponsePayload(
+                        reply=autonomous_response,
+                        intent="autonomous_response",
+                        confidence=0.6,
+                        trace={"handler": "autonomous_engine", "action": action or "unknown"},
+                    )
+            finally:
+                loop.close()
+        except Exception as e:
+            import logging
+            logging.debug(f"Autonomous engine fallback error: {e}")
+        
+        # Final fallback
         return ResponsePayload(
-            reply="I’m not sure how to handle that yet, but I’m learning every day.",
+            reply="I'm not sure how to handle that yet, but I'm learning every day.",
             intent="unknown",
             confidence=intent_result.confidence,
             trace={"handler": "policy", "action": action or "unknown"},
