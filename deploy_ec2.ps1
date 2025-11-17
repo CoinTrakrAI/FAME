@@ -16,11 +16,14 @@ if (-not (Test-Path $localScript)) {
 
 # Convert script to Unix line endings to avoid CRLF issues
 Write-Host "Converting script to Unix line endings..."
-(Get-Content $localScript) | ForEach-Object { $_ -replace "`r`n","`n" } | Set-Content -NoNewline $localScript
+$content = Get-Content $localScript -Raw
+$content = $content -replace "`r`n", "`n" -replace "`r", "`n"
+[System.IO.File]::WriteAllText((Resolve-Path $localScript), $content, [System.Text.UTF8Encoding]::new($false))
 
 # Step 1: Upload the script to EC2
 Write-Host "Uploading deployment script to EC2..." -ForegroundColor Yellow
-scp -v -i $sshKey -o StrictHostKeyChecking=no $localScript "$user@$ec2Host:$remoteScript"
+$dest = "$user@${ec2Host}:$remoteScript"
+scp -v -i $sshKey -o StrictHostKeyChecking=no $localScript $dest
 
 if ($LASTEXITCODE -ne 0) {
     Write-Host "Upload failed. Exit code: $LASTEXITCODE" -ForegroundColor Red
