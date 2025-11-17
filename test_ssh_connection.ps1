@@ -141,7 +141,8 @@ if ($LASTEXITCODE -eq 0) {
     "test" | Out-File $testFile
     $scp = "C:\Windows\System32\OpenSSH\scp.exe"
     
-    & $scp -i $sshKey -o StrictHostKeyChecking=no $testFile "$user@$ec2Host:/tmp/" 2>&1 | ForEach-Object {
+    $scpDest = "$user@${ec2Host}:/tmp/"
+    & $scp -i $sshKey -o StrictHostKeyChecking=no $testFile $scpDest 2>&1 | ForEach-Object {
         Write-Host "  $_" -ForegroundColor Gray
     }
     
