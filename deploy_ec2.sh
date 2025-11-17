@@ -26,16 +26,22 @@ if ! command -v docker &> /dev/null; then
 fi
 
 # Install Docker Compose plugin (preferred method)
-if ! docker compose version &> /dev/null; then
+if ! docker compose version &> /dev/null 2>&1; then
     echo "Installing Docker Compose plugin..." | tee -a $LOG_FILE
     # Try to install docker-compose-plugin via yum (Amazon Linux 2023)
     if sudo yum install -y docker-compose-plugin -q 2>/dev/null; then
         echo "Docker Compose plugin installed via yum" | tee -a $LOG_FILE
-    else
-        # Fallback: install standalone docker-compose
+    elif ! command -v docker-compose &> /dev/null; then
+        # Fallback: install standalone docker-compose only if not already present
         echo "Installing standalone docker-compose..." | tee -a $LOG_FILE
+        # Remove old version if it exists and is not busy
+        if [ -f /usr/local/bin/docker-compose ]; then
+            sudo rm -f /usr/local/bin/docker-compose
+        fi
         sudo curl -L "https://github.com/docker/compose/releases/latest/download/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
         sudo chmod +x /usr/local/bin/docker-compose
+    else
+        echo "docker-compose already installed, skipping..." | tee -a $LOG_FILE
     fi
 fi
 
