@@ -72,19 +72,35 @@ if $COMPOSE_CMD -f docker-compose.prod.yml ps -q 2>/dev/null | grep -q .; then
     sudo $COMPOSE_CMD -f docker-compose.prod.yml down | tee -a $LOG_FILE
 fi
 
-# Step 5: Build new Docker images
+# Step 5: Create .env file if it doesn't exist
+if [ ! -f ".env" ]; then
+    echo "Creating .env file from template..." | tee -a $LOG_FILE
+    if [ -f "config/env.example" ]; then
+        cp config/env.example .env
+        echo "WARNING: .env file created from template. Please update with your API keys!" | tee -a $LOG_FILE
+    else
+        echo "ERROR: config/env.example not found. Creating minimal .env..." | tee -a $LOG_FILE
+        cat > .env << 'EOF'
+# FAME Environment Variables
+# Update these with your actual API keys
+FAME_ENV=production
+EOF
+    fi
+fi
+
+# Step 6: Build new Docker images
 echo "Building Docker images..." | tee -a $LOG_FILE
 sudo $COMPOSE_CMD -f docker-compose.prod.yml build --no-cache | tee -a $LOG_FILE
 
-# Step 6: Start containers
+# Step 7: Start containers
 echo "Starting containers..." | tee -a $LOG_FILE
 sudo $COMPOSE_CMD -f docker-compose.prod.yml up -d | tee -a $LOG_FILE
 
-# Step 7: Show container status
+# Step 8: Show container status
 echo "Container status:" | tee -a $LOG_FILE
 sudo $COMPOSE_CMD -f docker-compose.prod.yml ps | tee -a $LOG_FILE
 
-# Step 8: Health checks
+# Step 9: Health checks
 echo "Performing health checks..." | tee -a $LOG_FILE
 for service in $(sudo $COMPOSE_CMD -f docker-compose.prod.yml ps --services 2>/dev/null); do
     echo "Checking $service..." | tee -a $LOG_FILE
