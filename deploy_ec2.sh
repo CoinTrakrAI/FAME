@@ -61,25 +61,30 @@ else
     git reset --hard origin/main | tee -a $LOG_FILE
 fi
 
-# Step 3: Stop old containers (if any)
+# Step 3: Clean up Docker to free space
+echo "Cleaning up Docker to free space..." | tee -a $LOG_FILE
+sudo docker system prune -af --volumes | tee -a $LOG_FILE
+sudo docker builder prune -af | tee -a $LOG_FILE
+
+# Step 4: Stop old containers (if any)
 if $COMPOSE_CMD -f docker-compose.prod.yml ps -q 2>/dev/null | grep -q .; then
     echo "Stopping old containers..." | tee -a $LOG_FILE
     sudo $COMPOSE_CMD -f docker-compose.prod.yml down | tee -a $LOG_FILE
 fi
 
-# Step 4: Build new Docker images
+# Step 5: Build new Docker images
 echo "Building Docker images..." | tee -a $LOG_FILE
 sudo $COMPOSE_CMD -f docker-compose.prod.yml build --no-cache | tee -a $LOG_FILE
 
-# Step 5: Start containers
+# Step 6: Start containers
 echo "Starting containers..." | tee -a $LOG_FILE
 sudo $COMPOSE_CMD -f docker-compose.prod.yml up -d | tee -a $LOG_FILE
 
-# Step 6: Show container status
+# Step 7: Show container status
 echo "Container status:" | tee -a $LOG_FILE
 sudo $COMPOSE_CMD -f docker-compose.prod.yml ps | tee -a $LOG_FILE
 
-# Step 7: Health checks
+# Step 8: Health checks
 echo "Performing health checks..." | tee -a $LOG_FILE
 for service in $(sudo $COMPOSE_CMD -f docker-compose.prod.yml ps --services 2>/dev/null); do
     echo "Checking $service..." | tee -a $LOG_FILE
