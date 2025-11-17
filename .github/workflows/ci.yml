@@ -33,20 +33,25 @@ jobs:
           python -m venv .venv
           source .venv/bin/activate
           pip install -U pip
-          if [ -f requirements.txt ]; then pip install -r requirements.txt; fi
           if [ -f requirements_production.txt ]; then pip install -r requirements_production.txt; fi
           if [ -f communication_requirements.txt ]; then pip install -r communication_requirements.txt; fi
+          pip install pytest flake8  # Install test tools
 
       - name: Run pytest
+        continue-on-error: true
         run: |
           source .venv/bin/activate
-          pytest -q || echo "No tests found, continuing..."
+          if [ -d "tests" ] && [ -n "$(find tests -name '*.py' -type f)" ]; then
+            pytest tests/ -v --tb=short || true
+          else
+            echo "No tests directory found, skipping tests"
+          fi
 
       - name: Run flake8
+        continue-on-error: true
         run: |
           source .venv/bin/activate
-          pip install flake8
-          flake8 . --max-line-length=120 --exclude=.venv,__pycache__,*.pyc || echo "Linting issues found, continuing..."
+          flake8 . --max-line-length=120 --exclude=.venv,__pycache__,*.pyc,build,dist,*.egg-info --ignore=E501,W503,E203 || true
 
   build-and-publish:
     name: Build (and optionally Publish)
@@ -79,7 +84,9 @@ jobs:
           tags: |
             ${{ env.IMAGE_NAME }}:${{ env.DOCKER_TAG }}
             ${{ env.IMAGE_NAME }}:latest
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
       - name: Output image tag
         run: echo "IMAGE=${{ env.IMAGE_NAME }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT

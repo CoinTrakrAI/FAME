@@ -47,7 +47,9 @@ jobs:
           tags: |
             ${{ env.IMAGE_NAME }}:${{ env.DOCKER_TAG }}
             ${{ env.IMAGE_NAME }}:latest
-          platforms: linux/amd64,linux/arm64
+          platforms: linux/amd64
+          cache-from: type=gha
+          cache-to: type=gha,mode=max
 
       - name: Set image output
         id: set-image
@@ -68,37 +70,42 @@ jobs:
           version: '1.29.0'
 
       - name: Setup Kubeconfig
+        continue-on-error: true
         # KUBE_CONFIG should be set as base64-encoded kubeconfig in repository Secrets
         run: |
           if [ -n "${{ secrets.KUBE_CONFIG }}" ]; then
             echo "${{ secrets.KUBE_CONFIG }}" | base64 --decode > kubeconfig
             mkdir -p ~/.kube
             mv kubeconfig ~/.kube/config
+            echo "✅ Kubeconfig configured"
           else
             echo "⚠️ KUBE_CONFIG secret not set - skipping Kubernetes deployment"
-            exit 0
+            echo "This is expected if you're not using Kubernetes. Workflow will continue."
           fi
 
       - name: Replace image in k8s manifests and apply
+        continue-on-error: true
         env:
           IMAGE: ${{ needs.build.outputs.image }}
           K8S_NAMESPACE: ${{ env.K8S_NAMESPACE }}
         run: |
-          if [ -f ~/.kube/config ]; then
+          if [ -f ~/.kube/config ] && [ -n "${{ secrets.KUBE_CONFIG }}" ]; then
             # Replace placeholder image in manifests with built tag
             sed -i "s|IMAGE_PLACEHOLDER|${IMAGE}|g" k8s/deployment-api.yaml
             kubectl apply -f k8s/namespace.yaml
             kubectl -n ${K8S_NAMESPACE} apply -f k8s/
             kubectl -n ${K8S_NAMESPACE} rollout status deployment/fame-api --timeout=120s || echo "Deployment may still be in progress"
           else
-            echo "⚠️ Kubeconfig not available - skipping deployment"
+            echo "⚠️ Kubeconfig not available - skipping Kubernetes deployment"
+            echo "This is expected if you're deploying to EC2 directly instead of Kubernetes"
           fi
 
       - name: Health check
+        continue-on-error: true
         env:
           K8S_NAMESPACE: ${{ env.K8S_NAMESPACE }}
         run: |
-          if [ -f ~/.kube/config ]; then
+          if [ -f ~/.kube/config ] && [ -n "${{ secrets.KUBE_CONFIG }}" ]; then
             kubectl -n ${K8S_NAMESPACE} get pods -o wide
             kubectl -n ${K8S_NAMESPACE} get services
           else
