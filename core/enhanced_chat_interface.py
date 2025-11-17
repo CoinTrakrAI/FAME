@@ -114,19 +114,33 @@ Think multiple steps ahead and consider systemic implications.""",
         
         for backend in backends_to_try:
             try:
-                response = await self.llm_backends[backend](
-                    message=message,
-                    system_prompt=system_prompt,
-                    context=context,
-                    temperature=temperature
-                )
+                if backend == "fallback":
+                    # Use autonomous engine for fallback
+                    response = await self.llm_backends[backend](
+                        message=message,
+                        system_prompt=system_prompt
+                    )
+                else:
+                    response = await self.llm_backends[backend](
+                        message=message,
+                        system_prompt=system_prompt,
+                        context=context,
+                        temperature=temperature
+                    )
                 if response:
                     return response
             except Exception as e:
                 logger.debug(f"Backend {backend} failed: {e}")
                 continue
         
-        # Fallback response
+        # Final fallback - use autonomous engine
+        try:
+            from core.autonomous_response_engine import get_autonomous_engine
+            engine = get_autonomous_engine()
+            return await engine.generate_response(message, context)
+        except Exception as e:
+            logger.error(f"Autonomous engine fallback error: {e}")
+        
         return "I understand your query. As FAME AI, I can provide insights on business, technology, and strategy. For detailed analysis, please ensure LLM services are configured."
     
     async def _call_openai(self, message: str, system_prompt: str, 
@@ -192,73 +206,23 @@ Think multiple steps ahead and consider systemic implications.""",
             logger.debug(f"LocalAI call failed: {e}")
             return None
     
-    def _simulate_ai_response(self, message: str, system_prompt: str) -> str:
-        """Simulate AI response for demonstration"""
-        message_lower = message.lower()
-        
-        # Business/finance queries
-        if any(word in message_lower for word in ['stock', 'invest', 'market', 'financial', 'business']):
-            return """Based on my analysis, I'd recommend a diversified investment approach considering current market conditions. 
-
-Key insights:
-- Technology sectors show strong growth potential, particularly in AI and cloud computing
-- Consider defensive positions in consumer staples given economic uncertainties
-- Emerging markets offer growth opportunities but require careful risk assessment
-
-For your specific situation, I'd suggest:
-1. 60% in growth-oriented tech stocks
-2. 25% in stable blue-chip companies  
-3. 15% in cash for opportunistic investments
-
-Would you like me to analyze any specific companies or sectors in more detail?"""
-        
-        # Technology queries
-        elif any(word in message_lower for word in ['tech', 'code', 'software', 'ai', 'system']):
-            return """From a technical perspective, here's my assessment:
-
-Current technology trends favor:
-- Microservices architecture for scalability
-- AI/ML integration in business processes
-- Cloud-native development with containerization
-- Real-time data processing capabilities
-
-For your development needs, I recommend:
-- Using Python with FastAPI for backend services
-- React/Vue.js for modern frontend interfaces
-- Docker and Kubernetes for deployment
-- AWS/Azure for cloud infrastructure
-
-I can help architect specific solutions or review your technical strategy."""
-        
-        # Strategy queries
-        elif any(word in message_lower for word in ['strategy', 'plan', 'competition', 'market position']):
-            return """Strategic analysis suggests:
-
-Competitive Positioning:
-- Focus on differentiation through technology innovation
-- Build strong customer relationships and loyalty programs
-- Consider strategic partnerships for market expansion
-
-Growth Opportunities:
-- Digital transformation initiatives
-- International market penetration
-- Product/service diversification
-
-Risk Management:
-- Monitor regulatory changes in your industry
-- Maintain financial flexibility for market downturns
-- Invest in cybersecurity and data protection
-
-Would you like me to develop a more detailed strategic plan for your specific business context?"""
-        
-        # Default response
-        return """As FAME AI, I've analyzed your query from multiple perspectives:
-
-Business Perspective: Consider market positioning and competitive advantages
-Technical Perspective: Evaluate implementation feasibility and scalability  
-Strategic Perspective: Assess long-term implications and growth potential
-
-Could you provide more specific details about your situation so I can offer more targeted advice?"""
+    async def _simulate_ai_response(self, message: str, system_prompt: str) -> str:
+        """Fully autonomous response using web scraping, knowledge base, and Google AI"""
+        try:
+            # Use autonomous response engine
+            from core.autonomous_response_engine import get_autonomous_engine
+            
+            engine = get_autonomous_engine()
+            context = self._prepare_context()
+            
+            # Generate autonomous response
+            response = await engine.generate_response(message, context)
+            
+            return response
+        except Exception as e:
+            logger.error(f"Autonomous response error: {e}")
+            # Fallback to basic response
+            return "I'm processing your query. Let me gather information to provide you with an accurate answer."
     
     async def _enhance_with_plugins(self, message: str, current_response: str) -> Optional[str]:
         """Enhance response with FAME plugin capabilities"""
