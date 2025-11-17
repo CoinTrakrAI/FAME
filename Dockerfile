@@ -19,8 +19,14 @@ RUN apt-get update && apt-get install -y --no-install-recommends \
 
 COPY requirements_production.txt .
 
+# Install CPU-only PyTorch first to avoid CUDA libraries (saves ~2GB)
 RUN pip install --upgrade pip \
- && pip wheel --no-cache-dir --wheel-dir /wheels -r requirements_production.txt
+ && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
+
+# Install and build wheels in stages to save space
+RUN pip wheel --no-cache-dir --wheel-dir /wheels -r requirements_production.txt \
+ && rm -rf ~/.cache/pip /tmp/* \
+ && find /wheels -name "*.whl" -size +200M -delete 2>/dev/null || true
 
 FROM python:3.11-slim
 
