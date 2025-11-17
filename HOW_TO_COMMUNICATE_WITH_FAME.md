@@ -1,147 +1,227 @@
-# How to Communicate with FAME
+# How to Communicate with FAME AGI
 
-## 🎯 Quick Answer: 3 Ways to Talk to FAME
+## 🎯 Quick Answer: Multiple Ways to Talk to FAME
 
-### 1. **Via API (For Frontend Apps)** ⭐ RECOMMENDED FOR INTEGRATION
-### 2. **Interactive Chat (Local Testing)**
-### 3. **Desktop GUI (Full Experience)**
+FAME now has **enhanced AGI capabilities** with multiple communication methods:
+
+### 1. **REST API** (Recommended for Integration) ⭐
+### 2. **WebSocket** (Real-time Communication) 🆕
+### 3. **Streaming API** (Server-Sent Events) 🆕
+### 4. **Interactive Chat** (Local Testing)
+### 5. **Desktop GUI** (Full Experience with Voice)
 
 ---
 
-## 1. API Method - Connect to Frontend Apps
+## 1. REST API - Standard HTTP Requests
 
-### **Endpoint:** `POST /query`
+### **Base URL:** 
+- **AWS EC2:** `http://18.220.108.23:8080`
+- **Local:** `http://localhost:8080`
 
-**Base URL:** `http://18.220.108.23:8080` (or `http://localhost:8080` for local)
+### **Main Endpoint:** `POST /query`
 
-### **Request Format:**
+**Request:**
 ```json
 {
   "text": "What is the price of Bitcoin?",
   "session_id": "user_123",  // Optional - for conversation memory
-  "source": "web_app",        // Optional - track where query came from
-  "metadata": {}              // Optional - any extra data
+  "source": "web_app"         // Optional
 }
 ```
 
-### **Response Format:**
+**Response:**
 ```json
 {
-  "response": "Bitcoin (BTC) is currently trading at $67,234.50...",
-  "intent": "get_crypto_price",
+  "response": "Bitcoin (BTC) is currently trading at...",
   "confidence": 0.95,
-  "session_id": "user_123",
-  "metadata": {
-    "ticker": "BTC",
-    "price": 67234.50
-  }
+  "sources": ["web", "knowledge"],
+  "breakdown": [...],
+  "metrics": {...}
 }
 ```
 
-### **Example: JavaScript/Frontend Integration**
+### **Enhanced AGI Endpoints** (New!):
 
-```javascript
-// Simple fetch example
-async function askFAME(question, sessionId = null) {
-  const response = await fetch('http://18.220.108.23:8080/query', {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json',
-    },
-    body: JSON.stringify({
-      text: question,
-      session_id: sessionId || `session_${Date.now()}`,
-      source: 'web_app'
-    })
-  });
-  
-  const data = await response.json();
-  return data;
-}
-
-// Usage
-const result = await askFAME("What is the price of Apple stock?");
-console.log(result.response); // FAME's answer
-```
-
-### **Example: React Component**
-
-```jsx
-import React, { useState } from 'react';
-
-function FAME Chat() {
-  const [message, setMessage] = useState('');
-  const [response, setResponse] = useState('');
-  const [sessionId] = useState(`session_${Date.now()}`);
-
-  const sendMessage = async () => {
-    const res = await fetch('http://18.220.108.23:8080/query', {
-      method: 'POST',
-      headers: { 'Content-Type': 'application/json' },
-      body: JSON.stringify({
-        text: message,
-        session_id: sessionId,
-        source: 'react_app'
-      })
-    });
-    const data = await res.json();
-    setResponse(data.response);
-  };
-
-  return (
-    <div>
-      <input 
-        value={message} 
-        onChange={(e) => setMessage(e.target.value)}
-        placeholder="Ask FAME anything..."
-      />
-      <button onClick={sendMessage}>Send</button>
-      <div>{response}</div>
-    </div>
-  );
+#### `POST /ask` - Full AGI Pipeline
+```json
+{
+  "prompt": "Analyze Apple stock comprehensively",
+  "context": [],
+  "stream": false
 }
 ```
 
-### **Example: Python Client**
+Returns full AGI response with:
+- Planning information
+- Task results
+- Audit report
+- Confidence scores
 
-```python
-import requests
-
-def ask_fame(question, session_id=None):
-    url = "http://18.220.108.23:8080/query"
-    payload = {
-        "text": question,
-        "session_id": session_id or f"session_{int(time.time())}",
-        "source": "python_client"
-    }
-    response = requests.post(url, json=payload)
-    return response.json()
-
-# Usage
-result = ask_fame("What is the price of Bitcoin?")
-print(result['response'])
+#### `GET /health` - System Health
+```bash
+curl http://18.220.108.23:8080/health
 ```
 
-### **Test in Browser (Interactive API Docs)**
+#### `GET /metrics` - Performance Metrics
+```bash
+curl http://18.220.108.23:8080/metrics
+```
 
-1. Go to: `http://18.220.108.23:8080/docs`
-2. Click on **POST /query**
-3. Click **"Try it out"**
-4. Enter your question in the JSON body:
-   ```json
-   {
-     "text": "What is the price of Bitcoin?"
-   }
-   ```
-5. Click **"Execute"**
-6. See FAME's response!
+#### `POST /plan` - Create Execution Plan
+```json
+{
+  "goal": "Research renewable energy investments",
+  "parameters": {}
+}
+```
+
+#### `GET /plan/{plan_id}` - Get Plan Status
+```bash
+curl http://18.220.108.23:8080/plan/plan_abc123
+```
+
+#### `POST /feedback` - Submit Learning Feedback
+```json
+{
+  "query": "previous query",
+  "response_id": "response_id",
+  "reward": 0.8,
+  "tone_preference": "professional"
+}
+```
+
+#### `GET /persona` - Get Persona Profile
+```bash
+curl http://18.220.108.23:8080/persona
+```
+
+#### `POST /persona` - Update Persona
+```json
+{
+  "tone": "friendly",
+  "verbosity": "high"
+}
+```
+
+#### `POST /memory/wipe` - Wipe Memory (with confirmation)
+```bash
+curl -X POST "http://18.220.108.23:8080/memory/wipe?confirm=true"
+```
+
+#### `POST /memory/rebuild` - Rebuild Vector Store
+```bash
+curl -X POST http://18.220.108.23:8080/memory/rebuild
+```
 
 ---
 
-## 2. Interactive Chat (Local Testing)
+## 2. WebSocket - Real-Time Communication 🆕
 
-### **Run Local Chat Interface:**
+### **Endpoint:** `ws://18.220.108.23:8080/ws`
 
+**JavaScript Example:**
+```javascript
+const ws = new WebSocket('ws://18.220.108.23:8080/ws');
+
+ws.onopen = () => {
+  console.log('Connected to FAME');
+  
+  // Send query
+  ws.send(JSON.stringify({
+    type: 'query',
+    prompt: 'What is the price of Bitcoin?',
+    context: []
+  }));
+};
+
+ws.onmessage = (event) => {
+  const data = JSON.parse(event.data);
+  if (data.type === 'response') {
+    console.log('FAME:', data.response);
+    console.log('Confidence:', data.confidence);
+    console.log('Sources:', data.sources);
+  }
+};
+
+ws.onerror = (error) => {
+  console.error('WebSocket error:', error);
+};
+```
+
+**Python Example:**
+```python
+import asyncio
+import websockets
+import json
+
+async def chat_with_fame():
+    uri = "ws://18.220.108.23:8080/ws"
+    async with websockets.connect(uri) as websocket:
+        # Send query
+        await websocket.send(json.dumps({
+            "type": "query",
+            "prompt": "What is the price of Bitcoin?",
+            "context": []
+        }))
+        
+        # Receive response
+        response = await websocket.recv()
+        data = json.loads(response)
+        print("FAME:", data["response"])
+
+asyncio.run(chat_with_fame())
+```
+
+---
+
+## 3. Streaming API - Server-Sent Events 🆕
+
+### **Endpoint:** `POST /ask` with `stream: true`
+
+**JavaScript Example:**
+```javascript
+async function streamFromFAME(prompt) {
+  const response = await fetch('http://18.220.108.23:8080/ask', {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json' },
+    body: JSON.stringify({
+      prompt: prompt,
+      stream: true
+    })
+  });
+  
+  const reader = response.body.getReader();
+  const decoder = new TextDecoder();
+  
+  while (true) {
+    const { done, value } = await reader.read();
+    if (done) break;
+    
+    const chunk = decoder.decode(value);
+    const lines = chunk.split('\n');
+    
+    for (const line of lines) {
+      if (line.startsWith('data: ')) {
+        const data = JSON.parse(line.slice(6));
+        console.log('Token:', data.token);
+        
+        if (data.done) {
+          console.log('Complete! Confidence:', data.confidence);
+        }
+      }
+    }
+  }
+}
+
+// Usage
+streamFromFAME("Explain quantum computing");
+```
+
+---
+
+## 4. Interactive Chat (Local)
+
+### **Run:**
 ```bash
 cd C:\Users\cavek\Downloads\FAME_Desktop
 python chat_with_fame.py
@@ -153,140 +233,86 @@ python chat_with_fame.py
 FAME ASSISTANT - INTERACTIVE CHAT
 ======================================================================
 
-Welcome! I'm FAME Assistant. I can help you with:
-  • Stock prices (e.g., 'what is the price of AAPL?')
-  • Crypto prices
-  • Date and time queries
-  • General questions
-
-Type 'exit' or 'quit' to end the conversation
-======================================================================
-
-YOU: 
-```
-
-### **Example Conversation:**
-```
-YOU: hi
-FAME: Hello, how can I help you today?
-      [Intent: greet, Confidence: 0.95]
-
-YOU: what is the price of Bitcoin?
+YOU: What is the price of Bitcoin?
 FAME: Bitcoin (BTC) is currently trading at $67,234.50...
       [Intent: get_crypto_price, Confidence: 0.92]
-
-YOU: analyze Apple stock
-FAME: Analyzing AAPL...
-      [Intent: analyze_stock, Confidence: 0.88]
-
-YOU: exit
-FAME: Goodbye! Have a great day!
 ```
 
 ---
 
-## 3. Desktop GUI (Full Experience with Voice)
+## 5. Desktop GUI (Full Experience)
 
-### **Run Desktop Application:**
-
+### **Run:**
 ```bash
 cd C:\Users\cavek\Downloads\FAME_Desktop
 python enhanced_fame_communicator.py
 ```
 
-### **Features:**
-- ✅ **Text Chat** - Type questions and get responses
-- ✅ **Voice Input** - Speak to FAME (if microphone enabled)
-- ✅ **Voice Output** - FAME speaks back (ElevenLabs TTS)
-- ✅ **Business Analysis** - Stock analysis, market trends
-- ✅ **Multiple Personas** - Business Expert, Technical Advisor, Strategic Thinker
-
-### **Tabs Available:**
-1. **Voice Chat** - Real-time voice conversation
-2. **Text Chat** - Traditional chat interface
-3. **Business Analysis** - Market analysis tools
-4. **System Status** - FAME's current state
+**Features:**
+- Voice input/output
+- Multiple AI personas
+- Business analysis tools
+- Real-time system status
 
 ---
 
-## 🧠 Training FAME
+## 6. Enhanced AGI Service (New!)
 
-### **Method 1: Historical Data Training**
-
+### **Run Enhanced Service:**
 ```bash
 cd C:\Users\cavek\Downloads\FAME_Desktop
-python training/historical_training_orchestrator.py
+python -m api.fastapi_app_enhanced
 ```
 
-This trains FAME using:
-- yfinance data
-- Alpha Vantage data
-- Finnhub data
-- CoinGecko data
-- Google AI enhancements
-
-### **Method 2: Interactive Learning**
-
-FAME learns from conversations. Just chat with it:
-
-```bash
-python chat_with_fame.py
-```
-
-Ask questions, and FAME will:
-- Remember your preferences
-- Learn from context
-- Improve responses over time
-
-### **Method 3: Living System Training**
-
-FAME's "Living System" continuously learns:
-
-```python
-from core.living_system import FAMELivingSystem
-
-fame = FAMELivingSystem()
-# FAME automatically:
-# - Stores experiences in memory
-# - Extracts skills from interactions
-# - Adapts behavior based on goals
-# - Self-heals when issues detected
-```
+This starts the **full AGI system** with:
+- TaskRouter (intent classification)
+- Planner (multi-step reasoning)
+- MemoryGraph (knowledge graph)
+- Multi-Agent System
+- RL Learning
+- All 12 AGI components
 
 ---
 
-## 📊 Example Questions to Test FAME
+## 📊 Quick Test Commands
 
-### **Financial Queries:**
-- "What is the price of Bitcoin?"
-- "Analyze Apple stock"
-- "What's happening with Tesla today?"
-- "Show me crypto market trends"
-- "Compare AAPL and MSFT"
+### **Test REST API:**
+```bash
+# Simple query
+curl -X POST http://18.220.108.23:8080/query \
+  -H "Content-Type: application/json" \
+  -d '{"text": "What is the price of Bitcoin?"}'
 
-### **General Questions:**
-- "What's today's date?"
-- "What time is it?"
-- "Tell me about AI trends"
-- "Explain quantum computing"
+# Enhanced AGI query
+curl -X POST http://18.220.108.23:8080/ask \
+  -H "Content-Type: application/json" \
+  -d '{"prompt": "Analyze Apple stock", "context": []}'
+```
 
-### **Business Intelligence:**
-- "What are the market trends?"
-- "Analyze the competitive landscape"
-- "What are investment opportunities?"
-- "Assess market risks"
+### **Test Health:**
+```bash
+curl http://18.220.108.23:8080/health
+curl http://18.220.108.23:8080/healthz  # Legacy endpoint
+```
+
+### **Test Metrics:**
+```bash
+curl http://18.220.108.23:8080/metrics
+```
+
+### **Interactive API Docs:**
+Open in browser: `http://18.220.108.23:8080/docs`
 
 ---
 
 ## 🔌 Frontend Integration Examples
 
 ### **Simple HTML/JavaScript:**
-
 ```html
 <!DOCTYPE html>
 <html>
 <head>
-    <title>FAME Chat</title>
+    <title>FAME AGI Chat</title>
 </head>
 <body>
     <div id="chat">
@@ -296,7 +322,7 @@ fame = FAMELivingSystem()
     </div>
 
     <script>
-        const FAME_API = 'http://18.220.108.23:8080/query';
+        const FAME_API = 'http://18.220.108.23:8080/ask';
         let sessionId = `session_${Date.now()}`;
 
         async function sendMessage() {
@@ -306,25 +332,23 @@ fame = FAMELivingSystem()
             
             if (!question) return;
             
-            // Add user message
             messages.innerHTML += `<div><strong>You:</strong> ${question}</div>`;
             input.value = '';
             
-            // Get FAME's response
             const response = await fetch(FAME_API, {
                 method: 'POST',
                 headers: { 'Content-Type': 'application/json' },
                 body: JSON.stringify({
-                    text: question,
-                    session_id: sessionId
+                    prompt: question,
+                    context: []
                 })
             });
             
             const data = await response.json();
             messages.innerHTML += `<div><strong>FAME:</strong> ${data.response}</div>`;
+            messages.innerHTML += `<div><small>Confidence: ${data.confidence.toFixed(2)}</small></div>`;
         }
         
-        // Send on Enter key
         document.getElementById('input').addEventListener('keypress', (e) => {
             if (e.key === 'Enter') sendMessage();
         });
@@ -333,83 +357,29 @@ fame = FAMELivingSystem()
 </html>
 ```
 
-### **Vue.js Component:**
-
-```vue
-<template>
-  <div class="fame-chat">
-    <div v-for="msg in messages" :key="msg.id">
-      <strong>{{ msg.sender }}:</strong> {{ msg.text }}
-    </div>
-    <input v-model="input" @keyup.enter="send" placeholder="Ask FAME...">
-    <button @click="send">Send</button>
-  </div>
-</template>
-
-<script>
-export default {
-  data() {
-    return {
-      input: '',
-      messages: [],
-      sessionId: `session_${Date.now()}`
-    }
-  },
-  methods: {
-    async send() {
-      if (!this.input) return;
-      
-      this.messages.push({ id: Date.now(), sender: 'You', text: this.input });
-      const question = this.input;
-      this.input = '';
-      
-      const res = await fetch('http://18.220.108.23:8080/query', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify({
-          text: question,
-          session_id: this.sessionId
-        })
-      });
-      
-      const data = await res.json();
-      this.messages.push({ 
-        id: Date.now(), 
-        sender: 'FAME', 
-        text: data.response 
-      });
-    }
-  }
-}
-</script>
-```
-
 ---
 
-## 🎯 Quick Test Commands
+## 🚀 Which API to Use?
 
-### **Test via API (curl):**
-```bash
-curl -X POST http://18.220.108.23:8080/query \
-  -H "Content-Type: application/json" \
-  -d '{"text": "What is the price of Bitcoin?"}'
-```
+### **Use `/query` (Legacy) if:**
+- You need simple, fast responses
+- You're using the existing FAME unified system
+- You want backward compatibility
 
-### **Test via Python:**
-```python
-import requests
-response = requests.post(
-    'http://18.220.108.23:8080/query',
-    json={'text': 'What is the price of Bitcoin?'}
-)
-print(response.json()['response'])
-```
+### **Use `/ask` (Enhanced AGI) if:**
+- You want full AGI capabilities (planning, reflection, multi-agent)
+- You need detailed breakdowns and audit reports
+- You want access to all 12 AGI components
 
-### **Test via Browser:**
-1. Open: `http://18.220.108.23:8080/docs`
-2. Click **POST /query** → **Try it out**
-3. Enter: `{"text": "What is the price of Bitcoin?"}`
-4. Click **Execute**
+### **Use WebSocket if:**
+- You need real-time bidirectional communication
+- You're building a chat application
+- You want persistent connections
+
+### **Use Streaming if:**
+- You want to show responses as they're generated
+- You're building a chat UI with typing indicators
+- You need progressive response display
 
 ---
 
@@ -418,44 +388,77 @@ print(response.json()['response'])
 FAME remembers context within a session:
 
 ```javascript
-// Create a session
 const sessionId = 'user_karl_123';
 
 // First message
-await askFAME("My name is Karl", sessionId);
+await fetch('http://18.220.108.23:8080/ask', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    prompt: "My name is Karl",
+    context: []
+  })
+});
 
-// Second message (FAME remembers your name)
-const response = await askFAME("What's my name?", sessionId);
+// Second message (FAME remembers)
+const response = await fetch('http://18.220.108.23:8080/ask', {
+  method: 'POST',
+  headers: { 'Content-Type': 'application/json' },
+  body: JSON.stringify({
+    prompt: "What's my name?",
+    context: []
+  })
+});
 // Response: "Your name is Karl"
 ```
 
 ---
 
-## 🚀 Next Steps
+## 🎯 Example Questions
 
-1. **Test FAME Now:**
-   - Go to `http://18.220.108.23:8080/docs` and try the `/query` endpoint
+### **Financial:**
+- "What is the price of Bitcoin?"
+- "Analyze Apple stock comprehensively"
+- "What are current crypto market trends?"
 
-2. **Build Your Frontend:**
-   - Use the JavaScript examples above
-   - Connect to `http://18.220.108.23:8080/query`
+### **Complex (Uses Full AGI):**
+- "Plan a comprehensive investment strategy"
+- "Research renewable energy opportunities step by step"
+- "Create a detailed analysis of AI market trends"
 
-3. **Train FAME:**
-   - Run `python training/historical_training_orchestrator.py`
-   - Chat with FAME to improve its knowledge
-
-4. **Monitor FAME:**
-   - Health: `http://18.220.108.23:8080/healthz`
-   - Status: `http://18.220.108.23:8080/readyz`
+### **General:**
+- "What's today's date?"
+- "Explain quantum computing"
+- "Tell me about recent AI developments"
 
 ---
 
-## 📚 API Documentation
+## 📚 Full API Documentation
 
-Full interactive docs: `http://18.220.108.23:8080/docs`
+**Interactive Docs:** `http://18.220.108.23:8080/docs`
 
-Endpoints:
-- `POST /query` - Ask FAME questions
-- `GET /healthz` - Check system health
-- `GET /readyz` - Check readiness status
+**All Endpoints:**
+- `POST /query` - Legacy query endpoint
+- `POST /ask` - Enhanced AGI query (recommended)
+- `GET /health` - System health
+- `GET /metrics` - Performance metrics
+- `POST /plan` - Create execution plan
+- `GET /plan/{id}` - Get plan status
+- `POST /feedback` - Submit learning feedback
+- `GET /persona` - Get persona profile
+- `POST /persona` - Update persona
+- `POST /memory/wipe` - Wipe memory
+- `POST /memory/rebuild` - Rebuild vector store
+- `WebSocket /ws` - Real-time communication
 
+---
+
+## ✅ Status Check
+
+**GitHub:** ✅ All updates pushed (10 commits ahead, now synced)  
+**AWS EC2:** ⚠️ Needs deployment (run `.\deploy_ec2.ps1`)
+
+---
+
+**Last Updated:** 2024  
+**Version:** 6.1 (Enhanced AGI)
