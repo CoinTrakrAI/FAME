@@ -4,7 +4,7 @@
 # Configuration
 $sshKey       = "C:\Users\cavek\Downloads\FAME.pem"
 $user         = "ec2-user"
-$ec2Host      = "52.15.178.92"
+$ec2Host      = "18.220.108.23"
 $localScript  = "deploy_ec2.sh"
 $remoteScript = "/home/ec2-user/deploy_ec2.sh"
 

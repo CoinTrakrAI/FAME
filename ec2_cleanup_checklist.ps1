@@ -43,7 +43,7 @@ if ($awsCliAvailable) {
     }
     
     Write-Host ""
-    Write-Host "Target IP: 52.15.178.92" -ForegroundColor Cyan
+    Write-Host "Target IP: 18.220.108.23" -ForegroundColor Cyan
     Write-Host ""
     
     # Check if target IP exists

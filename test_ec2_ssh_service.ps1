@@ -1,7 +1,7 @@
 # Test if SSH service is running on EC2 instance
 $sshKey = "C:\Users\cavek\Downloads\FAME.pem"
 $user = "ec2-user"
-$ec2Host = "52.15.178.92"
+$ec2Host = "18.220.108.23"
 
 Write-Host "Testing SSH service on EC2 instance..." -ForegroundColor Cyan
 Write-Host "Instance: $ec2Host" -ForegroundColor Yellow
