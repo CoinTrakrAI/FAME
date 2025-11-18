@@ -423,11 +423,15 @@ class FAMEUnified:
                 return final_response
 
             except Exception as e:
+                error_msg = str(e)
+                logger.error(f"Query processing failed: {error_msg}", exc_info=True)
                 error_response = {
-                    'error': True,
-                    'response': "I encountered an error processing your request. Please try again.",
+                    'error': error_msg,
+                    'response': f"I encountered an error processing your request: {error_msg}. Please try again or rephrase your question.",
                     'query_id': query_id,
-                    'processing_time': time.time() - start_time
+                    'processing_time': time.time() - start_time,
+                    'confidence': 0.0,
+                    'sources': ['error_handler']
                 }
 
                 log_error(e, {'query': query})
