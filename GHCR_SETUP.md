@@ -2,7 +2,15 @@
 
 ## Problem: "denied: installation not allowed to Write organization package"
 
-This error occurs when GitHub Actions cannot write to organization packages in GHCR. This requires **organization-level settings** to be configured.
+This error occurs when GitHub Actions cannot write to organization packages in GHCR. This is **100% a permissions issue**, not Docker or tagging.
+
+## ✅ Current Workflow Configuration
+
+All workflows now have:
+- ✅ `packages: write` permission at top level
+- ✅ Direct `docker login` command (not action)
+- ✅ PAT fallback support (GHCR_PAT → GITHUB_TOKEN)
+- ✅ Token logging for debugging
 
 ## Solutions
 
