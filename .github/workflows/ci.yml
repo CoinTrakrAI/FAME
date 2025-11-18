@@ -12,7 +12,7 @@ permissions:
   id-token: write
 
 env:
-  IMAGE_NAME: ghcr.io/${{ github.repository_owner }}/fame-api
+  REPO_OWNER: ${{ github.repository_owner }}
   DOCKER_TAG: ${{ github.sha }}
 
 jobs:
@@ -76,6 +76,14 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+      
+      - name: Set lowercase repo owner
+        id: set-repo
+        run: echo "repo_owner=$(echo '${{ env.REPO_OWNER }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
+      
+      - name: Set image name
+        id: set-image-name
+        run: echo "image_name=ghcr.io/${{ steps.set-repo.outputs.repo_owner }}/fame-api" >> $GITHUB_OUTPUT
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -99,8 +107,8 @@ jobs:
           file: ./Dockerfile
           push: ${{ github.event_name == 'push' && contains(github.ref, 'refs/heads/main') }}
           tags: |
-            ${{ env.IMAGE_NAME }}:${{ env.DOCKER_TAG }}
-            ${{ env.IMAGE_NAME }}:latest
+            ${{ steps.set-image-name.outputs.image_name }}:${{ env.DOCKER_TAG }}
+            ${{ steps.set-image-name.outputs.image_name }}:latest
           platforms: linux/amd64
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -123,5 +131,5 @@ jobs:
 
       - name: Output image tag
         if: steps.build.outcome == 'success'
-        run: echo "IMAGE=${{ env.IMAGE_NAME }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT
+        run: echo "IMAGE=${{ steps.set-image-name.outputs.image_name }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT
 
