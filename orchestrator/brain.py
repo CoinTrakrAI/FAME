@@ -265,7 +265,14 @@ class Brain:
             final = {"responses": responses}
         
         # Extract best response - prioritize qa_engine and specific handlers
-        successful = [r for r in responses if "result" in r]
+        # Filter out error responses - a response with error=True is not successful
+        successful = [
+            r for r in responses 
+            if "result" in r and (
+                not isinstance(r.get("result"), dict) or 
+                not r.get("result").get("error", False)
+            )
+        ]
         
         # If no responses at all, try AutonomousResponseEngine immediately
         if not responses:
@@ -365,23 +372,51 @@ class Brain:
                             else:
                                 final['response'] = str(final)
         elif len(responses) == 1:
-            # Only one response (even if error)
-            final = responses[0]
-            # If it's an error, use AutonomousResponseEngine as fallback
-            if isinstance(final, dict) and 'error' in final and 'response' not in final:
+            # Only one response (check if it's an error)
+            response_data = responses[0]
+            # Extract result from plugin response format
+            if isinstance(response_data, dict) and "result" in response_data:
+                result = response_data["result"]
+                # Check if result has error flag
+                if isinstance(result, dict) and result.get("error", False):
+                    # Error response - use AutonomousResponseEngine as fallback
+                    final = await self._try_autonomous_engine(query)
+                    if not final or ('error' in final and final.get('error')):
+                        final = {'response': "I didn't understand that. Could you please rephrase your question?", 'error': True}
+                else:
+                    final = result
+            elif isinstance(response_data, dict) and response_data.get("error"):
+                # Direct error response
                 final = await self._try_autonomous_engine(query)
                 if not final or ('error' in final and final.get('error')):
                     final = {'response': "I didn't understand that. Could you please rephrase your question?", 'error': True}
+            else:
+                final = response_data
         else:
-            # Multiple responses - return all
-            final = {"responses": responses}
-            # If all are errors, use AutonomousResponseEngine as fallback
-            if all('error' in r for r in responses):
+            # Multiple responses - check if all are errors
+            all_errors = True
+            for r in responses:
+                if isinstance(r, dict):
+                    # Check if result has error
+                    if "result" in r:
+                        result = r["result"]
+                        if isinstance(result, dict) and not result.get("error", False):
+                            all_errors = False
+                            break
+                    elif not r.get("error", False):
+                        all_errors = False
+                        break
+            
+            if all_errors:
+                # All are errors - use AutonomousResponseEngine as fallback
                 autonomous_result = await self._try_autonomous_engine(query)
                 if autonomous_result and not ('error' in autonomous_result and autonomous_result.get('error')):
                     final = autonomous_result
                 else:
-                    final['response'] = "I didn't understand that. Could you please rephrase your question?"
+                    final = {"response": "I didn't understand that. Could you please rephrase your question?", 'error': True}
+            else:
+                # Some successful - return all
+                final = {"responses": responses}
         
         # Add processing time
         if isinstance(final, dict):
