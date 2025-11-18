@@ -1,3 +1,5 @@
+
+
 #!/usr/bin/env python3
 """
 Load API keys from local configuration file
@@ -6,7 +8,13 @@ Run this before starting FAME to load all API keys
 
 import os
 from pathlib import Path
-from dotenv import load_dotenv
+try:
+    from dotenv import load_dotenv
+except ImportError:
+    # dotenv is optional - can use environment variables directly
+    def load_dotenv(path):
+        """Fallback if python-dotenv not installed"""
+        pass
 
 def load_api_keys():
     """Load API keys from local file"""
@@ -14,7 +22,7 @@ def load_api_keys():
     
     if local_keys_file.exists():
         load_dotenv(local_keys_file)
-        print("✅ API keys loaded from config/api_keys_local.env")
+        print("API keys loaded from config/api_keys_local.env")
     else:
         # Try .env file
         env_file = Path(".env")
