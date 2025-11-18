@@ -58,13 +58,14 @@ jobs:
 
       - name: Set image output
         id: set-image
-        run: echo "image=${{ env.IMAGE_NAME }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT
+        if: success() || failure()
+        run: echo "image=${{ env.IMAGE_NAME }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT || echo "image=" >> $GITHUB_OUTPUT
 
   deploy:
     name: Deploy to K8s
     needs: build
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && needs.build.result == 'success'
     steps:
       - name: Checkout
         uses: actions/checkout@v4

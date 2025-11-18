@@ -24,8 +24,9 @@ if (-not (Test-Path $SSH_KEY)) {
 Write-Host "[INFO] Connecting to EC2 instance..." -ForegroundColor Cyan
 Write-Host ""
 
-# Deployment commands
-$deployCommands = @"
+# Deployment commands - Use a script file to avoid escaping issues
+$deployScript = @'
+#!/bin/bash
 set -e
 echo '[STEP 1] Connected to EC2 instance'
 echo ''
@@ -43,17 +44,23 @@ else
     cd FAME_Desktop
 fi
 
+# Determine docker compose command
+COMPOSE_CMD='docker-compose'
+if ! command -v docker-compose &> /dev/null; then
+    COMPOSE_CMD='docker compose'
+fi
+
 echo ''
 echo '[STEP 4] Stopping existing containers...'
-sudo docker compose -f docker-compose.prod.yml down || echo '[INFO] No containers to stop'
+sudo $COMPOSE_CMD -f docker-compose.prod.yml down || echo '[INFO] No containers to stop'
 
 echo ''
 echo '[STEP 5] Building new containers with timeout fix...'
-sudo docker compose -f docker-compose.prod.yml build --no-cache
+sudo $COMPOSE_CMD -f docker-compose.prod.yml build --no-cache
 
 echo ''
 echo '[STEP 6] Starting containers...'
-sudo docker compose -f docker-compose.prod.yml up -d
+sudo $COMPOSE_CMD -f docker-compose.prod.yml up -d
 
 echo ''
 echo '[STEP 7] Waiting for services to start (15 seconds)...'
@@ -61,11 +68,11 @@ sleep 15
 
 echo ''
 echo '[STEP 8] Checking container status...'
-sudo docker compose -f docker-compose.prod.yml ps
+sudo $COMPOSE_CMD -f docker-compose.prod.yml ps
 
 echo ''
 echo '[STEP 9] Recent logs (last 30 lines):'
-sudo docker compose -f docker-compose.prod.yml logs --tail=30
+sudo $COMPOSE_CMD -f docker-compose.prod.yml logs --tail=30
 
 echo ''
 echo '[STEP 10] Testing health endpoint...'
@@ -75,13 +82,48 @@ curl -s http://localhost:8080/healthz | head -20 || echo '[WARNING] Health check
 echo ''
 echo '[SUCCESS] Deployment complete!'
 echo ''
-echo 'To view logs: sudo docker compose -f docker-compose.prod.yml logs -f'
-echo 'To check status: sudo docker compose -f docker-compose.prod.yml ps'
-"@
+echo 'To view logs: sudo $COMPOSE_CMD -f docker-compose.prod.yml logs -f'
+echo 'To check status: sudo $COMPOSE_CMD -f docker-compose.prod.yml ps'
+'@
 
-# Execute SSH command
+# Write script to temp file with Unix line endings
+$tempScript = "$env:TEMP\fame_deploy.sh"
+# Convert Windows line endings to Unix
+$deployScriptUnix = $deployScript -replace "`r`n", "`n" -replace "`r", "`n"
+[System.IO.File]::WriteAllText($tempScript, $deployScriptUnix, [System.Text.Encoding]::UTF8)
+
+Write-Host "[INFO] Uploading deployment script to EC2..." -ForegroundColor Cyan
+scp -i $SSH_KEY -o StrictHostKeyChecking=no $tempScript "${EC2_USER}@${EC2IP}:/tmp/fame_deploy.sh"
+
+Write-Host "[INFO] Executing deployment on EC2..." -ForegroundColor Cyan
+$deployCommands = "chmod +x /tmp/fame_deploy.sh && bash /tmp/fame_deploy.sh"
+
+# Execute SSH command with timeout (using PowerShell timeout mechanism)
 try {
-    ssh -i $SSH_KEY -o StrictHostKeyChecking=no -o ConnectTimeout=10 "${EC2_USER}@${EC2IP}" $deployCommands
+    $job = Start-Job -ScriptBlock {
+        param($SSH_KEY, $EC2_USER, $EC2IP, $deployCommands)
+        ssh -i $SSH_KEY -o StrictHostKeyChecking=no -o ConnectTimeout=10 -o ServerAliveInterval=60 -o ServerAliveCountMax=3 "${EC2_USER}@${EC2IP}" $deployCommands 2>&1
+    } -ArgumentList $SSH_KEY, $EC2_USER, $EC2IP, $deployCommands
+    
+    $timeoutSeconds = 600
+    $job | Wait-Job -Timeout $timeoutSeconds | Out-Null
+    
+    if ($job.State -eq "Running") {
+        Write-Host "[ERROR] Deployment timed out after ${timeoutSeconds}s" -ForegroundColor Red
+        Stop-Job $job
+        Remove-Job $job
+        exit 1
+    }
+    
+    $output = Receive-Job $job
+    Remove-Job $job
+    
+    Write-Host $output
+    
+    if ($LASTEXITCODE -ne 0 -and $LASTEXITCODE -ne $null) {
+        Write-Host "[ERROR] SSH command failed with exit code: $LASTEXITCODE" -ForegroundColor Red
+        exit 1
+    }
     
     Write-Host ""
     Write-Host "================================================" -ForegroundColor Green
