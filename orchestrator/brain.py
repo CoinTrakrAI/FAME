@@ -266,7 +266,20 @@ class Brain:
         
         # Extract best response - prioritize qa_engine and specific handlers
         successful = [r for r in responses if "result" in r]
-        if successful:
+        
+        # If no responses at all, try AutonomousResponseEngine immediately
+        if not responses:
+            autonomous_result = await self._try_autonomous_engine(query)
+            if autonomous_result and not ('error' in autonomous_result and autonomous_result.get('error')):
+                final = autonomous_result
+            else:
+                final = {
+                    "response": "I didn't understand that. Could you please rephrase your question?",
+                    "error": True,
+                    "source": "brain",
+                    "confidence": 0.0
+                }
+        elif successful:
             # Collect all sources from consulted plugins
             all_sources = []
             for r in successful:
@@ -354,15 +367,21 @@ class Brain:
         elif len(responses) == 1:
             # Only one response (even if error)
             final = responses[0]
-            # If it's an error, try to provide a helpful response
+            # If it's an error, use AutonomousResponseEngine as fallback
             if isinstance(final, dict) and 'error' in final and 'response' not in final:
-                final['response'] = "I didn't understand that. Could you please rephrase your question?"
+                final = await self._try_autonomous_engine(query)
+                if not final or ('error' in final and final.get('error')):
+                    final = {'response': "I didn't understand that. Could you please rephrase your question?", 'error': True}
         else:
             # Multiple responses - return all
             final = {"responses": responses}
-            # If all are errors, provide fallback
+            # If all are errors, use AutonomousResponseEngine as fallback
             if all('error' in r for r in responses):
-                final['response'] = "I didn't understand that. Could you please rephrase your question?"
+                autonomous_result = await self._try_autonomous_engine(query)
+                if autonomous_result and not ('error' in autonomous_result and autonomous_result.get('error')):
+                    final = autonomous_result
+                else:
+                    final['response'] = "I didn't understand that. Could you please rephrase your question?"
         
         # Add processing time
         if isinstance(final, dict):
@@ -491,4 +510,64 @@ class Brain:
             filtered = ['qa_engine']
         
         return filtered
+    
+    async def _try_autonomous_engine(self, query: Dict[str, Any]) -> Optional[Dict[str, Any]]:
+        """
+        Try AutonomousResponseEngine as fallback when all plugins fail.
+        This engine uses web scraping, LLM calls, knowledge base, etc.
+        """
+        try:
+            from core.autonomous_response_engine import get_autonomous_engine
+            
+            engine = get_autonomous_engine()
+            query_text = query.get('text', '')
+            
+            if not query_text:
+                return None
+            
+            # Prepare context from session/history if available
+            context_list = []
+            session_context = query.get('context') or query.get('session_context', [])
+            if isinstance(session_context, list):
+                for msg in session_context[-5:]:  # Last 5 messages
+                    if isinstance(msg, dict):
+                        role = msg.get('role', 'user')
+                        content = msg.get('content', msg.get('text', ''))
+                        if content:
+                            context_list.append({"role": role, "content": content})
+            
+            # Generate autonomous response
+            result = await engine.generate_response(query_text, context_list if context_list else None)
+            
+            if result and isinstance(result, dict):
+                # Extract response and format for brain compatibility
+                response_text = result.get('response', '')
+                confidence = result.get('confidence', 0.6)
+                sources = result.get('breakdown', [])
+                
+                if response_text and len(response_text) > 10:  # Valid response
+                    # Format sources
+                    source_list = []
+                    if sources:
+                        for item in sources:
+                            if isinstance(item, dict):
+                                source_list.append(item.get('source', 'unknown'))
+                            elif isinstance(item, str):
+                                source_list.append(item)
+                    
+                    return {
+                        'response': response_text,
+                        'confidence': float(confidence),
+                        'source': 'autonomous_response_engine',
+                        'sources': source_list if source_list else ['autonomous_engine'],
+                        'intent': 'general',
+                        'breakdown': sources,
+                        'metrics': result.get('metrics', {})
+                    }
+        except Exception as e:
+            import logging
+            logger = logging.getLogger(__name__)
+            logger.debug(f"AutonomousResponseEngine fallback failed: {e}")
+        
+        return None
 
