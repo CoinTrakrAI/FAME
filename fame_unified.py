@@ -16,6 +16,18 @@ from typing import Any, Dict, Optional
 BASE_DIR = Path(__file__).parent
 sys.path.insert(0, str(BASE_DIR))
 
+# Load API keys from secure location (.env or config/api_keys_local.env)
+# This must happen before importing any modules that need API keys
+try:
+    from load_api_keys import load_api_keys
+    load_api_keys()
+except ImportError:
+    # load_api_keys not available, will use environment variables from Docker/system
+    pass
+except Exception as e:
+    logger = logging.getLogger(__name__)
+    logger.warning(f"Failed to load API keys: {e}. Using environment variables only.")
+
 # Import core components
 from orchestrator.brain import Brain
 from core.autonomous_decision_engine import get_decision_engine
