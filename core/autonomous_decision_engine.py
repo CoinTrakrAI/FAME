@@ -268,6 +268,36 @@ class AutonomousDecisionEngine:
             Synthesized response dictionary
         """
         if not responses:
+            # No responses - try AutonomousResponseEngine as fallback
+            try:
+                from core.autonomous_response_engine import get_autonomous_engine
+                import asyncio
+                
+                engine = get_autonomous_engine()
+                query_text = query.get('text', '')
+                
+                if query_text:
+                    # Generate autonomous response
+                    loop = asyncio.new_event_loop()
+                    asyncio.set_event_loop(loop)
+                    try:
+                        result = loop.run_until_complete(
+                            engine.generate_response(query_text, None)
+                        )
+                        if result and isinstance(result, dict):
+                            response_text = result.get('response', '')
+                            if response_text and len(response_text) > 10:
+                                return {
+                                    'response': response_text,
+                                    'confidence': result.get('confidence', 0.6),
+                                    'source': 'autonomous_response_engine',
+                                    'sources': ['autonomous_engine']
+                                }
+                    finally:
+                        loop.close()
+            except Exception as e:
+                logger.debug(f"AutonomousResponseEngine fallback in synthesize failed: {e}")
+            
             return {
                 'error': True,
                 'response': "I couldn't process that request. Could you please rephrase?",
@@ -278,7 +308,37 @@ class AutonomousDecisionEngine:
         successful = [r for r in responses if 'error' not in r or not r.get('error')]
         
         if not successful:
-            # All failed - return helpful error
+            # All failed - try AutonomousResponseEngine as fallback
+            try:
+                from core.autonomous_response_engine import get_autonomous_engine
+                import asyncio
+                
+                engine = get_autonomous_engine()
+                query_text = query.get('text', '')
+                
+                if query_text:
+                    # Generate autonomous response
+                    loop = asyncio.new_event_loop()
+                    asyncio.set_event_loop(loop)
+                    try:
+                        result = loop.run_until_complete(
+                            engine.generate_response(query_text, None)
+                        )
+                        if result and isinstance(result, dict):
+                            response_text = result.get('response', '')
+                            if response_text and len(response_text) > 10:
+                                return {
+                                    'response': response_text,
+                                    'confidence': result.get('confidence', 0.6),
+                                    'source': 'autonomous_response_engine',
+                                    'sources': ['autonomous_engine']
+                                }
+                    finally:
+                        loop.close()
+            except Exception as e:
+                logger.debug(f"AutonomousResponseEngine fallback in synthesize failed: {e}")
+            
+            # Return helpful error if fallback also failed
             return {
                 'error': True,
                 'response': "I encountered an error processing your request. Please try again or rephrase your question.",
