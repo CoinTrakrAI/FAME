@@ -95,25 +95,39 @@ class ProductionLogger:
         logging.getLogger('core.autonomous_decision_engine').setLevel(logging.WARNING)
         logging.getLogger('FAME').setLevel(logging.WARNING)
         
-        # File handler for detailed logs
-        file_handler = logging.FileHandler(
-            self.log_dir / f"fame_{datetime.now().strftime('%Y%m%d')}.log"
-        )
-        file_handler.setLevel(logging.DEBUG)
-        file_formatter = logging.Formatter(
-            '%(asctime)s | %(levelname)-8s | %(name)s | %(funcName)s:%(lineno)d | %(message)s',
-            datefmt='%Y-%m-%d %H:%M:%S'
-        )
-        file_handler.setFormatter(file_formatter)
-        self.logger.addHandler(file_handler)
+        # File handler for detailed logs (with error handling)
+        try:
+            log_file = self.log_dir / f"fame_{datetime.now().strftime('%Y%m%d')}.log"
+            # Ensure parent directory is writable
+            self.log_dir.mkdir(exist_ok=True, mode=0o775)
+            file_handler = logging.FileHandler(log_file)
+            file_handler.setLevel(logging.DEBUG)
+            file_formatter = logging.Formatter(
+                '%(asctime)s | %(levelname)-8s | %(name)s | %(funcName)s:%(lineno)d | %(message)s',
+                datefmt='%Y-%m-%d %H:%M:%S'
+            )
+            file_handler.setFormatter(file_formatter)
+            self.logger.addHandler(file_handler)
+        except (PermissionError, OSError) as e:
+            # If file logging fails, continue with console logging only
+            self.logger.warning(f"Could not create file log handler: {e}. Using console logging only.")
         
-        # Error log handler
-        error_handler = logging.FileHandler(
-            self.log_dir / f"fame_errors_{datetime.now().strftime('%Y%m%d')}.log"
-        )
-        error_handler.setLevel(logging.ERROR)
-        error_handler.setFormatter(file_formatter)
-        self.logger.addHandler(error_handler)
+        # Error log handler (with error handling)
+        try:
+            error_log_file = self.log_dir / f"fame_errors_{datetime.now().strftime('%Y%m%d')}.log"
+            error_handler = logging.FileHandler(error_log_file)
+            error_handler.setLevel(logging.ERROR)
+            if 'file_formatter' in locals():
+                error_handler.setFormatter(file_formatter)
+            else:
+                error_handler.setFormatter(logging.Formatter(
+                    '%(asctime)s | %(levelname)-8s | %(name)s | %(message)s',
+                    datefmt='%Y-%m-%d %H:%M:%S'
+                ))
+            self.logger.addHandler(error_handler)
+        except (PermissionError, OSError) as e:
+            # If error log file fails, continue without it
+            self.logger.warning(f"Could not create error log handler: {e}")
     
     def log_query(self, query: Dict[str, Any], level: str = "INFO"):
         """Log a user query"""
