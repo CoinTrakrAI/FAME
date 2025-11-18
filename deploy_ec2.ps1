@@ -5,8 +5,8 @@
 $sshKey       = "C:\Users\cavek\Downloads\FAME.pem"
 $user         = "ec2-user"
 $ec2Host      = "3.17.56.74"
-$localScript  = "deploy_ec2.sh"
-$remoteScript = "/home/ec2-user/deploy_ec2.sh"
+$localScript  = "deploy_fame_ec2.sh"
+$remoteScript = "/home/ec2-user/deploy_fame_ec2.sh"
 
 # Ensure local script exists
 if (-not (Test-Path $localScript)) {
