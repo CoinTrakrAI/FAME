@@ -87,6 +87,7 @@ class FAMEUnified:
         self.memory_graph = None
         self.execution_governor = None
         self.rl_trainer = None
+        self.reasoning_engine = None
         
         if use_agi_system and AGI_COMPONENTS_AVAILABLE:
             try:
@@ -128,6 +129,24 @@ class FAMEUnified:
                 logger.info("✅ RL Trainer initialized")
             except Exception as e:
                 logger.warning(f"RL Trainer initialization failed: {e}")
+            
+            # Initialize Advanced Reasoning Engine
+            try:
+                from agents.fame_reasoning_engine import FAMEReasoningEngine
+                reasoning_config = {
+                    "tot_breadth": 5,
+                    "tot_max_depth": 3,
+                    "mcts_budget": 500,
+                    "mcts_exploration": 1.414,
+                    "graph_embedding_dim": 768,
+                    "graph_max_hops": 3,
+                    "dual_process_threshold": 0.8,
+                    "debate_num_agents": 3
+                }
+                self.reasoning_engine = FAMEReasoningEngine(reasoning_config)
+                logger.info("✅ FAME Reasoning Engine initialized (ToT, MCTS, Graph, Dual-Process, Multi-Agent)")
+            except Exception as e:
+                logger.warning(f"FAME Reasoning Engine initialization failed: {e}")
         
         # Session management
         self.sessions = {}
