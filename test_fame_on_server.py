@@ -3,6 +3,7 @@
 """
 Test FAME on Deployed Server (Internet Access)
 Tests FAME's knowledge and internet connectivity from the deployed EC2 instance
+FULLY DYNAMIC - Ask any questions, no pre-loaded questions required!
 """
 
 import requests
@@ -11,7 +12,8 @@ import os
 from typing import Dict, Any, Optional
 import sys
 
-# Default server URL - UPDATE THIS WITH YOUR EC2 IP
+# Default server URL - Uses EC2 IP from earlier deployment
+# Override with FAME_SERVER_URL environment variable if needed
 # Get your EC2 IP from: AWS Console → EC2 → Instances → Public IPv4 address
 FAME_SERVER = os.getenv("FAME_SERVER_URL", "http://3.17.56.74:8080")
 FAME_API = f"{FAME_SERVER}/query"
@@ -34,9 +36,11 @@ def check_health() -> tuple[bool, Optional[Dict[str, Any]]]:
             return False, None
     except requests.exceptions.ConnectionError:
         print(f"[ERROR] Cannot connect to {FAME_SERVER}")
-        print(f"  → Check that EC2 instance is running")
-        print(f"  → Verify security group allows port 8080")
-        print(f"  → Confirm the IP address is correct")
+        print(f"  - Check that EC2 instance is running")
+        print(f"  - Verify security group allows port 8080")
+        print(f"  - Confirm the IP address is correct")
+        print(f"  - Current IP in script: {FAME_SERVER}")
+        print(f"  - Update FAME_SERVER_URL environment variable or edit script with correct IP")
         return False, None
     except requests.exceptions.Timeout:
         print(f"[ERROR] Connection timeout - server may be slow to respond")
@@ -46,22 +50,33 @@ def check_health() -> tuple[bool, Optional[Dict[str, Any]]]:
         return False, None
 
 
-def test_internet_access() -> bool:
-    """Test if FAME can access the internet"""
+def test_internet_access(custom_questions: Optional[list] = None) -> bool:
+    """Test if FAME can access the internet
+    
+    Args:
+        custom_questions: Optional list of questions to ask. If None, uses default examples.
+    """
     print("\n[TESTING] Internet Access Test")
     print("=" * 80)
+    print("Testing FAME's ability to access real-time internet data")
+    print("-" * 80)
     
-    # Questions that require internet access
-    internet_tests = [
-        "What is the current price of Bitcoin?",
-        "What's the latest news about Apple stock?",
-        "What is today's date and time?",
-        "Who won the 2024 US Presidential election?",
-    ]
+    # Use custom questions if provided, otherwise use example questions
+    if custom_questions:
+        internet_tests = custom_questions
+        print(f"[INFO] Using {len(custom_questions)} custom question(s)")
+    else:
+        # Example questions that require internet access (you can skip these)
+        internet_tests = [
+            "What is the current price of Bitcoin?",
+            "What is today's date and time?",
+        ]
+        print(f"[INFO] Using {len(internet_tests)} example question(s)")
+        print("[NOTE] These are just examples - you can provide your own questions")
     
     results = []
-    for question in internet_tests:
-        print(f"\n[QUESTION] {question}")
+    for i, question in enumerate(internet_tests, 1):
+        print(f"\n[QUESTION {i}/{len(internet_tests)}] {question}")
         try:
             start = time.time()
             response = requests.post(
@@ -92,22 +107,33 @@ def test_internet_access() -> bool:
     return success_rate > 0.5
 
 
-def test_knowledge_base() -> bool:
-    """Test FAME's knowledge base"""
+def test_knowledge_base(custom_questions: Optional[list] = None) -> bool:
+    """Test FAME's knowledge base
+    
+    Args:
+        custom_questions: Optional list of questions to ask. If None, uses default examples.
+    """
     print("\n[TESTING] Knowledge Base Test")
     print("=" * 80)
+    print("Testing FAME's knowledge and understanding")
+    print("-" * 80)
     
-    knowledge_tests = [
-        "Explain what options trading is",
-        "What is the Kelly Criterion?",
-        "Explain implied volatility skew",
-        "What are the differences between growth and value stocks?",
-        "What is dollar cost averaging?",
-    ]
+    # Use custom questions if provided, otherwise use example questions
+    if custom_questions:
+        knowledge_tests = custom_questions
+        print(f"[INFO] Using {len(custom_questions)} custom question(s)")
+    else:
+        # Example questions (you can skip these and use interactive mode instead)
+        knowledge_tests = [
+            "Explain what options trading is",
+            "What is the Kelly Criterion?",
+        ]
+        print(f"[INFO] Using {len(knowledge_tests)} example question(s)")
+        print("[NOTE] These are just examples - use interactive mode for your own questions")
     
     results = []
-    for question in knowledge_tests:
-        print(f"\n[QUESTION] {question}")
+    for i, question in enumerate(knowledge_tests, 1):
+        print(f"\n[QUESTION {i}/{len(knowledge_tests)}] {question}")
         try:
             start = time.time()
             response = requests.post(
@@ -138,22 +164,33 @@ def test_knowledge_base() -> bool:
     return success_rate > 0.5
 
 
-def test_investment_analysis() -> bool:
-    """Test FAME's investment analysis capabilities"""
+def test_investment_analysis(custom_questions: Optional[list] = None) -> bool:
+    """Test FAME's investment analysis capabilities
+    
+    Args:
+        custom_questions: Optional list of questions to ask. If None, uses default examples.
+    """
     print("\n[TESTING] Investment Analysis Test")
     print("=" * 80)
+    print("Testing FAME's investment analysis and expertise")
+    print("-" * 80)
     
-    investment_tests = [
-        "Should I invest in Apple stock right now?",
-        "Analyze Tesla stock comprehensively",
-        "What are the best dividend stocks for 2024?",
-        "What are the current market risks?",
-        "What's the IV skew for SPY options?",
-    ]
+    # Use custom questions if provided, otherwise use example questions
+    if custom_questions:
+        investment_tests = custom_questions
+        print(f"[INFO] Using {len(custom_questions)} custom question(s)")
+    else:
+        # Example questions (you can skip these and use interactive mode instead)
+        investment_tests = [
+            "Should I invest in Apple stock right now?",
+            "What are the current market risks?",
+        ]
+        print(f"[INFO] Using {len(investment_tests)} example question(s)")
+        print("[NOTE] These are just examples - use interactive mode for your own questions")
     
     results = []
-    for question in investment_tests:
-        print(f"\n[QUESTION] {question}")
+    for i, question in enumerate(investment_tests, 1):
+        print(f"\n[QUESTION {i}/{len(investment_tests)}] {question}")
         try:
             start = time.time()
             response = requests.post(
@@ -185,13 +222,16 @@ def test_investment_analysis() -> bool:
 
 
 def interactive_test():
-    """Interactive mode - ask FAME questions"""
+    """Interactive mode - ask FAME any questions dynamically"""
     print("\n" + "=" * 80)
-    print("INTERACTIVE MODE - Test FAME directly")
+    print("INTERACTIVE MODE - Ask FAME Anything")
     print("=" * 80)
     print(f"Server: {FAME_SERVER}")
+    print(f"API: {FAME_API}")
+    print("\n[INFO] Ask FAME any question - no pre-loaded questions!")
     print("Type 'exit' or 'quit' to stop")
     print("Type 'health' to check server status")
+    print("Type 'clear' to clear the screen")
     print("-" * 80)
     
     session_id = f"interactive_{int(time.time())}"
@@ -209,6 +249,13 @@ def interactive_test():
             
             if question.lower() == 'health':
                 healthy, _ = check_health()
+                continue
+            
+            if question.lower() == 'clear':
+                os.system('cls' if os.name == 'nt' else 'clear')
+                print("\n" + "=" * 80)
+                print("INTERACTIVE MODE - Ask FAME Anything")
+                print("=" * 80)
                 continue
             
             print("[FAME] Thinking...")
@@ -267,10 +314,33 @@ def main():
         print("  2. Security group allows port 8080")
         print("  3. IP address is correct (check AWS Console)")
         print("  4. FAME container is running")
-        print(f"\nUpdate FAME_SERVER_URL or edit this script if using different IP")
+        print(f"\nUpdate FAME_SERVER_URL environment variable or edit this script if using different IP")
         sys.exit(1)
     
-    print("\n[INFO] Running comprehensive tests...")
+    print("\n[SUCCESS] FAME server is accessible and healthy!")
+    print("\n[INFO] Test Options:")
+    print("  1. Interactive Mode (Recommended) - Ask any questions dynamically")
+    print("  2. Example Tests - Run pre-configured test questions")
+    print("  3. Skip Tests - Just verify connectivity and go straight to interactive")
+    
+    print("\n" + "-" * 80)
+    choice = input("Choose option (1=Interactive, 2=Example Tests, 3=Skip): ").strip()
+    
+    if choice == "3":
+        # Skip tests, go straight to interactive
+        print("\n[Skipping automated tests - entering interactive mode]")
+        interactive_test()
+        return
+    
+    if choice == "1":
+        # Go straight to interactive mode
+        print("\n[Entering interactive mode]")
+        interactive_test()
+        return
+    
+    # Run example tests (choice == "2" or default)
+    print("\n[INFO] Running example tests...")
+    print("NOTE: These are just examples - use interactive mode for your own questions")
     print("This will test:")
     print("  • Internet connectivity (FAME's access to web)")
     print("  • Knowledge base (FAME's training/knowledge)")
@@ -295,13 +365,13 @@ def main():
     else:
         print("\n[WARNING] Some tests failed. Review output above.")
     
-    # Ask if user wants interactive mode
+    # Always offer interactive mode
     print("\n" + "-" * 80)
-    response = input("Enter interactive mode? (y/n): ").strip().lower()
-    if response in ['y', 'yes']:
+    print("Enter interactive mode to ask FAME any questions you want?")
+    response = input("Interactive mode? (y/n, default=y): ").strip().lower()
+    if response in ['y', 'yes', '']:
         interactive_test()
 
 
 if __name__ == "__main__":
     main()
-

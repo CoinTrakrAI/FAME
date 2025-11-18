@@ -38,46 +38,46 @@ python test_fame_on_server.py
 python test_fame_on_server.py
 ```
 
-This will:
-- ✅ Check server health
-- ✅ Test internet connectivity
-- ✅ Test knowledge base
-- ✅ Test investment analysis
-- ✅ Offer interactive mode
+**When prompted, choose:**
+- **Option 1 (Recommended):** Interactive Mode - Ask FAME any questions dynamically
+- **Option 2:** Example Tests - Run optional pre-configured test questions
+- **Option 3:** Skip Tests - Go straight to interactive mode
+
+**Interactive mode lets you:**
+- ✅ Ask FAME **any question** you want
+- ✅ Have a **dynamic conversation** with FAME
+- ✅ Test FAME's **real knowledge** on your topics
+- ✅ No pre-loaded questions - completely flexible
 
 ---
 
 ## 📋 Test Categories
 
-### **1. Internet Access Test**
+### **1. Internet Access Test (Optional)**
 
-Tests if FAME can access real-time information:
-- Current Bitcoin price
-- Latest Apple stock news
-- Today's date/time
-- Recent events
+Tests if FAME can access real-time information using example questions.
+**Note:** You can skip this and test internet access with your own questions in interactive mode.
 
 **Success Criteria:** FAME can fetch real-time data from the web
 
-### **2. Knowledge Base Test**
+### **2. Knowledge Base Test (Optional)**
 
-Tests FAME's trained knowledge:
-- Options trading concepts
-- Kelly Criterion
-- IV skew
-- Investment strategies
+Tests FAME's trained knowledge using example questions.
+**Note:** You can skip this and test knowledge with your own questions in interactive mode.
 
 **Success Criteria:** FAME demonstrates understanding of financial concepts
 
-### **3. Investment Analysis Test**
+### **3. Investment Analysis Test (Optional)**
 
-Tests FAME's investment capabilities:
-- Stock analysis
-- Market risk assessment
-- Options analysis
-- Portfolio recommendations
+Tests FAME's investment capabilities using example questions.
+**Note:** You can skip this and test analysis with your own questions in interactive mode.
 
 **Success Criteria:** FAME provides investment insights and analysis
+
+### **4. Interactive Mode (Recommended)**
+
+Ask FAME **any questions** dynamically - no pre-loaded questions required!
+This is the real way to test FAME's capabilities on your specific topics.
 
 ---
 
@@ -122,32 +122,40 @@ python test_fame_on_server.py
 
 ---
 
-## 📊 Example Questions for Testing
+## 💬 Dynamic Testing - Ask Any Questions!
 
-### **Internet Access (Real-Time Data):**
-```python
-"What is the current price of Bitcoin?"
-"What's the latest news about Apple stock?"
-"What is today's date and time?"
-"Who won the 2024 US Presidential election?"
-```
+**IMPORTANT:** FAME is **fully dynamic** - there are NO pre-loaded questions required!
 
-### **Knowledge Base (Training Data):**
-```python
-"Explain what options trading is"
-"What is the Kelly Criterion?"
-"Explain implied volatility skew"
-"What are the differences between growth and value stocks?"
-```
+The test script offers:
+1. **Interactive Mode (Recommended)** - Ask FAME any questions you want
+2. **Example Tests** - Optional pre-configured questions (just for demonstration)
+3. **Skip Tests** - Go straight to interactive mode
 
-### **Investment Analysis (Expertise):**
-```python
-"Should I invest in Apple stock right now?"
-"Analyze Tesla stock comprehensively"
-"What are the best dividend stocks for 2024?"
-"What are the current market risks?"
-"What's the IV skew for SPY options?"
-```
+### **Why Interactive Mode?**
+
+Interactive mode lets you:
+- ✅ Ask FAME **any question** dynamically
+- ✅ Test FAME's knowledge on **your specific topics**
+- ✅ Have a **conversation** with FAME
+- ✅ Test FAME's **real capabilities**, not example questions
+
+### **Example Questions (Optional - Just Ideas):**
+
+These are just **suggestions** if you want ideas, but you can ask **anything**:
+
+**Real-Time Data:**
+- "What is the current price of Bitcoin?"
+- "What is today's date and time?"
+
+**Knowledge:**
+- "Explain what options trading is"
+- "What is the Kelly Criterion?"
+
+**Investment:**
+- "Should I invest in Apple stock right now?"
+- "What are the current market risks?"
+
+**But remember:** FAME can answer **any question** - not just these examples!
 
 ---
 
