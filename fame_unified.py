@@ -310,11 +310,61 @@ class FAMEUnified:
                                 if 'sources' in resp['result']:
                                     sources_list.extend(resp['result']['sources'])
 
-                    synthesized = await self.decision_engine.synthesize_responses(
-                        [r.get('result', r) for r in responses if 'result' in r],
-                        query
-                    )
-                    final_response = synthesized
+                    # Filter out error responses before synthesizing
+                    valid_responses = [
+                        r.get('result', r) for r in responses 
+                        if 'result' in r and (
+                            not isinstance(r.get('result'), dict) or 
+                            not r.get('result').get('error', False)
+                        )
+                    ]
+                    
+                    if valid_responses:
+                        synthesized = await self.decision_engine.synthesize_responses(
+                            valid_responses,
+                            query
+                        )
+                        final_response = synthesized
+                    else:
+                        # All responses had errors - try AutonomousResponseEngine
+                        try:
+                            from core.autonomous_response_engine import get_autonomous_engine
+                            engine = get_autonomous_engine()
+                            query_text = query.get('text', '')
+                            
+                            # Prepare context
+                            context_list = []
+                            session_context = query.get('context') or query_with_routing.get('memory_context', [])
+                            if isinstance(session_context, list):
+                                for msg in session_context[-5:]:
+                                    if isinstance(msg, dict):
+                                        role = msg.get('role', 'user')
+                                        content = msg.get('content', msg.get('text', ''))
+                                        if content:
+                                            context_list.append({"role": role, "content": content})
+                            
+                            autonomous_result = await engine.generate_response(query_text, context_list if context_list else None)
+                            
+                            if autonomous_result and isinstance(autonomous_result, dict):
+                                response_text = autonomous_result.get('response', '')
+                                if response_text and len(response_text) > 10:
+                                    final_response = {
+                                        'response': response_text,
+                                        'confidence': autonomous_result.get('confidence', 0.6),
+                                        'source': 'autonomous_response_engine',
+                                        'sources': ['autonomous_engine']
+                                    }
+                                else:
+                                    final_response = synthesized
+                            else:
+                                final_response = synthesized
+                        except Exception as e:
+                            logger.warning(f"AutonomousResponseEngine fallback in synthesize failed: {e}")
+                            synthesized = await self.decision_engine.synthesize_responses(
+                                [r.get('result', r) for r in responses if 'result' in r],
+                                query
+                            )
+                            final_response = synthesized
                     if 'sources' in synthesized:
                         sources_list.extend(synthesized['sources'])
                 else:
