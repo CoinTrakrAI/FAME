@@ -159,6 +159,9 @@ class FinanceFirstResponder:
                         },
                         'confidence': 0.9
                     }
+            except Exception as inner_e:
+                logger.warning(f"Error fetching price details for {symbol}: {inner_e}")
+                # Fall through to return error response
             
             return {
                 'ok': False,
