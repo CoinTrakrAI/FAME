@@ -44,10 +44,32 @@ ENV PYTHONUNBUFFERED=1 \
 
 WORKDIR /app
 
-# Install curl for healthcheck and basic system tools
+# Install system libraries for optional dependencies (TA-Lib, PyAudio, etc.)
+# These are needed if TA-Lib or pyaudio are ever added to requirements
 RUN apt-get update && apt-get install -y --no-install-recommends \
     curl \
+    build-essential \
+    libssl-dev \
+    libffi-dev \
+    portaudio19-dev \
+    libasound2-dev \
+    libsndfile1 \
+    libxml2-dev \
+    libxslt-dev \
+    wget \
     && rm -rf /var/lib/apt/lists/*
+
+# Install TA-Lib library (if needed for optional TA-Lib Python package)
+# This is safe to install even if not used - won't hurt if unused
+RUN wget -q http://prdownloads.sourceforge.net/ta-lib/ta-lib-0.4.0-src.tar.gz && \
+    tar -xzf ta-lib-0.4.0-src.tar.gz && \
+    cd ta-lib && \
+    ./configure --prefix=/usr > /dev/null 2>&1 && \
+    make > /dev/null 2>&1 && \
+    make install > /dev/null 2>&1 && \
+    cd .. && rm -rf ta-lib ta-lib-0.4.0-src.tar.gz || \
+    echo "TA-Lib installation failed (non-critical - optional dependency)" && \
+    rm -rf ta-lib ta-lib-0.4.0-src.tar.gz 2>/dev/null || true
 
 RUN adduser --disabled-password --gecos "" fame
 
