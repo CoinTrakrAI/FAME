@@ -3,7 +3,6 @@
 FAME Production Logger
 Enterprise-grade structured logging system
 """
-
 import json
 import logging
 import os
