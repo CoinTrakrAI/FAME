@@ -317,6 +317,16 @@ class FAMEUnified:
                 final_response['intent'] = routing_info.get('intent_type', 'unknown')
                 final_response['sources'] = sources_list
                 final_response['processing_time'] = time.time() - start_time
+                
+                # Enhance response with reasoning result if available
+                if 'reasoning_result' in query_with_routing:
+                    reasoning_result = query_with_routing['reasoning_result']
+                    final_response['reasoning'] = {
+                        'method': reasoning_result.get('method'),
+                        'confidence': reasoning_result.get('confidence'),
+                        'reasoning': reasoning_result.get('reasoning'),
+                        'analysis_time_ms': reasoning_result.get('analysis_time_ms', 0)
+                    }
 
                 response_time = final_response['processing_time']
                 self.health_monitor.record_response_time(response_time)
