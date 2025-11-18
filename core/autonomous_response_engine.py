@@ -240,7 +240,27 @@ class EmbeddingEngine:
         if not self.model:
             return None
         try:
-            return self.model.encode(texts, convert_to_numpy=True, show_progress_bar=False).tolist()
+            embeddings = self.model.encode(texts, convert_to_numpy=True, show_progress_bar=False)
+            embeddings_list = embeddings.tolist() if hasattr(embeddings, 'tolist') else list(embeddings)
+            
+            # Ensure all embeddings are exactly 768 dimensions
+            if isinstance(embeddings_list, list) and len(embeddings_list) > 0:
+                if isinstance(embeddings_list[0], list):
+                    # Adjust each embedding to 768 dimensions
+                    adjusted = []
+                    for emb in embeddings_list:
+                        if isinstance(emb, list):
+                            if len(emb) != 768:
+                                if len(emb) < 768:
+                                    emb = emb + [0.0] * (768 - len(emb))
+                                else:
+                                    emb = emb[:768]
+                            adjusted.append(emb)
+                        else:
+                            adjusted.append([emb] + [0.0] * 767 if len(emb) == 1 else emb[:768])
+                    return adjusted
+            
+            return embeddings_list
         except Exception as e:
             logger.exception("Embedding error: %s", e)
             return None
