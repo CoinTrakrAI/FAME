@@ -208,20 +208,33 @@ class EmbeddingEngine:
         self.index = None
         self.id_to_meta: Dict[int, Dict[str, Any]] = {}
         self.next_id = 0
+        self.embedding_dim = 768  # Always use 768 dimension for consistency
         self._load_model()
 
     def _load_model(self):
         if not ST_AVAILABLE:
             logger.warning("sentence-transformers not available — semantic recall disabled.")
+            # Ensure embedding dimension is 768 even without model
+            self.embedding_dim = 768
             return
         try:
-            self.model = SentenceTransformer(self.model_name)
-            logger.info("Embedding model loaded: %s", self.model_name)
+            # Force model to CPU and set embedding dimension to 768
+            self.model = SentenceTransformer(self.model_name, device='cpu')
+            # Verify embedding dimension is 768
+            test_embedding = self.model.encode(["test"], convert_to_numpy=True)
+            actual_dim = test_embedding.shape[1] if len(test_embedding.shape) > 1 else len(test_embedding[0])
+            self.embedding_dim = actual_dim
+            if actual_dim != 768:
+                logger.warning(f"Embedding model has dimension {actual_dim}, expected 768. Adjusting.")
+                self.embedding_dim = 768  # Force to 768 for consistency
+            logger.info("Embedding model loaded: %s (dim: %d)", self.model_name, self.embedding_dim)
             # try to init faiss index if available
             self.index = None
         except Exception as e:
             logger.exception("Failed to load embedding model: %s", e)
             self.model = None
+            # Ensure embedding dimension is 768 even on failure
+            self.embedding_dim = 768
 
     def embed(self, texts: List[str]) -> Optional[List[List[float]]]:
         if not self.model:

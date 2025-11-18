@@ -9,6 +9,11 @@ from typing import Dict
 
 # Path to core folder relative to this file
 CORE_FOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'core'))
+# Path to skills folder - verified working skills only
+SKILLS_FOLDER = os.path.abspath(os.path.join(os.path.dirname(__file__), '..', 'skills'))
+
+# QUARANTINE: Disable core folder loading
+QUARANTINE_CORE = os.getenv("FAME_QUARANTINE_CORE", "true").lower() == "true"
 
 # Setup logger
 logger = logging.getLogger(__name__)
@@ -16,7 +21,7 @@ logger = logging.getLogger(__name__)
 logger.setLevel(logging.INFO)
 
 
-def load_plugins(folder=CORE_FOLDER) -> Dict[str, ModuleType]:
+def load_plugins(folder=None) -> Dict[str, ModuleType]:
     """
     Loads modules from core/ as dynamic plugins.
     
@@ -27,13 +32,44 @@ def load_plugins(folder=CORE_FOLDER) -> Dict[str, ModuleType]:
     """
     plugins = {}
     
-    # Handle None folder parameter
-    if folder is None:
+    # QUARANTINE: If core folder is quarantined, only load verified skills from core/ folder
+    if QUARANTINE_CORE and (folder is None or folder == CORE_FOLDER):
+        logger.warning("⚠️ CORE FOLDER IS QUARANTINED - Loading only verified skills from core/ folder")
+        # Still load from core folder, but only verified skills
         folder = CORE_FOLDER
+        VERIFIED_SKILLS = {'qa_engine', 'web_scraper'}  # Only verified working skills in core/
+        logger.info(f"Quarantine mode: Only loading verified skills: {VERIFIED_SKILLS}")
+    elif folder is None:
+        folder = CORE_FOLDER
+        VERIFIED_SKILLS = None  # Load all when not quarantined
+    else:
+        VERIFIED_SKILLS = None  # Load all from specified folder
     
     if not os.path.isdir(folder):
-        logger.warning(f"Core folder not found: {folder}")
+        logger.warning(f"Plugin folder not found: {folder}")
         return plugins
+    
+    # Also try loading from skills folder if it exists (for additional verified skills)
+    skills_plugins = {}
+    if os.path.isdir(SKILLS_FOLDER) and folder != SKILLS_FOLDER:
+        # Load verified skills from skills/ folder
+        VERIFIED_SKILLS_FROM_SKILLS = {'trading_skill', 'trading_preferences_skill'}  # Verified skills in skills/
+        for fn in os.listdir(SKILLS_FOLDER):
+            if not fn.endswith('.py') or fn.startswith('__'):
+                continue
+            name = fn[:-3]
+            if name not in VERIFIED_SKILLS_FROM_SKILLS:
+                continue
+            try:
+                path = os.path.join(SKILLS_FOLDER, fn)
+                spec = importlib.util.spec_from_file_location(f"skills.{name}", path)
+                mod = importlib.util.module_from_spec(spec)
+                spec.loader.exec_module(mod)
+                if hasattr(mod, 'handle') and callable(mod.handle):
+                    skills_plugins[name] = mod
+                    logger.debug(f"Loaded verified skill from skills/: {name}")
+            except Exception as e:
+                logger.debug(f"Failed to load skill {name} from skills/: {e}")
     
     # Exclude meta-modules that cause circular loading
     EXCLUDED = {'brain_orchestrator', 'plugin_loader', 'event_bus', 'safety_controller', 
@@ -47,6 +83,11 @@ def load_plugins(folder=CORE_FOLDER) -> Dict[str, ModuleType]:
         
         # Skip excluded modules
         if name in EXCLUDED:
+            continue
+        
+        # QUARANTINE: Only load verified skills
+        if VERIFIED_SKILLS is not None and name not in VERIFIED_SKILLS:
+            logger.debug(f"Skipping {name} (not in verified skills list)")
             continue
         
         path = os.path.join(folder, fn)
@@ -108,6 +149,9 @@ def load_plugins(folder=CORE_FOLDER) -> Dict[str, ModuleType]:
             else:
                 # fcntl is Linux-only, expected on Windows - just debug log
                 logger.debug(f"Skipped {name} (Windows compatibility: {e})")
+    
+    # Merge skills plugins
+    plugins.update(skills_plugins)
     
     return plugins
 

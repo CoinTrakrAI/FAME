@@ -239,3 +239,76 @@ class WebScraper:
         
         return ' '.join(text_parts)
 
+
+# Module-level handle function for plugin interface
+_scraper_instance = None
+
+def init(manager):
+    """Initialize plugin with manager reference"""
+    global _scraper_instance
+    _scraper_instance = WebScraper()
+
+def handle(request: Dict[str, Any]) -> Dict[str, Any]:
+    """
+    Handle web scraping requests for plugin interface.
+    
+    Args:
+        request: Dictionary with 'text' key containing query
+        
+    Returns:
+        Response dictionary with 'response', 'source', etc.
+    """
+    global _scraper_instance
+    if _scraper_instance is None:
+        _scraper_instance = WebScraper()
+    
+    query_text = request.get('text', '')
+    if not query_text:
+        return {
+            'response': 'Please provide a search query.',
+            'source': 'web_scraper',
+            'error': True,
+            'confidence': 0.0
+        }
+    
+    try:
+        # Use SERPAPI search
+        result = _scraper_instance.search_serpapi(query_text, max_results=5)
+        
+        if result.get('success') and result.get('results'):
+            results = result.get('results', [])
+            
+            # Format response from search results
+            response_parts = []
+            for item in results[:3]:  # Top 3 results
+                title = item.get('title', '')
+                snippet = item.get('snippet', '')
+                if title or snippet:
+                    response_parts.append(f"{title}\n{snippet}")
+            
+            if response_parts:
+                response_text = "\n\n".join(response_parts)
+                return {
+                    'response': response_text,
+                    'source': 'web_scraper',
+                    'confidence': 0.8,
+                    'results': results,
+                    'method': result.get('method', 'serpapi')
+                }
+        
+        # If no results, return error
+        return {
+            'response': f"Could not find information about '{query_text}'. Please try a different query.",
+            'source': 'web_scraper',
+            'error': True,
+            'confidence': 0.0
+        }
+        
+    except Exception as e:
+        logger.error(f"Web scraper error: {e}")
+        return {
+            'response': f"Error searching for '{query_text}': {str(e)}",
+            'source': 'web_scraper',
+            'error': True,
+            'confidence': 0.0
+        }

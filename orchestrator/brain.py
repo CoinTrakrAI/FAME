@@ -49,6 +49,11 @@ class Brain:
         self.docker_manager = None
         self.sandbox_runner = None
         
+        # Fallback spam prevention - track recent fallback calls
+        self._fallback_call_count = {}
+        self._fallback_call_window = 5  # seconds
+        self._max_fallback_calls_per_window = 1  # Only 1 fallback call per query window
+        
         self._init_plugins()
     
     def _init_plugins(self):
@@ -550,7 +555,35 @@ class Brain:
         """
         Try AutonomousResponseEngine as fallback when all plugins fail.
         This engine uses web scraping, LLM calls, knowledge base, etc.
+        
+        Includes spam prevention to avoid multiple fallback calls for the same query.
         """
+        import time
+        
+        # Spam prevention: Check if we've already called fallback for this query recently
+        query_text = query.get('text', '').lower().strip()
+        query_hash = hash(query_text)
+        current_time = time.time()
+        
+        # Clean old entries
+        self._fallback_call_count = {
+            k: v for k, v in self._fallback_call_count.items()
+            if current_time - v < self._fallback_call_window
+        }
+        
+        # Check if we've exceeded the limit
+        if query_hash in self._fallback_call_count:
+            call_time = self._fallback_call_count[query_hash]
+            if current_time - call_time < self._fallback_call_window:
+                # Already called fallback for this query recently - skip
+                import logging
+                logger = logging.getLogger(__name__)
+                logger.debug(f"Skipping fallback spam for query: {query_text[:50]}")
+                return None
+        
+        # Record this fallback call
+        self._fallback_call_count[query_hash] = current_time
+        
         try:
             from core.autonomous_response_engine import get_autonomous_engine
             

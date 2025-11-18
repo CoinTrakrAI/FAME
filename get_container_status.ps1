@@ -1,6 +1,6 @@
 # Get comprehensive container status from EC2
 $sshKey = "C:\Users\cavek\Downloads\FAME.pem"
-$ec2Host = "3.135.222.143"
+$ec2Host = "3.17.56.74"
 $user = "ec2-user"
 
 Write-Host "=== FAME Container Status Check ===" -ForegroundColor Cyan

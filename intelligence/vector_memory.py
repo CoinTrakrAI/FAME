@@ -60,12 +60,18 @@ class VectorMemory:
         if CHROMADB_AVAILABLE:
             try:
                 self.client = chromadb.PersistentClient(path=persist_directory)
+                # Explicitly set embedding dimension to 768 for ChromaDB
                 self.collection = self.client.get_or_create_collection(
                     name="fame_memory",
-                    metadata={"description": "FAME's long-term vector memory"}
+                    metadata={"description": "FAME's long-term vector memory", "embedding_dimension": "768"}
                 )
+                # Ensure collection uses 768 dimensions
+                if hasattr(self.collection, 'metadata'):
+                    metadata = self.collection.metadata or {}
+                    metadata['embedding_dimension'] = '768'
+                self.logger.info("ChromaDB initialized with 768-dimension embeddings")
             except Exception as e:
-                self.logger.warning(f"Could not initialize ChromaDB: {e}")
+                self.logger.warning(f"Could not initialize ChromaDB: {e}. Using in-memory storage.")
                 self.client = None
                 self.collection = None
         else:
@@ -125,8 +131,18 @@ class VectorMemory:
         # Store in vector database
         if self.collection:
             try:
+                # Ensure embedding is exactly 768 dimensions
+                embedding_list = embedding.tolist() if hasattr(embedding, 'tolist') else list(embedding)
+                if len(embedding_list) != 768:
+                    self.logger.warning(f"Embedding dimension mismatch: {len(embedding_list)} != 768. Adjusting.")
+                    # Pad or truncate to 768
+                    if len(embedding_list) < 768:
+                        embedding_list.extend([0.0] * (768 - len(embedding_list)))
+                    else:
+                        embedding_list = embedding_list[:768]
+                
                 self.collection.add(
-                    embeddings=[embedding.tolist()],
+                    embeddings=[embedding_list],
                     metadatas=[metadata],
                     ids=[f"exp_{datetime.now().timestamp()}"]
                 )
