@@ -1,9 +1,14 @@
 version: "3.9"
 
+# Minimal docker-compose for t3.micro EC2 instances
+# Uses requirements_production_minimal.txt for reduced memory footprint
+
 services:
   fame:
-    build: .
-    image: fame-desktop:prod
+    build:
+      context: .
+      dockerfile: Dockerfile.minimal
+    image: fame-desktop:prod-micro
     container_name: fame_agi_core
     ports:
       - "8080:8080"
@@ -11,16 +16,16 @@ services:
       - .env
     environment:
       - FAME_ENV=production
-      - FAME_LOG_AGGREGATION=${FAME_LOG_AGGREGATION:-0}
+      - FAME_LOG_AGGREGATION=0
     restart: unless-stopped
     healthcheck:
       test: ["CMD", "sh", "-c", "curl -f http://localhost:8080/healthz || exit 1"]
       interval: 30s
       timeout: 10s
       retries: 3
-      start_period: 40s
-    mem_limit: 2g
-    cpus: 1.0
+      start_period: 60s  # Longer start period for micro instance
+    mem_limit: 768m  # Leave some RAM for system (1GB total)
+    cpus: 0.8  # Leave some CPU for system
     volumes:
       - ./data:/app/data
       - ./logs:/app/logs

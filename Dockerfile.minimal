@@ -1,0 +1,52 @@
+# Minimal Dockerfile for t3.micro EC2 (1 GB RAM)
+# Uses requirements_production_minimal.txt instead of full requirements
+
+# syntax=docker/dockerfile:1.5
+
+FROM python:3.11-slim
+
+ARG DEBIAN_FRONTEND=noninteractive
+
+ENV PYTHONUNBUFFERED=1 \
+    PYTHONDONTWRITEBYTECODE=1 \
+    PIP_DISABLE_PIP_VERSION_CHECK=1 \
+    FAME_ENV=production
+
+WORKDIR /app
+
+# Install curl for healthcheck and basic system tools
+RUN apt-get update && apt-get install -y --no-install-recommends \
+    curl \
+    gcc \
+    && rm -rf /var/lib/apt/lists/*
+
+RUN adduser --disabled-password --gecos "" fame
+
+# Use minimal requirements
+COPY requirements_production_minimal.txt requirements_production.txt
+
+# Install Python dependencies directly (no wheels - saves memory during build)
+RUN pip install --upgrade pip && \
+    pip install --no-cache-dir -r requirements_production.txt
+
+COPY . /app
+
+# Create logs and data directories with proper permissions (before USER switch)
+RUN rm -rf /app/logs/* /app/data/* 2>/dev/null || true && \
+    mkdir -p /app/logs /app/data && \
+    chown -R fame:fame /app && \
+    chmod -R 775 /app/logs /app/data && \
+    chmod -R 755 /app
+
+COPY scripts/docker_healthcheck.py /usr/local/bin/docker_healthcheck.py
+RUN chmod +x /usr/local/bin/docker_healthcheck.py
+
+USER fame
+
+HEALTHCHECK --interval=30s --timeout=5s --retries=3 --start-period=60s \
+  CMD python /usr/local/bin/docker_healthcheck.py || exit 1
+
+EXPOSE 8080
+
+ENTRYPOINT ["uvicorn", "api.server:app", "--host", "0.0.0.0", "--port", "8080"]
+
