@@ -24,7 +24,8 @@ class ProductionLogger:
     
     def __init__(self, log_dir: Optional[Path] = None, log_level: str = "INFO"):
         self.log_dir = log_dir or Path(__file__).parent.parent / "logs"
-        self.log_dir.mkdir(exist_ok=True)
+        # Ensure directory exists and is writable
+        self.log_dir.mkdir(exist_ok=True, mode=0o775)
         
         self._aggregator_enabled = os.getenv("FAME_LOG_AGGREGATION") == "1"
         buffer_size = int(os.getenv("FAME_LOG_BUFFER", "500"))

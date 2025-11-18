@@ -58,10 +58,13 @@ RUN pip install --no-cache-dir -r requirements_production.txt
 
 COPY . /app
 
-# Create logs and data directories with proper permissions
-RUN mkdir -p /app/logs /app/data && \
+# Create logs and data directories with proper permissions (before USER switch)
+# Remove any existing logs that might have wrong permissions
+RUN rm -rf /app/logs/* /app/data/* 2>/dev/null || true && \
+    mkdir -p /app/logs /app/data && \
     chown -R fame:fame /app && \
-    chmod -R 755 /app/logs /app/data
+    chmod -R 775 /app/logs /app/data && \
+    chmod -R 755 /app
 
 COPY scripts/docker_healthcheck.py /usr/local/bin/docker_healthcheck.py
 RUN chmod +x /usr/local/bin/docker_healthcheck.py
