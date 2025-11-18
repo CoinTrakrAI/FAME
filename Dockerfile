@@ -24,9 +24,16 @@ RUN pip install --upgrade pip \
  && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
 
 # Install and build wheels in stages to save space
+# Install tzdata first as it's required by pandas but may not be built as wheel
+RUN pip install --no-cache-dir tzdata
+
+# Build wheels for all requirements
 RUN pip wheel --no-cache-dir --wheel-dir /wheels -r requirements_production.txt \
  && rm -rf ~/.cache/pip /tmp/* \
  && find /wheels -name "*.whl" -size +200M -delete 2>/dev/null || true
+
+# Also build tzdata wheel explicitly
+RUN pip wheel --no-cache-dir --wheel-dir /wheels tzdata || true
 
 FROM python:3.11-slim
 
@@ -42,13 +49,8 @@ RUN adduser --disabled-password --gecos "" fame
 COPY --from=builder /wheels /wheels
 COPY --from=builder /app/requirements_production.txt .
 
-# Install tzdata first (required by pandas but may not be in wheels)
-RUN pip install --no-cache-dir tzdata || true
-
-# Install from wheels, but allow PyPI fallback for missing packages
-RUN pip install --no-cache-dir --prefer-binary --find-links=/wheels -r requirements_production.txt || \
-    pip install --no-cache-dir --prefer-binary --find-links=/wheels --no-index -r requirements_production.txt 2>/dev/null || \
-    pip install --no-cache-dir -r requirements_production.txt
+# Install from wheels, with PyPI fallback for any missing packages
+RUN pip install --no-cache-dir --prefer-binary --find-links=/wheels -r requirements_production.txt
 
 RUN rm -rf /wheels
 
