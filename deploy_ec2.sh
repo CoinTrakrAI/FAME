@@ -88,10 +88,17 @@ else
     git reset --hard origin/main | tee -a $LOG_FILE
 fi
 
-# Step 3: Clean up Docker to free space (but keep images we might need)
+# Step 3: Clean up Docker and system to free space
 echo "Cleaning up Docker to free space..." | tee -a $LOG_FILE
-sudo docker system prune -f --volumes | tee -a $LOG_FILE
-sudo docker builder prune -f | tee -a $LOG_FILE
+# Remove all stopped containers, unused networks, images, and build cache
+sudo docker system prune -af --volumes | tee -a $LOG_FILE
+sudo docker builder prune -af | tee -a $LOG_FILE
+# Clean up old logs and temporary files
+sudo journalctl --vacuum-time=1d 2>/dev/null || true
+sudo apt-get clean 2>/dev/null || true
+# Check disk space
+echo "Current disk space:" | tee -a $LOG_FILE
+df -h | tee -a $LOG_FILE
 
 # Step 4: Stop and remove old containers (handle conflicts)
 echo "Stopping and removing existing containers..." | tee -a $LOG_FILE
@@ -127,9 +134,13 @@ EOF
     fi
 fi
 
-# Step 6: Build new Docker images
+# Step 6: Build new Docker images (with cleanup between steps to save space)
 echo "Building Docker images..." | tee -a $LOG_FILE
+# Clean pip cache before build
+sudo docker system prune -f 2>/dev/null || true
 sudo $COMPOSE_CMD -f docker-compose.prod.yml build --no-cache | tee -a $LOG_FILE
+# Clean up build cache after build to free space
+sudo docker builder prune -f | tee -a $LOG_FILE
 
 # Step 7: Start containers
 echo "Starting containers..." | tee -a $LOG_FILE
