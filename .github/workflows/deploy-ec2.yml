@@ -108,9 +108,16 @@ jobs:
             echo "deploy_available=false" >> $GITHUB_OUTPUT
             echo "::warning::EC2_HOST or EC2_SSH_KEY secrets not set - skipping EC2 deployment"
             echo "This is expected if you're not using EC2 deployment. Workflow will continue."
+            echo ""
+            echo "To enable EC2 deployment, add these secrets in GitHub:"
+            echo "  1. Settings → Secrets → Actions → New repository secret"
+            echo "  2. Name: EC2_HOST, Value: <your-ec2-ip-or-hostname>"
+            echo "  3. Name: EC2_SSH_KEY, Value: <your-ssh-private-key>"
           else
             echo "deploy_available=true" >> $GITHUB_OUTPUT
-            echo "EC2 secrets found - proceeding with deployment"
+            echo "✅ EC2 secrets found - proceeding with deployment"
+            echo "EC2_HOST: ${{ secrets.EC2_HOST }}"
+            echo "EC2_SSH_KEY: [REDACTED - present]"
           fi
 
       - name: Deploy to EC2 via SSH
