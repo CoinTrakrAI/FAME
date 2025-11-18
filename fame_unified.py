@@ -355,8 +355,18 @@ class FAMEUnified:
                                         'sources': ['autonomous_engine']
                                     }
                                 else:
+                                    # Fallback to error response if autonomous engine fails
+                                    synthesized = await self.decision_engine.synthesize_responses(
+                                        [r.get('result', r) for r in responses if 'result' in r],
+                                        query
+                                    )
                                     final_response = synthesized
                             else:
+                                # Fallback to error response if autonomous engine fails
+                                synthesized = await self.decision_engine.synthesize_responses(
+                                    [r.get('result', r) for r in responses if 'result' in r],
+                                    query
+                                )
                                 final_response = synthesized
                         except Exception as e:
                             logger.warning(f"AutonomousResponseEngine fallback in synthesize failed: {e}")
@@ -365,7 +375,9 @@ class FAMEUnified:
                                 query
                             )
                             final_response = synthesized
-                    if 'sources' in synthesized:
+                    
+                    # Check if synthesized exists before accessing it
+                    if 'synthesized' in locals() and isinstance(synthesized, dict) and 'sources' in synthesized:
                         sources_list.extend(synthesized['sources'])
                 else:
                     final_response = brain_response
