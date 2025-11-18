@@ -48,6 +48,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build & push image
+        id: build
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -59,9 +60,22 @@ jobs:
           platforms: linux/amd64
           cache-from: type=gha
           cache-to: type=gha,mode=max
+          # Fail build on errors
+          no-cache: false
+
+      - name: Build status check
+        if: steps.build.outcome != 'success'
+        run: |
+          echo "::error::Docker build failed! Check logs above for details."
+          echo "Common issues:"
+          echo "- Missing system libraries (apt-get install)"
+          echo "- Python dependency conflicts"
+          echo "- Out of disk space"
+          exit 1
 
       - name: Set image output
         id: set-image
+        if: steps.build.outcome == 'success'
         run: echo "image=${{ env.IMAGE_NAME }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT
 
   deploy-ec2:
@@ -74,14 +88,17 @@ jobs:
         uses: actions/checkout@v4
 
       - name: Deploy to EC2 via SSH
+        id: deploy
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
           username: ec2-user
           key: ${{ secrets.EC2_SSH_KEY }}
           port: 22
-          timeout: 300s
+          timeout: 600s
           script: |
+            set -e
+            set -o pipefail
             # Navigate to project directory
             cd /home/ec2-user || exit 1
             
@@ -100,9 +117,21 @@ jobs:
             # Make deployment script executable
             chmod +x deploy_ec2.sh
             
-            # Run deployment script
+            # Run deployment script with error handling
             echo "Starting deployment..."
-            sudo bash deploy_ec2.sh
+            if sudo bash deploy_ec2.sh; then
+              echo "✅ Deployment script completed successfully"
+            else
+              DEPLOY_EXIT=$?
+              echo "::error::Deployment script failed with exit code $DEPLOY_EXIT"
+              echo "=== Recent logs ==="
+              tail -100 /home/ec2-user/fame_deploy.log 2>/dev/null || echo "No deployment log found"
+              echo "=== Container status ==="
+              sudo docker ps -a | head -10 || true
+              echo "=== Docker logs ==="
+              sudo docker logs fame_agi_core --tail 50 2>/dev/null || true
+              exit $DEPLOY_EXIT
+            fi
             
             # Wait for services to be ready
             echo "Waiting for services to start..."
@@ -115,6 +144,14 @@ jobs:
               
               echo "=== Service Health ==="
               sudo docker compose -f docker-compose.prod.yml ps 2>/dev/null || sudo docker-compose -f docker-compose.prod.yml ps 2>/dev/null || echo "Docker Compose not available"
+              
+              # Check if container is running
+              if ! sudo docker ps | grep -q fame_agi_core; then
+                echo "::error::Container fame_agi_core is not running!"
+                echo "=== Container logs ==="
+                sudo docker logs fame_agi_core --tail 100 2>/dev/null || echo "No logs available"
+                exit 1
+              fi
             fi
 
       - name: Health Check

@@ -134,12 +134,49 @@ EOF
     fi
 fi
 
-# Step 6: Build new Docker images (with cleanup between steps to save space)
+# Step 6: Build new Docker images (with cleanup between steps to save space and retry logic)
 echo "Building Docker images..." | tee -a $LOG_FILE
 # Clean pip cache before build
 sudo docker system prune -f 2>/dev/null || true
-sudo $COMPOSE_CMD -f docker-compose.prod.yml build --no-cache | tee -a $LOG_FILE
-# Clean up build cache after build to free space
+
+# Retry logic for Docker build (up to 3 attempts)
+MAX_RETRIES=3
+RETRY_DELAY=30
+BUILD_SUCCESS=false
+
+for attempt in $(seq 1 $MAX_RETRIES); do
+    echo "Docker build attempt $attempt/$MAX_RETRIES..." | tee -a $LOG_FILE
+    
+    if sudo $COMPOSE_CMD -f docker-compose.prod.yml build --no-cache 2>&1 | tee -a $LOG_FILE; then
+        BUILD_SUCCESS=true
+        echo "✅ Docker build succeeded on attempt $attempt" | tee -a $LOG_FILE
+        break
+    else
+        BUILD_EXIT=${PIPESTATUS[0]}
+        echo "❌ Docker build failed on attempt $attempt (exit code: $BUILD_EXIT)" | tee -a $LOG_FILE
+        
+        if [ $attempt -lt $MAX_RETRIES ]; then
+            echo "Retrying in ${RETRY_DELAY}s after cleanup..." | tee -a $LOG_FILE
+            # Clean up before retry
+            sudo docker system prune -af --volumes 2>/dev/null || true
+            sleep $RETRY_DELAY
+        else
+            echo "❌ Docker build failed after $MAX_RETRIES attempts" | tee -a $LOG_FILE
+            echo "=== Disk space ===" | tee -a $LOG_FILE
+            df -h | tee -a $LOG_FILE
+            echo "=== Docker system info ===" | tee -a $LOG_FILE
+            sudo docker system df | tee -a $LOG_FILE
+            exit 1
+        fi
+    fi
+done
+
+if [ "$BUILD_SUCCESS" != "true" ]; then
+    echo "FATAL: Docker build failed after all retries" | tee -a $LOG_FILE
+    exit 1
+fi
+
+# Clean up build cache after successful build to free space
 sudo docker builder prune -f | tee -a $LOG_FILE
 
 # Step 7: Start containers

@@ -1,27 +1,28 @@
-# Assumes an ingress controller (e.g., nginx) is installed in the cluster.
 apiVersion: networking.k8s.io/v1
 kind: Ingress
 metadata:
-  name: fame-ingress
+  name: fame-api-ingress
   namespace: fame
   annotations:
     kubernetes.io/ingress.class: "nginx"
-    cert-manager.io/cluster-issuer: "letsencrypt-prod"  # Optional: for TLS
+    cert-manager.io/cluster-issuer: "letsencrypt-prod"
+    nginx.ingress.kubernetes.io/ssl-redirect: "true"
+    nginx.ingress.kubernetes.io/proxy-body-size: "10m"
+    nginx.ingress.kubernetes.io/proxy-read-timeout: "300"
+    nginx.ingress.kubernetes.io/proxy-send-timeout: "300"
 spec:
+  tls:
+  - hosts:
+    - fame-api.example.com
+    secretName: fame-api-tls
   rules:
-    - host: fame.example.com
-      http:
-        paths:
-          - path: /
-            pathType: Prefix
-            backend:
-              service:
-                name: fame-api
-                port:
-                  number: 80
-  # Uncomment for TLS:
-  # tls:
-  #   - hosts:
-  #       - fame.example.com
-  #     secretName: fame-tls
-
+  - host: fame-api.example.com
+    http:
+      paths:
+      - path: /
+        pathType: Prefix
+        backend:
+          service:
+            name: fame-api-service
+            port:
+              number: 80

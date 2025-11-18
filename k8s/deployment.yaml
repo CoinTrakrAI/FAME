@@ -1,0 +1,105 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: fame-api
+  namespace: fame
+  labels:
+    app: fame-api
+    version: v1
+spec:
+  replicas: 2
+  selector:
+    matchLabels:
+      app: fame-api
+  template:
+    metadata:
+      labels:
+        app: fame-api
+        version: v1
+    spec:
+      containers:
+      - name: fame-api
+        image: ghcr.io/cointrakrai/fame-api:latest
+        imagePullPolicy: Always
+        ports:
+        - containerPort: 8080
+          name: http
+          protocol: TCP
+        env:
+        - name: FAME_ENV
+          value: "production"
+        - name: FAME_LOG_AGGREGATION
+          value: "1"
+        envFrom:
+        - secretRef:
+            name: fame-secrets
+        resources:
+          requests:
+            cpu: "1000m"
+            memory: "2Gi"
+          limits:
+            cpu: "2000m"
+            memory: "4Gi"
+        livenessProbe:
+          httpGet:
+            path: /healthz
+            port: 8080
+          initialDelaySeconds: 60
+          periodSeconds: 30
+          timeoutSeconds: 10
+          failureThreshold: 3
+        readinessProbe:
+          httpGet:
+            path: /readyz
+            port: 8080
+          initialDelaySeconds: 30
+          periodSeconds: 10
+          timeoutSeconds: 5
+          failureThreshold: 3
+        volumeMounts:
+        - name: logs
+          mountPath: /app/logs
+        - name: data
+          mountPath: /app/data
+      volumes:
+      - name: logs
+        emptyDir: {}
+      - name: data
+        persistentVolumeClaim:
+          claimName: fame-data-pvc
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: fame-api-service
+  namespace: fame
+  labels:
+    app: fame-api
+spec:
+  type: LoadBalancer
+  ports:
+  - port: 80
+    targetPort: 8080
+    protocol: TCP
+    name: http
+  selector:
+    app: fame-api
+---
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: fame-data-pvc
+  namespace: fame
+spec:
+  accessModes:
+  - ReadWriteOnce
+  resources:
+    requests:
+      storage: 10Gi
+  storageClassName: gp2  # AWS EBS
+---
+apiVersion: v1
+kind: Namespace
+metadata:
+  name: fame
+

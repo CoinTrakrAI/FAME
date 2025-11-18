@@ -76,6 +76,7 @@ jobs:
           password: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Build and push image
+        id: build
         uses: docker/build-push-action@v5
         with:
           context: .
@@ -88,6 +89,23 @@ jobs:
           cache-from: type=gha
           cache-to: type=gha,mode=max
 
+      - name: Build failure diagnostics
+        if: steps.build.outcome != 'success'
+        run: |
+          echo "::error::Docker build failed in CI workflow!"
+          echo ""
+          echo "## Build Failure Analysis"
+          echo ""
+          echo "Common causes:"
+          echo "1. **Missing system libraries**: Check Dockerfile apt-get install commands"
+          echo "2. **Python dependency conflicts**: Check requirements_production.txt"
+          echo "3. **Disk space issues**: Build context may be too large"
+          echo "4. **Network timeouts**: PyPI or source downloads may have failed"
+          echo ""
+          echo "Check the build logs above for the specific error."
+          exit 1
+
       - name: Output image tag
+        if: steps.build.outcome == 'success'
         run: echo "IMAGE=${{ env.IMAGE_NAME }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT
 
