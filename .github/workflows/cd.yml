@@ -32,9 +32,10 @@ jobs:
         id: set-image-name
         run: |
           REPO_OWNER_LOWER=$(echo '${{ env.REPO_OWNER }}' | tr '[:upper:]' '[:lower:]')
+          IMAGE_NAME="ghcr.io/${REPO_OWNER_LOWER}/fame-api"
           echo "repo_owner=${REPO_OWNER_LOWER}" >> $GITHUB_OUTPUT
-          echo "image_name=ghcr.io/${REPO_OWNER_LOWER}/fame-api" >> $GITHUB_OUTPUT
-          echo "Set image name: ghcr.io/${REPO_OWNER_LOWER}/fame-api"
+          echo "image_name=${IMAGE_NAME}" >> $GITHUB_OUTPUT
+          echo "Set image name: ${IMAGE_NAME}"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -56,8 +57,8 @@ jobs:
           file: ./Dockerfile
           push: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
           tags: |
-            ${{ steps.set-image-name.outputs.image_name }}:${{ env.DOCKER_TAG }}
-            ${{ steps.set-image-name.outputs.image_name }}:latest
+            ghcr.io/cointrakrai/fame-api:${{ env.DOCKER_TAG }}
+            ghcr.io/cointrakrai/fame-api:latest
           platforms: linux/amd64
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -67,12 +68,7 @@ jobs:
       - name: Set image output
         id: set-image
         if: always()
-        run: |
-          if [ -n "${{ steps.set-image-name.outputs.image_name }}" ]; then
-            echo "image=${{ steps.set-image-name.outputs.image_name }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT
-          else
-            echo "image=${{ env.REPO_OWNER }}/fame-api:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT || echo "image=" >> $GITHUB_OUTPUT
-          fi
+        run: echo "image=ghcr.io/cointrakrai/fame-api:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT
 
   deploy:
     name: Deploy to K8s

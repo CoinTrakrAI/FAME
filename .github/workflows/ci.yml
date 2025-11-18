@@ -81,9 +81,27 @@ jobs:
         id: set-image-name
         run: |
           REPO_OWNER_LOWER=$(echo '${{ env.REPO_OWNER }}' | tr '[:upper:]' '[:lower:]')
+          IMAGE_NAME="ghcr.io/${REPO_OWNER_LOWER}/fame-api"
           echo "repo_owner=${REPO_OWNER_LOWER}" >> $GITHUB_OUTPUT
-          echo "image_name=ghcr.io/${REPO_OWNER_LOWER}/fame-api" >> $GITHUB_OUTPUT
-          echo "Set image name: ghcr.io/${REPO_OWNER_LOWER}/fame-api"
+          echo "image_name=${IMAGE_NAME}" >> $GITHUB_OUTPUT
+          echo "Set image name: ${IMAGE_NAME}"
+          echo "Verifying lowercase: $(echo ${IMAGE_NAME} | grep -i 'cointrakrai' && echo 'OK' || echo 'FAILED')"
+
+      - name: Verify image name is lowercase
+        run: |
+          if [ -z "${{ steps.set-image-name.outputs.image_name }}" ]; then
+            echo "::error::Image name output is empty, using hardcoded fallback"
+            REPO_OWNER_LOWER="cointrakrai"
+            echo "image_name=ghcr.io/${REPO_OWNER_LOWER}/fame-api" >> $GITHUB_OUTPUT
+          else
+            echo "Image name output: ${{ steps.set-image-name.outputs.image_name }}"
+            # Verify it's lowercase
+            if echo "${{ steps.set-image-name.outputs.image_name }}" | grep -q "CoinTrakrAI"; then
+              echo "::error::Image name contains uppercase! Converting..."
+              IMAGE_LOWER=$(echo "${{ steps.set-image-name.outputs.image_name }}" | tr '[:upper:]' '[:lower:]')
+              echo "image_name=${IMAGE_LOWER}" >> $GITHUB_OUTPUT
+            fi
+          fi
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
@@ -107,8 +125,8 @@ jobs:
           file: ./Dockerfile
           push: ${{ github.event_name == 'push' && contains(github.ref, 'refs/heads/main') }}
           tags: |
-            ${{ steps.set-image-name.outputs.image_name }}:${{ env.DOCKER_TAG }}
-            ${{ steps.set-image-name.outputs.image_name }}:latest
+            ghcr.io/cointrakrai/fame-api:${{ env.DOCKER_TAG }}
+            ghcr.io/cointrakrai/fame-api:latest
           platforms: linux/amd64
           cache-from: type=gha
           cache-to: type=gha,mode=max
@@ -131,5 +149,5 @@ jobs:
 
       - name: Output image tag
         if: steps.build.outcome == 'success'
-        run: echo "IMAGE=${{ steps.set-image-name.outputs.image_name }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT
+        run: echo "IMAGE=ghcr.io/cointrakrai/fame-api:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT
 
