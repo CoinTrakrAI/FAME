@@ -227,7 +227,7 @@
 
     <script>
         // FAME API endpoint - Change this if your server is on a different address
-        const FAME_API = 'http://18.220.108.23:8080/query';
+        const FAME_API = 'http://3.135.222.143:8080/query';
         
         // Create a unique session ID for this conversation
         const sessionId = 'user_' + Date.now();
@@ -377,7 +377,7 @@
         // Test connection on load
         async function testConnection() {
             try {
-                const response = await fetch('http://18.220.108.23:8080/healthz');
+                const response = await fetch('http://3.135.222.143:8080/healthz');
                 if (response.ok) {
                     updateStatus('Connected to FAME', 'connected');
                 } else {
