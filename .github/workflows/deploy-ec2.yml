@@ -19,6 +19,8 @@ on:
 
 permissions:
   contents: read
+  packages: write
+  id-token: write
 
 env:
   REPO_OWNER: ${{ github.repository_owner }}
@@ -55,6 +57,7 @@ jobs:
           registry: ghcr.io
           username: ${{ github.actor }}
           password: ${{ secrets.GITHUB_TOKEN }}
+          logout: false
 
       - name: Build & push image
         id: build
