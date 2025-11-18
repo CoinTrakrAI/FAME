@@ -85,6 +85,8 @@ class FAMEUnified:
         self.task_router = None
         self.planner = None
         self.memory_graph = None
+        self.execution_governor = None
+        self.rl_trainer = None
         
         if use_agi_system and AGI_COMPONENTS_AVAILABLE:
             try:
@@ -110,6 +112,21 @@ class FAMEUnified:
                 logger.info("✅ MemoryGraph initialized")
             except Exception as e:
                 logger.warning(f"MemoryGraph initialization failed: {e}")
+            
+            try:
+                from core.execution_governor import ExecutionGovernor
+                config = {"execution": {"prefer_cloud": True, "prefer_local": False}}
+                self.execution_governor = ExecutionGovernor(config)
+                logger.info("✅ ExecutionGovernor initialized")
+            except Exception as e:
+                logger.warning(f"ExecutionGovernor initialization failed: {e}")
+            
+            try:
+                from intelligence.reinforcement_trainer import ReinforcementTrainer
+                self.rl_trainer = ReinforcementTrainer()
+                logger.info("✅ RL Trainer initialized")
+            except Exception as e:
+                logger.warning(f"RL Trainer initialization failed: {e}")
         
         # Session management
         self.sessions = {}
@@ -200,6 +217,26 @@ class FAMEUnified:
                     except Exception as e:
                         logger.warning(f"Planner failed: {e}")
                 
+                # Use ExecutionGovernor to determine executor chain
+                if self.execution_governor and routing_info:
+                    try:
+                        intent_type = routing_info.get('intent_type', 'general')
+                        complexity = routing_info.get('estimated_complexity', 5)
+                        decision = self.execution_governor.decide_executor(
+                            intent=intent_type,
+                            complexity=complexity,
+                            latency_sensitive=query.get('latency_sensitive', False)
+                        )
+                        # Update selected_modules with governor's decision
+                        executor_chain = [decision.executor] + decision.fallback_chain
+                        if executor_chain:
+                            query_with_routing['selected_modules'] = executor_chain
+                            query_with_routing['execution_mode'] = decision.mode.value
+                            query_with_routing['expected_latency'] = decision.expected_latency
+                            logger.debug(f"ExecutionGovernor selected: {decision.executor} (chain: {executor_chain})")
+                    except Exception as e:
+                        logger.warning(f"ExecutionGovernor failed: {e}")
+                
                 # Check memory before processing
                 if self.memory_graph:
                     try:
@@ -270,7 +307,62 @@ class FAMEUnified:
                     self.health_monitor.record_module_execution(
                         module_name, success, response_time
                     )
+                
+                # Record latency for ExecutionGovernor
+                if self.execution_governor and selected_modules:
+                    primary_executor = selected_modules[0] if selected_modules else 'unknown'
+                    self.execution_governor.record_latency(primary_executor, response_time)
 
+                # Store in MemoryGraph after processing
+                if self.memory_graph:
+                    try:
+                        self.memory_graph.add_event(
+                            event_type="query",
+                            content=query.get('text', ''),
+                            response=final_response.get('response', ''),
+                            metadata={
+                                'intent': routing_info.get("intent_type", "general"),
+                                'confidence': final_response.get('confidence', 0.5),
+                                'sources': final_response.get('sources', []),
+                                'session_id': query.get('session_id')
+                            }
+                        )
+                        logger.debug("MemoryGraph stored query/response")
+                    except Exception as e:
+                        logger.warning(f"MemoryGraph store failed: {e}")
+                
+                # RL Learning update
+                if self.rl_trainer:
+                    try:
+                        # Calculate reward based on confidence and response quality
+                        reward = final_response.get('confidence', 0.5)
+                        if final_response.get('error'):
+                            reward = -0.5
+                        elif response_time > 5.0:  # Penalize slow responses
+                            reward *= 0.8
+                        
+                        # Record episode for RL learning
+                        from intelligence.reinforcement_trainer import TrainingEpisode
+                        import numpy as np
+                        
+                        # Simple state encoding (can be enhanced)
+                        state = np.random.rand(512)  # Placeholder - should encode query/context
+                        action = 0  # Placeholder - should encode executor choice
+                        next_state = state  # Placeholder
+                        
+                        episode = TrainingEpisode(
+                            state=state.tolist(),
+                            action=action,
+                            reward=reward,
+                            next_state=next_state.tolist(),
+                            timestamp=time.time()
+                        )
+                        await self.rl_trainer.record_episode(episode)
+                        logger.debug(f"RL Trainer recorded episode with reward: {reward:.2f}")
+                    except Exception as e:
+                        logger.warning(f"RL Trainer update failed: {e}")
+                
+                # Intelligence orchestrator (legacy - still supported)
                 if self.intelligence_orchestrator:
                     try:
                         if not hasattr(self.intelligence_orchestrator, '_auto_tuning_task') or self.intelligence_orchestrator._auto_tuning_task is None:
