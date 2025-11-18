@@ -198,15 +198,21 @@ class FAMEUnified:
         ):
             try:
                 log_query(query)
+                
+                # Log timing at each major step
+                step_start = time.time()
+                logger.debug(f"[TIMING] Query start: {query.get('text', '')[:50]}...")
 
                 # Use AGI TaskRouter if available, otherwise fallback to decision_engine
                 routing_info = None
                 if self.task_router:
                     try:
+                        logger.debug("[TIMING] Starting TaskRouter intent classification...")
                         # Use TaskRouter for intent classification
                         context = self.sessions.get(query.get('session_id'), {}).get('context', [])
                         intent_result = self.task_router.intent_classifier(query.get('text', ''), context)
                         execution_plan = self.task_router.produce_final_plan(intent_result, context)
+                        logger.debug(f"[TIMING] TaskRouter completed in {time.time() - step_start:.2f}s")
                         
                         # Convert to routing_info format
                         routing_info = {
@@ -220,9 +226,15 @@ class FAMEUnified:
                         logger.debug(f"TaskRouter classified intent: {intent_result.intent.value} (confidence: {intent_result.confidence:.2f})")
                     except Exception as e:
                         logger.warning(f"TaskRouter failed, using decision_engine: {e}")
+                        step_start = time.time()
+                        logger.debug("[TIMING] Starting decision_engine.route_query...")
                         routing_info = await self.decision_engine.route_query(query)
+                        logger.debug(f"[TIMING] decision_engine.route_query completed in {time.time() - step_start:.2f}s")
                 else:
+                    step_start = time.time()
+                    logger.debug("[TIMING] Starting decision_engine.route_query (no TaskRouter)...")
                     routing_info = await self.decision_engine.route_query(query)
+                    logger.debug(f"[TIMING] decision_engine.route_query completed in {time.time() - step_start:.2f}s")
 
                 query_with_routing = query.copy()
                 query_with_routing['routing_info'] = routing_info
@@ -260,7 +272,10 @@ class FAMEUnified:
                 # Check memory before processing
                 if self.memory_graph:
                     try:
+                        step_start = time.time()
+                        logger.debug("[TIMING] Starting MemoryGraph search...")
                         memory_context = self.memory_graph.search_related(query.get('text', ''), limit=5)
+                        logger.debug(f"[TIMING] MemoryGraph search completed in {time.time() - step_start:.2f}s")
                         if memory_context:
                             query_with_routing['memory_context'] = memory_context
                             logger.debug(f"MemoryGraph found {len(memory_context)} related memories")
@@ -282,20 +297,24 @@ class FAMEUnified:
                     
                     if use_reasoning:
                         try:
-                            logger.debug(f"Engaging Advanced Reasoning Engine (complexity: {complexity}, intent: {intent_type})")
+                            step_start = time.time()
+                            logger.debug(f"[TIMING] Engaging Advanced Reasoning Engine (complexity: {complexity}, intent: {intent_type})...")
                             reasoning_result = self.reasoning_engine.analyze_mission({
                                 "problem": query.get('text', ''),
                                 "context": query_with_routing,
                                 "reasoning_mode": "auto"  # Auto-select best method
                             })
-                            
+                            logger.debug(f"[TIMING] Reasoning Engine completed in {time.time() - step_start:.2f}s")
                             if reasoning_result.get('confidence', 0) > 0.7:
                                 query_with_routing['reasoning_result'] = reasoning_result
                                 logger.debug(f"Reasoning Engine found solution (method: {reasoning_result.get('method')}, confidence: {reasoning_result.get('confidence'):.2f})")
                         except Exception as e:
                             logger.warning(f"Advanced Reasoning Engine failed: {e}")
 
+                step_start = time.time()
+                logger.debug("[TIMING] Starting brain.handle_query...")
                 brain_response = await self.brain.handle_query(query_with_routing)
+                logger.debug(f"[TIMING] brain.handle_query completed in {time.time() - step_start:.2f}s")
 
                 sources_list = []
                 if isinstance(brain_response, dict) and 'responses' in brain_response:
@@ -320,10 +339,13 @@ class FAMEUnified:
                     ]
                     
                     if valid_responses:
+                        step_start = time.time()
+                        logger.debug("[TIMING] Starting decision_engine.synthesize_responses...")
                         synthesized = await self.decision_engine.synthesize_responses(
                             valid_responses,
                             query
                         )
+                        logger.debug(f"[TIMING] synthesize_responses completed in {time.time() - step_start:.2f}s")
                         final_response = synthesized
                     else:
                         # All responses had errors - try AutonomousResponseEngine
@@ -433,23 +455,31 @@ class FAMEUnified:
                     primary_executor = selected_modules[0] if selected_modules else 'unknown'
                     self.execution_governor.record_latency(primary_executor, response_time)
 
-                # Store in MemoryGraph after processing
-                if self.memory_graph:
-                    try:
-                        self.memory_graph.add_event(
-                            event_type="query",
-                            content=query.get('text', ''),
-                            response=final_response.get('response', ''),
-                            metadata={
-                                'intent': routing_info.get("intent_type", "general"),
-                                'confidence': final_response.get('confidence', 0.5),
-                                'sources': final_response.get('sources', []),
-                                'session_id': query.get('session_id')
-                            }
-                        )
-                        logger.debug("MemoryGraph stored query/response")
-                    except Exception as e:
-                        logger.warning(f"MemoryGraph store failed: {e}")
+               # Store in MemoryGraph after processing
+               if self.memory_graph:
+                   try:
+                       # Create event description from query and response
+                       event_description = f"Query: {query.get('text', '')} | Response: {final_response.get('response', '')[:200]}"
+                       
+                       # Store metadata in context
+                       event_context = {
+                           'event_type': "query",
+                           'content': query.get('text', ''),
+                           'response': final_response.get('response', ''),
+                           'intent': routing_info.get("intent_type", "general"),
+                           'confidence': final_response.get('confidence', 0.5),
+                           'sources': final_response.get('sources', []),
+                           'session_id': query.get('session_id')
+                       }
+                       
+                       self.memory_graph.add_event(
+                           description=event_description,
+                           participants=[],  # Could extract entities from query if needed
+                           context=event_context
+                       )
+                       logger.debug("MemoryGraph stored query/response")
+                   except Exception as e:
+                       logger.warning(f"MemoryGraph store failed: {e}")
                 
                 # RL Learning update
                 if self.rl_trainer:
