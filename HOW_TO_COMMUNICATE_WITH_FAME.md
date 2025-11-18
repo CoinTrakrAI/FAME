@@ -148,31 +148,40 @@ This lets you:
 
 ## 3. 🧪 Test Scripts (Quick Testing)
 
-FAME includes several test scripts for easy communication:
-
-### **Python Test Script:**
+### **Test FAME on Deployed Server (Recommended):**
 ```bash
-# Run the realistic questions test
+# Get your EC2 IP from AWS Console, then:
+export FAME_SERVER_URL="http://YOUR_EC2_IP:8080"
+python test_fame_on_server.py
+```
+
+This comprehensive test will:
+- ✅ Check server health and connectivity
+- ✅ Test internet access (real-time data)
+- ✅ Test knowledge base (training data)
+- ✅ Test investment analysis (expertise)
+- ✅ Offer interactive mode for custom questions
+
+### **Other Test Scripts:**
+```bash
+# Test with realistic questions (update IP in script)
 python test_fame_realistic_questions.py
 
-# Or use the minimal test
+# Minimal quick test
 python fame_ultra_minimal_test.py
 ```
 
-These scripts will:
-- ✅ Check if FAME is running
-- ✅ Send test questions
-- ✅ Display responses with timing
-- ✅ Show confidence scores and sources
-
-### **Example Test Script:**
+### **Example Test Script (Production Server):**
 Create `test_fame.py`:
 ```python
 import requests
 
+# Replace with your EC2 IP
+FAME_SERVER = "http://YOUR_EC2_IP:8080"
+
 def ask_fame(question):
     response = requests.post(
-        'http://localhost:8080/query',
+        f'{FAME_SERVER}/query',
         json={'text': question},
         timeout=90
     )
