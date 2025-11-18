@@ -28,13 +28,25 @@ jobs:
         with:
           python-version: "3.11"
 
+      - name: Install system dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y portaudio19-dev || echo "Warning: portaudio19-dev installation failed (pyaudio will be skipped)"
+        continue-on-error: true
+
       - name: Install deps & venv
         run: |
           python -m venv .venv
           source .venv/bin/activate
           pip install -U pip setuptools wheel
           if [ -f requirements_production.txt ]; then pip install -r requirements_production.txt || echo "Warning: Some packages failed to install"; fi
-          if [ -f communication_requirements.txt ]; then pip install -r communication_requirements.txt || echo "Warning: Communication requirements failed"; fi
+          if [ -f communication_requirements.txt ]; then
+            # Try to install all packages, but skip pyaudio if it fails (it requires system libraries)
+            pip install -r communication_requirements.txt || \
+            (echo "Warning: Some communication packages failed, trying without pyaudio..." && \
+             pip install $(grep -v "pyaudio" communication_requirements.txt) || \
+             echo "Warning: Communication requirements partially failed")
+          fi
           pip install pytest flake8  # Install test tools
         continue-on-error: false
 
