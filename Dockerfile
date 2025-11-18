@@ -42,8 +42,15 @@ RUN adduser --disabled-password --gecos "" fame
 COPY --from=builder /wheels /wheels
 COPY --from=builder /app/requirements_production.txt .
 
-RUN pip install --no-cache-dir --no-index --find-links=/wheels -r requirements_production.txt \
- && rm -rf /wheels
+# Install tzdata first (required by pandas but may not be in wheels)
+RUN pip install --no-cache-dir tzdata || true
+
+# Install from wheels, but allow PyPI fallback for missing packages
+RUN pip install --no-cache-dir --prefer-binary --find-links=/wheels -r requirements_production.txt || \
+    pip install --no-cache-dir --prefer-binary --find-links=/wheels --no-index -r requirements_production.txt 2>/dev/null || \
+    pip install --no-cache-dir -r requirements_production.txt
+
+RUN rm -rf /wheels
 
 COPY . /app
 
