@@ -46,13 +46,15 @@ WORKDIR /app
 
 RUN adduser --disabled-password --gecos "" fame
 
-COPY --from=builder /wheels /wheels
 COPY --from=builder /app/requirements_production.txt .
 
-# Install from wheels, with PyPI fallback for any missing packages
-RUN pip install --no-cache-dir --prefer-binary --find-links=/wheels -r requirements_production.txt
+# Install CPU-only PyTorch first (already installed in builder but need to reinstall here)
+RUN pip install --upgrade pip \
+ && pip install --no-cache-dir torch --index-url https://download.pytorch.org/whl/cpu
 
-RUN rm -rf /wheels
+# Install all requirements directly from PyPI (we have network access)
+# This is simpler and more reliable than using wheels
+RUN pip install --no-cache-dir -r requirements_production.txt
 
 COPY . /app
 
