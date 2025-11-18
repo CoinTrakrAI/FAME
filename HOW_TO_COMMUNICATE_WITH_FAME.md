@@ -1,472 +1,345 @@
-# How to Communicate with FAME AGI
+# How to Communicate with FAME
 
-## 🎯 Quick Answer: Multiple Ways to Talk to FAME
+## 🎯 Quick Start - 3 Simple Ways
 
-FAME now has **enhanced AGI capabilities** with multiple communication methods:
-
-### 1. **REST API** (Recommended for Integration) ⭐
-### 2. **WebSocket** (Real-time Communication) 🆕
-### 3. **Streaming API** (Server-Sent Events) 🆕
-### 4. **Interactive Chat** (Local Testing)
-### 5. **Desktop GUI** (Full Experience with Voice)
+FAME is now deployed and accessible via multiple methods. Here are the easiest ways to communicate:
 
 ---
 
-## 1. REST API - Standard HTTP Requests
+## 1. 🌐 REST API (Recommended for Integration)
 
-### **Base URL:** 
-- **AWS EC2:** `http://18.220.108.23:8080`
-- **Local:** `http://localhost:8080`
+### **Base URLs:**
+- **Production (if deployed):** Check your EC2 instance IP or `http://localhost:8080` if running locally
+- **Local Development:** `http://localhost:8080`
+- **Interactive Docs:** `http://localhost:8080/docs` (FastAPI Swagger UI)
 
-### **Main Endpoint:** `POST /query`
+### **Main Endpoint: `POST /query`**
 
-**Request:**
+**Python Example:**
+```python
+import requests
+
+response = requests.post(
+    'http://localhost:8080/query',
+    json={
+        'text': 'What is the price of Bitcoin?',
+        'session_id': 'my_session_123',  # Optional - for conversation memory
+        'source': 'my_app'               # Optional
+    },
+    timeout=90
+)
+
+data = response.json()
+print(f"FAME: {data['response']}")
+print(f"Confidence: {data.get('confidence', 0)}")
+```
+
+**cURL Example:**
+```bash
+curl -X POST http://localhost:8080/query \
+  -H "Content-Type: application/json" \
+  -d '{
+    "text": "What is the price of Bitcoin?",
+    "session_id": "test_session"
+  }'
+```
+
+**JavaScript/TypeScript Example:**
+```javascript
+async function askFAME(question) {
+  const response = await fetch('http://localhost:8080/query', {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json',
+    },
+    body: JSON.stringify({
+      text: question,
+      session_id: 'web_session_123'
+    })
+  });
+  
+  const data = await response.json();
+  console.log('FAME:', data.response);
+  console.log('Confidence:', data.confidence);
+  return data;
+}
+
+// Use it
+askFAME("What are the best stocks to buy?");
+```
+
+### **Response Format:**
 ```json
 {
-  "text": "What is the price of Bitcoin?",
-  "session_id": "user_123",  // Optional - for conversation memory
-  "source": "web_app"         // Optional
+  "response": "FAME's detailed response to your question...",
+  "confidence": 0.95,
+  "source": "qa_engine",
+  "session_id": "my_session_123",
+  "reasoning": {...},
+  "breakdown": {...},
+  "timestamp": 1234567890
 }
+```
+
+---
+
+## 2. 🏥 Health & Status Endpoints
+
+### **Check if FAME is Running:**
+```bash
+# Health check
+curl http://localhost:8080/healthz
+
+# Readiness check (returns 503 if not ready)
+curl http://localhost:8080/readyz
 ```
 
 **Response:**
 ```json
 {
-  "response": "Bitcoin (BTC) is currently trading at...",
-  "confidence": 0.95,
-  "sources": ["web", "knowledge"],
-  "breakdown": [...],
-  "metrics": {...}
+  "overall_status": "healthy",
+  "components": {...},
+  "timestamp": 1234567890
 }
 ```
 
-### **Enhanced AGI Endpoints** (New!):
+### **Interactive API Documentation:**
+Open in your browser:
+- **Swagger UI:** `http://localhost:8080/docs`
+- **ReDoc:** `http://localhost:8080/redoc`
 
-#### `POST /ask` - Full AGI Pipeline
-```json
-{
-  "prompt": "Analyze Apple stock comprehensively",
-  "context": [],
-  "stream": false
-}
-```
-
-Returns full AGI response with:
-- Planning information
-- Task results
-- Audit report
-- Confidence scores
-
-#### `GET /health` - System Health
-```bash
-curl http://18.220.108.23:8080/health
-```
-
-#### `GET /metrics` - Performance Metrics
-```bash
-curl http://18.220.108.23:8080/metrics
-```
-
-#### `POST /plan` - Create Execution Plan
-```json
-{
-  "goal": "Research renewable energy investments",
-  "parameters": {}
-}
-```
-
-#### `GET /plan/{plan_id}` - Get Plan Status
-```bash
-curl http://18.220.108.23:8080/plan/plan_abc123
-```
-
-#### `POST /feedback` - Submit Learning Feedback
-```json
-{
-  "query": "previous query",
-  "response_id": "response_id",
-  "reward": 0.8,
-  "tone_preference": "professional"
-}
-```
-
-#### `GET /persona` - Get Persona Profile
-```bash
-curl http://18.220.108.23:8080/persona
-```
-
-#### `POST /persona` - Update Persona
-```json
-{
-  "tone": "friendly",
-  "verbosity": "high"
-}
-```
-
-#### `POST /memory/wipe` - Wipe Memory (with confirmation)
-```bash
-curl -X POST "http://18.220.108.23:8080/memory/wipe?confirm=true"
-```
-
-#### `POST /memory/rebuild` - Rebuild Vector Store
-```bash
-curl -X POST http://18.220.108.23:8080/memory/rebuild
-```
+This lets you:
+- See all available endpoints
+- Test queries directly in the browser
+- View request/response schemas
+- Try different parameters
 
 ---
 
-## 2. WebSocket - Real-Time Communication 🆕
+## 3. 🧪 Test Scripts (Quick Testing)
 
-### **Endpoint:** `ws://18.220.108.23:8080/ws`
+FAME includes several test scripts for easy communication:
 
-**JavaScript Example:**
-```javascript
-const ws = new WebSocket('ws://18.220.108.23:8080/ws');
+### **Python Test Script:**
+```bash
+# Run the realistic questions test
+python test_fame_realistic_questions.py
 
-ws.onopen = () => {
-  console.log('Connected to FAME');
-  
-  // Send query
-  ws.send(JSON.stringify({
-    type: 'query',
-    prompt: 'What is the price of Bitcoin?',
-    context: []
-  }));
-};
-
-ws.onmessage = (event) => {
-  const data = JSON.parse(event.data);
-  if (data.type === 'response') {
-    console.log('FAME:', data.response);
-    console.log('Confidence:', data.confidence);
-    console.log('Sources:', data.sources);
-  }
-};
-
-ws.onerror = (error) => {
-  console.error('WebSocket error:', error);
-};
+# Or use the minimal test
+python fame_ultra_minimal_test.py
 ```
 
-**Python Example:**
+These scripts will:
+- ✅ Check if FAME is running
+- ✅ Send test questions
+- ✅ Display responses with timing
+- ✅ Show confidence scores and sources
+
+### **Example Test Script:**
+Create `test_fame.py`:
 ```python
-import asyncio
-import websockets
-import json
+import requests
 
-async def chat_with_fame():
-    uri = "ws://18.220.108.23:8080/ws"
-    async with websockets.connect(uri) as websocket:
-        # Send query
-        await websocket.send(json.dumps({
-            "type": "query",
-            "prompt": "What is the price of Bitcoin?",
-            "context": []
-        }))
-        
-        # Receive response
-        response = await websocket.recv()
-        data = json.loads(response)
-        print("FAME:", data["response"])
+def ask_fame(question):
+    response = requests.post(
+        'http://localhost:8080/query',
+        json={'text': question},
+        timeout=90
+    )
+    return response.json()
 
-asyncio.run(chat_with_fame())
+# Test it
+result = ask_fame("What is Bitcoin?")
+print(result['response'])
 ```
 
 ---
 
-## 3. Streaming API - Server-Sent Events 🆕
+## 📋 Available Endpoints
 
-### **Endpoint:** `POST /ask` with `stream: true`
+### **Main Endpoints:**
 
-**JavaScript Example:**
-```javascript
-async function streamFromFAME(prompt) {
-  const response = await fetch('http://18.220.108.23:8080/ask', {
-    method: 'POST',
-    headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({
-      prompt: prompt,
-      stream: true
-    })
-  });
-  
-  const reader = response.body.getReader();
-  const decoder = new TextDecoder();
-  
-  while (true) {
-    const { done, value } = await reader.read();
-    if (done) break;
-    
-    const chunk = decoder.decode(value);
-    const lines = chunk.split('\n');
-    
-    for (const line of lines) {
-      if (line.startsWith('data: ')) {
-        const data = JSON.parse(line.slice(6));
-        console.log('Token:', data.token);
-        
-        if (data.done) {
-          console.log('Complete! Confidence:', data.confidence);
-        }
-      }
-    }
-  }
+| Endpoint | Method | Description |
+|----------|--------|-------------|
+| `/query` | POST | Main query endpoint - ask FAME anything |
+| `/healthz` | GET | Health check (always returns 200) |
+| `/readyz` | GET | Readiness check (returns 503 if not ready) |
+| `/docs` | GET | Interactive API documentation (Swagger) |
+| `/redoc` | GET | Alternative API documentation (ReDoc) |
+
+### **Request Format (`/query`):**
+```json
+{
+  "text": "Your question here",
+  "session_id": "optional_session_id",  // Optional - for conversation context
+  "source": "optional_source_name",     // Optional - e.g., "web_app", "cli"
+  "metadata": {}                        // Optional - additional context
 }
+```
 
-// Usage
-streamFromFAME("Explain quantum computing");
+### **Response Format:**
+```json
+{
+  "response": "FAME's response text",
+  "confidence": 0.95,                   // 0.0 to 1.0
+  "source": "qa_engine",                // Which component answered
+  "session_id": "session_123",
+  "reasoning": {...},                   // Internal reasoning (if available)
+  "breakdown": {...},                   // Response breakdown (if available)
+  "timestamp": 1234567890,
+  "error": null                         // null if successful, error message if failed
+}
 ```
 
 ---
 
-## 4. Interactive Chat (Local)
+## 🔧 Configuration
 
-### **Run:**
-```bash
-cd C:\Users\cavek\Downloads\FAME_Desktop
-python chat_with_fame.py
-```
+### **Query Timeout:**
+FAME has a configurable timeout to prevent hanging queries:
+- **Default:** 60 seconds
+- **Set via environment:** `FAME_QUERY_TIMEOUT=90` (in seconds)
 
-### **What You'll See:**
-```
-======================================================================
-FAME ASSISTANT - INTERACTIVE CHAT
-======================================================================
-
-YOU: What is the price of Bitcoin?
-FAME: Bitcoin (BTC) is currently trading at $67,234.50...
-      [Intent: get_crypto_price, Confidence: 0.92]
+If a query times out, you'll get:
+```json
+{
+  "response": "Query processing timed out...",
+  "error": "timeout",
+  "timeout_seconds": 60
+}
 ```
 
 ---
 
-## 5. Desktop GUI (Full Experience)
+## 💡 Example Questions
 
-### **Run:**
-```bash
-cd C:\Users\cavek\Downloads\FAME_Desktop
-python enhanced_fame_communicator.py
+### **Financial Questions:**
+```python
+ask_fame("What is the current price of Bitcoin?")
+ask_fame("Should I invest in Apple stock?")
+ask_fame("What are the best dividend stocks?")
+ask_fame("Explain options trading")
 ```
 
-**Features:**
-- Voice input/output
-- Multiple AI personas
-- Business analysis tools
-- Real-time system status
-
----
-
-## 6. Enhanced AGI Service (New!)
-
-### **Run Enhanced Service:**
-```bash
-cd C:\Users\cavek\Downloads\FAME_Desktop
-python -m api.fastapi_app_enhanced
+### **Investment Analysis:**
+```python
+ask_fame("Analyze Tesla stock comprehensively")
+ask_fame("What's the IV skew for SPY options?")
+ask_fame("Calculate optimal position size using Kelly Criterion")
+ask_fame("What are the current market risks?")
 ```
 
-This starts the **full AGI system** with:
-- TaskRouter (intent classification)
-- Planner (multi-step reasoning)
-- MemoryGraph (knowledge graph)
-- Multi-Agent System
-- RL Learning
-- All 12 AGI components
-
----
-
-## 📊 Quick Test Commands
-
-### **Test REST API:**
-```bash
-# Simple query
-curl -X POST http://18.220.108.23:8080/query \
-  -H "Content-Type: application/json" \
-  -d '{"text": "What is the price of Bitcoin?"}'
-
-# Enhanced AGI query
-curl -X POST http://18.220.108.23:8080/ask \
-  -H "Content-Type: application/json" \
-  -d '{"prompt": "Analyze Apple stock", "context": []}'
-```
-
-### **Test Health:**
-```bash
-curl http://18.220.108.23:8080/health
-curl http://18.220.108.23:8080/healthz  # Legacy endpoint
-```
-
-### **Test Metrics:**
-```bash
-curl http://18.220.108.23:8080/metrics
-```
-
-### **Interactive API Docs:**
-Open in browser: `http://18.220.108.23:8080/docs`
-
----
-
-## 🔌 Frontend Integration Examples
-
-### **Simple HTML/JavaScript:**
-```html
-<!DOCTYPE html>
-<html>
-<head>
-    <title>FAME AGI Chat</title>
-</head>
-<body>
-    <div id="chat">
-        <div id="messages"></div>
-        <input type="text" id="input" placeholder="Ask FAME...">
-        <button onclick="sendMessage()">Send</button>
-    </div>
-
-    <script>
-        const FAME_API = 'http://18.220.108.23:8080/ask';
-        let sessionId = `session_${Date.now()}`;
-
-        async function sendMessage() {
-            const input = document.getElementById('input');
-            const messages = document.getElementById('messages');
-            const question = input.value;
-            
-            if (!question) return;
-            
-            messages.innerHTML += `<div><strong>You:</strong> ${question}</div>`;
-            input.value = '';
-            
-            const response = await fetch(FAME_API, {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify({
-                    prompt: question,
-                    context: []
-                })
-            });
-            
-            const data = await response.json();
-            messages.innerHTML += `<div><strong>FAME:</strong> ${data.response}</div>`;
-            messages.innerHTML += `<div><small>Confidence: ${data.confidence.toFixed(2)}</small></div>`;
-        }
-        
-        document.getElementById('input').addEventListener('keypress', (e) => {
-            if (e.key === 'Enter') sendMessage();
-        });
-    </script>
-</body>
-</html>
+### **General Questions:**
+```python
+ask_fame("What is artificial intelligence?")
+ask_fame("Explain quantum computing")
+ask_fame("What's today's date?")
 ```
 
 ---
 
-## 🚀 Which API to Use?
+## 🔄 Session Management
 
-### **Use `/query` (Legacy) if:**
-- You need simple, fast responses
-- You're using the existing FAME unified system
-- You want backward compatibility
+FAME maintains conversation context within sessions:
 
-### **Use `/ask` (Enhanced AGI) if:**
-- You want full AGI capabilities (planning, reflection, multi-agent)
-- You need detailed breakdowns and audit reports
-- You want access to all 12 AGI components
+```python
+session_id = "my_conversation_123"
 
-### **Use WebSocket if:**
-- You need real-time bidirectional communication
-- You're building a chat application
-- You want persistent connections
+# First message
+ask_fame("My name is John", session_id=session_id)
 
-### **Use Streaming if:**
-- You want to show responses as they're generated
-- You're building a chat UI with typing indicators
-- You need progressive response display
-
----
-
-## 📝 Session Management
-
-FAME remembers context within a session:
-
-```javascript
-const sessionId = 'user_karl_123';
-
-// First message
-await fetch('http://18.220.108.23:8080/ask', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    prompt: "My name is Karl",
-    context: []
-  })
-});
-
-// Second message (FAME remembers)
-const response = await fetch('http://18.220.108.23:8080/ask', {
-  method: 'POST',
-  headers: { 'Content-Type': 'application/json' },
-  body: JSON.stringify({
-    prompt: "What's my name?",
-    context: []
-  })
-});
-// Response: "Your name is Karl"
+# Second message (FAME remembers context)
+ask_fame("What's my name?", session_id=session_id)
+# Response: "Your name is John"
 ```
 
 ---
 
-## 🎯 Example Questions
+## 🚨 Error Handling
 
-### **Financial:**
-- "What is the price of Bitcoin?"
-- "Analyze Apple stock comprehensively"
-- "What are current crypto market trends?"
+### **Common Errors:**
 
-### **Complex (Uses Full AGI):**
-- "Plan a comprehensive investment strategy"
-- "Research renewable energy opportunities step by step"
-- "Create a detailed analysis of AI market trends"
+1. **Connection Refused:**
+   - FAME is not running
+   - Wrong URL/port
+   - Firewall blocking
 
-### **General:**
-- "What's today's date?"
-- "Explain quantum computing"
-- "Tell me about recent AI developments"
+2. **Timeout:**
+   - Query too complex
+   - System overloaded
+   - Increase timeout or simplify question
 
----
+3. **500 Internal Server Error:**
+   - Check FAME logs
+   - Verify API keys are set
+   - Check system health: `GET /healthz`
 
-## 📚 Full API Documentation
-
-**Interactive Docs:** `http://18.220.108.23:8080/docs`
-
-**All Endpoints:**
-- `POST /query` - Legacy query endpoint
-- `POST /ask` - Enhanced AGI query (recommended)
-- `GET /health` - System health
-- `GET /metrics` - Performance metrics
-- `POST /plan` - Create execution plan
-- `GET /plan/{id}` - Get plan status
-- `POST /feedback` - Submit learning feedback
-- `GET /persona` - Get persona profile
-- `POST /persona` - Update persona
-- `POST /memory/wipe` - Wipe memory
-- `POST /memory/rebuild` - Rebuild vector store
-- `WebSocket /ws` - Real-time communication
+### **Error Response Format:**
+```json
+{
+  "response": "Error message here",
+  "error": "error_type",
+  "confidence": 0.0,
+  "timestamp": 1234567890
+}
+```
 
 ---
 
-## ✅ Status Check
+## 🔐 Security Notes
 
-**GitHub:** ✅ All updates pushed and synced  
-**GitHub CI/CD:** ✅ Configured (automated deployment on push to main)  
-**AWS EC2:** ⚠️ Auto-deploy via GitHub Actions (requires EC2_HOST and EC2_SSH_KEY secrets)
-
-### CI/CD Pipeline:
-- **CI Workflow:** `.github/workflows/ci.yml` - Runs tests, linting, and builds Docker image
-- **CD Workflow (EC2):** `.github/workflows/deploy-ec2.yml` - Auto-deploys to EC2 on push to main
-- **CD Workflow (K8s):** `.github/workflows/cd.yml` - Optional Kubernetes deployment
-
-**Manual Deployment:** Run `.\deploy_ec2.ps1` for immediate deployment
+- **CORS:** Currently enabled for all origins (change in production)
+- **Authentication:** No authentication required (add in production)
+- **Rate Limiting:** Not implemented (add in production)
+- **HTTPS:** Use reverse proxy (nginx/traefik) for HTTPS in production
 
 ---
 
-**Last Updated:** 2025-01-17  
-**Version:** 6.1 (Enhanced AGI)
+## 🚀 Next Steps
+
+1. **Start FAME:**
+   ```bash
+   # Using Docker
+   docker compose -f docker-compose.prod.yml up
+
+   # Or run locally
+   uvicorn api.server:app --host 0.0.0.0 --port 8080
+   ```
+
+2. **Test Connection:**
+   ```bash
+   curl http://localhost:8080/healthz
+   ```
+
+3. **Try a Query:**
+   ```bash
+   curl -X POST http://localhost:8080/query \
+     -H "Content-Type: application/json" \
+     -d '{"text": "Hello FAME!"}'
+   ```
+
+4. **Open Interactive Docs:**
+   ```
+   http://localhost:8080/docs
+   ```
+
+---
+
+## 📚 Additional Resources
+
+- **API Documentation:** `http://localhost:8080/docs`
+- **Test Scripts:** See `test_fame_*.py` files in the repository
+- **Example Integration:** Check `test_fame_realistic_questions.py`
+
+---
+
+## ✅ Quick Checklist
+
+- [ ] FAME is running (`GET /healthz` returns 200)
+- [ ] You can access `http://localhost:8080/docs`
+- [ ] Test query works: `POST /query` with `{"text": "test"}`
+- [ ] Response includes `response`, `confidence`, and `source` fields
+
+---
+
+**Ready to communicate with FAME!** 🎉
