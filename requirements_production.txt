@@ -76,3 +76,9 @@ cryptography>=41.0.0  # For secure data handling
 # Configuration Management
 pyyaml>=6.0
 
+# Missing dependencies for plugins
+dnspython>=2.4.0  # For cyber_warfare plugin
+PyPDF2>=3.0.0  # PDF reading
+python-docx>=1.1.0  # DOCX reading
+ebooklib>=0.18  # EPUB reading
+

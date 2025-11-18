@@ -108,7 +108,8 @@ class FAMEUnified:
             
             try:
                 from memory.memory_graph import MemoryGraph
-                self.memory_graph = MemoryGraph()
+                config = {"memory": {"data_dir": "./fame_data"}}
+                self.memory_graph = MemoryGraph(config)
                 logger.info("✅ MemoryGraph initialized")
             except Exception as e:
                 logger.warning(f"MemoryGraph initialization failed: {e}")
@@ -350,12 +351,14 @@ class FAMEUnified:
                         action = 0  # Placeholder - should encode executor choice
                         next_state = state  # Placeholder
                         
+                        from datetime import datetime
                         episode = TrainingEpisode(
                             state=state.tolist(),
                             action=action,
                             reward=reward,
                             next_state=next_state.tolist(),
-                            timestamp=time.time()
+                            context={"query": query.get('text', ''), "response": final_response.get('response', '')},
+                            timestamp=datetime.fromtimestamp(time.time())
                         )
                         await self.rl_trainer.record_episode(episode)
                         logger.debug(f"RL Trainer recorded episode with reward: {reward:.2f}")

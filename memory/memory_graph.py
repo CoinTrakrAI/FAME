@@ -290,6 +290,37 @@ class MemoryGraph:
         except Exception as e:
             logger.error(f"Failed to save memory graph: {e}")
     
+    def search_related(self, query: str, limit: int = 5) -> List[Dict[str, Any]]:
+        """Search for related entities/events by query text"""
+        results = []
+        query_lower = query.lower()
+        
+        # Search entities
+        entity_results = self.search_entities(query, limit=limit)
+        for entity, score in entity_results:
+            results.append({
+                "type": "entity",
+                "id": entity.id,
+                "name": entity.name,
+                "score": score,
+                "data": entity
+            })
+        
+        # Search events (simple text matching)
+        for event in self.events.values():
+            if query_lower in event.description.lower():
+                results.append({
+                    "type": "event",
+                    "id": event.id,
+                    "description": event.description[:100],
+                    "score": 0.6,
+                    "data": event
+                })
+        
+        # Sort by score and return top results
+        results.sort(key=lambda x: x.get("score", 0), reverse=True)
+        return results[:limit]
+    
     def stats(self) -> Dict[str, Any]:
         """Get graph statistics"""
         return {

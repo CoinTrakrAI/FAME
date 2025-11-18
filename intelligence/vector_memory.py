@@ -38,16 +38,23 @@ class VectorMemory:
         # Initialize embedding model
         if SENTENCE_TRANSFORMERS_AVAILABLE:
             try:
-                self.embedding_model = SentenceTransformer('all-mpnet-base-v2')
+                # Try loading from HuggingFace cache or download
+                import os
+                model_name = 'sentence-transformers/all-mpnet-base-v2'
+                # Allow model download in container (it has internet access)
+                self.embedding_model = SentenceTransformer(model_name, device='cpu')
                 self.embedding_dim = 768
+                self.logger.info(f"Successfully loaded embedding model: {model_name}")
             except Exception as e:
-                self.logger.warning(f"Could not load sentence transformer: {e}")
+                self.logger.warning(f"Could not load sentence transformer: {e}. Using fallback embeddings.")
                 self.embedding_model = None
-                self.embedding_dim = 512
+                # Use 768 to match ChromaDB expectation even with fallback
+                self.embedding_dim = 768
         else:
             self.embedding_model = None
-            self.embedding_dim = 512
-            self.logger.warning("sentence-transformers not available - using simple embeddings")
+            # Use 768 to match ChromaDB expectation even with fallback
+            self.embedding_dim = 768
+            self.logger.warning("sentence-transformers not available - using simple embeddings (768-dim)")
         
         # Initialize ChromaDB
         if CHROMADB_AVAILABLE:
@@ -75,12 +82,16 @@ class VectorMemory:
     
     def _simple_embedding(self, text: str) -> np.ndarray:
         """Simple embedding when sentence-transformers not available"""
-        # Very simple hash-based embedding
+        # Very simple hash-based embedding - pad/truncate to match expected dimension
         import hashlib
         hash_obj = hashlib.sha256(text.encode())
         hash_bytes = hash_obj.digest()
+        # Always create 768-dim embedding to match ChromaDB expectation
+        target_dim = 768
+        # Repeat hash to fill 768 dimensions
+        hash_repeated = (hash_bytes * ((target_dim // len(hash_bytes)) + 1))[:target_dim]
         # Convert to float array
-        embedding = np.frombuffer(hash_bytes[:self.embedding_dim], dtype=np.uint8).astype(np.float32)
+        embedding = np.frombuffer(hash_repeated, dtype=np.uint8).astype(np.float32)
         # Normalize
         norm = np.linalg.norm(embedding)
         if norm > 0:
