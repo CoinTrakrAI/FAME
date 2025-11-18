@@ -266,6 +266,34 @@ class FAMEUnified:
                             logger.debug(f"MemoryGraph found {len(memory_context)} related memories")
                     except Exception as e:
                         logger.warning(f"MemoryGraph search failed: {e}")
+                
+                # Use Advanced Reasoning Engine for complex queries
+                if self.reasoning_engine and routing_info:
+                    complexity = routing_info.get('estimated_complexity', 5)
+                    intent_type = routing_info.get('intent_type', 'general')
+                    query_text = query.get('text', '').lower()
+                    
+                    # Engage reasoning engine for complex queries or specific intents
+                    use_reasoning = (
+                        complexity > 6 or
+                        intent_type in ['agent_plan', 'complex_reasoning'] or
+                        any(keyword in query_text for keyword in ['analyze', 'strategy', 'plan', 'design', 'evaluate', 'compare'])
+                    )
+                    
+                    if use_reasoning:
+                        try:
+                            logger.debug(f"Engaging Advanced Reasoning Engine (complexity: {complexity}, intent: {intent_type})")
+                            reasoning_result = self.reasoning_engine.analyze_mission({
+                                "problem": query.get('text', ''),
+                                "context": query_with_routing,
+                                "reasoning_mode": "auto"  # Auto-select best method
+                            })
+                            
+                            if reasoning_result.get('confidence', 0) > 0.7:
+                                query_with_routing['reasoning_result'] = reasoning_result
+                                logger.debug(f"Reasoning Engine found solution (method: {reasoning_result.get('method')}, confidence: {reasoning_result.get('confidence'):.2f})")
+                        except Exception as e:
+                            logger.warning(f"Advanced Reasoning Engine failed: {e}")
 
                 brain_response = await self.brain.handle_query(query_with_routing)
 
