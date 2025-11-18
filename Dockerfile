@@ -58,7 +58,10 @@ RUN pip install --no-cache-dir -r requirements_production.txt
 
 COPY . /app
 
-RUN chown -R fame:fame /app
+# Create logs and data directories with proper permissions
+RUN mkdir -p /app/logs /app/data && \
+    chown -R fame:fame /app && \
+    chmod -R 755 /app/logs /app/data
 
 COPY scripts/docker_healthcheck.py /usr/local/bin/docker_healthcheck.py
 RUN chmod +x /usr/local/bin/docker_healthcheck.py
