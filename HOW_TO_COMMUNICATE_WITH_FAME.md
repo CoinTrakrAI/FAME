@@ -1,26 +1,51 @@
 # How to Communicate with FAME
 
-## 🎯 Quick Start - 3 Simple Ways
+## 🎯 Quick Start - Test FAME on Deployed Server
 
-FAME is now deployed and accessible via multiple methods. Here are the easiest ways to communicate:
+**IMPORTANT:** For production testing and training preparation, test FAME on the deployed EC2 server (not locally). This ensures:
+- ✅ FAME is accessible from the internet
+- ✅ FAME has internet access (for web search, real-time data)
+- ✅ You can test FAME's current knowledge
+- ✅ Ready for training phase
+
+### **🚀 Quick Test on Server:**
+
+1. **Get your EC2 IP:** AWS Console → EC2 → Instances → Public IPv4 address
+2. **Run test script:**
+   ```bash
+   export FAME_SERVER_URL="http://YOUR_EC2_IP:8080"
+   python test_fame_on_server.py
+   ```
+3. **Or test manually:**
+   ```bash
+   curl http://YOUR_EC2_IP:8080/healthz
+   curl -X POST http://YOUR_EC2_IP:8080/query \
+     -H "Content-Type: application/json" \
+     -d '{"text": "What is Bitcoin?"}'
+   ```
+
+See `TEST_FAME_ON_SERVER.md` for comprehensive testing guide.
 
 ---
 
 ## 1. 🌐 REST API (Recommended for Integration)
 
 ### **Base URLs:**
-- **Production (if deployed):** Check your EC2 instance IP or `http://localhost:8080` if running locally
-- **Local Development:** `http://localhost:8080`
-- **Interactive Docs:** `http://localhost:8080/docs` (FastAPI Swagger UI)
+- **Production Server:** `http://YOUR_EC2_IP:8080` (get IP from AWS Console)
+- **Local Development:** `http://localhost:8080` (if running locally)
+- **Interactive Docs:** `http://YOUR_EC2_IP:8080/docs` (FastAPI Swagger UI)
 
 ### **Main Endpoint: `POST /query`**
 
-**Python Example:**
+**Python Example (Production Server):**
 ```python
 import requests
 
+# Replace with your EC2 IP address
+FAME_SERVER = "http://YOUR_EC2_IP:8080"
+
 response = requests.post(
-    'http://localhost:8080/query',
+    f'{FAME_SERVER}/query',
     json={
         'text': 'What is the price of Bitcoin?',
         'session_id': 'my_session_123',  # Optional - for conversation memory
@@ -34,9 +59,10 @@ print(f"FAME: {data['response']}")
 print(f"Confidence: {data.get('confidence', 0)}")
 ```
 
-**cURL Example:**
+**cURL Example (Production Server):**
 ```bash
-curl -X POST http://localhost:8080/query \
+# Replace YOUR_EC2_IP with your actual EC2 IP
+curl -X POST http://YOUR_EC2_IP:8080/query \
   -H "Content-Type: application/json" \
   -d '{
     "text": "What is the price of Bitcoin?",
@@ -44,10 +70,13 @@ curl -X POST http://localhost:8080/query \
   }'
 ```
 
-**JavaScript/TypeScript Example:**
+**JavaScript/TypeScript Example (Production Server):**
 ```javascript
+// Replace with your EC2 IP address
+const FAME_SERVER = 'http://YOUR_EC2_IP:8080';
+
 async function askFAME(question) {
-  const response = await fetch('http://localhost:8080/query', {
+  const response = await fetch(`${FAME_SERVER}/query`, {
     method: 'POST',
     headers: {
       'Content-Type': 'application/json',
@@ -85,13 +114,13 @@ askFAME("What are the best stocks to buy?");
 
 ## 2. 🏥 Health & Status Endpoints
 
-### **Check if FAME is Running:**
+### **Check if FAME is Running (Production Server):**
 ```bash
-# Health check
-curl http://localhost:8080/healthz
+# Health check - Replace YOUR_EC2_IP with your actual IP
+curl http://YOUR_EC2_IP:8080/healthz
 
 # Readiness check (returns 503 if not ready)
-curl http://localhost:8080/readyz
+curl http://YOUR_EC2_IP:8080/readyz
 ```
 
 **Response:**
@@ -105,8 +134,9 @@ curl http://localhost:8080/readyz
 
 ### **Interactive API Documentation:**
 Open in your browser:
-- **Swagger UI:** `http://localhost:8080/docs`
-- **ReDoc:** `http://localhost:8080/redoc`
+- **Swagger UI:** `http://YOUR_EC2_IP:8080/docs` (Production)
+- **ReDoc:** `http://YOUR_EC2_IP:8080/redoc` (Production)
+- **Local:** `http://localhost:8080/docs` (If running locally)
 
 This lets you:
 - See all available endpoints
@@ -295,33 +325,38 @@ ask_fame("What's my name?", session_id=session_id)
 
 ---
 
-## 🚀 Next Steps
+## 🚀 Next Steps - Test on Deployed Server
 
-1. **Start FAME:**
-   ```bash
-   # Using Docker
-   docker compose -f docker-compose.prod.yml up
-
-   # Or run locally
-   uvicorn api.server:app --host 0.0.0.0 --port 8080
-   ```
+1. **Get Your EC2 IP Address:**
+   - Go to: AWS Console → EC2 → Instances
+   - Find your FAME instance
+   - Copy the **Public IPv4 address**
 
 2. **Test Connection:**
    ```bash
-   curl http://localhost:8080/healthz
+   # Replace YOUR_EC2_IP with your actual IP
+   curl http://YOUR_EC2_IP:8080/healthz
    ```
 
-3. **Try a Query:**
+3. **Run Comprehensive Tests:**
    ```bash
-   curl -X POST http://localhost:8080/query \
-     -H "Content-Type: application/json" \
-     -d '{"text": "Hello FAME!"}'
+   export FAME_SERVER_URL="http://YOUR_EC2_IP:8080"
+   python test_fame_on_server.py
    ```
 
-4. **Open Interactive Docs:**
+4. **Try a Query:**
+   ```bash
+   curl -X POST http://YOUR_EC2_IP:8080/query \
+     -H "Content-Type: application/json" \
+     -d '{"text": "What is Bitcoin?"}'
    ```
-   http://localhost:8080/docs
+
+5. **Open Interactive Docs:**
    ```
+   http://YOUR_EC2_IP:8080/docs
+   ```
+
+See `TEST_FAME_ON_SERVER.md` for detailed testing guide.
 
 ---
 
