@@ -96,13 +96,26 @@ jobs:
     name: Deploy to EC2
     needs: build
     runs-on: ubuntu-latest
-    if: github.event_name == 'push' || github.event_name == 'workflow_dispatch'
+    if: (github.event_name == 'push' || github.event_name == 'workflow_dispatch') && needs.build.result == 'success'
     steps:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Check EC2 secrets
+        id: check-secrets
+        run: |
+          if [ -z "${{ secrets.EC2_HOST }}" ] || [ -z "${{ secrets.EC2_SSH_KEY }}" ]; then
+            echo "deploy_available=false" >> $GITHUB_OUTPUT
+            echo "::warning::EC2_HOST or EC2_SSH_KEY secrets not set - skipping EC2 deployment"
+            echo "This is expected if you're not using EC2 deployment. Workflow will continue."
+          else
+            echo "deploy_available=true" >> $GITHUB_OUTPUT
+            echo "EC2 secrets found - proceeding with deployment"
+          fi
+
       - name: Deploy to EC2 via SSH
         id: deploy
+        if: steps.check-secrets.outputs.deploy_available == 'true'
         uses: appleboy/ssh-action@v1.0.3
         with:
           host: ${{ secrets.EC2_HOST }}
@@ -196,6 +209,7 @@ jobs:
             fi
 
       - name: Health Check
+        if: steps.check-secrets.outputs.deploy_available == 'true'
         continue-on-error: true
         run: |
           EC2_HOST="${{ secrets.EC2_HOST }}"
@@ -216,11 +230,24 @@ jobs:
           echo "- **Branch:** ${{ github.ref_name }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Triggered by:** ${{ github.event_name }}" >> $GITHUB_STEP_SUMMARY
           echo "- **Docker Image:** ${{ needs.build.outputs.image }}" >> $GITHUB_STEP_SUMMARY
-          echo "- **EC2 Host:** ${{ secrets.EC2_HOST }}" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "### 📋 Next Steps" >> $GITHUB_STEP_SUMMARY
-          echo "" >> $GITHUB_STEP_SUMMARY
-          echo "1. Verify deployment at: http://${{ secrets.EC2_HOST }}:8080" >> $GITHUB_STEP_SUMMARY
-          echo "2. Check health: http://${{ secrets.EC2_HOST }}:8080/health" >> $GITHUB_STEP_SUMMARY
-          echo "3. View API docs: http://${{ secrets.EC2_HOST }}:8080/docs" >> $GITHUB_STEP_SUMMARY
+          if [ "${{ steps.check-secrets.outputs.deploy_available }}" == "true" ]; then
+            echo "- **EC2 Host:** ${{ secrets.EC2_HOST }}" >> $GITHUB_STEP_SUMMARY
+            echo "- **Deployment Status:** ✅ Deployed" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### 📋 Next Steps" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "1. Verify deployment at: http://${{ secrets.EC2_HOST }}:8080" >> $GITHUB_STEP_SUMMARY
+            echo "2. Check health: http://${{ secrets.EC2_HOST }}:8080/health" >> $GITHUB_STEP_SUMMARY
+            echo "3. View API docs: http://${{ secrets.EC2_HOST }}:8080/docs" >> $GITHUB_STEP_SUMMARY
+          else
+            echo "- **EC2 Deployment:** ⚠️ Skipped (secrets not configured)" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "### 📋 Next Steps" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "To enable EC2 deployment, add these secrets:" >> $GITHUB_STEP_SUMMARY
+            echo "1. `EC2_HOST` - Your EC2 instance IP or hostname" >> $GITHUB_STEP_SUMMARY
+            echo "2. `EC2_SSH_KEY` - Your SSH private key for EC2" >> $GITHUB_STEP_SUMMARY
+            echo "" >> $GITHUB_STEP_SUMMARY
+            echo "Docker image was built successfully: ${{ needs.build.outputs.image }}" >> $GITHUB_STEP_SUMMARY
+          fi
 
