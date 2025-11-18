@@ -34,13 +34,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
       
-      - name: Set lowercase repo owner
-        id: set-repo
-        run: echo "repo_owner=$(echo '${{ env.REPO_OWNER }}' | tr '[:upper:]' '[:lower:]')" >> $GITHUB_OUTPUT
-      
-      - name: Set image name
+      - name: Set lowercase repo owner and image name
         id: set-image-name
-        run: echo "image_name=ghcr.io/${{ steps.set-repo.outputs.repo_owner }}/fame-api" >> $GITHUB_OUTPUT
+        run: |
+          REPO_OWNER_LOWER=$(echo '${{ env.REPO_OWNER }}' | tr '[:upper:]' '[:lower:]')
+          echo "repo_owner=${REPO_OWNER_LOWER}" >> $GITHUB_OUTPUT
+          echo "image_name=ghcr.io/${REPO_OWNER_LOWER}/fame-api" >> $GITHUB_OUTPUT
+          echo "Set image name: ghcr.io/${REPO_OWNER_LOWER}/fame-api"
 
       - name: Set up QEMU
         uses: docker/setup-qemu-action@v3
