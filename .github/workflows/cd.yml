@@ -66,8 +66,13 @@ jobs:
 
       - name: Set image output
         id: set-image
-        if: success() || failure()
-        run: echo "image=${{ steps.set-image-name.outputs.image_name }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT || echo "image=" >> $GITHUB_OUTPUT
+        if: always()
+        run: |
+          if [ -n "${{ steps.set-image-name.outputs.image_name }}" ]; then
+            echo "image=${{ steps.set-image-name.outputs.image_name }}:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT
+          else
+            echo "image=${{ env.REPO_OWNER }}/fame-api:${{ env.DOCKER_TAG }}" >> $GITHUB_OUTPUT || echo "image=" >> $GITHUB_OUTPUT
+          fi
 
   deploy:
     name: Deploy to K8s

@@ -114,16 +114,43 @@ jobs:
               git reset --hard origin/main
             fi
             
-            # Make deployment script executable
-            chmod +x deploy_ec2.sh
+            # Check for deployment script and make executable if it exists
+            if [ -f "deploy_ec2.sh" ]; then
+              chmod +x deploy_ec2.sh
+              DEPLOY_SCRIPT="deploy_ec2.sh"
+            elif [ -f "deploy_with_timeout_fix.ps1" ]; then
+              echo "⚠️ PowerShell script found, but we need bash. Using docker-compose directly."
+              DEPLOY_SCRIPT=""
+            else
+              echo "⚠️ No deployment script found. Using docker-compose directly."
+              DEPLOY_SCRIPT=""
+            fi
             
             # Run deployment script with error handling
             echo "Starting deployment..."
-            if sudo bash deploy_ec2.sh; then
-              echo "✅ Deployment script completed successfully"
+            if [ -n "$DEPLOY_SCRIPT" ]; then
+              if sudo bash "$DEPLOY_SCRIPT"; then
+                DEPLOY_SUCCESS=true
+              else
+                DEPLOY_SUCCESS=false
+              fi
+            else
+              # Use docker-compose directly if no script
+              echo "Using docker-compose for deployment..."
+              if sudo docker compose -f docker-compose.prod.yml down && \
+                 sudo docker compose -f docker-compose.prod.yml build --no-cache && \
+                 sudo docker compose -f docker-compose.prod.yml up -d; then
+                DEPLOY_SUCCESS=true
+              else
+                DEPLOY_SUCCESS=false
+              fi
+            fi
+            
+            if [ "$DEPLOY_SUCCESS" = "true" ]; then
+              echo "✅ Deployment completed successfully"
             else
               DEPLOY_EXIT=$?
-              echo "::error::Deployment script failed with exit code $DEPLOY_EXIT"
+              echo "::error::Deployment failed with exit code $DEPLOY_EXIT"
               echo "=== Recent logs ==="
               tail -100 /home/ec2-user/fame_deploy.log 2>/dev/null || echo "No deployment log found"
               echo "=== Container status ==="
